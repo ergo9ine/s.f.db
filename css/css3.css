@@ -20,6 +20,41 @@ html,body,.overlay{
 #logo{
 	display:block;
 }
+.logo{
+opacity:0;
+animation-name: flash;
+animation-duration:5s;
+animation-iteration-count:infinite;
+animation-delay:1s;
+}
+@keyframes flash{
+    5% {opacity:0;}
+    10% {opacity:1;}
+	11% {opacity:0;}
+    12% {opacity:1;}
+	13% {opacity:0;}
+    14% {opacity:1;}
+	15% {opacity:0;}
+	14% {opacity:1;}
+	20% {opacity:0;}
+	21% {opacity:1;}
+	22% {opacity:0;}
+	25% {opacity:1;}
+	50% {opacity:0;}
+	55% {opacity:1;}
+	56% {opacity:0;}
+	57% {opacity:1;}
+	60% {opacity:0;}
+	66% {opacity:1;}
+	70% {opacity:0;}
+	71% {opacity:1;}
+	75% {opacity:0;}
+	78% {opacity:1;}
+	79% {opacity:0;}
+	85% {opacity:1;}
+	90% {opacity:0;}
+    100% {opacity:1;}
+}
 .logo:hover	.overlay{
 	opacity:1;
 }
