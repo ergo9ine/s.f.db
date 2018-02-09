@@ -1,6 +1,5 @@
 /* index page */
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
-.btn-secondary{color:#fff;background-color:#000 !important;border-color:#333}
 #logo,#slogo {
 	display:block;
 	animation-name:logocolor;
