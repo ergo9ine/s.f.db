@@ -1,5 +1,4 @@
 /* index page */
-
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css); 
 html,body,.overlay{
 	background-color:#000;
@@ -7,6 +6,10 @@ html,body,.overlay{
 	height:100%;
 	overflow-x:hidden;
 	font-family:'Noto Sans KR',sans-serif;
+}
+a,a:visited{
+color:#fff;
+text-decoration:none;
 }
 .container{
 	width:70%;
@@ -26,11 +29,11 @@ html,body,.overlay{
 	display:block;
 }
 .logo{
-opacity:0;
-animation-name:flash;
-animation-duration:5s;
-animation-iteration-count:infinite;
-animation-delay:1s;
+	opacity:0;
+	animation-name:flash;
+	animation-duration:5s;
+	animation-iteration-count:infinite;
+	animation-delay:1s;
 }
 @keyframes flash{
     5% {opacity:0;}
@@ -67,7 +70,7 @@ animation-delay:1s;
 	position:relative;
 }
 .overlay{
-	color:white;
+	color:#fff;
 	position:absolute;
 	display:inline-block;
 	padding:1em;
@@ -85,13 +88,13 @@ animation-delay:1s;
 	transform:translate(-5%,35%);
 }
 .pre{
+	vertical-align:middle;
 	text-align:center;
 }
-a,a:visited{
-color:#fff;
-text-decoration:none;
-}
 /* main page */
+.title{
+display:inline;
+}
 #wrapper {
   padding-left:0;
   -webkit-transition:all 0.5s ease;
@@ -140,7 +143,9 @@ text-decoration:none;
   text-indent:20px;
   line-height:40px;
 }
-.sidebar-nav li a {
+#ver{
+  float:
+  right;
 }
 .sidebar-nav li a {
   display:block;
