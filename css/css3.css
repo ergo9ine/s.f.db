@@ -28,29 +28,29 @@ text-decoration:none;
 #logo,#slogo {
 	display:block;
 	animation-name:logocolor;
-	animation-duration:30s;
+	animation-duration:60s;
 	animation-iteration-count:infinite;
 }
 @keyframes logocolor{
-	5% {filter:hue-rotate(30deg);}
+	5% {filter:hue-rotate(0deg);}
 	10% {filter:hue-rotate(60deg);}
 	15% {filter:hue-rotate(90deg);}
 	20% {filter:hue-rotate(120deg);}
 	25% {filter:hue-rotate(150deg);}
 	30% {filter:hue-rotate(180deg);}
-	35% {filter:hue-rotate(210deg);}
+	35% {filter:hue-rotate(0deg);}
     40% {filter:contrast(2);}
     45% {filter:contrast(1);}
 	50% {filter:sepia(1);}
 	55% {filter:sepia(0);}
 	60% {filter:blur(10px);}
 	65% {filter:blur(0px);}
-	75% {filter:invert(0.9);}
+	75% {filter:invert(0.6);}
 	80% {filter:invert(0);}
-	85% {transform:rotateX(200deg)}
-	90% {transform:rotateX(0deg)}
-	95% {transform:rotateY(200deg)}
-	100% {transform:rotateY(0deg)}
+	85% {filter:invert(0.9);}
+	90% {filter:invert(0);}
+	95% {filter:hue-rotate(300deg);}
+	100% {filter:hue-rotate(0deg);}
 }
 .logo{
 	opacity:0;
