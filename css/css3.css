@@ -8,9 +8,9 @@ html,body,.overlay{
 	overflow-y:hidden;
 	font-family:'Noto Sans KR',sans-serif!important;
 }
-a,a:visited{
-	color:#fff;
-	text-decoration:none;
+a,a:visited,a:link,a:hover,a:active{
+	color:#666 !important;
+	text-decoration:none !important;
 }
 .outer{
 	display:table;
@@ -236,9 +236,11 @@ display:inline;
 }
 .row #000 {
 	background-color:#000;
+	color: #fff;
 }
 .row #fff {
 	background-color:#fff;
+	color: #000;
 }
 .footer {
 	border-style:solid;
@@ -247,4 +249,5 @@ display:inline;
 	position:absolute;
 	bottom:0px;
 	width:100%;
+	text-decoration:none;
 }
