@@ -1,74 +1,63 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>girlsfrontline DB</title>
-		<!-- CSS Start -->
-		<link rel="stylesheet" type="text/css" href="css/css3.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-		<!-- CSS End -->
-		<!-- JS Start -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-		<!-- JS End -->
-	</head>
-	<body>
-		<div id="wrapper">
-			<!-- Sidebar -->
-			<div id="sidebar-wrapper">
-				<div class="logo">
-					<img src="img/logo/sidebar_gflogo.png" alt="logo" id="slogo">
-				</div>
-				<div class="menu">
-					<ul class="sidebar-nav">
-						<li class="sidebar-brand">
-							<a href="#">왱알앵알 데이터베이스</a>
-						</li>
-						<li>
-							<a href="#">전술 인형 도감</a>
-						</li>
-						<li>
-							<a href="#">군수 지원 정보</a>
-						</li>
-						<li>
-							<a href="#">Coming soon</a>
-						</li>
-						<li>
-							<a href="#">Coming soon</a>
-						</li>
-						<li>
-							<a href="#">Coming soon</a>
-						</li>
-						<li>
-							<a href="#">About</a>
-						</li>
-						<li>
-							<a href="#">Contact</a>
-						</li>
-						<div id="ver">Ver 0.1 alpha</div>
-					</ul>
-				</div>
-			</div>
-			<!-- /#sidebar-wrapper -->
-			<!-- Page Content -->
-			<a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Menu</a>
-			<div id="page-content-wrapper">
-				<div class="container-fluid">
-					<h1>Coming soon</h1>
-					<p>근시일내에 오픈 준비중입니다.</p>
-				</div>
-			</div>
-			<!-- /#page-content-wrapper -->
-		</div>
-		<!-- /#wrapper -->
-		<!-- Menu Toggle Script -->
-		<script>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>girlsfrontline DB</title>
+<!-- CSS Start -->
+<link rel="stylesheet" type="text/css" href="css/css3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<!-- CSS End -->
+<!-- JS Start -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script><!-- JS End -->
+</head>
+<body>
+<div id="wrapper"><!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <div class="logo" style=""><a href="index.html"><img src="img/logo/sidebar_gflogo.png" alt="logo" id="slogo"></a></div>
+    <div class="menu">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand"><a href="#">왱알앵알 데이터베이스</a></li>
+        <li><a href="#">전술 인형 도감</a></li>
+        <li><a href="#">군수 지원 정보</a></li>
+        <li><a href="#">Coming soon</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+		<div class="footer">
+      <div id="ver">Ver 0.1 alpha</div>
+      <h6 class="themesettings"><strong>Theme</strong></h6>
+      <div class="row">
+        <div class="col-sm-6" id="000">
+          <p style="color: #fff;">Black</p>
+        </div>
+        <div class="col-sm-6" id="fff">
+          <p style="color:#000;">White</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <!-- /#sidebar-wrapper --><!-- Page Content --><a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Menu</a>
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <h1><strong>왱알앵알 베이스</strong></h1>
+      <h5>Coming soon</h5>
+      <p>근시일내에 오픈 준비중입니다.</p>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated">10%</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper --><!-- Menu Toggle Script --><script>
 		$("#menu-toggle,#menu-toggle1").click(function(e) {
 			e.preventDefault();
 			$("#wrapper").toggleClass("toggled");
 		});
 		</script>
-	</body>
+</body>
 </html>
