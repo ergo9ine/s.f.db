@@ -24,10 +24,11 @@
             });
         });
     </script>
+	<!-- #wrapper -->
     <div id="wrapper">
-        <!-- Sidebar -->
+        <!-- #sidebar-wrapper -->
         <div id="sidebar-wrapper">
-            <div class="logo" style="margin-bottom:5px">
+            <div class="logo" style="margin-bottom:5%">
 				<a href="index.html"><img src="img/logo/sidebar_gflogo.png" alt="logo" id="slogo"></a>
 			</div>
             <input class="form-control" id="input" type="text" placeholder="검색..">
@@ -68,11 +69,8 @@
     <!-- /#wrapper -->
     <!-- Menu Toggle Script -->
     <script>
-        $("#menu-toggle,#menu-toggle1").click(function(e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-        });
+        $("#menu-toggle,#menu-toggle1").click(function(e) {e.preventDefault();$("#wrapper").toggleClass("toggled");});
     </script>
-    </script>
+	<!-- /Menu Toggle Script -->
 </body>
 </html>
