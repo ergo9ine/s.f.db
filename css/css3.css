@@ -6,10 +6,12 @@ html,body,.overlay{
 	height:100%;
 /*	font-family:'Noto Sans KR',sans-serif !important;*/
 }
+.mainbody{
+	overflow-y:hidden;
+}
 body,.overlay{
 	background-color:#000;
 	overflow-x:hidden;
-	overflow-y:hidden;
 }
 a,a:visited,a:link,a:hover,a:active{
 	color:#666;

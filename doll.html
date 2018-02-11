@@ -12,22 +12,16 @@
     <script src="https://getbootstrap.com/assets/js/vendor/holder.min.js"></script>
     <!-- JS End -->
 </head>
-<body style="background-color:#fff
-">
-    <h1><strong>GFDB - Girl'sFrontline Database</strong></h1>
-    <h5>Coming soon</h5>
-    <p>근시일내에 오픈 준비중입니다.</p>
-    <div class="progress" style="margin-bottom:5%">
-        <div class="progress-bar progress-bar-striped progress-bar-animated">15%</div>
-    </div>
+<body style="background-color:#fff">
     <div class="container1" style="padding:3%;">
 		<input class="col-xs-4" id="input" type="text" placeholder="검색.." style="margin-bottom:3%;text-align:center;">
 		<script>
 			$(document).ready(function() {
 				$("#input").on("keyup", function() {
 					var value = $(this).val().toLowerCase();
-					$(".row *").filter(function() {
-						$(this).toggle($(this).parent().text().toLowerCase().indexOf(value) > -1)
+					$(".col-md-3 *").filter(function() {
+						$(this).toggle($
+						(this).parent().text().toLowerCase().indexOf(value) > -1)
                 });
             });
         });
@@ -35,7 +29,8 @@
 <div class="row">
 	<div class="col-md-3" style="margin-bottom:2%">
 		<div class="card md-3 box-shadow">
-			<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" style="height:100px;width:100%;display:block;">
+			<img src="" alt="Thumbnail" class="card-img-to
+			p" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" style="height:100px;width:100%;display:block;">
 			<div class="card-body">
 				<p class="card-text" style="float:left">No.1</p>
 				<br>
