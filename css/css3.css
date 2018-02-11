@@ -260,7 +260,7 @@ a,a:visited,a:link,a:hover,a:active {
   text-indent:20px;
   line-height:40px;
 }
-#ver {
+.ver {
   float:right;
 }
 .sidebar-nav li a {
