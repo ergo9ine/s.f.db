@@ -1,12 +1,15 @@
 /* index page */
 /*@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);*/
 html,body,.overlay{
-	background-color:#000;
+=
 	width:100%;
 	height:100%;
-	/*overflow-x:hidden;
-	/*overflow-y:hidden;
 /*	font-family:'Noto Sans KR',sans-serif !important;*/
+}
+body,.overlay{
+	background-color:#000;
+	overflow-x:hidden;
+	overflow-y:hidden;
 }
 a,a:visited,a:link,a:hover,a:active{
 	color:#666;
