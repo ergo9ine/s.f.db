@@ -19,7 +19,7 @@
             $("#input").on("keyup", function() {
                 var value = $(this).val().toLowerCase();
                 $(".sidebar-nav li a").filter(function() {
-                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    $(this).toggle($(this)..text().toLowerCase().indexOf(value) > -1)
                 });
             });
         });
