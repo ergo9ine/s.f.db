@@ -1,70 +1,76 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>girlsfrontline DB</title>
-<!-- CSS Start -->
-<link rel="stylesheet" type="text/css" href="css/css3.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<!-- CSS End -->
-<!-- JS Start -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<!-- JS End -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>girlsfrontline DB</title>
+    <!-- CSS Start -->
+    <link rel="stylesheet" type="text/css" href="css/css3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- CSS End -->
+    <!-- JS Start -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- JS End -->
 </head>
 <body>
-<script>
-$(document).ready(function(){
-  $("#input").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $(".sidebar-nav li a").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-});
-</script>
-<div id="wrapper"><!-- Sidebar -->
-  <div id="sidebar-wrapper">
-    <div class="logo" style=""><a href="index.html"><img src="img/logo/sidebar_gflogo.png" alt="logo" id="slogo"></a></div>
-	<input class="form-control" id="input" type="text" placeholder="검색..">
-    <div class="menu">
-      <ul class="sidebar-nav">
-        <li class="sidebar-brand"><a href="main.html">GFDB v0.1.1.2</a></li>
-		<li><a href="doll.html" target="body">전술 인형 도감</a></li>
-        <li><a href="equip.html" target="body">장비 요정 도감</a></li>
-        <li><a href="support.html" target="body">군수 지원 정보</a></li>
-		<li><a href="combat.html" target="body">자율 전투 정보</a></li>
-		<li><a href="simulation.html" target="body">모의 작전 정보</a></li>
-        <li><a href="preview.html" target="body">About</a></li>
-        <li><a href="preview.html" target="body">Contact</a></li>
-      </ul>
-<!-- Test
-      <div class="footer">
-        <div id="ver">Ver 0.1.1 alpha</div>
-        <h6 class="themesettings"><strong>Theme</strong></h6>
-        <div class="row">
-          <div class="col-sm-6" id="000"><a href="#">Black</a></div>
-          <div class="col-sm-6" id="fff"><a href="#">White</a></div>
+    <script>
+        $(document).ready(function() {
+            $("#input").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $(".sidebar-nav li a").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <div class="logo" style=""><a href="index.html"><img src="img/logo/sidebar_gflogo.png" alt="logo" id="slogo"></a></div>
+            <input class="form-control" id="input" type="text" placeholder="검색..">
+            <div class="menu">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand"><a href="main.html">GFDB v0.1.1.2</a></li>
+                    <li><a href="doll.html" target="body">전술 인형 도감</a></li>
+                    <li><a href="equip.html" target="body">장비 요정 도감</a></li>
+                    <li><a href="support.html" target="body">군수 지원 정보</a></li>
+                    <li><a href="combat.html" target="body">자율 전투 정보</a></li>
+                    <li><a href="simulation.html" target="body">모의 작전 정보</a></li>
+                    <li><a href="preview.html" target="body">About</a></li>
+                    <li><a href="preview.html" target="body">Contact</a></li>
+                </ul>
+                <!-- Test
+				<div class="footer">
+					<div id="ver">Ver 0.1.1 alpha</div>
+					<h6 class="themesettings"><strong>Theme</strong></h6>
+					<div class="row">
+							<div class="col-sm-6" id="000"><a href="#">Black</a></div>
+							<div class="col-sm-6" id="fff"><a href="#">White</a></div>
+					</div>
+				</div>
+				-->
+            </div>
         </div>
-      </div>
--->
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+		<a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Menu</a>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <iframe height="100%" width="100%" src="preview.html" frameborder="0" name="body"></iframe>
+            </div>
+        </div>
     </div>
-  </div>
-  <!-- /#sidebar-wrapper --><!-- Page Content --><a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Menu</a>
-  <div id="page-content-wrapper">
-    <div class="container-fluid">
-		<iframe height="100%" width="100%" src="preview.html" frameborder="0" name="body"></iframe>
+    <!-- /#page-content-wrapper -->
     </div>
-  </div>
-</div>
-<!-- /#page-content-wrapper -->
-</div>
-<!-- /#wrapper -->
-<!-- Menu Toggle Script -->
-<script>
-$("#menu-toggle,#menu-toggle1").click(function(e) {e.preventDefault();$("#wrapper").toggleClass("toggled");});
-</script>
-</script>
+    <!-- /#wrapper -->
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle,#menu-toggle1").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+    </script>
 </body>
 </html>
