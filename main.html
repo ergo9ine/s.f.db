@@ -14,24 +14,14 @@
     <!-- JS End -->
 </head>
 <body class="mainbody">
-    <script>
-        $(document).ready(function() {
-            $("#input").on("keyup", function() {
-                var value = $(this).val().toLowerCase();
-                $(".sidebar-nav li a").filter(function() {
-                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                });
-            });
-        });
-    </script>
-	<!-- #wrapper -->
+<!-- #wrapper -->
     <div id="wrapper">
         <!-- #sidebar-wrapper -->
         <div id="sidebar-wrapper">
             <div class="logo" style="margin-bottom:5%">
 				<a href="index.html"><img src="img/logo/sidebar_gflogo.png" alt="logo" id="slogo"></a>
 			</div>
-            <input class="form-control" id="input" type="text" placeholder="검색..">
+            <input class="form-control" id="input" type="text" placeholder="메뉴 검색">
             <div class="menu">
                 <ul class="sidebar-nav">
                     <li class="sidebar-brand"><a href="main.html">GFDB - Index</a></li>
@@ -44,8 +34,8 @@
                     <li><a href="preview.html" target="body">Contact</a></li>
                 </ul>
 				<div class="footer">
-					<div class="ver">Ver 0.1.1.4</div>
-					<h6 class="themesettings"><strong>Theme</strong></h6>
+					<div class="ver">Ver 0.1.1.4a</div>
+					<h6 class="themesettings">Theme</h6>
 					<div class="row">
 							<div class="col-sm-6" id="00f"><a href="#">Black</a></div>
 							<div class="col-sm-6" id="fff"><a href="#">White</a></div>
@@ -76,5 +66,17 @@
         $("#menu-toggle,#menu-toggle1").click(function(e) {e.preventDefault();$("#wrapper").toggleClass("toggled");});
     </script>
 	<!-- /Menu Toggle Script -->
+	<!-- Menu Search Script -->
+	<script>
+		$(document).ready(function() {
+			$("#input").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $(".sidebar-nav li a").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value)>-1)
+                });
+            });
+        });
+   </script>
+   <!-- /Menu Search Script -->
 </body>
 </html>
