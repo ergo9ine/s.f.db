@@ -1,44 +1,64 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<meta	charset="utf-8">
+	<meta charset="utf-8">
 	<title>preview</title>
-	<link	rel="stylesheet" type="text/css" href="css/css3.css">
-	<link	type="text/css"	rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<!--CSS	End-->
-<!--JS	Start-->
-<script	type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-</script>
-<script	type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
-</script>
-<script	type="text/javascript" src="https://getbootstrap.com/assets/js/vendor/holder.min.js">
-</script>
-	<!--JS	End -->
+	<!--CSS	Start-->
+		<link	rel="stylesheet" type="text/css" href="css/css3.css">
+		<link	type="text/css"	rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<!--JS	Start-->
+		<script	type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script	type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script	type="text/javascript" src="https://getbootstrap.com/assets/js/vendor/holder.min.js"></script>
 	</head>
 	<body>
-	<div class="container1" style="padding:1%;">
+	<div class="container1">
 	<input class="col-xs-4" id="input" type="text" placeholder="검색">
-<script	type="text/javascript">
- $(document).ready(function(){$("#input").on("keyup",function(){var	value=$(this).val().toLowerCase();$(".row	*").filter(function(){$(this).toggle($(this).closest('div').text().toLowerCase().indexOf(value)>-1)});});});
-</script>
+	<script	type="text/javascript">
+		$(document).ready(function(){$("#input").on("keyup",function(){var	value=$(this).val().toLowerCase();$(".row	*").filter(function(){$(this).toggle($(this).closest('div').text().toLowerCase().indexOf(value)>-1)});});});
+	</script>
 	<div	class="row">
 	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
-		<div class="card-body">
-		<p class="card-text">No.1</p>
-		<br>
-		<div	class="d-flex justify-content-between align-items-center gunname">
-		콜트리볼버
-		</div>
-		</div>
+		<a href="#" data-toggle="modal" data-target="#myModal">
+			<div class="card md-3 box-shadow">
+				<img src="img/t-doll/1_normal_stand.png" alt="Thumbnail" class="card-img-top">
+				<div class="card-body">
+					<p class="card-text">No.001</p>
+					<br>
+					<div	class="d-flex justify-content-between align-items-center gunname">
+					콜트 리볼버
+					</div>
+				</div>
+			</div>
+		</a>
+		<!-- Modal -->
+		<div id="myModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog  modal-lg modal-dialog-centered modal-dialog-centered" style="margin: 0 auto;">
+				<!-- Modal content-->
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h4 class="modal-title">No.001 콜트 리볼버</h4>
+				  </div>
+					<div class="modal-body">
+							<div class="w3-display-container w3-text-white">
+									<img src="img/t-doll/1_normal_stand.png" alt="CharacterCG" class="ccg">
+									<img src="img/etc/hg_icon.png" class="w3-display-topleft w3-container">
+									<img src="img/etc/r_4.png" class="w3-display-bottomright w3-container">
+							</div>
+					</div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">&times;</button>
+				  </div>
+				</div>
+		  </div>
 		</div>
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.2</p>
+		<p class="card-text">No.002</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M1911
@@ -48,9 +68,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.3</p>
+		<p class="card-text">No.003</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M9
@@ -60,9 +80,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.4</p>
+		<p class="card-text">No.004</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		ACCESS DENIED
@@ -72,9 +92,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.5</p>
+		<p class="card-text">No.005</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		나강 리볼버
@@ -84,9 +104,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.6</p>
+		<p class="card-text">No.006</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		토카레프
@@ -96,9 +116,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.7</p>
+		<p class="card-text">No.007</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		스테츠킨
@@ -108,9 +128,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.8</p>
+		<p class="card-text">No.008</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		마카로프
@@ -120,9 +140,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.9</p>
+		<p class="card-text">No.009</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		P38
@@ -132,9 +152,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.10</p>
+		<p class="card-text">No.010<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		PPK
@@ -144,9 +164,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.11</p>
+		<p class="card-text">No.011<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		P08
@@ -156,9 +176,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.12</p>
+		<p class="card-text">No.012<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		C96
@@ -168,9 +188,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.13</p>
+		<p class="card-text">No.013<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		92식
@@ -180,9 +200,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.14</p>
+		<p class="card-text">No.014<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		아스트라 리볼버
@@ -192,9 +212,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.15</p>
+		<p class="card-text">No.015<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		글록 17
@@ -204,9 +224,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.16</p>
+		<p class="card-text">No.016<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		톰슨
@@ -216,9 +236,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.17</p>
+		<p class="card-text">No.017<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M3
@@ -228,9 +248,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.18</p>
+		<p class="card-text">No.018<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		MAC-10
@@ -240,9 +260,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.19</p>
+		<p class="card-text">No.019<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		FMG-9
@@ -252,9 +272,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.20</p>
+		<p class="card-text">No.020<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		Vector
@@ -264,9 +284,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.21</p>
+		<p class="card-text">No.021<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		PPSh-41
@@ -276,9 +296,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.22</p>
+		<p class="card-text">No.022<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		PPS-43
@@ -288,9 +308,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.23</p>
+		<p class="card-text">No.023<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		PP-90
@@ -300,21 +320,21 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.24</p>
+		<p class="card-text">No.024<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
-		PP-2000
+		PP-200
 		</div>
 		</div>
 		</div>
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.25</p>
+		<p class="card-text">No.025<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		MP40
@@ -324,9 +344,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.26</p>
+		<p class="card-text">No.026<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		MP5
@@ -336,9 +356,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.27</p>
+		<p class="card-text">No.027<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		스콜피온
@@ -348,9 +368,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.28</p>
+		<p class="card-text">No.028<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		ACCESS DENIED
@@ -360,9 +380,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.29</p>
+		<p class="card-text">No.029<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		스텐 Mk II
@@ -372,9 +392,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.30</p>
+		<p class="card-text">No.030<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		ACCESS DENIED
@@ -384,9 +404,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.31</p>
+		<p class="card-text">No.031<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		베레타	38형
@@ -396,9 +416,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.32</p>
+		<p class="card-text">No.032<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		마이크로 우지
@@ -408,9 +428,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.33</p>
+		<p class="card-text">No.033<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		m45
@@ -420,9 +440,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.34</p>
+		<p class="card-text">No.034<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M1 개런드
@@ -432,9 +452,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.35</p>
+		<p class="card-text">No.035<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M1A1
@@ -444,9 +464,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.36</p>
+		<p class="card-text">No.036<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		스프링필드
@@ -456,9 +476,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.37</p>
+		<p class="card-text">No.037<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M14
@@ -468,9 +488,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.38</p>
+		<p class="card-text">No.038<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M21
@@ -480,9 +500,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.39</p>
+		<p class="card-text">No.039<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		모신나강
@@ -492,9 +512,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.40</p>
+		<p class="card-text">No.040<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		SVT-38
@@ -504,9 +524,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.41</p>
+		<p class="card-text">No.041<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		시모노프
@@ -516,9 +536,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.42</p>
+		<p class="card-text">No.042<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		PTRD
@@ -528,9 +548,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.43</p>
+		<p class="card-text">No.043<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		SVD
@@ -540,9 +560,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.44</p>
+		<p class="card-text">No.044<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		SV-98
@@ -552,9 +572,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.45</p>
+		<p class="card-text">No.045<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		ACCESS DENIED
@@ -564,9 +584,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.46</p>
+		<p class="card-text">No.046<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		Kar98k
@@ -576,9 +596,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.47</p>
+		<p class="card-text">No.047<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		G43
@@ -588,21 +608,21 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.48</p>
+		<p class="card-text">No.048<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
-		WA2000
+		WA200
 		</div>
 		</div>
 		</div>
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.49</p>
+		<p class="card-text">No.049<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		56식	반
@@ -612,9 +632,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.50</p>
+		<p class="card-text">No.050<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		리-엔필드
@@ -624,9 +644,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.51</p>
+		<p class="card-text">No.051<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		FN-49
@@ -636,9 +656,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.52</p>
+		<p class="card-text">No.052<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		BM59
@@ -648,9 +668,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.53</p>
+		<p class="card-text">No.053<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		NTW-20
@@ -660,9 +680,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.54</p>
+		<p class="card-text">No.054<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M16A1
@@ -672,9 +692,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.55</p>
+		<p class="card-text">No.055<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M4A1
@@ -684,9 +704,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.56</p>
+		<p class="card-text">No.056<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M4 SOPMODII
@@ -696,9 +716,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.57</p>
+		<p class="card-text">No.057<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		ST AR-15
@@ -708,9 +728,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.58</p>
+		<p class="card-text">No.058<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		AK-47
@@ -720,9 +740,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.59</p>
+		<p class="card-text">No.059<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		</div>
@@ -731,9 +751,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.60</p>
+		<p class="card-text">No.060<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		AS Val
@@ -743,9 +763,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.61</p>
+		<p class="card-text">No.061<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		StG44
@@ -755,9 +775,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.62</p>
+		<p class="card-text">No.062<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		G41
@@ -767,9 +787,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.63</p>
+		<p class="card-text">No.063<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		G3
@@ -779,9 +799,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.64</p>
+		<p class="card-text">No.064<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		G36
@@ -791,9 +811,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.65</p>
+		<p class="card-text">No.065<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		HK416
@@ -803,9 +823,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.66</p>
+		<p class="card-text">No.066<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		56-1식
@@ -815,9 +835,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.67</p>
+		<p class="card-text">No.067<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		</div>
@@ -826,9 +846,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.68</p>
+		<p class="card-text">No.068<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		L85A1
@@ -838,9 +858,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.69</p>
+		<p class="card-text">No.069<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		FAMAS
@@ -850,9 +870,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.70</p>
+		<p class="card-text">No.070<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		FNC
@@ -862,9 +882,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.71</p>
+		<p class="card-text">No.071<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		갈릴
@@ -874,9 +894,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.72</p>
+		<p class="card-text">No.072<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		TAR-21
@@ -886,9 +906,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.73</p>
+		<p class="card-text">No.073<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		SIG-510
@@ -898,9 +918,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.74</p>
+		<p class="card-text">No.074<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M1918
@@ -910,9 +930,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.75</p>
+		<p class="card-text">No.075<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M1918
@@ -922,9 +942,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.76</p>
+		<p class="card-text">No.076<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M2HB
@@ -934,9 +954,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.77</p>
+		<p class="card-text">No.077<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M2HB
@@ -946,9 +966,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.78</p>
+		<p class="card-text">No.078<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M60
@@ -958,9 +978,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.79</p>
+		<p class="card-text">No.079<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M249	SAW
@@ -970,9 +990,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.80</p>
+		<p class="card-text">No.080<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M1919A4
@@ -982,9 +1002,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.81</p>
+		<p class="card-text">No.081<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		LWMMG
@@ -994,9 +1014,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.82</p>
+		<p class="card-text">No.082<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		DP28
@@ -1006,9 +1026,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.83</p>
+		<p class="card-text">No.083<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		</div>
@@ -1017,9 +1037,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.84</p>
+		<p class="card-text">No.084<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		PRD
@@ -1029,9 +1049,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.85</p>
+		<p class="card-text">No.085<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		PK
@@ -1041,9 +1061,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.86</p>
+		<p class="card-text">No.086<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		MG42
@@ -1053,9 +1073,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.87</p>
+		<p class="card-text">No.087<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		MG34
@@ -1065,9 +1085,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.88</p>
+		<p class="card-text">No.088<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		MG3
@@ -1077,9 +1097,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.89</p>
+		<p class="card-text">No.089<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		브렌
@@ -1089,9 +1109,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.90</p>
+		<p class="card-text">No.090<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		FNP-9
@@ -1101,9 +1121,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.91</p>
+		<p class="card-text">No.091<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		MP-446
@@ -1113,9 +1133,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.92</p>
+		<p class="card-text">No.092<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		Spectre M4
@@ -1125,9 +1145,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.93</p>
+		<p class="card-text">No.093<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		IDW
@@ -1137,9 +1157,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.94</p>
+		<p class="card-text">No.094<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		64식
@@ -1149,9 +1169,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.95</p>
+		<p class="card-text">No.095<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		한양조 88식
@@ -1161,9 +1181,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.96</p>
+		<p class="card-text">No.096<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		그리즐리	Mk V
@@ -1173,9 +1193,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.97</p>
+		<p class="card-text">No.097<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M950A
@@ -1185,9 +1205,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.98</p>
+		<p class="card-text">No.098<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		SPP-1
@@ -1197,9 +1217,9 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
-		<p class="card-text">No.99</p>
+		<p class="card-text">No.099<</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		Mk23
@@ -1209,7 +1229,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.100</p>
 		<br>
@@ -1221,7 +1241,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.101</p>
 		<br>
@@ -1233,7 +1253,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.102</p>
 		<br>
@@ -1245,7 +1265,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.103</p>
 		<br>
@@ -1257,7 +1277,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.104</p>
 		<br>
@@ -1269,7 +1289,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.105</p>
 		<br>
@@ -1281,7 +1301,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.106</p>
 		<br>
@@ -1293,19 +1313,19 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.107</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
-		F2000
+		F200
 		</div>
 		</div>
 		</div>
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.108</p>
 		<br>
@@ -1317,7 +1337,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.109</p>
 		<br>
@@ -1329,7 +1349,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.110</p>
 		<br>
@@ -1341,7 +1361,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.111</p>
 		<br>
@@ -1353,7 +1373,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.112</p>
 		<br>
@@ -1365,7 +1385,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.113</p>
 		<br>
@@ -1377,7 +1397,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.114</p>
 		<br>
@@ -1389,7 +1409,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.115</p>
 		<br>
@@ -1401,7 +1421,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.116</p>
 		<br>
@@ -1413,7 +1433,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.117</p>
 		<br>
@@ -1425,7 +1445,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.118</p>
 		<br>
@@ -1437,7 +1457,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.119</p>
 		<br>
@@ -1449,7 +1469,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.120</p>
 		<br>
@@ -1461,7 +1481,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.121</p>
 		<br>
@@ -1473,7 +1493,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.122</p>
 		<br>
@@ -1485,7 +1505,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.123</p>
 		<br>
@@ -1497,7 +1517,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.124</p>
 		<br>
@@ -1509,7 +1529,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.125</p>
 		<br>
@@ -1521,7 +1541,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.126</p>
 		<br>
@@ -1533,7 +1553,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.127</p>
 		<br>
@@ -1545,7 +1565,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.128</p>
 		<br>
@@ -1557,7 +1577,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.129</p>
 		<br>
@@ -1569,7 +1589,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.130</p>
 		<br>
@@ -1581,7 +1601,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.131</p>
 		<br>
@@ -1593,7 +1613,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.132</p>
 		<br>
@@ -1605,7 +1625,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.133</p>
 		<br>
@@ -1617,7 +1637,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.134</p>
 		<br>
@@ -1629,7 +1649,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.135</p>
 		<br>
@@ -1641,7 +1661,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.136</p>
 		<br>
@@ -1653,7 +1673,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.137</p>
 		<br>
@@ -1665,7 +1685,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.138</p>
 		<br>
@@ -1677,7 +1697,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.139</p>
 		<br>
@@ -1689,7 +1709,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.140</p>
 		<br>
@@ -1701,7 +1721,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.141</p>
 		<br>
@@ -1713,7 +1733,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.142</p>
 		<br>
@@ -1725,7 +1745,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.143</p>
 		<br>
@@ -1737,7 +1757,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.144</p>
 		<br>
@@ -1749,7 +1769,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.145</p>
 		<br>
@@ -1761,7 +1781,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.146</p>
 		<br>
@@ -1773,7 +1793,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.147</p>
 		<br>
@@ -1784,19 +1804,19 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.148</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
-		IWS 2000
+		IWS 200
 		</div>
 		</div>
 		</div>
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.149</p>
 		<br>
@@ -1808,7 +1828,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.150</p>
 		<br>
@@ -1820,7 +1840,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.151</p>
 		<br>
@@ -1832,7 +1852,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.152</p>
 		<br>
@@ -1844,7 +1864,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.153</p>
 		<br>
@@ -1856,7 +1876,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.154</p>
 		<br>
@@ -1868,7 +1888,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.155</p>
 		<br>
@@ -1880,7 +1900,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.156</p>
 		<br>
@@ -1892,7 +1912,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.157</p>
 		<br>
@@ -1904,7 +1924,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.158</p>
 		<br>
@@ -1916,7 +1936,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.159</p>
 		<br>
@@ -1928,7 +1948,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.160</p>
 		<br>
@@ -1940,7 +1960,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.161</p>
 		<br>
@@ -1952,7 +1972,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.162</p>
 		<br>
@@ -1964,7 +1984,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.163</p>
 		<br>
@@ -1975,7 +1995,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.164</p>
 		<br>
@@ -1986,7 +2006,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.165</p>
 		<br>
@@ -1997,7 +2017,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.166</p>
 		<br>
@@ -2009,7 +2029,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.167</p>
 		<br>
@@ -2021,7 +2041,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.168</p>
 		<br>
@@ -2033,7 +2053,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.169</p>
 		<br>
@@ -2045,7 +2065,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.170</p>
 		<br>
@@ -2057,7 +2077,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.171</p>
 		<br>
@@ -2069,7 +2089,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.172</p>
 		<br>
@@ -2081,7 +2101,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.173</p>
 		<br>
@@ -2093,7 +2113,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.174</p>
 		<br>
@@ -2105,7 +2125,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.175</p>
 		<br>
@@ -2117,7 +2137,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.176</p>
 		<br>
@@ -2129,7 +2149,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.177</p>
 		<br>
@@ -2141,7 +2161,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.178</p>
 		<br>
@@ -2153,7 +2173,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.179</p>
 		<br>
@@ -2165,7 +2185,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.180</p>
 		<br>
@@ -2177,7 +2197,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.181</p>
 		<br>
@@ -2189,7 +2209,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.182</p>
 		<br>
@@ -2201,7 +2221,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.183</p>
 		<br>
@@ -2213,19 +2233,19 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.184</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
-		T-5000
+		T-500
 		</div>
 		</div>
 		</div>
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.185</p>
 		<br>
@@ -2237,7 +2257,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.186</p>
 		<br>
@@ -2249,7 +2269,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.187</p>
 		<br>
@@ -2261,7 +2281,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.188</p>
 		<br>
@@ -2273,7 +2293,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.189</p>
 		<br>
@@ -2285,33 +2305,21 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.190</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
-		NS2000
+		NS200
 		</div>
 		</div>
 		</div>
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.191</p>
-		<br>
-		<div	class="d-flex justify-content-between align-items-center gunname">
-		JS05
-		</div>
-		</div>
-		</div>
-	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
-		<div class="card-body">
-		<p class="card-text">No.192</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M12
@@ -2321,7 +2329,19 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
+		<div class="card-body">
+		<p class="card-text">No.192</p>
+		<br>
+		<div	class="d-flex justify-content-between align-items-center gunname">
+		JS05
+		</div>
+		</div>
+		</div>
+	</div>
+	<div class="col-md-3">
+		<div class="card md-3 box-shadow">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.193</p>
 		<br>
@@ -2333,7 +2353,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.194</p>
 		<br>
@@ -2345,7 +2365,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.195</p>
 		<br>
@@ -2357,7 +2377,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.196</p>
 		<br>
@@ -2369,7 +2389,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.197</p>
 		<br>
@@ -2381,7 +2401,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.198</p>
 		<br>
@@ -2393,7 +2413,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.199</p>
 		<br>
@@ -2405,7 +2425,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.200</p>
 		<br>
@@ -2417,7 +2437,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.201</p>
 		<br>
@@ -2429,18 +2449,19 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.202</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
+		Thunder
 		</div>
 		</div>
 		</div>
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.203</p>
 		<br>
@@ -2451,7 +2472,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.204</p>
 		<br>
@@ -2462,7 +2483,7 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.205</p>
 		<br>
@@ -2474,12 +2495,72 @@
 	</div>
 	<div class="col-md-3">
 		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
 		<div class="card-body">
 		<p class="card-text">No.206</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		AK-12
+		</div>
+		</div>
+		</div>
+	</div>
+		<div class="col-md-3">
+		<div class="card md-3 box-shadow">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
+		<div class="card-body">
+		<p class="card-text">No.207</p>
+		<br>
+		<div	class="d-flex justify-content-between align-items-center gunname">
+
+		</div>
+		</div>
+		</div>
+	</div>
+		<div class="col-md-3">
+		<div class="card md-3 box-shadow">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
+		<div class="card-body">
+		<p class="card-text">No.208</p>
+		<br>
+		<div	class="d-flex justify-content-between align-items-center gunname">
+
+		</div>
+		</div>
+		</div>
+	</div>
+		<div class="col-md-3">
+		<div class="card md-3 box-shadow">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
+		<div class="card-body">
+		<p class="card-text">No.209</p>
+		<br>
+		<div	class="d-flex justify-content-between align-items-center gunname">
+
+		</div>
+		</div>
+		</div>
+	</div>
+		<div class="col-md-3">
+		<div class="card md-3 box-shadow">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
+		<div class="card-body">
+		<p class="card-text">No.210</p>
+		<br>
+		<div	class="d-flex justify-content-between align-items-center gunname">
+		CZ52
+		</div>
+		</div>
+		</div>
+	</div>
+		<div class="col-md-3">
+		<div class="card md-3 box-shadow">
+		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
+		<div class="card-body">
+		<p class="card-text">No.211</p>
+		<br>
+		<div	class="d-flex justify-content-between align-items-center gunname">
+
 		</div>
 		</div>
 		</div>
