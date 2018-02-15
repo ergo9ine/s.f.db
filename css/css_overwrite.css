@@ -1,281 +1,165 @@
-html,body,.overlay{
-	width:100%;
-	height:100%;
-	overflow-x:hidden;
-	overflow-y:hidden;
+/*index*/
+.indexbody, .overlay {
+	background-color: #000;
 }
-#input{
-	text-align:center;
-	margin:1% auto;
-	display:block;
+#logo, #slogo {
+	animation-name: logocolor;
+	animation-duration: 60s;
+	animation-iteration-count: infinite;
 }
-.outer{
-	display:table;
-	height:100%;
-	margin:auto;
+.logo {
+	opacity: 0;
+	animation-name: flash;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-delay: 1s;
 }
-.indexcontainer,.indexbody{
-	background-color:#000;
-	width:70%;
-	height:70%;
-	margin:40px auto;
-}
-.overlay{
-	background-color:#000;
-}
-.w3-container{
-padding: unset;
-}
-.mainb ody{
-overflow-y:hidden;
-}
-a,a:visited,a:link,a:hover,a:active{
-	color:#666;
-	text-decoration:none;
-}
-.top{
-	display:table-cell;
-	vertical-align:middle;
-}
-#logo,#slogo{
-	display:block;
-	animation-name:logocolor;
-	animation-duration:60s;
-	animation-iteration-count:infinite;
-	margin:auto;
-}
-@keyframes logocolor{
-5%{
-filter:hue-rotate(0deg);
-}
-10%{
-filter:hue-rotate(60deg);
-}
-15%{
-filter:hue-rotate(90deg);
-}
-20%{
-filter:hue-rotate(120deg);
-}
-25%{
-filter:hue-rotate(150deg);
-}
-30%{
-filter:hue-rotate(180deg);
-}
-35%{
-filter:hue-rotate(0deg);
-}
-40%{
-filter:contrast(2);
-}
-45%{
-filter:contrast(1);
-}
-50%{
-filter:sepia(1);
-}
-55%{
-filter:sepia(0);
-}
-60%{
-filter:blur(10px);
-}
-65%{
-filter:blur(0px);
-}
-75%{
-filter:invert(0.6);
-}
-80%{
-filter:invert(0);
-}
-85%{
-filter:invert(0.9);
-}
-90%{
-filter:invert(0);
-}
-95%{
-filter:hue-rotate(300deg);
-}
-100%{
-filter:hue-rotate(0deg);
-}
-}
-.logo{
-	opacity:0;
-	animation-name:flash;
-	animation-duration:5s;
-	animation-iteration-count:infinite;
-	animation-delay:1s;
-}
-@keyframes flash{
-5%{
+@keyframes flash {
+5% {
 opacity:0;
 }
-10%{
+10% {
 opacity:1;
 }
-11%{
+11% {
 opacity:0;
 }
-12%{
+12% {
 opacity:1;
 }
-13%{
+13% {
 opacity:0;
 }
-14%{
+14% {
 opacity:1;
 }
-15%{
+15% {
 opacity:0;
 }
-14%{
+14% {
 opacity:1;
 }
-20%{
+20% {
 opacity:0;
 }
-21%{
+21% {
 opacity:1;
 }
-22%{
+22% {
 opacity:0;
 }
-25%{
+25% {
 opacity:1;
 }
-50%{
+50% {
 opacity:0;
 }
-55%{
+55% {
 opacity:1;
 }
-56%{
+56% {
 opacity:0;
 }
-57%{
+57% {
 opacity:1;
 }
-60%{
+60% {
 opacity:0;
 }
-66%{
+66% {
 opacity:1;
 }
-70%{
+70% {
 opacity:0;
 }
-71%{
+71% {
 opacity:1;
 }
-75%{
+75% {
 opacity:0;
 }
-78%{
+78% {
 opacity:1;
 }
-79%{
+79% {
 opacity:0;
 }
-85%{
+85% {
 opacity:1;
 }
-90%{
+90% {
 opacity:0;
 }
-100%{
+100% {
 opacity:1;
 }
 }
-.logo:hover .overlay{
-	opacity:1;
+/*mainframe*/
+/* Sidebar Styles */
+#input {
+	margin: 1% auto;
+	display: block;
 }
-.logo,.overlay{
-	position:relative;
+
+/*topbar*/
+@media (max-width:600px) {
+.w3-light-grey {
+	display: none;
 }
-.overlay{
-	color:#fff;
-	position:absolute;
-	display:inline-block;
-	padding:1em;
-	top:0;
-	bottom:0;
-	left:0;
-	right:0;
-	opacity:0;
-	transition:.5s ease;
+#slogo {
+	display: none;
 }
-.text{
-	text-shadow:2px 2px 10px #fff;
-	font-size:40px;
-	transform:translate(-5%,35%);
 }
-.pre,.text{
-	color:#fff;
-	vertical-align:middle;
-	text-align:center;
-}
-.pre{
-	font-size:18px
-}/* main	page */
-.title{
-	display:inline;
-}
-#page-content-wrapper{
-	width:100%;
-	height:100%;
-	position:absolute;
+#contents{
+	width: 100%;
+	height: calc(100% - 54.5px);
+	position: absolute;
 	border-top-style: groove;
 }
-/* Sidebar Styles */
-.ver{
-	float:right;
-	color:#333;
+a, a:visited, a:link, a:hover, a:active {
+	color: #666;
+	text-decoration: none;
+}/* main	page */
+.ver {
+	float: right;
+	color: #333;
 }
-.themesettings{
-	color:#999;
+.themesettings {
+	color: #999;
 }
-.row{
-	margin:0px !important;
-	text-align:center;
+.row {
+	margin: 0px !important;
+	text-align: center;
 }
-.row #00f{
-	background-color:#000;
-	color:#fff;
+.row #00f {
+	background-color: #000;
+	color: #fff;
 }
-.row #fff{
-	background-color:#fff;
-	color:#000;
+.row #fff {
+	background-color: #fff;
+	color: #000;
 }
-.container-fluid {
-height:100%;
-padding-right: 0px !important;
-padding-left: 0px !important;
+.footer {
+	font-weight: bold;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	text-decoration: none;
 }
-.footer{
-	font-weight:bold;
-	position:absolute;
-	bottom:0px;
-	width:100%;
-	text-decoration:none;
+.footer a:hover {
+	color: #fff
 }
-.footer a:hover{
-	color:#fff
+.card-text {
+	float: left
 }
-.card-text{
-	float:left
+.gunname {
+	float: right
 }
-.gunname{
-	float:right
-}
-.card-img-top{
-	height:100%;
-	width:100%;
-	display:block;
+.card-img-top {
+	height: 100%;
+	width: 100%;
+	display: block;
 }
 .ccg {
-height:50%;
+	height: 50%;
 }
