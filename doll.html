@@ -4,9 +4,10 @@
 	<meta charset="utf-8">
 	<title>preview</title>
 	<!--CSS	Start-->
-		<link	rel="stylesheet" type="text/css" href="css/css3.css">
+		<link	rel="stylesheet" type="text/css" href="css/css_overwrite.css">
 		<link	type="text/css"	rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!--JS	Start-->
 		<script	type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script	type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -18,15 +19,14 @@
 	<script	type="text/javascript">
 		$(document).ready(function(){$("#input").on("keyup",function(){var	value=$(this).val().toLowerCase();$(".row	*").filter(function(){$(this).toggle($(this).closest('div').text().toLowerCase().indexOf(value)>-1)});});});
 	</script>
-	<div	class="row">
-	<div class="col-md-3">
+	<div	class="w3-row">
+	<div class="w3-quarter">
 		<a href="#" data-toggle="modal" data-target="#myModal">
-			<div class="card md-3 box-shadow">
+			<div class="w3-card">
 				<img src="img/t-doll/1_normal_stand.png" alt="Thumbnail" class="card-img-top">
-				<div class="card-body">
+				<div class="w3-container">
 					<p class="card-text">No.001</p>
-					<br>
-					<div	class="d-flex justify-content-between align-items-center gunname">
+					<div	class="gunname">
 					콜트 리볼버
 					</div>
 				</div>
@@ -54,22 +54,41 @@
 		  </div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.002</p>
-		<br>
-		<div	class="d-flex justify-content-between align-items-center gunname">
-		M1911
-		</div>
-		</div>
+	<div class="w3-quarter">
+		<a href="#" onclick="document.getElementById('id01').style.display='block'">
+			<div class="w3-card">
+				<img src="img/t-doll/2_normal_stand.png" alt="Thumbnail" class="card-img-top">
+				<div class="w3-container">
+					<p class="card-text">No.002</p>
+					<br>
+					<div	class="d-flex justify-content-between align-items-center gunname">
+					M1911
+					</div>
+				</div>
+			</div>
+		</a>
+		<div id="id01" class="w3-modal">
+			<div class="w3-modal-content">
+				<header class="w3-container">
+					<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+					<h2>No.001 M1911</h2>
+				</header>
+				<div class="w3-container">
+					<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+					<img src="img/t-doll/2_normal_stand.png" alt="CharacterCG">
+					<p>Some text in the Modal..</p>
+					<p>Some text in the Modal..</p>
+				</div>
+				<footer class="w3-container">
+				<p>Modal Footer</p>
+				</footer>
+			</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+	<div class="w3-quarter">
+		<div class="w3-card">
+		<img src="img/t-doll/3_normal_stand.png" alt="Thumbnail" class="card-img-top">
+		<div class="w3-container">
 		<p class="card-text">No.003</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -78,10 +97,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-container">
 		<p class="card-text">No.004</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -90,10 +109,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
-		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+	<div	class="w3-row">
+	<div class="w3-quarter">
+		<div class="w3-card">
+		<img src="img/t-doll/5_normal_stand.png" alt="Thumbnail" class="card-img-top">
+		<div class="w3-card">
 		<p class="card-text">No.005</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -102,10 +122,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.006</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -114,10 +134,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.007</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -126,10 +146,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.008</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -138,10 +158,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div	class="w3-row">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.009</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -150,11 +171,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.010<</p>
+		<div class="w3-card">
+		<p class="card-text">No.010</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		PPK
@@ -162,11 +183,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.011<</p>
+		<div class="w3-card">
+		<p class="card-text">No.011</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		P08
@@ -174,11 +195,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.012<</p>
+		<div class="w3-card">
+		<p class="card-text">No.012</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		C96
@@ -186,11 +207,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.013<</p>
+		<div class="w3-card">
+		<p class="card-text">No.013</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		92식
@@ -198,11 +219,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.014<</p>
+		<div class="w3-card">
+		<p class="card-text">No.014</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		아스트라 리볼버
@@ -210,11 +231,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.015<</p>
+		<div class="w3-card">
+		<p class="card-text">No.015</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		글록 17
@@ -222,11 +243,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.016<</p>
+		<div class="w3-card">
+		<p class="card-text">No.016</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		톰슨
@@ -234,11 +255,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.017<</p>
+		<div class="w3-card">
+		<p class="card-text">No.017</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M3
@@ -246,11 +267,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.018<</p>
+		<div class="w3-card">
+		<p class="card-text">No.018</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		MAC-10
@@ -258,11 +279,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.019<</p>
+		<div class="w3-card">
+		<p class="card-text">No.019</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		FMG-9
@@ -270,11 +291,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.020<</p>
+		<div class="w3-container">
+		<p class="card-text">No.020</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		Vector
@@ -282,11 +303,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.021<</p>
+		<div class="w3-card">
+		<p class="card-text">No.021</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		PPSh-41
@@ -294,11 +315,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.022<</p>
+		<div class="w3-card">
+		<p class="card-text">No.022</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		PPS-43
@@ -306,11 +327,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.023<</p>
+		<div class="w3-card">
+		<p class="card-text">No.023</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		PP-90
@@ -318,11 +339,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.024<</p>
+		<div class="w3-card">
+		<p class="card-text">No.024</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		PP-200
@@ -330,11 +351,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.025<</p>
+		<div class="w3-card">
+		<p class="card-text">No.025</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		MP40
@@ -342,11 +363,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.026<</p>
+		<div class="w3-card">
+		<p class="card-text">No.026</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		MP5
@@ -354,11 +375,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.027<</p>
+		<div class="w3-card">
+		<p class="card-text">No.027</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		스콜피온
@@ -366,11 +387,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.028<</p>
+		<div class="w3-card">
+		<p class="card-text">No.028</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		ACCESS DENIED
@@ -378,11 +399,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.029<</p>
+		<div class="w3-card">
+		<p class="card-text">No.029</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		스텐 Mk II
@@ -390,11 +411,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.030<</p>
+		<div class="w3-card">
+		<p class="card-text">No.030</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		ACCESS DENIED
@@ -402,11 +423,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.031<</p>
+		<div class="w3-card">
+		<p class="card-text">No.031</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		베레타	38형
@@ -414,11 +435,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.032<</p>
+		<div class="w3-card">
+		<p class="card-text">No.032</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		마이크로 우지
@@ -426,11 +447,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.033<</p>
+		<div class="w3-card">
+		<p class="card-text">No.033</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		m45
@@ -438,11 +459,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.034<</p>
+		<div class="w3-card">
+		<p class="card-text">No.034</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M1 개런드
@@ -450,11 +471,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.035<</p>
+		<div class="w3-card">
+		<p class="card-text">No.035</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M1A1
@@ -462,11 +483,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.036<</p>
+		<div class="w3-card">
+		<p class="card-text">No.036</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		스프링필드
@@ -474,11 +495,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.037<</p>
+		<div class="w3-card">
+		<p class="card-text">No.037</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M14
@@ -486,11 +507,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.038<</p>
+		<div class="w3-card">
+		<p class="card-text">No.038</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M21
@@ -498,11 +519,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.039<</p>
+		<div class="w3-card">
+		<p class="card-text">No.039</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		모신나강
@@ -510,11 +531,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.040<</p>
+		<div class="w3-card">
+		<p class="card-text">No.040</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		SVT-38
@@ -522,11 +543,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.041<</p>
+		<div class="w3-card">
+		<p class="card-text">No.041</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		시모노프
@@ -534,11 +555,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.042<</p>
+		<div class="w3-card">
+		<p class="card-text">No.042</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		PTRD
@@ -546,11 +567,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.043<</p>
+		<div class="w3-card">
+		<p class="card-text">No.043</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		SVD
@@ -558,11 +579,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.044<</p>
+		<div class="w3-card">
+		<p class="card-text">No.044</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		SV-98
@@ -570,11 +591,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.045<</p>
+		<div class="w3-card">
+		<p class="card-text">No.045</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		ACCESS DENIED
@@ -582,11 +603,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.046<</p>
+		<div class="w3-card">
+		<p class="card-text">No.046</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		Kar98k
@@ -594,11 +615,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.047<</p>
+		<div class="w3-card">
+		<p class="card-text">No.047</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		G43
@@ -606,11 +627,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.048<</p>
+		<div class="w3-card">
+		<p class="card-text">No.048</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		WA200
@@ -618,11 +639,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.049<</p>
+		<div class="w3-card">
+		<p class="card-text">No.049</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		56식	반
@@ -630,11 +651,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.050<</p>
+		<div class="w3-card">
+		<p class="card-text">No.050</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		리-엔필드
@@ -642,11 +663,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.051<</p>
+		<div class="w3-card">
+		<p class="card-text">No.051</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		FN-49
@@ -654,11 +675,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.052<</p>
+		<div class="w3-card">
+		<p class="card-text">No.052</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		BM59
@@ -666,11 +687,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.053<</p>
+		<div class="w3-card">
+		<p class="card-text">No.053</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		NTW-20
@@ -678,11 +699,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.054<</p>
+		<div class="w3-card">
+		<p class="card-text">No.054</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M16A1
@@ -690,11 +711,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.055<</p>
+		<div class="w3-card">
+		<p class="card-text">No.055</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M4A1
@@ -702,11 +723,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.056<</p>
+		<div class="w3-card">
+		<p class="card-text">No.056</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M4 SOPMODII
@@ -714,11 +735,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.057<</p>
+		<div class="w3-card">
+		<p class="card-text">No.057</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		ST AR-15
@@ -726,11 +747,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.058<</p>
+		<div class="w3-card">
+		<p class="card-text">No.058</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		AK-47
@@ -738,22 +759,22 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.059<</p>
+		<div class="w3-card">
+		<p class="card-text">No.059</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		</div>
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.060<</p>
+		<div class="w3-card">
+		<p class="card-text">No.060</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		AS Val
@@ -761,11 +782,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.061<</p>
+		<div class="w3-card">
+		<p class="card-text">No.061</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		StG44
@@ -773,11 +794,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.062<</p>
+		<div class="w3-card">
+		<p class="card-text">No.062</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		G41
@@ -785,11 +806,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.063<</p>
+		<div class="w3-card">
+		<p class="card-text">No.063</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		G3
@@ -797,11 +818,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.064<</p>
+		<div class="w3-card">
+		<p class="card-text">No.064</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		G36
@@ -809,11 +830,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.065<</p>
+		<div class="w3-card">
+		<p class="card-text">No.065</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		HK416
@@ -821,11 +842,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.066<</p>
+		<div class="w3-card">
+		<p class="card-text">No.066</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		56-1식
@@ -833,22 +854,22 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.067<</p>
+		<div class="w3-card">
+		<p class="card-text">No.067</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		</div>
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.068<</p>
+		<div class="w3-card">
+		<p class="card-text">No.068</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		L85A1
@@ -856,11 +877,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.069<</p>
+		<div class="w3-card">
+		<p class="card-text">No.069</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		FAMAS
@@ -868,11 +889,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.070<</p>
+		<div class="w3-card">
+		<p class="card-text">No.070</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		FNC
@@ -880,11 +901,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.071<</p>
+		<div class="w3-card">
+		<p class="card-text">No.071</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		갈릴
@@ -892,11 +913,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.072<</p>
+		<div class="w3-card">
+		<p class="card-text">No.072</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		TAR-21
@@ -904,11 +925,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.073<</p>
+		<div class="w3-card">
+		<p class="card-text">No.073</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		SIG-510
@@ -916,11 +937,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.074<</p>
+		<div class="w3-card">
+		<p class="card-text">No.074</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M1918
@@ -928,11 +949,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.075<</p>
+		<div class="w3-card">
+		<p class="card-text">No.075</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M1918
@@ -940,11 +961,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.076<</p>
+		<div class="w3-card">
+		<p class="card-text">No.076</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M2HB
@@ -952,11 +973,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.077<</p>
+		<div class="w3-card">
+		<p class="card-text">No.077</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M2HB
@@ -964,11 +985,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.078<</p>
+		<div class="w3-card">
+		<p class="card-text">No.078</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M60
@@ -976,11 +997,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.079<</p>
+		<div class="w3-card">
+		<p class="card-text">No.079</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M249	SAW
@@ -988,11 +1009,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.080<</p>
+		<div class="w3-card">
+		<p class="card-text">No.080</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M1919A4
@@ -1000,11 +1021,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.081<</p>
+		<div class="w3-card">
+		<p class="card-text">No.081</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		LWMMG
@@ -1012,11 +1033,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.082<</p>
+		<div class="w3-card">
+		<p class="card-text">No.082</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		DP28
@@ -1024,22 +1045,22 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.083<</p>
+		<div class="w3-card">
+		<p class="card-text">No.083</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		</div>
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.084<</p>
+		<div class="w3-card">
+		<p class="card-text">No.084</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		PRD
@@ -1047,11 +1068,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.085<</p>
+		<div class="w3-card">
+		<p class="card-text">No.085</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		PK
@@ -1059,11 +1080,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.086<</p>
+		<div class="w3-card">
+		<p class="card-text">No.086</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		MG42
@@ -1071,11 +1092,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.087<</p>
+		<div class="w3-card">
+		<p class="card-text">No.087</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		MG34
@@ -1083,11 +1104,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.088<</p>
+		<div class="w3-card">
+		<p class="card-text">No.088</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		MG3
@@ -1095,11 +1116,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.089<</p>
+		<div class="w3-card">
+		<p class="card-text">No.089</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		브렌
@@ -1107,11 +1128,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.090<</p>
+		<div class="w3-card">
+		<p class="card-text">No.090</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		FNP-9
@@ -1119,11 +1140,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.091<</p>
+		<div class="w3-card">
+		<p class="card-text">No.091</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		MP-446
@@ -1131,11 +1152,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.092<</p>
+		<div class="w3-card">
+		<p class="card-text">No.092</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		Spectre M4
@@ -1143,11 +1164,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.093<</p>
+		<div class="w3-card">
+		<p class="card-text">No.093</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		IDW
@@ -1155,11 +1176,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.094<</p>
+		<div class="w3-card">
+		<p class="card-text">No.094</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		64식
@@ -1167,11 +1188,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.095<</p>
+		<div class="w3-card">
+		<p class="card-text">No.095</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		한양조 88식
@@ -1179,11 +1200,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.096<</p>
+		<div class="w3-card">
+		<p class="card-text">No.096</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		그리즐리	Mk V
@@ -1191,11 +1212,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.097<</p>
+		<div class="w3-card">
+		<p class="card-text">No.097</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		M950A
@@ -1203,11 +1224,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.098<</p>
+		<div class="w3-card">
+		<p class="card-text">No.098</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		SPP-1
@@ -1215,11 +1236,11 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
-		<p class="card-text">No.099<</p>
+		<div class="w3-card">
+		<p class="card-text">No.099</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
 		Mk23
@@ -1227,10 +1248,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.100</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1239,10 +1260,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.101</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1251,10 +1272,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.102</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1263,10 +1284,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.103</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1275,10 +1296,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.104</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1287,10 +1308,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.105</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1299,10 +1320,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.106</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1311,10 +1332,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.107</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1323,10 +1344,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.108</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1335,10 +1356,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.109</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1347,10 +1368,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.110</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1359,10 +1380,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.111</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1371,10 +1392,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.112</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1383,10 +1404,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.113</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1395,10 +1416,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.114</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1407,10 +1428,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.115</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1419,10 +1440,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.116</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1431,10 +1452,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.117</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1443,10 +1464,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.118</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1455,10 +1476,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.119</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1467,10 +1488,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.120</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1479,10 +1500,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.121</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1491,10 +1512,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.122</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1503,10 +1524,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.123</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1515,10 +1536,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.124</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1527,10 +1548,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.125</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1539,10 +1560,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.126</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1551,10 +1572,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.127</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1563,10 +1584,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.128</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1575,10 +1596,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.129</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1587,10 +1608,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.130</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1599,10 +1620,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.131</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1611,10 +1632,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.132</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1623,10 +1644,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.133</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1635,10 +1656,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.134</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1647,10 +1668,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.135</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1659,10 +1680,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.136</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1671,10 +1692,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.137</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1683,10 +1704,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.138</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1695,10 +1716,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.139</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1707,10 +1728,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.140</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1719,10 +1740,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.141</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1731,10 +1752,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.142</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1743,10 +1764,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.143</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1755,10 +1776,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.144</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1767,10 +1788,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.145</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1779,10 +1800,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.146</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1791,10 +1812,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.147</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">SSG 69
@@ -1802,10 +1823,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.148</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1814,10 +1835,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.149</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1826,10 +1847,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.150</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1838,10 +1859,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.151</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1850,10 +1871,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.152</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1862,10 +1883,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.153</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1874,10 +1895,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.154</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1886,10 +1907,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.155</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1898,10 +1919,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.156</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1910,10 +1931,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.157</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1922,10 +1943,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.158</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1934,10 +1955,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.159</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1946,10 +1967,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.160</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1958,10 +1979,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.161</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1970,10 +1991,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.162</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1982,10 +2003,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.163</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -1993,10 +2014,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.164</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2004,10 +2025,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.165</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2015,10 +2036,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.166</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2027,10 +2048,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.167</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2039,10 +2060,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.168</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2051,10 +2072,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.169</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2063,10 +2084,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.170</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2075,10 +2096,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.171</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2087,10 +2108,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.172</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2099,10 +2120,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.173</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2111,10 +2132,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.174</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2123,10 +2144,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.175</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2135,10 +2156,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.176</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2147,10 +2168,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.177</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2159,10 +2180,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.178</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2171,10 +2192,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.179</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2183,10 +2204,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.180</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2195,10 +2216,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.181</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2207,10 +2228,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.182</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2219,10 +2240,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.183</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2231,10 +2252,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.184</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2243,10 +2264,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.185</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2255,10 +2276,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.186</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2267,10 +2288,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.187</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2279,10 +2300,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.188</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2291,10 +2312,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.189</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2303,10 +2324,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.190</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2315,10 +2336,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.191</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2327,10 +2348,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.192</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2339,10 +2360,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.193</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2351,10 +2372,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.194</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2363,10 +2384,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.195</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2375,10 +2396,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.196</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2387,10 +2408,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.197</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2399,10 +2420,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.198</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2411,10 +2432,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.199</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2423,10 +2444,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.200</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2435,10 +2456,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.201</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2447,10 +2468,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.202</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2459,10 +2480,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.203</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2470,10 +2491,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.204</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2481,10 +2502,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.205</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2493,10 +2514,10 @@
 		</div>
 		</div>
 	</div>
-	<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+	<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.206</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2505,10 +2526,10 @@
 		</div>
 		</div>
 	</div>
-		<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+		<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.207</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2517,10 +2538,10 @@
 		</div>
 		</div>
 	</div>
-		<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+		<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.208</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2529,10 +2550,10 @@
 		</div>
 		</div>
 	</div>
-		<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+		<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.209</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2541,10 +2562,10 @@
 		</div>
 		</div>
 	</div>
-		<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+		<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.210</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">
@@ -2553,10 +2574,10 @@
 		</div>
 		</div>
 	</div>
-		<div class="col-md-3">
-		<div class="card md-3 box-shadow">
+		<div class="w3-quarter">
+		<div class="w3-card">
 		<img src="" alt="Thumbnail" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=#333&fg=#fff&text=ACCESS DENIED">
-		<div class="card-body">
+		<div class="w3-card">
 		<p class="card-text">No.211</p>
 		<br>
 		<div	class="d-flex justify-content-between align-items-center gunname">

@@ -22,11 +22,11 @@
 		<input class="w3-input w3-border w3-padding" type="text" placeholder="메뉴 검색" id="input" onkeyup="myFunction()">
 		<div id="menu">
 			<a	class="w3-bar-item w3-button w3-hover-white" href="doll.html"		target="body">전술	인형	도감</a>
-			<a	class="w3-bar-item w3-button w3-hover-white" href="preview.html"	target="body">장비	요정	도감</a>
+			<!-- <a	class="w3-bar-item w3-button w3-hover-white" href="preview.html"	target="body">장비	요정	도감</a>
 			<a	class="w3-bar-item w3-button w3-hover-white" href="preview.html"	target="body">군수	지원	정보</a>
 			<a	class="w3-bar-item w3-button w3-hover-white" href="preview.html"	target="body">자율	전투	정보</a>
 			<a	class="w3-bar-item w3-button w3-hover-white" href="preview.html"	target="body">모의	작전	정보</a>
-			<a	class="w3-bar-item w3-button w3-hover-white" href="preview.html"	target="body">About</a>
+			<a	class="w3-bar-item w3-button w3-hover-white" href="preview.html"	target="body">About</a> -->
 			<a	class="w3-bar-item w3-button w3-hover-white" href="https://github.com/GFDB/GFDB.github.io/issues">issues	Tracker</a>
 		</div>
 		<div	class="footer">
@@ -69,16 +69,16 @@ function w3_close() {
 <!--Menu	Search	Script-->
 <script>
 function myFunction() {
-    var input, filter, div , li, a, i;
+    var input, filter, div , a, i;
     input = document.getElementById("input");
     filter = input.value.toUpperCase();
     div = document.getElementById("menu");
-    li = div.getElementsByTagName("a");
-    for (i = 0; i < li.length; i++) {
-        if (li[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
         } else {
-            li[i].style.display = "none";
+            a[i].style.display = "none";
         }
     }
 }
