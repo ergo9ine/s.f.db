@@ -1,12 +1,31 @@
-/* index page */
-/*@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);*/
 html,body,.overlay{
 	width:100%;
 	height:100%;
-	/*	font-family:'Noto Sans KR',sans-serif !important;*/
 }
-body,.overlay{
+#input{
+	text-align:center;
+	margin:1% auto;
+	display:block;
+}
+.outer{
+	display:table;
+	height:100%;
+	margin:auto;
+}
+.indexcontainer,.indexbody{
 	background-color:#000;
+	width:70%;
+	height:70%;
+	margin:40px auto;
+}
+.overlay{
+	background-color:#000;
+}
+.w3-container{
+padding: unset;
+}
+.mainb ody{
+overflow-y:hidden;
 }
 a,a:visited,a:link,a:hover,a:active{
 	color:#666;
@@ -203,24 +222,12 @@ opacity:1;
 .title{
 	display:inline;
 }
-#wrapper{
-	padding-left:0;
-	overflow-x:hidden;
-	-webkit-transition:all 0.5s ease;
-	-moz-transition:all 0.5s ease;
-	-o-transition:all 0.5s ease;
-	transition:all 0.5s ease;
-}
 #page-content-wrapper{
 	width:100%;
 	height:100%;
 	position:absolute;
 	margin-top: 1%;
 	border-top-style: groove;
-}
-#wrapper.toggled #page-content-wrapper{
-	position:absolute;
-	margin-right:-250px;
 }
 /* Sidebar Styles */
 .ver{
@@ -266,11 +273,6 @@ padding-left: 0px !important;
 .card-img-top{
 	height:100%;
 	width:100%;
-	display:block;
-}
-#input{
-	text-align:center;
-	margin:1% auto;
 	display:block;
 }
 .ccg {
