@@ -4,85 +4,75 @@
 <meta	charset="UTF-8">
 <meta	name="viewport"	content="width=device-width,initial-scale=1.0">
 <title>GFDB</title>
-<!--CSS	Start-->
 <link	rel="stylesheet"	href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link	rel="stylesheet"	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link	rel="stylesheet"	type="text/css"	href="css/css_overwrite.css">
-<!--CSS	End-->
-<!--JS	Start-->
-<!--JS	End-->
 </head>
 <body>
-<!--#wrapper-->
-	<div	class="w3-sidebar	w3-bar-block	w3-border-right w3-black"	style="display:none"	id="Sidebar">
-		<button	onclick="w3_close()"	class="w3-bar-item	w3-large	w3-white" style="text-align:right"><i class="fa fa-close"></i></button>
-		<div	class="logo"	style="margin-bottom:5%">
-			<a	href="index.html"><img	src="img/logo/sidebar_gflogo.png"	alt="logo"	id="slogo"></a>
-		</div>
-		<input class="w3-input w3-border w3-padding" type="text" placeholder="메뉴 검색" id="input" onkeyup="myFunction()">
-		<div id="menu">
-			<a	class="w3-bar-item w3-button w3-hover-white" href="doll.html"		target="body">전술	인형	도감</a>
-			<!-- <a	class="w3-bar-item w3-button w3-hover-white" href="preview.html"	target="body">장비	요정	도감</a>
-			<a	class="w3-bar-item w3-button w3-hover-white" href="preview.html"	target="body">군수	지원	정보</a>
-			<a	class="w3-bar-item w3-button w3-hover-white" href="preview.html"	target="body">자율	전투	정보</a>
-			<a	class="w3-bar-item w3-button w3-hover-white" href="preview.html"	target="body">모의	작전	정보</a>
-			<a	class="w3-bar-item w3-button w3-hover-white" href="preview.html"	target="body">About</a> -->
-			<a	class="w3-bar-item w3-button w3-hover-white" href="https://github.com/GFDB/GFDB.github.io/issues">issues	Tracker</a>
-		</div>
-		<div	class="footer">
-			<div	class="ver">	Ver	0.1.1.4d	</div>
-			<!--	<h6	class="themesettings">Theme</h6>
-			<div	class="row">
-					<div	class="col-sm-6"	id="00f"><a	href="#">Black</a></div>
-					<div	class="col-sm-6"	id="fff"><a	href="#">White</a></div>
-			</div>	-->
-		</div>
-	</div>
-<!--/#wrapper-->
-<!--Page	Content-->
-<div class="w3-teal w3-white">
-	<button class="w3-button w3-teal w3-xlarge w3-white" onclick="w3_open()"><i class="fa fa-bars"></i></button>
-	<div class="w3-light-grey">
-			<div class="w3-container  w3-black" style="width:26%">GFDB Loading... 26%</div>
-	</div>
-	<br>
-	<div class="w3-container w3-white">
-			<div	id="page-content-wrapper">
-				<div	class="container-fluid">
-					<iframe src="preview.html"	name="body"	style="display:block;border:0;height:100%"		width="100%"	height="100%"></iframe>
-				</div>
-			</div>
-	</div>
+<div	class="w3-sidebar	w3-bar-block	w3-black"	style="display:none"	id="Sidebar">
+  <button	onclick="w3_close()"	class="w3-bar-item	w3-tiny	w3-white w3-center"><i	class="fa	fa-close"></i></button>
+  <div	class="logo"	style="margin-bottom:2%"><a	href="index.html"><img	src="img/logo/sidebar_gflogo.png"	alt="logo"	id="slogo"></a></div>
+  <input	class="w3-input	w3-border	w3-padding"	type="text"	placeholder="메뉴	검색"	id="input"	onkeyup="myFunction()">
+  <div	id="menu"><a	class="w3-bar-item	w3-button	w3-hover-white"	href="doll.html"	target="body">전술	인형	도감</a> 
+    <!--	<a	class="w3-bar-item	w3-button	w3-hover-white"	href="preview.html"	target="body">장비	요정	도감</a>
+		<a	class="w3-bar-item	w3-button	w3-hover-white"	href="preview.html"	target="body">군수	지원	정보</a>
+		<a	class="w3-bar-item	w3-button	w3-hover-white"	href="preview.html"	target="body">자율	전투	정보</a>
+		<a	class="w3-bar-item	w3-button	w3-hover-white"	href="preview.html"	target="body">모의	작전	정보</a>
+		<a	class="w3-bar-item	w3-button	w3-hover-white"	href="preview.html"	target="body">About</a>	--> 
+    <a	class="w3-bar-item	w3-button	w3-hover-white"	href="https://github.com/GFDB/GFDB.github.io/issues">issues	Tracker</a></div>
+  <div	class="footer">
+    <div	class="ver"> Ver	0.1.1.4d </div>
+    <!--	<h6	class="themesettings">Theme</h6>
+		<div	class="row">
+			<div	class="col-sm-6"	id="00f"><a	href="#">Black</a></div>
+			<div	class="col-sm-6"	id="fff"><a	href="#">White</a></div>
+		</div>	--> 
+  </div>
 </div>
-	<!--/#page-content-wrapper-->
-<!--/#wrapper-->
-<!--Menu	Toggle	Script-->
+<!--/#wrapper--> 
+<!--Page	Content-->
+<div	class="w3-teal	w3-white">
+  <button	class="w3-button	w3-teal	w3-tiny	w3-white"	onclick="w3_open()"><i	class="fa	fa-bars"></i></button>
+  <div	class="w3-light-grey">
+    <div	class="w3-container	w3-black w3-right-align"	style="width:28%">GFDB	Loading...	28%</div>
+  </div>
+  <div	class="w3-container	w3-white">
+    <div	id="page-content-wrapper">
+      <div	class="container-fluid">
+        <iframe	src="preview.html"	name="body"	style="display:block;border:0;height:100%"	width="100%"	height="100%"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/#page-content-wrapper--> 
+<!--/#wrapper--> 
+<!--Menu	Toggle	Script--> 
 <script>
-function w3_open() {
-    document.getElementById("Sidebar").style.display = "block";
+function	w3_open()	{
+		document.getElementById("Sidebar").style.display	=	"block";
 }
-function w3_close() {
-    document.getElementById("Sidebar").style.display = "none";
+function	w3_close()	{
+		document.getElementById("Sidebar").style.display	=	"none";
 }
-</script>
-<!--/Menu	Toggle	Script-->
-<!--Menu	Search	Script-->
+</script> 
+<!--/Menu	Toggle	Script--> 
+<!--Menu	Search	Script--> 
 <script>
-function myFunction() {
-    var input, filter, div , a, i;
-    input = document.getElementById("input");
-    filter = input.value.toUpperCase();
-    div = document.getElementById("menu");
-    a = div.getElementsByTagName("a");
-    for (i = 0; i < a.length; i++) {
-        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
-            a[i].style.display = "";
-        } else {
-            a[i].style.display = "none";
-        }
-    }
+function	myFunction()	{
+		var	input,	filter,	div	,	a,	i;
+		input	=	document.getElementById("input");
+		filter	=	input.value.toUpperCase();
+		div	=	document.getElementById("menu");
+		a	=	div.getElementsByTagName("a");
+		for	(i	=	0;	i	<a.length;	i++)	{
+				if	(a[i].innerHTML.toUpperCase().indexOf(filter)	>	-1)	{
+						a[i].style.display	=	"";
+				}	else	{
+						a[i].style.display	=	"none";
+				}
+		}
 }
-</script>
+</script> 
 <!--/Menu	Search	Script-->
 </body>
 </html>
