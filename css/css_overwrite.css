@@ -1,112 +1,111 @@
 /*index*/
-.indexbody, .overlay {
+.indexbody,.overlay{
 	background-color:#000;
 }
-#logo, #slogo {
+#logo,#slogo{
 	animation-name:logocolor;
 	animation-duration:60s;
 	animation-iteration-count:infinite;
 }
-.logo {
+.logo{
 	opacity:0;
 	animation-name:flash;
 	animation-duration:5s;
 	animation-iteration-count:infinite;
 	animation-delay:1s;
 }
-@keyframes flash {
-5% {
+@keyframes flash{
+5%{
 opacity:0;
 }
-10% {
+10%{
 opacity:1;
 }
-11% {
+11%{
 opacity:0;
 }
-12% {
+12%{
 opacity:1;
 }
-13% {
+13%{
 opacity:0;
 }
-14% {
+14%{
 opacity:1;
 }
-15% {
+15%{
 opacity:0;
 }
-14% {
+14%{
 opacity:1;
 }
-20% {
+20%{
 opacity:0;
 }
-21% {
+21%{
 opacity:1;
 }
-22% {
+22%{
 opacity:0;
 }
-25% {
+25%{
 opacity:1;
 }
-50% {
+50%{
 opacity:0;
 }
-55% {
+55%{
 opacity:1;
 }
-56% {
+56%{
 opacity:0;
 }
-57% {
+57%{
 opacity:1;
 }
-60% {
+60%{
 opacity:0;
 }
-66% {
+66%{
 opacity:1;
 }
-70% {
+70%{
 opacity:0;
 }
-71% {
+71%{
 opacity:1;
 }
-75% {
+75%{
 opacity:0;
 }
-78% {
+78%{
 opacity:1;
 }
-79% {
+79%{
 opacity:0;
 }
-85% {
+85%{
 opacity:1;
 }
-90% {
+90%{
 opacity:0;
 }
-100% {
+100%{
 opacity:1;
 }
 }
 /*mainframe*/
 /* Sidebar Styles */
-#input {
+#input{
 	margin:1% auto;
 	display:block;
 }
-
 /*topbar*/
-@media (max-width:600px) {
-.w3-light-grey {
+@media (max-width:600px){
+.w3-light-grey{
 	display:none;
 }
-#slogo {
+#slogo{
 	display:none;
 }
 }
@@ -116,48 +115,48 @@ opacity:1;
 	position:absolute;
 	border-top-style:groove;
 }
-a, a:visited, a:link, a:hover, a:active {
+a,a:visited,a:link,a:hover,a:active{
 	color:#666;
 	text-decoration:none;
 }/* main	page */
-.ver {
+.ver{
 	float:right;
 	color:#333;
 }
-.themesettings {
+.themesettings{
 	color:#999;
 }
-.row {
+.row{
 	margin:0px !important;
 	text-align:center;
 }
-.row #00f {
+.row #00f{
 	background-color:#000;
 	color:#fff;
 }
-.row #fff {
+.row #fff{
 	background-color:#fff;
 	color:#000;
 }
-.footer {
+.footer{
 	font-weight:bold;
 	position:absolute;
 	bottom:0px;
 	width:100%;
 	text-decoration:none;
 }
-.footer a:hover {
+.footer a:hover{
 	color:#fff
 }
-.card-text {
+.card-text{
 	float:left
 }
-.gunname {
+.gunname{
 	float:right
 }
-.card-img-top {
+.card-img-top{
 	width:100%;
 }
-.ccg {
+.ccg{
 	height:50%;
 }
