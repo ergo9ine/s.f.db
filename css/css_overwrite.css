@@ -1,18 +1,18 @@
 /*index*/
 .indexbody, .overlay {
-	background-color: #000;
+	background-color:#000;
 }
 #logo, #slogo {
-	animation-name: logocolor;
-	animation-duration: 60s;
-	animation-iteration-count: infinite;
+	animation-name:logocolor;
+	animation-duration:60s;
+	animation-iteration-count:infinite;
 }
 .logo {
-	opacity: 0;
-	animation-name: flash;
-	animation-duration: 5s;
-	animation-iteration-count: infinite;
-	animation-delay: 1s;
+	opacity:0;
+	animation-name:flash;
+	animation-duration:5s;
+	animation-iteration-count:infinite;
+	animation-delay:1s;
 }
 @keyframes flash {
 5% {
@@ -97,69 +97,67 @@ opacity:1;
 /*mainframe*/
 /* Sidebar Styles */
 #input {
-	margin: 1% auto;
-	display: block;
+	margin:1% auto;
+	display:block;
 }
 
 /*topbar*/
 @media (max-width:600px) {
 .w3-light-grey {
-	display: none;
+	display:none;
 }
 #slogo {
-	display: none;
+	display:none;
 }
 }
 #contents{
-	width: 100%;
-	height: calc(100% - 54.5px);
-	position: absolute;
-	border-top-style: groove;
+	width:100%;
+	height:calc(100% - 54.5px);
+	position:absolute;
+	border-top-style:groove;
 }
 a, a:visited, a:link, a:hover, a:active {
-	color: #666;
-	text-decoration: none;
+	color:#666;
+	text-decoration:none;
 }/* main	page */
 .ver {
-	float: right;
-	color: #333;
+	float:right;
+	color:#333;
 }
 .themesettings {
-	color: #999;
+	color:#999;
 }
 .row {
-	margin: 0px !important;
-	text-align: center;
+	margin:0px !important;
+	text-align:center;
 }
 .row #00f {
-	background-color: #000;
-	color: #fff;
+	background-color:#000;
+	color:#fff;
 }
 .row #fff {
-	background-color: #fff;
-	color: #000;
+	background-color:#fff;
+	color:#000;
 }
 .footer {
-	font-weight: bold;
-	position: absolute;
-	bottom: 0px;
-	width: 100%;
-	text-decoration: none;
+	font-weight:bold;
+	position:absolute;
+	bottom:0px;
+	width:100%;
+	text-decoration:none;
 }
 .footer a:hover {
-	color: #fff
+	color:#fff
 }
 .card-text {
-	float: left
+	float:left
 }
 .gunname {
-	float: right
+	float:right
 }
 .card-img-top {
-	height: 100%;
-	width: 100%;
-	display: block;
+	width:100%;
 }
 .ccg {
-	height: 50%;
+	height:50%;
 }
