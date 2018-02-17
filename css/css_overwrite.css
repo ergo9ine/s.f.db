@@ -1,4 +1,7 @@
 /*index*/
+html {
+font-family: 'Nanum Gothic', sans-serif;
+}
 .indexbody,.overlay{
 	background-color:#000;
 }
