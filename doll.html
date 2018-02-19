@@ -2,12 +2,11 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>preview</title>
+<title>T-doll</title>
 <!--CSS Start-->
 <link rel="stylesheet" type="text/css" href="css/css_overwrite.css">
-<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Open+Sans:600" rel="stylesheet"> 
-<link type="text/css" rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"><!--JS  Start-->
-<script type="text/javascript" src="https://getbootstrap.com/assets/js/vendor/holder.min.js">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Open+Sans" rel="stylesheet"> 
+<link type="text/css" rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </script>
 </head>
 <body>
@@ -27,1765 +26,1197 @@ a[i].style.display ="none";
 }
 }
 </script>
-<script type="text/javascript">
-Holder.addTheme("thumb", { bg:"#333", fg:"#fff",text:"ACCESS DENIED" });
-</script>
-<div class="w3-panel w3-margin-bottom">
-<input class="w3-input w3-border w3-padding w3-center" type="text" placeholder="전술 인형 검색" id="input" onkeyup="filterFunction()">
+<input class="w3-input w3-border w3-padding w3-center" type="text" placeholder="검색" id="input" style="width:25vw" onkeyup="filterFunction()">
+<div class="w3-row-padding w3-center">
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">1</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">콜트 리볼버</p>
+		<img src="img/etc/nametag_4star.png" style="position:absolute;margin-top:355px;z-index:3">
+		<img src="img/etc/hg_4star.png" style="position:absolute;margin-left:1px;margin-top:1px;z-index:3">
+		<img src="img/etc/star.png" style="position:absolute;margin-left:225px;margin-top:2px;z-index:3">
+		<img src="img/etc/star.png" style="position:absolute;margin-left:200px;margin-top:2px;z-index:3">
+		<img src="img/etc/star.png" style="position:absolute;margin-left:175px;margin-top:2px;z-index:3">
+		<img src="img/etc/star.png" style="position:absolute;margin-left:150px;margin-top:2px;z-index:3">
+		<img src="img/etc/info_cage.png" style="position:absolute;z-index:2">
+		<img src="img/t_doll/1_i.png" alt="Thumbnail" style="margin-top:21px;min-width:256px">
+	</div>
 </div>
-<div class="w3-container w3-center" id="gun">
-<div class="w3-row-padding">
-	<div class="w3-quarter" style="width:350px;height:486px;padding:5px">
-		<div class="w3-card" style="margin-left:auto;margin-right:auto;position:relative;width: 276px;height: 476px;padding: 10px;background-image: url(img/etc/info_bg.png);">
-				
-				<p style="position:absolute;margin-left:2px;margin-top:355px;z-index:4;text-align:left;font-size:250%;text-shadow:none;color: black;font-weight: bold;font-family: times new roman;">콜트리볼버</p><div style="position:absolute;bottom: 0;width: 66px;z-index:4;font-size:245%;text-shadow:none;color:white;font-family:courier new;letter-spacing:-6px;margin-left:190px;text-align:center;">1</div>
-				<img src="img/etc/nametag_4star.png" style="position:absolute;margin-top:355px;z-index:3">
-				<img src="img/etc/hg_4star.png" style="position:absolute;margin-left:1px;margin-top:1px;z-index:3">
-				<img src="img/etc/star.png" style="position:absolute;margin-left:225px;margin-top:2px;z-index:3">
-				<img src="img/etc/star.png" style="position:absolute;margin-left:200px;margin-top:2px;z-index:3">
-				<img src="img/etc/star.png" style="position:absolute;margin-left:175px;margin-top:2px;z-index:3">
-				<img src="img/etc/star.png" style="position:absolute;margin-left:150px;margin-top:2px;z-index:3">
-				<img src="img/etc/infobox.png" style="position:absolute;z-index:2">
-				<img src="img/t_doll/1_i.png" alt="Thumbnail" style="margin-top:21px;min-width:256px">
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<a href="#" onclick="document.getElementById('id02').style.display='block'"></a>
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/2_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.002</p>
-				<div class="gunname">M1911</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.003</p>
-				<div class="gunname">M9</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.005</p>
-				<div class="gunname">나강 리볼버</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.006</p>
-				<div class="gunname">토카레프</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.007</p>
-				<div class="gunname">스테츠킨</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.008</p>
-				<div class="gunname">마카로프</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.009</p>
-				<div class="gunname">P38</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.010</p>
-				<div class="gunname">PPK</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.011</p>
-				<div class="gunname">P08</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.012</p>
-				<div class="gunname">C96</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.013</p>
-				<div class="gunname">92식</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.014</p>
-				<div class="gunname">아스트라 리볼버</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.015</p>
-				<div class="gunname">글록 17</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.016</p>
-				<div class="gunname">톰슨</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.017</p>
-				<div class="gunname">M3</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.018</p>
-				<div class="gunname">MAC-10</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.019</p>
-				<div class="gunname">FMG-9</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.020</p>
-				<div class="gunname">Vector</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.021</p>
-				<div class="gunname">PPSh-41</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.022</p>
-				<div class="gunname">PPS-43</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.023</p>
-				<div class="gunname">PP-90</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.024</p>
-				<div class="gunname">PP-200</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.025</p>
-				<div class="gunname">MP40</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.027</p>
-				<div class="gunname">스콜피온</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.029</p>
-				<div class="gunname">스텐 Mk II</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.031</p>
-				<div class="gunname">베레타 38형</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.032</p>
-				<div class="gunname">마이크로 우지</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.033</p>
-				<div class="gunname">m45</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.034</p>
-				<div class="gunname">M1 개런드</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.035</p>
-				<div class="gunname">M1A1</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.036</p>
-				<div class="gunname">스프링필드</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.037</p>
-				<div class="gunname">M14</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.038</p>
-				<div class="gunname">M21</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.039</p>
-				<div class="gunname">모신나강</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.040</p>
-				<div class="gunname">SVT-38</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.041</p>
-				<div class="gunname">시모노프</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.042</p>
-				<div class="gunname">PTRD</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.043</p>
-				<div class="gunname">SVD</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.044</p>
-				<div class="gunname">SV-98</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.046</p>
-				<div class="gunname">Kar98k</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.047</p>
-				<div class="gunname">G43</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.048</p>
-				<div class="gunname">WA200</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.049</p>
-				<div class="gunname">56식 반</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.050</p>
-				<div class="gunname">리-엔필드</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.051</p>
-				<div class="gunname">FN-49</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.052</p>
-				<div class="gunname">BM59</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.053</p>
-				<div class="gunname">NTW-20</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.054</p>
-				<div class="gunname">M16A1</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.055</p>
-				<div class="gunname">M4A1</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.056</p>
-				<div class="gunname">M4 SOPMODII</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.057</p>
-				<div class="gunname">ST AR-15</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.058</p>
-				<div class="gunname">AK-47</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.060</p>
-				<div class="gunname">AS Val</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.061</p>
-				<div class="gunname">StG44</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.062</p>
-				<div class="gunname">G41</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.063</p>
-				<div class="gunname">G3</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.064</p>
-				<div class="gunname">G36</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.065</p>
-				<div class="gunname">HK416</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.066</p>
-				<div class="gunname">56-1식</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.068</p>
-				<div class="gunname">L85A1</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.069</p>
-				<div class="gunname">FAMAS</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.070</p>
-				<div class="gunname">FNC</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.071</p>
-				<div class="gunname">갈릴</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.072</p>
-				<div class="gunname">TAR-21</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.073</p>
-				<div class="gunname">SIG-510</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.074</p>
-				<div class="gunname">M1918</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.075</p>
-				<div class="gunname">M1918</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.076</p>
-				<div class="gunname">M2HB</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.077</p>
-				<div class="gunname">M2HB</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.078</p>
-				<div class="gunname">M60</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.079</p>
-				<div class="gunname">M249 SAW</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.080</p>
-				<div class="gunname">M1919A4</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.081</p>
-				<div class="gunname">LWMMG</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.082</p>
-				<div class="gunname">DP28</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.084</p>
-				<div class="gunname">PRD</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.085</p>
-				<div class="gunname">PK</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.086</p>
-				<div class="gunname">MG42</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.087</p>
-				<div class="gunname">MG34</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.088</p>
-				<div class="gunname">MG3</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.089</p>
-				<div class="gunname">브렌</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.090</p>
-				<div class="gunname">FNP-9</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.091</p>
-				<div class="gunname">MP-446</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.092</p>
-				<div class="gunname">Spectre M4</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.093</p>
-				<div class="gunname">IDW</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.094</p>
-				<div class="gunname">64식</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.095</p>
-				<div class="gunname">한양조 88식</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.096</p>
-				<div class="gunname">그리즐리 Mk V</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.097</p>
-				<div class="gunname">M950A</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.098</p>
-				<div class="gunname">SPP-1</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.099</p>
-				<div class="gunname">Mk23</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.100</p>
-				<div class="gunname">P7</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.101</p>
-				<div class="gunname">UMP9</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.102</p>
-				<div class="gunname">UMP40</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.103</p>
-				<div class="gunname">UMP45</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.104</p>
-				<div class="gunname">G36C</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.105</p>
-				<div class="gunname">OTs-12</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.106</p>
-				<div class="gunname">FAL</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.107</p>
-				<div class="gunname">F200</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.108</p>
-				<div class="gunname">CZ-805</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.109</p>
-				<div class="gunname">MG5</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.110</p>
-				<div class="gunname">FG42</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.111</p>
-				<div class="gunname">AAT-52</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.112</p>
-				<div class="gunname">네게브</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.113</p>
-				<div class="gunname">세르듀코프</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.114</p>
-				<div class="gunname">웰로드</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.115</p>
-				<div class="gunname">수오미</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.116</p>
-				<div class="gunname">Z-62</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.117</p>
-				<div class="gunname">PSG-1</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.118</p>
-				<div class="gunname">9A-91</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.119</p>
-				<div class="gunname">OTs-14</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.120</p>
-				<div class="gunname">ARX-160</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.121</p>
-				<div class="gunname">Mk48</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.122</p>
-				<div class="gunname">G11</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.123</p>
-				<div class="gunname">P99</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.124</p>
-				<div class="gunname">Super SASS</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.125</p>
-				<div class="gunname">MG4</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.126</p>
-				<div class="gunname">NZ75</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.127</p>
-				<div class="gunname">79식</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.128</p>
-				<div class="gunname">M99</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.129</p>
-				<div class="gunname">95식</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.130</p>
-				<div class="gunname">97식</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.131</p>
-				<div class="gunname">EVO 3</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.132</p>
-				<div class="gunname">59식</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.133</p>
-				<div class="gunname">63식</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.134</p>
-				<div class="gunname">AR70</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.135</p>
-				<div class="gunname">SR-3MP</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.136</p>
-				<div class="gunname">PP-19</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.137</p>
-				<div class="gunname">PP-19-01</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.138</p>
-				<div class="gunname">6P62</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.139</p>
-				<div class="gunname">Bren Ten</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.140</p>
-				<div class="gunname">PSM</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.141</p>
-				<div class="gunname">USP Compact</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.142</p>
-				<div class="gunname">Five-seveN</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.143</p>
-				<div class="gunname">RO635</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.144</p>
-				<div class="gunname">MT-9</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.145</p>
-				<div class="gunname">OTs-4</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.146</p>
-				<div class="gunname">G28</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.147</p>
-				<div class="gunname">SSG 69</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.148</p>
-				<div class="gunname">IWS 200</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.149</p>
-				<div class="gunname">AEK-999</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.150</p>
-				<div class="gunname">시프카</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.151</p>
-				<div class="gunname">M1887</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.152</p>
-				<div class="gunname">M1897</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.153</p>
-				<div class="gunname">M37</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.154</p>
-				<div class="gunname">M500</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.155</p>
-				<div class="gunname">M590</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.156</p>
-				<div class="gunname">Super-Shorty</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.157</p>
-				<div class="gunname">KSG</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.158</p>
-				<div class="gunname">KS-23</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.159</p>
-				<div class="gunname">RMB-93</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.160</p>
-				<div class="gunname">Saiga-12</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.161</p>
-				<div class="gunname">97식 산탄총</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.162</p>
-				<div class="gunname">SPAS-12</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.166</p>
-				<div class="gunname">CZ75</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.167</p>
-				<div class="gunname">HK45</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.168</p>
-				<div class="gunname">Spitfire</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.169</p>
-				<div class="gunname">SCW</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.170</p>
-				<div class="gunname">ASh-12.7</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.171</p>
-				<div class="gunname">리베롤</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.172</p>
-				<div class="gunname">RFB</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.173</p>
-				<div class="gunname">PKP</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.174</p>
-				<div class="gunname">81식 카빈</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.175</p>
-				<div class="gunname">ART556</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.176</p>
-				<div class="gunname">TMP</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.177</p>
-				<div class="gunname">KLIN</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.178</p>
-				<div class="gunname">F1</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.179</p>
-				<div class="gunname">DSR-50</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.180</p>
-				<div class="gunname">PzB39</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.181</p>
-				<div class="gunname">T91</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.182</p>
-				<div class="gunname">wz.29</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.183</p>
-				<div class="gunname">컨텐더</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.184</p>
-				<div class="gunname">T-500</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.185</p>
-				<div class="gunname">아멜리</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.186</p>
-				<div class="gunname">P226</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.187</p>
-				<div class="gunname">Ak 5</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.188</p>
-				<div class="gunname">S.A.T.8</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.189</p>
-				<div class="gunname">USAS-12</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.190</p>
-				<div class="gunname">NS200</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.191</p>
-				<div class="gunname">M12</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.192</p>
-				<div class="gunname">JS05</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.193</p>
-				<div class="gunname">T65</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.194</p>
-				<div class="gunname">K2</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.195</p>
-				<div class="gunname">HK23</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.196</p>
-				<div class="gunname">Zas M21</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.197</p>
-				<div class="gunname">카르카노M1891</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.198</p>
-				<div class="gunname">카르카노M91/38</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.199</p>
-				<div class="gunname">80식</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.200</p>
-				<div class="gunname">XM3</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.201</p>
-				<div class="gunname">게파드 M1</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.202</p>
-				<div class="gunname">Thunder</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.205</p>
-				<div class="gunname">AN-94</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.206</p>
-				<div class="gunname">AK-12</div>
-			</div>
-		</div>
-	</div>
-	<div class="w3-quarter">
-		<div class="w3-card w3-padding">
-			<img class="w3-center w3-border" src="img/t_doll/3_i.png" alt="Thumbnail">
-			<div class="w3-container">
-				<p class="card-text">No.210</p>
-				<div class="gunname">CZ52</div>
-			</div>
-		</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">2</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M1911</p>
+		<img src="img/etc/nametag_2star.png" style="position:absolute;margin-top:355px;z-index:3">
+		<img src="img/etc/hg_2star.png" style="position:absolute;margin-left:1px;margin-top:1px;z-index:3">
+		<img src="img/etc/star.png" style="position:absolute;margin-left:225px;margin-top:2px;z-index:3">
+		<img src="img/etc/star.png" style="position:absolute;margin-left:200px;margin-top:2px;z-index:3">
+		<img src="img/etc/info_cage.png" style="position:absolute;z-index:2">
+		<img src="img/t_doll/2_i.png" alt="Thumbnail" style="margin-top:21px;min-width:256px">
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">3</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M9</p>
+		<img src="img/etc/nametag_3star.png" style="position:absolute;margin-top:355px;z-index:3">
+		<img src="img/etc/hg_3star.png" style="position:absolute;margin-left:1px;margin-top:1px;z-index:3">
+		<img src="img/etc/star.png" style="position:absolute;margin-left:225px;margin-top:2px;z-index:3">
+		<img src="img/etc/star.png" style="position:absolute;margin-left:200px;margin-top:2px;z-index:3">
+		<img src="img/etc/star.png" style="position:absolute;margin-left:175px;margin-top:2px;z-index:3">
+		<img src="img/etc/info_cage.png" style="position:absolute;z-index:2">
+		<img src="img/t_doll/3_i.png" alt="Thumbnail" style="margin-top:21px;min-width:256px">
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">5</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">나강 리볼버</p>
+		<img src="img/etc/nametag_2star.png" style="position:absolute;margin-top:355px;z-index:3">
+		<img src="img/etc/hg_2star.png" style="position:absolute;margin-left:1px;margin-top:1px;z-index:3">
+		<img src="img/etc/star.png" style="position:absolute;margin-left:225px;margin-top:2px;z-index:3">
+		<img src="img/etc/star.png" style="position:absolute;margin-left:200px;margin-top:2px;z-index:3">
+		<img src="img/etc/info_cage.png" style="position:absolute;z-index:2">
+		<img src="img/t_doll/5_i.png" alt="Thumbnail" style="margin-top:21px;min-width:256px">
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">6</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">토카레프</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">7</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">스테츠킨</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">8</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">마카로프</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">9</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">P38</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">10</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">PPK</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">11</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">P08</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">12</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">C96</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">13</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">92식</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">14</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">아스트라 리볼버</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">15</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">글록 17</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">16</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">톰슨</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">17</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M3</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">18</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">MAC-10</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">19</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">FMG-9</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">20</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">Vector</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">21</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">PPSh-41</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">22</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">PPS-43</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">23</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">PP-90</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">24</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">PP-200</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">25</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">MP40</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">27</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">스콜피온</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">29</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">스텐 Mk II</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">31</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">베레타 38형</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">32</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">마이크로 우지</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">33</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">m45</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">34</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M1 개런드</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">35</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M1A1</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">36</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">스프링필드</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">37</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M14</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">38</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M21</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">39</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">모신나강</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">40</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">SVT-38</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">41</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">시모노프</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">42</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">PTRD</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">43</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">SVD</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">44</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">SV-98</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">46</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">Kar98k</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">47</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">G43</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">48</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">WA200</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">49</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">56식 반</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">50</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">리-엔필드</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">51</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">FN-49</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">52</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">BM59</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">53</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">NTW-20</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">54</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M16A1</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">55</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M4A1</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">56</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M4 SOPMODII</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">57</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">ST AR-15</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">58</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">AK-47</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">60</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">AS Val</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">61</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">StG44</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">62</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">G41</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">63</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">G3</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">64</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">G36</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">65</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">HK416</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">66</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">56-1식</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">68</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">L85A1</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">69</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">FAMAS</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">70</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">FNC</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">71</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">갈릴</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">72</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">TAR-21</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">73</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">SIG-510</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">74</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M1918</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">75</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M1918</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">76</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M2HB</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">77</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M2HB</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">78</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M60</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">79</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M249 SAW</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">80</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M1919A4</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">81</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">LWMMG</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">82</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">DP28</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">84</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">PRD</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">85</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">PK</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">86</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">MG42</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">87</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">MG34</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">88</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">MG3</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">89</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">브렌</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">90</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">FNP-9</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">91</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">MP-446</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">92</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">Spectre M4</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">93</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">IDW</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">94</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">64식</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">95</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">한양조 88식</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">96</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">그리즐리 Mk V</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">97</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M950A</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">98</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">SPP-1</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">99</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">Mk23</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">100</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">P7</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">101</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">UMP9</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">102</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">UMP40</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">103</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">UMP45</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">104</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">G36C</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">105</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">OTs-12</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">106</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">FAL</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">107</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">F200</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">108</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">CZ-805</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">109</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">MG5</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">110</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">FG42</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">111</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">AAT-52</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">112</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">네게브</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">113</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">세르듀코프</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">114</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">웰로드</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">115</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">수오미</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">116</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">Z-62</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">117</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">PSG-1</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">118</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">9A-91</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">119</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">OTs-14</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">120</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">ARX-160</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">121</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">Mk48</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">122</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">G11</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">123</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">P99</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">124</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">Super SASS</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">125</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">MG4</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">126</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">NZ75</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">127</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">79식</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">128</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M99</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">129</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">95식</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">130</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">97식</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">131</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">EVO 3</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">132</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">59식</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">133</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">63식</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">134</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">AR70</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">135</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">SR-3MP</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">136</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">PP-19</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">137</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">PP-19-01</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">138</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">6P62</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">139</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">Bren Ten</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">140</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">PSM</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">141</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">USP Compact</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">142</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">Five-seveN</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">143</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">RO635</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">144</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">MT-9</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">145</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">OTs-4</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">146</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">G28</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">147</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">SSG 69</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">148</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">IWS 200</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">149</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">AEK-999</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">150</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">시프카</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">151</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M1887</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">152</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M1897</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">153</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M37</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">154</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M500</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">155</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M590</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">156</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">Super-Shorty</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">157</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">KSG</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">158</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">KS-23</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">159</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">RMB-93</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">160</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">Saiga-12</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">161</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">97식 산탄총</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">162</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">SPAS-12</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">166</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">CZ75</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">167</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">HK45</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">168</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">Spitfire</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">169</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">SCW</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">170</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">ASh-12.7</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">171</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">리베롤</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">172</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">RFB</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">173</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">PKP</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">174</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">81식 카빈</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">175</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">ART556</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">176</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">TMP</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">177</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">KLIN</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">178</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">F1</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">179</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">DSR-50</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">180</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">PzB39</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">181</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">T91</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">182</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">wz.29</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">183</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">컨텐더</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">184</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">T-500</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">185</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">아멜리</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">186</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">P226</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">187</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">Ak 5</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">188</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">S.A.T.8</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">189</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">USAS-12</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">190</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">NS200</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">191</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">M12</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">192</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">JS05</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">193</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">T65</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">194</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">K2</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">195</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">HK23</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">196</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">Zas M21</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">197</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">카르카노M1891</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">198</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">카르카노M91/38</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">199</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">80식</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">200</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">XM3</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">201</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">게파드 M1</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">202</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">Thunder</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">205</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">AN-94</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">206</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">AK-12</p>
+	</div>
+</div>
+<div class="w3-quarter w3-section">
+	<div class="w3-hover-shadow font" style="position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)">
+		<div class="w3-text-white" style="position:absolute;bottom:0;width:66px;z-index:4;font-size:220%;margin-left:190px;top:409px">210</div>
+		<p class="w3-text-black"style="position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-size:250%;font-weight:bold">CZ52</p>
 	</div>
 </div>
 </div>
