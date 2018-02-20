@@ -5,6 +5,10 @@ font-family: 'Nanum Gothic', sans-serif;
 .indexbody,.overlay{
 	background-color:#000;
 }
+a,a:visited,a:link,a:hover,a:active{
+	color:#666;
+	text-decoration:none;
+}
 #logo,#slogo{
 	animation-name:logocolor;
 	animation-duration:60s;
@@ -16,6 +20,65 @@ font-family: 'Nanum Gothic', sans-serif;
 	animation-duration:5s;
 	animation-iteration-count:infinite;
 	animation-delay:1s;
+}
+@keyframes logocolor{
+5%{
+filter:hue-rotate(0deg);
+}
+10%{
+filter:hue-rotate(60deg);
+}
+15%{
+filter:hue-rotate(90deg);
+}
+20%{
+filter:hue-rotate(120deg);
+}
+25%{
+filter:hue-rotate(150deg);
+}
+30%{
+filter:hue-rotate(180deg);
+}
+35%{
+filter:hue-rotate(0deg);
+}
+40%{
+filter:contrast(2);
+}
+45%{
+filter:contrast(1);
+}
+50%{
+filter:sepia(1);
+}
+55%{
+filter:sepia(0);
+}
+60%{
+filter:blur(10px);
+}
+65%{
+filter:blur(0px);
+}
+75%{
+filter:invert(0.6);
+}
+80%{
+filter:invert(0);
+}
+85%{
+filter:invert(0.9);
+}
+90%{
+filter:invert(0);
+}
+95%{
+filter:hue-rotate(300deg);
+}
+100%{
+filter:hue-rotate(0deg);
+}
 }
 @keyframes flash{
 5%{
@@ -98,12 +161,42 @@ opacity:1;
 }
 }
 /*mainframe*/
-/* Sidebar Styles */
-#input{
-	margin:1% auto;
-	display:block;
+#contents{
+	width:100%;
+	height:calc(100% - 54.5px);
+	position:absolute;
+	border-top-style:groove;
 }
-/*topbar*/
+.footer{
+	font-weight:bold;
+	position:absolute;
+	bottom:0px;
+	width:100%;
+	text-decoration:none;
+	padding:0 2%
+}
+.ver{
+	float:right;
+	color:#333;
+}
+/*t-doll */
+.tdoll{
+position:relative;margin:0 auto;width:256px;height:456px;background-image:url(img/etc/info_bg1.png)
+}
+.no{
+position:absolute;bottom:0;width:66px;z-index:4;;margin-left:193px;top:409px;font-size:220%
+}
+.name{
+position:absolute;margin-left:2px;margin-top:353px;z-index:4;text-align:left;font-weight:bold
+}
+.f250{
+font-size:250%;
+}
+.f240{
+font-size:250%;
+}
+/*t-doll end*/
+/*media*/
 @media (max-width:600px){
 .w3-light-grey{
 	display:none;
@@ -112,54 +205,4 @@ opacity:1;
 	display:none;
 }
 }
-#contents{
-	width:100%;
-	height:calc(100% - 54.5px);
-	position:absolute;
-	border-top-style:groove;
-}
-a,a:visited,a:link,a:hover,a:active{
-	color:#666;
-	text-decoration:none;
-}/* main	page */
-.ver{
-	float:right;
-	color:#333;
-}
-.themesettings{
-	color:#999;
-}
-.row{
-	margin:0px !important;
-	text-align:center;
-}
-.row #00f{
-	background-color:#000;
-	color:#fff;
-}
-.row #fff{
-	background-color:#fff;
-	color:#000;
-}
-.footer{
-	font-weight:bold;
-	position:absolute;
-	bottom:0px;
-	width:100%;
-	text-decoration:none;
-}
-.footer a:hover{
-	color:#fff
-}
-.card-text{
-	float:left
-}
-.gunname{
-	float:right
-}
-.card-img-top{
-	width:100%;
-}
-.ccg{
-	height:50%;
-}
+/*media end*/
