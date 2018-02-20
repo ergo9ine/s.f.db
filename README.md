@@ -1,5 +1,5 @@
-# TypeNine.github.io
-girlsfrontline DB
+# GFDB.github.io
+Girlsfrontline Opensource Project
 
 # Process
 -https://trello.com/b/sPsg0jzu/gfdb-process
