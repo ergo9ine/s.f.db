@@ -1,4 +1,8 @@
 # TypeNine.github.io
 girlsfrontline DB
 
-https://trello.com/b/sPsg0jzu/gfdb-process
+# Process
+-https://trello.com/b/sPsg0jzu/gfdb-process
+
+# Disscussion
+-https://discordapp.com/invite/8eTFTSa
