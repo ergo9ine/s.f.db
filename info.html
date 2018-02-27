@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Open+Sans" rel="stylesheet" type="text/css">
+<link href="css/css_overwrite.css" rel="stylesheet" type="text/css">
+<link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet" type="text/css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="js/index.js"></script>
+<script src="js/simulator.js"></script>
+<title>GFDB</title>
+</head>
+<body>
+<div class="w3-sidebar  w3-bar-block    w3-black font" style="display:none;overflow-y:hidden" id="Sidebar">
+	<button class="w3-bar-item  w3-small w3-black w3-center w3-border-bottom w3-border-right" onclick="w_c()" ><i class="fa fa-close"></i></button>
+	<div class="logo w3-margin-bottom w3-margin-top w3-center"><a href="index.html"><img src="img/logo/sidebar_gflogo.png" alt="logo" id="slogo"></a></div>
+		<input class="w3-input  w3-border   w3-padding  w3-center" placeholder="메뉴검색" id="input" onkeyup="msearch()" type="text">
+		<div id="menu">
+			<a class="w3-bar-item   w3-button   w3-hover-white" href="index.html">도감</a>
+			<a  class="w3-bar-item  w3-button   w3-hover-white w3-disabled" href="#">정보</a>
+			<a  class="w3-bar-item  w3-button   w3-hover-white" href="simulator.html">시뮬레이터</a>
+			<a  class="w3-bar-item  w3-button   w3-hover-white w3-disabled" href="#">스토리</a>	
+			<a  class="w3-bar-item  w3-button   w3-hover-white w3-disabled" href="#">About</a>
+			<a class="w3-bar-item   w3-button   w3-hover-white" href="https://github.com/GFDB/GFDB.github.io/issues">issues Tracker</a>
+			<a class="w3-bar-item   w3-button   w3-hover-white" href="https://discordapp.com/invite/8eTFTSa">Contact</a>
+		</div>
+	</div>
+<div class="w3-black">
+	<button class="w3-button w3-small w3-black tablink" style="width:200px" onclick="w_o()"><i class="fa	fa-bars"></i>Menu</button>
+	<button class="w3-button w3-small tablink" onclick="tools(event,'t-doll')" style="width:200px">전술 인형 도감</button>
+	<button class="w3-button w3-small tablink" onclick="tools(event,'battery')" style="width:200px">전지 계산기</button>
+	<button class="w3-button w3-small tablink" onclick="tools(event,'enhance')" style="width:200px">강화 시뮬레이터</button>
+	<button class="w3-button w3-small tablink" onclick="tools(event,'factory')" style="width:200px">제조 시뮬레이터</button>
+<div class="w3-white">
+		<div id="contents">
+  			<div id="t-doll" class="tools">
+				<iframe src="doll.html" name="body" style="display:block;border:0;height:100%" width="100%" height="100%"></iframe>
+			</div>
+  			<div id="disc" class="w3-container tools w3-black" style="display:none">
+				<h1>작전보고서 계산기</h1>
+				<div class="w3-panel w3-half"><b class="w3-xlarge">필요량</b><br><input id="o" type="checkbox"><b>서약</b>
+					<div>
+						<input class="w3-input w3-animate-input" style="width:25%" onmouseout="b(this)" id="nlv" pattern="[0-9]*" inputmode="numeric" placeholder="현재 레벨">
+						<input class="w3-input w3-animate-input" style="width:25%" onmouseout="b(this)" id="nxp" pattern="[0-9]*" inputmode="numeric" placeholder="현재 경험치">
+						<input class="w3-input w3-animate-input" style="width:25%" onmouseout="b(this)" id="tlv" pattern="[0-9]*" inputmode="numeric" placeholder="목표 레벨">
+						<span>작전보고서 <span id="rstt">0</span>개 필요</span>
+					</div>
+				</div>
+				<div class="w3-panel w3-half"><b class="w3-xlarge">결과량</b><br><input id="o2" type="checkbox"><b>서약</b><p class="w3-tiny">※개선중</p>
+					<div>
+						<input class="w3-input w3-animate-input w3-disabled" style="width:25%" onmouseout="b(this)" id="nlv2" pattern="[0-9]*" inputmode="numeric" placeholder="현재 레벨">
+						<input class="w3-input w3-animate-input w3-disabled" style="width:25%" onmouseout="b(this)" id="nxp2" pattern="[0-9]*" inputmode="numeric" placeholder="현재 경험치">
+						<input class="w3-input w3-animate-input w3-disabled" style="width:25%" onmouseout="b(this)" id="udsk2" pattern="[0-9]*" inputmode="numeric" placeholder="보고서 갯수">
+						<span>투입후 레벨 </span><span id="rstLv2" class="d_block">1</span>
+					</div>
+				</div>
+			</div>
+			<div id="battery" class="w3-container tools" style="display:none">
+				<h1>전지 계산기</h1>
+				<p>Test Page</p> 
+			</div>
+			<div id="enhance" class="w3-container tools" style="display:none">
+				<h1>강화 시뮬레이터</h1>
+				<p>Test Page</p>
+			</div>
+			<div id="factory" class="w3-container tools" style="display:none">
+				<h1>제조 시뮬레이터</h1>
+				<p>Test Page</p>
+			</div>
+		</div>
+</div>
+</div>
+</div>
+</body>
+</html>
