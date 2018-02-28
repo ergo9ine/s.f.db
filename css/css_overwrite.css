@@ -2,15 +2,8 @@
 a,a:visited,a:link,a:hover,a:active{color:#666;text-decoration:none}
 .font{font-family:'Nanum Gothic', sans-serif}
 .fw{font-weight:bold}
-#slogo{
-	animation-name:logocolor;
-	animation-duration:60s;
-	animation-iteration-count:infinite}
-.logo{opacity:0;
-	animation-name:flash;
-	animation-duration:5s;
-	animation-iteration-count:infinite;
-	animation-delay:1s}
+#slogo{animation-name:logocolor;animation-duration:60s;animation-iteration-count:infinite}
+.logo{opacity:0;animation-name:flash;animation-duration:5s;animation-iteration-count:infinite;animation-delay:1s}
 @keyframes logocolor{
 	5%{filter:hue-rotate(0deg)}
 	10%{filter:hue-rotate(60deg)}
@@ -59,14 +52,8 @@ a,a:visited,a:link,a:hover,a:active{color:#666;text-decoration:none}
 	90%{opacity:0}
 	100%{opacity:1}}
 /*mainframe*/
-#contents{
-	width:100%;
-	height:calc(100% - 34px);
-	position:absolute}
-.content{
-	width:100%;
-	height:100%;
-	position:absolute}
+#contents{width:100%;height:calc(100% - 34px);position:absolute}
+.content{width:100%;height:100%;position:absolute}
 .footer{
 	font-weight:bold;
 	position:absolute;
@@ -76,11 +63,8 @@ a,a:visited,a:link,a:hover,a:active{color:#666;text-decoration:none}
 	padding:0 2%}
 .ver{float:right;color:#333}
 /*t-doll */
-.tdoll{
-	position:relative;
-	margin:0 auto;
-	width:175px;
-	height:371px}
+.dollcontainer{width:calc(12.5%);min-width:200px}
+.tdoll{position:relative;margin:0 auto;width:175px;height:371px}
 .no{
 	position:absolute;
 	bottom:0;
@@ -90,65 +74,32 @@ a,a:visited,a:link,a:hover,a:active{color:#666;text-decoration:none}
 	top:341px;
 	font-size:1.25em;
 	font-weight:bold}
-.name{
-	position:absolute;
-	width:171px;
-	margin-top:300px;
-	z-index:3;
-	font-weight:bold}
+.name{position:absolute;z-index:3;font-weight:bold}
+.podo{width:171px;margin-top:300px}
+.poeq{width:175px;margin-top:175px}
+.pofa{width:175px;margin-top:195px}
 .f125{font-size:1.25em}
 .f115{font-size:1.15em}
-.type{position:absolute;
-	margin-left:3px;
-	margin-top:3px;
-	z-index:2}
-.star{position:absolute;
-	margin-top:5px;
-	z-index:2;
-	width:1.25em}
+.type{position:absolute;margin-left:3px;margin-top:3px;z-index:2}
+.star{position:absolute;margin-top:5px;z-index:2;width:1.25em}
 .r1{margin-left:150px}
 .r2{margin-left:135px}
 .r3{margin-left:120px}
 .r4{margin-left:105px}
 .r5{margin-left:90px}
-.incage{position:absolute;z-index:1}
+.incage{position:absolute;z-index:1;left:0}
 .icon{margin-top:20px}
 .tag{display:none}
-.dollcontainer {width:calc(12.5%);min-width:200px}
-.equip{
-position:relative;
-margin:0 auto;
-width:175px;
-height:326px}
+.equip{position:relative;margin:0 auto;width:175px;height:326px}
 .bg{margin-top:24px}
-.e_name{
-	position:absolute;
-	width:175px;
-	margin-top:175px;
-	z-index:3;
-	font-weight:bold}
-.er2{
-	color:#CCC;
-	text-shadow:0px 0px 1px #ccc}
-.er3{
-	color:#6BDFCE;
-	text-shadow:0px 0px 1px #6BDFCE}
-.er4{
-	color:#D6E35A;
-	text-shadow:0px 0px 1px #D6E35A}
-.er5{
-	color:#FFCD4A;
-	text-shadow:0px 0px 1px #FFCD4A}
-.icon2{
-position:absolute;
-z-index:0;
-left:2px;
-width:171px;
-top:12px}
-.incage2{position:absolute;z-index:1}
-.etype{
-position:absolute;
-margin-left:23px;
-margin-top:9px;
-z-index:2;
-left:3px}
+.er2{color:#CCC;text-shadow:0px 0px 1px #ccc}
+.er3{color:#6BDFCE;text-shadow:0px 0px 1px #6BDFCE}
+.er4{color:#D6E35A;text-shadow:0px 0px 1px #D6E35A}
+.er5{color:#FFCD4A;text-shadow:0px 0px 1px #FFCD4A}
+.icon2{position:absolute;z-index:0;left:2px;width:171px;top:12px}
+.etype{position:absolute;z-index:2;left:23px;top:9px}
+.ftype{position:absolute;z-index:2;left:0}
+.fairy{position:relative;margin:0 auto;width:175px;height:300px}
+.icon3{position:absolute;z-index:0;left:0px}
+.cover{right:3px;position:absolute}
+.skill{position:absolute;z-index:2;left:0}
