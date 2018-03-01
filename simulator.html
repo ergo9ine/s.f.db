@@ -16,8 +16,8 @@
 		<input class="w3-input w3-border w3-padding w3-center" placeholder="메뉴검색" id="input" onkeyup="msearch()" type="text">
 		<div id="menu">
 			<a class="w3-bar-item w3-button w3-hover-white" href="index.html">도감</a>
-			<a class="w3-bar-item w3-button w3-hover-white w3-disabled" href="#">정보</a>
 			<a class="w3-bar-item w3-button w3-hover-white" href="simulator.html">시뮬레이터</a>
+			<a class="w3-bar-item w3-button w3-hover-white w3-disabled" href="#">정보</a>
 			<a class="w3-bar-item w3-button w3-hover-white w3-disabled" href="#">About</a>
 			<a class="w3-bar-item w3-button w3-hover-white" href="https://discordapp.com/invite/8eTFTSa">Contact</a>
 		</div>
@@ -28,63 +28,63 @@
 		<button class="w3-button w3-small w3-mobile tablink" onclick="tools(event,'enhance')" style="width:200px">강화 시뮬레이터</button>
 		<button class="w3-button w3-small w3-mobile tablink w3-hide-small w3-disabled" onclick="tools(event,'battery')" style="width:200px">전지 계산기</button>
 		<button class="w3-button w3-small w3-mobile tablink w3-hide-small w3-disabled" onclick="tools(event,'factory')" style="width:200px">제조 시뮬레이터</button>
-	</div>
-	<div class="w3-white font">
-	<div id="contents">
-		<div class="content tools" id="index">
-			<iframe src="preview.html" style="display:block;border:0;height:100%" width="100%" height="100%"></iframe>
-		</div>
-		<div id="disc" class="w3-container tools w3-black" style="display:none">
-			<div class="w3-panel w3-white w3-display-container">
-				<span onclick="this.parentElement.style.display='none'" class="w3-button w3-white w3-tiny w3-display-topright"><i class="fa fa-close"></i></span>
-				<p>투입계산기는 현재 사용이 불가능합니다.</p>
-			</div>
-			<div class="w3-panel w3-half"><b class="w3-xlarge">필요량</b><br><input id="o" type="checkbox"><b>서약</b>
-				<div>
-					<input class="w3-input w3-animate-input" style="width:25%" required="required" min="0" id="nlv" pattern="[0-9]*" inputmode="numeric" placeholder="현재 레벨">
-					<input class="w3-input w3-animate-input" style="width:25%" required="required" min="0" id="tlv" pattern="[0-9]*" inputmode="numeric" placeholder="목표 레벨">
-					<span id="rrst"></span>
+		<div class="w3-white font">
+			<div id="contents">
+				<div class="content tools" id="index">
+					<iframe src="preview.html" style="display:block;border:0;height:100%" width="100%" height="100%"></iframe>
 				</div>
-			</div>
-			<div class="w3-panel w3-half"><b class="w3-xlarge">결과량</b><br><input id="o2" type="checkbox"><b>서약</b>
-				<p class="w3-tiny">※개선중</p>
-				<div>
-					<input class="w3-input w3-animate-input w3-disabled" style="width:25%" id="n1lv2" min="0" pattern="[0-9]*" inputmode="numeric" placeholder="현재 레벨">
-					<input class="w3-input w3-animate-input w3-disabled" style="width:25%" id="u1dsk2" min="0" pattern="[0-9]*" inputmode="numeric" placeholder="보고서 갯수">
-					<span>투입후 레벨 </span><span id="rstLv2" class="d_block">1</span>
-				</div>
-			</div>
-		</div>
-		<div id="battery" class="w3-container tools w3-black" style="display:none">
-			<h1>전지 계산기</h1>
-			<p>Test Page</p>
-		</div>
-		<div id="enhance" class="w3-container tools w3-black" style="display:none;">
-			<div class="container">
-				<div class="w3-half w3-center font">
+				<div id="disc" class="w3-container tools w3-black" style="display:none">
 					<div class="w3-panel w3-white w3-display-container">
 						<span onclick="this.parentElement.style.display='none'" class="w3-button w3-white w3-tiny w3-display-topright"><i class="fa fa-close"></i></span>
-						<p>올리길 원하시는 수치를 입력하세요.</p>
+						<p>투입계산기는 현재 사용이 불가능합니다.</p>
 					</div>
-					<form id="stat" class="w3-padding-64">
-						<p class="w3-tooltip w3-padding-small"><span class="w3-text w3-tag w3-red" style="position:absolute;left:50%;bottom:45px">화력</span><input id="atk" min="0" value="0" required="required" style="width:200px;margin:0 auto" class="w3-input w3-center w3-animate-input"></p>
-						<p class="w3-tooltip w3-padding-small"><span class="w3-text w3-tag w3-red" style="position:absolute;left:50%;bottom:45px">회피</span><input id="dod" min="0" value="0" required="required" style="width:200px;margin:0 auto" class="w3-input w3-center w3-animate-input"></p>
-						<p class="w3-tooltip w3-padding-small"><span class="w3-text w3-tag w3-red" style="position:absolute;left:50%;bottom:45px">명중</span><input id="hit" min="0" value="0" required="required" style="width:200px;margin:0 auto" class="w3-input w3-center w3-animate-input"></p>
-						<p class="w3-tooltip w3-padding-small"><span class="w3-text w3-tag w3-red" style="position:absolute;left:50%;bottom:45px">사속</span><input id="spd" min="0" value="0" required="required" style="width:200px;margin:0 auto" class="w3-input w3-center w3-animate-input"></p>
-						<button type="submit" id="clickme" class="w3-btn w3-xlarge w3-padding-large w3-wide w3-white">계산</button>
-					</form>
+					<div class="w3-panel w3-half"><b class="w3-xlarge">필요량</b><br><input id="o" type="checkbox"><b>서약</b>
+						<div>
+							<input class="w3-input" style="width:25%" required="required" min="0" id="nlv" pattern="[0-9]*" inputmode="numeric" placeholder="현재 레벨">
+							<input class="w3-input" style="width:25%" required="required" min="0" id="tlv" pattern="[0-9]*" inputmode="numeric" placeholder="목표 레벨">
+							<span id="rrst"></span>
+						</div>
+					</div>
+					<div class="w3-panel w3-half"><b class="w3-xlarge">결과량</b><br><input id="o2" type="checkbox"><b>서약</b>
+						<p class="w3-tiny">※개선중</p>
+						<div>
+							<input class="w3-input w3-disabled" style="width:25%" id="n1lv2" min="0" pattern="[0-9]*" inputmode="numeric" placeholder="현재 레벨">
+							<input class="w3-input w3-disabled" style="width:25%" id="u1dsk2" min="0" pattern="[0-9]*" inputmode="numeric" placeholder="보고서 갯수">
+							<span>투입후 레벨 </span><span id="rstLv2" class="d_block">1</span>
+						</div>
+					</div>
+				</div>
+				<div id="battery" class="w3-container tools w3-black" style="display:none">
+					<h1>전지 계산기</h1>
+					<p>Test Page</p>
+				</div>
+				<div id="enhance" class="w3-container tools w3-black" style="display:none;">
+					<div class="container">
+						<div class="w3-half w3-center font">
+							<div class="w3-panel w3-white w3-display-container">
+								<span onclick="this.parentElement.style.display='none'" class="w3-button w3-white w3-tiny w3-display-topright"><i class="fa fa-close"></i></span>
+								<p>올리길 원하시는 수치를 입력하세요.</p>
+							</div>
+							<form id="stat" class="w3-padding-64">
+								<p class="w3-tooltip w3-padding-small"><span class="w3-text w3-tag w3-red" style="position:absolute;left:50%;bottom:45px">화력</span><input id="atk" min="0" value="0" required="required" style="width:200px;margin:0 auto" class="w3-input w3-center"></p>
+								<p class="w3-tooltip w3-padding-small"><span class="w3-text w3-tag w3-red" style="position:absolute;left:50%;bottom:45px">회피</span><input id="dod" min="0" value="0" required="required" style="width:200px;margin:0 auto" class="w3-input w3-center"></p>
+								<p class="w3-tooltip w3-padding-small"><span class="w3-text w3-tag w3-red" style="position:absolute;left:50%;bottom:45px">명중</span><input id="hit" min="0" value="0" required="required" style="width:200px;margin:0 auto" class="w3-input w3-center"></p>
+								<p class="w3-tooltip w3-padding-small"><span class="w3-text w3-tag w3-red" style="position:absolute;left:50%;bottom:45px">사속</span><input id="spd" min="0" value="0" required="required" style="width:200px;margin:0 auto" class="w3-input w3-center"></p>
+								<button type="submit" id="clickme" class="w3-btn w3-xlarge w3-padding-large w3-wide w3-white">계산</button>
+							</form>
+						</div>
+					</div>
+					<div class="w3-half w3-center font">
+						<table id="result" class="w3-center w3-border" style="margin-left:auto;margin-right:auto"></table>
+					</div>
+				</div>
+				<div id="factory" class="w3-container tools w3-black" style="display:none">
+					<h1>제조 시뮬레이터</h1>
+					<p>Test Page</p>
 				</div>
 			</div>
-			<div class="w3-half w3-center font">
-				<table id="result" class="w3-center w3-border" style="margin-left:auto;margin-right:auto"></table>
-			</div>
-		</div>
-		<div id="factory" class="w3-container tools w3-black" style="display:none">
-			<h1>제조 시뮬레이터</h1>
-			<p>Test Page</p>
 		</div>
 	</div>
-</div>
 <script src="js/enhanced.js"></script>
 <script src="js/index.js"></script>
 <script src="js/simulator.js"></script>
