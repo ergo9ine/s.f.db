@@ -7,6 +7,7 @@
 <link href="css/css_overwrite.css" rel="stylesheet" type="text/css">
 <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="js/lazysizes.min.js" async=""></script>
 <title>GFDB</title>
 </head>
 <body>
@@ -23,16 +24,16 @@
 		</div>
 	</div>
 	<div class="w3-black w3-mobile" id="main">
-		<button class="w3-button w3-small w3-mobile tablink" onclick="w_o()" style="width:200px" id="open"><i class="fa	fa-bars"></i>Menu</button>
+		<button class="w3-button w3-small w3-mobile tablink" onclick="w_o()" style="width:200px" id="open"><em class="fa	fa-bars"></em>Menu</button>
 		<button class="w3-button w3-small w3-mobile tablink w3-red" onclick="tools(event,'t-doll')" style="width:200px">인형 도감</button>
 		<button class="w3-button w3-small w3-mobile tablink" onclick="tools(event,'equip')" style="width:200px">장비 도감</button>
 		<button class="w3-button w3-small w3-mobile tablink" onclick="tools(event,'fairy')" style="width:200px">요정 도감</button>
-		<div class="contents">
-			<div class="content tools" id="index"><iframe src="wiki/doll.html" style="display:block;border:0;height:100%" width="100%" height="100%"></iframe></div>
-				<div id="t-doll" class="content tools" style="display:none"><iframe src="wiki/doll.html" style="display:block;border:0;height:100%" width="100%" height="100%"></iframe></div>
-				<div id="equip" class="content tools" style="display:none"><iframe src="wiki/equip.html" style="display:block;border:0;height:100%" width="100%" height="100%"></iframe></div>
-				<div id="fairy" class="content tools" style="display:none"><iframe src="wiki/fairy.html" style="display:block;border:0;height:100%" width="100%" height="100%"></iframe></div>
-			</div>
+		<div id="contents">
+			<div class="content tools" id="index"><iframe data-src="wiki/doll.html" class="lazyloaded" allowfullscreen="" style="width:100%" frameborder="0"></iframe></div>
+			<div id="t-doll" class="content tools" style="display:none"><iframe src="wiki/doll.html" style="display:block;border:0;height:100%" width="100%" height="100%"></iframe></div>
+			<div id="equip" class="content tools" style="display:none"><iframe src="wiki/equip.html" style="display:block;border:0;height:100%" width="100%" height="100%"></iframe></div>
+			<div id="fairy" class="content tools" style="display:none"><iframe src="wiki/fairy.html" style="display:block;border:0;height:100%" width="100%" height="100%"></iframe></div>
+		</div>
 	</div>
 <script src="js/index.js"></script>
 <script src="js/simulator.js"></script>
