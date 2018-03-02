@@ -12,27 +12,32 @@
 <script>
 function doll_open() {
     document.getElementById("dollfunc").style.width = "100%";
-    document.getElementById("dollfunc").style.display = "block"; 
+    document.getElementById("dollfunc").style.display = "block";
 	document.getElementById("list").style.display = "none";
 }
 function doll_close() {
     document.getElementById("dollfunc").style.display = "none";
-	document.getElementById("list").style.display = "block"; 
+	document.getElementById("list").style.display = "block";
 }
 </script>
 <title>Equip</title>
 </head>
 <body>
 <div id="dollfunc" style="display:none">
-<div class="body w3-container">
-	<button onclick="doll_close()" class="w3-bar-item w3-black w3-button">닫기 &times;</button>
+<div class="body">
 	<div class="w3-white" id="contents">
-		<div class="dollname" style="margin-bottom: 5%;">
-			<label style="margin-bottom: -2.5%;"><p id="no">NO.53</p></label>
-			<p style="font-size: 2em; font-weight: bold; margin-top: 1%;">리-엔필드</p>
+		<button onclick="doll_close()" class="w3-button w3-circle w3-red" style="width: 45px;height: 45px;top:1%;right:1%;position:fixed"><i class="fa fa-close w3-xxlarge w3-display-middle"></i></button>
+		<div  class="w3-panel w3-black w3-display-container">
+		<span onclick="this.parentElement.style.display='none'" class="w3-button w3-black w3-tiny w3-display-bottomright"><i class="fa fa-close"></i>닫기</span>
+		<br>
+		<p>뒤로가기 대신 좌상단의 빨간색 버튼<s>이나 키보드의 왼쪽 화살표를 눌러주세요</s></p>
 		</div>
-		<div class="space w3-black" style="height: 2.5px;"></div>
-		<div class="skintag" style="margin-top:10px;height: 10%; min-height: 50px;">
+		<div class="dollname" style="margin-bottom:5px;">
+			<label style="margin-bottom:-2.5%;"><p id="no">NO.53</p></label>
+			<p style="font-size:2em;font-weight:bold;margin-top:1%;">리-엔필드</p>
+		</div>
+		<div class="space w3-black" style="height:2.5px;"></div>
+		<div class="skintag" style="margin-top:10px;height:10%;min-height:50px;">
 			<button class="w3-button w3-round-xxlarge w3-hover-text-white w3-hover-cyan" style="background-color:#5bbab6;color:#fff">통상/부상변환</button>
 			<button class="w3-button w3-round-xxlarge w3-hover-text-white w3-hover-dark-grey" style="background-color:#868585;color:#fff">기본 코스튬</button>
 			<button class="w3-button w3-round-xxlarge w3-hover-text-white w3-hover-orange" style="background-color:#feb976;color:#fff">제복 사냥꾼</button>
@@ -46,21 +51,21 @@ function doll_close() {
 				<div class="w3-container w3-green" style="min-height:256px;min-width:256px"></div> <!-- 줌버튼 클릭시 display:none 부여 -->
 			</div>
 			<div style="height:1024px" class="w3-rest"> <!-- 줌버튼 클릭시 display:none 부여 -->
-				<div class="w3-col s6 w3-red" style="height:100%"></div> <!-- 혹은 s4 클래스 제거 -->
-				<div class="w3-col s6 w3-blue" style="height:100%"></div> <!-- 혹은 s8 클래스 제거 -->
+				<div class="w3-col s6 w3-red" style="height:100%"></div> <!-- 혹은 s 클래스 제거 -->
+				<div class="w3-col s6 w3-blue" style="height:100%"></div> <!-- 혹은 s 클래스 제거 -->
 			</div>
 		</div>
 	</div>
 </div></div>
 <div id="list">
-	<div  class="w3-panel w3-black w3-display-container">
-	<span onclick="this.parentElement.style.display='none'" class="w3-button w3-black w3-tiny w3-display-topright"><i class="fa fa-close"></i></span>
-	<label class="f125 fw">검색가능한 종류</label>
-	<p>인형이름 : 콜트 리볼버/콜트</p>
-	<p>도감넘버 : 1/210</p>
-	<p><s>제조시간 : 4500 0500</s> - 개선중 -</p>
-	<p>별명 : 콜라</p>
-</div>
+	<div  class="w3-black">
+		<span onclick="this.parentElement.style.display='none'" class="w3-button w3-black w3-tiny w3-display-topright"><i class="fa fa-close"></i></span>
+		<label class="f125 fw">검색가능한 종류</label>
+		<p>인형이름 :콜트 리볼버/콜트</p>
+		<p>도감넘버 :1/210</p>
+		<p><s>제조시간 :4500 0500</s> - 개선중 -</p>
+		<p>별명 :콜라</p>
+	</div>
 <input class="w3-input w3-center" type="text" placeholder="검색" id="input" onkeyup="filterFunction()">
 <div class="w3-row-padding w3-padding-large w3-center" id="gun">
 <div class="w3-col w3-mobile w3-section dollcontainer">
@@ -246,7 +251,6 @@ function doll_close() {
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">16</div>
 		<p class="w3-text-black name podo f125">톰슨</p>
-		<img src="../img/etc/smg_5.png" class="type" alt="type">
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
 		<img src="../img/etc/star.png" class="star r2" alt="rarity">
 		<img src="../img/etc/star.png" class="star r3" alt="rarity">
@@ -2651,7 +2655,6 @@ function doll_close() {
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">203</div>
 		<p class="w3-text-black name podo f125">허니뱃저</p>
-		<img src="../img/etc/smg_4.png" class="type" alt="type">
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
 		<img src="../img/etc/star.png" class="star r2" alt="rarity">
 		<img src="../img/etc/star.png" class="star r3" alt="rarity">
@@ -2736,5 +2739,26 @@ function doll_close() {
 </div>
 </div>
 </div>
+<script type='text/javascript'>
+    var sendMessage = function (msg) {
+        window.parent.postMessage(msg, '*');
+    };
+    // sent body height to parent when DOM emelemt is ready
+    // but Image height is not included yet. so it can be different with actual height
+    jQuery(document).ready(function(){
+      // sent document height to parent
+      sendMessage(jQuery( 'body' ).innerHeight());
+
+      // sent document height to parent when resize browser
+      jQuery(window).on('resize',function() {
+          sendMessage(jQuery( 'body' ).innerHeight());
+      });
+    });
+    // sent document height to parent when iframe is fully loaded.
+    // this stage all images height is added
+    jQuery(window).load(function(){
+      sendMessage(jQuery( 'body' ).innerHeight());
+    });
+</script>
 </body>
 </html>
