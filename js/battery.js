@@ -1,22 +1,21 @@
-document.getElementById("1t").addEventListener("keyup", e);
-document.getElementById("2t").addEventListener("keyup", e);
-document.getElementById("3t").addEventListener("keyup", e);
-document.getElementById("4t").addEventListener("keyup", e);
-document.getElementById("5t").addEventListener("keyup", e);
-document.getElementById("6t").addEventListener("keyup", e);
-document.getElementById("7t").addEventListener("keyup", e);
-document.getElementById("8t").addEventListener("keyup", e);
-document.getElementById("9t").addEventListener("keyup", e);
-document.getElementById("10t").addEventListener("keyup", e);
-
-var arr = ["1t", "2t", "3t", "4t", "5t", "6t", "7t", "8t", "9t", "10t"];
+document.getElementById("1com").addEventListener("keyup", sumComfort);
+document.getElementById("2com").addEventListener("keyup", sumComfort);
+document.getElementById("3com").addEventListener("keyup", sumComfort);
+document.getElementById("4com").addEventListener("keyup", sumComfort);
+document.getElementById("5com").addEventListener("keyup", sumComfort);
+document.getElementById("6com").addEventListener("keyup", sumComfort);
+document.getElementById("7com").addEventListener("keyup", sumComfort);
+document.getElementById("8com").addEventListener("keyup", sumComfort);
+document.getElementById("9com").addEventListener("keyup", sumComfort);
+document.getElementById("10com").addEventListener("keyup",sumComfort);
+var arr = ["1com", "2com", "3com", "4com", "5com", "6com", "7com", "8com", "9com", "10com"];
 var a = 0;
 var i;
-function e() {
+function sumComfort() {
 	"use strict";
     for (i = 0; i < arr.length; i++)
     {
     	a = a + Number(document.getElementById(arr[i]).value);
     }
-	document.getElementById("trr").innerText = a;
+	document.getElementById("tCom").innerText = a;
 }
