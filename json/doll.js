@@ -6,9 +6,9 @@
   "illust": "Saru",
   "voice": "Aimi Tanaka",
   "buildTime": 3000,
-  "drop": ["0-1","4-1","5-1","6-5","7-1","8-2","1-4E","3-1E","3-4E","4-1E","5-1E","6-1E","8-1E"],
-  "skins":["별똥별의 소원"],
-  "nick":["콜라"],
+  "drop": ["0-1", "4-1", "5-1", "6-5", "7-1", "8-2", "1-4E", "3-1E", "3-4E", "4-1E", "5-1E", "6-1E", "8-1E"],
+  "skins": ["별똥별의 소원"],
+  "nick": ["콜라"],
   "stats": {
     "armor": 0,
     "dodge": 76,
@@ -29,17 +29,15 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [6, 2, 8, 4],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 12
-    }, {
-      "type": "hit",
-      "value": 25
-    }]
+    "effectPos": [2, 4, 6, 8],
+    "gridEffect": {
+      "pow": 12,
+      "hit": 25
+    }
   },
   "krName": "콜트 리볼버"
-}, { "id": 2,
+}, {
+  "id": 2,
   "name": "M1911",
   "rank": 2,
   "type": 1,
@@ -69,14 +67,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [6, 2, 8, 4],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 10
-    }, {
-      "type": "hit",
-      "value": 25
-    }]
+    "effectPos": [2, 4, 6, 8],
+    "gridEffect": {
+      "rate": 10,
+      "hit": 25
+    }
   },
   "krName": "M1911"
 }, {
@@ -88,8 +83,8 @@
   "voice": "Aya Suzaki",
   "buildTime": 2400,
   "drop": ["1-5이후 모든 지역"],
-  "skins":[],
-  "nick":["엠구","엠구나노"],
+  "skins": [],
+  "nick": ["엠구", "엠구나노"],
   "stats": {
     "armor": 0,
     "dodge": 66,
@@ -110,14 +105,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [2, 8, 1, 7],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 10
-    }, {
-      "type": "dodge",
-      "value": 10
-    }]
+    "effectPos": [2, 3, 8, 9],
+    "gridEffect": {
+      "pow": 10,
+      "dodge": 10
+    }
   },
   "krName": "M9"
 }, {
@@ -129,8 +121,8 @@
   "voice": "Narumi Sinohara",
   "buildTime": 1200,
   "drop": ["모든맵"],
-  "skins":[],
-  "nick":["할매"],
+  "skins": [],
+  "nick": ["할매"],
   "stats": {
     "armor": 0,
     "dodge": 92,
@@ -151,14 +143,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [6, 2, 8],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 16
-    }, {
-      "type": "crit",
-      "value": 8
-    }]
+    "effectPos": [2, 4, 8],
+    "gridEffect": {
+      "pow": 16,
+      "crit": 8
+    }
   },
   "krName": "나강 리볼버"
 }, {
@@ -169,9 +158,9 @@
   "illust": "废人",
   "voice": "Hiromi Sakuma",
   "buildTime": 2700,
-  "drop": ["0-4","2-3","2-6","2-2e","3-3","3-6","4-5","4-6","6-2","6-2e","7-2","8-2","8-4"],
-  "skins":["두 사람의 인생"],
-  "nick":[],
+  "drop": ["0-4", "2-3", "2-6", "2-2e", "3-3", "3-6", "4-5", "4-6", "6-2", "6-2e", "7-2", "8-2", "8-4"],
+  "skins": ["두 사람의 인생"],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 66,
@@ -192,14 +181,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [2, 8, 1, 7],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 10
-    }, {
-      "type": "hit",
-      "value": 25
-    }]
+    "effectPos": [2, 3, 8, 9],
+    "gridEffect": {
+      "rate": 10,
+      "hit": 25
+    }
   },
   "krName": "토카레프"
 }, {
@@ -211,8 +197,8 @@
   "voice": "Eri Kitamura",
   "buildTime": 3300,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 66,
@@ -233,14 +219,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [2, 8, 1, 7],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 6
-    }, {
-      "type": "rate",
-      "value": 12
-    }]
+    "effectPos": [2, 3, 8, 9],
+    "gridEffect": {
+      "pow": 6,
+      "rate": 12
+    }
   },
   "krName": "스테츠킨"
 }, {
@@ -251,9 +234,9 @@
   "illust": "河马",
   "voice": "Uesaka Sumire",
   "buildTime": 2400,
-  "drop": ["0-4","2-5","2-6","2-1e","2-2e","3-3","3-6","4-5","4-6","6-4","6-3e","7-4","8-1","8-3"],
-  "skins":["잭오랜턴"],
-  "nick":[],
+  "drop": ["0-4", "2-5", "2-6", "2-1e", "2-2e", "3-3", "3-6", "4-5", "4-6", "6-4", "6-3e", "7-4", "8-1", "8-3"],
+  "skins": ["잭오랜턴"],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 96,
@@ -274,14 +257,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [3, 6, 9, 4],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 10
-    }, {
-      "type": "rate",
-      "value": 6
-    }]
+    "effectPos": [1, 4, 6, 7],
+    "gridEffect": {
+      "pow": 10,
+      "rate": 6
+    }
   },
   "krName": "마카로프"
 }, {
@@ -293,8 +273,8 @@
   "voice": "Tooru Kanae",
   "buildTime": 1200,
   "drop": ["모든맵"],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 81,
@@ -315,14 +295,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [2, 8, 1, 7],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 7
-    }, {
-      "type": "hit",
-      "value": 28
-    }]
+    "effectPos": [2, 3, 8, 9],
+    "gridEffect": {
+      "rate": 7,
+      "hit": 28
+    }
   },
   "krName": "P38"
 }, {
@@ -334,8 +311,8 @@
   "voice": "Asuka Ito",
   "buildTime": 1320,
   "drop": ["1-1을 제외한 모든맵"],
-  "skins":[],
-  "nick":["재규어","여왕님"],
+  "skins": [],
+  "nick": ["재규어", "여왕님", "유신"],
   "stats": {
     "armor": 0,
     "dodge": 100,
@@ -356,14 +333,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [3, 6, 9, 4],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 16
-    }, {
-      "type": "crit",
-      "value": 8
-    }]
+    "effectPos": [1, 4, 6, 7],
+    "gridEffect": {
+      "rate": 16,
+      "crit": 8
+    }
   },
   "krName": "PPK"
 }, {
@@ -374,17 +348,9 @@
   "illust": "防弹乳牛",
   "voice": "Takao Koizumi",
   "buildTime": 1800,
-  "drop": ["0-1","0-2","0-3",
-  "1-3","1-4","1-6","1-2e","1-3e","1-4e",
-  "2-1","2-2","2-3","2-4","2-6","2-2e","2-3e","2-4e",
-  "3-1","3-2","3-3","3-5","3-6","3-1e","3-3e",
-  "4-1","4-3","4-5","4-6","4-1e","4-3e",
-  "5-1","5-3","5-5","5-6","5-1e","5-3e","5-4e",
-  "6-3","6-5","6-6","6-3e","6-4e",
-  "7-3","7-5","7-6","7-3e","7-4e",
-  "8-2","8-4"],
-  "skins":[],
-  "nick":[],
+  "drop": ["0-1", "0-2", "0-3", "1-3", "1-4", "1-6", "1-2e", "1-3e", "1-4e", "2-1", "2-2", "2-3", "2-4", "2-6", "2-2e", "2-3e", "2-4e", "3-1", "3-2", "3-3", "3-5", "3-6", "3-1e", "3-3e", "4-1", "4-3", "4-5", "4-6", "4-1e", "4-3e", "5-1", "5-3", "5-5", "5-6", "5-1e", "5-3e", "5-4e", "6-3", "6-5", "6-6", "6-3e", "6-4e", "7-3", "7-5", "7-6", "7-3e", "7-4e", "8-2", "8-4"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 80,
@@ -405,14 +371,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [2, 8, 4],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 7
-    }, {
-      "type": "hit",
-      "value": 35
-    }]
+    "effectPos": [2, 6, 8],
+    "gridEffect": {
+      "pow": 7,
+      "hit": 35
+    }
   },
   "krName": "P08"
 }, {
@@ -423,17 +386,9 @@
   "illust": "林檎愛す",
   "voice": "Ayaka Itatani",
   "buildTime": 1800,
-  "drop": ["0-1","0-2","0-3",
-  "1-6","1-2e","1-3e","1-4e",
-  "2-1","2-2","2-3","2-4","2-6","2-2e","2-3e","2-4e",
-  "3-1","3-2","3-3","3-5","3-6","3-1e","3-4e",
-  "4-1","4-4","4-5","4-6","4-2e","4-3e",
-  "5-2","5-3","5-5","5-6","5-2e","5-3e","5-4e",
-  "6-1","6-4","6-5","6-6","6-1e","6-4e",
-  "7-4","7-5","7-6","7-1e",
-  "8-1","8-3"],
-  "skins":[],
-  "nick":[],
+  "drop": ["0-1", "0-2", "0-3", "1-6", "1-2e", "1-3e", "1-4e", "2-1", "2-2", "2-3", "2-4", "2-6", "2-2e", "2-3e", "2-4e", "3-1", "3-2", "3-3", "3-5", "3-6", "3-1e", "3-4e", "4-1", "4-4", "4-5", "4-6", "4-2e", "4-3e", "5-2", "5-3", "5-5", "5-6", "5-2e", "5-3e", "5-4e", "6-1", "6-4", "6-5", "6-6", "6-1e", "6-4e", "7-4", "7-5", "7-6", "7-1e", "8-1", "8-3"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 61,
@@ -454,14 +409,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [3, 9, 4],
-    "gridEffect": [{
-      "type": "hit",
-      "value": 32
-    }, {
-      "type": "dodge",
-      "value": 15
-    }]
+    "effectPos": [1, 6, 7],
+    "gridEffect": {
+      "hit": 32,
+      "dodge": 15
+    }
   },
   "krName": "C96"
 }, {
@@ -472,9 +424,9 @@
   "illust": "莲子",
   "voice": "Suzuko Mimori",
   "buildTime": 2100,
-  "drop": ["0-4","2-3e","2-4e","3-1","3-2","3-3","3-6","4-5","4-6","8-2","8-4","딥다이브 1-2"],
-  "skins":[],
-  "nick":[],
+  "drop": ["0-4", "2-3e", "2-4e", "3-1", "3-2", "3-3", "3-6", "4-5", "4-6", "8-2", "8-4", "딥다이브 1-2"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 80,
@@ -495,14 +447,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [3, 6, 9, 2, 8, 1, 4, 7],
-    "gridEffect": [{
-      "type": "hit",
-      "value": 25
-    }, {
-      "type": "dodge",
-      "value": 20
-    }]
+    "effectPos": [1, 2, 3, 4, 6, 7, 8, 9],
+    "gridEffect": {
+      "hit": 25,
+      "dodge": 20
+    }
   },
   "krName": "92식"
 }, {
@@ -513,17 +462,9 @@
   "illust": "spirtie",
   "voice": "Sora Amamiya",
   "buildTime": 2400,
-  "drop": ["0-1","0-2","0-3",
-    "1-4","1-5","1-6","1-1e","1-2e","1-3e","1-4e",
-    "2-1","2-2","2-3","2-5","2-6","2-1e","2-2e","2-3e","2-4e",
-    "3-1","3-2","3-3","3-5","3-6","3-2e","3-4e",
-    "4-2","4-4","4-5","4-6","4-1e","4-4e",
-    "5-1","5-4","5-5","5-6","5-1e","5-4e",
-    "6-3","6-5","6-6","6-4e",
-    "7-3","7-5","7-6","7-4e",
-    "8-1","8-3"],
-  "skins":[],
-  "nick":["안녕 난 콩지야"],
+  "drop": ["0-1", "0-2", "0-3", "1-4", "1-5", "1-6", "1-1e", "1-2e", "1-3e", "1-4e", "2-1", "2-2", "2-3", "2-5", "2-6", "2-1e", "2-2e", "2-3e", "2-4e", "3-1", "3-2", "3-3", "3-5", "3-6", "3-2e", "3-4e", "4-2", "4-4", "4-5", "4-6", "4-1e", "4-4e", "5-1", "5-4", "5-5", "5-6", "5-1e", "5-4e", "6-3", "6-5", "6-6", "6-4e", "7-3", "7-5", "7-6", "7-4e", "8-1", "8-3"],
+  "skins": [],
+  "nick": ["안녕 난 콩지야"],
   "stats": {
     "armor": 0,
     "dodge": 68,
@@ -544,14 +485,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [3, 9, 1, 7],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 10
-    }, {
-      "type": "dodge",
-      "value": 10
-    }]
+    "effectPos": [1, 3, 7, 9],
+    "gridEffect": {
+      "rate": 10,
+      "dodge": 10
+    }
   },
   "krName": "아스트라 리볼버"
 }, {
@@ -562,9 +500,9 @@
   "illust": "Rain Lan",
   "voice": "Sora Tokui",
   "buildTime": 0,
-  "drop": ["1-6","1-4e"],
-  "skins":[],
-  "nick":[],
+  "drop": ["1-6", "1-4e"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 87,
@@ -585,14 +523,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [3, 9, 1, 4, 7],
-    "gridEffect": [{
-      "type": "hit",
-      "value": 32
-    }, {
-      "type": "dodge",
-      "value": 15
-    }]
+    "effectPos": [1, 3, 6, 7, 9],
+    "gridEffect": {
+      "hit": 32,
+      "dodge": 15
+    }
   },
   "krName": "글록17"
 }, {
@@ -604,8 +539,8 @@
   "voice": "Risa Taneda",
   "buildTime": 9000,
   "drop": [],
-  "skins":["데빌 헌터"],
-  "nick":["느총톰"],
+  "skins": ["데빌 헌터"],
+  "nick": ["느총톰"],
   "stats": {
     "armor": 0,
     "dodge": 56,
@@ -626,14 +561,11 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 9],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 12
-    }, {
-      "type": "dodge",
-      "value": 15
-    }]
+    "effectPos": [1, 7],
+    "gridEffect": {
+      "pow": 12,
+      "dodge": 15
+    }
   },
   "krName": "톰슨"
 }, {
@@ -645,8 +577,8 @@
   "voice": "Nozomi Amane",
   "buildTime": 5400,
   "drop": ["1-4 이후 모든 지역"],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 67,
@@ -667,14 +599,11 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [6],
-    "gridEffect": [{
-      "type": "hit",
-      "value": 40
-    }, {
-      "type": "dodge",
-      "value": 30
-    }]
+    "effectPos": [4],
+    "gridEffect": {
+      "hit": 40,
+      "dodge": 30
+    }
   },
   "krName": "M3"
 }, {
@@ -685,16 +614,9 @@
   "illust": "SA",
   "voice": "Ogura Yui",
   "buildTime": 7200,
-  "drop": ["0-2","0-3","1-4e","2-2","2-3","2-4","2-5","2-6","2-1e","2-2e","2-3e","2-4e",
-    "3-1","3-2","3-3","3-4","3-5","3-6","3-1e","3-3e",
-    "4-1","4-3","4-5","4-6","4-1e","4-4E",
-    "5-1","5-4","5-5","5-6","5-1e","5-4e",
-    "6-3","6-5","6-6","6-1e","6-4e",
-    "7-3","7-5","7-6","7-1e","7-4e",
-    "8-1","8-3","8-5","8-1e","8-3e"
-],
-  "skins":[],
-  "nick":[],
+  "drop": ["0-2", "0-3", "1-4e", "2-2", "2-3", "2-4", "2-5", "2-6", "2-1e", "2-2e", "2-3e", "2-4e", "3-1", "3-2", "3-3", "3-4", "3-5", "3-6", "3-1e", "3-3e", "4-1", "4-3", "4-5", "4-6", "4-1e", "4-4E", "5-1", "5-4", "5-5", "5-6", "5-1e", "5-4e", "6-3", "6-5", "6-6", "6-1e", "6-4e", "7-3", "7-5", "7-6", "7-1e", "7-4e", "8-1", "8-3", "8-5", "8-1e", "8-3e"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 68,
@@ -715,11 +637,10 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 6, 9],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 12
-    }]
+    "effectPos": [1, 4, 7],
+    "gridEffect": {
+      "pow": 12
+    }
   },
   "krName": "MAC-10"
 }, {
@@ -730,9 +651,9 @@
   "illust": "NorthAbyssor",
   "voice": "Serizawa Yuu",
   "buildTime": 0,
-  "drop": ["2-6","2-4e"],
-  "skins":[],
-  "nick":[],
+  "drop": ["2-6", "2-4e"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 90,
@@ -753,14 +674,11 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 9],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 10
-    }, {
-      "type": "dodge",
-      "value": 12
-    }]
+    "effectPos": [1, 7],
+    "gridEffect": {
+      "pow": 10,
+      "dodge": 12
+    }
   },
   "krName": "FMG-9"
 }, {
@@ -772,8 +690,8 @@
   "voice": "Saori Hayami",
   "buildTime": 9300,
   "drop": ["6-4e"],
-  "skins":["고양이 발바닥"],
-  "nick":[],
+  "skins": ["고양이 발바닥"],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 71,
@@ -794,11 +712,10 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [6],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 25
-    }]
+    "effectPos": [4],
+    "gridEffect": {
+      "rate": 25
+    }
   },
   "krName": "Vector"
 }, {
@@ -809,9 +726,9 @@
   "illust": "和茶",
   "voice": "Uesaka Sumire",
   "buildTime": 6600,
-  "drop": ["0-4","2-4","2-5","2-1e","3-6","3-4e","4-4","4-5","4-6","8-2","8-4","8-6","8-2e","8-4e"],
-  "skins":["계약 시간"],
-  "nick":["파파샤","퍄퍄샤"],
+  "drop": ["0-4", "2-4", "2-5", "2-1e", "3-6", "3-4e", "4-4", "4-5", "4-6", "8-2", "8-4", "8-6", "8-2e", "8-4e"],
+  "skins": ["계약 시간"],
+  "nick": ["파파샤", "퍄퍄샤"],
   "stats": {
     "armor": 0,
     "dodge": 56,
@@ -833,13 +750,10 @@
     "effectType": 4,
     "effectCenter": 5,
     "effectPos": [2, 8],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 10
-    }, {
-      "type": "rate",
-      "value": 5
-    }]
+    "gridEffect": {
+      "pow": 10,
+      "rate": 5
+    }
   },
   "krName": "PPsh-41"
 }, {
@@ -851,8 +765,8 @@
   "voice": "Uesaka Sumire",
   "buildTime": 7800,
   "drop": ["0-4", "2-5", "2-6", "2-1e", "2-2e", "3-4", "3-6", "4-5", "4-6", "6-1", "6-4", "6-2e", "6-3e", "7-1", "7-4", "7-2e", "7-3e", "8-2", "8-4", "8-6", "8-2e", "8-4e"],
-  "skins":[],
-  "nick":["핑파샤"],
+  "skins": [],
+  "nick": ["핑파샤"],
   "stats": {
     "armor": 0,
     "dodge": 65,
@@ -873,11 +787,10 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 6, 9],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 12
-    }]
+    "effectPos": [1, 4, 7],
+    "gridEffect": {
+      "pow": 12
+    }
   },
   "krName": "PPS-43"
 }, {
@@ -889,8 +802,8 @@
   "voice": "Shiki Aoki",
   "buildTime": 8400,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 86,
@@ -911,14 +824,11 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 9],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 8
-    }, {
-      "type": "dodge",
-      "value": 20
-    }]
+    "effectPos": [1, 7],
+    "gridEffect": {
+      "pow": 8,
+      "dodge": 20
+    }
   },
   "krName": "PP-90"
 }, {
@@ -930,8 +840,8 @@
   "voice": "Tamari Hinata",
   "buildTime": 4200,
   "drop": ["1-3e부터 모든 지역"],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 74,
@@ -952,14 +862,11 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 9],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 10
-    }, {
-      "type": "hit",
-      "value": 25
-    }]
+    "effectPos": [1, 7],
+    "gridEffect": {
+      "pow": 10,
+      "hit": 25
+    }
   },
   "krName": "PP-2000"
 }, {
@@ -971,8 +878,8 @@
   "voice": "Eriko Matsui",
   "buildTime": 5400,
   "drop": ["3-5,3-6을 제외한 1-4이후의 모든지역"],
-  "skins":["엄지공주"],
-  "nick":["이승만"],
+  "skins": ["엄지공주"],
+  "nick": ["이승만"],
   "stats": {
     "armor": 0,
     "dodge": 58,
@@ -993,14 +900,11 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 9],
-    "gridEffect": [{
-      "type": "hit",
-      "value": 25
-    }, {
-      "type": "dodge",
-      "value": 20
-    }]
+    "effectPos": [1, 7],
+    "gridEffect": {
+      "hit": 25,
+      "dodge": 20
+    }
   },
   "krName": "MP40"
 }, {
@@ -1012,8 +916,8 @@
   "voice": "Naomi Mukaiyama",
   "buildTime": 8400,
   "drop": ["0-2", "2-4e", "3-2e", "3-4e", "4-2", "4-2e", "5-2", "5-2e", "6-4", "6-1e", "7-2", "7-4", "7-3e", "8-1", "8-6"],
-  "skins":["드라큘라","잠들지 않는 꽃"],
-  "nick":["우유"],
+  "skins": ["드라큘라", "잠들지 않는 꽃"],
+  "nick": ["우유"],
   "stats": {
     "armor": 0,
     "dodge": 68,
@@ -1034,14 +938,11 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 9],
-    "gridEffect": [{
-      "type": "hit",
-      "value": 40
-    }, {
-      "type": "crit",
-      "value": 20
-    }]
+    "effectPos": [1, 7],
+    "gridEffect": {
+      "hit": 40,
+      "crit": 20
+    }
   },
   "krName": "MP5"
 }, {
@@ -1052,17 +953,9 @@
   "illust": "SA",
   "voice": "Eriko Matsui",
   "buildTime": 7200,
-  "drop": ["0-1", "1-6", "1-2e", "1-3e", "1-4e",
-     "2-1", "2-2", "2-3", "2-5", "2-6", "2-1e", "2-2e", "2-3e", "2-4e",
-     "3-1", "3-2", "3-3", "3-4", "3-5", "3-6", "3-1e", "3-4e",
-     "4-1", "4-4", "4-5", "4-6", "4-2e", "4-3e",
-     "5-2", "5-3", "5-5", "5-6", "5-2e", "5-3e", "5-4e",
-     "6-1", "6-5", "6-6", "6-1e","6-3e", "6-4e",
-     "7-1", "7-5", "7-6", "7-1e","7-3e", "7-4e",
-     "8-1", "8-3", "8-5", "8-1e","8-3e"
-   ],
-  "skins":["붉은 은하수"],
-  "nick":["사소리"],
+  "drop": ["0-1", "1-6", "1-2e", "1-3e", "1-4e", "2-1", "2-2", "2-3", "2-5", "2-6", "2-1e", "2-2e", "2-3e", "2-4e", "3-1", "3-2", "3-3", "3-4", "3-5", "3-6", "3-1e", "3-4e", "4-1", "4-4", "4-5", "4-6", "4-2e", "4-3e", "5-2", "5-3", "5-5", "5-6", "5-2e", "5-3e", "5-4e", "6-1", "6-5", "6-6", "6-1e", "6-3e", "6-4e", "7-1", "7-5", "7-6", "7-1e", "7-3e", "7-4e", "8-1", "8-3", "8-5", "8-1e", "8-3e"],
+  "skins": ["붉은 은하수"],
+  "nick": ["사소리"],
   "stats": {
     "armor": 0,
     "dodge": 83,
@@ -1083,14 +976,11 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [6],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 15
-    }, {
-      "type": "hit",
-      "value": 50
-    }]
+    "effectPos": [4],
+    "gridEffect": {
+      "rate": 15,
+      "hit": 50
+    }
   },
   "krName": "스콜피온"
 }, {
@@ -1105,32 +995,29 @@
   "skins": [],
   "nick": [],
   "stats": {
-  	"armor": 0,
-  	"dodge": 69,
-  	"hit": 13,
-  	"pow": 30,
-  	"range": 0,
-  	"rate": 91,
-  	"shield": 0,
-  	"speed": 12,
-  	"crit": 5,
-  	"critDmg": 0,
-  	"armorPiercing": 10,
-  	"nightView": 0,
+    "armor": 0,
+    "dodge": 69,
+    "hit": 13,
+    "pow": 30,
+    "range": 0,
+    "rate": 91,
+    "shield": 0,
+    "speed": 12,
+    "crit": 5,
+    "critDmg": 0,
+    "armorPiercing": 10,
+    "nightView": 0,
     "coolDown": 0,
     "bullet": 0
-   },
-    "effect": {
-    	"effectType": 4,
-    	"effectCenter": 5,
-    	"effectPos": [1, 4, 7],
-    	"gridEffect": [{
-      "type": "rate",
-      "value": 15
-    }, {
-      "type": "hit",
-      "value": 25
-    }]
+  },
+  "effect": {
+    "effectType": 4,
+    "effectCenter": 5,
+    "effectPos": [1, 4, 7],
+    "gridEffect": {
+      "rate": 15,
+      "hit": 25
+    }
   },
   "krName": "MP7"
 }, {
@@ -1141,16 +1028,9 @@
   "illust": "真名",
   "voice": "Kami Daimon",
   "buildTime": 6000,
-  "drop": ["0-1", "1-6", "1-2e", "1-3e", "1-4e", 
-      "2-1", "2-2", "2-3", "2-5", "2-6", "2-1e", "2-2e", "2-3e", "2-4e", 
-      "3-1", "3-2", "3-3", "3-4", "3-5", "3-6", "3-2e", "3-3e", 
-      "4-2", "4-3", "4-5", "4-6", "4-1e", "4-3e",
-      "5-1", "5-3", "5-5", "5-6", "5-1e", "5-3e", "5-4e", 
-      "6-2", "6-3", "6-5", "6-6", "6-2e", "6-4e",
-      "7-2", "7-3", "7-5", "7-6", "7-2e", "7-4e",
-      "8-2", "8-4", "8-6", "8-2e", "8-4e"],
-  "skins":["마음의 대답"],
-  "nick":["비빗쟈"],
+  "drop": ["0-1", "1-6", "1-2e", "1-3e", "1-4e", "2-1", "2-2", "2-3", "2-5", "2-6", "2-1e", "2-2e", "2-3e", "2-4e", "3-1", "3-2", "3-3", "3-4", "3-5", "3-6", "3-2e", "3-3e", "4-2", "4-3", "4-5", "4-6", "4-1e", "4-3e", "5-1", "5-3", "5-5", "5-6", "5-1e", "5-3e", "5-4e", "6-2", "6-3", "6-5", "6-6", "6-2e", "6-4e", "7-2", "7-3", "7-5", "7-6", "7-2e", "7-4e", "8-2", "8-4", "8-6", "8-2e", "8-4e"],
+  "skins": ["마음의 대답"],
+  "nick": ["비빗쟈"],
   "stats": {
     "armor": 0,
     "dodge": 75,
@@ -1171,14 +1051,11 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 6, 9],
-    "gridEffect": [{
-      "type": "hit",
-      "value": 10
-    }, {
-      "type": "dodge",
-      "value": 30
-    }]
+    "effectPos": [1, 4, 7],
+    "gridEffect": {
+      "hit": 10,
+      "dodge": 30
+    }
   },
   "krName": "스텐MkII"
 }, {
@@ -1190,8 +1067,8 @@
   "voice": "Haruka Takahashi",
   "buildTime": 5400,
   "drop": ["2-6,2-2e 이후 모든 지역"],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 52,
@@ -1212,14 +1089,11 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 9],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 5
-    }, {
-      "type": "rate",
-      "value": 10
-    }]
+    "effectPos": [1, 7],
+    "gridEffect": {
+      "pow": 5,
+      "rate": 10
+    }
   },
   "krName": "베레타 38형"
 }, {
@@ -1230,15 +1104,9 @@
   "illust": "死盖",
   "voice": "Saori Onishi",
   "buildTime": 6000,
-  "drop": ["0-2", "0-3", "2-4", "2-5", "2-6", "2-1e", "2-2e", "2-3e", "2-4e", 
-           "3-1", "3-2", "3-3", "3-4", "3-5", "3-6", "3-2e", "3-4e", 
-           "4-2", "4-4", "4-5", "4-6", "4-2e", "4-4e",
-           "5-2", "5-4", "5-5", "5-6", "5-2e", "5-4e", 
-           "6-2", "6-4", "6-5", "6-6", "6-2e", "6-4e", 
-           "7-2", "7-4", "7-5", "7-6", "7-2e", "7-4e", 
-           "8-1", "8-3", "8-5", "8-1e", "8-3e"],
-  "skins":["잠에서 갠 바보"],
-  "nick":["우지챠"],
+  "drop": ["0-2", "0-3", "2-4", "2-5", "2-6", "2-1e", "2-2e", "2-3e", "2-4e", "3-1", "3-2", "3-3", "3-4", "3-5", "3-6", "3-2e", "3-4e", "4-2", "4-4", "4-5", "4-6", "4-2e", "4-4e", "5-2", "5-4", "5-5", "5-6", "5-2e", "5-4e", "6-2", "6-4", "6-5", "6-6", "6-2e", "6-4e", "7-2", "7-4", "7-5", "7-6", "7-2e", "7-4e", "8-1", "8-3", "8-5", "8-1e", "8-3e"],
+  "skins": ["잠에서 갠 바보"],
+  "nick": ["우지챠"],
   "stats": {
     "armor": 0,
     "dodge": 79,
@@ -1260,10 +1128,9 @@
     "effectType": 4,
     "effectCenter": 5,
     "effectPos": [2, 8],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 18
-    }]
+    "gridEffect": {
+      "pow": 18
+    }
   },
   "krName": "마이크로 우지"
 }, {
@@ -1275,8 +1142,8 @@
   "voice": "Mikako Takahashi",
   "buildTime": 4800,
   "drop": ["2-4e 이후 전지역"],
-  "skins":["과자 배달부"],
-  "nick":[],
+  "skins": ["과자 배달부"],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 62,
@@ -1297,14 +1164,11 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 9],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 10
-    }, {
-      "type": "dodge",
-      "value": 10
-    }]
+    "effectPos": [1, 7],
+    "gridEffect": {
+      "rate": 10,
+      "dodge": 10
+    }
   },
   "krName": "m45"
 }, {
@@ -1315,15 +1179,9 @@
   "illust": "哈路卡",
   "voice": "Risa Taneda",
   "buildTime": 14400,
-  "drop": ["0-1", "0-2", "0-3", "0-4", 
-           "3-3", "3-4", "3-5", "3-6", "3-2e", "3-3e", "3-4e", 
-           "4-2", "4-3", "4-4", "4-5", "4-6", "4-2e", "4-3e", "4-4e", 
-           "5-2", "5-3", "5-4", "5-5", "5-6", "5-2e", "5-3e", "5-4e",
-           "6-1", "6-2", "6-4", "6-5", "6-6", "6-1e", "6-3e", "6-4e", 
-           "7-1", "7-2", "7-4", "7-5", "7-6", "7-1e", "7-3e", "7-4e", 
-           "8-2", "8-4", "8-6", "8-2e", "8-4e"],
-  "skins":["해변의 공주"],
-  "nick":[],
+  "drop": ["0-1", "0-2", "0-3", "0-4", "3-3", "3-4", "3-5", "3-6", "3-2e", "3-3e", "3-4e", "4-2", "4-3", "4-4", "4-5", "4-6", "4-2e", "4-3e", "4-4e", "5-2", "5-3", "5-4", "5-5", "5-6", "5-2e", "5-3e", "5-4e", "6-1", "6-2", "6-4", "6-5", "6-6", "6-1e", "6-3e", "6-4e", "7-1", "7-2", "7-4", "7-5", "7-6", "7-1e", "7-3e", "7-4e", "8-2", "8-4", "8-6", "8-2e", "8-4e"],
+  "skins": ["해변의 공주"],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 28,
@@ -1344,11 +1202,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [4],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 12
-    }]
+    "effectPos": [6],
+    "gridEffect": {
+      "coolDown": 12
+    }
   },
   "krName": "M1 개런드"
 }, {
@@ -1359,9 +1216,9 @@
   "illust": "哈路卡",
   "voice": "Suzuko Mimori",
   "buildTime": 0,
-  "drop": ["6-6","6-4e"],
-  "skins":[],
-  "nick":[],
+  "drop": ["6-6", "6-4e"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 42,
@@ -1383,10 +1240,9 @@
     "effectType": 1,
     "effectCenter": 5,
     "effectPos": [2, 8],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 12
-    }]
+    "gridEffect": {
+      "coolDown": 12
+    }
   },
   "krName": "M1A1"
 }, {
@@ -1399,7 +1255,7 @@
   "buildTime": 15900,
   "drop": ["0-2", "0-4", "4-6", "4-4E", "5-4", "5-3E", "6-3", "6-6", "6-4E"],
   "skins": ["정통파 마녀", "성스러운 밤의 축복", "등불 아래의 여왕", "잠에서 깬 인어"],
-  "nick":["춘전"],
+  "nick": ["춘전"],
   "stats": {
     "armor": 0,
     "dodge": 40,
@@ -1420,11 +1276,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [7],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 15
-    }]
+    "effectPos": [9],
+    "gridEffect": {
+      "coolDown": 15
+    }
   },
   "krName": "스프링필드"
 }, {
@@ -1435,16 +1290,9 @@
   "illust": "Rain Lan",
   "voice": "Saori Onishi ",
   "buildTime": 13200,
-  "drop": ["0-1", "0-2", "0-3", "0-4", 
-           "3-3", "3-4", "3-5", "3-6", "3-1e", "3-3e", "3-4e", 
-           "4-1", "4-3", "4-4", "4-5", "4-6", "4-1e", "4-2e", "4-4e", 
-           "5-1", "5-2", "5-4", "5-5", "5-6", "5-1e", "5-2e", "5-4e", 
-           "6-1", "6-3", "6-4", "6-5", "6-6", "6-1e", "6-2e", "6-4e", 
-           "7-1", "7-3", "7-4", "7-5", "7-6", "7-1e", "7-2e", "7-4e", 
-           "8-1", "8-3", "8-5", "8-1e", "8-3e"
-],
-  "skins":["성탄절 퍼레이드 의상"],
-  "nick":["씹새"],
+  "drop": ["0-1", "0-2", "0-3", "0-4", "3-3", "3-4", "3-5", "3-6", "3-1e", "3-3e", "3-4e", "4-1", "4-3", "4-4", "4-5", "4-6", "4-1e", "4-2e", "4-4e", "5-1", "5-2", "5-4", "5-5", "5-6", "5-1e", "5-2e", "5-4e", "6-1", "6-3", "6-4", "6-5", "6-6", "6-1e", "6-2e", "6-4e", "7-1", "7-3", "7-4", "7-5", "7-6", "7-1e", "7-2e", "7-4e", "8-1", "8-3", "8-5", "8-1e", "8-3e"],
+  "skins": ["성탄절 퍼레이드 의상"],
+  "nick": ["씹새"],
   "stats": {
     "armor": 0,
     "dodge": 27,
@@ -1465,11 +1313,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [1, 7],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 12
-    }]
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "coolDown": 12
+    }
   },
   "krName": "M14"
 }, {
@@ -1480,9 +1327,9 @@
   "illust": "卑しい人间",
   "voice": "Eri Kitamura",
   "buildTime": 0,
-  "drop": ["4-6","4-4e"],
-  "skins":[],
-  "nick":[],
+  "drop": ["4-6", "4-4e"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 27,
@@ -1504,10 +1351,9 @@
     "effectType": 1,
     "effectCenter": 5,
     "effectPos": [2, 8],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 12
-    }]
+    "gridEffect": {
+      "coolDown": 12
+    }
   },
   "krName": "M21"
 }, {
@@ -1519,8 +1365,8 @@
   "voice": "Uesaka Sumire",
   "buildTime": 15000,
   "drop": ["0-3", "4-6", "5-6", "5-3e", "6-5", "6-3e", "7-5", "7-1e", "8-1", "8-2e"],
-  "skins":["달빛 바다"],
-  "nick":[],
+  "skins": ["달빛 바다"],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 38,
@@ -1542,10 +1388,9 @@
     "effectType": 1,
     "effectCenter": 5,
     "effectPos": [2],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 15
-    }]
+    "gridEffect": {
+      "coolDown": 15
+    }
   },
   "krName": "모신나강"
 }, {
@@ -1557,8 +1402,8 @@
   "voice": "Kaori Ide",
   "buildTime": 12600,
   "drop": ["3-3이후의 모든 지역"],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 34,
@@ -1579,11 +1424,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [4],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 10
-    }]
+    "effectPos": [6],
+    "gridEffect": {
+      "coolDown": 10
+    }
   },
   "krName": "SVT-38"
 }, {
@@ -1595,8 +1439,8 @@
   "voice": "Aya Suzaki",
   "buildTime": 12600,
   "drop": ["2-6,2-2e 이후의 모든 맵"],
-  "skins":[],
-  "nick":["스크스","부사장"],
+  "skins": [],
+  "nick": ["스크스", "부사장"],
   "stats": {
     "armor": 0,
     "dodge": 34,
@@ -1618,10 +1462,9 @@
     "effectType": 1,
     "effectCenter": 5,
     "effectPos": [2, 8],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 10
-    }]
+    "gridEffect": {
+      "coolDown": 10
+    }
   },
   "krName": "시모노프"
 }, {
@@ -1632,9 +1475,9 @@
   "illust": "Evan揚",
   "voice": "Ai Shimizu ",
   "buildTime": 16200,
-  "drop": ["0-1","4-4","4-2e","5-2"],
-  "skins":["로맨틱 임무"],
-  "nick":["남반구"],
+  "drop": ["0-1", "4-4", "4-2e", "5-2"],
+  "skins": ["로맨틱 임무"],
+  "nick": ["남반구"],
   "stats": {
     "armor": 0,
     "dodge": 29,
@@ -1656,10 +1499,9 @@
     "effectType": 1,
     "effectCenter": 5,
     "effectPos": [8],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 15
-    }]
+    "gridEffect": {
+      "coolDown": 15
+    }
   },
   "krName": "PTRD"
 }, {
@@ -1671,8 +1513,8 @@
   "voice": "Minami Tanaka",
   "buildTime": 15300,
   "drop": [],
-  "skins":["겨울 선녀"],
-  "nick":["스브드"],
+  "skins": ["겨울 선녀"],
+  "nick": ["스브드"],
   "stats": {
     "armor": 0,
     "dodge": 33,
@@ -1693,11 +1535,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [1, 7],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 15
-    }]
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "coolDown": 15
+    }
   },
   "krName": "SVD"
 }, {
@@ -1708,15 +1549,9 @@
   "illust": "幻象黑兔",
   "voice": "Mamiko Hanada",
   "buildTime": 13200,
-  "drop": ["0-1", "0-2", "0-3", "0-4", "2-4e", 
-           "3-2", "3-3", "3-4", "3-5", "3-6", "3-1e", "3-2e", 
-           "4-1", "4-2", "4-5", "4-6", "4-1e", "4-3e", "4-4e", 
-           "5-1", "5-3", "5-4", "5-5", "5-6", "5-1e", "5-3e", "5-4e", 
-           "6-2", "6-3", "6-4", "6-5", "6-6", "6-2e", "6-3e", "6-4e", 
-           "7-2", "7-3", "7-4", "7-5", "7-6", "7-2e", "7-3e", "7-4e", 
-           "8-2", "8-4", "8-6", "8-2e", "8-4e"],
-  "skins":["웨이트리스"],
-  "nick":[],
+  "drop": ["0-1", "0-2", "0-3", "0-4", "2-4e", "3-2", "3-3", "3-4", "3-5", "3-6", "3-1e", "3-2e", "4-1", "4-2", "4-5", "4-6", "4-1e", "4-3e", "4-4e", "5-1", "5-3", "5-4", "5-5", "5-6", "5-1e", "5-3e", "5-4e", "6-2", "6-3", "6-4", "6-5", "6-6", "6-2e", "6-3e", "6-4e", "7-2", "7-3", "7-4", "7-5", "7-6", "7-2e", "7-3e", "7-4e", "8-2", "8-4", "8-6", "8-2e", "8-4e"],
+  "skins": ["웨이트리스"],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 28,
@@ -1737,11 +1572,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [1],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 12
-    }]
+    "effectPos": [3],
+    "gridEffect": {
+      "coolDown": 12
+    }
   },
   "krName": "SV-98"
 }, {
@@ -1753,8 +1587,8 @@
   "voice": "Ai Kayano ",
   "buildTime": 16800,
   "drop": [],
-  "skins":[],
-  "nick":["부츠","카구팔"],
+  "skins": [],
+  "nick": ["부츠", "카구팔"],
   "stats": {
     "armor": 0,
     "dodge": 41,
@@ -1775,11 +1609,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [1, 7],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 18
-    }]
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "coolDown": 18
+    }
   },
   "krName": "Kar98k"
 }, {
@@ -1791,8 +1624,8 @@
   "voice": "Nozomi Amane",
   "buildTime": 11400,
   "drop": ["2-5 이후 모든 지역"],
-  "skins":[""],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 28,
@@ -1813,11 +1646,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [1, 7],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 10
-    }]
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "coolDown": 10
+    }
   },
   "krName": "G43"
 }, {
@@ -1829,8 +1661,8 @@
   "voice": "Haruka Tomatsu",
   "buildTime": 17400,
   "drop": ["0-4"],
-  "skins":["모불라 작전","겨울날 그대를 기다리며","무도회의 쉼표","고성에서의 모험"],
-  "nick":["와짱","와쟝"],
+  "skins": ["고성에서의 모험", "겨울날 그대를 기다리며", "무도회의 쉼표", "모불라 작전"],
+  "nick": ["와짱", "와쟝"],
   "stats": {
     "armor": 0,
     "dodge": 30,
@@ -1851,11 +1683,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [4],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 18
-    }]
+    "effectPos": [6],
+    "gridEffect": {
+      "coolDown": 18
+    }
   },
   "krName": "WA2000"
 }, {
@@ -1866,9 +1697,9 @@
   "illust": "KAN",
   "voice": "Rui Kariya",
   "buildTime": 0,
-  "drop": ["저체온증 1-2","저체온증 1-3","저체온증 1-4"],
-  "skins":[],
-  "nick":[],
+  "drop": ["저체온증 1-2", "저체온증 1-3", "저체온증 1-4"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 36,
@@ -1890,10 +1721,9 @@
     "effectType": 1,
     "effectCenter": 5,
     "effectPos": [2, 8],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 12
-    }]
+    "gridEffect": {
+      "coolDown": 12
+    }
   },
   "krName": "56식 반"
 }, {
@@ -1905,8 +1735,8 @@
   "voice": "Haruka Tomatsu",
   "buildTime": 18000,
   "drop": [],
-  "skins":["양파 저격수","평생의 수호자","제복 사냥꾼"],
-  "nick":[],
+  "skins": ["제복 사냥꾼", "평생의 수호자", "양파 저격수"],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 40,
@@ -1928,10 +1758,9 @@
     "effectType": 1,
     "effectCenter": 5,
     "effectPos": [2, 8],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 18
-    }]
+    "gridEffect": {
+      "coolDown": 18
+    }
   },
   "krName": "리엔필드"
 }, {
@@ -1943,8 +1772,8 @@
   "voice": "Mami Misaki",
   "buildTime": 11400,
   "drop": ["2-5부터 모든 지역"],
-  "skins":[],
-  "nick":["요요요"],
+  "skins": [],
+  "nick": ["요요요"],
   "stats": {
     "armor": 0,
     "dodge": 32,
@@ -1965,11 +1794,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [1, 7],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 10
-    }]
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "coolDown": 10
+    }
   },
   "krName": "FN-49"
 }, {
@@ -1980,13 +1808,9 @@
   "illust": "原子Dan",
   "voice": "Tomoyo Chuujou",
   "buildTime": 12000,
-  "drop": ["4-2e","4-3e","4-4e",
-   "5-2","5-3","5-4","5-5","5-6","5-1e","5-2e","5-3e","5-4e",
-   "6-2","6-3","6-4","6-5","6-6","6-1e","6-2e","6-3e","6-4e",
-   "7-2","7-3","7-4","7-5","7-6","7-1e",
-   "8-2","8-4"],
-  "skins":[],
-  "nick":[],
+  "drop": ["4-2e", "4-3e", "4-4e", "5-2", "5-3", "5-4", "5-5", "5-6", "5-1e", "5-2e", "5-3e", "5-4e", "6-2", "6-3", "6-4", "6-5", "6-6", "6-1e", "6-2e", "6-3e", "6-4e", "7-2", "7-3", "7-4", "7-5", "7-6", "7-1e", "8-2", "8-4"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 25,
@@ -2007,11 +1831,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [4],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 10
-    }]
+    "effectPos": [6],
+    "gridEffect": {
+      "coolDown": 10
+    }
   },
   "krName": "BM59"
 }, {
@@ -2023,8 +1846,8 @@
   "voice": "Ai Kayano ",
   "buildTime": 17100,
   "drop": ["8-4e"],
-  "skins":["루돌프","무더위 속 임무"],
-  "nick":["노태우","죽창이"],
+  "skins": ["루돌프", "무더위 속 임무"],
+  "nick": ["노태우", "죽창이"],
   "stats": {
     "armor": 0,
     "dodge": 29,
@@ -2045,11 +1868,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [4],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 18
-    }]
+    "effectPos": [6],
+    "gridEffect": {
+      "coolDown": 18
+    }
   },
   "krName": "NTW-20"
 }, {
@@ -2061,8 +1883,8 @@
   "voice": "Yamane Nozomi",
   "buildTime": 0,
   "drop": ["4-6"],
-  "skins":[],
-  "nick":["우리형"],
+  "skins": [],
+  "nick": ["우리형"],
   "stats": {
     "armor": 0,
     "dodge": 44,
@@ -2083,14 +1905,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [2, 8, 1, 7],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 10
-    }, {
-      "type": "dodge",
-      "value": 12
-    }]
+    "effectPos": [2, 3, 8, 9],
+    "gridEffect": {
+      "pow": 10,
+      "dodge": 12
+    }
   },
   "krName": "M16A1"
 }, {
@@ -2102,8 +1921,8 @@
   "voice": "Haruka Tomatsu",
   "buildTime": 0,
   "drop": ["2-6"],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 48,
@@ -2124,14 +1943,11 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [2, 8, 1, 4, 7],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 18
-    }, {
-      "type": "crit",
-      "value": 30
-    }]
+    "effectPos": [2, 3, 6, 8, 9],
+    "gridEffect": {
+      "pow": 18,
+      "crit": 30
+    }
   },
   "krName": "M4A1"
 }, {
@@ -2143,8 +1959,8 @@
   "voice": "Yukari Tamura",
   "buildTime": 0,
   "drop": ["3-3"],
-  "skins":[],
-  "nick":["솦모"],
+  "skins": [],
+  "nick": ["솦모"],
   "stats": {
     "armor": 0,
     "dodge": 44,
@@ -2165,14 +1981,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [1, 4, 7],
-    "gridEffect": [{
-      "type": "hit",
-      "value": 50
-    }, {
-      "type": "dodge",
-      "value": 12
-    }]
+    "effectPos": [3, 6, 9],
+    "gridEffect": {
+      "hit": 50,
+      "dodge": 12
+    }
   },
   "krName": "M4 SOPMODII"
 }, {
@@ -2184,8 +1997,8 @@
   "voice": "Emiri Katou",
   "buildTime": 0,
   "drop": ["3-6"],
-  "skins":["계절학교에 가다"],
-  "nick":["스타"],
+  "skins": ["계절학교에 가다"],
+  "nick": ["스타"],
   "stats": {
     "armor": 0,
     "dodge": 50,
@@ -2206,14 +2019,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [1, 4, 7],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 10
-    }, {
-      "type": "dodge",
-      "value": 12
-    }]
+    "effectPos": [3, 6, 9],
+    "gridEffect": {
+      "rate": 10,
+      "dodge": 12
+    }
   },
   "krName": "ST AR-15"
 }, {
@@ -2224,16 +2034,9 @@
   "illust": "厕所董事长",
   "voice": "Rina Sato",
   "buildTime": 12000,
-  "drop": ["0-1", "0-2", "0-4", 
-           "2-4", "2-5", "2-6", "2-1e", "2-2e", "2-3e", "2-4e", 
-           "3-1", "3-2", "3-3", "3-4", "3-5", "3-6", "3-1e", "3-2e", "3-4e", 
-           "4-1", "4-2", "4-4", "4-5", "4-6", "4-1e", "4-2e", "4-4e", 
-           "5-1", "5-2", "5-4", "5-5", "5-6", "5-1e", "5-2e", "5-4e", 
-           "6-2", "6-3", "6-5", "6-6", "6-1e", "6-2e", "6-4e", 
-           "7-2", "7-3", "7-5", "7-6", "7-1e", "7-2e", "7-4e", 
-           "8-1", "8-3", "8-5", "8-1e", "8-3e"],
-  "skins":["전쟁의 왕"],
-  "nick":[],
+  "drop": ["0-1", "0-2", "0-4", "2-4", "2-5", "2-6", "2-1e", "2-2e", "2-3e", "2-4e", "3-1", "3-2", "3-3", "3-4", "3-5", "3-6", "3-1e", "3-2e", "3-4e", "4-1", "4-2", "4-4", "4-5", "4-6", "4-1e", "4-2e", "4-4e", "5-1", "5-2", "5-4", "5-5", "5-6", "5-1e", "5-2e", "5-4e", "6-2", "6-3", "6-5", "6-6", "6-1e", "6-2e", "6-4e", "7-2", "7-3", "7-5", "7-6", "7-1e", "7-2e", "7-4e", "8-1", "8-3", "8-5", "8-1e", "8-3e"],
+  "skins": ["전쟁의 왕"],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 34,
@@ -2255,10 +2058,9 @@
     "effectType": 2,
     "effectCenter": 5,
     "effectPos": [2],
-    "gridEffect": [{
-      "type": "dodge",
-      "value": 18
-    }]
+    "gridEffect": {
+      "dodge": 18
+    }
   },
   "krName": "AK-47"
 }, {
@@ -2270,8 +2072,8 @@
   "voice": "Uesaka Sumire",
   "buildTime": 12600,
   "drop": ["0-2", "3-6", "3-3e", "3-4e", "4-3", "4-1e", "5-1", "5-5", "5-6", "6-1", "6-6", "7-4", "8-1", "8-2e"],
-  "skins":[],
-  "nick":["아스발"],
+  "skins": [],
+  "nick": ["아스발"],
   "stats": {
     "armor": 0,
     "dodge": 49,
@@ -2293,13 +2095,10 @@
     "effectType": 2,
     "effectCenter": 5,
     "effectPos": [8],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 25
-    }, {
-      "type": "rate",
-      "value": 10
-    }]
+    "gridEffect": {
+      "pow": 25,
+      "rate": 10
+    }
   },
   "krName": "AS Val"
 }, {
@@ -2310,15 +2109,9 @@
   "illust": "八才",
   "voice": "Ai Kayano ",
   "buildTime": 10800,
-  "drop": ["0-1", "0-3", "0-4", "2-4", "2-5", "2-6", "2-1e", "2-2e", "2-3e", "2-4e", 
-           "3-1", "3-2", "3-3", "3-4", "3-5", "3-6", "3-1e", "3-3e", "3-4e", 
-           "4-1", "4-3", "4-4", "4-5", "4-6", "4-1e", "4-3e", "4-4e", 
-           "5-1", "5-3", "5-4", "5-5", "5-6", "5-1e", "5-3e", "5-4e", 
-           "6-1", "6-2", "6-4", "6-5", "6-6", "6-2e", "6-3e", "6-4e", 
-           "7-1", "7-2", "7-4", "7-5", "7-6", "7-2e", "7-3e", "7-4e", 
-           "8-2", "8-4", "8-6", "8-2e", "8-4e"],
-  "skins":[],
-  "nick":["서태지"],
+  "drop": ["0-1", "0-3", "0-4", "2-4", "2-5", "2-6", "2-1e", "2-2e", "2-3e", "2-4e", "3-1", "3-2", "3-3", "3-4", "3-5", "3-6", "3-1e", "3-3e", "3-4e", "4-1", "4-3", "4-4", "4-5", "4-6", "4-1e", "4-3e", "4-4e", "5-1", "5-3", "5-4", "5-5", "5-6", "5-1e", "5-3e", "5-4e", "6-1", "6-2", "6-4", "6-5", "6-6", "6-2e", "6-3e", "6-4e", "7-1", "7-2", "7-4", "7-5", "7-6", "7-2e", "7-3e", "7-4e", "8-2", "8-4", "8-6", "8-2e", "8-4e"],
+  "skins": [],
+  "nick": ["서태지"],
   "stats": {
     "armor": 0,
     "dodge": 36,
@@ -2339,14 +2132,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [4],
-    "gridEffect": [{
-      "type": "dodge",
-      "value": 20
-    }, {
-      "type": "hit",
-      "value": 60
-    }]
+    "effectPos": [6],
+    "gridEffect": {
+      "dodge": 20,
+      "hit": 60
+    }
   },
   "krName": "StG44"
 }, {
@@ -2358,8 +2148,8 @@
   "voice": "Rie Kugimiya",
   "buildTime": 14700,
   "drop": ["9-4e"],
-  "skins":[],
-  "nick":["댕댕이"],
+  "skins": [],
+  "nick": ["댕댕이"],
   "stats": {
     "armor": 0,
     "dodge": 40,
@@ -2380,14 +2170,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [1, 7],
-    "gridEffect": [{
-      "type": "hit",
-      "value": 50
-    }, {
-      "type": "dodge",
-      "value": 15
-    }]
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "hit": 50,
+      "dodge": 15
+    }
   },
   "krName": "G41"
 }, {
@@ -2399,8 +2186,8 @@
   "voice": "Kaori Yoshioka",
   "buildTime": 10200,
   "drop": ["2-3부터 모든지역"],
-  "skins":["전쟁터의 재빵사"],
-  "nick":[],
+  "skins": ["전쟁터의 재빵사"],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 38,
@@ -2422,13 +2209,10 @@
     "effectType": 2,
     "effectCenter": 5,
     "effectPos": [8],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 20
-    }, {
-      "type": "hit",
-      "value": 50
-    }]
+    "gridEffect": {
+      "rate": 20,
+      "hit": 50
+    }
   },
   "krName": "G3"
 }, {
@@ -2440,8 +2224,8 @@
   "voice": "Koshimizu Ami",
   "buildTime": 13200,
   "drop": [],
-  "skins":["꼬마 메이드","바텐더"],
-  "nick":["지상렬","메이드"],
+  "skins": ["꼬마 메이드", "바텐더"],
+  "nick": ["지상렬", "메이드"],
   "stats": {
     "armor": 0,
     "dodge": 41,
@@ -2462,14 +2246,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [1, 4],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 30
-    }, {
-      "type": "rate",
-      "value": 10
-    }]
+    "effectPos": [3, 6],
+    "gridEffect": {
+      "pow": 30,
+      "rate": 10
+    }
   },
   "krName": "G36"
 }, {
@@ -2481,8 +2262,8 @@
   "voice": "Ai Nonaka",
   "buildTime": 14100,
   "drop": ["5-4e"],
-  "skins":["별에 감싸이다"],
-  "nick":["흥국이"],
+  "skins": ["별에 감싸이다"],
+  "nick": ["흥국이"],
   "stats": {
     "armor": 0,
     "dodge": 44,
@@ -2503,24 +2284,23 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [4],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 40
-    }]
+    "effectPos": [6],
+    "gridEffect": {
+      "pow": 40
+    }
   },
   "krName": "HK416"
 }, {
   "id": 66,
-  "name": "56_1type",
+  "name": "56-1type",
   "rank": 4,
   "type": 4,
   "illust": "CanceR",
   "voice": "Sora Amamiya",
   "buildTime": 12300,
-  "drop": ["0-3","4-5","4-3e","5-3","5-4e","6-4","6-4e","7-3","8-4"],
-  "skins":["샐비어"],
-  "nick":[],
+  "drop": ["0-3", "4-5", "4-3e", "5-3", "5-4e", "6-4", "6-4e", "7-3", "8-4"],
+  "skins": ["샐비어"],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 35,
@@ -2541,14 +2321,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [4],
-    "gridEffect": [{
-      "type": "dodge",
-      "value": 15
-    }, {
-      "type": "crit",
-      "value": 10
-    }]
+    "effectPos": [6],
+    "gridEffect": {
+      "dodge": 15,
+      "crit": 10
+    }
   },
   "krName": "56-1식"
 }, {
@@ -2560,8 +2337,8 @@
   "voice": "Yukiko Ayamiya",
   "buildTime": 10200,
   "drop": ["1-3e부터 모든 지역"],
-  "skins":[],
-  "nick":["장미","하지메마시떼"],
+  "skins": [],
+  "nick": ["장미", "하지메마시떼"],
   "stats": {
     "armor": 0,
     "dodge": 43,
@@ -2583,13 +2360,10 @@
     "effectType": 2,
     "effectCenter": 5,
     "effectPos": [8],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 20
-    }, {
-      "type": "hit",
-      "value": 50
-    }]
+    "gridEffect": {
+      "pow": 20,
+      "hit": 50
+    }
   },
   "krName": "L85A1"
 }, {
@@ -2600,9 +2374,9 @@
   "illust": "KY",
   "voice": "Eriko Matsui",
   "buildTime": 12600,
-  "drop": ["0-1","4-5","5-5","5-4e","6-2","6-3e","7-1","8-3"],
-  "skins":[],
-  "nick":[],
+  "drop": ["0-1", "4-5", "5-5", "5-4e", "6-2", "6-3e", "7-1", "8-3"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 40,
@@ -2623,14 +2397,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [1],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 25
-    }, {
-      "type": "hit",
-      "value": 60
-    }]
+    "effectPos": [3],
+    "gridEffect": {
+      "pow": 25,
+      "hit": 60
+    }
   },
   "krName": "FAMAS"
 }, {
@@ -2641,15 +2412,9 @@
   "illust": "麻将",
   "voice": "Sumire Yatsurugi",
   "buildTime": 12000,
-  "drop": ["0-2", "0-3", "0-4", "2-5", "2-6", "2-1e", "2-2e", "2-3e", "2-4e", 
-           "3-1", "3-2", "3-3", "3-4", "3-5", "3-6",  "3-2e", "3-3e", 
-           "4-2", "4-3", "4-5", "4-6", "4-2e", "4-3e", "4-4e", 
-           "5-2", "5-3", "5-4", "5-5", "5-6", "5-2e", "5-3e", "5-4e", 
-           "6-1", "6-3", "6-4", "6-5", "6-6", "6-1e", "6-3e", "6-4e", 
-           "7-1", "7-3", "7-4", "7-5", "7-6", "7-1e", "7-3e", "7-4e", 
-           "8-1", "8-3", "8-5", "8-1e", "8-3e"],
-  "skins":["이 사탕은 이제 내 거!"],
-  "nick":["초코"],
+  "drop": ["0-2", "0-3", "0-4", "2-5", "2-6", "2-1e", "2-2e", "2-3e", "2-4e", "3-1", "3-2", "3-3", "3-4", "3-5", "3-6", "3-2e", "3-3e", "4-2", "4-3", "4-5", "4-6", "4-2e", "4-3e", "4-4e", "5-2", "5-3", "5-4", "5-5", "5-6", "5-2e", "5-3e", "5-4e", "6-1", "6-3", "6-4", "6-5", "6-6", "6-1e", "6-3e", "6-4e", "7-1", "7-3", "7-4", "7-5", "7-6", "7-1e", "7-3e", "7-4e", "8-1", "8-3", "8-5", "8-1e", "8-3e"],
+  "skins": ["이 사탕은 이제 내 거!"],
+  "nick": ["초코"],
   "stats": {
     "armor": 0,
     "dodge": 37,
@@ -2670,14 +2435,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [7],
-    "gridEffect": [{
-      "type": "hit",
-      "value": 50
-    }, {
-      "type": "dodge",
-      "value": 12
-    }]
+    "effectPos": [9],
+    "gridEffect": {
+      "hit": 50,
+      "dodge": 12
+    }
   },
   "krName": "FNC"
 }, {
@@ -2689,8 +2451,8 @@
   "voice": "Karin Mitarai",
   "buildTime": 9600,
   "drop": ["1-3e 부터 모든 지역"],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 43,
@@ -2711,14 +2473,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [4],
-    "gridEffect": [{
-      "type": "hit",
-      "value": 50
-    }, {
-      "type": "dodge",
-      "value": 10
-    }]
+    "effectPos": [6],
+    "gridEffect": {
+      "hit": 50,
+      "dodge": 10
+    }
   },
   "krName": "갈릴"
 }, {
@@ -2729,9 +2488,9 @@
   "illust": "木shiyo",
   "voice": "Yume Maihara",
   "buildTime": 12600,
-  "drop": ["0-4","5-5","5-6"],
-  "skins":["야간 주점"],
-  "nick":["타보르"],
+  "drop": ["0-4", "5-5", "5-6"],
+  "skins": ["야간 주점"],
+  "nick": ["타보르"],
   "stats": {
     "armor": 0,
     "dodge": 44,
@@ -2752,11 +2511,10 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [1, 7],
-    "gridEffect": [{
-      "type": "dodge",
-      "value": 18
-    }]
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "dodge": 18
+    }
   },
   "krName": "TAR-21"
 }, {
@@ -2768,8 +2526,8 @@
   "voice": "Miki Amano",
   "buildTime": 9600,
   "drop": ["1-4e, 2-2 이후 모든 전장"],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 37,
@@ -2790,14 +2548,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [1, 7],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 20
-    }, {
-      "type": "rate",
-      "value": 10
-    }]
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "pow": 20,
+      "rate": 10
+    }
   },
   "krName": "SIG-510"
 }, {
@@ -2808,9 +2563,9 @@
   "illust": "水乌龟",
   "voice": "Yuuki Aoi",
   "buildTime": 23100,
-  "drop": ["0-1","6-6","7-3","8-3"],
-  "skins":["꿈꿔왔던 크리스마스","준비된 세레나데","바니 걸"],
-  "nick":[],
+  "drop": ["0-1", "6-6", "7-3", "8-3"],
+  "skins": ["바니 걸", "준비된 세레나데", "꿈꿔왔던 크리스마스"],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 33,
@@ -2831,14 +2586,11 @@
   "effect": {
     "effectType": 6,
     "effectCenter": 4,
-    "effectPos": [0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 15
-    }, {
-      "type": "armor",
-      "value": 10
-    }]
+    "effectPos": [6],
+    "gridEffect": {
+      "pow": 15,
+      "armor": 10
+    }
   },
   "krName": "M1918"
 }, {
@@ -2849,14 +2601,9 @@
   "illust": "15K",
   "voice": "Izumi Iwamatsu",
   "buildTime": 22200,
-  "drop": ["0-3", "0-4", "3-2e", "3-4e", 
-           "4-2", "4-4", "4-5", "4-6", "4-1e", "4-3e", 
-           "5-1", "5-3", "5-5", "5-1e", "5-3e", 
-           "6-2", "6-3", "6-5", "6-2e", "6-3e", 
-           "7-2", "7-3", "7-5", "7-2e", "7-3e", 
-           "8-1", "8-3", "8-5", "8-1e", "8-3e"],
-  "skins":[],
-  "nick":["쵸로이"],
+  "drop": ["0-3", "0-4", "3-2e", "3-4e", "4-2", "4-4", "4-5", "4-6", "4-1e", "4-3e", "5-1", "5-3", "5-5", "5-1e", "5-3e", "6-2", "6-3", "6-5", "6-2e", "6-3e", "7-2", "7-3", "7-5", "7-2e", "7-3e", "8-1", "8-3", "8-5", "8-1e", "8-3e"],
+  "skins": [],
+  "nick": ["쵸로이"],
   "stats": {
     "armor": 0,
     "dodge": 16,
@@ -2877,11 +2624,10 @@
   "effect": {
     "effectType": 6,
     "effectCenter": 4,
-    "effectPos": [0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 22
-    }]
+    "effectPos": [6],
+    "gridEffect": {
+      "pow": 22
+    }
   },
   "krName": "M2HB"
 }, {
@@ -2892,9 +2638,9 @@
   "illust": "ミカピカゾ",
   "voice": "Asuka Ito",
   "buildTime": 22200,
-  "drop": ["0-3","0-4","6-3e","8-2"],
-  "skins":[],
-  "nick":[],
+  "drop": ["0-3", "0-4", "6-3e", "8-2"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 26,
@@ -2914,15 +2660,12 @@
   },
   "effect": {
     "effectType": 6,
-    "effectCenter": 1,
-    "effectPos": [0, 0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 10
-    }, {
-      "type": "rate",
-      "value": 8
-    }]
+    "effectCenter": 7,
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "pow": 10,
+      "rate": 8
+    }
   },
   "krName": "M60"
 }, {
@@ -2933,9 +2676,9 @@
   "illust": "雪樱樱",
   "voice": "Yoshino Nanjo",
   "buildTime": 0,
-  "drop": ["5-6","5-4e"],
-  "skins":["북극 여우"],
-  "nick":[],
+  "drop": ["5-6", "5-4e"],
+  "skins": ["북극 여우"],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 36,
@@ -2956,14 +2699,11 @@
   "effect": {
     "effectType": 6,
     "effectCenter": 4,
-    "effectPos": [0, 0],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 12
-    }, {
-      "type": "hit",
-      "value": 10
-    }]
+    "effectPos": [3, 6],
+    "gridEffect": {
+      "rate": 12,
+      "hit": 10
+    }
   },
   "krName": "M249 SAW"
 }, {
@@ -2974,14 +2714,9 @@
   "illust": "AS109",
   "voice": "Sachiyo Yoshida",
   "buildTime": 20400,
-  "drop": ["0-4", "3-3e", "3-4e", 
-           "4-3", "4-4", "4-5", "4-6", "4-1e", "4-4e", 
-           "5-1", "5-4", "5-5", "5-6", "5-1e", "5-4e", 
-           "6-1", "6-3", "6-5", "6-6", "6-1e", "6-3e", "6-4e", 
-           "7-1", "7-3", "7-5", "7-6", "7-1e", "7-3e", "7-4e", 
-           "8-2", "8-4", "8-6", "8-2e", "8-4e"],
-  "skins":["카밀라","파티의 연인"],
-  "nick":[],
+  "drop": ["0-4", "3-3e", "3-4e", "4-3", "4-4", "4-5", "4-6", "4-1e", "4-4e", "5-1", "5-4", "5-5", "5-6", "5-1e", "5-4e", "6-1", "6-3", "6-5", "6-6", "6-1e", "6-3e", "6-4e", "7-1", "7-3", "7-5", "7-6", "7-1e", "7-3e", "7-4e", "8-2", "8-4", "8-6", "8-2e", "8-4e"],
+  "skins": ["카밀라", "파티의 연인"],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 22,
@@ -3001,15 +2736,12 @@
   },
   "effect": {
     "effectType": 6,
-    "effectCenter": 7,
-    "effectPos": [0],
-    "gridEffect": [{
-      "type": "hit",
-      "value": 25
-    }, {
-      "type": "armor",
-      "value": 10
-    }]
+    "effectCenter": 1,
+    "effectPos": [9],
+    "gridEffect": {
+      "hit": 25,
+      "armor": 10
+    }
   },
   "krName": "M1919A4"
 }, {
@@ -3020,12 +2752,9 @@
   "illust": "RFF",
   "voice": "Hiyori Nitta",
   "buildTime": 18600,
-  "drop": ["5-5", "5-6", "5-1e", "5-2e", "5-3e", "5-4e", 
-           "6-5", "6-6", "6-1e", "6-2e", "6-3e", "6-4e", 
-           "7-5", "7-6", "7-1e", "7-2e", "7-3e", "7-4e", 
-           "8-1", "8-3", "8-5", "8-1e", "8-3e"],
-  "skins":["센토레아"],
-  "nick":["람쥐"],
+  "drop": ["5-5", "5-6", "5-1e", "5-2e", "5-3e", "5-4e", "6-5", "6-6", "6-1e", "6-2e", "6-3e", "6-4e", "7-5", "7-6", "7-1e", "7-2e", "7-3e", "7-4e", "8-1", "8-3", "8-5", "8-1e", "8-3e"],
+  "skins": ["센토레아"],
+  "nick": ["람쥐"],
   "stats": {
     "armor": 0,
     "dodge": 22,
@@ -3046,14 +2775,11 @@
   "effect": {
     "effectType": 6,
     "effectCenter": 4,
-    "effectPos": [0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 10
-    }, {
-      "type": "rate",
-      "value": 10
-    }]
+    "effectPos": [6],
+    "gridEffect": {
+      "pow": 10,
+      "rate": 10
+    }
   },
   "krName": "LWMMG"
 }, {
@@ -3065,8 +2791,8 @@
   "voice": "Kanae Ikadai",
   "buildTime": 18000,
   "drop": ["3-5 이후의 모든 지역"],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 31,
@@ -3086,12 +2812,11 @@
   },
   "effect": {
     "effectType": 6,
-    "effectCenter": 7,
-    "effectPos": [0, 0],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 15
-    }]
+    "effectCenter": 1,
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "rate": 15
+    }
   },
   "krName": "DP28"
 }, {
@@ -3102,9 +2827,9 @@
   "illust": "Sam_Ashton",
   "voice": "Iori Nomizu",
   "buildTime": 0,
-  "drop": ["큐브 E3","큐브 E4"],
-  "skins":[],
-  "nick":[],
+  "drop": ["큐브 E3", "큐브 E4"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 34,
@@ -3125,11 +2850,10 @@
   "effect": {
     "effectType": 6,
     "effectCenter": 4,
-    "effectPos": [0, 0],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 16
-    }]
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "rate": 16
+    }
   },
   "krName": "RPD"
 }, {
@@ -3140,9 +2864,9 @@
   "illust": "木shiyo",
   "voice": "Kaori Nazuka",
   "buildTime": 23400,
-  "drop": ["0-2","7-6"],
-  "skins":["당신과 함께"],
-  "nick":["손치워"],
+  "drop": ["0-2", "7-6"],
+  "skins": ["당신과 함께"],
+  "nick": ["손치워"],
   "stats": {
     "armor": 0,
     "dodge": 23,
@@ -3163,11 +2887,10 @@
   "effect": {
     "effectType": 6,
     "effectCenter": 4,
-    "effectPos": [0, 0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 18
-    }]
+    "effectPos": [6, 9],
+    "gridEffect": {
+      "pow": 18
+    }
   },
   "krName": "PK"
 }, {
@@ -3178,14 +2901,9 @@
   "illust": "spirtie",
   "voice": "Sayaka Yokoya",
   "buildTime": 21000,
-  "drop": ["0-2", "0-4", "3-6", "3-1e", "3-3e", 
-           "4-1", "4-3", "4-5", "4-6",  "4-2e", "4-3e", 
-           "5-2", "5-3", "5-2e", "5-3e", 
-           "6-2", "6-4", "6-2e", 
-           "7-2", "7-4", "7-2e", 
-           "8-1", "8-3", "8-5", "8-1e", "8-3e"],
-  "skins":[],
-  "nick":[],
+  "drop": ["0-2", "0-4", "3-6", "3-1e", "3-3e", "4-1", "4-3", "4-5", "4-6", "4-2e", "4-3e", "5-2", "5-3", "5-2e", "5-3e", "6-2", "6-4", "6-2e", "7-2", "7-4", "7-2e", "8-1", "8-3", "8-5", "8-1e", "8-3e"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 26,
@@ -3205,12 +2923,11 @@
   },
   "effect": {
     "effectType": 6,
-    "effectCenter": 1,
-    "effectPos": [0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 22
-    }]
+    "effectCenter": 7,
+    "effectPos": [3],
+    "gridEffect": {
+      "pow": 22
+    }
   },
   "krName": "MG42"
 }, {
@@ -3222,8 +2939,8 @@
   "voice": "Tomoyo Chuujou",
   "buildTime": 18000,
   "drop": ["3-4 이후로 모든 지역"],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 25,
@@ -3243,12 +2960,11 @@
   },
   "effect": {
     "effectType": 6,
-    "effectCenter": 7,
-    "effectPos": [0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 20
-    }]
+    "effectCenter": 1,
+    "effectPos": [9],
+    "gridEffect": {
+      "pow": 20
+    }
   },
   "krName": "MG34"
 }, {
@@ -3259,9 +2975,9 @@
   "illust": "猫头神",
   "voice": "Risa Taneda",
   "buildTime": 23400,
-  "drop": ["0-3","6-4","6-4e","7-5","8-4"],
-  "skins":["휴일의 거리 풍경"],
-  "nick":["망3"],
+  "drop": ["0-3", "6-4", "6-4e", "7-5", "8-4"],
+  "skins": ["휴일의 거리 풍경"],
+  "nick": ["망3"],
   "stats": {
     "armor": 0,
     "dodge": 21,
@@ -3282,14 +2998,11 @@
   "effect": {
     "effectType": 6,
     "effectCenter": 4,
-    "effectPos": [0, 0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 10
-    }, {
-      "type": "hit",
-      "value": 15
-    }]
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "pow": 10,
+      "hit": 15
+    }
   },
   "krName": "MG3"
 }, {
@@ -3300,14 +3013,9 @@
   "illust": "废人",
   "voice": "Sora Amamiya",
   "buildTime": 19200,
-  "drop": ["0-1", "0-4", "3-6", "3-1e", "3-2e", 
-           "4-1", "4-2", "4-5", "4-6", "4-2e", "4-4e", 
-           "5-2", "5-4", "5-6", "5-2e", "5-4e", 
-           "6-1", "6-4", "6-6", "6-1e", "6-4e", 
-           "7-1", "7-4", "7-6", "7-1e", "7-4e", 
-           "8-2", "8-4", "8-6", "8-2e", "8-4e"],
-  "skins":[],
-  "nick":[],
+  "drop": ["0-1", "0-4", "3-6", "3-1e", "3-2e", "4-1", "4-2", "4-5", "4-6", "4-2e", "4-4e", "5-2", "5-4", "5-6", "5-2e", "5-4e", "6-1", "6-4", "6-6", "6-1e", "6-4e", "7-1", "7-4", "7-6", "7-1e", "7-4e", "8-2", "8-4", "8-6", "8-2e", "8-4e"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 28,
@@ -3327,15 +3035,12 @@
   },
   "effect": {
     "effectType": 6,
-    "effectCenter": 1,
-    "effectPos": [0, 0],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 10
-    }, {
-      "type": "hit",
-      "value": 12
-    }]
+    "effectCenter": 7,
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "rate": 10,
+      "hit": 12
+    }
   },
   "krName": "브렌"
 }, {
@@ -3347,8 +3052,8 @@
   "voice": "Aoi Koga",
   "buildTime": 1500,
   "drop": ["1-4부터 모든 지역"],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 83,
@@ -3369,14 +3074,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [2, 8, 1, 4, 7],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 10
-    }, {
-      "type": "hit",
-      "value": 20
-    }]
+    "effectPos": [2, 3, 6, 8, 9],
+    "gridEffect": {
+      "rate": 10,
+      "hit": 20
+    }
   },
   "krName": "FNP9"
 }, {
@@ -3388,8 +3090,8 @@
   "voice": "Iori Nomizu",
   "buildTime": 1500,
   "drop": ["1-5 부터 모든지역"],
-  "skins":["고집 센 악동","해바라기"],
-  "nick":[],
+  "skins": ["고집 센 악동", "해바라기"],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 74,
@@ -3410,11 +3112,10 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [3, 6, 9, 2, 8],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 14
-    }]
+    "effectPos": [1, 2, 4, 7, 8],
+    "gridEffect": {
+      "pow": 14
+    }
   },
   "krName": "MP-446"
 }, {
@@ -3426,8 +3127,8 @@
   "voice": "Emi Uema",
   "buildTime": 4800,
   "drop": ["1-3부터 모든 지역(3-5,3-6제외)"],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 66,
@@ -3448,11 +3149,10 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [6],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 20
-    }]
+    "effectPos": [4],
+    "gridEffect": {
+      "pow": 20
+    }
   },
   "krName": "Spectre M4"
 }, {
@@ -3464,8 +3164,8 @@
   "voice": "Ito Asuka",
   "buildTime": 4200,
   "drop": ["1-6,1-2e부터 모든 지역"],
-  "skins":[],
-  "nick":["아이디따블류다냐","아디따"],
+  "skins": [],
+  "nick": ["아이디따블류다냐", "아디따"],
   "stats": {
     "armor": 0,
     "dodge": 85,
@@ -3486,11 +3186,10 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 6, 9],
-    "gridEffect": [{
-      "type": "dodge",
-      "value": 20
-    }]
+    "effectPos": [1, 4, 7],
+    "gridEffect": {
+      "dodge": 20
+    }
   },
   "krName": "IDW"
 }, {
@@ -3501,13 +3200,9 @@
   "illust": "小迪",
   "voice": "Saya Horigom",
   "buildTime": 5100,
-  "drop": ["0-1", "0-2", "0-3", "0-4", "2-4e", 
-           "3-2", "3-3", "3-4", "3-5", "3-6", "3-1e", "3-2e", "3-3e", "3-4e", 
-           "4-1", "4-2", "4-3", "4-4", "4-5", "4-6", "4-1e", "4-2e", "4-3e", "4-4e", 
-           "5-1", "5-2", "5-3", "5-4", "5-5", "5-6", "5-1e", "5-2e", "5-3e", "5-4e", "7-6", "7-4e", 
-           "8-1", "8-2", "8-3", "8-4", "8-5", "8-6", "8-1e", "8-2e", "8-3e", "8-4e"],
-  "skins":["떠돌이 마녀","물 선녀복"],
-  "nick":[],
+  "drop": ["0-1", "0-2", "0-3", "0-4", "2-4e", "3-2", "3-3", "3-4", "3-5", "3-6", "3-1e", "3-2e", "3-3e", "3-4e", "4-1", "4-2", "4-3", "4-4", "4-5", "4-6", "4-1e", "4-2e", "4-3e", "4-4e", "5-1", "5-2", "5-3", "5-4", "5-5", "5-6", "5-1e", "5-2e", "5-3e", "5-4e", "7-6", "7-4e", "8-1", "8-2", "8-3", "8-4", "8-5", "8-6", "8-1e", "8-2e", "8-3e", "8-4e"],
+  "skins": ["떠돌이 마녀", "물 선녀복"],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 65,
@@ -3528,11 +3223,10 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [6],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 20
-    }]
+    "effectPos": [4],
+    "gridEffect": {
+      "rate": 20
+    }
   },
   "krName": "64식"
 }, {
@@ -3544,8 +3238,8 @@
   "voice": "Yuuka Aisaka",
   "buildTime": 13800,
   "drop": [],
-  "skins":["동호의 연꽃"],
-  "nick":["한조"],
+  "skins": ["동호의 연꽃"],
+  "nick": ["한조"],
   "stats": {
     "armor": 0,
     "dodge": 37,
@@ -3566,11 +3260,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [4],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 12
-    }]
+    "effectPos": [6],
+    "gridEffect": {
+      "coolDown": 12
+    }
   },
   "krName": "한양조 88식"
 }, {
@@ -3582,8 +3275,8 @@
   "voice": "Ayaka Itatani",
   "buildTime": 4200,
   "drop": [],
-  "skins":["주말 경비원","변신! 테디베어!"],
-  "nick":["곰"],
+  "skins": ["주말 경비원", "변신! 테디베어!"],
+  "nick": ["곰"],
   "stats": {
     "armor": 0,
     "dodge": 66,
@@ -3604,14 +3297,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [3, 9, 2, 8, 4],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 15
-    }, {
-      "type": "dodge",
-      "value": 10
-    }]
+    "effectPos": [1, 2, 6, 7, 8],
+    "gridEffect": {
+      "pow": 15,
+      "dodge": 10
+    }
   },
   "krName": "그리즐리 Mk V"
 }, {
@@ -3623,8 +3313,8 @@
   "voice": "Aoi Koga",
   "buildTime": 3900,
   "drop": [],
-  "skins":["당번대표","축제 시작이야!"],
-  "nick":["캘리코","미역"],
+  "skins": ["당번대표", "축제 시작이야!"],
+  "nick": ["캘리코", "미역"],
   "stats": {
     "armor": 0,
     "dodge": 68,
@@ -3645,14 +3335,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [3, 9, 1, 7],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 15
-    }, {
-      "type": "hit",
-      "value": 25
-    }]
+    "effectPos": [1, 3, 7, 9],
+    "gridEffect": {
+      "rate": 15,
+      "hit": 25
+    }
   },
   "krName": "M950A"
 }, {
@@ -3663,9 +3350,9 @@
   "illust": "麻将",
   "voice": "Yuka Ootsubo",
   "buildTime": 0,
-  "drop": ["큐브 E2","딥다이브 1-1","딥다이브 1-3"],
-  "skins":["가랑눈에 감싸여"],
-  "nick":["물로리"],
+  "drop": ["큐브 E2", "딥다이브 1-1", "딥다이브 1-3"],
+  "skins": ["가랑눈에 감싸여"],
+  "nick": ["물로리"],
   "stats": {
     "armor": 0,
     "dodge": 75,
@@ -3686,14 +3373,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [3, 9, 2, 8],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 6
-    }, {
-      "type": "hit",
-      "value": 45
-    }]
+    "effectPos": [1, 2, 7, 8],
+    "gridEffect": {
+      "pow": 6,
+      "hit": 45
+    }
   },
   "krName": "SPP-1"
 }, {
@@ -3704,9 +3388,9 @@
   "illust": "雪樱樱",
   "voice": "Hikaru Akao",
   "buildTime": 3000,
-  "drop": ["4-3e","5-3","5-1e","6-1","6-1e","7-3","7-1e","8-3"],
-  "skins":["스위트 데빌","브랜디시아"],
-  "nick":["참피","민국이"],
+  "drop": ["4-3e", "5-3", "5-1e", "6-1", "6-1e", "7-3", "7-1e", "8-3"],
+  "skins": ["스위트 데빌", "브랜디시아"],
+  "nick": ["참피", "민국이"],
   "stats": {
     "armor": 0,
     "dodge": 66,
@@ -3727,11 +3411,10 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [3, 6, 9, 4],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 18
-    }]
+    "effectPos": [1, 4, 6, 7],
+    "gridEffect": {
+      "pow": 18
+    }
   },
   "krName": "Mk23"
 }, {
@@ -3742,9 +3425,9 @@
   "illust": "Saru",
   "voice": "Tomoyo Kurosawa",
   "buildTime": 3300,
-  "drop": ["5-1e","5-2e","5-3e","5-4e","6-3","6-2e","7-4"],
-  "skins":["손 도장","마총의 수녀"],
-  "nick":["피칠이","삐칠이"],
+  "drop": ["5-1e", "5-2e", "5-3e", "5-4e", "6-3", "6-2e", "7-4"],
+  "skins": ["손 도장", "마총의 수녀"],
+  "nick": ["피칠이", "삐칠이"],
   "stats": {
     "armor": 0,
     "dodge": 83,
@@ -3765,14 +3448,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [3, 9, 2, 8, 1, 7],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 10
-    }, {
-      "type": "dodge",
-      "value": 12
-    }]
+    "effectPos": [1, 2, 3, 7, 8, 9],
+    "gridEffect": {
+      "rate": 10,
+      "dodge": 12
+    }
   },
   "krName": "P7"
 }, {
@@ -3783,12 +3463,9 @@
   "illust": "ZAGALA",
   "voice": "Mamiko Noto",
   "buildTime": 8100,
-  "drop": ["4-4e", "5-4", "5-5", "5-6", "5-2e", 
-           "6-2", "6-5", "6-2e", 
-           "7-5", "7-6", "7-1e", 
-           "8-5", "8-1e", "8-3e"],
-  "skins":["내가 좀 늦었지?"],
-  "nick":["움뀨"],
+  "drop": ["4-4e", "5-4", "5-5", "5-6", "5-2e", "6-2", "6-5", "6-2e", "7-5", "7-6", "7-1e", "8-5", "8-1e", "8-3e"],
+  "skins": ["내가 좀 늦었지?"],
+  "nick": ["움뀨"],
   "stats": {
     "armor": 0,
     "dodge": 76,
@@ -3809,14 +3486,11 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 6, 9],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 12
-    }, {
-      "type": "hit",
-      "value": 30
-    }]
+    "effectPos": [1, 4, 7],
+    "gridEffect": {
+      "rate": 12,
+      "hit": 30
+    }
   },
   "krName": "UMP9"
 }, {
@@ -3828,8 +3502,8 @@
   "voice": "Emi Uema",
   "buildTime": 0,
   "drop": [],
-  "skins":[],
-  "nick":["움사공"],
+  "skins": [],
+  "nick": ["움사공"],
   "stats": {
     "armor": 0,
     "dodge": 75,
@@ -3850,11 +3524,10 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [2, 8, 1, 7],
-    "gridEffect": [{
-      "type": "crit",
-      "value": 500
-    }]
+    "effectPos": [2, 3, 8, 9],
+    "gridEffect": {
+      "crit": 500
+    }
   },
   "krName": "UMP40"
 }, {
@@ -3865,9 +3538,9 @@
   "illust": "ZAGALA",
   "voice": "Tomomi Mineuchi",
   "buildTime": 8100,
-  "drop": ["6-6","6-3E"],
-  "skins":["이번만이야"],
-  "nick":["움사오"],
+  "drop": ["6-6", "6-3E"],
+  "skins": ["이번만이야"],
+  "nick": ["움사오", "4577"],
   "stats": {
     "armor": 0,
     "dodge": 74,
@@ -3888,14 +3561,11 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 6, 9],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 18
-    }, {
-      "type": "crit",
-      "value": 30
-    }]
+    "effectPos": [1, 4, 7],
+    "gridEffect": {
+      "pow": 18,
+      "crit": 30
+    }
   },
   "krName": "UMP45"
 }, {
@@ -3907,8 +3577,8 @@
   "voice": "Akane Fujita",
   "buildTime": 9000,
   "drop": [],
-  "skins":["여름·불꽃놀이·양지의 시"],
-  "nick":["지상렬씨"],
+  "skins": ["여름·불꽃놀이·양지의 시"],
+  "nick": ["지상렬씨"],
   "stats": {
     "armor": 0,
     "dodge": 65,
@@ -3929,14 +3599,11 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 6, 9],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 10
-    }, {
-      "type": "rate",
-      "value": 8
-    }]
+    "effectPos": [1, 4, 7],
+    "gridEffect": {
+      "pow": 10,
+      "rate": 8
+    }
   },
   "krName": "G36C"
 }, {
@@ -3947,9 +3614,9 @@
   "illust": "林檎愛す",
   "voice": "Yumi Uchiyama",
   "buildTime": 11400,
-  "drop": ["5-5","5-6","6-4"],
-  "skins":[],
-  "nick":["티스"],
+  "drop": ["5-5", "5-6", "6-4"],
+  "skins": [],
+  "nick": ["티스"],
   "stats": {
     "armor": 0,
     "dodge": 54,
@@ -3970,14 +3637,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [4, 7],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 15
-    }, {
-      "type": "rate",
-      "value": 20
-    }]
+    "effectPos": [6, 9],
+    "gridEffect": {
+      "pow": 15,
+      "rate": 20
+    }
   },
   "krName": "OTs-12"
 }, {
@@ -3989,8 +3653,8 @@
   "voice": "Haruka Yoshimura",
   "buildTime": 13500,
   "drop": [],
-  "skins":["겨울 보급작전","최고로 중요한 날"],
-  "nick":["족제비"],
+  "skins": ["겨울 보급작전", "최고로 중요한 날"],
+  "nick": ["족제비"],
   "stats": {
     "armor": 0,
     "dodge": 38,
@@ -4011,11 +3675,10 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [1, 4, 7],
-    "gridEffect": [{
-      "type": "dodge",
-      "value": 20
-    }]
+    "effectPos": [3, 6, 9],
+    "gridEffect": {
+      "dodge": 20
+    }
   },
   "krName": "FAL"
 }, {
@@ -4027,8 +3690,8 @@
   "voice": "Sora Tokui",
   "buildTime": 9900,
   "drop": ["4-1e,4-2e,4-3e,4-4e,5-1,5-2,5-3,5-4,5-5,5-6,6-1,6-2,6-3,6-4,6-5,6-6"],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 40,
@@ -4049,14 +3712,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [4],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 20
-    }, {
-      "type": "dodge",
-      "value": 10
-    }]
+    "effectPos": [6],
+    "gridEffect": {
+      "pow": 20,
+      "dodge": 10
+    }
   },
   "krName": "F2000"
 }, {
@@ -4067,9 +3727,9 @@
   "illust": "木子翔",
   "voice": "Maaya Uchida",
   "buildTime": 0,
-  "drop": ["3-6","3-4e"],
-  "skins":[],
-  "nick":[],
+  "drop": ["3-6", "3-4e"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 41,
@@ -4090,14 +3750,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [1, 7],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 25
-    }, {
-      "type": "hit",
-      "value": 50
-    }]
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "rate": 25,
+      "hit": 50
+    }
   },
   "krName": "CZ-805"
 }, {
@@ -4109,8 +3766,8 @@
   "voice": "Koshimizu Ami",
   "buildTime": 24300,
   "drop": ["7-4e"],
-  "skins":["새빨간 야간경비원","황야의 사냥꾼"],
-  "nick":["망가오"],
+  "skins": ["새빨간 야간경비원", "황야의 사냥꾼"],
+  "nick": ["망가오"],
   "stats": {
     "armor": 0,
     "dodge": 27,
@@ -4131,14 +3788,11 @@
   "effect": {
     "effectType": 6,
     "effectCenter": 4,
-    "effectPos": [0, 0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 10
-    }, {
-      "type": "armor",
-      "value": 10
-    }]
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "pow": 10,
+      "armor": 10
+    }
   },
   "krName": "MG5"
 }, {
@@ -4149,12 +3803,9 @@
   "illust": "叽困",
   "voice": "Asuka Ito",
   "buildTime": 17400,
-  "drop": ["4-3e","4-4E",
-"5-1","5-2","5-3","5-4","5-5","5-6","5-1e","5-2e","5-3e","5-4e",
-"6-1","6-2","6-3","6-4","6-5","6-6","6-1e","6-2e","6-3e","6-4e",
-"7-3","7-4","7-5","7-6","7-1e","8-2","8-4"],
-  "skins":[],
-  "nick":[],
+  "drop": ["4-3e", "4-4E", "5-1", "5-2", "5-3", "5-4", "5-5", "5-6", "5-1e", "5-2e", "5-3e", "5-4e", "6-1", "6-2", "6-3", "6-4", "6-5", "6-6", "6-1e", "6-2e", "6-3e", "6-4e", "7-3", "7-4", "7-5", "7-6", "7-1e", "8-2", "8-4"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 33,
@@ -4175,11 +3826,10 @@
   "effect": {
     "effectType": 6,
     "effectCenter": 4,
-    "effectPos": [0, 0],
-    "gridEffect": [{
-      "type": "hit",
-      "value": 30
-    }]
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "hit": 30
+    }
   },
   "krName": "FG42"
 }, {
@@ -4190,9 +3840,9 @@
   "illust": "Lino",
   "voice": "Yumi Uchiyama",
   "buildTime": 17400,
-  "drop": ["5-6","5-1e","5-2e","5-3e","5-4e","6-6","6-1e","6-2e","6-3e","6-4e","7-6","7-1e","8-1","8-2","8-3"],
-  "skins":[],
-  "nick":[],
+  "drop": ["5-6", "5-1e", "5-2e", "5-3e", "5-4e", "6-6", "6-1e", "6-2e", "6-3e", "6-4e", "7-6", "7-1e", "8-1", "8-2", "8-3"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 22,
@@ -4212,12 +3862,11 @@
   },
   "effect": {
     "effectType": 6,
-    "effectCenter": 1,
-    "effectPos": [0],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 20
-    }]
+    "effectCenter": 7,
+    "effectPos": [3],
+    "gridEffect": {
+      "rate": 20
+    }
   },
   "krName": "AAT-52"
 }, {
@@ -4229,8 +3878,8 @@
   "voice": "Ayaka Suwa",
   "buildTime": 23700,
   "drop": [],
-  "skins":["조그만 방랑자"],
-  "nick":[],
+  "skins": ["조그만 방랑자"],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 36,
@@ -4251,11 +3900,10 @@
   "effect": {
     "effectType": 6,
     "effectCenter": 4,
-    "effectPos": [0, 0, 0],
-    "gridEffect": [{
-      "type": "armor",
-      "value": 20
-    }]
+    "effectPos": [3, 6, 9],
+    "gridEffect": {
+      "armor": 20
+    }
   },
   "krName": "네게브"
 }, {
@@ -4266,9 +3914,9 @@
   "illust": "能登ツグミ",
   "voice": "Minami Tanaka",
   "buildTime": 0,
-  "drop": ["큐브 E2","큐브 E3"],
-  "skins":[],
-  "nick":[],
+  "drop": ["큐브 E2", "큐브 E3"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 68,
@@ -4289,14 +3937,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [6, 2, 8],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 12
-    }, {
-      "type": "hit",
-      "value": 20
-    }]
+    "effectPos": [2, 4, 8],
+    "gridEffect": {
+      "pow": 12,
+      "hit": 20
+    }
   },
   "krName": "세르듀코프"
 }, {
@@ -4308,8 +3953,8 @@
   "voice": "Asami Imai",
   "buildTime": 3600,
   "drop": [],
-  "skins":["영국 연인","그림자의 왕"],
-  "nick":["박하나","장군님"],
+  "skins": ["영국 연인", "그림자의 왕"],
+  "nick": ["박하나", "장군님"],
   "stats": {
     "armor": 0,
     "dodge": 90,
@@ -4330,14 +3975,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [3, 6, 9, 2, 8],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 10
-    }, {
-      "type": "rate",
-      "value": 8
-    }]
+    "effectPos": [1, 2, 4, 7, 8],
+    "gridEffect": {
+      "pow": 10,
+      "rate": 8
+    }
   },
   "krName": "웰로드MkII"
 }, {
@@ -4349,8 +3991,8 @@
   "voice": "Aki Toyosaki",
   "buildTime": 8700,
   "drop": [],
-  "skins":["코르바툰투리의 눈 요정","한여름 밤의 요정"],
-  "nick":["첫째돼지"],
+  "skins": ["코르바툰투리의 눈 요정", "한여름 밤의 요정"],
+  "nick": ["첫째돼지"],
   "stats": {
     "armor": 0,
     "dodge": 56,
@@ -4371,14 +4013,11 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 9],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 15
-    }, {
-      "type": "hit",
-      "value": 30
-    }]
+    "effectPos": [1, 7],
+    "gridEffect": {
+      "rate": 15,
+      "hit": 30
+    }
   },
   "krName": "수오미"
 }, {
@@ -4390,8 +4029,8 @@
   "voice": "Iori Nomizu",
   "buildTime": 7500,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 77,
@@ -4412,14 +4051,11 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 6],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 12
-    }, {
-      "type": "dodge",
-      "value": 10
-    }]
+    "effectPos": [1, 4],
+    "gridEffect": {
+      "pow": 12,
+      "dodge": 10
+    }
   },
   "krName": "Z-62"
 }, {
@@ -4431,8 +4067,8 @@
   "voice": "Asami Imai",
   "buildTime": 15600,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 26,
@@ -4454,10 +4090,9 @@
     "effectType": 1,
     "effectCenter": 5,
     "effectPos": [2, 8],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 15
-    }]
+    "gridEffect": {
+      "coolDown": 15
+    }
   },
   "krName": "PSG-1"
 }, {
@@ -4468,9 +4103,9 @@
   "illust": "防弹乳牛",
   "voice": "Mai Nakahara",
   "buildTime": 12900,
-  "drop": ["6-5","6-2e","7-6"],
-  "skins":["총알 카페"],
-  "nick":["구아","야전공주"],
+  "drop": ["6-5", "6-2e", "7-6"],
+  "skins": ["총알 카페"],
+  "nick": ["구아", "야전공주"],
   "stats": {
     "armor": 0,
     "dodge": 50,
@@ -4491,14 +4126,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [1, 7],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 10
-    }, {
-      "type": "dodge",
-      "value": 15
-    }]
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "rate": 10,
+      "dodge": 15
+    }
   },
   "krName": "9A-91"
 }, {
@@ -4509,9 +4141,9 @@
   "illust": "ASK",
   "voice": "Marina Inoue",
   "buildTime": 0,
-  "drop": ["딥다이브 1-2","딥다이브 3-1"],
-  "skins":["흩날리는 벚꽃눈"],
-  "nick":["야전여왕"],
+  "drop": ["딥다이브 1-2", "딥다이브 3-1"],
+  "skins": ["흩날리는 벚꽃눈"],
+  "nick": ["야전여왕"],
   "stats": {
     "armor": 0,
     "dodge": 54,
@@ -4532,14 +4164,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [1, 4, 7],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 25
-    }, {
-      "type": "hit",
-      "value": 65
-    }]
+    "effectPos": [3, 6, 9],
+    "gridEffect": {
+      "rate": 25,
+      "hit": 65
+    }
   },
   "krName": "OTs-14"
 }, {
@@ -4551,8 +4180,8 @@
   "voice": "Ami Hagihara",
   "buildTime": 11700,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 48,
@@ -4573,14 +4202,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [1],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 25
-    }, {
-      "type": "hit",
-      "value": 50
-    }]
+    "effectPos": [3],
+    "gridEffect": {
+      "pow": 25,
+      "hit": 50
+    }
   },
   "krName": "ARX-160"
 }, {
@@ -4592,8 +4218,8 @@
   "voice": "Ricca Tachibana",
   "buildTime": 22800,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 26,
@@ -4613,12 +4239,11 @@
   },
   "effect": {
     "effectType": 6,
-    "effectCenter": 7,
-    "effectPos": [0, 0],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 18
-    }]
+    "effectCenter": 1,
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "rate": 18
+    }
   },
   "krName": "Mk48"
 }, {
@@ -4630,8 +4255,8 @@
   "voice": "Ayaka Fukuhara",
   "buildTime": 14640,
   "drop": [],
-  "skins":["은톨이 좀비","가장 아름다운 선물"],
-  "nick":["면간이","잠탱이"],
+  "skins": ["은톨이 좀비", "가장 아름다운 선물"],
+  "nick": ["면간이", "잠탱이"],
   "stats": {
     "armor": 0,
     "dodge": 41,
@@ -4652,14 +4277,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [4],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 30
-    }, {
-      "type": "dodge",
-      "value": 10
-    }]
+    "effectPos": [6],
+    "gridEffect": {
+      "pow": 30,
+      "dodge": 10
+    }
   },
   "krName": "G11"
 }, {
@@ -4671,8 +4293,8 @@
   "voice": "Ayako Kawasumi",
   "buildTime": 2100,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 87,
@@ -4693,14 +4315,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [2, 8, 4],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 6
-    }, {
-      "type": "dodge",
-      "value": 18
-    }]
+    "effectPos": [2, 6, 8],
+    "gridEffect": {
+      "rate": 6,
+      "dodge": 18
+    }
   },
   "krName": "P99"
 }, {
@@ -4711,9 +4330,9 @@
   "illust": "受菟",
   "voice": "Ricca Tachibana",
   "buildTime": 0,
-  "drop": ["저체온증 1-2","저체온증 1-3","저체온증 3-3"],
-  "skins":["늑대 소녀"],
-  "nick":["슈사스"],
+  "drop": ["저체온증 1-2", "저체온증 1-3", "저체온증 3-3"],
+  "skins": ["늑대 소녀"],
+  "nick": ["슈사스"],
   "stats": {
     "armor": 0,
     "dodge": 27,
@@ -4734,11 +4353,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [7],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 12
-    }]
+    "effectPos": [9],
+    "gridEffect": {
+      "coolDown": 12
+    }
   },
   "krName": "Super SASS"
 }, {
@@ -4749,9 +4367,9 @@
   "illust": "neco",
   "voice": "Haruka Yoshimura",
   "buildTime": 24000,
-  "drop": [""],
-  "skins":["생존맴버"],
-  "nick":["망포"],
+  "drop": [],
+  "skins": ["생존맴버"],
+  "nick": ["망포"],
   "stats": {
     "armor": 0,
     "dodge": 34,
@@ -4772,14 +4390,11 @@
   "effect": {
     "effectType": 6,
     "effectCenter": 4,
-    "effectPos": [0, 0],
-    "gridEffect": [{
-      "type": "hit",
-      "value": 12
-    }, {
-      "type": "armor",
-      "value": 15
-    }]
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "hit": 12,
+      "armor": 15
+    }
   },
   "krName": "MG4"
 }, {
@@ -4790,9 +4405,9 @@
   "illust": "音符",
   "voice": "Shiki Aoki",
   "buildTime": 3900,
-  "drop": ["저체온증 1-4","저체온증 3-3","저체온증 3-4"],
-  "skins":["국화꽃 소녀","ThanX!&GO2Hell!"],
-  "nick":["은지"],
+  "drop": ["저체온증 1-4", "저체온증 3-3", "저체온증 3-4"],
+  "skins": ["국화꽃 소녀", "ThanX!&GO2Hell!"],
+  "nick": ["은지"],
   "stats": {
     "armor": 0,
     "dodge": 74,
@@ -4813,14 +4428,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [6, 2, 8, 1, 4, 7],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 10
-    }, {
-      "type": "dodge",
-      "value": 15
-    }]
+    "effectPos": [2, 3, 4, 6, 8, 9],
+    "gridEffect": {
+      "pow": 10,
+      "dodge": 15
+    }
   },
   "krName": "NZ75"
 }, {
@@ -4832,8 +4444,8 @@
   "voice": "Minami Tanaka",
   "buildTime": 9300,
   "drop": [],
-  "skins":["구미호"],
-  "nick":["질구식"],
+  "skins": ["구미호"],
+  "nick": ["질구식"],
   "stats": {
     "armor": 0,
     "dodge": 70,
@@ -4854,11 +4466,10 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 9],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 20
-    }]
+    "effectPos": [1, 7],
+    "gridEffect": {
+      "pow": 20
+    }
   },
   "krName": "79식"
 }, {
@@ -4870,8 +4481,8 @@
   "voice": "Rumi Okubo",
   "buildTime": 17700,
   "drop": [],
-  "skins":["시클라멘","토끼반"],
-  "nick":["뀨뀨"],
+  "skins": ["시클라멘", "토끼반"],
+  "nick": ["뀨뀨"],
   "stats": {
     "armor": 0,
     "dodge": 32,
@@ -4892,11 +4503,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [4],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 18
-    }]
+    "effectPos": [6],
+    "gridEffect": {
+      "coolDown": 18
+    }
   },
   "krName": "M99"
 }, {
@@ -4908,8 +4518,8 @@
   "voice": "Kami Daimon",
   "buildTime": 13800,
   "drop": [],
-  "skins":["영롱한 옥","여름의 풍류"],
-  "nick":[],
+  "skins": ["영롱한 옥", "여름의 풍류"],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 46,
@@ -4930,14 +4540,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [1],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 10
-    }, {
-      "type": "dodge",
-      "value": 18
-    }]
+    "effectPos": [3],
+    "gridEffect": {
+      "pow": 10,
+      "dodge": 18
+    }
   },
   "krName": "95식"
 }, {
@@ -4949,8 +4556,8 @@
   "voice": "Ayane Sakura",
   "buildTime": 13800,
   "drop": ["화려한 모란"],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 46,
@@ -4971,14 +4578,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [7],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 10
-    }, {
-      "type": "dodge",
-      "value": 18
-    }]
+    "effectPos": [9],
+    "gridEffect": {
+      "rate": 10,
+      "dodge": 18
+    }
   },
   "krName": "97식"
 }, {
@@ -4989,9 +4593,9 @@
   "illust": "钉田西瓜",
   "voice": "Nozomi Yamamoto",
   "buildTime": 0,
-  "drop": ["저체온증 1-2","저체온증 1-4","저체온증 3-4"],
-  "skins":[],
-  "nick":[],
+  "drop": ["저체온증 1-2", "저체온증 1-4", "저체온증 3-4"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 68,
@@ -5012,11 +4616,10 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [6],
-    "gridEffect": [{
-      "type": "hit",
-      "value": 55
-    }]
+    "effectPos": [4],
+    "gridEffect": {
+      "hit": 55
+    }
   },
   "krName": "EVO 3"
 }, {
@@ -5027,9 +4630,9 @@
   "illust": "麻将",
   "voice": "Emiri Katou",
   "buildTime": 0,
-  "drop": ["저체온증 1-4","저체온증 3-3","저체온증 3-4"],
-  "skins":["앵초"],
-  "nick":[],
+  "drop": ["저체온증 1-4", "저체온증 3-3", "저체온증 3-4"],
+  "skins": ["앵초"],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 96,
@@ -5050,14 +4653,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [2, 8, 1, 4, 7],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 10
-    }, {
-      "type": "hit",
-      "value": 25
-    }]
+    "effectPos": [2, 3, 6, 8, 9],
+    "gridEffect": {
+      "pow": 10,
+      "hit": 25
+    }
   },
   "krName": "59식"
 }, {
@@ -5068,10 +4668,9 @@
   "illust": "TOMATO",
   "voice": "Saya Horigom",
   "buildTime": 9900,
-  "drop": ["6-1","6-2","6-3","6-4","6-5","6-6","6-1e","6-2e","6-3e","6-4e",
-"7-1","7-2","7-3","7-4","7-5","7-6","7-1e","8-2","8-4"],
-  "skins":[],
-  "nick":[],
+  "drop": ["6-1", "6-2", "6-3", "6-4", "6-5", "6-6", "6-1e", "6-2e", "6-3e", "6-4e", "7-1", "7-2", "7-3", "7-4", "7-5", "7-6", "7-1e", "8-2", "8-4"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 40,
@@ -5092,14 +4691,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [4],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 10
-    }, {
-      "type": "rate",
-      "value": 20
-    }]
+    "effectPos": [6],
+    "gridEffect": {
+      "pow": 10,
+      "rate": 20
+    }
   },
   "krName": "63식"
 }, {
@@ -5110,9 +4706,9 @@
   "illust": "NoriZC",
   "voice": "Nozomi Yamamoto",
   "buildTime": 0,
-  "drop": ["저체온증 1-2","저체온증 1-3","저체온증 1-4","저체온증 3-4"],
-  "skins":[],
-  "nick":[],
+  "drop": ["저체온증 1-2", "저체온증 1-3", "저체온증 1-4", "저체온증 3-4"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 41,
@@ -5133,14 +4729,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [7],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 16
-    }, {
-      "type": "hit",
-      "value": 75
-    }]
+    "effectPos": [9],
+    "gridEffect": {
+      "rate": 16,
+      "hit": 75
+    }
   },
   "krName": "AR70"
 }, {
@@ -5152,8 +4745,8 @@
   "voice": "Takada Yuuki",
   "buildTime": 9180,
   "drop": ["10-4e"],
-  "skins":["검은토끼 마끼아또"],
-  "nick":["포돌이"],
+  "skins": ["검은토끼 마끼아또"],
+  "nick": ["포돌이"],
   "stats": {
     "armor": 0,
     "dodge": 67,
@@ -5174,14 +4767,11 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 6, 9],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 18
-    }, {
-      "type": "crit",
-      "value": 30
-    }]
+    "effectPos": [1, 4, 7],
+    "gridEffect": {
+      "rate": 18,
+      "crit": 30
+    }
   },
   "krName": "SR-3MP"
 }, {
@@ -5192,9 +4782,9 @@
   "illust": "八才",
   "voice": "Serizawa Yuu",
   "buildTime": 0,
-  "drop": ["특별구출작전G 4-6","특별구출작전G 4-4E"],
-  "skins":[],
-  "nick":[],
+  "drop": ["특별구출작전G 4-6", "특별구출작전G 4-4E"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 74,
@@ -5215,11 +4805,10 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [6],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 24
-    }]
+    "effectPos": [4],
+    "gridEffect": {
+      "pow": 24
+    }
   },
   "krName": "PP-19"
 }, {
@@ -5231,8 +4820,8 @@
   "voice": "",
   "buildTime": 8280,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 68,
@@ -5253,14 +4842,11 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 9],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 12
-    }, {
-      "type": "hit",
-      "value": 30
-    }]
+    "effectPos": [1, 7],
+    "gridEffect": {
+      "rate": 12,
+      "hit": 30
+    }
   },
   "krName": "PP-19-01"
 }, {
@@ -5271,9 +4857,9 @@
   "illust": "羽中",
   "voice": "Marina Inoue",
   "buildTime": 0,
-  "drop": ["딥다이브 1-1","딥다이브 1-4"],
-  "skins":["전투선원"],
-  "nick":["우중딸"],
+  "drop": ["딥다이브 1-1", "딥다이브 1-4"],
+  "skins": ["전투선원"],
+  "nick": ["우중딸"],
   "stats": {
     "armor": 0,
     "dodge": 33,
@@ -5294,11 +4880,10 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [4],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 35
-    }]
+    "effectPos": [6],
+    "gridEffect": {
+      "pow": 35
+    }
   },
   "krName": "6P62"
 }, {
@@ -5309,9 +4894,9 @@
   "illust": "林大B",
   "voice": "Arise Sato",
   "buildTime": 1680,
-  "drop": ["7-1","7-2","7-3","7-4","7-5","7-6","7-1e","8-1","8-3"],
-  "skins":[],
-  "nick":[],
+  "drop": ["7-1", "7-2", "7-3", "7-4", "7-5", "7-6", "7-1e", "8-1", "8-3"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 63,
@@ -5332,14 +4917,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [6, 2, 8, 4],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 8
-    }, {
-      "type": "rate",
-      "value": 5
-    }]
+    "effectPos": [2, 4, 6, 8],
+    "gridEffect": {
+      "pow": 8,
+      "rate": 5
+    }
   },
   "krName": "Bren Ten"
 }, {
@@ -5350,9 +4932,9 @@
   "illust": "sola7764",
   "voice": "Naomi Mukaiyama",
   "buildTime": 0,
-  "drop": ["7-6","7-4e"],
-  "skins":[],
-  "nick":[],
+  "drop": ["7-6", "7-4e"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 112,
@@ -5373,14 +4955,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [6, 1, 4, 7],
-    "gridEffect": [{
-      "type": "hit",
-      "value": 28
-    }, {
-      "type": "dodge",
-      "value": 18
-    }]
+    "effectPos": [3, 4, 6, 9],
+    "gridEffect": {
+      "hit": 28,
+      "dodge": 18
+    }
   },
   "krName": "PSM"
 }, {
@@ -5391,9 +4970,9 @@
   "illust": "哈路卡",
   "voice": "Arise Sato",
   "buildTime": 1680,
-  "drop": ["7-1","7-2","7-3","7-4","7-5","7-6","7-1e","8-2","8-4"],
-  "skins":[],
-  "nick":[],
+  "drop": ["7-1", "7-2", "7-3", "7-4", "7-5", "7-6", "7-1e", "8-2", "8-4"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 86,
@@ -5414,11 +4993,10 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [3, 9, 4],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 14
-    }]
+    "effectPos": [1, 6, 7],
+    "gridEffect": {
+      "rate": 14
+    }
   },
   "krName": "USP Compact"
 }, {
@@ -5430,8 +5008,8 @@
   "voice": "Akane Fujita",
   "buildTime": 0,
   "drop": [],
-  "skins":["크루즈의 여왕님"],
-  "nick":["HOXY","파세"],
+  "skins": ["크루즈의 여왕님"],
+  "nick": ["HOXY", "파세"],
   "stats": {
     "armor": 0,
     "dodge": 97,
@@ -5452,14 +5030,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [2, 8, 1, 7],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 15
-    }, {
-      "type": "crit",
-      "value": 10
-    }]
+    "effectPos": [2, 3, 8, 9],
+    "gridEffect": {
+      "rate": 15,
+      "crit": 10
+    }
   },
   "krName": "Five-seveN"
 }, {
@@ -5471,8 +5046,8 @@
   "voice": "Ayaka Fukuhara",
   "buildTime": 0,
   "drop": ["7-6"],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 71,
@@ -5493,14 +5068,11 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 6, 9, 2, 8],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 10
-    }, {
-      "type": "hit",
-      "value": 35
-    }]
+    "effectPos": [1, 2, 4, 7, 8],
+    "gridEffect": {
+      "rate": 10,
+      "hit": 35
+    }
   },
   "krName": "RO635"
 }, {
@@ -5511,9 +5083,9 @@
   "illust": "麻将",
   "voice": "Rui Kariya",
   "buildTime": 0,
-  "drop": ["딥다이브 1-2","딥다이브 1-4"],
-  "skins":[],
-  "nick":[],
+  "drop": ["딥다이브 1-2", "딥다이브 1-4"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 60,
@@ -5534,14 +5106,11 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 9],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 10
-    }, {
-      "type": "dodge",
-      "value": 12
-    }]
+    "effectPos": [1, 7],
+    "gridEffect": {
+      "pow": 10,
+      "dodge": 12
+    }
   },
   "krName": "MT-9"
 }, {
@@ -5552,9 +5121,9 @@
   "illust": "rosele",
   "voice": "Rie Takahashi",
   "buildTime": 13800,
-  "drop": ["저체온증 1-3","저체온증 1-4","저체온증 3-4"],
-  "skins":["숲속의 어린 순록"],
-  "nick":["도라지"],
+  "drop": ["저체온증 1-3", "저체온증 1-4", "저체온증 3-4"],
+  "skins": ["숲속의 어린 순록"],
+  "nick": ["도라지"],
   "stats": {
     "armor": 0,
     "dodge": 32,
@@ -5575,11 +5144,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [1, 7],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 12
-    }]
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "coolDown": 12
+    }
   },
   "krName": "OTs-44"
 }, {
@@ -5590,9 +5158,9 @@
   "illust": "工口牛",
   "voice": "Nozomi Yamamoto",
   "buildTime": 15600,
-  "drop": ["저체온증 1-4","저체온증 3-3","저체온증 3-4"],
-  "skins":["트로피컬 스톰"],
-  "nick":["시금치"],
+  "drop": ["저체온증 1-4", "저체온증 3-3", "저체온증 3-4"],
+  "skins": ["트로피컬 스톰"],
+  "nick": ["시금치"],
   "stats": {
     "armor": 0,
     "dodge": 29,
@@ -5614,10 +5182,9 @@
     "effectType": 1,
     "effectCenter": 5,
     "effectPos": [2, 8],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 15
-    }]
+    "gridEffect": {
+      "coolDown": 15
+    }
   },
   "krName": "G28"
 }, {
@@ -5628,9 +5195,9 @@
   "illust": "拿铁",
   "voice": "",
   "buildTime": 0,
-  "drop": ["딥다이브 1-1","딥다이브 1-3"],
-  "skins":[],
-  "nick":[],
+  "drop": ["딥다이브 1-1", "딥다이브 1-3"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 39,
@@ -5651,11 +5218,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [4],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 12
-    }]
+    "effectPos": [6],
+    "gridEffect": {
+      "coolDown": 12
+    }
   },
   "krName": "SSG 69"
 }, {
@@ -5667,8 +5233,8 @@
   "voice": "",
   "buildTime": 17520,
   "drop": [],
-  "skins":["일곱 번째 봉인자"],
-  "nick":["이유식"],
+  "skins": ["일곱 번째 봉인자"],
+  "nick": ["이유식"],
   "stats": {
     "armor": 0,
     "dodge": 29,
@@ -5690,10 +5256,9 @@
     "effectType": 1,
     "effectCenter": 5,
     "effectPos": [2, 8],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 18
-    }]
+    "gridEffect": {
+      "coolDown": 18
+    }
   },
   "krName": "IWS 2000"
 }, {
@@ -5705,8 +5270,8 @@
   "voice": "",
   "buildTime": 22800,
   "drop": [],
-  "skins":["광란의 질주"],
-  "nick":["비둘기"],
+  "skins": ["광란의 질주"],
+  "nick": ["비둘기"],
   "stats": {
     "armor": 0,
     "dodge": 28,
@@ -5727,14 +5292,11 @@
   "effect": {
     "effectType": 6,
     "effectCenter": 4,
-    "effectPos": [0, 0],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 15
-    }, {
-      "type": "armor",
-      "value": 10
-    }]
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "rate": 15,
+      "armor": 10
+    }
   },
   "krName": "AEK999"
 }, {
@@ -5746,8 +5308,8 @@
   "voice": "",
   "buildTime": 8280,
   "drop": [],
-  "skins":[],
-  "nick":["미쿠"],
+  "skins": [],
+  "nick": ["미쿠"],
   "stats": {
     "armor": 0,
     "dodge": 79,
@@ -5768,14 +5330,11 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 9],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 15
-    }, {
-      "type": "dodge",
-      "value": 10
-    }]
+    "effectPos": [1, 7],
+    "gridEffect": {
+      "rate": 15,
+      "dodge": 10
+    }
   },
   "krName": "시프카"
 }, {
@@ -5787,8 +5346,8 @@
   "voice": "Hitomi Nabatame",
   "buildTime": 0,
   "drop": ["저체온증 1-4"],
-  "skins":[],
-  "nick":["주지사"],
+  "skins": [],
+  "nick": ["주지사"],
   "stats": {
     "armor": 22,
     "dodge": 12,
@@ -5809,14 +5368,11 @@
   "effect": {
     "effectType": 5,
     "effectCenter": 6,
-    "effectPos": [0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 20
-    }, {
-      "type": "hit",
-      "value": 20
-    }]
+    "effectPos": [4],
+    "gridEffect": {
+      "pow": 20,
+      "hit": 20
+    }
   },
   "krName": "M1887"
 }, {
@@ -5828,8 +5384,8 @@
   "voice": "",
   "buildTime": 27000,
   "drop": [],
-  "skins":[],
-  "nick":["청소부"],
+  "skins": [],
+  "nick": ["청소부"],
   "stats": {
     "armor": 21,
     "dodge": 11,
@@ -5850,11 +5406,10 @@
   "effect": {
     "effectType": 5,
     "effectCenter": 6,
-    "effectPos": [0, 0],
-    "gridEffect": [{
-      "type": "hit",
-      "value": 50
-    }]
+    "effectPos": [1, 4],
+    "gridEffect": {
+      "hit": 50
+    }
   },
   "krName": "M1897"
 }, {
@@ -5866,8 +5421,8 @@
   "voice": "Emiri Katou",
   "buildTime": 27900,
   "drop": [],
-  "skins":["한여름의 순례자"],
-  "nick":["이사카"],
+  "skins": ["한여름의 순례자"],
+  "nick": ["이사카"],
   "stats": {
     "armor": 22,
     "dodge": 12,
@@ -5888,11 +5443,10 @@
   "effect": {
     "effectType": 5,
     "effectCenter": 6,
-    "effectPos": [0, 0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 18
-    }]
+    "effectPos": [1, 7],
+    "gridEffect": {
+      "pow": 18
+    }
   },
   "krName": "M37"
 }, {
@@ -5904,8 +5458,8 @@
   "voice": "Ruriko Aoki",
   "buildTime": 26400,
   "drop": [],
-  "skins":[],
-  "nick":["샷댕이"],
+  "skins": [],
+  "nick": ["샷댕이"],
   "stats": {
     "armor": 21,
     "dodge": 10,
@@ -5926,11 +5480,10 @@
   "effect": {
     "effectType": 5,
     "effectCenter": 3,
-    "effectPos": [0, 0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 18
-    }]
+    "effectPos": [1, 7],
+    "gridEffect": {
+      "pow": 18
+    }
   },
   "krName": "M500"
 }, {
@@ -5942,8 +5495,8 @@
   "voice": "Ruriko Aoki",
   "buildTime": 27600,
   "drop": [],
-  "skins":["흰나팔꽃"],
-  "nick":["흑누나"],
+  "skins": ["흰나팔꽃"],
+  "nick": ["흑누나"],
   "stats": {
     "armor": 22,
     "dodge": 10,
@@ -5963,12 +5516,11 @@
   },
   "effect": {
     "effectType": 5,
-    "effectCenter": 9,
-    "effectPos": [0, 0],
-    "gridEffect": [{
-      "type": "hit",
-      "value": 55
-    }]
+    "effectCenter": 3,
+    "effectPos": [1, 7],
+    "gridEffect": {
+      "hit": 55
+    }
   },
   "krName": "M590"
 }, {
@@ -5980,8 +5532,8 @@
   "voice": "",
   "buildTime": 28200,
   "drop": [],
-  "skins":["타향의 갈림길에서"],
-  "nick":["슈쇼","존짧"],
+  "skins": ["타향의 갈림길에서"],
+  "nick": ["슈쇼", "존짧"],
   "stats": {
     "armor": 20,
     "dodge": 19,
@@ -6002,14 +5554,11 @@
   "effect": {
     "effectType": 5,
     "effectCenter": 6,
-    "effectPos": [0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 15
-    }, {
-      "type": "hit",
-      "value": 20
-    }]
+    "effectPos": [4],
+    "gridEffect": {
+      "pow": 15,
+      "hit": 20
+    }
   },
   "krName": "Super-Shorty"
 }, {
@@ -6021,8 +5570,8 @@
   "voice": "Shizuka Ito",
   "buildTime": 28800,
   "drop": [],
-  "skins":[],
-  "nick":["김성근"],
+  "skins": [],
+  "nick": ["김성근"],
   "stats": {
     "armor": 24,
     "dodge": 12,
@@ -6043,11 +5592,10 @@
   "effect": {
     "effectType": 5,
     "effectCenter": 6,
-    "effectPos": [0, 0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 20
-    }]
+    "effectPos": [1, 7],
+    "gridEffect": {
+      "pow": 20
+    }
   },
   "krName": "KSG"
 }, {
@@ -6059,8 +5607,8 @@
   "voice": "Hiromi Igarashi",
   "buildTime": 26700,
   "drop": [],
-  "skins":[],
-  "nick":["상어"],
+  "skins": [],
+  "nick": ["상어"],
   "stats": {
     "armor": 21,
     "dodge": 10,
@@ -6080,15 +5628,12 @@
   },
   "effect": {
     "effectType": 5,
-    "effectCenter": 3,
-    "effectPos": [0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 12
-    }, {
-      "type": "hit",
-      "value": 30
-    }]
+    "effectCenter": 9,
+    "effectPos": [1],
+    "gridEffect": {
+      "pow": 12,
+      "hit": 30
+    }
   },
   "krName": "KS-23"
 }, {
@@ -6100,8 +5645,8 @@
   "voice": "Rui Kariya",
   "buildTime": 27000,
   "drop": [],
-  "skins":["별의 저편"],
-  "nick":["린민비"],
+  "skins": ["별의 저편"],
+  "nick": ["린민비"],
   "stats": {
     "armor": 22,
     "dodge": 13,
@@ -6121,15 +5666,12 @@
   },
   "effect": {
     "effectType": 5,
-    "effectCenter": 9,
-    "effectPos": [0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 12
-    }, {
-      "type": "hit",
-      "value": 30
-    }]
+    "effectCenter": 3,
+    "effectPos": [7],
+    "gridEffect": {
+      "pow": 12,
+      "hit": 30
+    }
   },
   "krName": "RMB-93"
 }, {
@@ -6141,8 +5683,8 @@
   "voice": "",
   "buildTime": 29100,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 23,
     "dodge": 11,
@@ -6163,11 +5705,10 @@
   "effect": {
     "effectType": 5,
     "effectCenter": 6,
-    "effectPos": [0, 0, 0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 15
-    }]
+    "effectPos": [1, 4, 7],
+    "gridEffect": {
+      "pow": 15
+    }
   },
   "krName": "Saiga-12"
 }, {
@@ -6179,8 +5720,8 @@
   "voice": "Yuka Ootsubo",
   "buildTime": 0,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 20,
     "dodge": 13,
@@ -6201,11 +5742,10 @@
   "effect": {
     "effectType": 5,
     "effectCenter": 6,
-    "effectPos": [0, 0, 0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 12
-    }]
+    "effectPos": [1, 4, 7],
+    "gridEffect": {
+      "pow": 12
+    }
   },
   "krName": "97식 산탄총"
 }, {
@@ -6217,8 +5757,8 @@
   "voice": "",
   "buildTime": 27600,
   "drop": [],
-  "skins":[],
-  "nick":["갤주님"],
+  "skins": [],
+  "nick": ["갤주님"],
   "stats": {
     "armor": 21,
     "dodge": 9,
@@ -6239,11 +5779,10 @@
   "effect": {
     "effectType": 5,
     "effectCenter": 6,
-    "effectPos": [0, 0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 20
-    }]
+    "effectPos": [4, 7],
+    "gridEffect": {
+      "pow": 20
+    }
   },
   "krName": "SPAS-12"
 }, {
@@ -6254,9 +5793,9 @@
   "illust": "音符",
   "voice": "",
   "buildTime": 0,
-  "drop": ["특별구호작전X 6-6","특별구호작전X 6-4e"],
-  "skins":["겨울의 탐험가"],
-  "nick":["HOXY","콩지"],
+  "drop": ["특별구호작전X 6-6", "특별구호작전X 6-4e"],
+  "skins": ["겨울의 탐험가"],
+  "nick": ["HOXY", "콩지"],
   "stats": {
     "armor": 0,
     "dodge": 74,
@@ -6277,14 +5816,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [3, 9, 2, 8],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 8
-    }, {
-      "type": "rate",
-      "value": 10
-    }]
+    "effectPos": [1, 2, 7, 8],
+    "gridEffect": {
+      "pow": 8,
+      "rate": 10
+    }
   },
   "krName": "CZ75"
 }, {
@@ -6296,8 +5832,8 @@
   "voice": "",
   "buildTime": 0,
   "drop": ["딥다이브 1-2"],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 80,
@@ -6318,11 +5854,10 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [3, 9, 1, 7],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 16
-    }]
+    "effectPos": [1, 3, 7, 9],
+    "gridEffect": {
+      "pow": 16
+    }
   },
   "krName": "HK45"
 }, {
@@ -6334,8 +5869,8 @@
   "voice": "",
   "buildTime": 3120,
   "drop": [],
-  "skins":["마지막 앨리스"],
-  "nick":[],
+  "skins": ["마지막 앨리스"],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 71,
@@ -6356,14 +5891,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 4,
-    "effectPos": [2, 8, 0, 0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 15
-    }, {
-      "type": "hit",
-      "value": 20
-    }]
+    "effectPos": [1, 3, 7, 9],
+    "gridEffect": {
+      "pow": 15,
+      "hit": 20
+    }
   },
   "krName": "Spitfire"
 }, {
@@ -6374,9 +5906,9 @@
   "illust": "幻象黑兔",
   "voice": "",
   "buildTime": 0,
-  "drop": ["8-6","8-4"],
-  "skins":[],
-  "nick":[],
+  "drop": ["8-6", "8-4"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 68,
@@ -6397,14 +5929,11 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [6],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 6
-    }, {
-      "type": "rate",
-      "value": 10
-    }]
+    "effectPos": [4],
+    "gridEffect": {
+      "pow": 6,
+      "rate": 10
+    }
   },
   "krName": "SCW"
 }, {
@@ -6415,9 +5944,9 @@
   "illust": "仙女V",
   "voice": "",
   "buildTime": 0,
-  "drop": ["딥다이브 1-1","딥다이브 1-4"],
-  "skins":[],
-  "nick":[],
+  "drop": ["딥다이브 1-1", "딥다이브 1-4"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 36,
@@ -6438,11 +5967,10 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [1, 7],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 30
-    }]
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "pow": 30
+    }
   },
   "krName": "Ash-12.7"
 }, {
@@ -6454,8 +5982,8 @@
   "voice": "",
   "buildTime": 13200,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 40,
@@ -6477,10 +6005,9 @@
     "effectType": 4,
     "effectCenter": 5,
     "effectPos": [2, 8],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 20
-    }]
+    "gridEffect": {
+      "pow": 20
+    }
   },
   "krName": "리베롤"
 }, {
@@ -6492,8 +6019,8 @@
   "voice": "",
   "buildTime": 14280,
   "drop": [],
-  "skins":["크리스마스를 훔친 RFB"],
-  "nick":["라플비","둘째돼지"],
+  "skins": ["크리스마스를 훔친 RFB"],
+  "nick": ["라플비", "둘째돼지"],
   "stats": {
     "armor": 0,
     "dodge": 49,
@@ -6514,14 +6041,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [1, 4, 7],
-    "gridEffect": [{
-      "type": "hit",
-      "value": 30
-    }, {
-      "type": "dodge",
-      "value": 18
-    }]
+    "effectPos": [3, 6, 9],
+    "gridEffect": {
+      "hit": 30,
+      "dodge": 18
+    }
   },
   "krName": "RFB"
 }, {
@@ -6533,8 +6057,8 @@
   "voice": "",
   "buildTime": 24600,
   "drop": [],
-  "skins":["꽃과 물","걸 프롬 UNCLE"],
-  "nick":["피카피"],
+  "skins": ["꽃과 물", "걸 프롬 UNCLE"],
+  "nick": ["피카피"],
   "stats": {
     "armor": 0,
     "dodge": 29,
@@ -6554,15 +6078,12 @@
   },
   "effect": {
     "effectType": 6,
-    "effectCenter": 1,
-    "effectPos": [0, 0, 0],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 15
-    }, {
-      "type": "hit",
-      "value": 12
-    }]
+    "effectCenter": 7,
+    "effectPos": [3, 6, 9],
+    "gridEffect": {
+      "rate": 15,
+      "hit": 12
+    }
   },
   "krName": "PKP"
 }, {
@@ -6573,9 +6094,9 @@
   "illust": "八才",
   "voice": "",
   "buildTime": 0,
-  "drop": ["딥다이브 1-3","딥다이브 1-4"],
-  "skins":["백산차"],
-  "nick":["삼각김밥"],
+  "drop": ["딥다이브 1-3", "딥다이브 1-4"],
+  "skins": ["백산차"],
+  "nick": ["삼각김밥"],
   "stats": {
     "armor": 0,
     "dodge": 41,
@@ -6596,11 +6117,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [7],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 12
-    }]
+    "effectPos": [9],
+    "gridEffect": {
+      "coolDown": 12
+    }
   },
   "krName": "81식 카빈"
 }, {
@@ -6612,8 +6132,8 @@
   "voice": "",
   "buildTime": 0,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 49,
@@ -6634,14 +6154,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [1, 7],
-    "gridEffect": [{
-      "type": "hit",
-      "value": 50
-    }, {
-      "type": "dodge",
-      "value": 15
-    }]
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "hit": 50,
+      "dodge": 15
+    }
   },
   "krName": "ART556"
 }, {
@@ -6653,8 +6170,8 @@
   "voice": "",
   "buildTime": 0,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 77,
@@ -6674,15 +6191,12 @@
   },
   "effect": {
     "effectType": 4,
-    "effectCenter": 2,
-    "effectPos": [0, 6],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 15
-    }, {
-      "type": "hit",
-      "value": 20
-    }]
+    "effectCenter": 8,
+    "effectPos": [1, 7],
+    "gridEffect": {
+      "pow": 15,
+      "hit": 20
+    }
   },
   "krName": "TMP"
 }, {
@@ -6694,8 +6208,8 @@
   "voice": "",
   "buildTime": 0,
   "drop": ["딥다이브 1-4"],
-  "skins":["세 마리의 까마귀"],
-  "nick":[],
+  "skins": ["세 마리의 까마귀"],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 74,
@@ -6716,11 +6230,10 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [6],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 25
-    }]
+    "effectPos": [4],
+    "gridEffect": {
+      "rate": 25
+    }
   },
   "krName": "KLIN"
 }, {
@@ -6731,9 +6244,9 @@
   "illust": "Ki桑",
   "voice": "",
   "buildTime": 6600,
-  "drop": ["딥다이브 1-2","딥다이브 1-3","딥다이브 3-3"],
-  "skins":[],
-  "nick":["커암센세"],
+  "drop": ["딥다이브 1-2", "딥다이브 1-3", "딥다이브 3-3"],
+  "skins": [],
+  "nick": ["커암센세"],
   "stats": {
     "armor": 0,
     "dodge": 60,
@@ -6754,14 +6267,11 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 9],
-    "gridEffect": [{
-      "type": "hit",
-      "value": 40
-    }, {
-      "type": "dodge",
-      "value": 15
-    }]
+    "effectPos": [1, 7],
+    "gridEffect": {
+      "hit": 40,
+      "dodge": 15
+    }
   },
   "krName": "F1"
 }, {
@@ -6773,8 +6283,8 @@
   "voice": "",
   "buildTime": 0,
   "drop": ["딥다이브 2-4"],
-  "skins":["비목단"],
-  "nick":["도시락"],
+  "skins": ["비목단"],
+  "nick": ["도시락"],
   "stats": {
     "armor": 0,
     "dodge": 33,
@@ -6795,11 +6305,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 4,
-    "effectPos": [4, 0],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 18
-    }]
+    "effectPos": [5, 6],
+    "gridEffect": {
+      "coolDown": 18
+    }
   },
   "krName": "DSR-50"
 }, {
@@ -6811,8 +6320,8 @@
   "voice": "",
   "buildTime": 16200,
   "drop": ["딥다이브 1-4"],
-  "skins":["열혈 라이더"],
-  "nick":["음악대장"],
+  "skins": ["열혈 라이더"],
+  "nick": ["음악대장"],
   "stats": {
     "armor": 0,
     "dodge": 31,
@@ -6834,10 +6343,9 @@
     "effectType": 1,
     "effectCenter": 5,
     "effectPos": [2, 8],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 15
-    }]
+    "gridEffect": {
+      "coolDown": 15
+    }
   },
   "krName": "PzB39"
 }, {
@@ -6849,8 +6357,8 @@
   "voice": "",
   "buildTime": 13680,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 46,
@@ -6870,15 +6378,12 @@
   },
   "effect": {
     "effectType": 2,
-    "effectCenter": 2,
-    "effectPos": [0, 4],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 20
-    }, {
-      "type": "dodge",
-      "value": 12
-    }]
+    "effectCenter": 8,
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "pow": 20,
+      "dodge": 12
+    }
   },
   "krName": "T91"
 }, {
@@ -6890,8 +6395,8 @@
   "voice": "",
   "buildTime": 0,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 33,
@@ -6912,11 +6417,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [1],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 12
-    }]
+    "effectPos": [3],
+    "gridEffect": {
+      "coolDown": 12
+    }
   },
   "krName": "wz.39"
 }, {
@@ -6928,8 +6432,8 @@
   "voice": "",
   "buildTime": 3720,
   "drop": [],
-  "skins":["오페라의 유령"],
-  "nick":["로이"],
+  "skins": ["오페라의 유령"],
+  "nick": ["로이"],
   "stats": {
     "armor": 0,
     "dodge": 82,
@@ -6950,14 +6454,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [3, 6, 9, 2, 8, 1, 4, 7],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 15
-    }, {
-      "type": "crit",
-      "value": 10
-    }]
+    "effectPos": [1, 2, 3, 4, 6, 7, 8, 9],
+    "gridEffect": {
+      "pow": 15,
+      "crit": 10
+    }
   },
   "krName": "컨텐더"
 }, {
@@ -6969,8 +6470,8 @@
   "voice": "",
   "buildTime": 15000,
   "drop": [],
-  "skins":[],
-  "nick":["로사"],
+  "skins": [],
+  "nick": ["로사"],
   "stats": {
     "armor": 0,
     "dodge": 28,
@@ -6991,11 +6492,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [2, 1],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 15
-    }]
+    "effectPos": [2, 3],
+    "gridEffect": {
+      "coolDown": 15
+    }
   },
   "krName": "T-5000"
 }, {
@@ -7007,8 +6507,8 @@
   "voice": "",
   "buildTime": 23100,
   "drop": [],
-  "skins":["선물은 성탄절 트리"],
-  "nick":[],
+  "skins": ["선물은 성탄절 트리"],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 42,
@@ -7029,14 +6529,11 @@
   "effect": {
     "effectType": 6,
     "effectCenter": 4,
-    "effectPos": [0, 0, 0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 10
-    }, {
-      "type": "armor",
-      "value": 15
-    }]
+    "effectPos": [3, 6, 9],
+    "gridEffect": {
+      "pow": 10,
+      "armor": 15
+    }
   },
   "krName": "아멜리"
 }, {
@@ -7048,8 +6545,8 @@
   "voice": "",
   "buildTime": 0,
   "drop": [],
-  "skins":[],
-  "nick":["찐빵"],
+  "skins": [],
+  "nick": ["찐빵"],
   "stats": {
     "armor": 0,
     "dodge": 63,
@@ -7070,14 +6567,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [2, 8, 4],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 10
-    }, {
-      "type": "hit",
-      "value": 25
-    }]
+    "effectPos": [2, 6, 8],
+    "gridEffect": {
+      "pow": 10,
+      "hit": 25
+    }
   },
   "krName": "P226"
 }, {
@@ -7088,9 +6582,9 @@
   "illust": "百足",
   "voice": "",
   "buildTime": 0,
-  "drop": ["9-6","9-4e"],
-  "skins":[],
-  "nick":[],
+  "drop": ["9-6", "9-4e"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 38,
@@ -7111,14 +6605,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [1, 7],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 15
-    }, {
-      "type": "hit",
-      "value": 30
-    }]
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "pow": 15,
+      "hit": 30
+    }
   },
   "krName": "Ak 5"
 }, {
@@ -7130,8 +6621,8 @@
   "voice": "",
   "buildTime": 29400,
   "drop": [],
-  "skins":["매화 도장"],
-  "nick":["삿팔이"],
+  "skins": ["매화 도장"],
+  "nick": ["삿팔이"],
   "stats": {
     "armor": 22,
     "dodge": 12,
@@ -7152,14 +6643,11 @@
   "effect": {
     "effectType": 5,
     "effectCenter": 6,
-    "effectPos": [0, 0, 0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 10
-    }, {
-      "type": "hit",
-      "value": 15
-    }]
+    "effectPos": [1, 4, 7],
+    "gridEffect": {
+      "pow": 10,
+      "hit": 15
+    }
   },
   "krName": "S.A.T.8"
 }, {
@@ -7171,8 +6659,8 @@
   "voice": "",
   "buildTime": 28500,
   "drop": [],
-  "skins":[],
-  "nick":["우사스"],
+  "skins": [],
+  "nick": ["우사스"],
   "stats": {
     "armor": 22,
     "dodge": 10,
@@ -7193,14 +6681,11 @@
   "effect": {
     "effectType": 5,
     "effectCenter": 6,
-    "effectPos": [0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 15
-    }, {
-      "type": "hit",
-      "value": 20
-    }]
+    "effectPos": [7],
+    "gridEffect": {
+      "pow": 15,
+      "hit": 20
+    }
   },
   "krName": "USAS-12"
 }, {
@@ -7212,8 +6697,8 @@
   "voice": "",
   "buildTime": 26100,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 20,
     "dodge": 11,
@@ -7233,12 +6718,11 @@
   },
   "effect": {
     "effectType": 5,
-    "effectCenter": 3,
-    "effectPos": [0, 0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 15
-    }]
+    "effectCenter": 9,
+    "effectPos": [1, 7],
+    "gridEffect": {
+      "pow": 15
+    }
   },
   "krName": "NS2000"
 }, {
@@ -7250,8 +6734,8 @@
   "voice": "Akane Hanazawa",
   "buildTime": 0,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 64,
@@ -7272,27 +6756,24 @@
   "effect": {
     "effectType": 4,
     "effectCenter": 5,
-    "effectPos": [3, 6, 9],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 8
-    }, {
-      "type": "dodge",
-      "value": 8
-    }]
+    "effectPos": [1, 4, 7],
+    "gridEffect": {
+      "pow": 8,
+      "dodge": 8
+    }
   },
   "krName": "M!2"
 }, {
   "id": 192,
-  "name": "JS_127",
+  "name": "JS-127",
   "rank": 5,
   "type": 3,
   "illust": "音符",
   "voice": "",
   "buildTime": 0,
   "drop": [],
-  "skins":["제피란테스"],
-  "nick":["조석"],
+  "skins": ["제피란테스"],
+  "nick": ["조석"],
   "stats": {
     "armor": 0,
     "dodge": 32,
@@ -7313,11 +6794,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [1, 7],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 18
-    }]
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "coolDown": 18
+    }
   },
   "krName": "JS05"
 }, {
@@ -7329,8 +6809,8 @@
   "voice": "",
   "buildTime": 0,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 40,
@@ -7351,14 +6831,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [4, 7],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 15
-    }, {
-      "type": "hit",
-      "value": 25
-    }]
+    "effectPos": [6, 9],
+    "gridEffect": {
+      "pow": 15,
+      "hit": 25
+    }
   },
   "krName": "T65"
 }, {
@@ -7370,8 +6847,8 @@
   "voice": "",
   "buildTime": 13920,
   "drop": [],
-  "skins":[],
-  "nick":["셋째돼지"],
+  "skins": [],
+  "nick": ["셋째돼지"],
   "stats": {
     "armor": 0,
     "dodge": 42,
@@ -7392,14 +6869,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [1, 7],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 25
-    }, {
-      "type": "hit",
-      "value": 50
-    }]
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "pow": 25,
+      "hit": 50
+    }
   },
   "krName": "K2"
 }, {
@@ -7411,8 +6885,8 @@
   "voice": "",
   "buildTime": 0,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 34,
@@ -7433,14 +6907,11 @@
   "effect": {
     "effectType": 6,
     "effectCenter": 4,
-    "effectPos": [0, 0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 8
-    }, {
-      "type": "armor",
-      "value": 12
-    }]
+    "effectPos": [6, 9],
+    "gridEffect": {
+      "pow": 8,
+      "armor": 12
+    }
   },
   "krName": "HK23"
 }, {
@@ -7452,8 +6923,8 @@
   "voice": "",
   "buildTime": 14700,
   "drop": [],
-  "skins":["총성을 울리는 설녀"],
-  "nick":["자스"],
+  "skins": ["총성을 울리는 설녀"],
+  "nick": ["자스"],
   "stats": {
     "armor": 0,
     "dodge": 41,
@@ -7474,14 +6945,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [1, 7],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 12
-    }, {
-      "type": "dodge",
-      "value": 15
-    }]
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "rate": 12,
+      "dodge": 15
+    }
   },
   "krName": "Zas M21"
 }, {
@@ -7493,8 +6961,8 @@
   "voice": "",
   "buildTime": 16680,
   "drop": [],
-  "skins":[],
-  "nick":["딸기카노"],
+  "skins": [],
+  "nick": ["딸기카노"],
   "stats": {
     "armor": 0,
     "dodge": 42,
@@ -7514,12 +6982,11 @@
   },
   "effect": {
     "effectType": 3,
-    "effectCenter": 1,
-    "effectPos": [0, 2],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 10
-    }]
+    "effectCenter": 7,
+    "effectPos": [1, 4],
+    "gridEffect": {
+      "coolDown": 10
+    }
   },
   "krName": "카르카노M1891"
 }, {
@@ -7531,8 +6998,8 @@
   "voice": "",
   "buildTime": 16920,
   "drop": [],
-  "skins":[],
-  "nick":["포도카노"],
+  "skins": [],
+  "nick": ["포도카노"],
   "stats": {
     "armor": 0,
     "dodge": 44,
@@ -7552,12 +7019,11 @@
   },
   "effect": {
     "effectType": 3,
-    "effectCenter": 7,
-    "effectPos": [8, 0],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 10
-    }]
+    "effectCenter": 1,
+    "effectPos": [4, 7],
+    "gridEffect": {
+      "coolDown": 10
+    }
   },
   "krName": "카르카노M91/38"
 }, {
@@ -7569,8 +7035,8 @@
   "voice": "",
   "buildTime": 22500,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 24,
@@ -7590,15 +7056,12 @@
   },
   "effect": {
     "effectType": 6,
-    "effectCenter": 7,
-    "effectPos": [0, 0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 10
-    }, {
-      "type": "hit",
-      "value": 15
-    }]
+    "effectCenter": 1,
+    "effectPos": [6, 9],
+    "gridEffect": {
+      "pow": 10,
+      "hit": 15
+    }
   },
   "krName": "80식"
 }, {
@@ -7609,9 +7072,9 @@
   "illust": "时辰",
   "voice": "",
   "buildTime": 0,
-  "drop": ["10-6","10-4e"],
-  "skins":[],
-  "nick":[],
+  "drop": ["10-6", "10-4e"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 32,
@@ -7632,11 +7095,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [4, 7],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 15
-    }]
+    "effectPos": [6, 9],
+    "gridEffect": {
+      "coolDown": 15
+    }
   },
   "krName": "XM3"
 }, {
@@ -7648,8 +7110,8 @@
   "voice": "",
   "buildTime": 0,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 28,
@@ -7670,11 +7132,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [1, 4],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 12
-    }]
+    "effectPos": [3, 6],
+    "gridEffect": {
+      "coolDown": 12
+    }
   },
   "krName": "게파드 M1"
 }, {
@@ -7686,8 +7147,8 @@
   "voice": "",
   "buildTime": 0,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 60,
@@ -7709,10 +7170,9 @@
     "effectType": 0,
     "effectCenter": 5,
     "effectPos": [1, 6, 7],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 36
-    }]
+    "gridEffect": {
+      "pow": 36
+    }
   },
   "krName": "썬더"
 }, {
@@ -7724,8 +7184,8 @@
   "voice": "/",
   "buildTime": 0,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 60,
@@ -7747,13 +7207,10 @@
     "effectType": 4,
     "effectCenter": 8,
     "effectPos": [1, 7],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 20
-    }, {
-      "type": "crit",
-      "value": 20
-    }]
+    "gridEffect": {
+      "pow": 20,
+      "crit": 20
+    }
   },
   "krName": "PDW"
 }, {
@@ -7765,8 +7222,8 @@
   "voice": "/",
   "buildTime": 0,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 35,
@@ -7788,10 +7245,9 @@
     "effectType": 1,
     "effectCenter": 5,
     "effectPos": [3, 9],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 18
-    }]
+    "gridEffect": {
+      "coolDown": 18
+    }
   },
   "krName": "발리스타"
 }, {
@@ -7803,8 +7259,8 @@
   "voice": "/",
   "buildTime": 14940,
   "drop": [],
-  "skins":[],
-  "nick":["안구사"],
+  "skins": [],
+  "nick": ["안구사"],
   "stats": {
     "armor": 0,
     "dodge": 48,
@@ -7826,13 +7282,10 @@
     "effectType": 2,
     "effectCenter": 8,
     "effectPos": [3, 6, 9],
-    "gridEffect": [{
-      "type": "hit",
-      "value": 55
-    }, {
-      "type": "dodge",
-      "value": 16
-    }]
+    "gridEffect": {
+      "hit": 55,
+      "dodge": 16
+    }
   },
   "krName": "AN-94"
 }, {
@@ -7844,8 +7297,8 @@
   "voice": "/",
   "buildTime": 15120,
   "drop": [],
-  "skins":[],
-  "nick":["마일리"],
+  "skins": [],
+  "nick": ["마일리"],
   "stats": {
     "armor": 0,
     "dodge": 52,
@@ -7867,13 +7320,10 @@
     "effectType": 2,
     "effectCenter": 2,
     "effectPos": [3, 6, 9],
-    "gridEffect": [{
-      "type": "hit",
-      "value": 25
-    }, {
-      "type": "rate",
-      "value": 15
-    }]
+    "gridEffect": {
+      "hit": 25,
+      "rate": 15
+    }
   },
   "krName": "AK-12"
 }, {
@@ -7885,8 +7335,8 @@
   "voice": "/",
   "buildTime": 0,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 46,
@@ -7906,15 +7356,12 @@
   },
   "effect": {
     "effectType": 2,
-    "effectCenter": 2,
+    "effectCenter": 5,
     "effectPos": [6],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 10
-    }, {
-      "type": "dodge",
-      "value": 15
-    }]
+    "gridEffect": {
+      "rate": 10,
+      "dodge": 15
+    }
   },
   "krName": "CZ2000"
 }, {
@@ -7926,8 +7373,8 @@
   "voice": "/",
   "buildTime": 0,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 33,
@@ -7949,13 +7396,10 @@
     "effectType": 6,
     "effectCenter": 4,
     "effectPos": [3, 6],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 15
-    }, {
-      "type": "armor",
-      "value": 15
-    }]
+    "gridEffect": {
+      "pow": 15,
+      "armor": 15
+    }
   },
   "krName": "HK21"
 }, {
@@ -7967,8 +7411,8 @@
   "voice": "/",
   "buildTime": 0,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 68,
@@ -7990,13 +7434,10 @@
     "effectType": 0,
     "effectCenter": 5,
     "effectPos": [2, 3, 8, 9],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 10
-    }, {
-      "type": "dodge",
-      "value": 10
-    }]
+    "gridEffect": {
+      "pow": 10,
+      "dodge": 10
+    }
   },
   "krName": "CZ52"
 }, {
@@ -8007,9 +7448,9 @@
   "illust": "水熊",
   "voice": "Kanako Kondo",
   "buildTime": 3600,
-  "drop": ["헌팅래빗 1-3e","헌팅래빗 1-4e"],
-  "skins":["μ-12"],
-  "nick":[],
+  "drop": ["헌팅래빗 1-3e", "헌팅래빗 1-4e"],
+  "skins": ["μ-12"],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 82,
@@ -8030,14 +7471,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [3, 9, 2, 8, 1, 7],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 15
-    }, {
-      "type": "dodge",
-      "value": 10
-    }]
+    "effectPos": [1, 2, 3, 7, 8, 9],
+    "gridEffect": {
+      "rate": 15,
+      "dodge": 10
+    }
   },
   "krName": "노엘 버밀리온"
 }, {
@@ -8049,8 +7487,8 @@
   "voice": "Aya Suzaki",
   "buildTime": 30600,
   "drop": ["헌팅래빗 1-4e"],
-  "skins":["매그넘 웨딩","인형 섬멸자"],
-  "nick":[],
+  "skins": ["매그넘 웨딩", "인형 섬멸자"],
+  "nick": [],
   "stats": {
     "armor": 23,
     "dodge": 9,
@@ -8071,14 +7509,11 @@
   "effect": {
     "effectType": 5,
     "effectCenter": 6,
-    "effectPos": [0, 0],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 15
-    }, {
-      "type": "hit",
-      "value": 15
-    }]
+    "effectPos": [1, 7],
+    "gridEffect": {
+      "pow": 15,
+      "hit": 15
+    }
   },
   "krName": "엘펠트 밸런타인"
 }, {
@@ -8090,8 +7525,8 @@
   "voice": "",
   "buildTime": 3600,
   "drop": ["붕괴학원 2 콜라보 2-2"],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 76,
@@ -8112,14 +7547,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [2, 8, 1, 7],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 10
-    }, {
-      "type": "dodge",
-      "value": 15
-    }]
+    "effectPos": [2, 3, 8, 9],
+    "gridEffect": {
+      "pow": 10,
+      "dodge": 15
+    }
   },
   "krName": "키아나 카스라나"
 }, {
@@ -8130,9 +7562,9 @@
   "illust": "NIN",
   "voice": "",
   "buildTime": 17400,
-  "drop": ["붕괴학원 2 콜라보 1-3","붕괴학원 2 콜라보 1-4","붕괴학원 콜라보 2-1"],
-  "skins":[],
-  "nick":[],
+  "drop": ["붕괴학원 2 콜라보 1-3", "붕괴학원 2 콜라보 1-4", "붕괴학원 콜라보 2-1"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 32,
@@ -8153,11 +7585,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [8, 7],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 18
-    }]
+    "effectPos": [8, 9],
+    "gridEffect": {
+      "coolDown": 18
+    }
   },
   "krName": "라이덴 메이"
 }, {
@@ -8168,9 +7599,9 @@
   "illust": "水熊",
   "voice": "",
   "buildTime": 17400,
-  "drop": ["붕괴학원 2 콜라보 2-2","붕괴학원 2 콜라보 2-3","붕괴학원 2 콜라보 2-4"],
-  "skins":[],
-  "nick":[],
+  "drop": ["붕괴학원 2 콜라보 2-2", "붕괴학원 2 콜라보 2-3", "붕괴학원 2 콜라보 2-4"],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 33,
@@ -8191,11 +7622,10 @@
   "effect": {
     "effectType": 1,
     "effectCenter": 5,
-    "effectPos": [2, 1],
-    "gridEffect": [{
-      "type": "coolDown",
-      "value": 18
-    }]
+    "effectPos": [2, 3],
+    "gridEffect": {
+      "coolDown": 18
+    }
   },
   "krName": "브로냐 자이칙"
 }, {
@@ -8207,8 +7637,8 @@
   "voice": "",
   "buildTime": 3600,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 79,
@@ -8229,14 +7659,11 @@
   "effect": {
     "effectType": 0,
     "effectCenter": 5,
-    "effectPos": [3, 9, 2, 8],
-    "gridEffect": [{
-      "type": "rate",
-      "value": 15
-    }, {
-      "type": "hit",
-      "value": 25
-    }]
+    "effectPos": [1, 2, 7, 8],
+    "gridEffect": {
+      "rate": 15,
+      "hit": 25
+    }
   },
   "krName": "테레사 아포칼립스"
 }, {
@@ -8248,8 +7675,8 @@
   "voice": "",
   "buildTime": 14100,
   "drop": ["붕괴학원 2 콜라보 1-4"],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 0,
     "dodge": 42,
@@ -8270,14 +7697,11 @@
   "effect": {
     "effectType": 2,
     "effectCenter": 5,
-    "effectPos": [4],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 20
-    }, {
-      "type": "rate",
-      "value": 20
-    }]
+    "effectPos": [6],
+    "gridEffect": {
+      "pow": 20,
+      "rate": 20
+    }
   },
   "krName": "무라타 히메코"
 }, {
@@ -8289,8 +7713,8 @@
   "voice": "",
   "buildTime": 28800,
   "drop": [],
-  "skins":[],
-  "nick":[],
+  "skins": [],
+  "nick": [],
   "stats": {
     "armor": 22,
     "dodge": 13,
@@ -8311,14 +7735,11 @@
   "effect": {
     "effectType": 5,
     "effectCenter": 6,
-    "effectPos": [1, 7],
-    "gridEffect": [{
-      "type": "pow",
-      "value": 20
-    }, {
-      "type": "hit",
-      "value": 10
-    }]
+    "effectPos": [3, 9],
+    "gridEffect": {
+      "pow": 20,
+      "hit": 10
+    }
   },
-  "krName": "제레 발레"
+  "krName": "제레 발레리"
 }]
