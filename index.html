@@ -10,9 +10,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/jquery-iframe-auto-height.js"></script>
 <script>
-  $(document).ready(function () {
-    $('iframe').iframeAutoHeight({debug:true});
-  });
+ $(document).ready(function () {
+  $('iframe').iframeAutoHeight({debug:true});
+ });
 </script>
 <title>GFDB</title>
 </head>
@@ -35,10 +35,10 @@
 		<button class="w3-button w3-small w3-mobile tablink" onclick="tools(event,'equip')" style="width:200px">장비 도감</button>
 		<button class="w3-button w3-small w3-mobile tablink" onclick="tools(event,'fairy')" style="width:200px">요정 도감</button>
 		<div id="contents">
-			<div class="content tools"><iframe class="auto-height" src="wiki/doll.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;"  width="100%"></iframe></div>
-			<div id="t-doll" class="content tools" style="display:none"><iframe class="auto-height" src="wiki/doll.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;"  width="100%"></iframe></div>
-			<div id="equip" class="content tools" style="display:none"><iframe class="auto-height" src="wiki/equip.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;"  width="100%"></iframe></div>
-			<div id="fairy" class="content tools" style="display:none"><iframe class="auto-height" src="wiki/fairy.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;"  width="100%"></iframe></div>
+			<div id="index" class="content tools"><iframe class="auto-height" src="wiki/doll.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;" width="100%"></iframe></div>
+			<div id="t-doll" class="content tools" style="display:none"><iframe class="auto-height" src="wiki/doll.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;" width="100%"></iframe></div>
+			<div id="equip" class="content tools" style="display:none"><iframe class="auto-height" src="wiki/equip.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;" width="100%"></iframe></div>
+			<div id="fairy" class="content tools" style="display:none"><iframe class="auto-height" src="wiki/fairy.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;" width="100%"></iframe></div>
 		</div>
 	</div>
 <script>$('iframe.auto-height').iframeAutoHeight({minHeight:240});</script>

@@ -44,16 +44,18 @@ function doll_close() {
 			<button class="w3-button w3-round-xxlarge w3-hover-text-white w3-hover-orange" style="background-color:#feb976;color:#fff">평생의 수호자</button>
 			<button class="w3-button w3-round-xxlarge w3-hover-text-white w3-hover-orange" style="background-color:#feb976;color:#fff">양파 저격수</button>
 		</div>
-		<div class="w3-row w3-center">
-			<div class="w3-grey w3-half" style="height:512px"></div>
-			<div style="height:512px" class="w3-half"> <!-- 줌버튼 클릭시 width 부여 -->
-				<div class="w3-container w3-black" style="min-height:256px;min-width:256px"></div>
-				<div class="w3-container w3-green" style="min-height:256px;min-width:256px"></div> <!-- 줌버튼 클릭시 display:none 부여 -->
+				<div class="w3-row w3-center">
+			<div class="w3-third" >
+				<img class="w3-image" style="height:600px;min-width:512px" src="../img/t_doll/1_s.png" alt="">
 			</div>
-			<div style="height:1024px" class="w3-rest"> <!-- 줌버튼 클릭시 display:none 부여 -->
-				<div class="w3-col s6 w3-red" style="height:100%"></div> <!-- 혹은 s 클래스 제거 -->
-				<div class="w3-col s6 w3-blue" style="height:100%"></div> <!-- 혹은 s 클래스 제거 -->
-			</div>
+			<div class="w3-third w3-container w3-black" style="min-height:300px;min-width:256px"></div>
+			<div class="w3-third w3-container w3-red" style="min-height:300px;min-width:256px"></div>
+			<div class="w3-rest w3-container w3-lime" style="min-height:300px;min-width:256px"></div>
+			<div class="w3-third w3-container w3-blue" style="min-height:512px;min-width:256px"></div>
+			<div class="w3-rest w3-container w3-orange" style="min-height:256px;min-width:256px"></div>
+			<div class="w3-rest w3-container w3-green" style="min-height:256px;min-width:256px"></div>
+			<div class="w3-rest w3-container w3-grey" style="min-height:720px;min-width:256px"></div>
+			<div class=""></div>
 		</div>
 	</div>
 </div></div>
@@ -83,7 +85,7 @@ function doll_close() {
 	</div>
 </div>
 <div class="w3-col w3-mobile w3-section dollcontainer">
-	<div class="w3-hover-shadow font tdoll">
+	<div class="w3-hover-shadow font tdoll" onclick="doll_open()">
 		<div class="w3-text-white no">2</div>
 		<p class="w3-text-black name podo f125">M1911</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -95,7 +97,7 @@ function doll_close() {
 	</div>
 </div>
 <div class="w3-col w3-mobile w3-section dollcontainer">
-	<div class="w3-hover-shadow font tdoll">
+	<div class="w3-hover-shadow font tdoll" onclick="doll_open()">
 		<div class="w3-text-white no">3</div>
 		<p class="w3-text-black name podo f125">M9</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
