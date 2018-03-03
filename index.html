@@ -3,45 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Open+Sans" rel="stylesheet" type="text/css">
 <link href="css/css_overwrite.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Open+Sans" rel="stylesheet" type="text/css">
 <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="js/jquery-iframe-auto-height.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="css/fullcalendar.min.css" rel="stylesheet">
+<link href="css/fullcalendar.print.min.css" rel="stylesheet" media="print">
+<script src="js/jquery.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/fullcalendar.min.js"></script>
+<script src="js/ko.js"></script>
 <script>
- $(document).ready(function () {
-  $('iframe').iframeAutoHeight({debug:true});
- });
+$(document).ready(function() {
+ $("#calendar").fullCalendar({
+	 eventLimit: true,
+	 header: {
+	 left: false,
+	 center: false,
+	 right:  false
+	 },
+	 events: [
+        {
+          title: '포인트 이벤트 : 꽃등축제 3주차',
+          start: '2018-03-01',
+          end: '2018-03-07'
+        },
+        {
+          title: '「2017년 가을의 신부」 테마 코스튬 복각',
+          start: '2018-03-09',
+          end: '2018-03-23',
+		  url:'http://www.girlsfrontline.co.kr/archives/1302.html'
+        },
+		{
+          title: '「2018년 신년에는 꽃길만 걷자」 테마 코스튬',
+          start: '2018-02-14',
+          end: '2018-03-02',
+		  url:'http://www.girlsfrontline.co.kr/archives/1254.html'
+        },
+        {
+          title: '정기점검 및 업데이트 예고',
+          start: '2018-03-02T17:00:00',
+		  url: 'http://www.girlsfrontline.co.kr/archives/1297.html'
+        },
+        {
+          title: '기간한정 월정액 두배 이벤트',
+          start: '2018-03-01',
+		  end: '2018-03-07',
+		  url: 'http://www.girlsfrontline.co.kr/archives/1297.html'
+        }
+      ],
+	  eventColor: '#000',
+	  eventBackgroundColor:'#000',
+	  eventTextColor:'#fff',
+	  eventBorderColor:'#ff'
+ })
+});
 </script>
 <title>GFDB</title>
 </head>
 <body>
-	<div class="w3-sidebar	w3-bar-block	w3-black font" style="display:none;min-width:105px" id="Sidebar">
-		<button class="w3-bar-item	w3-small w3-black w3-center w3-border-bottom w3-border-right" onclick="w_c()"><i class="fa fa-close"></i></button>
-		<div class="logo w3-margin-bottom w3-margin-top w3-center w3-hide-small"><a href="index.html"><img src="img/logo/sidebar_gflogo.png" alt="logo" id="slogo"></a></div>
-		<input class="w3-input	 w3-center w3-hide-small" placeholder="메뉴검색" id="input" onkeyup="msearch()" type="text">
-		<div id="menu">
-			<a class="w3-bar-item	w3-button	w3-hover-white" href="index.html">도감</a>
-			<a class="w3-bar-item	w3-button	w3-hover-white" href="simulator.html">시뮬레이터</a>
-			<a class="w3-bar-item	w3-button	w3-hover-white w3-disabled" href="#">정보</a>
-			<a class="w3-bar-item	w3-button	w3-hover-white w3-disabled" href="#">About</a>
-			<a class="w3-bar-item	w3-button	w3-hover-white" href="https://discordapp.com/invite/8eTFTSa">Contact</a>
-		</div>
+<div class="w3-sidebar	w3-bar-block	w3-black font" style="display:none;min-width:105px" id="Sidebar">
+	<button class="w3-bar-item	w3-small w3-black w3-center w3-border-bottom w3-border-right" onclick="w_c()"><i class="fa fa-close"></i></button>
+	<div class="logo w3-margin-bottom w3-margin-top w3-center w3-hide-small"><img src="img/logo/sidebar_gflogo.png" alt="logo" id="slogo"></div>
+	<input class="w3-input	 w3-center w3-hide-small" placeholder="메뉴검색" id="input" onkeyup="msearch()" type="text">
+	<div id="menu">
+		<a class="w3-bar-item	w3-button	w3-hover-white" href="index.html">도감</a>
+		<a class="w3-bar-item	w3-button	w3-hover-white" href="simulator.html">시뮬레이터</a>
+		<a class="w3-bar-item	w3-button	w3-hover-white" href="#" onclick="tools(event,'index')">정보</a>
+		<a class="w3-bar-item	w3-button	w3-hover-white w3-disabled" href="#">About</a>
+		<a class="w3-bar-item	w3-button	w3-hover-white" href="https://discordapp.com/invite/8eTFTSa">Contact</a>
 	</div>
-	<div class="w3-black w3-mobile" id="main">
-		<button class="w3-button w3-small w3-mobile tablink" onclick="w_o()" style="width:200px" id="open"><i class="fa	fa-bars"></i>Menu</button>
-		<button class="w3-button w3-small w3-mobile tablink w3-red" onclick="tools(event,'t-doll')" style="width:200px">인형 도감</button>
-		<button class="w3-button w3-small w3-mobile tablink" onclick="tools(event,'equip')" style="width:200px">장비 도감</button>
-		<button class="w3-button w3-small w3-mobile tablink" onclick="tools(event,'fairy')" style="width:200px">요정 도감</button>
-		<div id="contents">
-			<div id="index" class="content tools"><iframe class="auto-height" src="wiki/doll.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;" width="100%"></iframe></div>
-			<div id="t-doll" class="content tools" style="display:none"><iframe class="auto-height" src="wiki/doll.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;" width="100%"></iframe></div>
-			<div id="equip" class="content tools" style="display:none"><iframe class="auto-height" src="wiki/equip.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;" width="100%"></iframe></div>
-			<div id="fairy" class="content tools" style="display:none"><iframe class="auto-height" src="wiki/fairy.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;" width="100%"></iframe></div>
-		</div>
+</div>
+<div class="w3-black w3-mobile" id="main">
+	<button class="w3-button w3-small w3-mobile tablink" onclick="w_o()" style="width:200px" id="open"><i class="fa	fa-bars"></i>Menu</button>
+	<button class="w3-button w3-small w3-mobile tablink" onclick="tools(event,'t-doll')" style="width:200px">인형 도감</button>
+	<button class="w3-button w3-small w3-mobile tablink" onclick="tools(event,'equip')" style="width:200px">장비 도감</button>
+	<button class="w3-button w3-small w3-mobile tablink" onclick="tools(event,'fairy'')" style="width:200px">요정 도감</button>
+	<div id="contents">
+		<div id="index" class="content tools"><div class="w3-black" id="calendar"></div></div>
+		<div id="t-doll" class="content tools" style="display:none"><iframe src="wiki/doll.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;" width="100%"></iframe></div>
+		<div id="equip" class="content tools" style="display:none"><iframe src="wiki/equip.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;" width="100%"></iframe></div>
+		<div id="fairy" class="content tools" style="display:none"><iframe src="wiki/fairy.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;" width="100%"></iframe></div>
 	</div>
-<script>$('iframe.auto-height').iframeAutoHeight({minHeight:240});</script>
+</div>
 <script src="js/index.js"></script>
 <script src="js/simulator.js"></script>
 </body> 
