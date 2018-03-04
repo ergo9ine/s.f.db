@@ -17,6 +17,9 @@ for (i = 0; i < arrCom.length; i++)
 
 var totalCom = 0;
 var totalTcom = 0;
+var numOfroom = 0;
+var totalBr = 0;
+var averageTbr = 0;
 
 function sumComfort() {
     for (i = 0; i < arrCom.length; i++)
@@ -29,11 +32,14 @@ function sumComfort() {
 		document.getElementById("tTcom").innerText = totalTcom;
 		if(document.getElementById(arrCom[i]).value != 0)
 		{
-			document.getElementById("tnr").innerText = i + 1;
+			numOfroom = i + 1;
+			document.getElementById("tnr").innerText = numOfroom;
 		}
     }
-
-    //document.getElementById("tnr").innerText = 3;
-    document.getElementById("tbr").innerText = 11 * totalTcom / 10000 + (-0.1 * totalTcom * totalTcom / 10000 / 10000) + arrTnr[Number(document.getElementById("tnr").innerText) -1];
+    totalBr = 11 * totalTcom / 10000 + (-0.1 * totalTcom * totalTcom / 10000 / 10000) + arrTnr[Number(numOfroom) -1];
+    document.getElementById("tbr").innerText = totalBr.toFixed(2);
+    averageTbr = (11 * (totalTcom + 1000)) / 10000 + (-0.1 * ((totalTcom + 1000) * (totalTcom + 1000)) / 10000 / 10000)-((11 * totalTcom / 10000) + (-0.1 * (totalTcom * totalTcom) / 10000 / 10000));
+    document.getElementById("abtr").innerText = averageTbr.toFixed(2);
+    averageTbr = 0;
     totalTcom = 0;	
 }
