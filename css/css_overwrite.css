@@ -97,4 +97,5 @@ a,a:visited,a:link,a:hover,a:active{color:#666;text-decoration:none}
 .etype{left:23px;top:9px}
 .fairy{height:300px}
 .cover{right:3px}
+#calendar{max-width:520px}
 .fc-today{background-color:red !important}
