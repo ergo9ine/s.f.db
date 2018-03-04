@@ -27,10 +27,9 @@ function sumComfort() {
 
     	totalTcom = totalTcom + Number(document.getElementById(arrTcom[i]).value);		
 		document.getElementById("tTcom").innerText = totalTcom;
-		if(document.getElementById(arrCom[i]) != 0)
+		if(document.getElementById(arrCom[i]).value != 0)
 		{
 			document.getElementById("tnr").innerText = i + 1;
-			console.log(document.getElementById(arrCom[i]));
 		}
     }
 
