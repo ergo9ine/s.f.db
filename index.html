@@ -15,44 +15,50 @@
 <script src="js/ko.js"></script>
 <script>
 $(document).ready(function() {
- $("#calendar").fullCalendar({
-	 height: 'auto',
-	 header: {
-	 left: false,
-	 center: false,
-	 right:  false
+	$("#calendar").fullCalendar({
+	 height:'auto',
+	 header:{
+	 left:false,
+	 center:false,
+	 right: false
 	 },
-	 events: [
+	 events:[
         {
-          title: '포인트 이벤트 : 꽃등축제 3주차',
-          start: '2018-03-01',
-          end: '2018-03-07'
+		title:'포인트 이벤트 :꽃등축제 3주차',
+		start:'2018-03-01',
+		end:'2018-03-08'
         },
         {
-          title: '「2017년 가을의 신부」 테마 코스튬 복각',
-          start: '2018-03-09',
-          end: '2018-03-23',
-		  url:'http://www.girlsfrontline.co.kr/archives/1302.html'
+		title:'「2017년 가을의 신부」 테마 코스튬 복각',
+		start:'2018-03-09',
+		end:'2018-03-24',
+		url:'http://www.girlsfrontline.co.kr/archives/1302.html'
         },
 		{
-          title: '「2018년 신년에는 꽃길만 걷자」 테마 코스튬',
-          start: '2018-02-14',
-          end: '2018-03-02',
-		  url:'http://www.girlsfrontline.co.kr/archives/1254.html'
+		title:'「2018년 신년에는 꽃길만 걷자」 테마 코스튬',
+		start:'2018-02-14',
+		end:'2018-03-03',
+		url:'http://www.girlsfrontline.co.kr/archives/1254.html'
         },
         {
-          title: '정기점검 및 업데이트 예고',
-          start: '2018-03-02',
-		  url: 'http://www.girlsfrontline.co.kr/archives/1297.html'
+		title:'정기점검',
+		start:'2018-03-02',
+		url:'http://www.girlsfrontline.co.kr/archives/1297.html'
         },
         {
-          title: '기간한정 월정액 두배 이벤트',
-          start: '2018-03-01',
-		  end: '2018-03-07',
-		  url: 'http://www.girlsfrontline.co.kr/archives/1297.html'
+		title:'기간한정 월정액 두배 이벤트',
+		start:'2018-03-01',
+		end:'2018-03-08',
+		url:'http://www.girlsfrontline.co.kr/archives/1297.html'
+        },
+		{
+		title:'빙고이벤트 [전술능력 평가]',
+		start:'2018-03-10',
+		end:'2018-03-31',
+		url:'http://www.girlsfrontline.co.kr/archives/1308.html'
         }
       ],
-	  eventColor: '#000',
+	  eventColor:'#000',
 	  eventBackgroundColor:'#ffa63c',
 	  eventTextColor:'#fff',
 	  eventBorderColor:'#ffa63c'
@@ -65,7 +71,6 @@ $(document).ready(function() {
 <div class="w3-sidebar	w3-bar-block	w3-black font" style="display:none;min-width:105px" id="Sidebar">
 	<button class="w3-bar-item	w3-small w3-black w3-center w3-border-bottom w3-border-right" onclick="w_c()"><i class="fa fa-close"></i></button>
 	<div class="logo w3-margin-bottom w3-margin-top w3-center w3-hide-small"><img src="img/logo/sidebar_gflogo.png" alt="logo" id="slogo"></div>
-	<input class="w3-input	 w3-center w3-hide-small" placeholder="메뉴검색" id="input" onkeyup="msearch()" type="text">
 	<div id="menu">
 		<a class="w3-bar-item	w3-button	w3-hover-white" href="index.html">도감</a>
 		<a class="w3-bar-item	w3-button	w3-hover-white" href="simulator.html">시뮬레이터</a>
