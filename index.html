@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<link href="css/css_overwrite.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Open+Sans" rel="stylesheet" type="text/css">
 <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet" type="text/css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="css/fullcalendar.min.css" rel="stylesheet">
 <link href="css/fullcalendar.print.min.css" rel="stylesheet" media="print">
+<link href="css/css_overwrite.css" rel="stylesheet" type="text/css">
 <script src="js/jquery.js"></script>
 <script src="js/moment.min.js"></script>
 <script src="js/fullcalendar.min.js"></script>
@@ -16,7 +16,7 @@
 <script>
 $(document).ready(function() {
  $("#calendar").fullCalendar({
-	 eventLimit: true,
+	 height: 'auto',
 	 header: {
 	 left: false,
 	 center: false,
@@ -42,7 +42,7 @@ $(document).ready(function() {
         },
         {
           title: '정기점검 및 업데이트 예고',
-          start: '2018-03-02T17:00:00',
+          start: '2018-03-02',
 		  url: 'http://www.girlsfrontline.co.kr/archives/1297.html'
         },
         {
@@ -53,9 +53,9 @@ $(document).ready(function() {
         }
       ],
 	  eventColor: '#000',
-	  eventBackgroundColor:'#000',
+	  eventBackgroundColor:'#ffa63c',
 	  eventTextColor:'#fff',
-	  eventBorderColor:'#ff'
+	  eventBorderColor:'#ffa63c'
  })
 });
 </script>
@@ -76,12 +76,12 @@ $(document).ready(function() {
 </div>
 <div class="w3-black w3-mobile" id="main">
 	<button class="w3-button w3-small w3-mobile tablink" onclick="w_o()" style="width:200px" id="open"><i class="fa	fa-bars"></i>Menu</button>
-	<button class="w3-button w3-small w3-mobile tablink" onclick="tools(event,'t-doll')" style="width:200px">인형 도감</button>
+	<button class="w3-button w3-small w3-mobile tablink" onclick="tools(event,'tdoll')" style="width:200px">인형 도감</button>
 	<button class="w3-button w3-small w3-mobile tablink" onclick="tools(event,'equip')" style="width:200px">장비 도감</button>
 	<button class="w3-button w3-small w3-mobile tablink" onclick="tools(event,'fairy')" style="width:200px">요정 도감</button>
 	<div id="contents">
-		<div id="index" class="content tools"><div class="w3-black w3-display-middle" id="calendar"></div></div>
-		<div id="t-doll" class="content tools" style="display:none"><iframe src="wiki/doll.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;" width="100%"></iframe></div>
+		<div id="index" class="content tools w3-white"><div class="w3-display-middle" id="calendar"></div></div>
+		<div id="tdoll" class="content tools" style="display:none"><iframe src="wiki/doll.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;" width="100%"></iframe></div>
 		<div id="equip" class="content tools" style="display:none"><iframe src="wiki/equip.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;" width="100%"></iframe></div>
 		<div id="fairy" class="content tools" style="display:none"><iframe src="wiki/fairy.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;" width="100%"></iframe></div>
 	</div>
