@@ -3,12 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Open+Sans" rel="stylesheet" type="text/css">
-<link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet" type="text/css">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="css/font.css" rel="stylesheet">
+<link href="css/w3.css" rel="stylesheet">
 <link href="css/fullcalendar.min.css" rel="stylesheet">
 <link href="css/fullcalendar.print.min.css" rel="stylesheet" media="print">
-<link href="css/css_overwrite.css" rel="stylesheet" type="text/css">
+<link href="css/css_overwrite.css" rel="stylesheet" >
 <script src="js/jquery.js"></script>
 <script src="js/moment.min.js"></script>
 <script src="js/fullcalendar.min.js"></script>
@@ -86,11 +85,17 @@ $(document).ready(function() {
 	<button class="w3-button w3-small w3-mobile tablink" onclick="tools(event,'fairy')" style="width:200px">요정 도감</button>
 	<div id="contents">
 		<div id="index" class="content tools w3-white"><div class="w3-display-middle" id="calendar"></div></div>
-		<div id="tdoll" class="content tools" style="display:none"><iframe src="wiki/doll.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;" width="100%"></iframe></div>
-		<div id="equip" class="content tools" style="display:none"><iframe src="wiki/equip.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;" width="100%"></iframe></div>
-		<div id="fairy" class="content tools" style="display:none"><iframe src="wiki/fairy.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;" width="100%"></iframe></div>
+		<div id="tdoll" class="content tools" style="display:none"><iframe data-src="wiki/doll.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;" width="100%"></iframe></div>
+		<div id="equip" class="content tools" style="display:none"><iframe data-src="wiki/equip.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;" width="100%"></iframe></div>
+		<div id="fairy" class="content tools" style="display:none"><iframe data-src="wiki/fairy.html" style="height:100%;width:1px;min-width:100%;*width:100%;border:0 none transparent;display:block;" width="100%"></iframe></div>
 	</div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.4.2/lazyload.min.js"></script>
+<script>
+    new LazyLoad({
+		elements_selector: "iframe"
+	});
+</script>
 <script src="js/index.js"></script>
 </body> 
 </html>
