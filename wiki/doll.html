@@ -8,13 +8,21 @@
 <link href="../css/css_overwrite.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="../js/jquery.js"></script>
-<script src="../js/doll.js"></script>
+<script src="../js/jquery.quicksearch.min.js"></script>
+<script>
+	$(function () {
+		$('input#input').quicksearch('div#gun .dollcontainer', {
+			noResults: "#noResultMessage",
+			'bind': 'keyup keydown click input',
+		})
+	});
+</script>
 <script>
 function doll_open() {
     document.getElementById("dollfunc").style.width = "100%";
     document.getElementById("dollfunc").style.display = "block";
 	document.getElementById("list").style.display = "none";
-}
+} 
 function doll_close() {
     document.getElementById("dollfunc").style.display = "none";
 	document.getElementById("list").style.display = "block";
@@ -59,15 +67,15 @@ function doll_close() {
 	</div>
 </div></div>
 <div id="list">
-	<div  class="w3-black">
+<div  class="w3-black">
 		<span onclick="this.parentElement.style.display='none'" class="w3-button w3-black w3-tiny w3-display-topright"><i class="fa fa-close"></i></span>
 		<label class="f125 fw">검색가능한 종류</label>
 		<p>인형이름 :콜트 리볼버/콜트</p>
 		<p>도감넘버 :1/210</p>
 		<p><s>제조시간 :4500 0500</s> - 개선중 -</p>
 		<p>별명 :콜라</p>
-	</div>
-<input class="w3-input w3-center" type="text" placeholder="검색" id="input" onkeyup="filterFunction()">
+</div>
+<input class="w3-input w3-center" type="text" placeholder="검색" id="input">
 <div class="w3-row-padding w3-padding-large w3-center" id="gun">
 <div class="w3-col w3-mobile w3-section dollcontainer">
 	<div class="w3-hover-shadow font tdoll" onclick="doll_open()">
@@ -2739,6 +2747,15 @@ function doll_close() {
 	</div>
 </div>
 </div>
+</div>
+<div id="noResultMessage" class="no-results-container">
+	<div  class="w3-black w3-center">
+		<label class="f125 fw">검색 결과가 없습니다. 검색어를 다시 입력해보세요.</label>
+		<p>인형이름 :콜트 리볼버/콜트</p>
+		<p>도감넘버 :1/210</p>
+		<p><s>제조시간 :4500 0500</s> - 개선중 -</p>
+		<p>별명 :콜라</p>
+	</div>
 </div>
 </body>
 </html>

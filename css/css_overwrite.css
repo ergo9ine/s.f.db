@@ -1,11 +1,11 @@
 /*index*/
 @keyframes logocolor{35%,5%,99%,to{filter:hue-rotate(0deg)}10%{filter:hue-rotate(60deg)}15%{filter:hue-rotate(90deg)}20%{filter:hue-rotate(120deg)}25%{filter:hue-rotate(150deg)}30%{filter:hue-rotate(180deg)}40%{filter:contrast(2)}45%{filter:contrast(1)}50%{filter:sepia(1)}55%{filter:sepia(0)}60%{filter:blur(10px)}65%{filter:blur(0)}75%{filter:invert(.6)}80%,90%{filter:invert(0)}85%{filter:invert(.9)}95%{filter:hue-rotate(300deg)}}
-@keyframes flash{11%,13%,15%,20%,22%,5%,50%,56%,60%,70%,75%,79%,90%{opacity:0} 10%,12%,14%,21%,25%,55%,57%,66%,71%,78%,85%,to{opacity:1}}
+@keyframes flash{11%,13%,15%,20%,22%,5%,50%,56%,60%,70%,75%,79%,90%{opacity:0}10%,12%,14%,21%,25%,55%,57%,66%,71%,78%,85%,to{opacity:1}}
 /*mainframe*/
 a,a:visited,a:link,a:hover,a:active{color:#666;text-decoration:none}
 .font{font-family:'Nanum Gothic',sans-serif}
 .fw{font-weight:700}
-#slogo,.logo{animation-name:logocolor;animation-duration:60s;animation-iteration-count:infinite}
+#slogo{animation-name:logocolor;animation-duration:60s;animation-iteration-count:infinite}
 .logo{opacity:0;animation-name:flash;animation-duration:5s;animation-delay:1s}
 #contents,.content{width:100%;position:absolute}
 #contents{height:calc(100% - 34px)}
@@ -37,10 +37,10 @@ a,a:visited,a:link,a:hover,a:active{color:#666;text-decoration:none}
 .tag{display:none}
 .equip{height:326px}
 .bg{margin-top:24px}
-.er2{color:#CCC;text-shadow:0 0 1px #ccc}
-.er3{color:#6BDFCE;text-shadow:0 0 1px #6BDFCE}
-.er4{color:#D6E35A;text-shadow:0 0 1px #D6E35A}
-.er5{color:#FFCD4A;text-shadow:0 0 1px #FFCD4A}
+.er2{color:#ccc;text-shadow:0 0 1px #ccc}
+.er3{color:#6bdfce;text-shadow:0 0 1px #6bdfce}
+.er4{color:#d6e35a;text-shadow:0 0 1px #d6e35a}
+.er5{color:#ffcd4a;text-shadow:0 0 1px #ffcd4a}
 .icon2,.icon3{z-index:0}
 .icon2{left:2px;width:171px;top:12px}
 .etype{left:23px;top:9px}

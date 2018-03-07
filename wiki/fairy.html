@@ -8,7 +8,15 @@
 <link href="../css/css_overwrite.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="../js/jquery.js"></script>
-<script src="../js/doll.js"></script>
+<script src="../js/jquery.quicksearch.min.js"></script>
+<script>
+	$(function () {
+		$('input#input').quicksearch('div#gun .dollcontainer', {
+			noResults: "#noResultMessage",
+			'bind': 'keyup keydown click input',
+		})
+	});
+</script>
 <title>Fairy</title>
 </head>
 <body>
@@ -19,7 +27,7 @@
 	<p>제조시간 : 3시간 00분 = 300 / 3시간 5분 = 305</p>
 	<p>별명 : 람보</p>
 </div>
-<input class="w3-input w3-center" type="text" placeholder="검색" id="input" onkeyup="filterFunction()">
+<input class="w3-input w3-center" type="text" placeholder="검색" id="input">
 <div class="w3-row-padding w3-padding-large w3-center" id="gun">
 <div class="w3-col w3-mobile w3-section dollcontainer">
 	<div class="w3-hover-shadow font fairy">
@@ -68,8 +76,8 @@
 <div class="w3-col w3-mobile w3-section dollcontainer">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">방어요정</p>
-		<img src="../img/etc/Battle_Fairy_info_cage.png" class="incage" alt="cage">
-		<img src="../img/etc/Battle_Fairy_Tag.png" class="ftype" alt="type">
+		<img src="../img/etc/Strategy_Fairy_info_cage.png" class="incage" alt="cage">
+		<img src="../img/etc/Strategy_Fairy_Tag.png" class="ftype" alt="type">
 		<img src="../img/etc/info_cage_up.png" class="cover" alt="cover">
 		<img src="../img/skill/defense.png" class="skill" alt="skill">
 		<img src="../img/fairy/defense_3.png" class="icon3" alt="icon">
@@ -123,8 +131,8 @@
 <div class="w3-col w3-mobile w3-section dollcontainer">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">증원요정</p>
-		<img src="../img/etc/Battle_Fairy_info_cage.png" class="incage" alt="cage">
-		<img src="../img/etc/Battle_Fairy_Tag.png" class="ftype" alt="type">
+		<img src="../img/etc/Strategy_Fairy_info_cage.png" class="incage" alt="cage">
+		<img src="../img/etc/Strategy_Fairy_Tag.png" class="ftype" alt="type">
 		<img src="../img/etc/info_cage_up.png" class="cover" alt="cover">
 		<img src="../img/skill/reinforce.png" class="skill" alt="skill">
 		<img src="../img/fairy/reinforce_3.png" class="icon3" alt="icon">
@@ -134,8 +142,8 @@
 <div class="w3-col w3-mobile w3-section dollcontainer">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">공수요정</p>
-		<img src="../img/etc/Battle_Fairy_info_cage.png" class="incage" alt="cage">
-		<img src="../img/etc/Battle_Fairy_Tag.png" class="ftype" alt="type">
+		<img src="../img/etc/Strategy_Fairy_info_cage.png" class="incage" alt="cage">
+		<img src="../img/etc/Strategy_Fairy_Tag.png" class="ftype" alt="type">
 		<img src="../img/etc/info_cage_up.png" class="cover" alt="cover">
 		<img src="../img/skill/airborne.png" class="skill" alt="skill">
 		<img src="../img/fairy/airborne_3.png" class="icon3" alt="icon">
@@ -145,8 +153,8 @@
 <div class="w3-col w3-mobile w3-section dollcontainer">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">매설요정</p>
-		<img src="../img/etc/Battle_Fairy_info_cage.png" class="incage" alt="cage">
-		<img src="../img/etc/Battle_Fairy_Tag.png" class="ftype" alt="type">
+		<img src="../img/etc/Strategy_Fairy_info_cage.png" class="incage" alt="cage">
+		<img src="../img/etc/Strategy_Fairy_Tag.png" class="ftype" alt="type">
 		<img src="../img/etc/info_cage_up.png" class="cover" alt="cover">
 		<img src="../img/skill/landmines.png" class="skill" alt="skill">
 		<img src="../img/fairy/landmines_3.png" class="icon3" alt="icon">
@@ -156,8 +164,8 @@
 <div class="w3-col w3-mobile w3-section dollcontainer">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">로켓요정</p>
-		<img src="../img/etc/Battle_Fairy_info_cage.png" class="incage" alt="cage">
-		<img src="../img/etc/Battle_Fairy_Tag.png" class="ftype" alt="type">
+		<img src="../img/etc/Strategy_Fairy_info_cage.png" class="incage" alt="cage">
+		<img src="../img/etc/Strategy_Fairy_Tag.png" class="ftype" alt="type">
 		<img src="../img/etc/info_cage_up.png" class="cover" alt="cover">
 		<img src="../img/skill/position.png" class="skill" alt="skill">
 		<img src="../img/fairy/position_3.png" class="icon3" alt="icon">
@@ -167,8 +175,8 @@
 <div class="w3-col w3-mobile w3-section dollcontainer">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">공사요정</p>
-		<img src="../img/etc/Battle_Fairy_info_cage.png" class="incage" alt="cage">
-		<img src="../img/etc/Battle_Fairy_Tag.png" class="ftype" alt="type">
+		<img src="../img/etc/Strategy_Fairy_info_cage.png" class="incage" alt="cage">
+		<img src="../img/etc/Strategy_Fairy_Tag.png" class="ftype" alt="type">
 		<img src="../img/etc/info_cage_up.png" class="cover" alt="cover">
 		<img src="../img/skill/fortress.png" class="skill" alt="skill">
 		<img src="../img/fairy/fortress_3.png" class="icon3" alt="icon">
@@ -178,8 +186,8 @@
 <div class="w3-col w3-mobile w3-section dollcontainer">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">지휘요정</p>
-		<img src="../img/etc/Battle_Fairy_info_cage.png" class="incage" alt="cage">
-		<img src="../img/etc/Battle_Fairy_Tag.png" class="ftype" alt="type">
+		<img src="../img/etc/Strategy_Fairy_info_cage.png" class="incage" alt="cage">
+		<img src="../img/etc/Strategy_Fairy_Tag.png" class="ftype" alt="type">
 		<img src="../img/etc/info_cage_up.png" class="cover" alt="cover">
 		<img src="../img/skill/command.png" class="skill" alt="skill">
 		<img src="../img/fairy/command_3.png" class="icon3" alt="icon">
@@ -189,8 +197,8 @@
 <div class="w3-col w3-mobile w3-section dollcontainer">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">수색요정</p>
-		<img src="../img/etc/Battle_Fairy_info_cage.png" class="incage" alt="cage">
-		<img src="../img/etc/Battle_Fairy_Tag.png" class="ftype" alt="type">
+		<img src="../img/etc/Strategy_Fairy_info_cage.png" class="incage" alt="cage">
+		<img src="../img/etc/Strategy_Fairy_Tag.png" class="ftype" alt="type">
 		<img src="../img/etc/info_cage_up.png" class="cover" alt="cover">
 		<img src="../img/skill/rescue.png" class="skill" alt="skill">
 		<img src="../img/fairy/rescue_3.png" class="icon3" alt="icon">
@@ -200,8 +208,8 @@
 <div class="w3-col w3-mobile w3-section dollcontainer">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">조명요정</p>
-		<img src="../img/etc/Battle_Fairy_info_cage.png" class="incage" alt="cage">
-		<img src="../img/etc/Battle_Fairy_Tag.png" class="ftype" alt="type">
+		<img src="../img/etc/Strategy_Fairy_info_cage.png" class="incage" alt="cage">
+		<img src="../img/etc/Strategy_Fairy_Tag.png" class="ftype" alt="type">
 		<img src="../img/etc/info_cage_up.png" class="cover" alt="cover">
 		<img src="../img/skill/illumine.png" class="skill" alt="skill">
 		<img src="../img/fairy/illumine_3.png" class="icon3" alt="icon">
@@ -222,8 +230,8 @@
 <div class="w3-col w3-mobile w3-section dollcontainer">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">취사요정</p>
-		<img src="../img/etc/Battle_Fairy_info_cage.png" class="incage" alt="cage">
-		<img src="../img/etc/Battle_Fairy_Tag.png" class="ftype" alt="type">
+		<img src="../img/etc/Unknown_Fairy_info_cage.png" class="incage" alt="cage">
+		<img src="../img/etc/Unknown_Fairy_Tag.png" class="ftype" alt="type">
 		<img src="../img/etc/info_cage_up.png" class="cover" alt="cover">
 		<img src="../img/skill/no_consumption.png" class="skill" alt="skill">
 		<img src="../img/fairy/no_consumption.png" class="icon3" alt="icon">
@@ -255,14 +263,22 @@
 <div class="w3-col w3-mobile w3-section dollcontainer">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">카구야</p>
-		<img src="../img/etc/Battle_Fairy_info_cage.png" class="incage" alt="cage">
-		<img src="../img/etc/Battle_Fairy_Tag.png" class="ftype" alt="type">
+		<img src="../img/etc/Strategy_Fairy_info_cage.png" class="incage" alt="cage">
+		<img src="../img/etc/Strategy_Fairy_Tag.png" class="ftype" alt="type">
 		<img src="../img/etc/info_cage_up.png" class="cover" alt="cover">
 		<img src="../img/skill/kaguya.png" class="skill" alt="skill">
 		<img src="../img/fairy/kaguya_3.png" class="icon3" alt="icon">
 		<div class="tag">제조불가/ㅋㄱㅇ</div>
 	</div>
 </div>
+</div>
+<div id="noResultMessage" class="no-results-container">
+	<div  class="w3-black w3-center">
+		<label class="f125 fw">검색가능한 종류</label>
+		<p>요정이름 : 공수/ㄱㅅ/ㄳ</p>
+		<p>제조시간 : 3시간 00분 = 300 / 3시간 5분 = 305</p>
+		<p>별명 : 람보</p>
+	</div>
 </div>
 </body>
 </html>
