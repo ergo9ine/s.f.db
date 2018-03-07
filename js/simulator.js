@@ -1,6 +1,4 @@
 // JavaScript Document
-// simulator
-var _0x34d5=["\x74\x6F\x6F\x6C\x73","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x73\x42\x79\x43\x6C\x61\x73\x73\x4E\x61\x6D\x65","\x6C\x65\x6E\x67\x74\x68","\x64\x69\x73\x70\x6C\x61\x79","\x73\x74\x79\x6C\x65","\x6E\x6F\x6E\x65","\x74\x61\x62\x6C\x69\x6E\x6B","\x63\x6C\x61\x73\x73\x4E\x61\x6D\x65","\x20\x77\x33\x2D\x72\x65\x64","","\x72\x65\x70\x6C\x61\x63\x65","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x62\x6C\x6F\x63\x6B","\x63\x75\x72\x72\x65\x6E\x74\x54\x61\x72\x67\x65\x74"];function tools(_0xe830x2,_0xe830x3){var _0xe830x4,_0xe830x5,_0xe830x6;_0xe830x5= document[_0x34d5[1]](_0x34d5[0]);for(_0xe830x4= 0;_0xe830x4< _0xe830x5[_0x34d5[2]];_0xe830x4++){_0xe830x5[_0xe830x4][_0x34d5[4]][_0x34d5[3]]= _0x34d5[5]};_0xe830x6= document[_0x34d5[1]](_0x34d5[6]);for(_0xe830x4= 0;_0xe830x4< _0xe830x5[_0x34d5[2]];_0xe830x4++){_0xe830x6[_0xe830x4][_0x34d5[7]]= _0xe830x6[_0xe830x4][_0x34d5[7]][_0x34d5[10]](_0x34d5[8],_0x34d5[9])};document[_0x34d5[11]](_0xe830x3)[_0x34d5[4]][_0x34d5[3]]= _0x34d5[12];_0xe830x2[_0x34d5[13]][_0x34d5[7]]+= _0x34d5[8]}
 // disc
 var c=[0,0,1,3,6,10,15,21,28,36,45,55,66,78,91,105,120,136,153,171,190,210,231,253,276,300,325,351,379,410,444,486,532,582,636,694,757,824,896,973,1055,1143,1236,1335,1440,1551,1669,1794,1925,2064,2210,2364,2525,2694,2871,3057,3252,3456,3669,3892,4125,4368,4621,4884,5158,5443,5739,6047,6367,6699,7043,7494,7962,8448,8952,9474,10014,10573,11152,11750,12368,13007,13667,14348,15051,15777,16525,17296,18091,18910,19753,20879,22040,23235,24466,25733,27037,28378,29757,31175,32632,33632,34832,36232,37832,39632,41632,43832,46232,49032,52632,57432,63832,72832,84832,100832,122832,152832,192832,242832,302832];document.getElementById("nlv").addEventListener("keyup",e);document.getElementById("tlv").addEventListener("keyup",e);document.getElementById("o").addEventListener("change",e);function e(){var	a=Number(document.getElementById("nlv").value),b=Number(document.getElementById("tlv").value),f=document.getElementById("o").checked+1,d=0;0<=c[a+1]-c[a]&&b>a&&(115<b&&(d+=Math.ceil((c[b]-c[115<a?a:115])/(30*f)),b=115),110<b&&115>a&&(d+=Math.ceil((c[b]-c[110<a?a:110])/(30*f)),b=110),100<b&&110>a&&(d+=Math.ceil((c[b]-c[100<a?a:1])/(30*f)),b=1),100>=b&&100>a&&(d+=Math.ceil((c[b]-c[a])/30)),document.getElementById("rrst").innerText="\uc791\uc804\ubcf4\uace0\uc11c "+d+"\uac1c \ud544\uc694")};
 // enhanced
@@ -14,36 +12,36 @@ var arrTcom = ["1tcom", "2tcom", "3tcom", "4tcom", "5tcom", "6tcom", "7tcom", "8
 var arrTnr = [0, 50, 85, 95, 99, 101, 102, 102, 102.5, 103, 103.5];
 var i;
 for (i = 0; i < arrCom.length; i++)
-    {
-    	document.getElementById(arrCom[i]).addEventListener("keyup", sumComfort);
-    	document.getElementById(arrSet[i]).addEventListener("keyup", sumComfort);
-    	document.getElementById(arrPet[i]).addEventListener("keyup", sumComfort);
-    	document.getElementById(arrTcom[i]).addEventListener("keyup", sumComfort);
-    }
+	{
+		document.getElementById(arrCom[i]).addEventListener("keyup", sumComfort);
+		document.getElementById(arrSet[i]).addEventListener("keyup", sumComfort);
+		document.getElementById(arrPet[i]).addEventListener("keyup", sumComfort);
+		document.getElementById(arrTcom[i]).addEventListener("keyup", sumComfort);
+	}
 var totalCom = 0;
 var totalTcom = 0;
 var numOfroom = 0;
 var totalBr = 0;
 var averageTbr = 0;
 function sumComfort() {
-    for (i = 0; i < arrCom.length; i++)
-    {
-    	totalCom = Number(document.getElementById(arrCom[i]).value) + Number(document.getElementById(arrSet[i]).value) + Number(document.getElementById(arrPet[i]).value);
-    	document.getElementById(arrTcom[i]).value = totalCom;
+	for (i = 0; i < arrCom.length; i++)
+	{
+		totalCom = Number(document.getElementById(arrCom[i]).value) + Number(document.getElementById(arrSet[i]).value) + Number(document.getElementById(arrPet[i]).value);
+		document.getElementById(arrTcom[i]).value = totalCom;
 		totalCom = 0;
 
-    	totalTcom = totalTcom + Number(document.getElementById(arrTcom[i]).value);		
+		totalTcom = totalTcom + Number(document.getElementById(arrTcom[i]).value);		
 		document.getElementById("tTcom").innerText = totalTcom;
 		if(document.getElementById(arrCom[i]).value != 0)
 		{
 			numOfroom = i + 1;
 			document.getElementById("tnr").innerText = numOfroom;
 		}
-    }
-    totalBr = 11 * totalTcom / 10000 + (-0.1 * totalTcom * totalTcom / 10000 / 10000) + arrTnr[Number(numOfroom) -1];
-    document.getElementById("tbr").innerText = totalBr.toFixed(2);
-    averageTbr = (11 * (totalTcom + 1000)) / 10000 + (-0.1 * ((totalTcom + 1000) * (totalTcom + 1000)) / 10000 / 10000)-((11 * totalTcom / 10000) + (-0.1 * (totalTcom * totalTcom) / 10000 / 10000));
-    document.getElementById("abtr").innerText = averageTbr.toFixed(2);
-    averageTbr = 0;
-    totalTcom = 0;	
+	}
+	totalBr = 11 * totalTcom / 10000 + (-0.1 * totalTcom * totalTcom / 10000 / 10000) + arrTnr[Number(numOfroom) -1];
+	document.getElementById("tbr").innerText = totalBr.toFixed(2);
+	averageTbr = (11 * (totalTcom + 1000)) / 10000 + (-0.1 * ((totalTcom + 1000) * (totalTcom + 1000)) / 10000 / 10000)-((11 * totalTcom / 10000) + (-0.1 * (totalTcom * totalTcom) / 10000 / 10000));
+	document.getElementById("abtr").innerText = averageTbr.toFixed(2);
+	averageTbr = 0;
+	totalTcom = 0;	
 }

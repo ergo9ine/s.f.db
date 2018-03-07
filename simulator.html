@@ -12,12 +12,11 @@
 <body>
 	<div class="w3-sidebar w3-bar-block	w3-black font" style="display:none;min-width:105px" id="Sidebar">
 		<button class="w3-bar-item w3-small w3-black w3-center w3-border-bottom w3-border-right" onclick="w_c()"><i class="fa fa-close"></i></button>
-		<div class="logo w3-margin-bottom w3-margin-top w3-center"><a href="index.html"><img src="img/logo/sidebar_gflogo.png" alt="logo" id="slogo"></a></div>
-		<input class="w3-input w3-border w3-padding w3-center" placeholder="메뉴검색" id="input" onkeyup="msearch()" type="text">
+		<div class="logo w3-margin-bottom w3-margin-top w3-center"><a href="#" onclick="tools(event,'index')"><img src="img/logo/sidebar_gflogo.png" alt="logo" id="slogo"></a></div>
 		<div id="menu">
 			<a class="w3-bar-item w3-button w3-hover-white" href="index.html">도감</a>
 			<a class="w3-bar-item w3-button w3-hover-white" href="simulator.html">시뮬레이터</a>
-			<a class="w3-bar-item	w3-button	w3-hover-white" href="#" onclick="tools(event,'index')">정보</a>
+			<a class="w3-bar-item w3-button w3-hover-white" href="#" onclick="tools(event,'index')">정보</a>
 			<a class="w3-bar-item w3-button w3-hover-white w3-disabled" href="#">About</a>
 			<a class="w3-bar-item w3-button w3-hover-white" href="https://discordapp.com/invite/8eTFTSa">Contact</a>
 		</div>
@@ -62,209 +61,167 @@
 					</div>
 					<div class="w3-half">
 						<table class="w3-table">
-						  <tr>
+						<tr>
 							<td>숙소명</td>
 							<td>숙소 안락도</td>
 							<td>세트 효과</td>
 							<td>애완동물</td>
 							<td>안락도 합계</td>
-						  </tr>
-						  <tr>
+						</tr>
+						<tr>
 							<th>제1숙소</th>
-							<th>
-							  <input class="w3-input" style="width:100%" required="required" min="0" id="1com" inputmode="numeric" placeholder="0"></th>
-							<th>
-				  				<input class="w3-input" style="width:100%" required="required" min="0" id="1set" inputmode="numeric" placeholder="0"></th>
-							<th>
-								<input class="w3-input" style="width:100%" required="required" min="0" id="1pet" inputmode="numeric" placeholder="0"></th>
-							<th>
-							  <input class="w3-input" style="width:100%" required="required" min="0" id="1tcom" inputmode="numeric" placeholder="0"></th>
-							
-						  </tr>
-						  <tr>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="1com" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="1set" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="1pet" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="1tcom" inputmode="numeric" placeholder="0"></th>
+						</tr>
+						<tr>
 							<th>제2숙소</th>
-							<th>
-							  <input class="w3-input" style="width:100%" required="required" min="0" id="2com" inputmode="numeric" placeholder="0"></th>
-							<th>
-				  				<input class="w3-input" style="width:100%" required="required" min="0" id="2set" inputmode="numeric" placeholder="0"></th>
-							<th>
-								<input class="w3-input" style="width:100%" required="required" min="0" id="2pet" inputmode="numeric" placeholder="0"></th>
-							<th>
-							  <input class="w3-input" style="width:100%" required="required" min="0" id="2tcom" inputmode="numeric" placeholder="0"></th>
-						  </tr>
-						  <tr>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="2com" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="2set" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="2pet" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="2tcom" inputmode="numeric" placeholder="0"></th>
+						</tr>
+						<tr>
 							<th>제3숙소</th>
-							<th>
-							  <input class="w3-input" style="width:100%" required="required" min="0" id="3com" inputmode="numeric" placeholder="0"></th>
-							<th>
-				  				<input class="w3-input" style="width:100%" required="required" min="0" id="3set" inputmode="numeric" placeholder="0"></th>
-							<th>
-								<input class="w3-input" style="width:100%" required="required" min="0" id="3pet" inputmode="numeric" placeholder="0"></th>
-							<th>
-							  <input class="w3-input" style="width:100%" required="required" min="0" id="3tcom" inputmode="numeric" placeholder="0"></th>
-						  </tr>
-						  <tr>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="3com" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="3set" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="3pet" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="3tcom" inputmode="numeric" placeholder="0"></th>
+						</tr>
+						<tr>
 							<th>제4숙소</th>
-							<th>
-							  <input class="w3-input" style="width:100%" required="required" min="0" id="4com" inputmode="numeric" placeholder="0"></th>
-							<th>
-				  				<input class="w3-input" style="width:100%" required="required" min="0" id="4set" inputmode="numeric" placeholder="0"></th>
-							<th>
-								<input class="w3-input" style="width:100%" required="required" min="0" id="4pet" inputmode="numeric" placeholder="0"></th>
-							<th>
-							  <input class="w3-input" style="width:100%" required="required" min="0" id="4tcom" inputmode="numeric" placeholder="0"></th>
-						  </tr>
-						  <tr>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="4com" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="4set" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="4pet" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="4tcom" inputmode="numeric" placeholder="0"></th>
+						</tr>
+						<tr>
 							<th>제5숙소</th>
-							<th>
-							  <input class="w3-input" style="width:100%" required="required" min="0" id="5com" inputmode="numeric" placeholder="0"></th>
-							<th>
-				  				<input class="w3-input" style="width:100%" required="required" min="0" id="5set" inputmode="numeric" placeholder="0"></th>
-							<th>
-								<input class="w3-input" style="width:100%" required="required" min="0" id="5pet" inputmode="numeric" placeholder="0"></th>
-							<th>
-								<input class="w3-input" style="width:100%" required="required" min="0" id="5tcom" inputmode="numeric" placeholder="0"></th>
-						  </tr>
-						  <tr>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="5com" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="5set" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="5pet" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="5tcom" inputmode="numeric" placeholder="0"></th>
+						</tr>
+						<tr>
 							<th>제6숙소</th>
-							<th>
-							  <input class="w3-input" style="width:100%" required="required" min="0" id="6com" inputmode="numeric" placeholder="0"></th>
-							<th>
-				  				<input class="w3-input" style="width:100%" required="required" min="0" id="6set" inputmode="numeric" placeholder="0"></th>
-							<th>
-								<input class="w3-input" style="width:100%" required="required" min="0" id="6pet" inputmode="numeric" placeholder="0"></th>
-							<th>
-								<input class="w3-input" style="width:100%" required="required" min="0" id="6tcom" inputmode="numeric" placeholder="0"></th>
-						  </tr>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="6com" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="6set" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="6pet" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="6tcom" inputmode="numeric" placeholder="0"></th>
+						</tr>
 							<tr>
 							<th>제7숙소</th>
-							<th>
-							  <input class="w3-input" style="width:100%" required="required" min="0" id="7com" inputmode="numeric" placeholder="0"></th>
-							<th>
-				  				<input class="w3-input" style="width:100%" required="required" min="0" id="7set" inputmode="numeric" placeholder="0"></th>
-							<th>
-								<input class="w3-input" style="width:100%" required="required" min="0" id="7pet" inputmode="numeric" placeholder="0"></th>
-							<th>
-								<input class="w3-input" style="width:100%" required="required" min="0" id="7tcom" inputmode="numeric" placeholder="0"></th>
-						  </tr>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="7com" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="7set" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="7pet" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="7tcom" inputmode="numeric" placeholder="0"></th>
+						</tr>
 							<tr>
 							<th>제8숙소</th>
-							<th>
-							  <input class="w3-input" style="width:100%" required="required" min="0" id="8com" inputmode="numeric" placeholder="0"></th>
-							<th>
-				  				<input class="w3-input" style="width:100%" required="required" min="0" id="8set" inputmode="numeric" placeholder="0"></th>
-							<th>
-								<input class="w3-input" style="width:100%" required="required" min="0" id="8pet" inputmode="numeric" placeholder="0"></th>
-							<th>
-								<input class="w3-input" style="width:100%" required="required" min="0" id="8tcom" inputmode="numeric" placeholder="0"></th>
-						  </tr>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="8com" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="8set" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="8pet" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="8tcom" inputmode="numeric" placeholder="0"></th>
+						</tr>
 							<tr>
 							<th>제9숙소</th>
-							<th>
-							  <input class="w3-input" style="width:100%" required="required" min="0" id="9com" inputmode="numeric" placeholder="0"></th>
-							<th>
-				  				<input class="w3-input" style="width:100%" required="required" min="0" id="9set" inputmode="numeric" placeholder="0"></th>
-							<th>
-								<input class="w3-input" style="width:100%" required="required" min="0" id="9pet" inputmode="numeric" placeholder="0"></th>
-							<th>
-								<input class="w3-input" style="width:100%" required="required" min="0" id="9tcom" inputmode="numeric" placeholder="0"></th>
-						  </tr>
-						  <tr>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="9com" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="9set" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="9pet" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="9tcom" inputmode="numeric" placeholder="0"></th>
+						</tr>
+						<tr>
 							<th>제10숙소</th>
-							<th>
-							  <input class="w3-input" style="width:100%" required="required" min="0" id="10com" inputmode="numeric" placeholder="0"></th>
-							<th>
-				  				<input class="w3-input" style="width:100%" required="required" min="0" id="10set" inputmode="numeric" placeholder="0"></th>
-							<th>
-								<input class="w3-input" style="width:100%" required="required" min="0" id="10pet" inputmode="numeric" placeholder="0"></th>
-							<th>
-							  <input class="w3-input" style="width:100%" required="required" min="0" id="10tcom" inputmode="numeric" placeholder="0"></th>
-						  </tr>							
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="10com" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="10set" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="10pet" inputmode="numeric" placeholder="0"></th>
+							<th><input class="w3-input" style="width:100%" required="required" min="0" id="10tcom" inputmode="numeric" placeholder="0"></th>
+						</tr>
 						</table>
 						<div>
 						</div>
 					</div>
-					<div class="w3-panel w3-half">						
+					<div class="w3-panel w3-half">
 						<div class="w3-panel w3-half">
-							
 							<div>
-							  <tr>
+							<tr>
 								<th>총 안락도</th>
-							  </tr>
-							  <tr>
+							</tr>
+							<tr>
 								<p id="tTcom"></p>
-							  </tr>
+							</tr>
 							</div>
 							<div>
-							  <tr>
+							<tr>
 								<th>개방 숙소 수</th>
-							  </tr>
-							  <tr>
+							</tr>
+							<tr>
 								<p id="tnr"></p>
-							  </tr>							
+							</tr>
 							</div>
 							<div>
-							  <tr>
+							<tr>
 								<th>전지 충전량(24시간 기준)</th>
-							  </tr>
-							  <tr>
+							</tr>
+							<tr>
 								<p id="tbr"></p>
-							  </tr>
+							</tr>
 							</div>
 							<div>
-							  <tr>
+							<tr>
 								<th>안락도 1000증가시 추가 전지</th>
-							  </tr>
-							  <tr>
+							</tr>
+							<tr>
 								<p id="abtr"></p>
-							  </tr>
+							</tr>
 							</div>
 						</div>
 						<div class="w3-panel w3-half">
 							<table>
-							  <tr>
+							<tr>
 								<td colspan="2">숙소 개방당 얻는 전지 수:</td>
-							  </tr>
-							  <tr>
+							</tr>
+							<tr>
 								<td>2</td>
 								<th>50</th>
-							  </tr>
-						      <tr>								  
+							</tr>
+							<tr>
 								<td>3</td>
 								<th>85</th>
-							  </tr>
-							  <tr>								  
+							</tr>
+							<tr>
 								<td>4</td>
 								<th>95</th>
-							  </tr>
-							  <tr>								  
+							</tr>
+							<tr>
 								<td>5</td>
 								<th>99</th>
-							  </tr>
-							  <tr>								  
+							</tr>
+							<tr>
 								<td>6</td>
 								<th>101</th>
-							  </tr>
-							  <tr>								  
+							</tr>
+							<tr>
 								<td>7</td>
 								<th>102</th>
-							  </tr>
-							  <tr>								  
+							</tr>
+							<tr>
 								<td>7</td>
 								<th>102</th>
-							  </tr>
-							  <tr>								  
+							</tr>
+							<tr>
 								<td>8</td>
 								<th>102.5</th>
-							  </tr>
-							  <tr>								  
+							</tr>
+							<tr>
 								<td>9</td>
 								<th>103</th>
-							  </tr>
-							  <tr>								  
+							</tr>
+							<tr>
 								<td>10</td>
 								<th>103.5</th>
-							  </tr>
+							</tr>
 							</table>
 						</div>
 					</div>
@@ -296,7 +253,6 @@
 			</div>
 		</div>
 	</div>
-<script src="js/battery.js"></script>
 <script src="js/index.js"></script>
 <script src="js/simulator.js"></script>
 </body>
