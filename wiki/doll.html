@@ -9,16 +9,8 @@
 <script src="../js/jquery.js"></script>
 <script src="../js/jquery.quicksearch.min.js"></script>
 <script>
-	$(function () {
-		$('input#input').quicksearch('div#gun .dollcontainer', {
-			noResults: "#noResultMessage",
-			'bind': 'keyup keydown click input'
-		})
-	});
-</script>
-<script>
-function doll_open(){document.getElementById("dollfunc").style.width="100%";document.getElementById("dollfunc").style.display="block";document.getElementById("list").style.display="none"}
-function doll_close(){document.getElementById("dollfunc").style.display="none";document.getElementById("list").style.display="block"};
+$(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#noResultMessage",bind:"keyup keydown click input"})});
+function doll_open(){document.getElementById("dollfunc").style.width="100%";document.getElementById("dollfunc").style.display="block";document.getElementById("list").style.display="none"}function doll_close(){document.getElementById("dollfunc").style.display="none";document.getElementById("list").style.display="block"};
 </script>
 <title>T-doll</title>
 </head>
