@@ -10,8 +10,31 @@
 <link href="../css/f_tools.css" rel="stylesheet">
 <script src="../js/jquery.js"></script>
 <script src="../js/jquery.quicksearch.min.js"></script>
+<script src="../js/localforage.min.js"></script>
+<script>console.log('localforage is: ', localforage);</script>
 <script>
-$(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#noResultMessage",bind:"keyup keydown click input"})});
+$(function(){$("input#input").quicksearch("div#gun>.dollcontainer",{noResults:"#noResultMessage",bind:"keyup keydown click input"})});
+</script>
+<script>
+var db;
+var request = indexedDB.open("SANGVIS FERRI Database",1);
+request.onerror = function(event) {
+  alert("Why didn't you allow my web app to use IndexedDB?!");
+};
+request.onsuccess = function(event) {
+  db = request.result;
+};
+localforage.config({
+    name: 'SFDB',
+	storeName:'datafair',
+});
+localforage.setItem('somekey', 'some value', function(err, value) {
+    // Do other things once the value has been saved.
+    console.log(value);
+    localforage.getItem('somekey', function(err,value) {
+        console.log('we just read ' + value);
+    });
+});
 </script>
 <title>Fairy</title>
 </head>
