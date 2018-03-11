@@ -7,11 +7,6 @@
 <link href="../css/w3.css" rel="stylesheet">
 <link href="../css/css_overwrite.css" rel="stylesheet">
 <link href="../css/e_tools.css" rel="stylesheet">
-<script src="../js/jquery.js"></script>
-<script src="../js/jquery.quicksearch.min.js"></script>
-<script>
-$(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#noResultMessage",bind:"keyup keydown click input"})});
-</script>
 <title>Equipment</title>
 </head>
 <body>
@@ -22,9 +17,44 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 	<p>제조시간 : 4500 0500</p>
 	<p><s>별명 : 똥골</s> 개선중</p>
 </div>
-<input class="w3-input w3-center" type="text" placeholder="검색" id="input">
-<div class="w3-row-padding w3-padding-large w3-center" id="gun">
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-bar w3-black">
+	<div class="w3-half">
+		<div class="w3-bar w3-black">
+			<ul class="sf">싱글 필터
+				<li class="w3-button fc active" data-filter="all">All</li>
+				<li class="w3-button fc" data-filter="2">2성</li>
+				<li class="w3-button fc" data-filter="3">3성</li>
+				<li class="w3-button fc" data-filter="4">4성</li>
+				<li class="w3-button fc" data-filter="5">5성</li>
+			</ul>
+		</div>
+		<div class="w3-bar w3-black">
+			<ul class="mf">
+				멀티 필터
+				<li class="w3-button fc active" data-multifilter="2">전투</li>
+				<li class="w3-button fc active" data-multifilter="3">전략</li>
+			  <li class="w3-button fc active" data-multifilter="4">이벤트</li>
+			</ul>
+		</div>
+	</div>
+	<div class="w3-half">
+		<div class="w3-bar w3-black">
+			정렬 및 셔플
+			<button class="w3-button fc shuffle" data-shuffle>셔플</button>
+			<ul class="fo" style="display:inline-block">
+				<li class="w3-button fc active" data-sortAsc>▲</li>
+				<li class="w3-button fc " data-sortDesc>▼</li>
+			</ul>
+			<select style="vertical-align:middle" data-sortOrder>
+					<option value="index">도감번호</option>
+					<option value="sortData">종류</option>
+			</select>
+		</div>
+	</div>
+</div>
+<input type="text" placeholder="검색" class="w3-input fc search" name="search" data-search>
+<div class="filtr-container w3-center" id="gun">
+<div class="w3-mobile dollcontainer filtr-item" data-category="2">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er2">BM 3-12X40</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -36,7 +66,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">0500</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="3">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er3">LRA 2-12X50</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -49,7 +79,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">2000</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="4">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er4">PSO-1</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -64,7 +94,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">3500</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">VFL 6-24X56</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -79,7 +109,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">4500</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="2">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er2">EOT 506</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -91,7 +121,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">0800</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="3">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er3">EOT 512</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -104,7 +134,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">2300</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="4">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er4">EOT 516</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -119,7 +149,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">3800</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">EOT 518</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -134,7 +164,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">4800</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="2">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er2">AMP COMPM2</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -146,20 +176,20 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">1000</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="3">
 	<div class="w3-hover-shadow font equip">
-			<p class="name poeq f125 er3">AMP COMPM4</p>
-			<img src="../img/etc/star.png" class="star r1" alt="rarity">
-			<img src="../img/etc/star.png" class="star r2" alt="rarity">
-			<img src="../img/etc/star.png" class="star r3" alt="rarity">
-			<i class="equip_info_cage_3 incage"></i>
-			<i class="bg_3 bg"></i>
-			<img src="../img/etc/3_acog.png" class="etype" alt="type">
-			<img src="../img/equip/acog.png" class="icon2" alt="icon">
+		<p class="name poeq f125 er3">AMP COMPM4</p>
+		<img src="../img/etc/star.png" class="star r1" alt="rarity">
+		<img src="../img/etc/star.png" class="star r2" alt="rarity">
+		<img src="../img/etc/star.png" class="star r3" alt="rarity">
+		<i class="equip_info_cage_3 incage"></i>
+		<i class="bg_3 bg"></i>
+		<img src="../img/etc/3_acog.png" class="etype" alt="type">
+		<img src="../img/equip/acog.png" class="icon2" alt="icon">
 		<div class="tag">2500</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="4">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er4">COG M150</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -174,7 +204,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">4000</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">ITI MARS</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -189,7 +219,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">5000</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="2">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er2">PEQ-2</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -201,7 +231,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">0900</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="3">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er3">PEQ-5</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -214,7 +244,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">2400</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="4">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er4">PEQ-15</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -229,7 +259,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">3900</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">PEQ-16A</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -244,7 +274,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">4900</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f115 er5">16Lab 적외선 지시기</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -259,7 +289,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="2">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er2">AC1 소음기</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -271,7 +301,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">0700</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="3">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er3">AC2 소음기</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -284,7 +314,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">2200</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="4">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er4">AC3 소음기</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -299,7 +329,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">3700</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">AC4 소음기</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -314,7 +344,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">4700</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="2">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er2">M61 철갑탄</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -326,7 +356,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">0700</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="3">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er3">M993 철갑탄</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -339,7 +369,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">2000</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="4">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er4">Mk169 철갑탄</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -354,7 +384,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">3500</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">Mk211 고폭철갑탄</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -369,7 +399,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">4500</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f115 er5">16Lab 차구경철갑탄</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -384,7 +414,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">4500</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="2">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er2">FMJ 고속탄</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -396,7 +426,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">1800</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="3">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er3">JSP 고속탄</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -409,7 +439,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">3300</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="4">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er4">JHP 고속탄</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -424,7 +454,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">4800</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">APCR 고속탄</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -439,7 +469,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">5800</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="2">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er2">ILM HP탄</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -451,7 +481,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">1300</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="3">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er3">ILM HP탄</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -464,7 +494,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">2800</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="4">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er4">ILM HP탄</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -479,7 +509,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">4300</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">ILM HP탄</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -494,7 +524,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">5300</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">16Lab HP탄</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -509,7 +539,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="2">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er2">#1 벅샷</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -521,7 +551,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">1400</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="3">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er3">#0 벅샷</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -534,7 +564,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">2900</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="4">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er4">#00 벅샷</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -549,7 +579,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">4400</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">#000 벅샷</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -564,7 +594,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">5400</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">16Lab 벅샷</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -579,7 +609,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="2">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er2">BK 슬러그</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -591,7 +621,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">1400</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="3">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er3">FST 슬러그</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -604,7 +634,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">2900</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="4">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er4">WAD 슬러그</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -619,7 +649,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">4400</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">SABOT 슬러그</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -634,7 +664,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">5400</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="2">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er2">IOP T1 외골격</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -646,7 +676,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">1200</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="3">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er3">IOP T2 외골격</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -659,7 +689,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">2700</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="4">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er4">IOP T3 외골격</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -674,7 +704,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">4200</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">IOP T4 외골격</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -689,7 +719,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">5200</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="2">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er2">IOP X1 외골격</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -701,7 +731,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">1200</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="3">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er3">IOP X2 외골격</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -714,7 +744,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">2700</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="4">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er4">IOP X3 외골격</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -729,7 +759,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">4200</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">IOP X4 외골격</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -744,7 +774,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">5200</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="3">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er3">IType1 방탄삽판</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -757,7 +787,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">2600</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="4">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er4">Type2 방탄삽판</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -772,7 +802,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">4100</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">Type3 방탄삽판</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -787,7 +817,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">5100</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">16Lab 방탄삽판</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -802,7 +832,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f115 er4">IOP 대용량 탄약상자</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -817,7 +847,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">4700</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">IOP대용량 탄약통</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -832,7 +862,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">5700</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="2">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er2">낡은 슈트</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -844,7 +874,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">1200</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="3">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er3">위장용 슈트</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -857,7 +887,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">2700</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="4">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er4">도시 미채 슈트</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -872,7 +902,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">4200</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">열광학 미채 슈트</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -887,7 +917,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">5200</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">16Lab 열광학 슈트</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -902,7 +932,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">5200</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">KSTP</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -917,7 +947,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">KST1P8</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -932,7 +962,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">KST1P7</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -947,7 +977,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">PM 5-25X56</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -962,7 +992,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="4">
 	<div class="w3-hover-shadow font equip">
 			<p class="name poeq f125 er4">EOT XPS3</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -978,7 +1008,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f115 er5">PKM03M 야간조준경</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -993,7 +1023,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">특수 기동장갑</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1008,7 +1038,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">UMP UX 외골격</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1023,7 +1053,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">5200</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">GSG UX 외골격</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1038,7 +1068,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">XM261 탄약</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1053,7 +1083,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">.300 BLK 고속탄</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1068,7 +1098,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">사격경기용 철갑탄</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1083,7 +1113,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">제조불가/춘전탄</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">64식용 소음기</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1098,7 +1128,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">Titan 사격제어칩</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1113,7 +1143,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">Hayha 메모리 칩</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1128,7 +1158,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">전술용 메모리 칩</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1143,7 +1173,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">업그레이드 디스크</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1158,7 +1188,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">조정간 트리거셋</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1173,7 +1203,7 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="5">
 	<div class="w3-hover-shadow font equip">
 		<p class="name poeq f125 er5">남겨진 무기상자</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1189,13 +1219,56 @@ $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#
 	</div>
 </div>
 </div>
-<div id="noResultMessage" class="no-results-container">
-	<div  class="w3-black w3-center">
-		<label class="f125 fw">검색가능한 종류</label>
-		<p>장비이름 : PSO-1/PSO</p>
-		<p>제조시간 : 4500 0500</p>
-		<p><s>별명 : 똥골</s> 개선중</p>
-	</div>
-</div>
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery.filterizr.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('.sf .fc').click(function() {
+		$('.sf .fc').removeClass('active');
+		$(this).addClass('active');
+	});
+	$('.mf li').click(function() {
+        var targetFilter = $(this).data('multifltr');
+        if (targetFilter === 'all') {
+            $('.mf li').removeClass('active');
+            $(this).addClass('active');
+        }
+        else {
+            $('.mf li[data-multifltr="all"]').removeClass('active');
+            $(this).toggleClass('active');
+        }
+	});
+	$('.shuffle').click(function() {
+		$('.fo .fc').removeClass('active');
+		$(this).addClass('active');
+	});
+	$('.fo .fc').click(function() {
+		$('.shuffle').removeClass('active');
+		$('.fo .fc').removeClass('active');
+		$(this).addClass('active');
+	});
+});
+</script>
+<script>
+$(function() {var f = $('#gun').filterizr({
+	controlsSelector: '.fc' ,
+	filterOutCss: {
+	  opacity: 0,
+	  transform: 'scale(0.75)'
+		},
+		filterInCss: {
+	  opacity: 1,
+	  transform: 'scale(1)'
+		}
+	});
+	window.filterizr = f;
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.4.2/lazyload.min.js"></script>
+<script>
+    new LazyLoad({
+		elements_selector: "img"
+	});
+</script>
 </body>
 </html>

@@ -13,7 +13,7 @@ a,a:visited,a:link,a:hover,a:active{color:#666;text-decoration:none}
 #calendar{max-width:520px}
 .fc-today{background-color:#e06969!important}
 /*doll*/
-.dollcontainer{width:calc(12.5%);min-width:200px;will-change:transform;transform:translateZ(0)}
+.dollcontainer{width:calc(12.5%);min-width:200px;padding:24px}
 .tdoll,.equip,.fairy{position:relative;margin:0 auto}
 .tdoll,.poeq,.pofa,.equip,.fairy{width:175px}
 .tdoll{height:371px}
@@ -48,6 +48,7 @@ a,a:visited,a:link,a:hover,a:active{color:#666;text-decoration:none}
 .fairy{height:300px}
 .cover{right:3px}
 .skill{left:25px;top:234px}
+.active{background-color:#ccc}
 /*Simulator*/
 #result th,#result td,#battery th,#battery td{text-align:center;vertical-align:middle;border-style:solid;border-width:1px}
 #result tbody tr:nth-child(1),#result tbody tr:nth-child(10),#result tbody tr:nth-child(20),#result tbody tr:nth-child(26),#result tbody tr:nth-child(33){background-color:#fff;color:#000}

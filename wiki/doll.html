@@ -7,7 +7,7 @@
 <link href="../css/w3.css" rel="stylesheet">
 <link href="../css/css_overwrite.css" rel="stylesheet">
 <script src="../js/jquery.js"></script>
-<script src="../js/jquery.quicksearch.min.js"></script>
+<script src="../js/jquery.filterizr.min.js"></script>
 <script>
 $(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#noResultMessage",bind:"keyup keydown click input"})});
 function doll_open(){document.getElementById("dollfunc").style.width="100%";document.getElementById("dollfunc").style.display="block";document.getElementById("list").style.display="none"}function doll_close(){document.getElementById("dollfunc").style.display="none";document.getElementById("list").style.display="block"};
@@ -140,9 +140,9 @@ function myFunction(id) {
 		<p><s>제조시간 :4500 0500</s> - 개선중 -</p>
 		<p>별명 :콜라</p>
 </div>
-<input class="w3-input w3-center" type="text" placeholder="검색" id="input">
-<div class="w3-row-padding w3-padding-large w3-center" id="gun">
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<input type="text" placeholder="검색창 업그레이드중" class="w3-input fc search" name="search" data-search disabled>
+<div class="w3-center" id="gun">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll" onclick="doll_open()">
 		<div class="w3-text-white no">1</div>
 		<p class="w3-text-black name podo f125">콜트 리볼버</p>
@@ -156,7 +156,7 @@ function myFunction(id) {
 		<div class="tag">콜라</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll" onclick="doll_open()">
 		<div class="w3-text-white no">2</div>
 		<p class="w3-text-black name podo f125">M1911</p>
@@ -168,7 +168,7 @@ function myFunction(id) {
 		<div class="tag">달링/운명이/운메이</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll" onclick="doll_open()">
 		<div class="w3-text-white no">3</div>
 		<p class="w3-text-black name podo f125">M9</p>
@@ -181,7 +181,7 @@ function myFunction(id) {
 		<div class="tag">엠구</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">5</div>
 		<p class="w3-text-black name podo f125">나강 리볼버</p>
@@ -193,7 +193,7 @@ function myFunction(id) {
 		<div class="tag">나강할매</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">6</div>
 		<p class="w3-text-black name podo f125">토카레프</p>
@@ -206,7 +206,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">7</div>
 		<p class="w3-text-black name podo f125">스테츠킨</p>
@@ -220,7 +220,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">8</div>
 		<p class="w3-text-black name podo f125">마카로프</p>
@@ -232,7 +232,7 @@ function myFunction(id) {
 		<img src="../img/t_doll/8_i.png" alt="icon">
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">9</div>
 		<p class="w3-text-black name podo f125">P38</p>
@@ -244,7 +244,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">10</div>
 		<p class="w3-text-black name podo f125">PPK</p>
@@ -256,7 +256,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">11</div>
 		<p class="w3-text-black name podo f125">P08</p>
@@ -269,7 +269,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">12</div>
 		<p class="w3-text-black name podo f125">C96</p>
@@ -282,7 +282,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">13</div>
 		<p class="w3-text-black name podo f125">92식</p>
@@ -295,7 +295,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">14</div>
 		<p class="w3-text-black name podo f125">아스트라 리볼버</p>
@@ -308,7 +308,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">15</div>
 		<p class="w3-text-black name podo f125">글록 17</p>
@@ -321,7 +321,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">16</div>
 		<p class="w3-text-black name podo f125">톰슨</p>
@@ -336,7 +336,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">17</div>
 		<p class="w3-text-black name podo f125">M3</p>
@@ -349,7 +349,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">18</div>
 		<p class="w3-text-black name podo f125">MAC-10</p>
@@ -362,7 +362,7 @@ function myFunction(id) {
 		<div class="tag">잉그램</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">19</div>
 		<p class="w3-text-black name podo f125">FMG-9</p>
@@ -375,7 +375,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">20</div>
 		<p class="w3-text-black name podo f125">Vector</p>
@@ -390,7 +390,7 @@ function myFunction(id) {
 		<div class="tag">벡린탄</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">21</div>
 		<p class="w3-text-black name podo f125">PPSh-41</p>
@@ -403,7 +403,7 @@ function myFunction(id) {
 		<div class="tag">파파샤</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">22</div>
 		<p class="w3-text-black name podo f125">PPS-43</p>
@@ -416,7 +416,7 @@ function myFunction(id) {
 		<div class="tag">핑파샤</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">23</div>
 		<p class="w3-text-black name podo f125">PP-90</p>
@@ -431,7 +431,7 @@ function myFunction(id) {
 		<div class="tag">란코</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">24</div>
 		<p class="w3-text-black name podo f125">PP-2000</p>
@@ -444,7 +444,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">25</div>
 		<p class="w3-text-black name podo f125">MP40</p>
@@ -457,7 +457,7 @@ function myFunction(id) {
 		<div class="tag">이승만</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">26</div>
 		<p class="w3-text-black name podo f125">MP5</p>
@@ -472,7 +472,7 @@ function myFunction(id) {
 		<div class="tag">우유</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">27</div>
 		<p class="w3-text-black name podo f125">스콜피온</p>
@@ -485,7 +485,7 @@ function myFunction(id) {
 		<div class="tag">사소리/전갈/스콜</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">28</div>
 		<p class="w3-text-black name podo f125">MP7</p>
@@ -500,7 +500,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">29</div>
 		<p class="w3-text-black name podo f125">스텐 Mk II</p>
@@ -513,7 +513,7 @@ function myFunction(id) {
 		<div class="tag">스텐/스댕/비빗쟈/대괴수</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">31</div>
 		<p class="w3-text-black name podo f125">베레타 38형</p>
@@ -526,7 +526,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">32</div>
 		<p class="w3-text-black name podo f125">마이크로 우지</p>
@@ -539,7 +539,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">33</div>
 		<p class="w3-text-black name podo f125">m45</p>
@@ -552,7 +552,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">34</div>
 		<p class="w3-text-black name podo f125">M1 개런드</p>
@@ -565,7 +565,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">35</div>
 		<p class="w3-text-black name podo f125">M1A1</p>
@@ -578,7 +578,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">36</div>
 	<p class="w3-text-black name podo f125">스프링필드</p>
@@ -592,7 +592,7 @@ function myFunction(id) {
 		<div class="tag">춘전</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">37</div>
 		<p class="w3-text-black name podo f125">M14</p>
@@ -605,7 +605,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">38</div>
 		<p class="w3-text-black name podo f125">M21</p>
@@ -618,7 +618,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">39</div>
 	<p class="w3-text-black name podo f125">모신나강</p>
@@ -632,7 +632,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">40</div>
 		<p class="w3-text-black name podo f125">SVT-38</p>
@@ -644,7 +644,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">41</div>
 		<p class="w3-text-black name podo f125">시모노프</p>
@@ -656,7 +656,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">42</div>
 	<p class="w3-text-black name podo f125">PTRD</p>
@@ -670,7 +670,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">43</div>
 	<p class="w3-text-black name podo f125">SVD</p>
@@ -684,7 +684,7 @@ function myFunction(id) {
 		<div class="tag">스브드</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">44</div>
 		<p class="w3-text-black name podo f125">SV-98</p>
@@ -697,7 +697,7 @@ function myFunction(id) {
 		<div class="tag">스브/스브98</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">46</div>
 	<p class="w3-text-black name podo f125">Kar98k</p>
@@ -712,7 +712,7 @@ function myFunction(id) {
 		<div class="tag">카구팔/피규어</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">47</div>
 		<p class="w3-text-black name podo f125">G43</p>
@@ -724,7 +724,7 @@ function myFunction(id) {
 		<div class="tag">구텐탁</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">48</div>
 	<p class="w3-text-black name podo f125">WA2000</p>
@@ -739,7 +739,7 @@ function myFunction(id) {
 		<div class="tag">와쟝/와쨩</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">49</div>
 		<p class="w3-text-black name podo f125">56식 반</p>
@@ -752,7 +752,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">50</div>
 	<p class="w3-text-black name podo f125">리-엔필드</p>
@@ -767,7 +767,7 @@ function myFunction(id) {
 		<div class="tag">리엔</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">51</div>
 		<p class="w3-text-black name podo f125">FN-49</p>
@@ -779,7 +779,7 @@ function myFunction(id) {
 		<div class="tag">요요요/요로시쿠</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">52</div>
 		<p class="w3-text-black name podo f125">BM59</p>
@@ -791,7 +791,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">53</div>
 	<p class="w3-text-black name podo f125">NTW-20</p>
@@ -806,7 +806,7 @@ function myFunction(id) {
 		<div class="tag">노태우/송준혁</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">54</div>
 		<p class="w3-text-black name podo f125">M16A1</p>
@@ -820,7 +820,7 @@ function myFunction(id) {
 		<div class="tag">우리형</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">55</div>
 		<p class="w3-text-black name podo f125">M4A1</p>
@@ -834,7 +834,7 @@ function myFunction(id) {
 		<div class="tag">엠포/시나몬롤</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">56</div>
 		<p class="w3-text-black name podo f125">M4 SOPMODII</p>
@@ -848,7 +848,7 @@ function myFunction(id) {
 		<div class="tag">솦/소프모드</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">57</div>
 		<p class="w3-text-black name podo f125">ST AR-15</p>
@@ -862,7 +862,7 @@ function myFunction(id) {
 		<div class="tag">스타/스타쟝</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">58</div>
 		<p class="w3-text-black name podo f125">AK-47</p>
@@ -875,7 +875,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">60</div>
 		<p class="w3-text-black name podo f125">AS Val</p>
@@ -889,7 +889,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">61</div>
 		<p class="w3-text-black name podo f125">StG44</p>
@@ -902,7 +902,7 @@ function myFunction(id) {
 		<div class="tag">서태지</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">62</div>
 		<p class="w3-text-black name podo f125">G41</p>
@@ -917,7 +917,7 @@ function myFunction(id) {
 		<div class="tag">댕댕이</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">63</div>
 		<p class="w3-text-black name podo f125">G3</p>
@@ -929,7 +929,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">64</div>
 		<p class="w3-text-black name podo f125">G36</p>
@@ -943,7 +943,7 @@ function myFunction(id) {
 		<div class="tag">지상렬/상렬이</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">65</div>
 		<p class="w3-text-black name podo f125">HK416</p>
@@ -958,7 +958,7 @@ function myFunction(id) {
 		<div class="tag">흥국</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">66</div>
 		<p class="w3-text-black name podo f125">56-1식</p>
@@ -972,7 +972,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">68</div>
 		<p class="w3-text-black name podo f125">L85A1</p>
@@ -984,7 +984,7 @@ function myFunction(id) {
 		<div class="tag">장미/하지메마시떼</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">69</div>
 		<p class="w3-text-black name podo f125">FAMAS</p>
@@ -998,7 +998,7 @@ function myFunction(id) {
 		<div class="tag">파마스</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">70</div>
 		<p class="w3-text-black name podo f125">FNC</p>
@@ -1011,7 +1011,7 @@ function myFunction(id) {
 		<div class="tag">초코</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">71</div>
 		<p class="w3-text-black name podo f125">갈릴</p>
@@ -1023,7 +1023,7 @@ function myFunction(id) {
 		<div class="tag">타르/타보르</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">72</div>
 		<p class="w3-text-black name podo f125">TAR-21</p>
@@ -1037,7 +1037,7 @@ function myFunction(id) {
 		<div class="tag">타르/타보르</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">74</div>
 		<p class="w3-text-black name podo f125">SIG-510</p>
@@ -1049,7 +1049,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">75</div>
 		<p class="w3-text-black name podo f125">M1918</p>
@@ -1063,7 +1063,7 @@ function myFunction(id) {
 		<div class="tag">바쟝/브라우닝/바줌마</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">77</div>
 		<p class="w3-text-black name podo f125">M2HB</p>
@@ -1076,7 +1076,7 @@ function myFunction(id) {
 		<div class="tag">쵸로이</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">78</div>
 		<p class="w3-text-black name podo f125">M60</p>
@@ -1090,7 +1090,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">79</div>
 		<p class="w3-text-black name podo f125">M249 SAW</p>
@@ -1103,7 +1103,7 @@ function myFunction(id) {
 		<div class="tag">엠이사구/풍선껌</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">80</div>
 		<p class="w3-text-black name podo f125">M1919A4</p>
@@ -1116,7 +1116,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">81</div>
 		<p class="w3-text-black name podo f125">LWMMG</p>
@@ -1128,7 +1128,7 @@ function myFunction(id) {
 		<div class="tag">람쥐</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">82</div>
 		<p class="w3-text-black name podo f125">DP28</p>
@@ -1140,7 +1140,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">84</div>
 		<p class="w3-text-black name podo f125">PRD</p>
@@ -1153,7 +1153,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">85</div>
 		<p class="w3-text-black name podo f125">PK</p>
@@ -1167,7 +1167,7 @@ function myFunction(id) {
 		<div class="tag">피케이</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">86</div>
 		<p class="w3-text-black name podo f125">MG42</p>
@@ -1180,7 +1180,7 @@ function myFunction(id) {
 		<div class="tag">전기톱</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">87</div>
 		<p class="w3-text-black name podo f125">MG34</p>
@@ -1192,7 +1192,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">88</div>
 		<p class="w3-text-black name podo f125">MG3</p>
@@ -1206,7 +1206,7 @@ function myFunction(id) {
 		<div class="tag">망삼</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">89</div>
 		<p class="w3-text-black name podo f125">브렌</p>
@@ -1219,7 +1219,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">90</div>
 		<p class="w3-text-black name podo f125">FNP-9</p>
@@ -1231,7 +1231,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">91</div>
 		<p class="w3-text-black name podo f125">MP-446</p>
@@ -1243,7 +1243,7 @@ function myFunction(id) {
 		<div class="tag">바이킹</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">92</div>
 		<p class="w3-text-black name podo f125">Spectre M4</p>
@@ -1256,7 +1256,7 @@ function myFunction(id) {
 		<div class="tag">스펙트라</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">93</div>
 		<p class="w3-text-black name podo f125">IDW</p>
@@ -1269,7 +1269,7 @@ function myFunction(id) {
 		<div class="tag">아이디다브류</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">94</div>
 		<p class="w3-text-black name podo f125">64식</p>
@@ -1282,7 +1282,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">95</div>
 		<p class="w3-text-black name podo f125">한양조 88식</p>
@@ -1295,7 +1295,7 @@ function myFunction(id) {
 		<div class="tag">한조/한양조/한조 대기중</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">96</div>
 		<p class="w3-text-black name podo f125">그리즐리 Mk V</p>
@@ -1310,7 +1310,7 @@ function myFunction(id) {
 		<div class="tag">그리즐리/웅녀/웅누나/곰</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">97</div>
 		<p class="w3-text-black name podo f125">M950A</p>
@@ -1325,7 +1325,7 @@ function myFunction(id) {
 		<div class="tag">캘리코/미역</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">98</div>
 		<p class="w3-text-black name podo f125">SPP-1</p>
@@ -1339,7 +1339,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">99</div>
 		<p class="w3-text-black name podo f125">Mk23</p>
@@ -1353,7 +1353,7 @@ function myFunction(id) {
 		<div class="tag">달링</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">100</div>
 		<p class="w3-text-black name podo f125">P7</p>
@@ -1367,7 +1367,7 @@ function myFunction(id) {
 		<div class="tag">삐칠</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">101</div>
 		<p class="w3-text-black name podo f125">UMP9</p>
@@ -1382,7 +1382,7 @@ function myFunction(id) {
 		<div class="tag">움뀨</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">102</div>
 		<p class="w3-text-black name podo f125">UMP40</p>
@@ -1397,7 +1397,7 @@ function myFunction(id) {
 		<div class="tag">움사공</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">103</div>
 		<p class="w3-text-black name podo f125">UMP45</p>
@@ -1412,7 +1412,7 @@ function myFunction(id) {
 		<div class="tag">움사오</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">104</div>
 		<p class="w3-text-black name podo f125">G36C</p>
@@ -1427,7 +1427,7 @@ function myFunction(id) {
 		<div class="tag">지상렬씨</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">105</div>
 		<p class="w3-text-black name podo f125">OTs-12</p>
@@ -1440,7 +1440,7 @@ function myFunction(id) {
 		<div class="tag">티스</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">106</div>
 		<p class="w3-text-black name podo f125">FAL</p>
@@ -1455,7 +1455,7 @@ function myFunction(id) {
 		<div class="tag">팔/족제비</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">107</div>
 		<p class="w3-text-black name podo f125">F2000</p>
@@ -1467,7 +1467,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">108</div>
 		<p class="w3-text-black name podo f125">CZ-805</p>
@@ -1480,7 +1480,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">109</div>
 		<p class="w3-text-black name podo f125">MG5</p>
@@ -1495,7 +1495,7 @@ function myFunction(id) {
 		<div class="tag">망고/망오</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">110</div>
 		<p class="w3-text-black name podo f125">FG42</p>
@@ -1507,7 +1507,7 @@ function myFunction(id) {
 		<div class="tag">파괴</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">111</div>
 		<p class="w3-text-black name podo f125">AAT-52</p>
@@ -1519,7 +1519,7 @@ function myFunction(id) {
 		<div class="tag">봉주르</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">112</div>
 		<p class="w3-text-black name podo f125">네게브</p>
@@ -1534,7 +1534,7 @@ function myFunction(id) {
 		<div class="tag">스페셜리스트/네격부</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">113</div>
 		<p class="w3-text-black name podo f125">세르듀코프</p>
@@ -1547,7 +1547,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">114</div>
 		<p class="w3-text-black name podo f125">웰로드</p>
@@ -1562,7 +1562,7 @@ function myFunction(id) {
 		<div class="tag">장군님/웰장군/박하나</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">115</div>
 		<p class="w3-text-black name podo f125">수오미</p>
@@ -1577,7 +1577,7 @@ function myFunction(id) {
 		<div class="tag">돼지/첫째돼지</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">116</div>
 		<p class="w3-text-black name podo f125">Z-62</p>
@@ -1590,7 +1590,7 @@ function myFunction(id) {
 		<div class="tag">지육이</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">117</div>
 	<p class="w3-text-black name podo f125">PSG-1</p>
@@ -1604,7 +1604,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">118</div>
 		<p class="w3-text-black name podo f125">9A-91</p>
@@ -1618,7 +1618,7 @@ function myFunction(id) {
 		<div class="tag">구아/야전공주</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">119</div>
 		<p class="w3-text-black name podo f125">OTs-14</p>
@@ -1633,7 +1633,7 @@ function myFunction(id) {
 		<div class="tag">그로자/야전여왕</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">120</div>
 		<p class="w3-text-black name podo f125">ARX-160</p>
@@ -1646,7 +1646,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">121</div>
 		<p class="w3-text-black name podo f125">Mk48</p>
@@ -1660,7 +1660,7 @@ function myFunction(id) {
 		<div class="tag">광년이</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">122</div>
 		<p class="w3-text-black name podo f125">G11</p>
@@ -1675,7 +1675,7 @@ function myFunction(id) {
 		<div class="tag">잠탱이</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">123</div>
 		<p class="w3-text-black name podo f125">P99</p>
@@ -1688,7 +1688,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">
 124</div>
@@ -1702,7 +1702,7 @@ function myFunction(id) {
 		<div class="tag">슈사스</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">125</div>
 		<p class="w3-text-black name podo f125">MG4</p>
@@ -1717,7 +1717,7 @@ function myFunction(id) {
 		<div class="tag">망포/피규어</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">126</div>
 		<p class="w3-text-black name podo f125">NZ75</p>
@@ -1732,7 +1732,7 @@ function myFunction(id) {
 		<div class="tag">은지</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">127</div>
 		<p class="w3-text-black name podo f125">79식</p>
@@ -1747,7 +1747,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">128</div>
 	<p class="w3-text-black name podo f125">M99</p>
@@ -1762,7 +1762,7 @@ function myFunction(id) {
 		<div class="tag">엠뀨뀨</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">129</div>
 		<p class="w3-text-black name podo f125">95식</p>
@@ -1777,7 +1777,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">130</div>
 		<p class="w3-text-black name podo f125">97식</p>
@@ -1792,7 +1792,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">131</div>
 		<p class="w3-text-black name podo f125">EVO 3</p>
@@ -1805,7 +1805,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">132</div>
 		<p class="w3-text-black name podo f125">59식</p>
@@ -1818,7 +1818,7 @@ function myFunction(id) {
 		<div class="tag">호구식</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">133</div>
 		<p class="w3-text-black name podo f125">63식</p>
@@ -1830,7 +1830,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">134</div>
 		<p class="w3-text-black name podo f125">AR70</p>
@@ -1843,7 +1843,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">135</div>
 		<p class="w3-text-black name podo f125">SR-3MP</p>
@@ -1858,7 +1858,7 @@ function myFunction(id) {
 		<div class="tag">포돌이/비효르</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">136</div>
 		<p class="w3-text-black name podo f125">PP-19</p>
@@ -1873,7 +1873,7 @@ function myFunction(id) {
 		<div class="tag">비존/비죤</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">137</div>
 		<p class="w3-text-black name podo f125">PP-19-01</p>
@@ -1888,7 +1888,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">138</div>
 		<p class="w3-text-black name podo f125">6P62</p>
@@ -1901,7 +1901,7 @@ function myFunction(id) {
 		<div class="tag">우중이딸</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">139</div>
 		<p class="w3-text-black name podo f125">Bren Ten</p>
@@ -1913,7 +1913,7 @@ function myFunction(id) {
 		<div class="tag">브렌텐</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">140</div>
 		<p class="w3-text-black name podo f125">PSM</p>
@@ -1926,7 +1926,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">141</div>
 		<p class="w3-text-black name podo f125">USP Compact</p>
@@ -1938,7 +1938,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">142</div>
 		<p class="w3-text-black name podo f125">Five-seveN</p>
@@ -1953,7 +1953,7 @@ function myFunction(id) {
 		<div class="tag">파</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">143</div>
 		<p class="w3-text-black name podo f125">RO635</p>
@@ -1968,7 +1968,7 @@ function myFunction(id) {
 		<div class="tag">로쨩/로</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">144</div>
 		<p class="w3-text-black name podo f125">MT-9</p>
@@ -1981,7 +1981,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">
 145</div>
@@ -1995,7 +1995,7 @@ function myFunction(id) {
 		<div class="tag">도라지</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">146</div>
 	<p class="w3-text-black name podo f125">G28</p>
@@ -2009,7 +2009,7 @@ function myFunction(id) {
 		<div class="tag">시금치</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">
 147</div>
@@ -2023,7 +2023,7 @@ function myFunction(id) {
 		<div class="tag">슥69/삼성갤럭시/신세계</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">148</div>
 	<p class="w3-text-black name podo f125">IWS 2000</p>
@@ -2038,7 +2038,7 @@ function myFunction(id) {
 		<div class="tag">이유식/유식이/이외수</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">149</div>
 		<p class="w3-text-black name podo f125">AEK-999</p>
@@ -2052,7 +2052,7 @@ function myFunction(id) {
 		<div class="tag">비둘기/구구구</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">150</div>
 		<p class="w3-text-black name podo f125">시프카</p>
@@ -2067,7 +2067,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">151</div>
 		<p class="w3-text-black name podo f125">M1887</p>
@@ -2082,7 +2082,7 @@ function myFunction(id) {
 		<div class="tag">주지사</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">152</div>
 		<p class="w3-text-black name podo f125">M1897</p>
@@ -2095,7 +2095,7 @@ function myFunction(id) {
 		<div class="tag">청소부</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">153</div>
 		<p class="w3-text-black name podo f125">M37</p>
@@ -2109,7 +2109,7 @@ function myFunction(id) {
 		<div class="tag">이사카</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">154</div>
 		<p class="w3-text-black name podo f125">M500</p>
@@ -2122,7 +2122,7 @@ function myFunction(id) {
 		<div class="tag">샷댕이</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">155</div>
 		<p class="w3-text-black name podo f125">M590</p>
@@ -2136,7 +2136,7 @@ function myFunction(id) {
 		<div class="tag">흑누나</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">156</div>
 		<p class="w3-text-black name podo f125">Super-Shorty</p>
@@ -2150,7 +2150,7 @@ function myFunction(id) {
 		<div class="tag">슈퍼쇼티, 존짧</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">157</div>
 		<p class="w3-text-black name podo f125">KSG</p>
@@ -2165,7 +2165,7 @@ function myFunction(id) {
 		<div class="tag">김성근, 킹성근</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">158</div>
 		<p class="w3-text-black name podo f125">KS-23</p>
@@ -2178,7 +2178,7 @@ function myFunction(id) {
 		<div class="tag">상어</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">159</div>
 		<p class="w3-text-black name podo f125">RMB-93</p>
@@ -2191,7 +2191,7 @@ function myFunction(id) {
 		<div class="tag">린민비</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">160</div>
 		<p class="w3-text-black name podo f125">Saiga-12</p>
@@ -2206,7 +2206,7 @@ function myFunction(id) {
 		<div class="tag">사이가</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">161</div>
 		<p class="w3-text-black name podo f125">97식 산탄총</p>
@@ -2220,7 +2220,7 @@ function myFunction(id) {
 		<div class="tag">캡차, 캡틴차이나</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">162</div>
 		<p class="w3-text-black name podo f125">SPAS-12</p>
@@ -2234,7 +2234,7 @@ function myFunction(id) {
 		<div class="tag">스파스</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">166</div>
 		<p class="w3-text-black name podo f125">CZ75</p>
@@ -2249,7 +2249,7 @@ function myFunction(id) {
 		<div class="tag">콩지</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">167</div>
 		<p class="w3-text-black name podo f125">HK45</p>
@@ -2262,7 +2262,7 @@ function myFunction(id) {
 		<div class="tag">흥사오</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">168</div>
 		<p class="w3-text-black name podo f125">Spitfire</p>
@@ -2276,7 +2276,7 @@ function myFunction(id) {
 		<div class="tag">스핏파이어</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">169</div>
 		<p class="w3-text-black name podo f125">SCW</p>
@@ -2289,7 +2289,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">170</div>
 		<p class="w3-text-black name podo f125">ASh-12.7</p>
@@ -2302,7 +2302,7 @@ function myFunction(id) {
 		<div class="tag">애쉬</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">171</div>
 		<p class="w3-text-black name podo f125">리베롤</p>
@@ -2316,7 +2316,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">172</div>
 		<p class="w3-text-black name podo f125">RFB</p>
@@ -2331,7 +2331,7 @@ function myFunction(id) {
 		<div class="tag">라플비/둘째돼지</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">173</div>
 		<p class="w3-text-black name podo f125">PKP</p>
@@ -2346,7 +2346,7 @@ function myFunction(id) {
 		<div class="tag">피카피</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">
 174</div>
@@ -2361,7 +2361,7 @@ function myFunction(id) {
 		<div class="tag">카빈</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">175</div>
 		<p class="w3-text-black name podo f125">ART556</p>
@@ -2376,7 +2376,7 @@ function myFunction(id) {
 		<div class="tag">아트/예술이</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">176</div>
 		<p class="w3-text-black name podo f125">TMP</p>
@@ -2390,7 +2390,7 @@ function myFunction(id) {
 		<div class="tag">티엠피</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">177</div>
 		<p class="w3-text-black name podo f125">KLIN</p>
@@ -2405,7 +2405,7 @@ function myFunction(id) {
 		<div class="tag">클린/케이린</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">178</div>
 	<p class="w3-text-black name podo f125">F1</p>
@@ -2419,7 +2419,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">179</div>
 		<p class="w3-text-black name podo f125">DSR-50</p>
@@ -2434,7 +2434,7 @@ function myFunction(id) {
 		<div class="tag">도시락</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">180</div>
 		<p class="w3-text-black name podo f125">PzB39</p>
@@ -2447,7 +2447,7 @@ function myFunction(id) {
 		<div class="tag">음악대장</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">181</div>
 		<p class="w3-text-black name podo f125">T91</p>
@@ -2462,7 +2462,7 @@ function myFunction(id) {
 		<div class="tag">과탑/야전시녀</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">182</div>
 		<p class="w3-text-black name podo f125">wz.29</p>
@@ -2476,7 +2476,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">183</div>
 		<p class="w3-text-black name podo f125">컨텐더</p>
@@ -2491,7 +2491,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">184</div>
 		<p class="w3-text-black name podo f125">T-5000</p>
@@ -2504,7 +2504,7 @@ function myFunction(id) {
 		<div class="tag">로사</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">185</div>
 		<p class="w3-text-black name podo f125">아멜리</p>
@@ -2517,7 +2517,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">186</div>
 		<p class="w3-text-black name podo f125">P226</p>
@@ -2530,7 +2530,7 @@ function myFunction(id) {
 		<div class="tag">찐빵/물개/물범쟝</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">187</div>
 		<p class="w3-text-black name podo f125">Ak 5</p>
@@ -2543,7 +2543,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">188</div>
 		<p class="w3-text-black name podo f125">S.A.T.8</p>
@@ -2558,7 +2558,7 @@ function myFunction(id) {
 		<div class="tag">삿팔/시유</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">189</div>
 		<p class="w3-text-black name podo f125">USAS-12</p>
@@ -2571,7 +2571,7 @@ function myFunction(id) {
 		<div class="tag">우사스/김치건/마법소녀</div>
 	</div> 
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">190</div>
 		<p class="w3-text-black name podo f125">NS2000</p>
@@ -2584,7 +2584,7 @@ function myFunction(id) {
 		<div class="tag">흑토끼</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">191</div>
 		<p class="w3-text-black name podo f125">M12</p>
@@ -2597,7 +2597,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">192</div>
 		<p class="w3-text-black name podo f125">JS05</p>
@@ -2612,7 +2612,7 @@ function myFunction(id) {
 		<div class="tag">조석</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">193</div>
 		<p class="w3-text-black name podo f125">T65</p>
@@ -2626,7 +2626,7 @@ function myFunction(id) {
 		<div class="tag">개미핥기</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">194</div>
 		<p class="w3-text-black name podo f125">K2</p>
@@ -2641,7 +2641,7 @@ function myFunction(id) {
 		<div class="tag">케이투/케투/게이둘/셋째돼지</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">195</div>
 		<p class="w3-text-black name podo f125">HK23</p>
@@ -2654,7 +2654,7 @@ function myFunction(id) {
 		<div class="tag">흥이삼</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">196</div>
 		<p class="w3-text-black name podo f125">Zas M21</p>
@@ -2669,7 +2669,7 @@ function myFunction(id) {
 		<div class="tag">자스타바/자스민</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">197</div>
 		<p class="w3-text-black name podo f125">카르카노M1891</p>
@@ -2684,7 +2684,7 @@ function myFunction(id) {
 		<div class="tag">딸기카노</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">198</div>
 		<p class="w3-text-black name podo f125">카르카노M91/38</p>
@@ -2699,7 +2699,7 @@ function myFunction(id) {
 		<div class="tag">포도카노</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">199</div>
 		<p class="w3-text-black name podo f125">80식</p>
@@ -2712,7 +2712,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">200</div>
 		<p class="w3-text-black name podo f125">XM3</p>
@@ -2726,7 +2726,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">201</div>
 		<p class="w3-text-black name podo f125">게파드 M1</p>
@@ -2739,7 +2739,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">202</div>
 		<p class="w3-text-black name podo f125">Thunder</p>
@@ -2753,7 +2753,7 @@ function myFunction(id) {
 		<div class="tag">썬더</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">203</div>
 		<p class="w3-text-black name podo f125">허니뱃저</p>
@@ -2767,7 +2767,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">205</div>
 		<p class="w3-text-black name podo f125">AN-94</p>
@@ -2782,7 +2782,7 @@ function myFunction(id) {
 		<div class="tag">안구사</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">206</div>
 		<p class="w3-text-black name podo f125">AK-12</p>
@@ -2797,7 +2797,7 @@ function myFunction(id) {
 		<div class="tag">마일리</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">207</div>
 		<p class="w3-text-black name podo f125">CZ2000</p>
@@ -2811,7 +2811,7 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">208</div>
 		<p class="w3-text-black name podo f125">HK21</p>
@@ -2826,7 +2826,20 @@ function myFunction(id) {
 		<div class="tag"></div>
 	</div> 
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-col w3-mobile dollcontainer">
+	<div class="w3-hover-shadow font tdoll">
+		<div class="w3-text-white no">209</div>
+		<p class="w3-text-black name podo f125">OTs-39</p>
+		<img src="../img/etc/star.png" class="star r1" alt="rarity">
+		<img src="../img/etc/star.png" class="star r2" alt="rarity">
+		<img src="../img/etc/star.png" class="star r3" alt="rarity">
+		<img src="../img/etc/info_cage_3.png" class="incage" alt="cage">
+		<img src="../img/etc/3_ar.png" class="type" alt="type">
+		<img src="../img/t_doll/219_i.png" alt="icon">
+		<div class="tag"></div>
+	</div>
+</div>
+<div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll">
 		<div class="w3-text-white no">210</div>
 		<p class="w3-text-black name podo f125">CZ52</p>
@@ -2834,21 +2847,27 @@ function myFunction(id) {
 		<img src="../img/etc/star.png" class="star r2" alt="rarity">
 		<img src="../img/etc/star.png" class="star r3" alt="rarity">
 		<img src="../img/etc/info_cage_3.png" class="incage" alt="cage">
-		<img src="../img/etc/3_hg.png" class="type" alt="type">
+		<img src="../img/etc/3_smg.png" class="type" alt="type">
 		<img src="../img/t_doll/210_i.png" alt="icon">
 		<div class="tag"></div>
 	</div>
 </div>
-</div>
-</div>
-<div id="noResultMessage" class="no-results-container">
-	<div  class="w3-black w3-center">
-		<label class="f125 fw">검색 결과가 없습니다. 검색어를 다시 입력해보세요.</label>
-		<p>인형이름 :콜트 리볼버/콜트</p>
-		<p>도감넘버 :1/210</p>
-		<p><s>제조시간 :4500 0500</s> - 개선중 -</p>
-		<p>별명 :콜라</p>
+<div class="w3-col w3-mobile dollcontainer">
+	<div class="w3-hover-shadow font tdoll">
+		<div class="w3-text-white no">211</div>
+		<p class="w3-text-black name podo f125">SRS</p>
+		<img src="../img/etc/star.png" class="star r1" alt="rarity">
+		<img src="../img/etc/star.png" class="star r2" alt="rarity">
+		<img src="../img/etc/star.png" class="star r3" alt="rarity">
+		<img src="../img/etc/star.png" class="star r4" alt="rarity">
+		<img src="../img/etc/star.png" class="star r5" alt="rarity">
+		<img src="../img/etc/info_cage_5.png" class="incage" alt="cage">
+		<img src="../img/etc/5_rf.png" class="type" alt="type">
+		<img src="../img/t_doll/211_i.png" alt="icon">
+		<div class="tag"></div>
 	</div>
+</div>
+</div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.4.2/lazyload.min.js"></script>
 <script>
