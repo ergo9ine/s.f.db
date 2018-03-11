@@ -9,13 +9,16 @@
 <link href="../css/f_skill.css" rel="stylesheet">
 <link href="../css/f_tools.css" rel="stylesheet">
 <script src="../js/jquery.js"></script>
-<script src="../js/jquery.quicksearch.min.js"></script>
+<script src="../js/jquery.filterizr.min.js"></script>
 <script src="../js/localforage.min.js"></script>
-<script>console.log('localforage is: ', localforage);</script>
 <script>
-$(function(){$("input#input").quicksearch("div#gun>.dollcontainer",{noResults:"#noResultMessage",bind:"keyup keydown click input"})});
+$(function() {var f = $('#gun').filterizr({
+	controlsSelector: '.fltr-controls' ,
+	});
+	window.filterizr = f;
+});
 </script>
-<script>
+<!-- <script>
 var db;
 var request = indexedDB.open("SANGVIS FERRI Database",1);
 request.onerror = function(event) {
@@ -35,7 +38,7 @@ localforage.setItem('somekey', 'some value', function(err, value) {
         console.log('we just read ' + value);
     });
 });
-</script>
+</script> -->
 <title>Fairy</title>
 </head>
 <body>
@@ -46,9 +49,39 @@ localforage.setItem('somekey', 'some value', function(err, value) {
 	<p>제조시간 : 3시간 00분 = 300 / 3시간 5분 = 305</p>
 	<p>별명 : 람보</p>
 </div>
-<input class="w3-input w3-center" type="text" placeholder="검색" id="input">
-<div class="w3-row-padding w3-padding-large w3-center" id="gun">
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<input type="text" placeholder="검색" class="w3-input fltr-controls filtr-search" name="filtr-search" data-search>
+      <div class="row">
+        <!-- A basic setup of simple mode filter controls, all you have to do is use data-filter="all"
+        for an unfiltered gallery and then the values of your categories to filter between them -->
+        <ul class="simplefilter w3-black">싱글 필터
+          <li class="w3-button fltr-controls active" data-filter="all">All</li>
+          <li class="w3-button fltr-controls" data-filter="Battle">전투</li>
+          <li class="w3-button fltr-controls" data-filter="Strategy">전략</li>
+        </ul>
+      </div>
+      <div class="row">
+        <ul class="multifilter w3-black">
+          멀티 필터
+          <li class="w3-button fltr-controls" data-multifilter="Battle">전투</li>
+          <li class="w3-button fltr-controls" data-multifilter="Strategy">전략</li>
+        </ul>
+      </div>
+      <div class="row">
+        <ul class="sortandshuffle w3-black">
+          정렬 및 셔플
+          <!-- Basic shuffle control -->
+          <li class="w3-button fltr-controls shuffle-button" data-shuffle>셔플</li>
+          <!-- Basic sort controls consisting of asc/desc button and a select -->
+          <li class="w3-button fltr-controls sort-button active" data-sortAsc>오름차순</li>
+          <li class="w3-button fltr-controls sort-button" data-sortDesc>내림차순</li>
+          <select style="vertical-align:middle" data-sortOrder>
+			<option value="index">도감번호</option>
+            <option value="category">종류</option>
+          </select>
+        </ul>
+      </div>
+<div class="w3-center" id="gun">
+<div class="w3-mobile dollcontainer filtr-item" data-category="Battle" data-sort="1">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">용사요정</p>
 		<i class="tools Battle_Fairy_info_cage incage"></i>
@@ -59,7 +92,7 @@ localforage.setItem('somekey', 'some value', function(err, value) {
 		<div class="tag">430/람보/ㅇㅅ</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="Battle" data-sort="2">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">격노요정</p>
 		<i class="tools Battle_Fairy_info_cage incage"></i>
@@ -70,7 +103,7 @@ localforage.setItem('somekey', 'some value', function(err, value) {
 		<div class="tag">435/ㄱㄴ</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="Battle" data-sort="3">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">방패요정</p>
 		<i class="tools Battle_Fairy_info_cage incage"></i>
@@ -81,7 +114,7 @@ localforage.setItem('somekey', 'some value', function(err, value) {
 		<div class="tag">300/ㅂㅍ</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="Battle" data-sort="4">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">수호요정</p>
 		<i class="tools Battle_Fairy_info_cage incage"></i>
@@ -92,7 +125,7 @@ localforage.setItem('somekey', 'some value', function(err, value) {
 		<div class="tag">305/ㅅㅎ</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="Strategy" data-sort="5">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">방어요정</p>
 		<i class="tools Strategy_Fairy_info_cage incage"></i>
@@ -103,7 +136,7 @@ localforage.setItem('somekey', 'some value', function(err, value) {
 		<div class="tag">410/ㅂㅇ</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="Battle" data-sort="6">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">도발요정</p>
 		<i class="tools Battle_Fairy_info_cage incage"></i>
@@ -114,7 +147,7 @@ localforage.setItem('somekey', 'some value', function(err, value) {
 		<div class="tag">310/ㄷㅂ</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="Battle" data-sort="7">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">저격요정</p>
 		<i class="tools Battle_Fairy_info_cage incage"></i>
@@ -125,7 +158,7 @@ localforage.setItem('somekey', 'some value', function(err, value) {
 		<div class="tag">330/ㅈㄱ</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="Battle" data-sort="8">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">포격요정</p>
 		<i class="tools Battle_Fairy_info_cage incage"></i>
@@ -136,7 +169,7 @@ localforage.setItem('somekey', 'some value', function(err, value) {
 		<div class="tag">335/ㅍㄱ</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="Battle" data-sort="9">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">공습요정</p>
 		<i class="tools Battle_Fairy_info_cage incage"></i>
@@ -147,7 +180,7 @@ localforage.setItem('somekey', 'some value', function(err, value) {
 		<div class="tag">340/ㄳ/ㄱㅅ</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="Strategy" data-sort="10">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">증원요정</p>
 		<i class="tools Strategy_Fairy_info_cage incage"></i>
@@ -158,7 +191,7 @@ localforage.setItem('somekey', 'some value', function(err, value) {
 		<div class="tag">400/ㅈㅇ</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="Strategy" data-sort="11">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">공수요정</p>
 		<i class="tools Strategy_Fairy_info_cage incage"></i>
@@ -169,7 +202,7 @@ localforage.setItem('somekey', 'some value', function(err, value) {
 		<div class="tag">405/ㄳ/ㄱㅅ</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="Strategy" data-sort="12">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">매설요정</p>
 		<i class="tools Strategy_Fairy_info_cage incage"></i>
@@ -180,7 +213,7 @@ localforage.setItem('somekey', 'some value', function(err, value) {
 		<div class="tag">530/ㅁㅅ</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="Strategy" data-sort="13">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">로켓요정</p>
 		<i class="tools Strategy_Fairy_info_cage incage"></i>
@@ -191,7 +224,7 @@ localforage.setItem('somekey', 'some value', function(err, value) {
 		<div class="tag">535/ㄹㅋ</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="Strategy" data-sort="14">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">공사요정</p>
 		<i class="tools Strategy_Fairy_info_cage incage"></i>
@@ -202,7 +235,7 @@ localforage.setItem('somekey', 'some value', function(err, value) {
 		<div class="tag">540/ㄳ/ㄱㅅ</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="Strategy" data-sort="15">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">지휘요정</p>
 		<i class="tools Strategy_Fairy_info_cage incage"></i>
@@ -213,7 +246,7 @@ localforage.setItem('somekey', 'some value', function(err, value) {
 		<div class="tag">500/ㅈㅎ</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="Strategy" data-sort="16">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">수색요정</p>
 		<i class="tools Strategy_Fairy_info_cage incage"></i>
@@ -224,7 +257,7 @@ localforage.setItem('somekey', 'some value', function(err, value) {
 		<div class="tag">505/ㅅㅅ/</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="Strategy" data-sort="17">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">조명요정</p>
 		<i class="tools Strategy_Fairy_info_cage incage"></i>
@@ -235,7 +268,7 @@ localforage.setItem('somekey', 'some value', function(err, value) {
 		<div class="tag">510/ㅈㅁ</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="Battle" data-sort="18">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">황금요정</p>
 		<i class="tools Battle_Fairy_info_cage incage"></i>
@@ -246,7 +279,7 @@ localforage.setItem('somekey', 'some value', function(err, value) {
 		<div class="tag">제조불가/ㅎㄱ</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="Battle" data-sort="19">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">취사요정</p>
 		<i class="tools Battle_Fairy_info_cage incage"></i>
@@ -257,7 +290,7 @@ localforage.setItem('somekey', 'some value', function(err, value) {
 		<div class="tag">제조불가/ㅊㅅ</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="Battle" data-sort="20">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">클로에</p>
 		<i class="tools Battle_Fairy_info_cage incage"></i>
@@ -268,7 +301,7 @@ localforage.setItem('somekey', 'some value', function(err, value) {
 		<div class="tag">제조불가/ㅋㄹㅇ</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="Battle" data-sort="21">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">야에사쿠라</p>
 		<i class="tools Battle_Fairy_info_cage incage"></i>
@@ -279,7 +312,7 @@ localforage.setItem('somekey', 'some value', function(err, value) {
 		<div class="tag">제조불가/ㅇㅇ/ㅅㅋㄹ</div>
 	</div>
 </div>
-<div class="w3-col w3-mobile w3-section dollcontainer">
+<div class="w3-mobile dollcontainer filtr-item" data-category="Strategy" data-sort="22">
 	<div class="w3-hover-shadow font fairy">
 		<p class="name pofa f125 er2">카구야</p>
 		<i class="tools Strategy_Fairy_info_cage incage"></i>

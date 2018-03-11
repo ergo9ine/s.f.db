@@ -13,7 +13,7 @@ a,a:visited,a:link,a:hover,a:active{color:#666;text-decoration:none}
 #calendar{max-width:520px}
 .fc-today{background-color:#e06969!important}
 /*doll*/
-.dollcontainer{width:calc(12.5%);min-width:200px}
+.dollcontainer{width:calc(12.5%);min-width:200px;will-change:transform;transform:translateZ(0)}
 .tdoll,.equip,.fairy{position:relative;margin:0 auto}
 .tdoll,.poeq,.pofa,.equip,.fairy{width:175px}
 .tdoll{height:371px}
