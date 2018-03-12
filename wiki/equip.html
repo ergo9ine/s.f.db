@@ -17,39 +17,85 @@
 	<p>제조시간 : 4500 0500</p>
 	<p><s>별명 : 똥골</s> 개선중</p>
 </div>
-<div class="w3-bar w3-black">
+<div class="w3-bar w3-black w3-hide-small">
 	<div class="w3-half">
 		<div class="w3-bar w3-black">
-			<ul class="sf">싱글 필터
+			<ul class="sf">싱글 필터 :
 				<li class="w3-button fc active" data-filter="all">All</li>
-				<li class="w3-button fc" data-filter="2">2성</li>
-				<li class="w3-button fc" data-filter="3">3성</li>
-				<li class="w3-button fc" data-filter="4">4성</li>
-				<li class="w3-button fc" data-filter="5">5성</li>
+				<li class="w3-button fc" data-filter="1">부속</li>
+				<li class="w3-button fc" data-filter="2">탄환</li>
+				<li class="w3-button fc" data-filter="3">인형</li>
+				<li class="w3-button fc" data-filter="4">특수</li>
+				<li class="w3-button fc" data-filter="5">전용장비</li>
 			</ul>
 		</div>
 		<div class="w3-bar w3-black">
-			<ul class="mf">
-				멀티 필터
-				<li class="w3-button fc active" data-multifilter="2">전투</li>
-				<li class="w3-button fc active" data-multifilter="3">전략</li>
-			  <li class="w3-button fc active" data-multifilter="4">이벤트</li>
+			<ul class="mf">멀티 필터 :
+				<li class="w3-button fc" data-multifilter="1">전투</li>
+				<li class="w3-button fc" data-multifilter="2">전략</li>
+				<li class="w3-button fc" data-multifilter="3">이벤트</li>
 			</ul>
 		</div>
 	</div>
 	<div class="w3-half">
 		<div class="w3-bar w3-black">
-			정렬 및 셔플
+			정렬 및 셔플 :
 			<button class="w3-button fc shuffle" data-shuffle>셔플</button>
 			<ul class="fo" style="display:inline-block">
 				<li class="w3-button fc active" data-sortAsc>▲</li>
-				<li class="w3-button fc " data-sortDesc>▼</li>
+				<li class="w3-button fc" data-sortDesc>▼</li>
 			</ul>
 			<select style="vertical-align:middle" data-sortOrder>
 					<option value="index">도감번호</option>
 					<option value="sortData">종류</option>
 			</select>
 		</div>
+	</div>
+</div>
+<script>
+function def(name) {
+    var i;
+    var x = document.getElementsByClassName("deft");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    document.getElementById(name).style.display = "block";  
+}
+</script>
+<div class="w3-bar w3-black w3-hide-large">
+	<button class="w3-bar-item w3-button" onclick="def('sf')" style="width:33%">싱글필터</button>
+	<button class="w3-bar-item w3-button" onclick="def('mf')" style="width:33%">멀티필터</button>
+	<button class="w3-bar-item w3-button" onclick="def('fo')" style="width:33%">정렬</button>
+	<div id="sf" class="w3-bar w3-container w3-display-container deft">
+		<ul class="sf">
+			<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright"><i class="fa fa-close"></i></span>
+				<li class="w3-button fc active" data-filter="all">All</li>
+				<li class="w3-button fc" data-filter="1">부속</li>
+				<li class="w3-button fc" data-filter="2">탄환</li>
+				<li class="w3-button fc" data-filter="3">인형</li>
+				<li class="w3-button fc" data-filter="4">특수</li>
+				<li class="w3-button fc" data-filter="5">전용장비</li>
+		</ul>
+	</div>
+	<div id="mf" class="w3-bar w3-container w3-display-container deft" style="display:none">
+		<ul class="mf">
+			<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright"><i class="fa fa-close"></i></span>
+			<li class="w3-button fc" data-multifilter="1">전투</li>
+			<li class="w3-button fc" data-multifilter="2">전략</li>
+			<li class="w3-button fc" data-multifilter="3">이벤트</li>
+		</ul>
+	</div>
+	<div id="fo" class="w3-bar w3-container w3-display-container deft" style="display:none">
+		<span onclick="this.parentElement.style.display='none'" class="w3-button w3-display-topright"><i class="fa fa-close"></i></span>
+		<button class="w3-button fc shuffle" data-shuffle>셔플</button>
+		<ul class="fo" style="display:inline-block">
+			<li class="w3-button fc active" data-sortAsc>▲</li>
+			<li class="w3-button fc" data-sortDesc>▼</li>
+		</ul>
+		<select style="vertical-align:middle" data-sortOrder>
+				<option value="index">도감번호</option>
+				<option value="sortData">종류</option>
+		</select>
 	</div>
 </div>
 <input type="text" placeholder="검색" class="w3-input fc search" name="search" data-search>

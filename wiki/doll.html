@@ -9,18 +9,10 @@
 <script src="../js/jquery.js"></script>
 <script src="../js/jquery.filterizr.min.js"></script>
 <script>
-$(function(){$("input#input").quicksearch("div#gun .dollcontainer",{noResults:"#noResultMessage",bind:"keyup keydown click input"})});
 function doll_open(){document.getElementById("dollfunc").style.width="100%";document.getElementById("dollfunc").style.display="block";document.getElementById("list").style.display="none"}function doll_close(){document.getElementById("dollfunc").style.display="none";document.getElementById("list").style.display="block"};
 </script>
 <script>
-function myFunction(id) {
-	var x = document.getElementById(id);
-	if (x.className.indexOf("w3-show") == -1) {
-		x.className += " w3-show";
-	} else { 
-		x.className = x.className.replace(" w3-show", "");
-	}
-}
+function myFunction(a){a=document.getElementById(a);-1==a.className.indexOf("w3-show")?a.className+=" w3-show":a.className=a.className.replace(" w3-show","")};
 </script>
 <title>T-doll</title>
 </head>
@@ -131,7 +123,6 @@ function myFunction(id) {
 		</div>
 	</div>
 </div>
-<div id="list">
 <div  class="w3-black">
 		<span onclick="this.parentElement.style.display='none'" class="w3-button w3-black w3-tiny w3-display-topright"><i class="fa fa-close"></i></span>
 		<label class="f125 fw">검색가능한 종류</label>
@@ -140,8 +131,90 @@ function myFunction(id) {
 		<p><s>제조시간 :4500 0500</s> - 개선중 -</p>
 		<p>별명 :콜라</p>
 </div>
-<input type="text" placeholder="검색창 업그레이드중" class="w3-input fc search" name="search" data-search disabled>
-<div class="w3-center" id="gun">
+<div class="w3-bar w3-black w3-hide-small">
+	<div class="w3-half">
+		<div class="w3-bar w3-black">
+			<ul class="sf">싱글 필터 :
+				<li class="w3-button fc active" data-filter="all">All</li>
+				<li class="w3-button fc" data-filter="1">HG</li>
+				<li class="w3-button fc" data-filter="2">SMG</li>
+				<li class="w3-button fc" data-filter="3">RF</li>
+				<li class="w3-button fc" data-filter="4">MG</li>
+				<li class="w3-button fc" data-filter="5">SG</li>
+			</ul>
+		</div>
+		<div class="w3-bar w3-black">
+			<ul class="mf">멀티 필터 :
+				<li class="w3-button fc" data-multifilter="1">전투</li>
+				<li class="w3-button fc" data-multifilter="2">전략</li>
+				<li class="w3-button fc" data-multifilter="3">이벤트</li>
+			</ul>
+		</div>
+	</div>
+	<div class="w3-half">
+		<div class="w3-bar w3-black">
+			정렬 및 셔플 :
+			<button class="w3-button fc shuffle" data-shuffle>셔플</button>
+			<ul class="fo" style="display:inline-block">
+				<li class="w3-button fc active" data-sortAsc>▲</li>
+				<li class="w3-button fc" data-sortDesc>▼</li>
+			</ul>
+			<select style="vertical-align:middle" data-sortOrder>
+					<option value="index">도감번호</option>
+					<option value="sortData">종류</option>
+			</select>
+		</div>
+	</div>
+</div>
+<script>
+function def(name) {
+    var i;
+    var x = document.getElementsByClassName("deft");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    document.getElementById(name).style.display = "block";  
+}
+</script>
+<div class="w3-bar w3-black w3-hide-large">
+	<button class="w3-bar-item w3-button" onclick="def('sf')" style="width:33%">싱글필터</button>
+	<button class="w3-bar-item w3-button" onclick="def('mf')" style="width:33%">멀티필터</button>
+	<button class="w3-bar-item w3-button" onclick="def('fo')" style="width:33%">정렬</button>
+	<div id="sf" class="w3-bar w3-container w3-display-container deft">
+		<ul class="sf">
+			<span onclick="this.parentElement.style.display='none'" class="w3-button w3-tiny w3-display-topright"><i class="fa fa-close"></i></span>
+				<li class="w3-button fc active" data-filter="all">All</li>
+				<li class="w3-button fc" data-filter="1">HG</li>
+				<li class="w3-button fc" data-filter="2">SMG</li>
+				<li class="w3-button fc" data-filter="3">RF</li>
+				<li class="w3-button fc" data-filter="4">MG</li>
+				<li class="w3-button fc" data-filter="5">SG</li>
+		</ul>
+	</div>
+	<div id="mf" class="w3-bar w3-container w3-display-container deft" style="display:none">
+		<ul class="mf">
+			<span onclick="this.parentElement.style.display='none'" class="w3-button w3-tiny w3-display-topright"><i class="fa fa-close"></i></span>
+			<li class="w3-button fc" data-multifilter="1">전투</li>
+			<li class="w3-button fc" data-multifilter="2">전략</li>
+			<li class="w3-button fc" data-multifilter="3">이벤트</li>
+		</ul>
+	</div>
+	<div id="fo" class="w3-bar w3-container w3-display-container deft" style="display:none">
+		<span onclick="this.parentElement.style.display='none'" class="w3-button w3-tiny w3-display-topright"><i class="fa fa-close"></i></span>
+		<button class="w3-button fc shuffle" data-shuffle>셔플</button>
+		<ul class="fo" style="display:inline-block">
+			<li class="w3-button fc active" data-sortAsc>▲</li>
+			<li class="w3-button fc" data-sortDesc>▼</li>
+		</ul>
+		<select style="vertical-align:middle" data-sortOrder>
+				<option value="index">도감번호</option>
+				<option value="sortData">종류</option>
+		</select>
+	</div>
+</div>
+<input type="text" placeholder="검색" class="w3-input fc search" name="search" data-search>
+<div id="list">
+<div class="filtr-container w3-center" id="gun">
 <div class="w3-col w3-mobile dollcontainer">
 	<div class="w3-hover-shadow font tdoll" onclick="doll_open()">
 		<div class="w3-text-white no">1</div>
