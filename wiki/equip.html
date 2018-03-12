@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="w3-black">
-	<span onclick="this.parentElement.style.display='none'"	class="w3-button w3-black w3-tiny w3-display-topright"><i class="fa	fa-close"></i></span>
+	<span class="w3-button w3-black w3-tiny w3-display-topright x"><i class="fa	fa-close"></i></span>
 	<label class="f125 fw">검색가능한 종류</label>
 	<p>장비이름	: PSO-1/PSO</p>
 	<p>제조시간	: 4500 0500</p>
@@ -41,7 +41,7 @@
 		<div class="w3-bar w3-black">
 			정렬 및 셔플	:
 			<button	class="w3-button fc	shuffle" data-shuffle>셔플</button>
-			<ul	class="fo" style="display:inline-block">
+			<ul	class="fo w3-show-inline-block">
 				<li	class="w3-button fc	active"	data-sortAsc>▲</li>
 				<li	class="w3-button fc" data-sortDesc>▼</li>
 			</ul>
@@ -68,7 +68,7 @@ function def(name) {
 	<button	class="w3-bar-item w3-button" onclick="def('fo')" style="width:33%">정렬</button>
 	<div id="sf" class="w3-bar w3-display-container	deft">
 		<ul	class="sf">
-			<span onclick="this.parentElement.style.display='none'"	class="w3-button w3-display-topright"><i class="fa fa-close"></i></span>
+			<span class="w3-button w3-display-topright x"><i class="fa fa-close"></i></span>
 				<li	class="w3-button fc	active"	data-filter="all">All</li>
 				<li	class="w3-button fc" data-filter="1">부속</li>
 				<li	class="w3-button fc" data-filter="2">탄환</li>
@@ -79,7 +79,7 @@ function def(name) {
 	</div>
 	<div id="mf" class="w3-bar w3-display-container	deft" style="display:none">
 		<ul	class="mf">
-			<span onclick="this.parentElement.style.display='none'"	class="w3-button w3-display-topright"><i class="fa fa-close"></i></span>
+			<span class="w3-button w3-display-topright x"><i class="fa fa-close"></i></span>
 			<li	class="w3-button fc" data-multifilter="1">부속</li>
 			<li	class="w3-button fc" data-multifilter="2">탄환</li>
 			<li	class="w3-button fc" data-multifilter="3">인형</li>
@@ -88,9 +88,9 @@ function def(name) {
 		</ul>
 	</div>
 	<div id="fo" class="w3-bar w3-display-container	deft" style="display:none">
-		<span onclick="this.parentElement.style.display='none'"	class="w3-button w3-display-topright"><i class="fa fa-close"></i></span>
+		<span class="w3-button w3-display-topright x"><i class="fa fa-close"></i></span>
 		<button	class="w3-button fc	shuffle" data-shuffle>셔플</button>
-		<ul	class="fo" style="display:inline-block">
+		<ul	class="fo w3-show-inline-block">
 			<li	class="w3-button fc	active"	data-sortAsc>▲</li>
 			<li	class="w3-button fc" data-sortDesc>▼</li>
 		</ul>
