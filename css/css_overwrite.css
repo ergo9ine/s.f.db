@@ -2,7 +2,7 @@
 @keyframes logocolor{35%,5%,99%,to{filter:hue-rotate(0deg)}10%{filter:hue-rotate(60deg)}15%{filter:hue-rotate(90deg)}20%{filter:hue-rotate(120deg)}25%{filter:hue-rotate(150deg)}30%{filter:hue-rotate(180deg)}40%{filter:contrast(2)}45%{filter:contrast(1)}50%{filter:sepia(1)}55%{filter:sepia(0)}60%{filter:blur(10px)}65%{filter:blur(0)}75%{filter:invert(.6)}80%,90%{filter:invert(0)}85%{filter:invert(.9)}95%{filter:hue-rotate(300deg)}}
 @keyframes flash{11%,13%,15%,20%,22%,5%,50%,56%,60%,70%,75%,79%,90%{opacity:0}10%,12%,14%,21%,25%,55%,57%,66%,71%,78%,85%,to{opacity:1}}
 /*mainframe*/
-a,a:visited,a:link,a:hover,a:active{color:#666;text-decoration:none}
+a,a:visited,a:link,a:hover,a:active{text-decoration:none}
 .font{font-family:'Nanum Gothic',sans-serif}
 .fw{font-weight:700}
 #slogo{animation-name:logocolor;animation-duration:60s;animation-iteration-count:infinite}
@@ -49,6 +49,8 @@ a,a:visited,a:link,a:hover,a:active{color:#666;text-decoration:none}
 .cover{right:3px}
 .skill{left:25px;top:234px}
 .active{background-color:#ccc}
+#lm,#rm{width:50%;background-image:url(../img/logo/SFDB_half_l.png);background-repeat:no-repeat;background-position:right bottom}
+#rm{right:0;background-image:url(../img/logo/SFDB_half_r.png);background-position:left bottom}
 /*Simulator*/
 #result th,#result td,#battery th,#battery td{text-align:center;vertical-align:middle;border-style:solid;border-width:1px}
 #result tbody tr:nth-child(1),#result tbody tr:nth-child(10),#result tbody tr:nth-child(20),#result tbody tr:nth-child(26),#result tbody tr:nth-child(33){background-color:#fff;color:#000}
