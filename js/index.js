@@ -4,6 +4,20 @@ $(document).ready(function() {
 	$('.x').click(function(){
 		$(this).parent().addClass('w3-hide');
 	});
+	$('#mom button').click(function(){
+		if ($(this).attr("id") === "f") {
+			$('#mf').toggleClass('w3-hide');
+			$('#fo').addClass('w3-hide');
+			$('#s').toggleClass('w3-border-bottom');
+			$('#f').removeClass('w3-border-bottom');
+		}
+		if ($(this).attr("id") === "s") {
+			$('#fo').toggleClass('w3-hide');
+			$('#mf').addClass('w3-hide');
+			$('#f').toggleClass('w3-border-bottom');
+			$('#s').removeClass('w3-border-bottom');
+		}
+	});
 	$('#close,#open').click(function() {
 		$('#Sidebar').toggleClass('w3-hide');
 		$('#Sidebar').toggleClass('w3-show');
@@ -52,13 +66,19 @@ $(document).ready(function() {
 			$('#tab5').addClass('w3-show').removeClass('w3-hide');
 		}
 	});
-	$('.sf .fc').click(function() {
-		$('.sf .fc').removeClass('active');
-		$('.mf li').removeClass('active');
-		$(this).addClass('active');
-	});
 	$('.mf li').click(function() {
-		$(this).toggleClass('active');
+		if ($(this).attr("data-filter") === "all")
+		{
+			$('.shuffle').removeClass('active');
+			$('.mf li').removeClass('active')
+			$(this).addClass('active');
+		}
+		else
+		{
+			$('.shuffle').removeClass('active');
+			$('.all').removeClass('active');
+			$(this).toggleClass('active');
+		}
 	});
 	$('.shuffle').click(function() {
 		$('.fo .fc').removeClass('active');
@@ -81,13 +101,13 @@ $(document).ready(function() {
 	}
 	});
 	$('.fo li').click(function() {
-        var sortBy    = $('.so').val();
-        var sortOrder = $(this).data('sort');
-        filterizd.filterizr('sort', sortBy, sortOrder);
+		var sortBy = $('.so').val();
+		var sortOrder = $(this).data('sort');
+		filterizd.filterizr('sort', sortBy, sortOrder);
 	})
 	$('.fom li').click(function() {
-        var sortBy    = $('.som').val();
-        var sortOrder = $(this).data('fso');
-        filterizd.filterizr('sort', sortBy, sortOrder);
+		var sortBy = $('.som').val();
+		var sortOrder = $(this).data('fso');
+		filterizd.filterizr('sort', sortBy, sortOrder);
 	})
 });

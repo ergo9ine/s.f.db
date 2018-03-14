@@ -4,36 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 <link href="../css/font.css" rel="stylesheet">
-<link href="../css/w3.css" rel="stylesheet">
+<link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
 <link href="../css/css_overwrite.css" rel="stylesheet">
 <link href="../css/e_tools.css"	rel="stylesheet">
 <title>Equipment</title>
 </head>
 <body>
-<div class="w3-black">
-	<span class="w3-button w3-black w3-tiny w3-display-topright x"><i class="fa	fa-close"></i></span>
+<div class="w3-black w3-border-bottom">
+	<span class="w3-button w3-display-topright x"><i class="fa	fa-close"></i></span>
 	<label class="f125 fw">검색가능한 종류</label>
 	<p>장비이름	: PSO-1/PSO</p>
 	<p>제조시간	: 4500 0500</p>
-	<p><s>별명 : 똥골</s> 개선중</p>
+	<span><s>별명 : 똥골</s> 개선중</span>
 </div>
 <div class="w3-bar w3-black	w3-hide-small">
 	<div class="w3-half">
 		<div class="w3-bar w3-black">
-			<ul	class="sf">싱글 필터 :
-				<li	class="w3-button fc	active"	data-filter="all">All</li>
-				<li	class="w3-button fc" data-filter="1">부속</li>
-				<li	class="w3-button fc" data-filter="2">탄환</li>
-				<li	class="w3-button fc" data-filter="3">인형</li>
-				<li	class="w3-button fc" data-filter="4">특수</li>
-				<li	class="w3-button fc" data-filter="5">전용장비</li>
-			</ul>
-		</div>
-		<div class="w3-bar w3-black">
-			<ul	class="mf">멀티 필터 :
-				<li	class="w3-button fc" data-multifilter="1">전투</li>
-				<li	class="w3-button fc" data-multifilter="2">전략</li>
-				<li	class="w3-button fc" data-multifilter="3">이벤트</li>
+			<ul	class="mf">필터 :
+				<li	class="w3-button fc	active all"	data-filter="all">All</li>
+				<li	class="w3-button fc" data-multifilter="2">2성</li>
+				<li	class="w3-button fc" data-multifilter="3">3성</li>
+				<li	class="w3-button fc" data-multifilter="4">4성</li>
+				<li	class="w3-button fc" data-multifilter="5">5성</li>
+				<li	class="w3-button fc" data-multifilter="6">제조불가</li>
 			</ul>
 		</div>
 	</div>
@@ -45,64 +38,42 @@
 				<li	class="w3-button fc	active"	data-sortAsc>▲</li>
 				<li	class="w3-button fc" data-sortDesc>▼</li>
 			</ul>
-			<select	style="vertical-align:middle" data-sortOrder>
-					<option	value="index">도감번호</option>
-					<option	value="sortData">종류</option>
+			<select class="so w3-cell-middle" data-sortselect>
+				<option	value="domIndex">도감번호</option>
+				<option	value="sortData">제조시간</option>
+				<option	value="type">종류</option>
 			</select>
 		</div>
 	</div>
 </div>
-<script>
-function def(name) {
-	var	i;
-	var	x =	document.getElementsByClassName("deft");
-	for	(i = 0;	i <	x.length; i++) {
-		x[i].style.display =	"none";	
-	}
-	document.getElementById(name).style.display	= "block";	
-}
-</script>
-<div class="w3-bar w3-black	w3-hide-large w3-hide-medium">
-	<button	class="w3-bar-item w3-button" onclick="def('sf')" style="width:33%">싱글필터</button>
-	<button	class="w3-bar-item w3-button" onclick="def('mf')" style="width:33%">멀티필터</button>
-	<button	class="w3-bar-item w3-button" onclick="def('fo')" style="width:33%">정렬</button>
-	<div id="sf" class="w3-bar w3-display-container	deft">
-		<ul	class="sf">
-			<span class="w3-button w3-display-topright x"><i class="fa fa-close"></i></span>
-				<li	class="w3-button fc	active"	data-filter="all">All</li>
-				<li	class="w3-button fc" data-filter="1">부속</li>
-				<li	class="w3-button fc" data-filter="2">탄환</li>
-				<li	class="w3-button fc" data-filter="3">인형</li>
-				<li	class="w3-button fc" data-filter="4">특수</li>
-				<li	class="w3-button fc" data-filter="5">전용장비</li>
-		</ul>
-	</div>
-	<div id="mf" class="w3-bar w3-display-container	deft" style="display:none">
+<div id="mom" class="w3-bar w3-black	w3-hide-large w3-hide-medium">
+	<button id="f" class="w3-bar-item w3-button w3-border-right fltr">필터</button>
+	<button id="s" class="w3-bar-item w3-button w3-border-left fltr">정렬</button>
+	<div id="mf" class="w3-bar w3-display-container	w3-hide">
 		<ul	class="mf">
-			<span class="w3-button w3-display-topright x"><i class="fa fa-close"></i></span>
-			<li	class="w3-button fc" data-multifilter="1">부속</li>
-			<li	class="w3-button fc" data-multifilter="2">탄환</li>
-			<li	class="w3-button fc" data-multifilter="3">인형</li>
-			<li	class="w3-button fc" data-multifilter="3">특수</li>
-			<li	class="w3-button fc" data-multifilter="3">전용장비</li>
+			<span class="w3-button w3-display-topright w3-tiny x"><i class="fa fa-close"></i></span>
+			<li	class="w3-button fc	active all"	data-filter="all">All</li>
+			<li	class="w3-button fc" data-multifilter="2">2성</li>
+			<li	class="w3-button fc" data-multifilter="3">3성</li>
+			<li	class="w3-button fc" data-multifilter="4">4성</li>
+			<li	class="w3-button fc" data-multifilter="5">5성</li>
 		</ul>
 	</div>
-	<div id="fo" class="w3-bar w3-display-container	deft" style="display:none">
-		<span class="w3-button w3-display-topright x"><i class="fa fa-close"></i></span>
+	<div id="fo" class="w3-bar w3-display-container	w3-hide">
+		<span class="w3-button w3-display-topright w3-tiny x"><i class="fa fa-close"></i></span>
 		<button	class="w3-button fc	shuffle" data-shuffle>셔플</button>
 		<ul	class="fo w3-show-inline-block">
 			<li	class="w3-button fc	active"	data-sortAsc>▲</li>
 			<li	class="w3-button fc" data-sortDesc>▼</li>
 		</ul>
-		<select	style="vertical-align:middle" data-sortOrder>
-				<option	value="index">도감번호</option>
-				<option	value="sortData">종류</option>
-				<option	value="sortData">등급</option>
-				<option	value="sortData">제조시간</option>
+		<select	class="som w3-cell-middle" data-sortOrder>
+			<option	value="index">도감번호</option>
+			<option	value="sortData">제조시간</option>
+			<option	value="rarity">등급</option>
 		</select>
 	</div>
 </div>
-<input type="text" placeholder="검색"	class="w3-input	fc search" name="search" data-search>
+<input type="text" placeholder="검색"	class="w3-input	fc search" data-search>
 <div class="filtr-container	w3-center" id="gun">
 <div class="dollcontainer filtr-item" data-category="2">
 	<div class="w3-hover-shadow	font equip">
@@ -324,7 +295,7 @@ function def(name) {
 		<div class="tag">4900</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="5">
+<div class="dollcontainer filtr-item" data-category="5,6">
 	<div class="w3-hover-shadow	font equip">
 		<p class="name poeq	f115 er5">16Lab	적외선	지시기</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -449,7 +420,7 @@ function def(name) {
 		<div class="tag">4500</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="5">
+<div class="dollcontainer filtr-item" data-category="5,6">
 	<div class="w3-hover-shadow	font equip">
 		<p class="name poeq	f115 er5">16Lab	차구경철갑탄</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -574,7 +545,7 @@ function def(name) {
 		<div class="tag">5300</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="5">
+<div class="dollcontainer filtr-item" data-category="5,6">
 	<div class="w3-hover-shadow	font equip">
 		<p class="name poeq	f125 er5">16Lab	HP탄</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -644,7 +615,7 @@ function def(name) {
 		<div class="tag">5400</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="5">
+<div class="dollcontainer filtr-item" data-category="5,6">
 	<div class="w3-hover-shadow	font equip">
 		<p class="name poeq	f125 er5">16Lab	벅샷</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -826,14 +797,14 @@ function def(name) {
 </div>
 <div class="dollcontainer filtr-item" data-category="3">
 	<div class="w3-hover-shadow	font equip">
-			<p class="name poeq	f125 er3">IType1 방탄삽판</p>
+			<p class="name poeq	f125 er3">Type1 방탄삽판</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
 			<img src="../img/etc/star.png" class="star r2" alt="rarity">
 			<img src="../img/etc/star.png" class="star r3" alt="rarity">
 			<i class="equip_info_cage_3	incage"></i>
 			<i class="bg_3 bg"></i>
 			<img src="../img/etc/3_plate.png" class="etype"	alt="type">
-			<img src="../img/equip/16lab_plate.png"	class="icon2" alt="icon">
+			<img src="../img/equip/plate.png"	class="icon2" alt="icon">
 		<div class="tag">2600</div>
 	</div>
 </div>
@@ -867,7 +838,7 @@ function def(name) {
 		<div class="tag">5100</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="5">
+<div class="dollcontainer filtr-item" data-category="5,6">
 	<div class="w3-hover-shadow	font equip">
 		<p class="name poeq	f125 er5">16Lab	방탄삽판</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -878,7 +849,7 @@ function def(name) {
 		<i class="equip_info_cage_5	incage"></i>
 		<i class="bg_5 bg"></i>
 		<img src="../img/etc/5_plate.png" class="etype"	alt="type">
-		<img src="../img/equip/plate.png" class="icon2"	alt="icon">
+		<img src="../img/equip/16lab_plate.png" class="icon2"	alt="icon">
 		<div class="tag">제조불가</div>
 	</div>
 </div>
@@ -967,7 +938,7 @@ function def(name) {
 		<div class="tag">5200</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="5">
+<div class="dollcontainer filtr-item" data-category="5,6">
 	<div class="w3-hover-shadow	font equip">
 		<p class="name poeq	f125 er5">16Lab	열광학	슈트</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -982,7 +953,7 @@ function def(name) {
 		<div class="tag">5200</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="5">
+<div class="dollcontainer filtr-item" data-category="5,6">
 	<div class="w3-hover-shadow	font equip">
 		<p class="name poeq	f125 er5">KSTP</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -997,7 +968,7 @@ function def(name) {
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="5">
+<div class="dollcontainer filtr-item" data-category="5,6">
 	<div class="w3-hover-shadow	font equip">
 		<p class="name poeq	f125 er5">KST1P8</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1012,7 +983,7 @@ function def(name) {
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="5">
+<div class="dollcontainer filtr-item" data-category="5,6">
 	<div class="w3-hover-shadow	font equip">
 		<p class="name poeq	f125 er5">KST1P7</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1027,7 +998,7 @@ function def(name) {
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="5">
+<div class="dollcontainer filtr-item" data-category="5,6">
 	<div class="w3-hover-shadow	font equip">
 		<p class="name poeq	f125 er5">PM 5-25X56</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1042,7 +1013,7 @@ function def(name) {
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="4">
+<div class="dollcontainer filtr-item" data-category="4,6">
 	<div class="w3-hover-shadow	font equip">
 			<p class="name poeq	f125 er4">EOT XPS3</p>
 			<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1058,7 +1029,7 @@ function def(name) {
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="5">
+<div class="dollcontainer filtr-item" data-category="5,6">
 	<div class="w3-hover-shadow	font equip">
 		<p class="name poeq	f115 er5">PKM03M 야간조준경</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1073,7 +1044,7 @@ function def(name) {
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="5">
+<div class="dollcontainer filtr-item" data-category="5,6">
 	<div class="w3-hover-shadow	font equip">
 		<p class="name poeq	f125 er5">특수 기동장갑</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1103,7 +1074,7 @@ function def(name) {
 		<div class="tag">5200</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="5">
+<div class="dollcontainer filtr-item" data-category="5,6">
 	<div class="w3-hover-shadow	font equip">
 		<p class="name poeq	f125 er5">GSG UX 외골격</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1118,7 +1089,7 @@ function def(name) {
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="5">
+<div class="dollcontainer filtr-item" data-category="5,6">
 	<div class="w3-hover-shadow	font equip">
 		<p class="name poeq	f125 er5">XM261	탄약</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1133,7 +1104,7 @@ function def(name) {
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="5">
+<div class="dollcontainer filtr-item" data-category="5,6">
 	<div class="w3-hover-shadow	font equip">
 		<p class="name poeq	f125 er5">.300 BLK 고속탄</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1148,7 +1119,7 @@ function def(name) {
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="5">
+<div class="dollcontainer filtr-item" data-category="5,6">
 	<div class="w3-hover-shadow	font equip">
 		<p class="name poeq	f125 er5">사격경기용	철갑탄</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1163,7 +1134,7 @@ function def(name) {
 		<div class="tag">제조불가/춘전탄</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="5">
+<div class="dollcontainer filtr-item" data-category="5,6">
 	<div class="w3-hover-shadow	font equip">
 		<p class="name poeq	f125 er5">64식용 소음기</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1178,7 +1149,7 @@ function def(name) {
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="5">
+<div class="dollcontainer filtr-item" data-category="5,6">
 	<div class="w3-hover-shadow	font equip">
 		<p class="name poeq	f125 er5">Titan	사격제어칩</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1193,7 +1164,7 @@ function def(name) {
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="5">
+<div class="dollcontainer filtr-item" data-category="5,6">
 	<div class="w3-hover-shadow	font equip">
 		<p class="name poeq	f125 er5">Hayha	메모리	칩</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1208,7 +1179,7 @@ function def(name) {
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="5">
+<div class="dollcontainer filtr-item" data-category="5,6">
 	<div class="w3-hover-shadow	font equip">
 		<p class="name poeq	f125 er5">전술용 메모리 칩</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1223,7 +1194,7 @@ function def(name) {
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="5">
+<div class="dollcontainer filtr-item" data-category="5,6">
 	<div class="w3-hover-shadow	font equip">
 		<p class="name poeq	f125 er5">업그레이드	디스크</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1238,7 +1209,7 @@ function def(name) {
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="5">
+<div class="dollcontainer filtr-item" data-category="5,6">
 	<div class="w3-hover-shadow	font equip">
 		<p class="name poeq	f125 er5">조정간 트리거셋</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1253,7 +1224,7 @@ function def(name) {
 		<div class="tag">제조불가</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="5">
+<div class="dollcontainer filtr-item" data-category="5,6">
 	<div class="w3-hover-shadow	font equip">
 		<p class="name poeq	f125 er5">남겨진 무기상자</p>
 		<img src="../img/etc/star.png" class="star r1" alt="rarity">
@@ -1271,42 +1242,8 @@ function def(name) {
 </div>
 <script	src="../js/jquery.js"></script>
 <script	src="../js/jquery.filterizr.min.js"></script>
-<script>
-$(document).ready(function(){
-	$('.sf .fc').click(function() {
-		$('.sf .fc').removeClass('active');
-		$(this).addClass('active');
-	});
-	$('.mf li').click(function() {
-		var	targetFilter = $(this).data('multifltr');
-		if (targetFilter === 'all')	{
-			$('.mf li').removeClass('active');
-			$(this).addClass('active');
-		}
-		else {
-			$('.mf li[data-multifltr="all"]').removeClass('active');
-			$(this).toggleClass('active');
-		}
-	});
-	$('.shuffle').click(function() {
-		$('.fo .fc').removeClass('active');
-		$(this).addClass('active');
-	});
-	$('.fo .fc').click(function() {
-		$('.shuffle').removeClass('active');
-		$('.fo .fc').removeClass('active');
-		$(this).addClass('active');
-	});
-});
-</script>
-<script	src="../js/jquery.js"></script>
-<script	src="../js/jquery.filterizr.min.js"></script>
 <script	src="../js/index.js"></script>
 <script	src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.4.2/lazyload.min.js"></script>
-<script>
-	new	LazyLoad({
-		elements_selector: "img"
-	});
-</script>
+<script>new	LazyLoad({	elements_selector: "img"});</script>
 </body>
 </html>
