@@ -7,7 +7,6 @@
 <link href="../css/w3.css" rel="stylesheet">
 <link href="../css/css_overwrite.css" rel="stylesheet">
 <link href="../css/e_tools.css"	rel="stylesheet">
-<link href="../js/index.js">
 <title>Equipment</title>
 </head>
 <body>
@@ -1300,21 +1299,9 @@ $(document).ready(function(){
 	});
 });
 </script>
-<script>
-$(function() {var f	= $('#gun').filterizr({
-	controlsSelector:'.fc'	,
-	filterOutCss: {
-		opacity: 0,
-		transform:'scale(0.75)'
-		},
-		filterInCss: {
-		opacity: 1,
-		transform:'scale(1)'
-		}
-	});
-	window.filterizr = f;
-});
-</script>
+<script	src="../js/jquery.js"></script>
+<script	src="../js/jquery.filterizr.min.js"></script>
+<script	src="../js/index.js"></script>
 <script	src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.4.2/lazyload.min.js"></script>
 <script>
 	new	LazyLoad({

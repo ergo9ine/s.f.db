@@ -6,8 +6,7 @@
 <link href="../css/font.css" rel="stylesheet">
 <link href="../css/w3.css" rel="stylesheet">
 <link href="../css/css_overwrite.css" rel="stylesheet">
-<link href="../css/f_skill.css"	rel="stylesheet">
-<link href="../css/f_tools.css"	rel="stylesheet">
+<link href="../css/fairy.css"	rel="stylesheet">
 <title>Fairy</title>
 </head>
 <body>
@@ -20,14 +19,14 @@
 </div>
 <div class="w3-bar w3-black	w3-hide-small">
 	<div class="w3-half">
-		<!-- <div class="w3-bar w3-black">
+		<!--<div class="w3-bar w3-black">
 			<ul	class="sf">싱글 필터 :
 				<li	class="w3-button fc	active"	data-filter="all">All</li>
 				<li	class="w3-button fc" data-filter="1">전투</li>
 				<li	class="w3-button fc" data-filter="2">전략</li>
 				<li	class="w3-button fc" data-filter="3">이벤트</li>
 			</ul>
-		</div> -->
+		</div>-->
 		<div class="w3-bar w3-black">
 			<ul	class="mf">멀티 필터 :
 				<li	class="w3-button fc" data-multifilter="1">전투</li>
@@ -53,13 +52,13 @@
 	</div>
 </div>
 <script>
-function def(name) {
+function def(name){
 	var	i;
 	var	x =	document.getElementsByClassName("deft");
-	for	(i = 0;	i <	x.length; i++) {
-	   x[i].style.display =	"none";	 
+	for	(i = 0;	i <	x.length; i++){
+		x[i].style.display =	"none";	
 	}
-	document.getElementById(name).style.display	= "block";	
+	document.getElementById(name).style.display	="block";	
 }
 </script>
 <div class="w3-bar w3-black	w3-hide-large w3-hide-medium">
@@ -106,7 +105,7 @@ function def(name) {
 		<i class="tools	Battle_Fairy_Tag ftype"></i>
 		<i class="tools	info_cage_up cover"></i>
 		<i class="fighting skill"></i>
-		<img src="../img/fairy/fighting_3.png" class="icon3" alt="icon">
+		<i class="fairy_i	fighting_i	icon3"></i>
 		<div class="tag">람보/ㅇㅅ</div>
 	</div>
 </div>
@@ -117,7 +116,7 @@ function def(name) {
 		<i class="tools	Battle_Fairy_Tag ftype"></i>
 		<i class="tools	info_cage_up cover"></i>
 		<i class="skill	crit"></i>
-		<img src="../img/fairy/crit_3.png" class="icon3" alt="icon">
+		<i class="fairy_i	crit_i	icon3"></i>
 		<div class="tag">ㄱㄴ</div>
 	</div>
 </div>
@@ -128,7 +127,7 @@ function def(name) {
 		<i class="tools	Battle_Fairy_Tag ftype"></i>
 		<i class="tools	info_cage_up cover"></i>
 		<i class="skill	armor"></i>
-		<img src="../img/fairy/armor_3.png"	class="icon3" alt="icon">
+		<i class="fairy_i	armor_i	icon3"></i>
 		<div class="tag">ㅂㅍ</div>
 	</div>
 </div>
@@ -139,18 +138,18 @@ function def(name) {
 		<i class="tools	Battle_Fairy_Tag ftype"></i>
 		<i class="tools	info_cage_up cover"></i>
 		<i class="skill	shield"></i>
-		<img src="../img/fairy/shield_3.png" class="icon3" alt="icon">
+		<i class="fairy_i	shield_i	icon3"></i>
 		<div class="tag">ㅅㅎ</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="2" data-sort="a" data-type="전략">
+<div class="dollcontainer filtr-item" data-category="2" data-sort="410" data-type="전략">
 	<div class="w3-hover-shadow	font fairy">
 		<p class="name pofa	f125 er2">방어요정</p>
 		<i class="tools	Strategy_Fairy_info_cage incage"></i>
 		<i class="tools	Strategy_Fairy_Tag ftype"></i>
 		<i class="tools	info_cage_up cover"></i>
 		<i class="skill	defense"></i>
-		<img src="../img/fairy/defense_3.png" class="icon3"	alt="icon">
+		<i class="fairy_i	defense_i	icon3"></i>
 		<div class="tag">ㅂㅇ</div>
 	</div>
 </div>
@@ -161,7 +160,7 @@ function def(name) {
 		<i class="tools	Battle_Fairy_Tag ftype"></i>
 		<i class="tools	info_cage_up cover"></i>
 		<i class="skill	target"></i>
-		<img src="../img/fairy/target_3.png" class="icon3" alt="icon">
+		<i class="fairy_i	target_i	icon3"></i>
 		<div class="tag">ㄷㅂ</div>
 	</div>
 </div>
@@ -172,7 +171,7 @@ function def(name) {
 		<i class="tools	Battle_Fairy_Tag ftype"></i>
 		<i class="tools	info_cage_up cover"></i>
 		<i class="skill	sniper"></i>
-		<img src="../img/fairy/sniper_3.png" class="icon3" alt="icon">
+		<i class="fairy_i	sniper_i	icon3"></i>
 		<div class="tag">ㅈㄱ</div>
 	</div>
 </div>
@@ -183,7 +182,7 @@ function def(name) {
 		<i class="tools	Battle_Fairy_Tag ftype"></i>
 		<i class="tools	info_cage_up cover"></i>
 		<i class="skill	bombard"></i>
-		<img src="../img/fairy/bombard_3.png" class="icon3"	alt="icon">
+		<i class="fairy_i	bombard_i	icon3"></i>
 		<div class="tag">ㅍㄱ</div>
 	</div>
 </div>
@@ -194,95 +193,95 @@ function def(name) {
 		<i class="tools	Battle_Fairy_Tag ftype"></i>
 		<i class="tools	info_cage_up cover"></i>
 		<i class="skill	air_attack"></i>
-		<img src="../img/fairy/air_attack_3.png" class="icon3" alt="icon">
+		<i class="fairy_i	air_attack_i	icon3"></i>
 		<div class="tag">ㄳ/ㄱㅅ</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="2" data-sort="a" data-type="전략">
+<div class="dollcontainer filtr-item" data-category="2" data-sort="400" data-type="전략">
 	<div class="w3-hover-shadow	font fairy">
 		<p class="name pofa	f125 er2">증원요정</p>
 		<i class="tools	Strategy_Fairy_info_cage incage"></i>
 		<i class="tools	Strategy_Fairy_Tag ftype"></i>
 		<i class="tools	info_cage_up cover"></i>
 		<i class="skill	reinforce"></i>
-		<img src="../img/fairy/reinforce_3.png"	class="icon3" alt="icon">
+		<i class="fairy_i	reinforce_i	icon3"></i>
 		<div class="tag">ㅈㅇ</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="2" data-sort="a" data-type="전략">
+<div class="dollcontainer filtr-item" data-category="2" data-sort="405" data-type="전략">
 	<div class="w3-hover-shadow	font fairy">
 		<p class="name pofa	f125 er2">공수요정</p>
 		<i class="tools	Strategy_Fairy_info_cage incage"></i>
 		<i class="tools	Strategy_Fairy_Tag ftype"></i>
 		<i class="tools	info_cage_up cover"></i>
 		<i class="skill	airborne"></i>
-		<img src="../img/fairy/airborne_3.png" class="icon3" alt="icon">
+		<i class="fairy_i	airborne_i	icon3"></i>
 		<div class="tag">ㄳ/ㄱㅅ</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="2" data-sort="a" data-type="전략">
+<div class="dollcontainer filtr-item" data-category="2" data-sort="530" data-type="전략">
 	<div class="w3-hover-shadow	font fairy">
 		<p class="name pofa	f125 er2">매설요정</p>
 		<i class="tools	Strategy_Fairy_info_cage incage"></i>
 		<i class="tools	Strategy_Fairy_Tag ftype"></i>
 		<i class="tools	info_cage_up cover"></i>
 		<i class="skill	landmines"></i>
-		<img src="../img/fairy/landmines_3.png"	class="icon3" alt="icon">
+		<i class="fairy_i	landmines_i	icon3"></i>
 		<div class="tag">ㅁㅅ</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="2" data-sort="a" data-type="전략">
+<div class="dollcontainer filtr-item" data-category="2" data-sort="535" data-type="전략">
 	<div class="w3-hover-shadow	font fairy">
 		<p class="name pofa	f125 er2">로켓요정</p>
 		<i class="tools	Strategy_Fairy_info_cage incage"></i>
 		<i class="tools	Strategy_Fairy_Tag ftype"></i>
 		<i class="tools	info_cage_up cover"></i>
 		<i class="skill	position"></i>
-		<img src="../img/fairy/position_3.png" class="icon3" alt="icon">
+		<i class="fairy_i	position_i	icon3"></i>
 		<div class="tag">ㄹㅋ</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="2" data-sort="a" data-type="전략">
+<div class="dollcontainer filtr-item" data-category="2" data-sort="540" data-type="전략">
 	<div class="w3-hover-shadow	font fairy">
 		<p class="name pofa	f125 er2">공사요정</p>
 		<i class="tools	Strategy_Fairy_info_cage incage"></i>
 		<i class="tools	Strategy_Fairy_Tag ftype"></i>
 		<i class="tools	info_cage_up cover"></i>
 		<i class="skill	fortress"></i>
-		<img src="../img/fairy/fortress_3.png" class="icon3" alt="icon">
+		<i class="fairy_i	fortress_i	icon3"></i>
 		<div class="tag">ㄳ/ㄱㅅ</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="2" data-sort="a" data-type="전략">
+<div class="dollcontainer filtr-item" data-category="2" data-sort="500" data-type="전략">
 	<div class="w3-hover-shadow	font fairy">
 		<p class="name pofa	f125 er2">지휘요정</p>
 		<i class="tools	Strategy_Fairy_info_cage incage"></i>
 		<i class="tools	Strategy_Fairy_Tag ftype"></i>
 		<i class="tools	info_cage_up cover"></i>
 		<i class="skill	command"></i>
-		<img src="../img/fairy/command_3.png" class="icon3"	alt="icon">
+		<i class="fairy_i	command_i	icon3"></i>
 		<div class="tag">ㅈㅎ</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="2" data-sort="a" data-type="전략">
+<div class="dollcontainer filtr-item" data-category="2" data-sort="505" data-type="전략">
 	<div class="w3-hover-shadow	font fairy">
 		<p class="name pofa	f125 er2">수색요정</p>
 		<i class="tools	Strategy_Fairy_info_cage incage"></i>
 		<i class="tools	Strategy_Fairy_Tag ftype"></i>
 		<i class="tools	info_cage_up cover"></i>
 		<i class="skill	rescue"></i>
-		<img src="../img/fairy/rescue_3.png" class="icon3" alt="icon">
+		<i class="fairy_i	rescue_i	icon3"></i>
 		<div class="tag">ㅅㅅ/</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="2" data-sort="a" data-type="전략">
+<div class="dollcontainer filtr-item" data-category="2" data-sort="510" data-type="전략">
 	<div class="w3-hover-shadow	font fairy">
 		<p class="name pofa	f125 er2">조명요정</p>
 		<i class="tools	Strategy_Fairy_info_cage incage"></i>
 		<i class="tools	Strategy_Fairy_Tag ftype"></i>
 		<i class="tools	info_cage_up cover"></i>
 		<i class="skill	illumine"></i>
-		<img src="../img/fairy/illumine_3.png" class="icon3" alt="icon">
+		<i class="fairy_i	illumine_i	icon3"></i>
 		<div class="tag">ㅈㅁ</div>
 	</div>
 </div>
@@ -293,7 +292,7 @@ function def(name) {
 		<i class="tools	Battle_Fairy_Tag ftype"></i>
 		<i class="tools	info_cage_up cover"></i>
 		<i class="skill	golden"></i>
-		<img src="../img/fairy/golden_3.png" class="icon3" alt="icon">
+		<i class="fairy_i	golden_i	icon3"></i>
 		<div class="tag">ㅎㄱ</div>
 	</div>
 </div>
@@ -304,7 +303,7 @@ function def(name) {
 		<i class="tools	Battle_Fairy_Tag ftype"></i>
 		<i class="tools	info_cage_up cover"></i>
 		<i class="skill	no_consumption"></i>
-		<img src="../img/fairy/no_consumption.png" class="icon3" alt="icon">
+		<i class="fairy_i	no_consumption_i	icon3"></i>
 		<div class="tag">ㅊㅅ</div>
 	</div>
 </div>
@@ -315,7 +314,7 @@ function def(name) {
 		<i class="tools	Battle_Fairy_Tag ftype"></i>
 		<i class="tools	info_cage_up cover"></i>
 		<i class="skill	chloe"></i>
-		<img src="../img/fairy/chloe_3.png"	class="icon3" alt="icon">
+		<i class="fairy_i	chloe_i	icon3"></i>
 		<div class="tag">ㅋㄹㅇ</div>
 	</div>
 </div>
@@ -326,18 +325,18 @@ function def(name) {
 		<i class="tools	Battle_Fairy_Tag ftype"></i>
 		<i class="tools	info_cage_up cover"></i>
 		<i class="skill	sakura"></i>
-		<img src="../img/fairy/sakura_3.png" class="icon3" alt="icon">
+		<i class="fairy_i	sakura_i	icon3"></i>
 		<div class="tag">ㅇㅇㅅㅋㄹ</div>
 	</div>
 </div>
-<div class="dollcontainer filtr-item" data-category="2,3" data-sort="a" data-type="전략">
+<div class="dollcontainer filtr-item" data-category="2,3" data-sort="600" data-type="전략">
 	<div class="w3-hover-shadow	font fairy">
 		<p class="name pofa	f125 er2">카구야</p>
 		<i class="tools	Strategy_Fairy_info_cage incage"></i>
 		<i class="tools	Strategy_Fairy_Tag ftype"></i>
 		<i class="tools	info_cage_up cover"></i>
 		<i class="skill	kaguya"></i>
-		<img src="../img/fairy/kaguya_3.png" class="icon3" alt="icon">
+		<i class="fairy_i	kaguya_i	icon3"></i>
 		<div class="tag">ㅋㄱㅇ</div>
 	</div>
 </div>
@@ -345,56 +344,7 @@ function def(name) {
 <script	src="../js/jquery.js"></script>
 <script	src="../js/jquery.filterizr.min.js"></script>
 <script	src="../js/index.js"></script>
-<link href="../js/def.js">
-<script>
-$(document).ready(function ($) {
-	$('.sf .fc').click(function() {
-		$('.sf .fc').removeClass('active');
-		$('.mf li').removeClass('active');
-		$(this).addClass('active');
-	});
-	$('.mf li').click(function() {
-		$(this).toggleClass('active');
-	});
-	$('.shuffle').click(function() {
-		$('.fo .fc').removeClass('active');
-		$(this).addClass('active');
-	});
-	$('.fo .fc').click(function() {
-		$('.shuffle').removeClass('active');
-		$('.fo .fc').removeClass('active');
-		$(this).addClass('active');
-	});
-	var	filterizd =	$('#gun').filterizr({
-	controlsSelector:'.fc',
-	filterOutCss:{
-		opacity:0,
-		transform:'scale(0.75)'
-	},
-	filterInCss:{
-		opacity:1,
-		transform:'scale(1)'
-	}
-	});
-	$('.fo li').click(function() {
-        var sortBy    = $('.so').val();
-        var sortOrder = $(this).data('sort');
-        filterizd.filterizr('sort', sortBy, sortOrder);
-	})
-	$('.fom li').click(function() {
-        var sortBy    = $('.som').val();
-        var sortOrder = $(this).data('fso');
-        filterizd.filterizr('sort', sortBy, sortOrder);
-	})
-});
-</script>
 <script	src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.4.2/lazyload.min.js"></script>
-<script>
-new	LazyLoad({
-	elements_selector: "img"
-});
-</script>
+<script>new	LazyLoad({	elements_selector: "img"});</script>
 </body>
-
-<!-- window.filterizr = filterizd; -->
 </html>

@@ -52,4 +52,42 @@ $(document).ready(function() {
 			$('#tab5').addClass('w3-show').removeClass('w3-hide');
 		}
 	});
+	$('.sf .fc').click(function() {
+		$('.sf .fc').removeClass('active');
+		$('.mf li').removeClass('active');
+		$(this).addClass('active');
+	});
+	$('.mf li').click(function() {
+		$(this).toggleClass('active');
+	});
+	$('.shuffle').click(function() {
+		$('.fo .fc').removeClass('active');
+		$(this).addClass('active');
+	});
+	$('.fo .fc').click(function() {
+		$('.shuffle').removeClass('active');
+		$('.fo .fc').removeClass('active');
+		$(this).addClass('active');
+	});
+	var	filterizd =	$('#gun').filterizr({
+	controlsSelector:'.fc',
+	filterOutCss:{
+		opacity:0,
+		transform:'scale(0.75)'
+	},
+	filterInCss:{
+		opacity:1,
+		transform:'scale(1)'
+	}
+	});
+	$('.fo li').click(function() {
+        var sortBy    = $('.so').val();
+        var sortOrder = $(this).data('sort');
+        filterizd.filterizr('sort', sortBy, sortOrder);
+	})
+	$('.fom li').click(function() {
+        var sortBy    = $('.som').val();
+        var sortOrder = $(this).data('fso');
+        filterizd.filterizr('sort', sortBy, sortOrder);
+	})
 });

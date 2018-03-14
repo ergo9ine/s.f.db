@@ -6,9 +6,6 @@
 <link href="../css/font.css" rel="stylesheet">
 <link href="../css/w3.css" rel="stylesheet">
 <link href="../css/css_overwrite.css" rel="stylesheet">
-<script	src="../js/jquery.js"></script>
-<script	src="../js/jquery.filterizr.min.js"></script>
-<link href="../js/index.js">
 <script>
 function doll_open(){document.getElementById("dollfunc").style.width="100%";document.getElementById("dollfunc").style.display="block";document.getElementById("list").style.display="none"}function	doll_close(){document.getElementById("dollfunc").style.display="none";document.getElementById("list").style.display="block"};
 </script>
@@ -61,7 +58,7 @@ function myFunction(a){a=document.getElementById(a);-1==a.className.indexOf("w3-
 					<img class="w3-image" style="height:600px;min-width:512px" src="../img/t_doll/1_s.png" alt="">
 				</div>
 				<div class="s7 w3-mobile">
-					<div class="w3-third  w3-black"	style="max-height:400px">
+					<div class="w3-third w3-black"	style="max-height:400px">
 						<div class="w3-row w3-hide-small" style="min-height:50px"></div>
 						<div class="w3-row"	style="min-height:300px">
 							<div class="s9 w3-yellow" style="min-height:175px"></div>
@@ -90,7 +87,7 @@ function myFunction(a){a=document.getElementById(a);-1==a.className.indexOf("w3-
 							</p>
 						</div>
 					</div>
-					<div class="w3-third  w3-green"	style="max-height:400px">
+					<div class="w3-third w3-green"	style="max-height:400px">
 						<div class="w3-row w3-left-align" style="min-height:50px;;max-height:50px"><p>스테이터스</p></div>
 						<div class="w3-row w3-orange" style="min-height:300px">	그래프	</div>
 						<div class="w3-row w3-green	w3-left-align" style="min-height:50px;max-height:50px">
@@ -124,7 +121,7 @@ function myFunction(a){a=document.getElementById(a);-1==a.className.indexOf("w3-
 		</div>
 	</div>
 </div>
-<div  class="w3-black">
+<div class="w3-black">
 		<span class="w3-button w3-black w3-tiny w3-display-topright x"><i class="fa	fa-close"></i></span>
 		<label class="f125 fw">검색가능한 종류</label>
 		<p>인형이름	:콜트	리볼버/콜트</p>
@@ -2949,49 +2946,7 @@ function def(name) {
 </div>
 <script	src="../js/jquery.js"></script>
 <script	src="../js/jquery.filterizr.min.js"></script>
-<script>
-$(document).ready(function(){
-	$('.sf .fc').click(function(){
-		$('.sf .fc').removeClass('active');
-		$(this).addClass('active');
-	});
-	$('.mf li').click(function(){
-		var	targetFilter = $(this).data('multifltr');
-		if (targetFilter === 'all')	{
-			$('.mf li').removeClass('active');
-			$(this).addClass('active');
-		}
-		else{
-			$('.mf li[data-multifltr="all"]').removeClass('active');
-			$(this).toggleClass('active');
-		}
-	});
-	$('.shuffle').click(function(){
-		$('.fo .fc').removeClass('active');
-		$(this).addClass('active');
-	});
-	$('.fo .fc').click(function(){
-		$('.shuffle').removeClass('active');
-		$('.fo .fc').removeClass('active');
-		$(this).addClass('active');
-	});
-});
-</script>
-<script>
-$(function() {var f	= $('#gun').filterizr({
-	controlsSelector:'.fc' 
-	filterOutCss:{
-		opacity:0,
-		transform:'scale(0.75)'
-		},
-		filterInCss:{
-		opacity: 1,
-		transform:'scale(1)'
-		}
-	});
-	window.filterizr = f;
-});
-</script>
+<script	src="../js/index.js"></script>
 <script	src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.4.2/lazyload.min.js"></script>
 <script>new	LazyLoad({elements_selector:"img"});</script>
 </body>
