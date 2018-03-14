@@ -49,6 +49,7 @@ a,a:visited,a:link,a:hover,a:active{text-decoration:none}
 .cover{right:3px}
 .skill{left:25px;top:234px}
 .active{background-color:#ccc}
+#open,#open~a{width:200px}
 #lm,#rm{width:50%;background-image:url(../img/logo/SFDB_half_l.png);background-repeat:no-repeat;background-position:right bottom}
 #rm{right:0;background-image:url(../img/logo/SFDB_half_r.png);background-position:left bottom}
 /*Simulator*/

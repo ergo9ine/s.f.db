@@ -19,47 +19,37 @@ $(document).ready(function() {
 	$('#info').click(function() {
 		$(".tab").removeClass('w3-red');
 		$(this).addClass('w3-red');
-		$('#tdoll,#equip,#fairy,#disc,#battery,#enhance,#factory').removeClass('w3-show').addClass('w3-hide');
+		$('#tab1,#tab2,#tab3,#tab4,#tab5').removeClass('w3-show').addClass('w3-hide');
 		$('#index').addClass('w3-show').removeClass('w3-hide');
 	});
 	$(".tab").click(function() {
 		$("#info").removeClass('w3-red');
 		$(".tab").removeClass('w3-red');
 		$(this).addClass('w3-red');
-		if ($(this).attr("id") === "d")
+		if ($(this).attr("id") === "m1")
 		{
-			$('#index,#equip,#fairy').removeClass('w3-show').addClass('w3-hide');
-			$('#tdoll').addClass('w3-show').removeClass('w3-hide');
+			$('#index,#tab2,#tab3,#tab4,#tab5').removeClass('w3-show').addClass('w3-hide');
+			$('#tab1').addClass('w3-show').removeClass('w3-hide');
 		}
-		if ($(this).attr("id") === "e")
+		if ($(this).attr("id") === "m2")
 		{
-			$('#index,#tdoll,#fairy').removeClass('w3-show').addClass('w3-hide');
-			$('#equip').addClass('w3-show').removeClass('w3-hide');
+			$('#index,#tab1,#tab3,#tab4,#tab5').removeClass('w3-show').addClass('w3-hide');
+			$('#tab2').addClass('w3-show').removeClass('w3-hide');
 		}
-		if ($(this).attr("id") === "f")
+		if ($(this).attr("id") === "m3")
 		{
-			$('#index,#equip,#tdoll').removeClass('w3-show').addClass('w3-hide');
-			$('#fairy').addClass('w3-show').removeClass('w3-hide');
+			$('#index,#tab1,#tab2,#tab4,#tab5').removeClass('w3-show').addClass('w3-hide');
+			$('#tab3').addClass('w3-show').removeClass('w3-hide');
 		}
-		if ($(this).attr("id") === "di")
+		if ($(this).attr("id") === "m4")
 		{
-			$('#index,#battery,#enhance,#factory').removeClass('w3-show').addClass('w3-hide');
-			$('#disc').addClass('w3-show').removeClass('w3-hide');
+			$('#index,#tab1,#tab2,#tab3,#tab5').removeClass('w3-show').addClass('w3-hide');
+			$('#tab4').addClass('w3-show').removeClass('w3-hide');
 		}
-		if ($(this).attr("id") === "ba")
+		if ($(this).attr("id") === "m5")
 		{
-			$('#index,#disc,#enhance,#factory').removeClass('w3-show').addClass('w3-hide');
-			$('#battery').addClass('w3-show').removeClass('w3-hide');
-		}
-		if ($(this).attr("id") === "en")
-		{
-			$('#index,#disc,#battery,#factory').removeClass('w3-show').addClass('w3-hide');
-			$('#enhance').addClass('w3-show').removeClass('w3-hide');
-		}
-		if ($(this).attr("id") === "fa")
-		{
-			$('#index,#disc,#battery,#enhance').removeClass('w3-show').addClass('w3-hide');
-			$('#factory').addClass('w3-show').removeClass('w3-hide');
+			$('#index,#tab1,#tab2,#tab3,#tab4').removeClass('w3-show').addClass('w3-hide');
+			$('#tab5').addClass('w3-show').removeClass('w3-hide');
 		}
 	});
 });

@@ -7,20 +7,27 @@
 <link href="css/font.css" rel="stylesheet">
 <link href="css/w3.css" rel="stylesheet">
 <link href="css/css_overwrite.css" rel="stylesheet">
-<script src="js/jquery.js"></script>
+<title>GFDB</title>
 </head>
 <body>
-<div class="w3-sidebar w3-bar-block w3-card w3-black font w3-animate-left" style="display:none;min-width:105px" id="Sidebar">
-	<a id="close" class="w3-bar-item	w3-small w3-black w3-center w3-border-bottom w3-border-right"><i class="fa fa-close"></i></a>
-	<div class="logo w3-margin-bottom w3-margin-top w3-center"><img src="img/logo/sidebar_gflogo.png" alt="logo" id="slogo"></a></div>
-	<a class="w3-bar-item	w3-button	w3-hover-white" href="index.html">도감</a>
-	<a class="w3-bar-item	w3-button	w3-hover-white" href="simulator.html">시뮬레이터</a>
-	<a id="info" class="w3-bar-item	w3-button	w3-hover-white" href="#">정보</a>
-	<a class="w3-bar-item	w3-button	w3-hover-white w3-disabled" href="#">About</a>
-	<a class="w3-bar-item	w3-button	w3-hover-white" href="https://discordapp.com/invite/7ZKwBrA" target="_parent">Contact</a>
+<div id="Sidebar" class="w3-sidebar w3-bar-block w3-card w3-black w3-animate-left w3-hide">
+	<a id="close" class="w3-bar-item	w3-small w3-center w3-border-bottom w3-border-right"><i class="fa fa-close"></i></a>
+	<div  id="slogo" class="logo w3-margin-bottom w3-margin-top w3-center"><img src="img/logo/sidebar_gflogo.png" alt="logo"></div>
+	<a class="w3-bar-item	w3-batton" href="index.html">도감</a>
+	<a class="w3-bar-item	w3-button" href="simulator.html">시뮬레이터</a>
+	<a id="info" class="w3-bar-item	w3-button" href="#">정보</a>
+	<a class="w3-bar-item	w3-button w3-disabled" href="#">About</a>
+	<a class="w3-bar-item	w3-button" href="https://discordapp.com/invite/7ZKwBrA" target="_parent">Contact</a>
+</div>
+<div class="w3-bar w3-black w3-hide-small">
+	<a id="open" class="w3-bar-item w3-button w3-small"><i class="fa	fa-bars"></i>Menu</a>
+	<a id="m1" class="w3-bar-item w3-button w3-small tab">작전보고서 계산기</a>
+	<a id="m2" class="w3-bar-item w3-button w3-small tab">전지 계산기</a>
+	<a id="m3" class="w3-bar-item w3-button w3-small tab">강화 시뮬레이터</a>
+	<a id="m4" class="w3-bar-item w3-button w3-small w3-disabled">제조 시뮬레이터</a>
 </div>
 <div id="lm" class="w3-sidebar w3-bar-block w3-black w3-animate-left w3-center w3-hide">
-	<a id="lc" class="w3-bar-item w3-small w3-black w3-border-bottom w3-border-left"><i class="fa fa-close"></i></a>
+	<a id="lc" class="w3-bar-item w3-small w3-border-bottom w3-border-left"><i class="fa fa-close"></i></a>
 	<a class="w3-bar-item	w3-button" href="index.html">도감</a>
 	<a class="w3-bar-item	w3-button" href="simulator.html">시뮬레이터</a>
 	<a id="info" class="w3-bar-item	w3-button" href="#">정보</a>
@@ -28,29 +35,22 @@
 	<a class="w3-bar-item	w3-button" href="https://discordapp.com/invite/7ZKwBrA" target="_parent">Contact</a>
 </div>
 <div id="rm" class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-center w3-hide">
-	<a id="rc" class="w3-bar-item w3-small w3-black w3-center w3-border-bottom w3-border-left"><i class="fa fa-close"></i></a>
-	<a id="di" class="w3-button w3-small w3-mobile tab">작전보고서 계산기</a>
-	<a id="ba" class="w3-button w3-small w3-mobile tab">전지 계산기</a>
-	<a id="en" class="w3-button w3-small w3-mobile tab">강화 시뮬레이터</a>
-	<a id="fa" class="w3-button w3-small w3-mobile tab w3-disabled">제조 시뮬레이터</a>
+	<a id="rc" class="w3-bar-item w3-border-bottom w3-border-left"><i class="fa fa-close"></i></a>
+	<a id="m1" class="w3-button w3-mobile tab">작전보고서 계산기</a>
+	<a id="m2" class="w3-button w3-mobile tab">전지 계산기</a>
+	<a id="m3" class="w3-button w3-mobile tab">강화 시뮬레이터</a>
+	<a id="m4" class="w3-button w3-mobile tab w3-disabled">제조 시뮬레이터</a>
 </div>
 <div class="w3-bar w3-center w3-black w3-hide-large w3-hide-medium w3-display-container"> <!-- 모바일 -->
 	<a id="lo" class="w3-bar-item w3-button w3-small w3-left">LeftMenu<i class="fa	fa-bars"></i></a>
 	<div class="w3-display-middle">GFDB</div>
 	<a id="ro" class="w3-bar-item w3-button w3-small w3-right"><i class="fa fa-bars"></i>RightMenu</a>
 </div>
-<div class="w3-bar w3-black w3-hide-small">
-	<a id="open" class="w3-bar-item w3-button w3-small" style="width:200px"><i class="fa	fa-bars"></i>Menu</a>
-	<a id="di" class="w3-bar-item w3-button w3-small tab" style="width:200px">작전보고서 계산기</a>
-	<a id="ba" class="w3-bar-item w3-button w3-small tab" style="width:200px">전지 계산기</a>
-	<a id="en" class="w3-bar-item w3-button w3-small tab" style="width:200px">강화 시뮬레이터</a>
-	<a id="fa" class="w3-bar-item w3-button w3-small w3-disabled" style="width:200px">제조 시뮬레이터</a>
-</div>
-<div class="w3-black" id="contents">
-	<div id="index"class="w3-container w3-padding w3-white content w3-show">
+<div id="contents" class="w3-black">
+	<div id="index"class="w3-container w3-white content w3-show">
 		<iframe src="preview.html" style="display:block;border:0;height:100%" width="100%" height="100%"></iframe>
 	</div>
-	<div id="disc" class="w3-container w3-black w3-hide">
+	<div id="tab1" class="w3-container w3-hide">
 		<div class="w3-panel w3-white w3-display-container">
 			<span onclick="this.parentElement.style.display='none'" class="w3-button w3-white w3-tiny w3-display-topright"><i class="fa fa-close"></i></span>
 			<p>투입계산기는 현재 사용이 불가능합니다.</p>
@@ -70,7 +70,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="battery" class="w3-container w3-black w3-hide">
+	<div id="tab2" class="w3-container w3-hide">
 		<div class="w3-panel w3-white w3-display-container">
 			<span onclick="this.parentElement.style.display='none'" class="w3-button w3-white w3-tiny w3-display-topright"><i class="fa fa-close"></i></span>
 			<p>사용 시 주의사항</p>
@@ -244,7 +244,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="enhance" class="w3-container w3-black w3-hide">
+	<div id="tab3" class="w3-container w3-hide">
 		<div>
 			<div class="w3-half w3-center font">
 				<div class="w3-panel w3-white w3-display-container">
@@ -264,11 +264,12 @@
 			<table id="result" class="w3-center w3-border w3-table"></table>
 		</div>
 	</div>
-	<div id="factory" class="w3-container w3-black w3-hide">
+	<div id="tab4" class="w3-container w3-hide">
 		<h1>제조 시뮬레이터</h1>
 		<p>Test Page</p>
 	</div>
 </div>
+<script src="js/jquery.js"></script>
 <script src="js/index.js"></script>
 <script src="js/simulator.js"></script>
 </body>
