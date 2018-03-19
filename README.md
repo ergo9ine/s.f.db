@@ -1,4 +1,4 @@
-# GFDB.github.io
+# SFDATABASE.github.io
 Girlsfrontline Database Opensource Project
 
 # Process
