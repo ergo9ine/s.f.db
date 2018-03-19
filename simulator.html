@@ -7,7 +7,7 @@
 <link href="css/font.css" rel="stylesheet">
 <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
 <link href="css/css_overwrite.css" rel="stylesheet">
-<title>GFDB</title>
+<title>SANGVIS FERRI DATABASE</title>
 </head>
 <body class="w3-black">
 <div id="Sidebar" class="w3-sidebar w3-bar-block w3-card w3-black w3-animate-left w3-hide">
@@ -250,16 +250,16 @@
 					<p>올리길 원하시는 수치를 입력하세요.</p>
 				</div>
 				<form id="stat" class="w3-padding-64">
-					<p class="w3-tooltip w3-padding-small"><span class="w3-text w3-tag w3-red" style="position:absolute;left:50%;bottom:45px">화력</span><input id="atk" min="0" placeholder="0" value="0" required style="margin:0 auto" class="w3-input w3-center in"></p>
-					<p class="w3-tooltip w3-padding-small"><span class="w3-text w3-tag w3-red" style="position:absolute;left:50%;bottom:45px">회피</span><input id="dod" min="0" placeholder="0" value="0" required style="margin:0 auto" class="w3-input w3-center in"></p>
-					<p class="w3-tooltip w3-padding-small"><span class="w3-text w3-tag w3-red" style="position:absolute;left:50%;bottom:45px">명중</span><input id="hit" min="0" placeholder="0" value="0" required style="margin:0 auto" class="w3-input w3-center in"></p>
-					<p class="w3-tooltip w3-padding-small"><span class="w3-text w3-tag w3-red" style="position:absolute;left:50%;bottom:45px">사속</span><input id="spd" min="0" placeholder="0" value="0" required style="margin:0 auto" class="w3-input w3-center in"></p>
-				<button type="submit" id="clickme" class="w3-btn w3-xlarge w3-padding-large w3-wide w3-white">계산</button>
+					<p class="w3-tooltip"><span class="w3-text w3-tag w3-red tp">화력</span><input id="atk" min="0" placeholder="0" value="0" required class="w3-input w3-center in ctr"></p>
+					<p class="w3-tooltip"><span class="w3-text w3-tag w3-red tp">회피</span><input id="dod" min="0" placeholder="0" value="0" required class="w3-input w3-center in ctr"></p>
+					<p class="w3-tooltip"><span class="w3-text w3-tag w3-red tp">명중</span><input id="hit" min="0" placeholder="0" value="0" required class="w3-input w3-center in ctr"></p>
+					<p class="w3-tooltip"><span class="w3-text w3-tag w3-red tp">사속</span><input id="spd" min="0" placeholder="0" value="0" required class="w3-input w3-center in ctr"></p>
+				<button type="submit" id="clickme" class="w3-btn w3-wide w3-white">계산</button>
 				</form>
 			</div>
 		</div>
 		<div class="w3-half">
-			<table id="result" class="w3-center w3-border w3-table"></table>
+			<table id="result" class="w3-border w3-table"></table>
 		</div>
 	</div>
 	<div id="tab4" class="w3-container w3-hide">
@@ -271,6 +271,6 @@
 <script src="js/index.js"></script>
 <script src="js/simulator.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.4.2/lazyload.min.js"></script>
-<script>new LazyLoad({elements_selector:"iframe"	});</script>
+<script>new LazyLoad({elements_selector:"iframe"});</script>
 </body>
 </html>
