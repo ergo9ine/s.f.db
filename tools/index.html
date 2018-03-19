@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link href="../css/css_overwrite.css" rel="stylesheet">
+<link href="../css/index.css" rel="stylesheet">
 <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
-<link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel="stylesheet">
-<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href='spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel="stylesheet">
+<link href="cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="../css/fullcalendar.min.css" rel="stylesheet">
 <link href="../css/fullcalendar.print.min.css"	rel="stylesheet" media="print">
 <title>SFDB : index</title>
@@ -15,7 +16,7 @@
 	<div class="w3-center">
 		<object class="w3-mobile ctr" type="image/svg+xml" data="../img/logo/SFDB_main.svg" style="width:75%"></object>
 	</div>
-	<div style="width:50%" class="w3-border  w3-black">SANGVIS FERRI DATABASE Loading... 50%</div>
+	<div style="width:100%" class="w3-border"><div style="width:50%" class="w3-border  w3-black">SANGVIS FERRI DATABASE Loading... 50%</div></div>
 	<div class="w3-half">
 		<div>
 			<i class="nt"><div class="w3-text-white	ntl">공지사항</div></i>
@@ -31,12 +32,15 @@
 		<iframe src="https://discordapp.com/widget?id=415305038072905728&theme=dark" width="500px" height="500px" allowtransparency="true" frameborder="0"></iframe>
 	</div>
 	<div class="w3-half">
-		<div class="fltr">
-			<i class="nt"><div class="w3-text-white	ntl">공지사항</div></i>
+		<div class="w3-cell-row">
+			<div class="w3-cell fltr">
+				<i class="nt w3-left"><div class="w3-text-white	ntl">이벤트</div></i>
+			</div>
+			<div class="w3-cell fltr w3-display-container">
+				<a href="calendar.html" ><i class="ical w3-right"></i></a>
+				<div class="w3-border w3-round-large w3-right w3-display-bottommiddle" style="width:200px;height:50px">빙고이벤트 [전술능력 평가]및 신규 전술인형 SRS소개</div>
+			</div>
 		</div>
-		<div class="fltr">
-		</div>
-		<div id="calendar"></div>
 	</div>
 	<script src="../js/jquery.js"></script>
 	<script src="../js/fullcalendar.min.js"></script>
