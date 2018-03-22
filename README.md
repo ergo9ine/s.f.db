@@ -5,7 +5,7 @@ Girlsfrontline Database Opensource Project
 - https://trello.com/b/sPsg0jzu/gfdb-process
 
 # Disscussion
-- https://discordapp.com/invite/7ZKwBrA
+- https://discordapp.com/invite/8eTFTSa
 
 # Staff
 
