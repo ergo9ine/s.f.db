@@ -1,0 +1,6 @@
+.sliderm{
+	position:relative;margin:0 auto;top:0px;left:0px;width:600px;height:160px;overflow:hidden;visibility:hidden
+}
+.slidedesc{
+	position:absolute;top:120px;left:0px;width:600px;height:40px;background-color:rgba(0,0,0,0.5);font-size:22px;font-weight:600;color:#ffffff;line-height:1.75;text-align:center
+	}
