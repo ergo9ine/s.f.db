@@ -1,6 +1,7 @@
 //JavaScript Document
 //index
 $(document).ready(function() {
+	$("#index").load("tools/index.html");
 	$('.x').click(function(){
 		$(this).parent().addClass('w3-hide');
 	});
@@ -86,17 +87,4 @@ $(document).ready(function() {
 		$('.fo .fc').removeClass('active');
 		$(this).addClass('active');
 	});
-	var	filterizd =	$('#gun').filterizr({
-	controlsSelector:'.fc',
-	});
-	$('.fo li').click(function() {
-		var sortBy = $('.so').val();
-		var sortOrder = $(this).data('sort');
-		filterizd.filterizr('sort', sortBy, sortOrder);
-	})
-	$('.fom li').click(function() {
-		var sortBy = $('.som').val();
-		var sortOrder = $(this).data('fso');
-		filterizd.filterizr('sort', sortBy, sortOrder);
-	})
 });
