@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<meta name="keywords" content="소녀전선,소전,girlsfrontline,디비,데이터베이스">
+<meta name="description" content="Wellcome to SANGVIS FERRI Database">
 <link rel="icon" sizes="128x128" type="image/png" href="favicon.png">
 <link href="css/font.css" rel="stylesheet">
 <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
@@ -53,19 +55,15 @@
 			<span class="w3-button w3-white w3-tiny w3-display-topright x"><i class="fa fa-close"></i></span>
 			<p>투입계산기는 현재 사용이 불가능합니다.</p>
 		</div>
-		<div class="w3-panel w3-half"><b class="w3-xlarge">필요량 </b><input id="o" type="checkbox"><b>서약</b>
-			<div>
-				<input class="w3-input" style="width:25%" required min="0" id="nlv" pattern="[0-9]*" placeholder="현재 레벨">
-				<input class="w3-input" style="width:25%" required min="0" id="tlv" pattern="[0-9]*" placeholder="목표 레벨">
-				<span id="rrst"></span>
-			</div>
+		<div class="w3-panel w3-half"><b class="w3-xlarge">필요량</b><input id="o" type="checkbox"><b>서약</b>
+			<input class="w3-input" style="width:25%" required min="0" id="nlv" pattern="[0-9]*" placeholder="현재 레벨">
+			<input class="w3-input" style="width:25%" required min="0" id="tlv" pattern="[0-9]*" placeholder="목표 레벨">
+			<span id="rrst"></span>
 		</div>
-		<div class="w3-panel w3-half"><b class="w3-xlarge">결과량 </b><input id="o2" type="checkbox"><b>서약</b>
-			<div>
-				<input class="w3-input w3-disabled" style="width:25%" id="n1lv2" min="0" pattern="[0-9]*" placeholder="현재 레벨"disabled>
-				<input class="w3-input w3-disabled" style="width:25%" id="u1dsk2" min="0" pattern="[0-9]*" placeholder="보고서 갯수"disabled>
-				<span>투입후 레벨 </span><span id="rstLv2" class="d_block">1</span>
-			</div>
+		<div class="w3-panel w3-half"><b class="w3-xlarge">결과량</b><input id="o2" type="checkbox"><b>서약</b>
+			<input class="w3-input w3-disabled" style="width:25%" id="n1lv2" min="0" pattern="[0-9]*" placeholder="현재 레벨"disabled>
+			<input class="w3-input w3-disabled" style="width:25%" id="u1dsk2" min="0" pattern="[0-9]*" placeholder="보고서 갯수"disabled>
+			<span>투입후 레벨 </span><span id="rstLv2" class="d_block">1</span>
 		</div>
 	</div>
 	<div id="tab2" class="w3-container w3-black w3-hide">
