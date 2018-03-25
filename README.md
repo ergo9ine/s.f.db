@@ -1,14 +1,14 @@
-# SFDATABASE.github.io
-Girlsfrontline Database Opensource Project
+# [SANGVIS FERRI DATABASE (G.F.D.B Opensource Project)](http://sf2031.com)
 
-# Process
-- https://trello.com/b/sPsg0jzu/gfdb-process
+「 SANGVIS FERRI DATABASE (Girlsfrontline Database Opensource Project) 」 is licensed under the MIT License 
 
-# Disscussion
-- https://discordapp.com/invite/8eTFTSa
+## Process
+- [trello](https://trello.com/b/sPsg0jzu/gfdb-process)
+
+## Disscussion
+- [Discord](https://discordapp.com/invite/8eTFTSa)
 
 # Staff
-
-@typenine
-@mamiller
-@kosehy
+- @typenine (Maintainer)
+- @mamiller (ArtDirector)
+- @kosehy (Dorm - battery calc part)
