@@ -10,5 +10,5 @@
 
 # Staff
 - @typenine (Maintainer)
-- @mamiller (ArtDirector)
-- @kosehy (Dorm - battery calc part)
+- @mamiller (WebDesign Director)
+- @kosehy (Dorm - battery calclator part)
