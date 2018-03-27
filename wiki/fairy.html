@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
 <link href="../css/css_overwrite.css" rel="stylesheet">
-<link href="../css/fairy.css"	rel="stylesheet">
+<link href="https://storage.googleapis.com/sfdb/fairy.css"	rel="stylesheet">
 <title>Fairy</title>
 </head>
 <body>
@@ -13,10 +13,10 @@
 	<div class="w3-half">
 		<div class="w3-bar w3-black">
 			<ul	class="mf f115">필터 :
-				<li	class="w3-button fc	active all"	data-filter="all">All</li>
-				<li	class="w3-button fc" data-multifilter="1">전투</li>
-				<li	class="w3-button fc" data-multifilter="2">전략</li>
-				<li	class="w3-button fc" data-multifilter="3">이벤트</li>
+				<li	class="w3-button fc	active all">All</li>
+				<li	class="w3-button fc battle">전투</li>
+				<li	class="w3-button fc Strategy">전략</li>
+				<li	class="w3-button fc event">이벤트</li>
 			</ul>
 		</div>
 	</div>
@@ -246,7 +246,7 @@
 		<div class="tag">ㅈㅁ</div>
 	</div>
 </div>
-<div class="item" data-no="18" data-category="1,3" data-sort="999" data-type="battle">
+<div class="item" data-no="18" data-category="1,3" data-sort="999" data-type="battle" data-event="1">
 	<div class="w3-hover-shadow fariy item-content">
 		<p class="name pofa	f125 er2">황금요정</p>
 		<i class="tools	Battle_Fairy_info_cage incage"></i>
@@ -257,7 +257,7 @@
 		<div class="tag">ㅎㄱ</div>
 	</div>
 </div>
-<div class="item" data-no="19" data-category="1,3" data-sort="999" data-type="battle">
+<div class="item" data-no="19" data-category="1,3" data-sort="999" data-type="battle" data-event="1">
 	<div class="w3-hover-shadow fariy item-content">
 		<p class="name pofa	f125 er2">취사요정</p>
 		<i class="tools	Battle_Fairy_info_cage incage"></i>
@@ -268,7 +268,7 @@
 		<div class="tag">ㅊㅅ</div>
 	</div>
 </div>
-<div class="item" data-no="20" data-category="1,3" data-sort="999" data-type="battle">
+<div class="item" data-no="20" data-category="1,3" data-sort="999" data-type="battle" data-event="1">
 	<div class="w3-hover-shadow fariy item-content">
 		<p class="name pofa	f125 er2">클로에</p>
 		<i class="tools	Battle_Fairy_info_cage incage"></i>
@@ -279,7 +279,7 @@
 		<div class="tag">ㅋㄹㅇ</div>
 	</div>
 </div>
-<div class="item" data-no="21" data-category="1,3" data-sort="999" data-type="battle">
+<div class="item" data-no="21" data-category="1,3" data-sort="999" data-type="battle" data-event="1">
 	<div class="w3-hover-shadow fariy item-content">
 		<p class="name pofa	f125 er2">야에사쿠라</p>
 		<i class="tools	Battle_Fairy_info_cage incage"></i>
@@ -290,7 +290,7 @@
 		<div class="tag">ㅇㅇㅅㅋㄹ</div>
 	</div>
 </div>
-<div class="item" data-no="22" data-category="2,3" data-sort="999" data-type="Strategy">
+<div class="item" data-no="22" data-category="2,3" data-sort="999" data-type="Strategy" data-event="1">
 	<div class="w3-hover-shadow fariy item-content">
 		<p class="name pofa	f125 er2">카구야</p>
 		<i class="tools	Strategy_Fairy_info_cage incage"></i>
@@ -305,40 +305,40 @@
 <div id="noResultMessage" class="no-results-container">
 	<div  class="w3-black w3-center">
 		<label class="fw f115">검색가능한 종류</label>
-		<p>요정이름 : 공수/ㄱㅅ/ㄳ</p>
-		<p>제조시간 : 3시간 00분 = 300 / 3시간 5분 = 305</p>
-		<p>별명 : 람보</p>
+		<p>요정이름:공수/ㄱㅅ/ㄳ</p>
+		<p>제조시간:3시간 00분 = 300 / 3시간 5분 = 305</p>
+		<p>별명:람보</p>
 	</div>
 </div>
 <style>
 .grid {
-  position: relative;
+  position:relative;
 }
 .item {
-  display: block;
-  position: absolute;
-  width: 175px;
-  height: 300px;
-  margin: 5px;
-  z-index: 1;
+	display:block;
+	position:absolute;
+	width:175px;
+	height:300px;
+	margin:5px;
+	z-index:1;
  margin:24px
 }
 .item.muuri-item-dragging {
-  z-index: 3;
+	z-index:3;
 }
 .item.muuri-item-releasing {
-  z-index: 2;
+	z-index:2;
 }
 .item.muuri-item-hidden {
-  z-index: 0;
+	z-index:0;
 }
 .item-content {
-  position: relative;
-  width: 100%;
-  height: 100%;
+	position:relative;
+	width:100%;
+	height:100%;
 }
 </style>
-<script src=".https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="../js/index.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.4.0/jquery.quicksearch.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/muuri/0.5.4/muuri.min.js"></script>
@@ -346,46 +346,70 @@
 <script src="https://rawgit.com/web-animations/web-animations-js/master/web-animations.min.js"></script>
 <script>
 var grid = new Muuri('.grid',{
-	sortData: {
-		time: function (item, element) {
+	sortData:{
+		time:function (item, element) {
 		return parseInt(element.getAttribute('data-sort'));
 		},
-		type: function (item, element) {
+		type:function (item, element) {
 		return element.getAttribute('data-type').toUpperCase();
 		},
-		num: function (item, element) {
+		num:function (item, element) {
 		return parseInt(element.getAttribute('data-no'));
 		}
 	},
-	layout: {
-    fillGaps: true,
-    rounding: true
-  },
+	layout:{
+	fillGaps:true,
+	rounding:true
+	},
 });
 var sortnum = document.querySelector('.num');
 var sortsort = document.querySelector('.sort');
 var sorttype = document.querySelector('.type');
 sortnum.addEventListener('click', function () {
-  grid.sort('num');
+	grid.sort('num');
 });
 sortsort.addEventListener('click', function () {
-  grid.sort('time');
+	grid.sort('time');
 });
 sorttype.addEventListener('click', function () {
-  grid.sort('type');
+	grid.sort('type');
 });
 </script>
 <SCRIPT>
 $(document).ready(function() {
 	$('input#search').quicksearch('div.grid .item', {
-		noResults: "#noResultMessage",
-		'bind': 'keyup keydown click input',
-		'hide': function () {
-			$(this).removeClass('muuri-item-shown').addClass('muuri-item-hidden').attr("display","none");
+		noResults:"#noResultMessage",
+		'bind':'keyup keydown click input',
+		'hide':function () {
+			$(this).removeClass('muuri-item-shown').addClass('muuri-item-hidden').css("display","none");
+			grid.filter('.muuri-item-shown');
 		},
-		'show': function () {
-			$(this).addClass('muuri-item-shown').removeClass('muuri-item-hidden').attr("display","block");
+		'show':function () {
+			$(this).addClass('muuri-item-shown').removeClass('muuri-item-hidden').css("display","block");
+			grid.filter('.muuri-item-shown');
 		},
+	});
+	$(".mf li").click(function() {
+		if($(this).hasClass("battle") === true) {
+			grid.filter('[data-type="battle"]');
+			$('.mf li').removeClass('active');
+			$('.battle').addClass('active');
+		}
+		if($(this).hasClass("Strategy") === true) {
+			grid.filter('[data-type="Strategy"]');
+			$('.mf li').removeClass('active');
+			$('.Strategy').addClass('active');
+		}
+		if($(this).hasClass("event") === true) {
+			grid.filter('[data-event="1"]');
+			$('.mf li').removeClass('active');
+			$('.event').addClass('active');
+		}
+		if($(this).hasClass("all") === true) {
+			grid.filter('[data-type]');
+			$('.mf li').removeClass('active');
+			$('.all').addClass('active');
+		}
 	});
 });
 </SCRIPT>

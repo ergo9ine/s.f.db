@@ -63,11 +63,11 @@ $(document).ready(function() {
 			$('#tab5').removeClass('w3-hide');
 		}
 	});
-	$('.mf li').click(function() {
+	$('.mf li').click(function() { //폐기대상
 		if ($(this).attr("data-filter") === "all")
 		{
 			$('.shuffle').removeClass('active');
-			$('.mf li').removeClass('active')
+			$('.mf li').removeClass('active');
 			$(this).addClass('active');
 		}
 		else
@@ -76,7 +76,7 @@ $(document).ready(function() {
 			$('.all').removeClass('active');
 			$(this).toggleClass('active');
 		}
-	});
+	}); // 폐기대상 end
 	$('.shuffle').click(function() {
 		$('.fo .fc').removeClass('active');
 		$(this).addClass('active');
@@ -93,10 +93,10 @@ $(document).ready(function() {
 		var sortBy = $('.so').val();
 		var sortOrder = $(this).data('sort');
 		filterizd.filterizr('sort', sortBy, sortOrder);
-	})
+	});
 	$('.fom li').click(function() {
 		var sortBy = $('.som').val();
 		var sortOrder = $(this).data('fso');
 		filterizd.filterizr('sort', sortBy, sortOrder);
-	})
+	});
 });
