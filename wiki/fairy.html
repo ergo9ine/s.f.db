@@ -47,10 +47,26 @@
 	</div>
 	<div id="fo" class="w3-bar w3-display-container w3-hide w3-center">
 		<span class="w3-button w3-display-topright w3-tiny x"><i class="fa fa-close"></i></span>
-		<select class="so w3-cell-middle ctr" style="height:2em">
-			<option class="num">도감번호</option>
-			<option class="sort">제조시간</option>
-			<option class="type">종류</option>
+		<select class="so w3-cell-middle ctr" id="dropdown" style="height:2em">
+			<option value="num">도감번호</option>
+			<option value="sort">제조시간</option>
+			<option value="type">종류</option>
+			<script>
+				function sortnum(){grid.sort('num')};
+				function sortsort(){grid.sort('time')};
+				function sorttype(){grid.sort('type')};
+				document.getElementById("dropdown").onchange = function(e) {
+					if (e.target && e.target.value == 'num') {
+						sortnum();   
+					}
+					if (e.target && e.target.value == 'sort') {
+						sortsort();   
+					}
+					if (e.target && e.target.value == 'type') {
+						sorttype();   
+					}
+				}
+			</script>
 		</select>
 	</div>
 </div>

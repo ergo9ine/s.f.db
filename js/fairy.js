@@ -36,27 +36,28 @@ function loadComplete(){
 			rounding:true
 		}
 	});
-	sortnums = document.querySelectorAll(".num");
-	sortsorts = document.querySelectorAll(".sort");
-	sorttypes = document.querySelectorAll(".type");
-	sortnums.forEach(function(sortnum)
-	{
-		sortnum.addEventListener('click', function () {
-			grid.sort('num');
-		});
-	});
-	sortsorts.forEach(function(sortsort)
-	{
-		sortsort.addEventListener('click', function () {
-			grid.sort('time');
-		});
-	});
-	sorttypes.forEach(function(sorttype)
-	{
-		sorttype.addEventListener('click', function () {
-			grid.sort('type');
-		});
-	});
+
+//	sortnums = document.querySelectorAll(".num");
+//	sortsorts = document.querySelectorAll(".sort");
+//	sorttypes = document.querySelectorAll(".type");
+//	sortnums.forEach(function(sortnum)
+//	{	
+//		sortnum.addEventListener('click', function () {
+//			grid.sort('num');
+//		});
+//	});
+//	sortsorts.forEach(function(sortsort)
+//	{
+//		sortsort.addEventListener('click', function () {
+//			grid.sort('time');
+//		});
+//	});
+//	sorttypes.forEach(function(sorttype)
+//	{
+//		sorttype.addEventListener('click', function () {
+//			grid.sort('type');
+//		});
+//	});
 	$('input#search').quicksearch('div.grid .item', {
 		noResults:"#noResultMessage",
 		'bind':'keyup keydown click input',

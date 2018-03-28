@@ -60,3 +60,9 @@
 		max-width:1200px;
 	}
 }
+@media all and (min-width:1401px)
+{
+	.grid {
+		max-width:1400px;
+	}
+}
