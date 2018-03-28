@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="../css/css_overwrite.css" rel="stylesheet">
-<link href="https://storage.googleapis.com/sfdb/fairy.css"	rel="stylesheet">
+<link href="https://storage.googleapis.com/sfdb/fairy.css" rel="stylesheet">
 <title>Fairy</title>
 </head>
 <body>
@@ -44,13 +45,9 @@
 				<li	class="w3-button fc event">이벤트</li>
 		</ul>
 	</div>
-	<div id="fo" class="w3-bar w3-display-container w3-hide">
+	<div id="fo" class="w3-bar w3-display-container w3-hide w3-center">
 		<span class="w3-button w3-display-topright w3-tiny x"><i class="fa fa-close"></i></span>
-		<ul class="fom w3-show-inline-block">
-			<li	class="w3-button fc" data-sortAsc><i class="fa fa-caret-square-o-up"></i></li>
-			<li	class="w3-button fc" data-sortDesc><i class="fa fa-caret-square-o-down"></i></li>
-		</ul>
-		<select class="so w3-cell-middle">
+		<select class="so w3-cell-middle ctr" style="height:2em">
 			<option class="num">도감번호</option>
 			<option class="sort">제조시간</option>
 			<option class="type">종류</option>
@@ -393,21 +390,30 @@ var grid = new Muuri('.grid',{
 		}
 	},
 	layout:{
-	fillGaps:true,
-	rounding:true
+		fillGaps:true,
+		rounding:true
 	},
 });
-var sortnum = document.querySelector('.num');
-var sortsort = document.querySelector('.sort');
-var sorttype = document.querySelector('.type');
-sortnum.addEventListener('click', function () {
-	grid.sort('num');
+var sortnums = document.querySelectorAll(".num");
+var sortsorts = document.querySelectorAll(".sort");
+var sorttypes = document.querySelectorAll(".type");
+sortnums.forEach(function(sortnum)
+{
+	sortnum.addEventListener('click', function () {
+		grid.sort('num');
+	});
 });
-sortsort.addEventListener('click', function () {
-	grid.sort('time');
+sortsorts.forEach(function(sortsort)
+{
+	sortsort.addEventListener('click', function () {
+		grid.sort('time');
+	});
 });
-sorttype.addEventListener('click', function () {
-	grid.sort('type');
+sorttypes.forEach(function(sorttype)
+{
+	sorttype.addEventListener('click', function () {
+		grid.sort('type');
+	});
 });
 </script>
 <SCRIPT>
