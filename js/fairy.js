@@ -1,8 +1,8 @@
 $(document).ready(function() {
 	$.ajax('../json/fairy.j', {
-		contentType: 'application/json',
-		dataType: 'json',
-		success: function(result) {
+		contentType:'application/json',
+		dataType:'json',
+		success:function(result) {
 					itemcon = '<div class="w3-hover-shadow fariy item-content">';
 					var allCharacters = $.map(result, function(fairy, index) {
 						character = $('<div class="item" data-no="'+fairy.no+'" data-sort="'+fairy.time+'" data-type="'+fairy.type+'" data-event="'+fairy.event+'"></div>');
@@ -12,10 +12,10 @@ $(document).ready(function() {
 					});
 					$('.grid').append(allCharacters);
 		},
-		error: function(request, errorType, errorMessage) {
-			alert('Error: ' + errorType + ' With message: ' + errorMessage);
+		error:function(request, errorType, errorMessage) {
+			alert('Error:' + errorType + ' With message:' + errorMessage);
 		},
-		timeout: 3000
+		timeout:3000
 	});
 }).ajaxStop(function(){loadComplete();});
 function sortnum(){grid.sort('num')};
@@ -25,13 +25,13 @@ $("select").change(function(){
 	$("select:focus option:selected").each(function(){
 		var query = $(this).text()
 		switch (query) {
-		case "도감번호" :
+		case "도감번호":
 			sortnum();
 		break;
-		case "제조시간" :
+		case "제조시간":
 			sortsort();
 		break;
-		case "종류" :
+		case "종류":
 			sorttype();
 		break;
 		};
@@ -79,35 +79,38 @@ function loadComplete(){
 	$('input#search').quicksearch('div.grid .item', {
 		noResults:"#noResultMessage",
 		'bind':'keyup keydown click input',
-		'hide':function () {
+		'hide':function() {
 			$(this).removeClass('muuri-item-shown').addClass('muuri-item-hidden').css("display","none");
 			grid.filter('.muuri-item-shown');
 		},
-		'show':function () {
+		'show':function() {
 			$(this).addClass('muuri-item-shown').removeClass('muuri-item-hidden').css("display","block");
 			grid.filter('.muuri-item-shown');
-		},
+		}
 	});
 	$(".mf li").click(function() {
-		if($(this).hasClass("battle") === true) {
+		var query = $(this).text();
+		switch (query){
+		case "전투":
 			grid.filter('[data-type="Battle"]');
 			$('.mf li').removeClass('active');
-			$('.battle').addClass('active');
-		}
-		if($(this).hasClass("strategy") === true) {
+			$(this).addClass('active')
+		break;
+		case "전략":
 			grid.filter('[data-type="Strategy"]');
 			$('.mf li').removeClass('active');
-			$('.strategy').addClass('active');
-		}
-		if($(this).hasClass("event") === true) {
+			$(this).addClass('active')
+		break;
+		case "이벤트":
 			grid.filter('[data-event="1"]');
 			$('.mf li').removeClass('active');
-			$('.event').addClass('active');
-		}
-		if($(this).hasClass("all") === true) {
+			$(this).addClass('active')
+		break;
+		case "All":
 			grid.filter('[data-type]');
 			$('.mf li').removeClass('active');
-			$('.all').addClass('active');
+			$(this).addClass('active')
+		break; 
 		}
 	});
 };
