@@ -18,6 +18,25 @@ $(document).ready(function() {
 		timeout: 3000
 	});
 }).ajaxStop(function(){loadComplete();});
+function sortnum(){grid.sort('num')};
+function sortsort(){grid.sort('time')};
+function sorttype(){grid.sort('type')};
+$("select").change(function(){
+	$("select:focus option:selected").each(function(){
+		var query = $(this).text()
+		switch (query) {
+		case "도감번호" :
+			sortnum();
+		break;
+		case "제조시간" :
+			sortsort();
+		break;
+		case "종류" :
+			sorttype();
+		break;
+		};
+	});
+});
 function loadComplete(){
 	grid = new Muuri('.grid',{
 		sortData:{
@@ -36,7 +55,6 @@ function loadComplete(){
 			rounding:true
 		}
 	});
-
 //	sortnums = document.querySelectorAll(".num");
 //	sortsorts = document.querySelectorAll(".sort");
 //	sorttypes = document.querySelectorAll(".type");
