@@ -11,14 +11,14 @@
 </head>
 <body>
 <div class="w3-bar w3-black	w3-hide-small">
-	<div class="w3-half">필터 :
+	<div class="w3-half">필터 : 
 		<div class="w3-button fc active">All</div>
 		<div class="w3-button fc">전투</div>
 		<div class="w3-button fc">전략</div>
 		<div class="w3-button fc">이벤트</div>
 	</div>
-	<div class="w3-half">정렬 :
-		<select class="w3-button">
+	<div class="w3-half">정렬 : 
+		<select>
 			<option>도감번호</option>
 			<option>제조시간</option>
 			<option>종류</option>
@@ -37,7 +37,7 @@
 	</div>
 	<div id="fo" class="w3-bar w3-display-container w3-hide" style="height:2.5em">
 		<span class="w3-button w3-display-right x"><i class="fa fa-close"></i></span>
-		<select class="w3-button w3-display-middle" style="height:2.5em">
+		<select class="w3-display-middle" style="height:2.5em">
 			<option>도감번호</option>
 			<option>제조시간</option>
 			<option>종류</option>
@@ -47,13 +47,11 @@
 <input type="text" placeholder="검색" class="w3-input" id="search">
 <div class="w3-center grid ctr">
 </div>
-<div id="noResultMessage" class="no-results-container">
-	<div  class="w3-black w3-center">
-		<label class="fw f115">검색가능한 종류</label>
-		<p>요정이름:공수/ㄱㅅ/ㄳ</p>
-		<p>제조시간:3시간 00분 = 300 / 3시간 5분 = 305</p>
-		<p>별명:람보</p>
-	</div>
+<div id="noResultMessage" class="no-results-container w3-black w3-center">
+	<label class="fw f115">검색가능한 종류</label>
+	<p>요정이름 : 공수/ㄱㅅ/ㄳ<br>
+	제조시간:3시간 00분 = 300 / 3시간 5분 = 305<br>
+	별명 : 람보</p>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.4.0/jquery.quicksearch.min.js"></script>

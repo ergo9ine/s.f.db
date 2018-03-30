@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="w3-bar w3-black	w3-hide-small">
-	<div class="w3-half">필터	:
+	<div class="w3-half">필터	: 
 		<div class="w3-button fc active">All</div>
 		<div class="w3-button fc">2성</div>
 		<div class="w3-button fc">3성</div>
@@ -19,8 +19,8 @@
 		<div class="w3-button fc">5성</div>
 		<div class="w3-button fc">제조불가</div>
 	</div>
-	<div class="w3-half">정렬 :
-		<select class="w3-button">
+	<div class="w3-half">정렬 : 
+		<select>
 			<option>기본</option>
 			<option>등급</option>
 			<option>제조시간</option>
@@ -41,7 +41,7 @@
 	</div>
 	<div id="fo" class="w3-bar w3-display-container w3-hide" style="height:2.5em">
 		<span class="w3-button w3-display-right x"><i class="fa fa-close"></i></span>
-		<select class="w3-button w3-display-middle" style="height:2.5em">
+		<select class="w3-display-middle" style="height:2.5em">
 			<option>기본</option>
 			<option>등급</option>
 			<option>제조시간</option>
@@ -52,13 +52,11 @@
 <input type="text" placeholder="검색" class="w3-input" id="search">
 <div class="w3-center grid ctr">
 </div>
-<div id="noResultMessage" class="no-results-container">
-	<div  class="w3-black w3-center">
-		<label class="f125 fw">검색가능한 종류</label>
-		<p>장비이름	: PSO-1/PSO</p>
-		<p>제조시간	: 4500/0500/500</p>
-		<span><s>별명 :	똥골</s> 개선중</span>
-	</div>
+<div id="noResultMessage" class="no-results-container w3-black w3-center">
+	<label class="fw f115">검색가능한 종류</label>
+	<p>장비이름	: PSO-1/PSO<br>
+	제조시간	: 4500/0500/500<br>
+	<span><s>별명: 똥골</s> 개선중</span>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.4.0/jquery.quicksearch.min.js"></script>
