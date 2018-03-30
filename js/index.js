@@ -70,8 +70,7 @@ $(document).ready(function() {
 			$('.mf li').removeClass('active');
 			$(this).addClass('active');
 		}
-		else
-		{
+		else {
 			$('.shuffle').removeClass('active');
 			$('.all').removeClass('active');
 			$(this).toggleClass('active');
@@ -85,18 +84,5 @@ $(document).ready(function() {
 		$('.shuffle').removeClass('active');
 		$('.fo .fc').removeClass('active');
 		$(this).addClass('active');
-	});
-	var	filterizd =	$('#gun').filterizr({
-	controlsSelector:'.fc',
-	});
-	$('.fo li').click(function() {
-		var sortBy = $('.so').val();
-		var sortOrder = $(this).data('sort');
-		filterizd.filterizr('sort', sortBy, sortOrder);
-	});
-	$('.fom li').click(function() {
-		var sortBy = $('.som').val();
-		var sortOrder = $(this).data('fso');
-		filterizd.filterizr('sort', sortBy, sortOrder);
 	});
 });

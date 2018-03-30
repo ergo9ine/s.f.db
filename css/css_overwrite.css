@@ -2,14 +2,6 @@
 .grid {
 	position:relative;
 }
-.item {
-	display:block;
-	position:absolute;
-	width:175px;
-	height:300px;
-	z-index:1;
-	margin:12.5px
-}
 .item.muuri-item-dragging {
 	z-index:3;
 }
@@ -18,51 +10,4 @@
 }
 .item.muuri-item-hidden {
 	z-index:0;
-}
-.item-content {
-	position:relative;
-	width:175px;
-	height:100%;
-}
-@media all and (min-width:201px)
-{
-	.grid {
-		max-width:200px;
-	}
-}
-@media all and (min-width:401px)
-{
-	.grid {
-		max-width:400px;
-	}
-}
-@media all and (min-width:601px)
-{
-	.grid {
-		max-width:600px;
-	}
-}
-@media all and (min-width:801px)
-{
-	.grid {
-		max-width:800px;
-	}
-}
-@media all and (min-width:1001px)
-{
-	.grid {
-		max-width:1000px;
-	}
-}
-@media all and (min-width:1201px)
-{
-	.grid {
-		max-width:1200px;
-	}
-}
-@media all and (min-width:1401px)
-{
-	.grid {
-		max-width:1400px;
-	}
 }

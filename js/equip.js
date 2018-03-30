@@ -1,16 +1,16 @@
 $(document).ready(function() {
-	$.ajax('../json/fairy.j', {
+	$.ajax('../json/equip.json', {
 		contentType:'application/json',
 		dataType:'json',
 		success:function(result) {
-					itemcon = '<div class="w3-hover-shadow fariy item-content">';
-					var allCharacters = $.map(result, function(fairy, index) {
-						character = $('<div class="item" data-no="'+fairy.no+'" data-sort="'+fairy.time+'" data-type="'+fairy.type+'" data-event="'+fairy.event+'"></div>');
-						fairycon = '<p class="name pofa f125 er2">'+fairy.name+'</p><i class="tools '+fairy.type+'_Fairy_info_cage incage"></i><i class="tools '+fairy.type+'_Fairy_Tag ftype"></i><i class="tools info_cage_up cover"></i><i class="skill	'+fairy.skill+'"></i><i class="fairy_i	'+fairy.skill+'_i	icon3"></i><div class="tag">'+fairy.tag+'/'+fairy.time+'</div>';
-						$(character).append(itemcon).find(".item-content").html(fairycon);
-						return character;
-					});
-					$('.grid').append(allCharacters);
+			itemcon = '<div class="w3-hover-shadow equip item-content">';
+			var allCharacters = $.map(result, function(equip, index) {
+			character = $('<div class="item" data-time="'+equip.time+'" data-type="'+equip.type+'" data-rarity="'+equip.rarity+'"></div>');
+			equipcon = '<p class="name pofa f125 er'+equip.rarity+'">'+equip.name+'</p><i class="star r'+equip.rarity+'"></i><i class="equip	equip_info_cage_'+equip.rarity+' incage"></i><i class="equip bg_'+equip.rarity+' bg"></i><i class="equip '+equip.type+'_'+equip.rarity+' etype"></i><img src="../img/equip/'+equip.img+'.png" class="icon2" alt="icon"><div class="tag">'+equip.tag+'/'+equip.time+'</div>';
+			$(character).append(itemcon).find(".item-content").html(equipcon);
+			return character;
+		});
+		$('.grid').append(allCharacters);
 		},
 		error:function(request, errorType, errorMessage) {
 			alert('Error:' + errorType + ' With message:' + errorMessage);
@@ -18,18 +18,21 @@ $(document).ready(function() {
 		timeout:3000
 	});
 }).ajaxStop(function(){loadComplete();});
-function sortnum(){grid.sort('num')};
-function sortsort(){grid.sort('time')};
+function sortrarity(){grid.sort('rarity')};
+function sorttime(){grid.sort('time')};
 function sorttype(){grid.sort('type')};
 $("select").change(function(){
 	$("select:focus option:selected").each(function(){
 		var query = $(this).text()
 		switch (query) {
-		case "도감번호":
+		case "기본":
 			new Muuri('.grid',{sordData:null});
 		break;
+		case "등급":
+			sortrarity();
+		break;
 		case "제조시간":
-			sortsort();
+			sorttime();
 		break;
 		case "종류":
 			sorttype();
@@ -41,13 +44,13 @@ function loadComplete(){
 	grid = new Muuri('.grid',{
 		sortData:{
 			time:function (item, element) {
-			return parseInt(element.getAttribute('data-sort'));
+			return parseInt(element.getAttribute('data-time'));
 			},
 			type:function (item, element) {
 			return element.getAttribute('data-type').toUpperCase();
 			},
-			num:function (item, element) {
-			return parseInt(element.getAttribute('data-no'));
+			rarity:function (item, element) {
+			return parseInt(element.getAttribute('data-rarity'));
 			}
 		},
 		layout:{
@@ -70,18 +73,28 @@ function loadComplete(){
 	$(".mf li").click(function() {
 		var query = $(this).text();
 		switch (query){
-		case "전투":
-			grid.filter('[data-type="Battle"]');
+		case "2성":
+			grid.filter('[data-rarity="2"]');
 			$('.mf li').removeClass('active');
 			$(this).addClass('active')
 		break;
-		case "전략":
-			grid.filter('[data-type="Strategy"]');
+		case "3성":
+			grid.filter('[data-rarity="3"]');
 			$('.mf li').removeClass('active');
 			$(this).addClass('active')
 		break;
-		case "이벤트":
-			grid.filter('[data-event="1"]');
+		case "4성":
+			grid.filter('[data-rarity="4"]');
+			$('.mf li').removeClass('active');
+			$(this).addClass('active')
+		break;
+		case "5성":
+			grid.filter('[data-rarity="5"]');
+			$('.mf li').removeClass('active');
+			$(this).addClass('active')
+		break;
+		case "제조불가":
+			grid.filter('[data-time="9999"]');
 			$('.mf li').removeClass('active');
 			$(this).addClass('active')
 		break;

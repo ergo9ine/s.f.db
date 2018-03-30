@@ -2455,6 +2455,23 @@ function	myFunction(a){a=document.getElementById(a);-1==a.className.indexOf("w3-
 <script	src="../js/jquery.filterizr.min.js"></script>
 <script	src="../js/index.js"></script>
 <script	src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.4.2/lazyload.min.js"></script>
-<script>new	LazyLoad({elements_selector:"img"});</script>
+<script>
+$(document).ready(function(){
+	var filterizd = $('#gun').filterizr({
+	controlsSelector:'.fc',
+	});
+	$('.fo li').click(function() {
+		var sortBy = $('.so').val();
+		var sortOrder = $(this).data('sort');
+		filterizd.filterizr('sort', sortBy, sortOrder);
+	});
+	$('.fom li').click(function() {
+		var sortBy = $('.som').val();
+		var sortOrder = $(this).data('fso');
+		filterizd.filterizr('sort', sortBy, sortOrder);
+	});
+});
+</script>
+<script>new LazyLoad({elements_selector:"img"});</script>
 </body>
 </html>

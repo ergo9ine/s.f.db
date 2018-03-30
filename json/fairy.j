@@ -1,200 +1,155 @@
-[
-	{
-		"no":1,
-		"time":"430",
-		"type":"Battle",
-		"event":"0",
-		"name":"용사요정",
-		"skill":"fighting",
-		"tag":"430/람보/ㅇㅅ"
-	},
-	{
-		"no":2,
-		"time":"435",
-		"type":"Battle",
-		"event":"0",
-		"name":"격노요정",
-		"skill":"crit",
-		"tag":"435/ㄱㄴ"
-	},
-	{
-		"no":3,
-		"time":"300",
-		"type":"Battle",
-		"event":"0",
-		"name":"방패요정",
-		"skill":"armor",
-		"tag":"300/ㅂㅍ"
-	},
-	{
-		"no":4,
-		"time":"305",
-		"type":"Battle",
-		"event":"0",
-		"name":"수호요정",
-		"skill":"shield",
-		"tag":"305/ㅅㅎ"
-	},
-	{
-		"no":5,
-		"time":"410",
-		"type":"Strategy",
-		"event":"0",
-		"name":"방어요정",
-		"skill":"defense",
-		"tag":"410/ㅂㅇ"
-	},
-	{
-		"no":6,
-		"time":"310",
-		"type":"Battle",
-		"event":"0",
-		"name":"도발요정",
-		"skill":"target",
-		"tag":"310/ㄷㅂ"
-	},
-	{
-		"no":7,
-		"time":"330",
-		"type":"Battle",
-		"event":"0",
-		"name":"저격요정",
-		"skill":"sniper",
-		"tag":"330/ㅈㄱ"
-	},
-	{
-		"no":8,
-		"time":"335",
-		"type":"Battle",
-		"event":"0",
-		"name":"포격요정",
-		"skill":"bombard",
-		"tag":"335/ㅍㄱ"
-	},
-	{
-		"no":9,
-		"time":"340",
-		"type":"Battle",
-		"event":"0",
-		"name":"공습요정",
-		"skill":"air_attack",
-		"tag":"340/ㄳ/ㄱㅅ"
-	},
-	{
-		"no":10,
-		"time":"400",
-		"type":"Strategy",
-		"event":"0",
-		"name":"증원요정",
-		"skill":"reinforce",
-		"tag":"400/ㅈㅇ"
-	},
-	{
-		"no":11,
-		"time":"405",
-		"type":"Strategy",
-		"event":"0",
-		"name":"공수요정",
-		"skill":"airborne",
-		"tag":"405/ㄳ/ㄱㅅ"
-	},
-	{
-		"no":12,
-		"time":"530",
-		"type":"Strategy",
-		"event":"0",
-		"name":"매설요정",
-		"skill":"landmines",
-		"tag":"530/ㅁㅅ"
-	},
-	{
-		"no":13,
-		"time":"535",
-		"type":"Strategy",
-		"event":"0",
-		"name":"로켓요정",
-		"skill":"position",
-		"tag":"535/ㄹㅋ"
-	},
-	{
-		"no":14,
-		"time":"540",
-		"type":"Strategy",
-		"event":"0",
-		"name":"공사요정",
-		"skill":"fortress",
-		"tag":"540/ㄳ/ㄱㅅ"
-	},
-	{
-		"no":15,
-		"time":"500",
-		"type":"Strategy",
-		"event":"0",
-		"name":"지휘요정",
-		"skill":"command",
-		"tag":"500/ㅈㅎ"
-	},
-	{
-		"no":16,
-		"time":"505",
-		"type":"Strategy",
-		"event":"0",
-		"name":"수색요정",
-		"skill":"rescue",
-		"tag":"505/ㅅㅅ/"
-	},
-	{
-		"no":17,
-		"time":"510",
-		"type":"Strategy",
-		"event":"0",
-		"name":"조명요정",
-		"skill":"illumine",
-		"tag":"510/ㅈㅁ"
-	},
-	{
-		"no":18,
-		"time":"999",
-		"type":"Battle",
-		"event":"1",
-		"name":"황금요정",
-		"skill":"golden",
-		"tag":"999/ㅎㄱ"
-	},
-	{
-		"no":19,
-		"time":"999",
-		"type":"Battle",
-		"event":"1",
-		"name":"취사요정",
-		"skill":"no_consumption",
-		"tag":"999/ㅊㅅ"
-	},
-	{
-		"no":20,
-		"time":"999",
-		"type":"Battle",
-		"event":"1",
-		"name":"클로에",
-		"skill":"chloe",
-		"tag":"999/ㅋㄹㅇ"
-	},
-	{
-		"no":21,
-		"time":"999",
-		"type":"Battle",
-		"event":"1",
-		"name":"야에사쿠라",
-		"skill":"sakura",
-		"tag":"999/ㅇㅇㅅㅋㄹ"
-	},
-	{
-		"no":22,
-		"time":"999",
-		"type":"Strategy",
-		"event":"1",
-		"name":"카구야",
-		"skill":"kaguya",
-		"tag":"999/ㅋㄱㅇ"
-	}
-]
+[{
+"time":430,
+"type":"Battle",
+"event":0,
+"name":"용사요정",
+"skill":"fighting",
+"tag":"람보/ㅇㅅ"
+},{
+"time":435,
+"type":"Battle",
+"event":0,
+"name":"격노요정",
+"skill":"crit",
+"tag":"ㄱㄴ"
+},{
+"time":300,
+"type":"Battle",
+"event":0,
+"name":"방패요정",
+"skill":"armor",
+"tag":"ㅂㅍ"
+},{
+"time":305,
+"type":"Battle",
+"event":0,
+"name":"수호요정",
+"skill":"shield",
+"tag":"ㅅㅎ"
+},{
+"time":410,
+"type":"Strategy",
+"event":0,
+"name":"방어요정",
+"skill":"defense",
+"tag":"ㅂㅇ"
+},{
+"time":310,
+"type":"Battle",
+"event":0,
+"name":"도발요정",
+"skill":"target",
+"tag":"ㄷㅂ"
+},{
+"time":330,
+"type":"Battle",
+"event":0,
+"name":"저격요정",
+"skill":"sniper",
+"tag":"ㅈㄱ"
+},{
+"time":335,
+"type":"Battle",
+"event":0,
+"name":"포격요정",
+"skill":"bombard",
+"tag":"ㅍㄱ"
+},{
+"time":340,
+"type":"Battle",
+"event":0,
+"name":"공습요정",
+"skill":"air_attack",
+"tag":"ㄳ/ㄱㅅ"
+},{
+"time":400,
+"type":"Strategy",
+"event":0,
+"name":"증원요정",
+"skill":"reinforce",
+"tag":"ㅈㅇ"
+},{
+"time":405,
+"type":"Strategy",
+"event":0,
+"name":"공수요정",
+"skill":"airborne",
+"tag":"ㄳ/ㄱㅅ"
+},{
+"time":530,
+"type":"Strategy",
+"event":0,
+"name":"매설요정",
+"skill":"landmines",
+"tag":"ㅁㅅ"
+},{
+"time":535,
+"type":"Strategy",
+"event":0,
+"name":"로켓요정",
+"skill":"position",
+"tag":"ㄹㅋ"
+},{
+"time":540,
+"type":"Strategy",
+"event":0,
+"name":"공사요정",
+"skill":"fortress",
+"tag":"ㄳ/ㄱㅅ"
+},{
+"time":500,
+"type":"Strategy",
+"event":0,
+"name":"지휘요정",
+"skill":"command",
+"tag":"ㅈㅎ"
+},{
+"time":505,
+"type":"Strategy",
+"event":0,
+"name":"수색요정",
+"skill":"rescue",
+"tag":"ㅅㅅ/"
+},{
+"time":510,
+"type":"Strategy",
+"event":0,
+"name":"조명요정",
+"skill":"illumine",
+"tag":"ㅈㅁ"
+},{
+"time":999,
+"type":"Battle",
+"event":1,
+"name":"황금요정",
+"skill":"golden",
+"tag":"ㅎㄱ"
+},{
+"time":999,
+"type":"Battle",
+"event":1,
+"name":"취사요정",
+"skill":"no_consumption",
+"tag":"ㅊㅅ"
+},{
+"time":999,
+"type":"Battle",
+"event":1,
+"name":"클로에",
+"skill":"chloe",
+"tag":"ㅋㄹㅇ"
+},{
+"time":999,
+"type":"Battle",
+"event":1,
+"name":"야에사쿠라",
+"skill":"sakura",
+"tag":"ㅇㅇㅅㅋㄹ"
+},{
+"time":999,
+"type":"Strategy",
+"event":1,
+"name":"카구야",
+"skill":"kaguya",
+"tag":"ㅋㄱㅇ"
+}]
