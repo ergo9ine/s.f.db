@@ -11,47 +11,37 @@
 </head>
 <body>
 <div class="w3-bar w3-black	w3-hide-small">
-	<div class="w3-half">
-		<div class="w3-bar w3-black">
-			<ul	class="mf">필터	:
-				<li class="w3-button fc active all">All</li>
-				<li class="w3-button fc">2성</li>
-				<li class="w3-button fc">3성</li>
-				<li class="w3-button fc">4성</li>
-				<li class="w3-button fc">5성</li>
-				<li class="w3-button fc">제조불가</li>
-			</ul>
-		</div>
+	<div class="w3-half">필터	:
+		<div class="w3-button fc active">All</div>
+		<div class="w3-button fc">2성</div>
+		<div class="w3-button fc">3성</div>
+		<div class="w3-button fc">4성</div>
+		<div class="w3-button fc">5성</div>
+		<div class="w3-button fc">제조불가</div>
 	</div>
-	<div class="w3-half">
-		<div class="w3-bar w3-black">
-			<ul	class="fo">정렬	:
-				<select class="w3-cell-middle">
-					<option>기본</option>
-					<option>등급</option>
-					<option>제조시간</option>
-					<option>종류</option>
-				</select>
-			</ul>
-		</div>
+	<div class="w3-half">정렬 :
+		<select class="w3-button">
+			<option>기본</option>
+			<option>등급</option>
+			<option>제조시간</option>
+			<option>종류</option>
+		</select>
 	</div>
 </div>
 <div id="mom" class="w3-bar	w3-black	w3-hide-large w3-hide-medium">
 	<button id="f" class="w3-bar-item w3-button w3-border-right fltr">필터</button>
 	<button id="s" class="w3-bar-item w3-button w3-border-left fltr">정렬</button>
 	<div id="mf" class="w3-bar w3-display-container w3-hide">
-		<ul class="mf">
-			<span class="w3-button w3-display-topright w3-tiny x"><i class="fa fa-close"></i></span>
-			<li class="w3-button fc active all">All</li>
-			<li class="w3-button fc">2성</li>
-			<li class="w3-button fc">3성</li>
-			<li class="w3-button fc">4성</li>
-			<li class="w3-button fc">5성</li>
-		</ul>
+		<span class="w3-button w3-display-right x"><i class="fa fa-close"></i></span>
+		<div class="w3-button fc active">All</div>
+		<div class="w3-button fc">2성</div>
+		<div class="w3-button fc">3성</div>
+		<div class="w3-button fc">4성</div>
+		<div class="w3-button fc">5성</div>
 	</div>
-	<div id="fo" class="w3-bar w3-display-container	w3-hide">
-		<span class="w3-button w3-display-topright w3-tiny x"><i class="fa fa-close"></i></span>
-		<select class="w3-cell-middle ctr" style="height:2em">
+	<div id="fo" class="w3-bar w3-display-container w3-hide" style="height:2.5em">
+		<span class="w3-button w3-display-right x"><i class="fa fa-close"></i></span>
+		<select class="w3-button w3-display-middle" style="height:2.5em">
 			<option>기본</option>
 			<option>등급</option>
 			<option>제조시간</option>

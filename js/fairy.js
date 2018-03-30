@@ -67,27 +67,27 @@ function loadComplete(){
 			grid.filter('.muuri-item-shown');
 		}
 	});
-	$(".mf li").click(function() {
+	$(".fc").click(function() {
 		var query = $(this).text();
 		switch (query){
 		case "전투":
 			grid.filter('[data-type="Battle"]');
-			$('.mf li').removeClass('active');
+			$('.fc').removeClass('active');
 			$(this).addClass('active')
 		break;
 		case "전략":
 			grid.filter('[data-type="Strategy"]');
-			$('.mf li').removeClass('active');
+			$('.fc').removeClass('active');
 			$(this).addClass('active')
 		break;
 		case "이벤트":
 			grid.filter('[data-event="1"]');
-			$('.mf li').removeClass('active');
+			$('.fc').removeClass('active');
 			$(this).addClass('active')
 		break;
 		case "All":
 			grid.filter('[data-type]');
-			$('.mf li').removeClass('active');
+			$('.fc').removeClass('active');
 			$(this).addClass('active')
 		break; 
 		}
