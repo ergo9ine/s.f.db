@@ -98,6 +98,11 @@ function loadComplete(){
 			$('.fc').removeClass('active');
 			$(this).addClass('active')
 		break;
+		case "SMG":
+			grid.filter('[data-type="smg"]');
+			$('.fc').removeClass('active');
+			$(this).addClass('active')
+		break;
 		case "AR":
 			grid.filter('[data-type="ar"]');
 			$('.fc').removeClass('active');

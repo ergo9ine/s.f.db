@@ -1031,7 +1031,7 @@
 "type":"smg",
 "illust":"戏言咸咸",
 "voice":"",
-"buildTime":"0",
+"buildTime":"9999",
 "drop":[],
 "skins":[],
 "nick":[],
@@ -8063,7 +8063,7 @@
 },{
 "id":1001,
 "name":"BB_Noel",
-"rank":5,
+"rank":"ex",
 "type":"hg",
 "illust":"水熊",
 "voice":"Kanako Kondo",
@@ -8101,7 +8101,7 @@
 },{
 "id":1002,
 "name":"GG_elfeldt",
-"rank":5,
+"rank":"ex",
 "type":"sg",
 "illust":"ZAGALA",
 "voice":"Aya Suzaki",
@@ -8141,7 +8141,7 @@
 },{
 "id":1003,
 "name":"Kiana",
-"rank":5,
+"rank":"ex",
 "type":"hg",
 "illust":"水乌龟",
 "voice":"",
@@ -8180,7 +8180,7 @@
 },{
 "id":1004,
 "name":"RaidenMei",
-"rank":5,
+"rank":"ex",
 "type":"rf",
 "illust":"NIN",
 "voice":"",
@@ -8218,7 +8218,7 @@
 },{
 "id":1005,
 "name":"Bronya",
-"rank":5,
+"rank":"ex",
 "type":"rf",
 "illust":"水熊",
 "voice":"",
@@ -8256,7 +8256,7 @@
 },{
 "id":1006,
 "name":"Theresa",
-"rank":5,
+"rank":"ex",
 "type":"hg",
 "illust":"咩爆",
 "voice":"",
@@ -8296,7 +8296,7 @@
 },{
 "id":1007,
 "name":"Himeko",
-"rank":5,
+"rank":"ex",
 "type":"ar",
 "illust":"DOGALA",
 "voice":"",
@@ -8337,7 +8337,7 @@
 },{
 "id":1008,
 "name":"Seele",
-"rank":5,
+"rank":"ex",
 "type":"sg",
 "illust":"DOGALA",
 "voice":"",
