@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$.ajax('../json/fairy.j', {
+	$.ajax('../json/fairy.json', {
 		contentType:'application/json',
 		dataType:'json',
 		success:function(result) {
