@@ -1,43 +1,43 @@
-$(document).ready(function() {
-	$.ajax('../json/doll.json', {
+$(document).ready(function(){
+	$.ajax('../json/doll.json',{
 		contentType:'application/json',
 		dataType:'json',
-		success:function(result) {
+		success:function(result){
 			itemcon = '<div class="w3-hover-shadow tdoll item-content">';
-			var allCharacters = $.map(result, function(doll, index) {
+			var allCharacters = $.map(result,function(doll,index){
 			var timehour = parseInt(doll.buildTime/3600);
-			var timemin = doll.buildTime%3600/60
+			var timemin = doll.buildTime%3600/60;
 			character = $('<div class="item" data-time="'+timehour+''+timemin+'" data-type="'+doll.type+'" data-rarity="'+doll.rank+'"></div>');
 			dollcon = '<div class="w3-text-white no">'+doll.id+'</div><p class="w3-text-black name podo f125">'+doll.krName+'</p><i	class="star	r'+doll.rank+'"></i><i	class="incage doll info_cage_'+doll.rank+'"></i><i	class="type	doll '+doll.type+'_'+doll.rank+'"></i><img	src="../img/t_doll/'+doll.id+'_i.png"	alt="icon"><div class="tag">'+doll.nick+'/'+timehour+''+timemin+'</div>';
 			$(character).append(itemcon).find(".item-content").html(dollcon);
 			return character;
 		});
-		$('.grid').append(allCharacters);
+		$('.grid').append(allCharacters)
 		},
-		error:function(request, errorType, errorMessage) {
-			alert('Error:' + errorType + ' With message:' + errorMessage);
-		},	
+		error:function(request,errorType,errorMessage){
+			alert('Error:'+errorType+' With message:'+errorMessage)
+		},
 		timeout:3000
 	});
-}).ajaxStop(function(){loadComplete();});
+}).ajaxStop(function(){loadComplete()});
 function sortrarity(){grid.sort('rarity')};
 function sorttime(){grid.sort('time')};
 function sorttype(){grid.sort('type')};
 $("select").change(function(){
 	$("select:focus option:selected").each(function(){
 		var query = $(this).text()
-		switch (query) {
+		switch (query){
 		case "기본":
-			new Muuri('.grid',{sordData:null});
+			new Muuri('.grid',{sordData:null})
 		break;
 		case "등급":
-			sortrarity();
+			sortrarity()
 		break;
 		case "제조시간":
-			sorttime();
+			sorttime()
 		break;
 		case "종류":
-			sorttype();
+			sorttype()
 		break;
 		};
 	});
@@ -45,34 +45,31 @@ $("select").change(function(){
 function loadComplete(){
 	grid = new Muuri('.grid',{
 		sortData:{
-			time:function (item, element) {
-			return parseInt(element.getAttribute('data-time'));
+			time:function (item,element){
+			return element.getAttribute('data-time')
 			},
-			type:function (item, element) {
-			return element.getAttribute('data-type').toUpperCase();
+			type:function (item,element){
+			return element.getAttribute('data-type').toUpperCase()
 			},
-			rarity:function (item, element) {
-			return parseInt(element.getAttribute('data-rarity'));
+			rarity:function (item,element){
+			return element.getAttribute('data-rarity')
 			}
 		},
-		layout:{
-			fillGaps:true,
-			rounding:true
-		}
+		layout:{fillGaps:true,rounding:true}
 	});
-	$('input#search').quicksearch('div.grid .item', {
+	$('input#search').quicksearch('div.grid .item',{
 		noResults:"#noResultMessage",
 		'bind':'keyup keydown click input',
-		'hide':function() {
+		'hide':function(){
 			$(this).removeClass('muuri-item-shown').addClass('muuri-item-hidden').css("display","none");
-			grid.filter('.muuri-item-shown');
+			grid.filter('.muuri-item-shown')
 		},
-		'show':function() {
+		'show':function(){
 			$(this).addClass('muuri-item-shown').removeClass('muuri-item-hidden').css("display","block");
-			grid.filter('.muuri-item-shown');
+			grid.filter('.muuri-item-shown')
 		}
 	});
-	$(".fc").click(function() {
+	$(".fc").click(function(){
 		var query = $(this).text();
 		switch (query){
 		case "2성":
@@ -134,7 +131,7 @@ function loadComplete(){
 			grid.filter('[data-type]');
 			$('.fc').removeClass('active');
 			$(this).addClass('active')
-		break; 
+		break;
 		}
 	});
 };

@@ -1,6 +1,6 @@
 # [SANGVIS FERRI DATABASE (G.F.D.B Opensource Project)](http://sf2031.com)
 
-「 SANGVIS FERRI DATABASE (Girlsfrontline Database Opensource Project) 」 is licensed under the MIT License 
+「 SANGVIS FERRI DATABASE (Girlsfrontline Database Opensource Project) 」 is licensed under the MIT License
 
 ## Process
 - [trello](https://trello.com/b/sPsg0jzu/gfdb-process)
@@ -10,5 +10,5 @@
 
 # Staff
 - @typenine (Maintainer)
-- @mamiller (WebDesign Director)
+- @mamiller (WebDesign)
 - @kosehy (Dorm - battery calclator part)

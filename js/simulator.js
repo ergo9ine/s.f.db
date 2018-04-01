@@ -23,25 +23,24 @@ var totalTcom = 0;
 var numOfroom = 0;
 var totalBr = 0;
 var averageTbr = 0;
-function sumComfort() {
+function sumComfort(){
 	for (i = 0; i < arrCom.length; i++)
 	{
-		totalCom = Number(document.getElementById(arrCom[i]).value) + Number(document.getElementById(arrSet[i]).value) + Number(document.getElementById(arrPet[i]).value);
+		totalCom = Number(document.getElementById(arrCom[i]).value)+Number(document.getElementById(arrSet[i]).value)+Number(document.getElementById(arrPet[i]).value);
 		document.getElementById(arrTcom[i]).value = totalCom;
 		totalCom = 0;
-
-		totalTcom = totalTcom + Number(document.getElementById(arrTcom[i]).value);		
+		totalTcom = totalTcom+Number(document.getElementById(arrTcom[i]).value);
 		document.getElementById("tTcom").innerText = totalTcom;
 		if(document.getElementById(arrCom[i]).value != 0)
 		{
-			numOfroom = i + 1;
+			numOfroom = i+1;
 			document.getElementById("tnr").innerText = numOfroom;
 		}
 	}
-	totalBr = 11 * totalTcom / 10000 + (-0.1 * totalTcom * totalTcom / 10000 / 10000) + arrTnr[Number(numOfroom) -1];
+	totalBr = 11*totalTcom/10000+(-0.1*totalTcom*totalTcom/10000/10000)+arrTnr[Number(numOfroom) -1];
 	document.getElementById("tbr").innerText = totalBr.toFixed(2);
-	averageTbr = (11 * (totalTcom + 1000)) / 10000 + (-0.1 * ((totalTcom + 1000) * (totalTcom + 1000)) / 10000 / 10000)-((11 * totalTcom / 10000) + (-0.1 * (totalTcom * totalTcom) / 10000 / 10000));
+	averageTbr = (11*(totalTcom+1000))/10000+(-0.1*((totalTcom+1000)*(totalTcom+1000))/10000/10000)-((11*totalTcom/10000)+(-0.1*(totalTcom*totalTcom)/10000/10000));
 	document.getElementById("abtr").innerText = averageTbr.toFixed(2);
 	averageTbr = 0;
-	totalTcom = 0;	
+	totalTcom = 0;
 }
