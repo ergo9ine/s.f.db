@@ -5,8 +5,10 @@ $(document).ready(function() {
 		success:function(result) {
 			itemcon = '<div class="w3-hover-shadow tdoll item-content">';
 			var allCharacters = $.map(result, function(doll, index) {
-			character = $('<div class="item" data-time="'+doll.buildTime+'" data-type="'+doll.type+'" data-rarity="'+doll.rank+'"></div>');
-			dollcon = '<div class="w3-text-white	no">'+doll.id+'</div><p class="w3-text-black name podo f125">'+doll.krName+'</p><i	class="star	r'+doll.rank+'"></i><i	class="incage doll info_cage_'+doll.rank+'"></i><i	class="type	doll '+doll.type+'_'+doll.rank+'"></i><img	src="../img/t_doll/'+doll.id+'_i.png"	alt="icon"><div class="tag">'+doll.nick+'/'+doll.buildTime+'</div>';
+			var timehour = parseInt(doll.buildTime/3600);
+			var timemin = doll.buildTime%3600/60
+			character = $('<div class="item" data-time="'+timehour+''+timemin+'" data-type="'+doll.type+'" data-rarity="'+doll.rank+'"></div>');
+			dollcon = '<div class="w3-text-white no">'+doll.id+'</div><p class="w3-text-black name podo f125">'+doll.krName+'</p><i	class="star	r'+doll.rank+'"></i><i	class="incage doll info_cage_'+doll.rank+'"></i><i	class="type	doll '+doll.type+'_'+doll.rank+'"></i><img	src="../img/t_doll/'+doll.id+'_i.png"	alt="icon"><div class="tag">'+doll.nick+'/'+timehour+''+timemin+'</div>';
 			$(character).append(itemcon).find(".item-content").html(dollcon);
 			return character;
 		});
@@ -124,7 +126,7 @@ function loadComplete(){
 			$(this).addClass('active')
 		break;
 		case "제조불가":
-			grid.filter('[data-time="9999"]');
+			grid.filter('[data-time="0"]');
 			$('.fc').removeClass('active');
 			$(this).addClass('active')
 		break;
