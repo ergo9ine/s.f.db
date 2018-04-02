@@ -36,10 +36,8 @@ $(document).ready(function(){
 	$(".tab").click(function(){
 		$("#info").removeClass('w3-red');
 		$(".tab").removeClass('w3-red');
-		$(this).addClass('w3-red');
-		var idcheck = $(this).attr("id")
-		switch (idcheck)
-		{
+		$(this).addClass('w3-red');  
+		switch ($(this).attr("id")){
 		case "m1":
 			$('#index,#tab2,#tab3,#tab4,#tab5').addClass('w3-hide');
 			$('#tab1').removeClass('w3-hide');
@@ -50,7 +48,7 @@ $(document).ready(function(){
 		break;
 		case "m3":
 			$('#index,#tab2,#tab3,#tab4,#tab5').addClass('w3-hide');
-			$('#tab1').removeClass('w3-hide');
+			$('#tab3').removeClass('w3-hide');
 		break;
 		case "m4":
 			$('#index,#tab1,#tab2,#tab3,#tab5').addClass('w3-hide');

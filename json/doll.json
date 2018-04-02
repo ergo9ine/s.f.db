@@ -17,8 +17,7 @@
 "speed":100,
 "rate":85,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -56,8 +55,7 @@
 "speed":100,
 "rate":105,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -96,8 +94,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -134,8 +131,7 @@
 "speed":100,
 "rate":80,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -152,8 +148,7 @@
 "PW":[12,13,14,15,16,16,17,18,19,20],
 "DR":[3,3.2,3.4,3.7,3.9,4.1,4.3,4.6,4.8,5],
 "CD":[15,14.7,14.3,14,13.7,13.4,13,12.7,12.3,12],
-"IC":6
-},
+"IC":6},
 "nightDataPool":{
 "PW":[20,22,23,25,27,28,30,32,33,35],
 "DR":[5,6,6,6,7,7,7,8,8,8]
@@ -179,8 +174,7 @@
 "speed":100,
 "rate":100,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -218,8 +212,7 @@
 "speed":100,
 "rate":125,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -257,8 +250,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -296,8 +288,7 @@
 "speed":100,
 "rate":105,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -336,8 +327,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -376,8 +366,7 @@
 "speed":100,
 "rate":100,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -394,8 +383,7 @@
 "DG":[28,29,30,30,31,32,33,33,34,35],
 "DR":[3,3.2,3.4,3.7,3.9,4.1,4.3,4.6,4.8,5],
 "CD":[15,14.7,14.3,14,13.7,13.4,13,12.7,12.3,12],
-"IC":6
-},
+"IC":6},
 "nightDataPool":{
 "DG":[50,54,58,62,66,69,73,77,81,85],
 "DR":[5,6,6,6,7,7,7,8,8,8]
@@ -421,8 +409,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -461,8 +448,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -501,8 +487,7 @@
 "speed":100,
 "rate":95,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -540,8 +525,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -579,8 +563,7 @@
 "speed":100,
 "rate":105,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -617,8 +600,7 @@
 "speed":100,
 "rate":85,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -655,8 +637,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -694,8 +675,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -733,8 +713,7 @@
 "speed":100,
 "rate":130,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -772,8 +751,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -810,8 +788,7 @@
 "speed":100,
 "rate":95,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -847,8 +824,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -887,8 +863,7 @@
 "speed":100,
 "rate":105,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -925,8 +900,7 @@
 "speed":100,
 "rate":95,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -965,8 +939,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -1003,8 +976,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -1043,8 +1015,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -1085,8 +1056,7 @@
 "speed":100,
 "rate":95,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -1123,8 +1093,7 @@
 "speed":100,
 "rate":95,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -1161,8 +1130,7 @@
 "speed":100,
 "rate":130,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -1200,8 +1168,7 @@
 "speed":100,
 "rate":95,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -1240,8 +1207,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -1277,8 +1243,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -1316,8 +1281,7 @@
 "speed":100,
 "rate":90,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -1353,8 +1317,7 @@
 "speed":100,
 "rate":130,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -1391,8 +1354,7 @@
 "speed":100,
 "rate":105,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -1428,8 +1390,7 @@
 "speed":100,
 "rate":85,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -1465,8 +1426,7 @@
 "speed":100,
 "rate":105,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -1502,8 +1462,7 @@
 "speed":100,
 "rate":105,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -1540,8 +1499,7 @@
 "speed":100,
 "rate":80,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -1577,8 +1535,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -1615,8 +1572,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -1652,8 +1608,7 @@
 "speed":100,
 "rate":95,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -1689,8 +1644,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -1706,8 +1660,7 @@
 "AR":[15,16,18,19,21,22,24,25,27,28],
 "DR":[3,3.2,3.4,3.7,3.9,4.1,4.3,4.6,4.8,5],
 "CD":[10,9.8,9.6,9.3,9.1,8.9,8.7,8.4,8.2,8],
-"IC":8
-},
+"IC":8},
 "nightDataPool":{
 "AR":[45,49,54,58,63,67,72,76,81,85]
 }},
@@ -1732,8 +1685,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -1770,8 +1722,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -1808,8 +1759,7 @@
 "speed":100,
 "rate":100,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -1846,8 +1796,7 @@
 "speed":100,
 "rate":95,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -1884,8 +1833,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -1922,8 +1870,7 @@
 "speed":100,
 "rate":85,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -1959,8 +1906,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -1997,8 +1943,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -2037,8 +1982,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -2075,8 +2019,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -2115,8 +2058,7 @@
 "speed":100,
 "rate":100,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -2154,8 +2096,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -2172,8 +2113,7 @@
 "PW":[35,38,41,43,46,49,52,54,57,60],
 "DR":[3.5,3.8,4.1,4.3,4.6,4.9,5.2,5.4,5.7,6],
 "CD":[20,19.6,19.1,18.7,18.2,17.8,17.3,16.9,16.4,16],
-"IC":5
-},
+"IC":5},
 "nightDataPool":{
 "PW":[110,118,126,133,141,149,157,164,172,180]
 }},
@@ -2198,8 +2138,7 @@
 "speed":100,
 "rate":90,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -2238,8 +2177,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -2278,8 +2216,7 @@
 "speed":100,
 "rate":90,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -2316,8 +2253,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -2356,8 +2292,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -2393,8 +2328,7 @@
 "speed":100,
 "rate":105,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -2433,8 +2367,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -2473,8 +2406,7 @@
 "speed":100,
 "rate":125,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -2513,8 +2445,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -2552,8 +2483,7 @@
 "speed":100,
 "rate":95,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -2593,8 +2523,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -2632,8 +2561,7 @@
 "speed":100,
 "rate":85,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -2671,8 +2599,7 @@
 "speed":100,
 "rate":105,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":4,
@@ -2711,8 +2638,7 @@
 "speed":100,
 "rate":100,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":4,
@@ -2746,8 +2672,7 @@
 "speed":100,
 "rate":105,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":7,
@@ -2764,8 +2689,7 @@
 "PW":[12,15,17,20,22,25,27,30,32,35],
 "DR":[4,4.2,4.4,4.7,4.9,5.1,5.3,5.6,5.8,6],
 "CD":[18,18,18,18,18,18,18,18,18,18],
-"IC":8
-},
+"IC":8},
 "nightDataPool":{
 "PW":[40,47,54,62,69,76,83,91,98,105]
 }},
@@ -2790,8 +2714,7 @@
 "speed":100,
 "rate":125,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":4,
@@ -2808,8 +2731,7 @@
 "BL":[1,2,2,2,2,3,3,3,3,4],
 "DR":[6,6.2,6.4,6.7,6.9,7.1,7.3,7.6,7.8,8],
 "CD":[18,18,18,18,18,18,18,18,18,18],
-"IC":8
-},
+"IC":8},
 "nightDataPool":{
 "PW":[16,17,19,20,21,23,24,25,27,28]
 }},
@@ -2834,8 +2756,7 @@
 "speed":100,
 "rate":95,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":1,
@@ -2873,8 +2794,7 @@
 "speed":100,
 "rate":90,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":4,
@@ -2912,8 +2832,7 @@
 "speed":100,
 "rate":105,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":1,
@@ -2951,8 +2870,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":4,
@@ -2990,8 +2908,7 @@
 "speed":100,
 "rate":80,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":4,
@@ -3025,8 +2942,7 @@
 "speed":100,
 "rate":125,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":7,
@@ -3064,8 +2980,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":1,
@@ -3103,8 +3018,7 @@
 "speed":100,
 "rate":125,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":4,
@@ -3143,8 +3057,7 @@
 "speed":100,
 "rate":95,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":7,
@@ -3183,8 +3096,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -3222,8 +3134,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -3260,8 +3171,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -3298,8 +3208,7 @@
 "speed":100,
 "rate":90,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -3336,8 +3245,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -3373,8 +3281,7 @@
 "speed":100,
 "rate":90,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -3390,8 +3297,7 @@
 "PW":[16,18,19,21,22,24,25,27,28,30],
 "DR":[3.5,3.8,4.1,4.3,4.6,4.9,5.2,5.4,5.7,6],
 "CD":[10,9.8,9.6,9.3,9.1,8.9,8.7,8.4,8.2,8],
-"IC":8
-},
+"IC":8},
 "nightDataPool":{
 "PW":[50,54,59,63,68,72,77,81,86,90]
 }},
@@ -3416,8 +3322,7 @@
 "speed":100,
 "rate":100,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -3455,8 +3360,7 @@
 "speed":100,
 "rate":135,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -3494,8 +3398,7 @@
 "speed":100,
 "rate":85,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -3533,8 +3436,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -3550,8 +3452,7 @@
 "PW":[10,11,12,13,14,16,17,18,19,20],
 "DR":[3,3.2,3.4,3.7,3.9,4.1,4.3,4.6,4.8,5],
 "CD":[15,14.7,14.3,14,13.7,13.4,13,12.7,12.3,12],
-"IC":6
-},
+"IC":6},
 "nightDataPool":{
 "PW":[18,20,22,24,26,27,29,31,33,35],
 "DR":[5,6,6,6,7,7,7,8,8,8]
@@ -3577,8 +3478,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -3616,8 +3516,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -3654,8 +3553,7 @@
 "speed":100,
 "rate":108,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -3694,8 +3592,7 @@
 "speed":100,
 "rate":105,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -3734,8 +3631,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -3772,8 +3668,7 @@
 "speed":100,
 "rate":105,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -3813,8 +3708,7 @@
 "speed":100,
 "rate":108,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -3850,8 +3744,7 @@
 "speed":100,
 "rate":125,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -3889,8 +3782,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -3929,8 +3821,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":4,
@@ -3965,8 +3856,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":4,
@@ -4003,8 +3893,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":7,
@@ -4020,8 +3909,7 @@
 "PW":[10,12,14,17,19,21,23,26,28,30],
 "DR":[4,4.2,4.4,4.7,4.9,5.1,5.3,5.6,5.8,6],
 "CD":[18,18,18,18,18,18,18,18,18,18],
-"IC":8
-},
+"IC":8},
 "nightDataPool":{
 "PW":[32,38,44,50,56,61,67,73,79,85]
 }},
@@ -4046,8 +3934,7 @@
 "speed":100,
 "rate":125,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":4,
@@ -4081,8 +3968,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -4120,8 +4006,7 @@
 "speed":100,
 "rate":90,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -4159,8 +4044,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -4198,8 +4082,7 @@
 "speed":100,
 "rate":95,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -4238,8 +4121,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -4275,8 +4157,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -4293,8 +4174,7 @@
 "PW":[35,38,41,43,46,49,52,54,57,60],
 "DR":[3.5,3.8,4.1,4.3,4.6,4.9,5.2,5.4,5.7,6],
 "CD":[20,19.6,19.1,18.7,18.2,17.8,17.3,16.9,16.4,16],
-"IC":5
-},
+"IC":5},
 "nightDataPool":{
 "PW":[110,118,126,133,141,149,157,164,172,180]
 }},
@@ -4319,8 +4199,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -4337,8 +4216,7 @@
 "PW":[40,43,47,50,53,57,60,63,67,70],
 "DR":[3.5,3.8,4.1,4.3,4.6,4.9,5.2,5.4,5.7,6],
 "CD":[20,19.6,19.1,18.7,18.2,17.8,17.3,16.9,16.4,16],
-"IC":5
-},
+"IC":5},
 "nightDataPool":{
 "PW":[120,129,138,147,156,164,173,182,191,200]
 }},
@@ -4363,8 +4241,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -4401,8 +4278,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":1,
@@ -4439,8 +4315,7 @@
 "speed":100,
 "rate":145,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -4478,8 +4353,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -4517,8 +4391,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -4554,8 +4427,7 @@
 "speed":100,
 "rate":125,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":4,
@@ -4594,8 +4466,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -4633,8 +4504,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -4670,8 +4540,7 @@
 "speed":100,
 "rate":90,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -4707,8 +4576,7 @@
 "speed":100,
 "rate":105,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -4747,8 +4615,7 @@
 "speed":100,
 "rate":105,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -4788,8 +4655,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -4825,8 +4691,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -4843,8 +4708,7 @@
 "DG":[33,31,32,33,34,36,37,38,39,40],
 "DR":[3,3.2,3.4,3.7,3.9,4.1,4.3,4.6,4.8,5],
 "CD":[15,14.7,14.3,14,13.7,13.4,13,12.7,12.3,12],
-"IC":6
-},
+"IC":6},
 "nightDataPool":{
 "DG":[55,57,59,62,64,66,68,71,73,75],
 "DR":[5,6,6,6,7,7,7,8,8,8]
@@ -4870,8 +4734,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -4911,8 +4774,7 @@
 "speed":100,
 "rate":105,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -4949,8 +4811,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -4988,8 +4849,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -5025,8 +4885,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -5065,8 +4924,7 @@
 "speed":100,
 "rate":80,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -5104,8 +4962,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -5143,8 +5000,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -5183,8 +5039,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -5221,8 +5076,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -5261,8 +5115,7 @@
 "speed":100,
 "rate":125,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -5301,8 +5154,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -5339,8 +5191,7 @@
 "speed":100,
 "rate":90,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -5376,8 +5227,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -5414,8 +5264,7 @@
 "speed":100,
 "rate":85,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -5452,8 +5301,7 @@
 "speed":100,
 "rate":90,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -5491,8 +5339,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":4,
@@ -5508,8 +5355,7 @@
 "HT":[10,11,12,13,14,16,17,18,19,20],
 "DR":[1,1.6,2.1,2.7,3.2,3.8,4.3,4.9,5.4,6],
 "CD":[18,18,18,18,18,18,18,18,18,18],
-"IC":8
-},
+"IC":8},
 "nightDataPool":{
 "HT":[30,34,39,43,48,52,57,61,66,70]
 }},
@@ -5534,8 +5380,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -5574,8 +5419,7 @@
 "speed":100,
 "rate":80,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":5,
 "effectCenter":6,
@@ -5614,8 +5458,7 @@
 "speed":100,
 "rate":100,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":5,
 "effectCenter":6,
@@ -5653,8 +5496,7 @@
 "speed":100,
 "rate":105,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":5,
 "effectCenter":6,
@@ -5692,8 +5534,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":5,
 "effectCenter":9,
@@ -5731,8 +5572,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":5,
 "effectCenter":3,
@@ -5770,8 +5610,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":5,
 "effectCenter":6,
@@ -5811,8 +5650,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":5,
 "effectCenter":6,
@@ -5851,8 +5689,7 @@
 "speed":100,
 "rate":95,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":5,
 "effectCenter":9,
@@ -5891,8 +5728,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":5,
 "effectCenter":3,
@@ -5931,8 +5767,7 @@
 "speed":100,
 "rate":135,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":5,
 "effectCenter":6,
@@ -5971,8 +5806,7 @@
 "speed":100,
 "rate":105,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":5,
 "effectCenter":6,
@@ -6010,8 +5844,7 @@
 "speed":100,
 "rate":125,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":5,
 "effectCenter":6,
@@ -6048,8 +5881,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -6086,8 +5918,7 @@
 "speed":100,
 "rate":105,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -6125,8 +5956,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":4,
@@ -6164,8 +5994,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -6204,8 +6033,7 @@
 "speed":100,
 "rate":85,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -6245,8 +6073,7 @@
 "speed":100,
 "rate":90,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -6285,8 +6112,7 @@
 "speed":100,
 "rate":75,
 "armorPiercing":10,
-"crit":30
-},
+"crit":30},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -6325,8 +6151,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":7,
@@ -6361,8 +6186,7 @@
 "speed":100,
 "rate":90,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -6378,8 +6202,7 @@
 "AR":[16,18,19,21,22,24,25,27,28,30],
 "DR":[3,3.2,3.4,3.7,3.9,4.1,4.3,4.6,4.8,5],
 "CD":[10,9.8,9.6,9.3,9.1,8.9,8.7,8.4,8.2,8],
-"IC":8
-},
+"IC":8},
 "nightDataPool":{
 "AR":[50,54,59,63,68,72,77,81,86,90]
 }},
@@ -6404,8 +6227,7 @@
 "speed":100,
 "rate":100,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -6444,8 +6266,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":8,
@@ -6483,8 +6304,7 @@
 "speed":100,
 "rate":125,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -6522,8 +6342,7 @@
 "speed":100,
 "rate":100,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -6562,8 +6381,7 @@
 "speed":100,
 "rate":85,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":4,
@@ -6600,8 +6418,7 @@
 "speed":100,
 "rate":90,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -6638,8 +6455,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":8,
@@ -6655,8 +6471,7 @@
 "CR":[15,16,17,18,19,20,21,22,23,25],
 "DR":[5,6,6,6,7,7,7,8,8,8],
 "CD":[20,19.6,19.7,18.7,18.2,17.8,17.3,16.9,16.4,16],
-"IC":5
-},
+"IC":5},
 "nightDataPool":{
 "PW":[60,67,73,80,87,93,100,107,113,120],
 "CR":[25,28,31,33,36,39,42,44,47,50]
@@ -6682,8 +6497,7 @@
 "speed":100,
 "rate":95,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -6720,8 +6534,7 @@
 "speed":100,
 "rate":75,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -6760,8 +6573,7 @@
 "speed":100,
 "rate":105,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -6799,8 +6611,7 @@
 "speed":100,
 "rate":130,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":4,
@@ -6817,8 +6628,7 @@
 "BL":[1,2,2,2,2,3,3,3,3,4],
 "DR":[6,6.2,6.4,6.7,6.9,7.1,7.3,7.6,7.8,8],
 "CD":[18,18,18,18,18,18,18,18,18,18],
-"IC":8
-},
+"IC":8},
 "nightDataPool":{
 "PW":[28,30,33,35,38,40,43,45,48,50]
 }},
@@ -6843,8 +6653,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -6882,8 +6691,7 @@
 "speed":100,
 "rate":112,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -6922,8 +6730,7 @@
 "speed":100,
 "rate":130,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":5,
 "effectCenter":6,
@@ -6962,8 +6769,7 @@
 "speed":100,
 "rate":140,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":5,
 "effectCenter":6,
@@ -7003,8 +6809,7 @@
 "speed":100,
 "rate":105,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":5,
 "effectCenter":9,
@@ -7041,8 +6846,7 @@
 "speed":100,
 "rate":95,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -7081,8 +6885,7 @@
 "speed":100,
 "rate":85,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -7119,8 +6922,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -7136,8 +6938,7 @@
 "CR":[12,13,14,15,16,17,18,19,20,22],
 "DR":[5,6,6,6,7,7,7,8,8,8],
 "CD":[20,19.6,19.7,18.7,18.2,17.8,17.3,16.9,16.4,16],
-"IC":5
-},
+"IC":5},
 "nightDataPool":{
 "PW":[50,55,61,66,72,77,83,88,94,100],
 "CR":[22,24,26,28,30,32,34,36,38,40]
@@ -7163,8 +6964,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -7207,8 +7007,7 @@
 "speed":100,
 "rate":125,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":4,
@@ -7247,8 +7046,7 @@
 "speed":100,
 "rate":108,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -7289,8 +7087,7 @@
 "speed":100,
 "rate":95,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":3,
 "effectCenter":7,
@@ -7330,8 +7127,7 @@
 "speed":100,
 "rate":95,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":3,
 "effectCenter":1,
@@ -7371,8 +7167,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":1,
@@ -7411,8 +7206,7 @@
 "speed":100,
 "rate":100,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -7428,8 +7222,7 @@
 "AR":[18,20,21,23,24,26,27,29,30,32],
 "DR":[3,3.2,3.4,3.7,3.9,4.1,4.3,4.6,4.8,5],
 "CD":[10,9.8,9.6,9.3,9.1,8.9,8.4,8.7,8.2,8],
-"IC":8
-},
+"IC":8},
 "nightDataPool":{
 "AR":[55,60,65,70,75,80,85,90,95,100]
 }},
@@ -7454,8 +7247,7 @@
 "speed":100,
 "rate":85,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -7491,8 +7283,7 @@
 "speed":100,
 "rate":65,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -7529,8 +7320,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":4,
 "effectCenter":8,
@@ -7569,8 +7359,7 @@
 "speed":100,
 "rate":100,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -7607,8 +7396,7 @@
 "speed":100,
 "rate":105,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":8,
@@ -7645,8 +7433,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":2,
@@ -7687,8 +7474,7 @@
 "speed":100,
 "rate":118,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -7704,8 +7490,7 @@
 "CR":[15,16,17,18,19,21,22,23,24,25],
 "DR":[6,6.4,6.8,7.2,7.6,8,8.4,8.8,9.4,10],
 "CD":[20,19.6,19.7,18.7,18.2,17.8,17.3,16.9,16.4,16],
-"IC":4
-},
+"IC":4},
 "nightDataPool":{
 "AR":[30,31,32,33,34,36,37,38,39,40],
 "HT":[30,32,34,37,39,41,43,46,48,50]
@@ -7731,8 +7516,7 @@
 "speed":100,
 "rate":125,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "effect":{
 "effectType":6,
 "effectCenter":4,
@@ -7780,8 +7564,7 @@
 "armorPiercing":10,
 "nightView":0,
 "cooldown":0,
-"bullet":0
-},
+"bullet":0},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -7816,8 +7599,7 @@
 "speed":100,
 "rate":100,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -7855,8 +7637,7 @@
 "speed":100,
 "rate":98,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -7901,8 +7682,7 @@
 "armorPiercing":10,
 "nightView":0,
 "cooldown":0,
-"bullet":0
-},
+"bullet":0},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -7948,8 +7728,7 @@
 "armorPiercing":10,
 "nightView":0,
 "cooldown":0,
-"bullet":0
-},
+"bullet":0},
 "effect":{
 "effectType":4,
 "effectCenter":5,
@@ -7994,8 +7773,7 @@
 "armorPiercing":10,
 "nightView":0,
 "cooldown":0,
-"bullet":0
-},
+"bullet":0},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -8042,8 +7820,7 @@
 "armorPiercing":10,
 "nightView":0,
 "cooldown":0,
-"bullet":0
-},
+"bullet":0},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -8079,8 +7856,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -8118,8 +7894,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":5,
 "effectCenter":6,
@@ -8157,8 +7932,7 @@
 "speed":100,
 "rate":125,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -8196,8 +7970,7 @@
 "speed":100,
 "rate":98,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -8234,8 +8007,7 @@
 "speed":100,
 "rate":110,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":1,
 "effectCenter":5,
@@ -8272,8 +8044,7 @@
 "speed":100,
 "rate":105,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":0,
 "effectCenter":5,
@@ -8312,8 +8083,7 @@
 "speed":100,
 "rate":95,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "effect":{
 "effectType":2,
 "effectCenter":5,
@@ -8354,8 +8124,7 @@
 "speed":100,
 "rate":108,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "effect":{
 "effectType":5,
 "effectCenter":6,
@@ -8385,8 +8154,7 @@
 "speed":100,
 "rate":106,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "grow":120
 },{
 "id":20051,
@@ -8402,8 +8170,7 @@
 "speed":100,
 "rate":100,
 "armorPiercing":10,
-"crit":40
-},
+"crit":40},
 "grow":115
 },{
 "id":20055,
@@ -8419,8 +8186,7 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "grow":115
 },{
 "id":20057,
@@ -8436,8 +8202,7 @@
 "speed":100,
 "rate":115,
 "armorPiercing":10,
-"crit":20
-},
+"crit":20},
 "grow":120
 },{
 "id":20093,
@@ -8453,8 +8218,7 @@
 "speed":100,
 "rate":90,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "grow":130
 },{
 "id":20094,
@@ -8470,7 +8234,6 @@
 "speed":100,
 "rate":120,
 "armorPiercing":10,
-"crit":5
-},
+"crit":5},
 "grow":105
 }]

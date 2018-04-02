@@ -43,6 +43,7 @@ $("select").change(function(){
 	});
 });
 function loadComplete(){
+	$('.grid').removeClass('w3-hide');
 	grid = new Muuri('.grid',{
 		sortData:{
 			time:function (item,element){
@@ -123,7 +124,7 @@ function loadComplete(){
 			$(this).addClass('active')
 		break;
 		case "제조불가":
-			grid.filter('[data-time="0"]');
+			grid.filter('[data-time="00"]');
 			$('.fc').removeClass('active');
 			$(this).addClass('active')
 		break;

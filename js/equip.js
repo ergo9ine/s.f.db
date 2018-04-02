@@ -41,6 +41,7 @@ $("select").change(function(){
 	});
 });
 function loadComplete(){
+	$('.grid').removeClass('w3-hide');
 	grid = new Muuri('.grid',{
 		sortData:{
 			time:function (item,element){
