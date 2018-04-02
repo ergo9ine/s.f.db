@@ -30,13 +30,13 @@ $(document).ready(function(){
 	$('#info').click(function(){
 		$(".tab").removeClass('w3-red');
 		$(this).addClass('w3-red');
-		$('#tab1,#tab2,#tab3,#tab4,#tab5').addClass('w3-hide');
+		$('.content').addClass('w3-hide');
 		$('#index').removeClass('w3-hide');
 	});
 	$(".tab").click(function(){
 		$("#info").removeClass('w3-red');
 		$(".tab").removeClass('w3-red');
-		$(this).addClass('w3-red');  
+		$(this).addClass('w3-red');
 		switch ($(this).attr("id")){
 		case "m1":
 			$('#index,#tab2,#tab3,#tab4,#tab5').addClass('w3-hide');
@@ -47,7 +47,7 @@ $(document).ready(function(){
 			$('#tab2').removeClass('w3-hide');
 		break;
 		case "m3":
-			$('#index,#tab2,#tab3,#tab4,#tab5').addClass('w3-hide');
+			$('#index,#tab1,#tab2,#tab4,#tab5').addClass('w3-hide');
 			$('#tab3').removeClass('w3-hide');
 		break;
 		case "m4":
@@ -59,14 +59,5 @@ $(document).ready(function(){
 			$('#tab5').removeClass('w3-hide');
 		break;
 		}
-	});
-	$('.shuffle').click(function(){
-		$('.fo .fc').removeClass('active');
-		$(this).addClass('active');
-	});
-	$('.fo .fc').click(function(){
-		$('.shuffle').removeClass('active');
-		$('.fo .fc').removeClass('active');
-		$(this).addClass('active');
-	})
+	}); 
 });

@@ -68,37 +68,38 @@ function loadComplete(){
 			grid.filter('.muuri-item-shown')
 		}
 	});
+	function active(){$('.fc').removeClass('active')};
 	$(".fc").click(function(){
 		var query = $(this).text();
 		switch (query){
 		case "2성":
 			grid.filter('[data-rarity="2"]')
-			$('.fc').removeClass('active')
+			active()
 			$(this).addClass('active')
 		break;
 		case "3성":
 			grid.filter('[data-rarity="3"]')
-			$('.fc').removeClass('active')
+			active()
 			$(this).addClass('active')
 		break;
 		case "4성":
 			grid.filter('[data-rarity="4"]')
-			$('.fc').removeClass('active')
+			active()
 			$(this).addClass('active')
 		break;
 		case "5성":
 			grid.filter('[data-rarity="5"]')
-			$('.fc').removeClass('active')
+			active()
 			$(this).addClass('active')
 		break;
 		case "제조불가":
 			grid.filter('[data-time="9999"]')
-			$('.fc').removeClass('active')
+			active()
 			$(this).addClass('active')
 		break;
 		case "All":
 			grid.filter('[data-type]')
-			$('.fc').removeClass('active')
+			active()
 			$(this).addClass('active')
 		break; 
 		}
