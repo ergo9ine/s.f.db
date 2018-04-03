@@ -144,8 +144,9 @@ function loadComplete(){
 	};
 	$(".item-content").click(function(){
 		var clicked = $(".no").text()
-		alert($(this).children(".no").text());
+		//alert($(this).children(".no").text());
 		togglecon();
+		$('#func').scrollTop();
 		$("#num").text('+doll.id+');
 	});
 	$(".xfunc").click(function(){

@@ -36,9 +36,9 @@
 </div>
 <div class="w3-bar w3-black w3-hide-small">
 	<a id="open" class="w3-bar-item w3-button w3-small"><i class="fa	fa-bars"></i>Menu</a>
-	<a id="m1" class="w3-bar-item w3-button w3-small tab">인형 도감</a>
-	<a id="m2" class="w3-bar-item w3-button w3-small tab">장비 도감</a>
-	<a id="m3" class="w3-bar-item w3-button w3-small tab">요정 도감</a>
+	<a class="m1 w3-bar-item w3-button w3-small tab">인형 도감</a>
+	<a class="m2 w3-bar-item w3-button w3-small tab">장비 도감</a>
+	<a class="m3 w3-bar-item w3-button w3-small tab">요정 도감</a>
 </div>
 <div id="lm" class="w3-sidebar w3-bar-block w3-black w3-animate-left w3-center w3-hide"><!-- 모바일 -->
 	<a id="lc" class="w3-bar-item w3-border-bottom w3-border-left"><i class="fa fa-close"></i></a>
@@ -50,9 +50,9 @@
 </div>
 <div id="rm" class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-center w3-hide">
 	<a id="rc" class="w3-bar-item w3-border-bottom w3-border-left"><i class="fa fa-close"></i></a>
-	<a id="m1" class="w3-bar-item w3-button tab">인형 도감</a>
-	<a id="m2" class="w3-bar-item w3-button tab">장비 도감</a>
-	<a id="m3" class="w3-bar-item w3-button tab">요정 도감</a>
+	<a class="m1 w3-bar-item w3-button tab">인형 도감</a>
+	<a class="m2 w3-bar-item w3-button tab">장비 도감</a>
+	<a class="m3 w3-bar-item w3-button tab">요정 도감</a>
 </div>
 <div class="w3-bar w3-center w3-black w3-hide-large w3-hide-medium w3-display-container">
 	<a id="lo" class="w3-bar-item w3-button w3-small w3-left">LeftMenu<i class="fa	fa-bars"></i></a>
@@ -61,12 +61,13 @@
 </div>
 <div id="contents">
 	<div id="index" class="content w3-white"><iframe data-src="tools/index.html" style="height:100%;width:1px;min-width:100%;border:0;display:block" width="100%"></iframe></div>
-	<div id="tab1" class="content w3-hide"><iframe data-src="wiki/doll.html" style="height:100%;width:1px;min-width:100%;border:0;display:block" width="100%"></iframe></div>
+	<div id="tab1" class="content w3-hide"><iframe id="st" data-src="wiki/doll.html" style="height:100%;width:1px;min-width:100%;border:0;display:block" width="100%"></iframe></div>
 	<div id="tab2" class="content w3-hide"><iframe data-src="wiki/equip.html" style="height:100%;width:1px;min-width:100%;border:0;display:block" width="100%"></iframe></div>
 	<div id="tab3" class="content w3-hide"><iframe data-src="wiki/fairy.html" style="height:100%;width:1px;min-width:100%;border:0;display:block" width="100%"></iframe></div>
 </div>
 <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3,npm/vanilla-lazyload@10"></script>
 <script>new LazyLoad({elements_selector:"iframe"})</script>
 <script src="js/index.js"></script>
+<script src="js/search.js"></script>
 </body>
 </html>
