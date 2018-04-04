@@ -1,27 +1,24 @@
-$(document).ready(function(){
+$(document).ready(()=>{
 	$.ajax('../json/equip.json',{
 		contentType:'application/json',
 		dataType:'json',
-		success:function(result){
+		success:result=>{
 			itemcon = '<div class="w3-hover-shadow equip item-content">';
-			var allCharacters = $.map(result,function(equip,index){
+			var allCharacters = $.map(result,(equip,index)=>{
 			character = $('<div class="item" data-time="'+equip.time+'" data-type="'+equip.type+'" data-rarity="'+equip.rarity+'"></div>');
 			equipcon = '<p class="name pofa f125 er'+equip.rarity+'">'+equip.name+'</p><i class="star r'+equip.rarity+'"></i><i class="equip	equip_info_cage_'+equip.rarity+' incage"></i><i class="equip bg_'+equip.rarity+' bg"></i><i class="equip '+equip.type+'_'+equip.rarity+' etype"></i><img src="../img/equip/'+equip.img+'.png" class="icon2" alt="icon"><div class="tag">'+equip.tag+'/'+equip.time+'</div>';
-			$(character).append(itemcon).find(".item-content").html(equipcon);
-			return character;
+			$(character).append(itemcon).find(".item-content").html(equipcon);character;
 		});
 		$('.grid').append(allCharacters)
 		},
-		error:function(request,errorType,errorMessage){
-			alert('Error:'+errorType+' With message:'+errorMessage)
-		},
+		error:(request,errorType,errorMessage)=>{alert('Error:'+errorType+' With message:'+errorMessage)},
 		timeout:3000
 	});
-}).ajaxStop(function(){loadComplete()});
+}).ajaxStop(()=>{loadComplete()});
 function sortrarity(){grid.sort('rarity')};
 function sorttime(){grid.sort('time')};
 function sorttype(){grid.sort('type')};
-$("select").change(function(){
+$("select").change(()=>{
 	$("select:focus option:selected").each(function(){
 		var query = $(this).text()
 		switch (query){
@@ -44,26 +41,20 @@ function loadComplete(){
 	$('.grid').removeClass('w3-hide');
 	grid = new Muuri('.grid',{
 		sortData:{
-			time:function (item,element){
-			return element.getAttribute('data-time')
-			},
-			type:function (item,element){
-			return element.getAttribute('data-type').toUpperCase()
-			},
-			rarity:function (item,element){
-			return element.getAttribute('data-rarity')
-			}
+			time:(item,element)=>element.getAttribute('data-time'),
+			type:(item,element)=>element.getAttribute('data-type').toUpperCase(),
+			rarity:(item,element)=>element.getAttribute('data-rarity')
 		},
 		layout:{fillGaps:true,rounding:true}
 	});
-	$('input#search').quicksearch('div.grid .item',{
+	$('input#search').quicksearch('.grid .item',{
 		noResults:"#noResultMessage",
 		'bind':'keyup keydown click input',
-		'hide':function(){
+		'hide':()=>{
 			$(this).removeClass('muuri-item-shown').addClass('muuri-item-hidden').css("display","none");
 			grid.filter('.muuri-item-shown')
 		},
-		'show':function(){
+		'show':()=>{
 			$(this).addClass('muuri-item-shown').removeClass('muuri-item-hidden').css("display","block");
 			grid.filter('.muuri-item-shown')
 		}

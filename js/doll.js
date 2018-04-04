@@ -1,10 +1,10 @@
-$(document).ready(function(){
+$(document).ready(()=>{
 	$.ajax('../json/doll.json',{
 		contentType:'application/json',
 		dataType:'json',
-		success:function(result){
+		success:result=>{
 			itemcon = '<div class="w3-hover-shadow tdoll item-content">';
-			var allCharacters = $.map(result,function(doll,index){
+			var allCharacters = $.map(result,(doll,index)=>{
 				var timehour = parseInt(doll.buildTime/3600);
 				var timemin = doll.buildTime%3600/60;
 				character = $('<div class="item" data-time="'+timehour+''+timemin+'" data-type="'+doll.type+'" data-rarity="'+doll.rank+'"></div>');
@@ -14,16 +14,14 @@ $(document).ready(function(){
 			});
 		$('.grid').append(allCharacters)
 		},
-		error:function(request,errorType,errorMessage){
-			alert('Error:'+errorType+' With message:'+errorMessage)
-		},
+		error:(request,errorType,errorMessage)=>{alert('Error:'+errorType+' With message:'+errorMessage)},
 		timeout:3000
 	});
-}).ajaxStop(function(){loadComplete()});
+}).ajaxStop(()=>{loadComplete()});
 function sortrarity(){grid.sort('rarity')};
 function sorttime(){grid.sort('time')};
 function sorttype(){grid.sort('type')};
-$("select").change(function(){
+$("select").change(()=>{
 	$("select:focus option:selected").each(function(){
 		var query = $(this).text()
 		switch (query){
@@ -46,33 +44,25 @@ function loadComplete(){
 	$('.grid').removeClass('w3-hide');
 	grid = new Muuri('.grid',{
 		sortData:{
-			time:function (item,element){
-			return element.getAttribute('data-time')
-			},
-			type:function (item,element){
-			return element.getAttribute('data-type').toUpperCase()
-			},
-			rarity:function (item,element){
-			return element.getAttribute('data-rarity')
-			}
+			time:(item,element)=>element.getAttribute('data-time'),
+			type:(item,element)=>element.getAttribute('data-type').toUpperCase(),
+			rarity:(item,element)=>element.getAttribute('data-rarity')
 		},
 		layout:{fillGaps:true,rounding:true}
 	});
-	$('input#search').quicksearch('div.grid .item',{
+	$('input#search').quicksearch('.grid .item',{
 		noResults:"#noResultMessage",
 		'bind':'keyup keydown click input',
 		'hide':function(){
 			$(this).removeClass('muuri-item-shown').addClass('muuri-item-hidden').css("display","none");
-			grid.filter('.muuri-item-shown')
-		},
+			grid.filter('.muuri-item-shown')},
 		'show':function(){
 			$(this).addClass('muuri-item-shown').removeClass('muuri-item-hidden').css("display","block");
-			grid.filter('.muuri-item-shown')
-		}
+			grid.filter('.muuri-item-shown')}
 	});
 	function active(){$('.fc').removeClass('active')};
 	$(".fc").click(function(){
-		var query = $(this).text()
+		query = $(this).text()
 		switch (query){
 		case "2성":
 			grid.filter('[data-rarity="2"]')
@@ -142,14 +132,14 @@ function loadComplete(){
 		$('#filsor').toggleClass('w3-hide');
 		$('#func').toggleClass('w3-hide');
 	};
-	$(".item-content").click(function(){
+	$(".item-content").click(()=>{
 		var clicked = $(".no").text()
 		//alert($(this).children(".no").text());
 		togglecon();
-		$('#func').scrollTop();
+		$(document).scrollTop();
 		$("#num").text('+doll.id+');
 	});
-	$(".xfunc").click(function(){
+	$(".xfunc").click(()=>{
 		togglecon();
 	});
 };

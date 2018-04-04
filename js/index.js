@@ -1,10 +1,10 @@
 //JavaScript Document
 //index
 $(document).ready(function(){
-	$('.x').click(function(){
+	$('.x').click(()=>{
 		$(this).parent().addClass('w3-hide');
 	});
-	$('#mom button').click(function(){
+	$('#mom button').click(()=>{
 		if ($(this).attr("id") === "f"){
 			$('#mf').toggleClass('w3-hide');
 			$('#fo').addClass('w3-hide');
@@ -18,16 +18,16 @@ $(document).ready(function(){
 			$('#s').removeClass('w3-border-bottom');
 		}
 	});
-	$('#close,#open').click(function(){
+	$('#close,#open').click(()=>{
 		$('#Sidebar').toggleClass('w3-hide');
 	});
-	$('#lo,#lc').click(function(){
+	$('#lo,#lc').click(()=>{
 		$('#lm').toggleClass('w3-hide');
 	});
-	$('#ro,#rc').click(function(){
+	$('#ro,#rc').click(()=>{
 		$('#rm').toggleClass('w3-hide');
 	});
-	$('#info').click(function(){
+	$('#info').click(()=>{
 		$(".tab").removeClass('w3-red');
 		$(this).addClass('w3-red');
 		$('.content').addClass('w3-hide');
@@ -36,8 +36,8 @@ $(document).ready(function(){
 	$(".tab").click(function(){
 		$("#info,.tab").removeClass('w3-red');
 		$(this).addClass('w3-red');
-		var Classes = ($(this).attr('class')).split(' ');
-		for (var a = 0, len = Classes.length; a < len; a++) {
+		var Classes=($(this).attr('class')).split(' ');
+		for (var a=0,len=Classes.length;a<len;a++){
 			switch (Classes[a]){
 			case "m1":
 				$('#contents>div').not('#tab1').addClass('w3-hide')

@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(()=>{
 	nurl = $(location).attr('href');
 	var ourl = "http://sf2031.com/"||"http://sf2031.com/index.html";
 	if (nurl == ourl){console.log('check')}
