@@ -13,11 +13,12 @@ $(document).ready(()=>{
 				return character;
 			});
 		$('.grid').append(allCharacters)
+		loadComplete()
 		},
 		error:(request,errorType,errorMessage)=>{alert('Error:'+errorType+' With message:'+errorMessage)},
 		timeout:3000
 	});
-}).ajaxStop(()=>{loadComplete()});
+});
 function sortrarity(){grid.sort('rarity')};
 function sorttime(){grid.sort('time')};
 function sorttype(){grid.sort('type')};
@@ -40,9 +41,19 @@ $("select").change(()=>{
 		};
 	});
 });
+function togglecon(){$(".grid,#search,#filsor,#func").toggleClass('w3-hide');};
+function result() {
+	togglecon();
+	$.each(result,function(index,doll){
+		if(doll.id == clicked){
+			$(".dollname label:nth-child(2)").html(doll.id);
+			$(".dollname span").html(doll.krName);
+		}
+	});
+};
 function loadComplete(){
 	$('.grid').removeClass('w3-hide');
-	grid = new Muuri('.grid',{
+	grid=new Muuri('.grid',{
 		sortData:{
 			time:(item,element)=>element.getAttribute('data-time'),
 			type:(item,element)=>element.getAttribute('data-type').toUpperCase(),
@@ -126,18 +137,32 @@ function loadComplete(){
 		break;
 		}
 	});
-	function togglecon() {
-		$('.grid').toggleClass('w3-hide');
-		$('#search').toggleClass('w3-hide');
-		$('#filsor').toggleClass('w3-hide');
-		$('#func').toggleClass('w3-hide');
-	};
-	$(".item-content").click(()=>{
-		var clicked = $(".no").text()
-		//alert($(this).children(".no").text());
+	$(".item-content").click(function(){
 		togglecon();
-		$(document).scrollTop();
-		$("#num").text('+doll.id+');
+		var clicked = $(this).children(".no").text();
+		$.ajax('../json/doll.json',{
+		contentType: 'application/json',
+		dataType: 'json',
+		success: function(result) {
+		$.each(result,function(index,doll){
+			if(doll.id==clicked){
+				$(".dollname label:nth-child(2)").html(doll.id);
+				$(".dollname span").html(doll.krName);
+				$(".skins").remove();
+				$.each(doll.skins,(index,value)=>{
+					var skins = '<button class="w3-button w3-round-xxlarge w3-hover-text-white	w3-hover-orange skins" style="background-color:#feb976;color:#fff;margin:2.5px">'+value+'</button>'
+					$(".skintag").append(skins)
+				});
+				var cimg = '../img/t_doll/'+doll.id+'_s.png'
+				$("div.w3-row>div:nth-child(1)>img:nth-child(1)").attr("src",cimg);
+			}
+		});
+		},
+		error: function(request, errorType, errorMessage) {
+			alert('Error: ' + errorType + ' With message: ' + errorMessage);
+		},
+		timeout: 3000
+		});
 	});
 	$(".xfunc").click(()=>{
 		togglecon();
