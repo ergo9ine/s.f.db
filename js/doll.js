@@ -8,7 +8,7 @@ $(document).ready(()=>{
 				var timehour = parseInt(doll.buildTime/3600);
 				var timemin = doll.buildTime%3600/60;
 				character = $('<div class="item" data-time="'+timehour+''+timemin+'" data-type="'+doll.type+'" data-rarity="'+doll.rank+'"></div>');
-				dollcon = '<div class="w3-text-white no">'+doll.id+'</div><p class="w3-text-black name podo f125">'+doll.krName+'</p><i	class="star	r'+doll.rank+'"></i><i	class="incage doll info_cage_'+doll.rank+'"></i><i	class="type	doll '+doll.type+'_'+doll.rank+'"></i><img	src="../img/t_doll/'+doll.id+'_i.png"	alt="icon"><div class="tag">'+doll.nick+'/'+timehour+''+timemin+'</div>';
+				dollcon = '<div class="w3-text-white no">'+doll.id+'</div><p class="w3-text-black name podo f125">'+doll.krName+'</p><i	class="star	r'+doll.rank+'"></i><i	class="incage doll info_cage_'+doll.rank+'"></i><i	class="type	doll '+doll.type+'_'+doll.rank+'"></i><img	src="../img/t_doll/'+doll.id+'_i.png"	alt="icon"><div class="tag">'+doll.nick+'/'+timehour+''+timemin+'/'+doll.voice+'/'+doll.illust+'</div>';
 				$(character).append(itemcon).find(".item-content").html(dollcon);
 				return character;
 			});
@@ -155,6 +155,9 @@ function loadComplete(){
 				});
 				var cimg = '../img/t_doll/'+doll.id+'_s.png'
 				$("div.w3-row>div:nth-child(1)>img:nth-child(1)").attr("src",cimg);
+				$("div.w3-left-align:nth-child(1)>div:nth-child(1)>div:nth-child(3)").html(doll.voice);
+				$("div.w3-left-align:nth-child(1) > div:nth-child(3) > div:nth-child(3)").html(doll.illust);
+				$("div.w3-display-container:nth-child(5) > div:nth-child(3)").html(doll.name);
 				$('body,html').animate({scrollTop:0},0);
 			}
 		});
