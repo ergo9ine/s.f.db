@@ -155,6 +155,7 @@ function loadComplete(){
 				});
 				var cimg = '../img/t_doll/'+doll.id+'_s.png'
 				$("div.w3-row>div:nth-child(1)>img:nth-child(1)").attr("src",cimg);
+				$('body,html').animate({scrollTop:0},0);
 			}
 		});
 		},
