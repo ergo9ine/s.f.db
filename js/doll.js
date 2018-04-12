@@ -16,7 +16,7 @@ $(document).ready(()=>{
 		loadComplete()
 		},
 		error:(request,errorType,errorMessage)=>{alert('Error:'+errorType+' With message:'+errorMessage)},
-		timeout:3000
+		timeout:5000
 	});
 });
 function sortrarity(){grid.sort('rarity')};
@@ -42,15 +42,6 @@ $("select").change(()=>{
 	});
 });
 function togglecon(){$(".grid,#search,#filsor,#func").toggleClass('w3-hide');};
-function result() {
-	togglecon();
-	$.each(result,function(index,doll){
-		if(doll.id == clicked){
-			$(".dollname label:nth-child(2)").html(doll.id);
-			$(".dollname span").html(doll.krName);
-		}
-	});
-};
 function loadComplete(){
 	$('.grid').removeClass('w3-hide');
 	grid=new Muuri('.grid',{
@@ -146,33 +137,85 @@ function loadComplete(){
 		success: function(result) {
 		$.each(result,function(index,doll){
 			if(doll.id==clicked){
+				$('body,html').animate({scrollTop:0},0);
 				$(".dollname label:nth-child(2)").html(doll.id);
 				$(".dollname span").html(doll.krName);
 				$(".skins").remove();
 				$.each(doll.skins,(index,value)=>{
-					var skins = '<button class="w3-button w3-round-xxlarge w3-hover-text-white	w3-hover-orange skins" style="background-color:#feb976;color:#fff;margin:2.5px">'+value+'</button>'
+					var skins='<button class="w3-button w3-round-xxlarge w3-hover-text-white w3-hover-orange skins" style="background-color:#feb976;color:#fff;margin:2.5px">'+value+'</button>'
 					$(".skintag").append(skins)
 				});
-				var cimg = '../img/t_doll/'+doll.id+'.png'
+				idir='../img/t_doll/'
+				cimg = idir+doll.id+'.png'
+				var w3img='<img class="w3-image">'
+				$('div.w3-row:nth-child(8)>div:nth-child(1)').append(w3img)
 				$("div.w3-row>div:nth-child(1)>img:nth-child(1)").attr("src",cimg);
+				$(".skintag>button").click(function(){
+					var SkinsB=$(this).index();
+					switch (SkinsB){
+					case 0:
+						Skinbutton();
+					break;
+					case 1:
+						$(".w3-image").attr('src',cimg);
+					break;
+					case 2:
+						$(".w3-image").attr('src',idir+doll.id+'_1.png');
+					break;
+					case 3:
+						$(".w3-image").attr('src',idir+doll.id+'_2.png');
+					break;
+					case 4:
+						$(".w3-image").attr('src',idir+doll.id+'_3.png');
+					break;
+					case 5:
+						$(".w3-image").attr('src',idir+doll.id+'_4.png');
+					break;
+					case 6:
+						$(".w3-image").attr('src',idir+doll.id+'_5.png');
+					break;
+					case 7:
+						$(".w3-image").attr('src',idir+doll.id+'_6.png');
+					break;
+					case 8:
+						$(".w3-image").attr('src',idir+doll.id+'_7.png');
+					break;
+					case 9:
+						$(".w3-image").attr('src',idir+doll.id+'_8.png');
+					break;
+					};
+				});
 				$("div.w3-left-align:nth-child(1)>div:nth-child(1)>div:nth-child(3)").html(doll.voice);
-				$("div.w3-left-align:nth-child(1) > div:nth-child(3) > div:nth-child(3)").html(doll.illust);
-				$("div.w3-display-container:nth-child(5) > div:nth-child(3)").html(doll.name);
+				$("div.w3-left-align:nth-child(1)>div:nth-child(3)>div:nth-child(3)").html(doll.illust);
+				$("div.w3-display-container:nth-child(5)>div:nth-child(3)").html(doll.name);
 				var timehour = parseInt(doll.buildTime/3600);
 				var timemin = doll.buildTime%3600/60;
 				var time = timehour+'시간'+timemin+'분'
-				$("div.w3-third:nth-child(1) > div:nth-child(3) > div:nth-child(3)").html(time);
-				
-
-				$('body,html').animate({scrollTop:0},0);
+				$("div.w3-third:nth-child(1)>div:nth-child(3)>div:nth-child(3)").html(time);
 			}
 		});
 		},
 		error:(request,errorType,errorMessage)=>{alert('Error:'+errorType+' With message:'+errorMessage)},
-		timeout: 3000
+		timeout:5000
 		});
 	});
+	function Skinbutton() {
+		var imgsrc=$(".w3-image").attr('src').split(idir)[1].split(".png")[0];
+		var imgM=$(".w3-image").attr('src').split(idir)[1].split(".png")[0].indexOf('_d');
+		console.log(imgM);
+		consoe.log(Array.isArray(imgM))
+		delete imgM;
+		var imgM=0;
+		console.log(imgM);
+		if ($(".w3-image").attr('src').split(idir)[1].split(".png")[0].indexOf('_d') != -1){
+			imgT=imgsrc.slice(0,-2);
+			$(".w3-image").attr('src',idir+imgT+'.png');
+		} else {
+			$(".w3-image").attr('src',idir+imgsrc+'_d.png');
+		}
+	}
 	$(".xfunc").click(()=>{
 		togglecon();
+		$(".w3-image").remove();
 	});
 };
