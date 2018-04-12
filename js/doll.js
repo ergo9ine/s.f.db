@@ -201,12 +201,9 @@ function loadComplete(){
 	});
 	function Skinbutton() {
 		var imgsrc=$(".w3-image").attr('src').split(idir)[1].split(".png")[0];
-		var imgM=$(".w3-image").attr('src').split(idir)[1].split(".png")[0].indexOf('_d');
-		console.log(imgM);
-		consoe.log(Array.isArray(imgM))
+		var imgM=$(".w3-image").attr('src').split(idir)[1].split(".png")[0].indexOf('_d').toString();
 		delete imgM;
 		var imgM=0;
-		console.log(imgM);
 		if ($(".w3-image").attr('src').split(idir)[1].split(".png")[0].indexOf('_d') != -1){
 			imgT=imgsrc.slice(0,-2);
 			$(".w3-image").attr('src',idir+imgT+'.png');
