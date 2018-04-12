@@ -153,18 +153,22 @@ function loadComplete(){
 					var skins = '<button class="w3-button w3-round-xxlarge w3-hover-text-white	w3-hover-orange skins" style="background-color:#feb976;color:#fff;margin:2.5px">'+value+'</button>'
 					$(".skintag").append(skins)
 				});
-				var cimg = '../img/t_doll/'+doll.id+'_s.png'
+				var cimg = '../img/t_doll/'+doll.id+'.png'
 				$("div.w3-row>div:nth-child(1)>img:nth-child(1)").attr("src",cimg);
 				$("div.w3-left-align:nth-child(1)>div:nth-child(1)>div:nth-child(3)").html(doll.voice);
 				$("div.w3-left-align:nth-child(1) > div:nth-child(3) > div:nth-child(3)").html(doll.illust);
 				$("div.w3-display-container:nth-child(5) > div:nth-child(3)").html(doll.name);
+				var timehour = parseInt(doll.buildTime/3600);
+				var timemin = doll.buildTime%3600/60;
+				var time = timehour+'시간'+timemin+'분'
+				$("div.w3-third:nth-child(1) > div:nth-child(3) > div:nth-child(3)").html(time);
+				
+
 				$('body,html').animate({scrollTop:0},0);
 			}
 		});
 		},
-		error: function(request, errorType, errorMessage) {
-			alert('Error: ' + errorType + ' With message: ' + errorMessage);
-		},
+		error:(request,errorType,errorMessage)=>{alert('Error:'+errorType+' With message:'+errorMessage)},
 		timeout: 3000
 		});
 	});
