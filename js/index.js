@@ -1,6 +1,6 @@
 //JavaScript Document
 //index
-$(document).ready(function(){
+$(document).ready(()=>{
 	$('.x').click(()=>{
 		$(this).parent().addClass('w3-hide');
 	});
