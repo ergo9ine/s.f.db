@@ -1,7 +1,5 @@
 $(document).ready(()=>{
-	$.ajax('../json/doll.json',{
-		contentType:'application/json',
-		dataType:'json',
+	$.ajax('../json/doll.json',{contentType:'application/json',dataType:'json',
 		success:result=>{
 			itemcon = '<div class="w3-hover-shadow tdoll item-content">';
 			var allCharacters = $.map(result,(doll,index)=>{
@@ -131,9 +129,7 @@ function loadComplete(){
 	$(".item-content").click(function(){
 		togglecon();
 		var clicked = $(this).children(".no").text();
-		$.ajax('../json/doll.json',{
-		contentType: 'application/json',
-		dataType: 'json',
+		$.ajax('../json/doll.json',{contentType: 'application/json',dataType: 'json',
 		success: function(result) {
 		$.each(result,function(index,doll){
 			if(doll.id==clicked){
@@ -143,12 +139,44 @@ function loadComplete(){
 				$(".skins").remove();
 				$.each(doll.skins,(index,value)=>{
 					var skins='<button class="w3-button w3-round-xxlarge w3-hover-text-white w3-hover-orange skins" style="background-color:#feb976;color:#fff;margin:2.5px">'+value+'</button>'
-					$(".skintag").append(skins)
+					$(".skintag").append(skins);
 				});
-				idir='../img/t_doll/'
-				cimg = idir+doll.id+'.png'
-				var w3img='<img class="w3-image">'
-				$('div.w3-row:nth-child(8)>div:nth-child(1)').append(w3img)
+				idir='../img/t_doll/';
+				var cimg=idir+doll.id+'.png';
+				var simg=idir+doll.id;
+				$("div.skintag>button.w3-button").click(function(){
+					switch ($(this).index()){
+						case 1:
+							$(".w3-image").attr('src',cimg);
+						break;
+						case 2:
+							$(".w3-image").attr('src',simg+'_1.png');
+						break;
+						case 3:
+							$(".w3-image").attr('src',simg+'_2.png');
+						break;
+						case 4:
+							$(".w3-image").attr('src',simg+'_3.png');
+						break;
+						case 5:
+							$(".w3-image").attr('src',simg+'_4.png');
+						break;
+						case 6:
+							$(".w3-image").attr('src',simg+'_5.png');
+						break;
+						case 7:
+							$(".w3-image").attr('src',simg+'_6.png');
+						break;
+						case 8:
+							$(".w3-image").attr('src',simg+'_7.png');
+						break;
+						case 9:
+							$(".w3-image").attr('src',simg+'_8.png');
+						break;
+					}
+				});
+				var w3img='<img class="w3-image">';
+				$('div.w3-row:nth-child(8)>div:nth-child(1)').append(w3img);
 				$("div.w3-row>div:nth-child(1)>img:nth-child(1)").attr("src",cimg);
 				$("div.w3-left-align:nth-child(1)>div:nth-child(1)>div:nth-child(3)").html(doll.voice);
 				$("div.w3-left-align:nth-child(1)>div:nth-child(3)>div:nth-child(3)").html(doll.illust);
@@ -166,48 +194,18 @@ function loadComplete(){
 	});
 	function Skinbutton() {
 		var imgsrc=$(".w3-image").attr('src').split(idir)[1].split(".png")[0];
-		var imgM=$(".w3-image").attr('src').split(idir)[1].split(".png")[0].indexOf('_d').toString();
-		delete imgM;
-		var imgM=0;
-		if ($(".w3-image").attr('src').split(idir)[1].split(".png")[0].indexOf('_d') != -1){
-			imgT=imgsrc.slice(0,-2);
+		var imgM=imgsrc.indexOf('_d');
+		if (imgM != -1){
+			var imgT=imgsrc.slice(0,-2);
 			$(".w3-image").attr('src',idir+imgT+'.png');
 		} else {
 			$(".w3-image").attr('src',idir+imgsrc+'_d.png');
 		}
 	}
-	$(".skintag>button").click(function(){
-		var SkinsB=$(this).index();
-		switch (SkinsB){
+	$("div.skintag>button.w3-button").click(function(){
+		switch ($(this).index()){
 		case 0:
-			Skinbutton();
-		break;
-		case 1:
-			$(".w3-image").attr('src',cimg);
-		break;
-		case 2:
-			$(".w3-image").attr('src',idir+doll.id+'_1.png');
-		break;
-		case 3:
-			$(".w3-image").attr('src',idir+doll.id+'_2.png');
-		break;
-		case 4:
-			$(".w3-image").attr('src',idir+doll.id+'_3.png');
-		break;
-		case 5:
-			$(".w3-image").attr('src',idir+doll.id+'_4.png');
-		break;
-		case 6:
-			$(".w3-image").attr('src',idir+doll.id+'_5.png');
-		break;
-		case 7:
-			$(".w3-image").attr('src',idir+doll.id+'_6.png');
-		break;
-		case 8:
-			$(".w3-image").attr('src',idir+doll.id+'_7.png');
-		break;
-		case 9:
-			$(".w3-image").attr('src',idir+doll.id+'_8.png');
+			Skinbutton()
 		break;
 		};
 	});
