@@ -1,18 +1,34 @@
 $(document).ready(()=>{
+	$.ajaxSetup({
+		error:function(x,e){
+			if(x.status==0){
+			alert('You are offline!!n Please Check Your Network.');
+			}else if(x.status==404){
+			alert('Requested URL not found.');
+			}else if(x.status==500){
+			alert('Internel Server Error.');
+			}else if(e=='parsererror'){
+			alert('Error.nParsing JSON Request failed.');
+			}else if(e=='timeout'){
+			alert('Request Time out.');
+			}else {
+			alert('Unknow Error.n'+x.responseText);
+			}
+		}
+	});
 	$.ajax('../json/fairy.json',{
 		contentType:'application/json',
 		dataType:'json',
 		success:result=>{
-			itemcon = '<div class="w3-hover-shadow fairy item-content">';
-			var allCharacters = $.map(result,(fairy,index)=>{
-				character = $('<div class="item" data-sort="'+fairy.time+'" data-type="'+fairy.type+'" data-event="'+fairy.event+'"></div>');
+			var itemcon = '<div class="w3-hover-shadow fairy item-content">',
+			allCharacters = $.map(result,(fairy,index)=>{
+				var character = $('<div class="item" data-sort="'+fairy.time+'" data-type="'+fairy.type+'" data-event="'+fairy.event+'"></div>'),
 				fairycon = '<p class="name pofa f125 er2">'+fairy.name+'</p><i class="tools '+fairy.type+'_Fairy_info_cage incage"></i><i class="tools '+fairy.type+'_Fairy_Tag ftype"></i><i class="tools info_cage_up cover"></i><i class="skill	'+fairy.skill+'"></i><i class="fairy_i	'+fairy.skill+'_i	icon3"></i><div class="tag">'+fairy.tag+'/'+fairy.time+'</div>';
 				$(character).append(itemcon).find(".item-content").html(fairycon);
 				return character;
 			});
 			$('.grid').append(allCharacters);
 		},
-		error:(request,errorType,errorMessage)=>{alert('Error:'+errorType+' With message:'+errorMessage);},
 		timeout:3000
 	});
 }).ajaxStop(()=>{loadComplete()});
@@ -21,16 +37,16 @@ function sortsort(){grid.sort('time')};
 function sorttype(){grid.sort('type')};
 $("select").change(()=>{
 	$("select:focus option:selected").each(function(){
-		var query = $(this).text()
+		var query=$(this).text();
 		switch (query){
 		case "도감번호":
 			new Muuri('.grid',{sordData:null});
 		break;
 		case "제조시간":
-			sortsort()
+			sortsort();
 		break;
 		case "종류":
-			sorttype()
+			sorttype();
 		break;
 		};
 	});
@@ -83,4 +99,4 @@ function loadComplete(){
 		break; 
 		}
 	});
-};
+}

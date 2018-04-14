@@ -36,27 +36,28 @@ $(document).ready(()=>{
 	$(".tab").click(function(){
 		$("#info,.tab").removeClass('w3-red');
 		$(this).addClass('w3-red');
-		var Classes=($(this).attr('class')).split(' ');
+		var cnts=$('#contents>div'),
+		Classes=($(this).attr('class')).split(' ');
 		for (var a=0,len=Classes.length;a<len;a++){
 			switch (Classes[a]){
 			case "m1":
-				$('#contents>div').not('#tab1').addClass('w3-hide')
+				cnts.not('#tab1').addClass('w3-hide')
 				$('#tab1').removeClass('w3-hide')
 			break;
 			case "m2":
-				$('#contents>div').not('#tab2').addClass('w3-hide')
+				cnts.not('#tab2').addClass('w3-hide')
 				$('#tab2').removeClass('w3-hide')
 			break;
 			case "m3":
-				$('#contents>div').not('#tab3').addClass('w3-hide')
+				cnts.not('#tab3').addClass('w3-hide')
 				$('#tab3').removeClass('w3-hide')
 			break;
 			case "m4":
-				$('#contents>div').not('#tab4').addClass('w3-hide')
+				cnts.not('#tab4').addClass('w3-hide')
 				$('#tab4').removeClass('w3-hide')
 			break;
 			case "m5":
-				$('#contents>div').not('#tab5').addClass('w3-hide')
+				cnts.not('#tab5').addClass('w3-hide')
 				$('#tab5').removeClass('w3-hide')
 			break;
 			}
