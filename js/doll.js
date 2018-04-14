@@ -140,7 +140,7 @@ function loadComplete(){
 				idir='../img/t_doll/';
 				var cimg=idir+doll.id+'.png';
 				var simg=idir+doll.id;
-				$("div.skintag>button.w3-button").click(()=>{switch ($(this).index()){
+				$("div.skintag>button").click(function(){switch($(this).index()){
 					case 1:
 						$(".w3-image").attr('src',cimg);
 					break;
@@ -193,32 +193,31 @@ function loadComplete(){
 						],
 						borderWidth:1
 					}]
-				}
-				var chartOptions = {
+				};
+				var chartOptions={
 					legend:{
 						display:false,
-						label:{
-							fontSize:26
+						label:{fontSize:26}
+					},
+					title:{display:false,},
+					scale:{
+						ticks:{
+							fontSize:9,
+							beginAtZero:true,
+							min:10,
+							max:200,
+							stepSize:20
 						}
 					},
-					title:{
-						display:false,
-					},
-					scale: {
-					ticks: {
-						beginAtZero: true,
-						min: 10,
-						max: 200,
-						stepSize:20
-					}
-					}
+					scaleLabel:{display:false}
 				};
-				var rCh = new Chart(ctx, {
-					type: 'radar',
-					data: statisticschart,
-					options: chartOptions
+				var rCh=new Chart(ctx,{
+					type:'radar',
+					data:statisticschart,
+					options:chartOptions
 				});
 				rCh.update();
+				
 			}
 		})},error:(request,errorType,errorMessage)=>{alert('Error:'+errorType+' With message:'+errorMessage)},timeout:5000
 		});
@@ -233,8 +232,7 @@ function loadComplete(){
 			$(".w3-image").attr('src',idir+imgsrc+'_d.png');
 		}
 	}
-	$("div.skintag>button.w3-button").click(function(){
-		switch ($(this).index()){
+	$("div.skintag>button").click(function(){switch($(this).index()){
 		case 0:
 			Skinbutton()
 		break;
@@ -243,6 +241,5 @@ function loadComplete(){
 	$(".xfunc").click(()=>{
 		togglecon();
 		$(".w3-image").remove();
-		statisticschart.destroy();
 	});
 };
