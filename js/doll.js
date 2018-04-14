@@ -211,7 +211,7 @@ function loadComplete(){
 					},
 					scaleLabel:{display:false}
 				};
-				var rCh=new Chart(ctx,{
+				rCh=new Chart(ctx,{
 					type:'radar',
 					data:statisticschart,
 					options:chartOptions
@@ -241,5 +241,6 @@ function loadComplete(){
 	$(".xfunc").click(()=>{
 		togglecon();
 		$(".w3-image").remove();
+		rCh.destroy();
 	});
 };
