@@ -58,9 +58,9 @@
 <input type="text" placeholder="검색" class="w3-input" id="search">
 <div class="w3-center grid ctr w3-hide" id="grid"></div>
 <style>
-	#sdc,#graph,#stat,#sec-fir,#sec-sec,#doll,#equip,#dolltext,#dolllore {
+	#sdc,#chart,#stat,#sec-fir,#sec-sec,#doll,#equip,#dolltext,#dolllore {
 		border:3px solid grey
-	}
+	}#chart{border-right:1.5px solid grey}#stat{border-left:1.5px solid grey}
 </style>
 <div class="w3-hide" id="func">
 	<div class="w3-container" id="contents">
@@ -137,7 +137,7 @@
 						<div class="w3-display-middle w3-center" style="width:150px;height:35px;color:#fff;font-size:1.5em">Statistics</div>
 						</div>
 					</div>
-					<div class="w3-row w3-display-container" id="graph" style="height:315px">
+					<div class="w3-row w3-display-container" id="chart" style="height:315px">
 						<canvas class="w3-display-middle" id="statisticschart" height="250"></canvas>
 					</div>
 					<div class="w3-row w3-display-container w3-left-align" style="width:200px;height:50px;padding:7.5px 0">
@@ -272,7 +272,10 @@
 						</select>
 						</div>
 					</div>
-					<div class="w3-row" id="stat" style="height:315px"> 스탯 </div>
+					<div class="w3-row w3-black" id="stat" style="height:315px;padding:7.5px 0">
+						<div class="w3-col" style="width:40%;height:294px"></div>
+						<div class="w3-col" style="width:59.9%;height:294px"></div>
+					</div>
 					<div class="w3-row w3-white	w3-hide-small" style="height:50px"></div>
 				</div>
 			</div>
