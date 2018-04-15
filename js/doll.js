@@ -172,8 +172,8 @@ function loadComplete(){
 							fontSize:9,
 							beginAtZero:true,
 							min:10,
-							max:200,
-							stepSize:20
+							max:180,
+							stepSize:17
 						}
 					},
 					scaleLabel:{display:false}

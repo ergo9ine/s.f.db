@@ -22,6 +22,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/bootstrap@4/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/css_overwrite.css">
+<link rel="stylesheet" href="css/index.css">
 <title>SANGVIS FERRI DATABASE</title>
 </head>
 <body>
@@ -60,13 +61,18 @@
 	<a id="ro" class="w3-bar-item w3-button w3-small w3-right">RightMenu</a>
 </div>
 <div id="contents">
-	<div id="index" class="content w3-white"><iframe data-src="tools/index.html" style="height:100%;width:1px;min-width:100%;border:0;display:block" width="100%"></iframe></div>
+	<div id="index" class="content"></div>
 	<div id="tab1" class="content w3-hide"><iframe id="st" data-src="wiki/doll.html" style="height:100%;width:1px;min-width:100%;border:0;display:block" width="100%"></iframe></div>
 	<div id="tab2" class="content w3-hide"><iframe data-src="wiki/equip.html" style="height:100%;width:1px;min-width:100%;border:0;display:block" width="100%"></iframe></div>
 	<div id="tab3" class="content w3-hide"><iframe data-src="wiki/fairy.html" style="height:100%;width:1px;min-width:100%;border:0;display:block" width="100%"></iframe></div>
 </div>
 <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3,npm/vanilla-lazyload@10,npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
 <script>new LazyLoad({elements_selector:"iframe"})</script>
+<script>
+$(()=>{
+	$("#index").load("tools/index.html");
+});
+</script>
 <script src="js/index.js"></script>
 <!-- <script src="js/search.js"></script> -->
 </body>
