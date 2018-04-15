@@ -137,7 +137,7 @@ function loadComplete(){
 				$(".skins").remove();
 				$.each(doll.skins,(index,value)=>{
 					var skins='<button class="w3-button w3-round-xxlarge w3-hover-text-white w3-hover-orange skins" style="background-color:#feb976;color:#fff;margin:2.5px">'+value+'</button>'
-					$(".skintag").append(skins);
+					$(".skinntg").append(skins);
 				});
 				idir='../img/t_doll/';
 				var simg=idir+doll.id,
@@ -184,7 +184,7 @@ function loadComplete(){
 					options:chartOptions
 				});
 				imgtag=$(".w3-image");
-				$(".skintag>button").click(function(){switch($(this).index()){
+				$(".skinntg>button").click(function(){switch($(this).index()){
 					case 1:
 						imgtag.attr('src',cimg);
 					break;
@@ -236,7 +236,7 @@ function loadComplete(){
 			imgtag.attr('src',idir+imgsrc+'_d.png');
 		}
 	}
-	$(".skintag>button").click(function(){switch($(this).index()){
+	$(".skinntg>button").click(function(){switch($(this).index()){
 		case 0:
 			Skinbutton()
 		break;
