@@ -19,9 +19,10 @@
 <meta name="twitter:description" content="Wellcome to SANGVIS FERRI Database Simulator Page">
 <meta name="twiiter:image" content="http://sf2031.com/img/html/og_icon.png">
 <link rel="icon" sizes="128x128" type="image/png" href="favicon.png">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" data-loadcss="true" media="all">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" as="style" onload="this.onload=null;this.rel='stylesheet'" data-loadcss="true" media="all">
-<link rel="stylesheet" href="css/css_overwrite.css" as="style" onload="this.onload=null;this.rel='stylesheet'" data-loadcss="true" media="all">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/bootstrap@4/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="css/css_overwrite.css">
+<link rel="stylesheet" href="css/index.css">
 <title>SANGVIS FERRI DATABASE</title>
 </head>
 <body class="w3-black">
@@ -62,7 +63,7 @@
 	<a id="ro" class="w3-bar-item w3-button w3-small w3-right"><i class="fa fa-bars"></i>RightMenu</a>
 </div>
 <div id="contents">
-	<div id="index" class="content w3-white"><iframe data-src="tools/index.html" style="height:100%;width:1px;min-width:100%;border:0;display:block" width="100%"></iframe></div>
+	<div id="index" class="content"></iframe></div>
 	<div id="tab1" class="w3-container w3-black w3-hide">
 		<div class="w3-panel w3-white w3-display-container">
 			<span class="w3-button w3-white w3-tiny w3-display-topright x"><i class="fa fa-close"></i></span>
@@ -278,8 +279,12 @@
 		<p>Test Page</p>
 	</div>
 </div>
-<script src="https://cdn.jsdelivr.net/combine/npm/jquery@3,npm/vanilla-lazyload@10,npm/fg-loadcss@2"></script>
-<script>new LazyLoad({elements_selector:"iframe"});</script>
+<script src="https://cdn.jsdelivr.net/combine/npm/jquery@3,npm/vanilla-lazyload@10,npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+$(()=>{
+$("#index").load("tools/index.html");
+});
+</script>
 <script src="js/index.js"></script>
 <script src="js/simulator.js"></script>
 </body>
