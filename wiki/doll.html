@@ -2,28 +2,32 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/bootstrap@4/dist/css/bootstrap.min.css,npm/font-awesome@4/css/font-awesome.min.css">
 <link href="../css/css_overwrite.css" rel="stylesheet">
 <link href="../css/doll.css"	rel="stylesheet">
 <title>T-doll</title>
 </head>
 <body>
-<div class="w3-bar w3-black	w3-hide-small" id="filsor">
+<div class="w3-bar w3-black	w3-hide-small" id="filsor" style="padding:3px 0">
 	<div class="w3-half">필터:
-		<div class="w3-button fc active">All</div>
-		<div class="w3-button fc">2성</div>
-		<div class="w3-button fc">3성</div>
-		<div class="w3-button fc">4성</div>
-		<div class="w3-button fc">5성</div>
-		<div class="w3-button fc">제조불가</div><br>
-		<div class="w3-button fc">HG</div>
-		<div class="w3-button fc">SMG</div>
-		<div class="w3-button fc">AR</div>
-		<div class="w3-button fc">RF</div>
-		<div class="w3-button fc">MG</div>
-		<div class="w3-button fc">SG</div>
+		<div class="btn btn-light btn-sm fc">All</div>
+		<div class="btn-group" role="group" aria-label="rank">
+			<button type="button" class="btn btn-light btn-sm fc">2성</button>
+			<button type="button" class="btn btn-light btn-sm fc">3성</button>
+			<button type="button" class="btn btn-light btn-sm fc">4성</button>
+			<button type="button" class="btn btn-light btn-sm fc">5성</button>
+			<button type="button" class="btn btn-light btn-sm fc">제조불가</button>
+		</div>
+		<div class="btn-group" role="group" aria-label="type">
+			<button type="button" class="btn btn-light btn-sm fc">HG</button>
+			<button type="button" class="btn btn-light btn-sm fc">SMG</button>
+			<button type="button" class="btn btn-light btn-sm fc">AR</button>
+			<button type="button" class="btn btn-light btn-sm fc">RF</button>
+			<button type="button" class="btn btn-light btn-sm fc">MG</button>
+			<button type="button" class="btn btn-light btn-sm fc">SG</button>
+		</div>
 	</div>
 	<div class="w3-half">정렬 :
 		<select>
@@ -59,8 +63,9 @@
 <div class="w3-center grid ctr w3-hide" id="grid"></div>
 <style>
 	#sdc,#chart,#stat,#sec-fir,#sec-sec,#doll,#equip,#dolltext,#dolllore {
-		border:3px solid grey
-	}#chart{border-right:1.5px solid grey}#stat{border-left:1.5px solid grey}
+		outline:2px solid grey
+	}
+	.ntg{margin-left:-3px}
 </style>
 <div class="w3-hide" id="func">
 	<div class="w3-container" id="contents">
@@ -71,7 +76,7 @@
 			<label>NO.</label><label></label><span style="font-size:2em;font-weight:bold;margin:0 10px"></span>
 		</div>
 		<div class="space w3-black w3-section" style="height:2.5px"></div>
-		<div class="skintag	w3-hide-small">
+		<div class="skinntg	w3-hide-small">
 			<button class="w3-button w3-round-xxlarge w3-hover-text-white w3-hover-cyan" style="background-color:#5bbab6;color:#fff;margin:2.5px">통상/부상변환</button>
 			<button class="w3-button w3-round-xxlarge w3-hover-text-white w3-hover-dark-grey" style="background-color:grey;color:#fff;margin:2.5px">기본	코스튬</button>
 		</div>
@@ -102,7 +107,7 @@
 							</div>
 							</div>
 						</div>
-						<div class="w3-row">
+						<div class="ntg w3-row">
 							<div class="w3-row w3-left-align" style="padding:10px 0;color:#fff">
 							<div class="w3-display-container" style="height:35px">
 								<svg width="125" height="35"><polygon fill="grey" points="0,0 0,35 0,35 100,35 125,0"></polygon></svg>
@@ -124,14 +129,14 @@
 							</div>
 						</div>
 					</div>
-					<div class="w3-row w3-display-container	w3-left-align" style="height:50px;padding:7.5px 0;color:#fff">
+					<div class="ntg w3-row w3-display-container	w3-left-align" style="height:50px;padding:7.5px 0;color:#fff">
 						<svg width="100" height="35"><polygon fill="grey" points="0,0 0,35 0,35 75,35 100,0"></polygon></svg>
 						<div class="w3-center w3-display-left" style="width:75px;height:35px;line-height:35px">Time</div>
 						<div class="w3-center w3-display-right" style="width:100px;height:35px;line-height:35px;color:#000;white-space:nowrap"></div>
 					</div>
 				</div>
 				<div class="w3-third" style="max-height:400px">
-					<div class="w3-row" style="position:relative;height:35px;width:200px">
+					<div class="ntg w3-row" style="position:relative;height:35px;width:200px">
 						<div class="w3-display-container" style="width:150px;height:35px">
 						<svg width="200" height="35"><polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon></svg>
 						<div class="w3-display-middle w3-center" style="width:150px;height:35px;color:#fff;font-size:1.5em">Statistics</div>
@@ -140,7 +145,7 @@
 					<div class="w3-row w3-display-container" id="chart" style="height:315px">
 						<canvas class="w3-display-middle" id="statisticschart" height="250"></canvas>
 					</div>
-					<div class="w3-row w3-display-container w3-left-align" style="width:200px;height:50px;padding:7.5px 0">
+					<div class="ntg w3-row w3-display-container w3-left-align" style="width:200px;height:50px;padding:7.5px 0">
 						<svg width="200" height="35">
 						<polygon fill="grey" points="0,0 0,35 0,35 85,35 110,0"></polygon>
 						<polygon fill="orange" points="200,0 200,35 0,35 90,35 115,0"></polygon>
@@ -272,15 +277,19 @@
 						</select>
 						</div>
 					</div>
-					<div class="w3-row w3-black" id="stat" style="height:315px;padding:7.5px 0">
-						<div class="w3-col" style="width:40%;height:294px"></div>
-						<div class="w3-col" style="width:59.9%;height:294px"></div>
+					<div class="w3-row w3-black" id="stat" style="height:315px">
+						<div class="w3-col" style="width:40%;height:280px"></div>
+						<div class="w3-col" style="width:60%;height:280px"></div>
+						<div class="w3-row" style="height:35px;margin-top:280px">
+							<div class="w3-col w3-blue" style="height:35px;width:50%"></div>
+							<div class="w3-col w3-red" style="height:35px;width:50%"></div>
+						</div>
 					</div>
 					<div class="w3-row w3-white	w3-hide-small" style="height:50px"></div>
 				</div>
 			</div>
 			<div class="w3-col l7 w3-section">
-				<div class="w3-display-container" style="width:150px;height:35px">
+				<div class="ntg w3-display-container" style="width:150px;height:35px">
 					<svg width="200" height="35">
 						<polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon>
 					</svg>
@@ -319,11 +328,11 @@
 			</div>
 			<div class="w3-col l12"> <!-- 추천장비/인형 -->
 				<div class="w3-col l5 w3-section" style="height:250px;padding-right:20px">
-					<div class="w3-display-container" style="width:200px;height:35px">
+					<div class="ntg w3-display-container" style="width:200px;height:35px">
 						<svg width="250" height="35">
 							<polygon fill="grey" points="0,0 0,35 0,35 250,35 200,0"></polygon>
 						</svg>
-						<div class="w3-display-middle w3-center" style="width:200px;height:35px;color:#fff;font-size:1.5em">Offer equipment</div>
+						<div class="w3-display-middle w3-center" style="width:200px;height:35px;color:#fff;font-size:1.5em">Offer	ment</div>
 					</div>
 					<div class="w3-col" id="equip">
 						<div style="height:35px">◆이런 장비를 사용하면 좋아요!</div>
@@ -332,7 +341,7 @@
 				</div>
 				<div class="w3-col l7 w3-section">
 					<div class="w3-col" style="height:250px">
-						<div class="w3-display-container" style="width:150px;height:35px">
+						<div class="ntg w3-display-container" style="width:150px;height:35px">
 							<svg width="200" height="35">
 								<polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon>
 							</svg>
@@ -347,7 +356,7 @@
 			</div>
 			<div class="w3-col l12 w3-section"> <!-- 인형대사 -->
 				<div>
-					<div class="w3-display-container" style="width:150px;height:35px">
+					<div class="ntg w3-display-container" style="width:150px;height:35px">
 						<svg width="200" height="35">
 							<polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon>
 						</svg>
@@ -358,7 +367,7 @@
 			</div>
 			<div class="w3-col l12 w3-section"> <!-- 인형대사 -->
 				<div>
-					<div class="w3-display-container" style="width:150px;height:35px">
+					<div class="ntg w3-display-container" style="width:150px;height:35px">
 						<svg width="200" height="35">
 							<polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon>
 						</svg>
@@ -377,7 +386,7 @@
 	제조시간:50분 = 50<br>
 	별명 :콜라</p>
 </div>
-<script src="https://cdn.jsdelivr.net/combine/npm/jquery@3,npm/jquery.quicksearch@2,npm/muuri@0.5,npm/hammerjs@2,npm/web-animations-js@2,npm/chart.js@2/dist/Chart.bundle.min.js,npm/fg-loadcss@2"></script>
+<script src="https://cdn.jsdelivr.net/combine/npm/jquery@3,npm/jquery.quicksearch@2,npm/muuri@0.5,npm/hammerjs@2,npm/web-animations-js@2,npm/chart.js@2/dist/Chart.bundle.min.js,npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../js/index.js"></script>
 <script src="../js/doll.js"></script>
 </body>

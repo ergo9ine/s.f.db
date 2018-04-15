@@ -4,8 +4,8 @@ $(document).ready(()=>{
 			itemcon='<div class="w3-hover-shadow tdoll item-content">';
 			var allCharacters=$.map(result,(doll,index)=>{
 				var timehour=parseInt(doll.buildTime/3600),
-				timemin=doll.buildTime%3600/60;
-				character=$('<div class="item" data-time="'+timehour+timemin+'" data-type="'+doll.type+'" data-rarity="'+doll.rank+'"></div>').detach();
+				timemin=doll.buildTime%3600/60,
+				character=$('<div class="item" data-time="'+timehour+timemin+'" data-type="'+doll.type+'" data-rarity="'+doll.rank+'"></div>').detach(),
 				dollcon='<div class="w3-text-white no">'+doll.id+'</div><p class="w3-text-black name podo f125">'+doll.krName+'</p><i class="star r'+doll.rank+'"></i><i	class="incage doll info_cage_'+doll.rank+'"></i><i class="type	doll '+doll.type+'_'+doll.rank+'"></i><img	src="../img/t_doll/'+doll.id+'_i.png"	alt="icon"><div class="tag">'+doll.nick+'/'+timehour+''+timemin+'/'+doll.voice+'/'+doll.illust+'</div>';
 				$(character).append(itemcon).find(".item-content").html(dollcon);
 				return character;
@@ -166,7 +166,7 @@ function loadComplete(){
 						display:false,
 						label:{fontSize:26}
 					},
-					title:{display:false,},
+					title:{display:false},
 					scale:{
 						ticks:{
 							fontSize:9,
