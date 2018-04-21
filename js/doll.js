@@ -3,17 +3,17 @@ $(document).ready(()=>{
 	aCharData=[];
 	$.ajax("../json/doll2.json",{contentType:'application/json',dataType:'json',
 		success:function(data){
-				$.each(data.chars, function(key,index){
-					mCharData.push(index);
-				});
-				//console.log(mCharData)
-			},
+			$.each(data.chars, function(key,index){
+				mCharData.push(index);
+			});
+			//console.log(mCharData)
+		},
 		error:(request,errorType,errorMessage)=>{alert('Error:'+errorType+' With message:'+errorMessage)},timeout:5000
 	});
 	$.ajax('../json/doll.json',{contentType:'application/json',dataType:'json',
 		success:result=>{
-			itemcon='<div class="w3-hover-shadow tdoll item-content">';
-			var allCharacters=$.map(result,(doll,index)=>{
+			var itemcon='<div class="w3-hover-shadow tdoll item-content">',
+			allCharacters=$.map(result,(doll,index)=>{
 				var timehour=parseInt(doll.buildTime/3600),
 				timemin=doll.buildTime%3600/60;
 				aCharData.push(doll);
@@ -21,10 +21,10 @@ $(document).ready(()=>{
 				dollcon='<div class="w3-text-white no">'+doll.id+'</div><p class="w3-text-black name podo f125">'+doll.krName+'</p><i class="star r'+doll.rank+'"></i><i	class="incage doll info_cage_'+doll.rank+'"></i><i class="type	doll '+doll.type+'_'+doll.rank+'"></i><img	src="../img/t_doll/'+doll.id+'_i.png"	alt="icon"><div class="tag">'+doll.nick+'/'+timehour+''+timemin+'/'+doll.voice+'/'+doll.illust+'</div>';
 				$(character).append(itemcon).find(".item-content").html(dollcon);
 				return character;
-			});
-		var grid=$('.grid');
-		grid.append(allCharacters);loadComplete();
-		},
+			}),
+			grid=$('.grid');
+			grid.append(allCharacters);loadComplete();
+		} ,
 		error:(request,errorType,errorMessage)=>{alert('Error:'+errorType+' With message:'+errorMessage)},timeout:5000
 	});
 });
@@ -33,8 +33,7 @@ function sorttime(){grid.sort('time')};
 function sorttype(){grid.sort('type')};
 $("select").change(()=>{
 	$("select:focus option:selected").each(function(){
-		var query=$(this).text();
-		switch (query){
+		switch ($(this).text()){
 		case "기본":
 			new Muuri('.grid',{sordData:null})
 		break;
@@ -72,9 +71,7 @@ function loadComplete(){
 	});
 	function active(){$('.fc').removeClass('active')};
 	$(".fc").click(function(){
-		var menu=$(this),
-		query=menu.text();
-		switch (query){
+		switch ($(this).text()){
 		case "2성":
 			grid.filter('[data-rarity="2"]')
 			active()
