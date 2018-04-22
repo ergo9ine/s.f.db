@@ -30,35 +30,34 @@ $(document).ready(()=>{
 	$('#info').click(()=>{
 		$(".tab").removeClass('w3-red');
 		$(this).addClass('w3-red');
-		$('.content').addClass('w3-hide');
+		$('#contents>div').addClass('w3-hide');
 		$('#index').removeClass('w3-hide');
 	});
 	$(".tab").click(function(){
+		var tis=$(this),
+		Classes=(tis.attr('class')).split(' '),
+		t1='#tab1',t2='#tab2',t3='#tab3',t4='#tab4',t5='#tab5';
 		$("#info,.tab").removeClass('w3-red');
-		$(this).addClass('w3-red');
-		var cnts=$('#contents>div'),
-		Classes=($(this).attr('class')).split(' ');
+		tis.addClass('w3-red');
 		for (var a=0,len=Classes.length;a<len;a++){
+			//var Classes[a][a].split(' ').join(t)
+			//function back(){$().removeClass('w3-hide').not(t[a]).addClass('w3-hide')};
+			//console.log(Classes[a])
 			switch (Classes[a]){
 			case "m1":
-				cnts.not('#tab1').addClass('w3-hide')
-				$('#tab1').removeClass('w3-hide')
+				$(t1).removeClass('w3-hide').not(t1).addClass('w3-hide')
 			break;
 			case "m2":
-				cnts.not('#tab2').addClass('w3-hide')
-				$('#tab2').removeClass('w3-hide')
+				$(t2).removeClass('w3-hide').not(t2).addClass('w3-hide')
 			break;
 			case "m3":
-				cnts.not('#tab3').addClass('w3-hide')
-				$('#tab3').removeClass('w3-hide')
+				$(t3).removeClass('w3-hide').not(t3).addClass('w3-hide')
 			break;
 			case "m4":
-				cnts.not('#tab4').addClass('w3-hide')
-				$('#tab4').removeClass('w3-hide')
+				$(t4).removeClass('w3-hide').not(t4).addClass('w3-hide')
 			break;
 			case "m5":
-				cnts.not('#tab5').addClass('w3-hide')
-				$('#tab5').removeClass('w3-hide')
+				$(t5).removeClass('w3-hide').not(t5).addClass('w3-hide')
 			break;
 			}
 		}

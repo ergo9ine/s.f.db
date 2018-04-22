@@ -27,7 +27,7 @@
 </head>
 <body class="w3-black">
 <div id="Sidebar" class="w3-sidebar w3-bar-block w3-card w3-black w3-animate-left w3-hide">
-	<a id="close" class="w3-bar-item	w3-small w3-center w3-border-bottom w3-border-right"><i class="fa fa-close"></i></a>
+	<button id="close" class="btn btn-dark rounded-0 w3-bar-item w3-display-container w3-border-bottom w3-border-right" style="height:34px"><p class="w3-display-middle align-text-top" style="color:#fff">×</p></button>
 	<div id="slogo" class="logo w3-margin-bottom w3-margin-top w3-center"><img src="img/logo/sidebar_gflogo.png" alt="logo"></div>
 	<a class="w3-bar-item	w3-button" href="index.html">도감</a>
 	<a class="w3-bar-item	w3-button" href="simulator.html">시뮬레이터</a>
@@ -43,7 +43,7 @@
 	<a class="m4 w3-bar-item w3-button w3-small w3-disabled">제조 시뮬레이터</a>
 </div>
 <div id="lm" class="w3-sidebar w3-bar-block w3-black w3-animate-left w3-center w3-hide">
-	<a id="lc" class="w3-bar-item w3-small w3-border-bottom w3-border-left"><i class="fa fa-close"></i></a>
+	<a id="lc" class="w3-bar-item w3-display-container w3-border-bottom w3-border-left" style="height:34px"><p class="w3-display-middle align-text-top" style="color:#fff">×</p></a>
 	<a class="w3-bar-item	w3-button" href="index.html">도감</a>
 	<a class="w3-bar-item	w3-button" href="simulator.html">시뮬레이터</a>
 	<a id="info" class="w3-bar-item	w3-button" href="#">정보</a>
@@ -51,20 +51,20 @@
 	<a class="w3-bar-item	w3-button" href="https://discordapp.com/invite/7ZKwBrA" target="_parent">Contact</a>
 </div>
 <div id="rm" class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-center w3-hide">
-	<a id="rc" class="w3-bar-item w3-border-bottom w3-border-left"><i class="fa fa-close"></i></a>
+	<a id="rc" class="w3-bar-item w3-display-container w3-border-bottom w3-border-left" style="height:34px"><p class="w3-display-middle align-text-top" style="color:#fff">×</p></a>
 	<a class="m1 w3-button w3-mobile tab">작전보고서 계산기</a>
 	<a class="m2 w3-button w3-mobile tab">전지 계산기</a>
 	<a class="m3 w3-button w3-mobile tab">강화 시뮬레이터</a>
 	<a class="m4 w3-button w3-mobile tab w3-disabled">제조 시뮬레이터</a>
 </div>
-<div class="w3-bar w3-center w3-black w3-hide-large w3-hide-medium w3-display-container"> <!-- 모바일 -->
-	<a id="lo" class="w3-bar-item w3-button w3-small w3-left">LeftMenu<i class="fa	fa-bars"></i></a>
-	<div class="w3-display-middle">GFDB</div>
-	<a id="ro" class="w3-bar-item w3-button w3-small w3-right"><i class="fa fa-bars"></i>RightMenu</a>
+<div class="w3-bar w3-center w3-black w3-hide-large w3-hide-medium w3-display-container">
+	<a id="lo" class="w3-bar-item w3-button w3-small w3-left">LeftMenu</a>
+	<div class="w3-display-middle">SFDB</div>
+	<a id="ro" class="w3-bar-item w3-button w3-small w3-right">RightMenu</a>
 </div>
-<div id="contents">
+<div id="contents" class="w3-black">
 	<div id="index" class="content"></iframe></div>
-	<div id="tab1" class="w3-container w3-black w3-hide">
+	<div id="tab1" class="w3-container w3-hide">
 		<div class="w3-panel w3-white w3-display-container">
 			<span class="w3-button w3-white w3-tiny w3-display-topright x"><i class="fa fa-close"></i></span>
 			<p>투입계산기는 현재 사용이 불가능합니다.</p>
@@ -80,7 +80,7 @@
 			<span>투입후 레벨 </span><span id="rstLv2" class="d_block">1</span>
 		</div>
 	</div>
-	<div id="tab2" class="w3-container w3-black w3-hide">
+	<div id="tab2" class="w3-container w3-hide">
 		<div class="w3-panel w3-white w3-display-container">
 			<span class="w3-button w3-white w3-tiny w3-display-topright x"><i class="fa fa-close"></i></span>
 			<p>사용 시 주의사항</p>
@@ -254,7 +254,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="tab3" class="w3-container w3-black w3-hide">
+	<div id="tab3" class="w3-container w3-hide">
 		<div>
 			<div class="w3-half w3-center font">
 				<div class="w3-panel w3-white w3-display-container">
@@ -281,9 +281,7 @@
 </div>
 <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3,npm/vanilla-lazyload@10,npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-$(()=>{
-$("#index").load("tools/index.html");
-});
+$(()=>{$("#index").load("tools/index.html");});
 </script>
 <script src="js/index.js"></script>
 <script src="js/simulator.js"></script>
