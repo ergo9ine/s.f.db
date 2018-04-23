@@ -1,6 +1,6 @@
-# [SANGVIS FERRI DATABASE (G.F.D.B Opensource Project)](http://sf2031.com)
+# [SANGVIS FERRI DATABASE (G.F.DB Project)](http://sf2031.com)
 
-「 SANGVIS FERRI DATABASE (Girlsfrontline Database Opensource Project) 」 is licensed under the MIT License
+「SANGVIS FERRI DATABASE (Girls' Frontline Database Project)」 is licensed under the MIT License
 
 ## Process
 - [trello](https://trello.com/b/sPsg0jzu/gfdb-process)

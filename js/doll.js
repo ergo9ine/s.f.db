@@ -127,6 +127,33 @@ function loadComplete(){
 			active()
 			menu.addClass('active')
 		break;
+		/*
+		case "특전":
+			grid.filter('[data-time="00"]')
+			active()
+			menu.addClass('active')
+		break;
+		case "타일효과":
+			grid.filter('[data-time="00"]')
+			active()
+			menu.addClass('active')
+		break;
+		case "일러스트레이터":
+			grid.filter('[data-time="00"]')
+			active()
+			menu.addClass('active')
+		break;
+		case "성우":
+			grid.filter('[data-time="00"]')
+			active()
+			menu.addClass('active')
+		break;
+		*/
+		case "제조불가":
+			grid.filter('[data-time="00"]')
+			active()
+			menu.addClass('active')
+		break;
 		case "All":
 			grid.filter('[data-type]')
 			active()
@@ -140,7 +167,7 @@ function loadComplete(){
 		$.ajax('../json/doll.json',{contentType:'application/json',dataType:'json',success:result=>{
 		$.each(result,(index,doll)=>{
 			if(doll.id==clicked){
-				$('body,html').animate({scrollTop:0},0);
+				$("body,html").animate({scrollTop:0},0);
 				$(".dollname label:nth-child(2)").html(doll.id);
 				$(".dollname span").html(doll.krName);
 				$(".skins").remove();
