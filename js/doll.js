@@ -1,22 +1,10 @@
 $(document).ready(()=>{
-	var mCharData=[],
-	aCharData=[];
-	$.ajax("../json/doll2.json",{contentType:'application/json',dataType:'json',
-		success:function(data){
-			$.each(data.chars, function(key,index){
-				mCharData.push(index);
-			});
-			//console.log(mCharData)
-		},
-		error:(request,errorType,errorMessage)=>{alert('Error:'+errorType+' With message:'+errorMessage)},timeout:5000
-	});
 	$.ajax('../json/doll.json',{contentType:'application/json',dataType:'json',
 		success:result=>{
 			var itemcon='<div class="w3-hover-shadow tdoll item-content">',
 			allCharacters=$.map(result,(doll,index)=>{
 				var timehour=parseInt(doll.buildTime/3600),
 				timemin=doll.buildTime%3600/60;
-				aCharData.push(doll);
 				character=$('<div class="item" data-time="'+timehour+timemin+'" data-type="'+doll.type+'" data-rarity="'+doll.rank+'"></div>').detach(),
 				dollcon='<div class="w3-text-white no">'+doll.id+'</div><p class="w3-text-black name podo f125">'+doll.krName+'</p><i class="star r'+doll.rank+'"></i><i	class="incage doll info_cage_'+doll.rank+'"></i><i class="type	doll '+doll.type+'_'+doll.rank+'"></i><img	src="../img/t_doll/'+doll.id+'_i.png"	alt="icon"><div class="tag">'+doll.nick+'/'+timehour+''+timemin+'/'+doll.voice+'/'+doll.illust+'</div>';
 				$(character).append(itemcon).find(".item-content").html(dollcon);
@@ -24,7 +12,7 @@ $(document).ready(()=>{
 			}),
 			grid=$('.grid');
 			grid.append(allCharacters);loadComplete();
-		} ,
+		},
 		error:(request,errorType,errorMessage)=>{alert('Error:'+errorType+' With message:'+errorMessage)},timeout:5000
 	});
 });
@@ -187,13 +175,9 @@ function loadComplete(){
 					labels:["체력","화력","회피","사속","명중"],
 					datasets:[{
 						label:doll.krName,
-						data:[doll.stats.hp,doll.stats.pow,doll.stats.dodge,doll.stats.rate,doll.stats.hit],
-						backgroundColor:[
-							'rgba(255,99,132,0.2)',
-						],
-						borderColor:[
-							'rgba(255,99,132,1)',
-						],
+						data:[doll.hp[100],doll.dmg[100],doll.dodge[100],doll.FoR[100],doll.hit[100]],
+						backgroundColor:['rgba(255,99,132,0.2)'],
+						borderColor:['rgba(255,99,132,1)'],
 						borderWidth:1
 					}]
 				},
