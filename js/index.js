@@ -34,8 +34,7 @@ $(document).ready(()=>{
 		$("#index").removeClass("w3-hide");
 	});
 	$(".tab").click(function(){
-		var tis=$(this),
-		Classes=(tis.attr("class")).split(" "),
+		var tis=$(this),Classes=(tis.attr("class")).split(" "),
 		t1="#tab1",t2="#tab2",t3="#tab3",t4="#tab4",t5="#tab5",findC=".content";
 		$("#info,.tab").removeClass("w3-red");
 		tis.addClass("w3-red");
