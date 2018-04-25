@@ -10,8 +10,8 @@ $(document).ready(()=>{
 				$(character).append(itemcon).find(".item-content").html(dollcon);
 				return character;
 			}),
-			grid=$('.grid');
-			grid.append(allCharacters);loadComplete();
+			$('#grid').append(allCharacters);
+			loadComplete();
 		},
 		error:(request,errorType,errorMessage)=>{alert('Error:'+errorType+' With message:'+errorMessage)},timeout:5000
 	});
@@ -19,135 +19,117 @@ $(document).ready(()=>{
 function sortrarity(){grid.sort('rarity')};
 function sorttime(){grid.sort('time')};
 function sorttype(){grid.sort('type')};
-$("select").change(()=>{
-	$("select:focus option:selected").each(function(){
-		switch ($(this).text()){
-		case "기본":
-			new Muuri('.grid',{sordData:null})
-		break;
-		case "등급":
-			sortrarity()
-		break;
-		case "제조시간":
-			sorttime()
-		break;
-		case "종류":
-			sorttype()
-		break;
-		};
-	});
-});
 function togglecon(){$(".grid,#search,#filsor,#func").toggleClass('w3-hide')};
 function loadComplete(){
-	$('.grid').removeClass('w3-hide');
-	grid=new Muuri('.grid',{
+	$('#grid').removeClass('w3-hide');
+	grid=new Muuri('#grid',{
 		sortData:{
 			time:(item,element)=>element.getAttribute('data-time'),
 			type:(item,element)=>element.getAttribute('data-type').toUpperCase(),
 			rarity:(item,element)=>element.getAttribute('data-rarity')
 		},layout:{fillGaps:true,rounding:true}
 	});
-	$('#search').quicksearch('.grid .item',{
+	$('#search').quicksearch('.item',{
 		noResults:"#noResultMessage",
 		'bind':'keyup keydown click input',
-		'hide':()=>{
+		'hide':function(){
 			$(this).removeClass('muuri-item-shown').addClass('muuri-item-hidden').css("display","none");
 			grid.filter('.muuri-item-shown')},
-		'show':()=>{
+		'show':function(){
 			$(this).addClass('muuri-item-shown').removeClass('muuri-item-hidden').css("display","block");
 			grid.filter('.muuri-item-shown')}
 	});
-	function active(){$('.fc').removeClass('active')};
-	$(".fc").click(function(){
+	$(".btn").click(function(){
 		switch ($(this).text()){
 		case "2성":
 			grid.filter('[data-rarity="2"]')
-			active()
 			menu.addClass('active')
 		break;
 		case "3성":
 			grid.filter('[data-rarity="3"]')
-			active()
 			menu.addClass('active')
 		break;
 		case "4성":
 			grid.filter('[data-rarity="4"]')
-			active()
 			menu.addClass('active')
 		break;
 		case "5성":
 			grid.filter('[data-rarity="5"]')
-			active()
 			menu.addClass('active')
 		break;
 		case "HG":
 			grid.filter('[data-type="hg"]')
-			active()
 			menu.addClass('active')
 		break;
 		case "SMG":
 			grid.filter('[data-type="smg"]')
-			active()
 			menu.addClass('active')
 		break;
 		case "AR":
 			grid.filter('[data-type="ar"]')
-			active()
 			menu.addClass('active')
 		break;
 		case "RF":
 			grid.filter('[data-type="rf"]')
-			active()
 			menu.addClass('active')
 		break;
 		case "MG":
 			grid.filter('[data-type="mg"]')
-			active()
 			menu.addClass('active')
 		break;
 		case "SG":
 			grid.filter('[data-type="sg"]')
-			active()
 			menu.addClass('active')
 		break;
 		case "제조불가":
 			grid.filter('[data-time="00"]')
-			active()
 			menu.addClass('active')
 		break;
 		/*
 		case "특전":
 			grid.filter('[data-time="00"]')
-			active()
 			menu.addClass('active')
 		break;
 		case "타일효과":
 			grid.filter('[data-time="00"]')
-			active()
 			menu.addClass('active')
 		break;
 		case "일러스트레이터":
 			grid.filter('[data-time="00"]')
-			active()
 			menu.addClass('active')
 		break;
 		case "성우":
 			grid.filter('[data-time="00"]')
-			active()
 			menu.addClass('active')
 		break;
 		*/
 		case "제조불가":
 			grid.filter('[data-time="00"]')
-			active()
 			menu.addClass('active')
 		break;
 		case "All":
 			grid.filter('[data-type]')
-			active()
 			menu.addClass('active')
 		break;
 		}
+	});
+	$("select").change(()=>{
+		$("select:focus option:selected").each(function(){
+			switch ($(this).text()){
+			case "기본":
+				new Muuri('.grid',{sordData:null})
+			break;
+			case "등급":
+				sortrarity()
+			break;
+			case "제조시간":
+				sorttime()
+			break;
+			case "종류":
+				sorttype()
+			break;
+			};
+		});
 	});
 	$(".item-content").click(function(){
 		togglecon();
