@@ -9,7 +9,7 @@ $(document).ready(()=>{
 				dollcon='<div class="w3-text-white no">'+doll.id+'</div><p class="w3-text-black name podo f125">'+doll.krName+'</p><i class="star r'+doll.rank+'"></i><i	class="incage doll info_cage_'+doll.rank+'"></i><i class="type	doll '+doll.type+'_'+doll.rank+'"></i><img	src="../img/t_doll/'+doll.id+'_i.png"	alt="icon"><div class="tag">'+doll.nick+'/'+timehour+''+timemin+'/'+doll.voice+'/'+doll.illust+'</div>';
 				$(character).append(itemcon).find(".item-content").html(dollcon);
 				return character;
-			}),
+			});
 			$('#grid').append(allCharacters);
 			loadComplete();
 		},
