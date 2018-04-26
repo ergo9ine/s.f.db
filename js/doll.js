@@ -4,9 +4,9 @@ $(document).ready(()=>{
 			var itemcon='<div class="w3-hover-shadow tdoll item-content">',
 			allCharacters=$.map(result,(doll,index)=>{
 				var timehour=parseInt(doll.buildTime/3600),
-				timemin=doll.buildTime%3600/60;
+				timemin=doll.buildTime%3600/60,
 				character=$('<div class="item" data-time="'+timehour+timemin+'" data-type="'+doll.type+'" data-rarity="'+doll.rank+'"></div>').detach(),
-				dollcon='<div class="w3-text-white no">'+doll.id+'</div><p class="w3-text-black name podo f125">'+doll.krName+'</p><i class="star r'+doll.rank+'"></i><i	class="incage doll info_cage_'+doll.rank+'"></i><i class="type	doll '+doll.type+'_'+doll.rank+'"></i><img	src="../img/t_doll/'+doll.id+'_i.png"	alt="icon"><div class="tag">'+doll.nick+'/'+timehour+''+timemin+'/'+doll.voice+'/'+doll.illust+'</div>';
+				dollcon=`<div class="w3-text-white no">${doll.id}</div><p class="w3-text-black name podo f125">${doll.krName}</p><i class="star r${doll.rank}"></i><i	class="incage doll info_cage_${doll.rank}"></i><i class="type	doll ${doll.type}_${doll.rank}"></i><img src="../img/t_doll/${doll.id}_i.png"	alt="icon"><div class="tag">${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}</div>`;
 				$(character).append(itemcon).find(".item-content").html(dollcon);
 				return character;
 			});
@@ -107,6 +107,33 @@ function loadComplete(){
 			grid.filter('[data-time="00"]')
 			menu.addClass('active')
 		break;
+		/*
+		case "특전":
+			grid.filter('[data-time="00"]')
+			active()
+			menu.addClass('active')
+		break;
+		case "타일효과":
+			grid.filter('[data-time="00"]')
+			active()
+			menu.addClass('active')
+		break;
+		case "일러스트레이터":
+			grid.filter('[data-time="00"]')
+			active()
+			menu.addClass('active')
+		break;
+		case "성우":
+			grid.filter('[data-time="00"]')
+			active()
+			menu.addClass('active')
+		break;
+		*/
+		case "제조불가":
+			grid.filter('[data-time="00"]')
+			active()
+			menu.addClass('active')
+		break;
 		case "All":
 			grid.filter('[data-type]')
 			menu.addClass('active')
@@ -142,7 +169,7 @@ function loadComplete(){
 				$(".dollname span").html(doll.krName);
 				$(".skins").remove();
 				$.each(doll.skins,(index,value)=>{
-					var skins='<button class="w3-button w3-round-xxlarge w3-hover-text-white w3-hover-orange skins" style="background-color:#feb976;color:#fff;margin:2.5px">'+value+'</button>'
+					var skins=`<button class="w3-button w3-round-xxlarge w3-hover-text-white w3-hover-orange skins" style="background-color:#feb976;color:#fff;margin:2.5px">${value}</button>`
 					$(".skinntg").append(skins);
 				});
 				idir='../img/t_doll/';
@@ -151,8 +178,8 @@ function loadComplete(){
 				w3img='<img class="w3-image">',
 				timehour=parseInt(doll.buildTime/3600),
 				timemin=doll.buildTime%3600/60,
-				time=timehour+'시간'+timemin+'분',
-				ctx=document.getElementById("statisticschart"),
+				time=`${timehour}시간${timemin}분`,
+				ctx=$("#statisticschart"),
 				statisticschart={
 					labels:["체력","화력","회피","사속","명중"],
 					datasets:[{
