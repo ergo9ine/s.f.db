@@ -207,17 +207,11 @@ function loadComplete(){
 					switch (dolltype){
 					case "hg":
 						statisticschart.datasets[1].label="HG평균"
-						statisticschart.datasets[1].data=[71,31,79,58,55];
-						chartOptions.scale.ticks.min=20
-						chartOptions.scale.ticks.max=120
-						chartOptions.scale.ticks.stepSize=20
+						statisticschart.datasets[1].data=[71,31,79,58,55]
 					break;
 					case "smg":
 						statisticschart.datasets[1].label="SMG평균"
-						statisticschart.datasets[1].data=[183,28,70,86,13];
-						chartOptions.scale.ticks.min=10
-						chartOptions.scale.ticks.max=240
-						chartOptions.scale.ticks.stepSize=46
+						statisticschart.datasets[1].data=[183,28,70,86,13]
 					break;
 					case "ar":
 					break;
