@@ -167,46 +167,63 @@ function loadComplete(){
 				timemin=doll.buildTime%3600/60,
 				time=`${timehour}시간${timemin}분`,
 				ctx=$("#statisticschart"),
+				statisticschart={
+					datasets:[{
+						label:doll.krName,
+						backgroundColor:"rgba(255,99,132,0.2)",
+						borderColor:"rgb(255,99,132)",
+						pointBackgroundColor:"rgb(255, 99, 132)",
+						pointBorderColor:"#fff",
+						pointHoverBackgroundColor:"#fff",
+						pointHoverBorderColor:"rgb(255, 99, 132)",
+						borderWidth:1
+					},{
+						backgroundColor:"rgba(54,162,235,0.2)",
+						borderColor:"rgb(54,162,235)",
+						pointBackgroundColor:"rgb(54, 162, 235)",
+						pointBorderColor:"#fff",
+						pointHoverBackgroundColor:"#fff",
+						pointHoverBorderColor:"rgb(54, 162, 235)",
+						borderWidth:1
+					}]
+				},
 				chartOptions={
-					legend:{
-						display:false,
-						label:{fontSize:26}
-					},
 					title:{display:false},
-					scale:{
-						ticks:{
-							fontSize:9,
-							beginAtZero:true,
-							min:10,
-							max:180,
-							stepSize:17
-						}
-					},
+					scale:{ticks:{fontSize:9,beginAtZero:true}},
 					scaleLabel:{display:false}
 				};
-				if (doll.mod == "true") {
-					statisticschart={
-						labels:["체력","화력","회피","사속","명중"],
-						datasets:[{
-							label:doll.krName,
-							data:[doll.hp.mod3,doll.dmg.mod3,doll.dodge.mod3,doll.FoR.mod3,doll.hit.mod3],
-							backgroundColor:['rgba(255,99,132,0.2)'],
-							borderColor:['rgba(255,99,132,1)'],
-							borderWidth:1
-						}]
-					}
+				if (doll.mod=="true") {
+					statisticschart.labels=["체력","화력","회피","사속","명중"];
+					statisticschart.datasets[0].data=[doll.hp.mod3,doll.dmg.mod3,doll.dodge.mod3,doll.FoR.mod3,doll.hit.mod3];
+					dolltype=doll.type;
+					typechk();
 				} else {
-					statisticschart={
-						labels:["체력","화력","회피","사속","명중"],
-						datasets:[{
-							label:doll.krName,
-							data:[doll.hp[100],doll.dmg[100],doll.dodge[100],doll.FoR[100],doll.hit[100]],
-							backgroundColor:['rgba(255,99,132,0.2)'],
-							borderColor:['rgba(255,99,132,1)'],
-							borderWidth:1
-						}]
-					}
+					statisticschart.labels=["체력","화력","회피","사속","명중"];
+					statisticschart.datasets[0].data=[doll.hp[100],doll.dmg[100],doll.dodge[100],doll.FoR[100],doll.hit[100]];
+					dolltype=doll.type;
+					typechk();
 				}
+				function typechk(){
+					switch (dolltype){
+					case "hg":
+						statisticschart.datasets[1].label="HG평균"
+						statisticschart.datasets[1].data=[71,32,79,58,56];
+						chartOptions.scale.ticks.min=20
+						chartOptions.scale.ticks.max=100
+						chartOptions.scale.ticks.stepSize=10
+					break;
+					case "smg":
+					break;
+					case "ar":
+					break;
+					case "rf":
+					break;
+					case "mg":
+					break;
+					case "sg":
+					break;
+					}
+				};
 				rCh=new Chart(ctx,{
 					type:'radar',
 					data:statisticschart,
