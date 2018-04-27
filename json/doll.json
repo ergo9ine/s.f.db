@@ -16,7 +16,7 @@
 "1":"31","100":"47"
 },
 "skill":{
-"name":"火力號令","type":"buff","target":"ally","firstCooldownTime":"6","cooldownTime":{
+"name":"일제사격","type":"buff","target":"ally","firstCooldownTime":"6","cooldownTime":{
 "1":"15","10":"12"
 },
 "effect":{
@@ -100,7 +100,7 @@
 "1":"38","100":"57"
 },
 "skill":{
-"name":"煙霧彈","type":"debuff","target":"enemy","firstCooldownTime":"1","cooldownTime":{
+"name":"연막탄","type":"debuff","target":"enemy","firstCooldownTime":"1","cooldownTime":{
 "1":"15","10":"12"
 },
 "effect":{
@@ -188,7 +188,7 @@
 "1":"42","100":"61"
 },
 "skill":{
-"name":"閃光彈","type":"debuff","target":"enemy","firstCooldownTime":"5","cooldownTime":{
+"name":"섬광탄","type":"debuff","target":"enemy","firstCooldownTime":"5","cooldownTime":{
 "1":"15","10":"12"
 },
 "radius":"2.5","effect":{
@@ -362,7 +362,7 @@
 "1":"36","100":"52"
 },
 "skill":{
-"name":"掩護號令","type":"buff","target":"ally","firstCooldownTime":"6","cooldownTime":{
+"name":"엄호개시","type":"buff","target":"ally","firstCooldownTime":"6","cooldownTime":{
 "1":"15","10":"12"
 },
 "effect":{
@@ -444,7 +444,7 @@
 "1":"45","100":"65"
 },
 "skill":{
-"name":"突擊號令","type":"buff","target":"ally","firstCooldownTime":"6","cooldownTime":{
+"name":"진압신호","type":"buff","target":"ally","firstCooldownTime":"6","cooldownTime":{
 "1":"15","10":"12"
 },
 "effect":{
@@ -522,7 +522,7 @@
 "1":"40","100":"61"
 },
 "skill":{
-"name":"精確壓制","type":"debuff","target":"enemy_all","firstCooldownTime":"6","cooldownTime":{
+"name":"시야봉쇄","type":"debuff","target":"enemy_all","firstCooldownTime":"6","cooldownTime":{
 "1":"15","10":"12"
 },
 "effect":{
@@ -604,7 +604,7 @@
 "1":"38","100":"57"
 },
 "skill":{
-"name":"照明彈","type":"buff","target":"ally","firstCooldownTime":"3","cooldownTime":{
+"name":"조명탄","type":"buff","target":"ally","firstCooldownTime":"3","cooldownTime":{
 "1":"20","10":"16"
 },
 "effectNight":{
@@ -685,7 +685,7 @@
 "1":"42","100":"63"
 },
 "skill":{
-"name":"殲滅號令","type":"buff","target":"ally","firstCooldownTime":"6","cooldownTime":{
+"name":"섬멸명령","type":"buff","target":"ally","firstCooldownTime":"6","cooldownTime":{
 "1":"15","10":"12"
 },
 "effect":{
@@ -866,7 +866,7 @@
 "1":"44","100":"62"
 },
 "skill":{
-"name":"照明彈","type":"buff","target":"ally","firstCooldownTime":"3","cooldownTime":{
+"name":"조명탄","type":"buff","target":"ally","firstCooldownTime":"3","cooldownTime":{
 "1":"20","10":"16"
 },
 "effectNight":{
@@ -944,7 +944,7 @@
 "1":"42","100":"61"
 },
 "skill":{
-"name":"衝鋒號令","type":"buff","target":"ally","firstCooldownTime":"6","cooldownTime":{
+"name":"돌격개시","type":"buff","target":"ally","firstCooldownTime":"6","cooldownTime":{
 "1":"15","10":"12"
 },
 "effect":{
@@ -1042,7 +1042,7 @@
 "1":"35","100":"52"
 },
 "skill":{
-"name":"突擊號令","type":"buff","target":"ally","firstCooldownTime":"6","cooldownTime":{
+"name":"진압신호","type":"buff","target":"ally","firstCooldownTime":"6","cooldownTime":{
 "1":"15","10":"12"
 },
 "effect":{
@@ -1122,7 +1122,7 @@
 "1":"42","100":"61"
 },
 "skill":{
-"name":"火力壓制","type":"debuff","target":"enemy_all","firstCooldownTime":"6","cooldownTime":{
+"name":"기선제압","type":"debuff","target":"enemy_all","firstCooldownTime":"6","cooldownTime":{
 "1":"15","10":"12"
 },
 "effect":{
@@ -1205,7 +1205,7 @@
 "1":"57","100":"82"
 },
 "skill":{
-"name":"力場盾","type":"buff","target":"self","firstCooldownTime":"8","cooldownTime":{
+"name":"포스실드","type":"buff","target":"self","firstCooldownTime":"8","cooldownTime":{
 "1":"20","10":"16"
 },
 "effect":{
@@ -1278,7 +1278,7 @@
 "1":"46","100":"68"
 },
 "skill":{
-"name":"手榴彈","type":"attack","target":"enemy","firstCooldownTime":"3","cooldownTime":{
+"name":"수류탄","type":"attack","target":"enemy","firstCooldownTime":"3","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"2.5","effect":{
@@ -1346,7 +1346,7 @@
 "1":"63","100":"91"
 },
 "skill":{
-"name":"煙霧彈","type":"debuff","target":"enemy","firstCooldownTime":"1","cooldownTime":{
+"name":"연막탄","type":"debuff","target":"enemy","firstCooldownTime":"1","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"2.5","effect":{
