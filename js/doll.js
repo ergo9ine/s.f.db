@@ -5,8 +5,8 @@ $(document).ready(()=>{
 			allCharacters=$.map(result,(doll,index)=>{
 				var timehour=parseInt(doll.buildTime/3600),
 				timemin=doll.buildTime%3600/60,
-				character=$('<div class="item" data-time="'+timehour+timemin+'" data-type="'+doll.type+'" data-rarity="'+doll.rank+'"></div>').detach(),
-				dollcon=`<div class="w3-text-white no">${doll.id}</div><p class="w3-text-black name podo f125">${doll.krName}</p><i class="star r${doll.rank}"></i><i	class="incage doll info_cage_${doll.rank}"></i><i class="type	doll ${doll.type}_${doll.rank}"></i><img src="../img/t_doll/${doll.id}_i.png"	alt="icon"><div class="tag">${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}</div>`;
+				character=$('<div class="item" data-time="'+timehour+timemin+'" data-type="'+doll.type+'" data-rarity="'+doll.rarity+'"></div>').detach(),
+				dollcon=`<div class="w3-text-white no">${doll.id}</div><p class="w3-text-black name podo f125">${doll.krName}</p><i class="star r${doll.rarity}"></i><i	class="incage doll info_cage_${doll.rarity}"></i><i class="type	doll ${doll.type}_${doll.rarity}"></i><img src="../img/t_doll/${doll.id}_i.png"	alt="icon"><div class="tag">${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}</div>`;
 				$(character).append(itemcon).find(".item-content").html(dollcon);
 				return character;
 			});
@@ -43,100 +43,78 @@ function loadComplete(){
 		switch ($(this).text()){
 		case "2성":
 			grid.filter('[data-rarity="2"]')
-			menu.addClass('active')
 		break;
 		case "3성":
 			grid.filter('[data-rarity="3"]')
-			menu.addClass('active')
 		break;
 		case "4성":
 			grid.filter('[data-rarity="4"]')
-			menu.addClass('active')
 		break;
 		case "5성":
 			grid.filter('[data-rarity="5"]')
-			menu.addClass('active')
 		break;
 		case "HG":
 			grid.filter('[data-type="hg"]')
-			menu.addClass('active')
 		break;
 		case "SMG":
 			grid.filter('[data-type="smg"]')
-			menu.addClass('active')
 		break;
 		case "AR":
 			grid.filter('[data-type="ar"]')
-			menu.addClass('active')
 		break;
 		case "RF":
 			grid.filter('[data-type="rf"]')
-			menu.addClass('active')
 		break;
 		case "MG":
 			grid.filter('[data-type="mg"]')
-			menu.addClass('active')
 		break;
 		case "SG":
 			grid.filter('[data-type="sg"]')
-			menu.addClass('active')
 		break;
 		case "제조불가":
 			grid.filter('[data-time="00"]')
-			menu.addClass('active')
 		break;
 		/*
 		case "특전":
 			grid.filter('[data-time="00"]')
-			menu.addClass('active')
 		break;
 		case "타일효과":
 			grid.filter('[data-time="00"]')
-			menu.addClass('active')
 		break;
 		case "일러스트레이터":
 			grid.filter('[data-time="00"]')
-			menu.addClass('active')
 		break;
 		case "성우":
 			grid.filter('[data-time="00"]')
-			menu.addClass('active')
 		break;
 		*/
 		case "제조불가":
 			grid.filter('[data-time="00"]')
-			menu.addClass('active')
 		break;
 		/*
 		case "특전":
 			grid.filter('[data-time="00"]')
 			active()
-			menu.addClass('active')
 		break;
 		case "타일효과":
 			grid.filter('[data-time="00"]')
 			active()
-			menu.addClass('active')
 		break;
 		case "일러스트레이터":
 			grid.filter('[data-time="00"]')
 			active()
-			menu.addClass('active')
 		break;
 		case "성우":
 			grid.filter('[data-time="00"]')
 			active()
-			menu.addClass('active')
 		break;
 		*/
 		case "제조불가":
 			grid.filter('[data-time="00"]')
 			active()
-			menu.addClass('active')
 		break;
 		case "All":
 			grid.filter('[data-type]')
-			menu.addClass('active')
 		break;
 		}
 	});
