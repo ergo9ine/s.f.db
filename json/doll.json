@@ -6039,7 +6039,7 @@
 "krName":"MG42","grow":115
 },
 {
-"id":87,"name":"MG34","type":"mg","rarity":2,"hp":{
+"id":87,"name":"MG34","type":"mg","rarity":3,"hp":{
 "1":"83","100":"165"
 },
 "dmg":{
@@ -10013,7 +10013,7 @@
 "krName":"PP-19-01","grow":105
 },
 {
-"id":138,"name":"6P62","type":"ar","rarity":2,"hp":{
+"id":138,"name":"6P62","type":"ar","rarity":3,"hp":{
 "1":"35","100":"70"
 },
 "dmg":{
@@ -10183,7 +10183,7 @@
 "krName":"Bren Ten","grow":110
 },
 {
-"id":140,"krName":"PSM","name":"PSM","type":"hg","rarity":2,"hp":{
+"id":140,"krName":"PSM","name":"PSM","type":"hg","rarity":3,"hp":{
 "1":"29","100":"57"
 },
 "dmg":{
