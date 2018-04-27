@@ -5,8 +5,17 @@ $(document).ready(()=>{
 			allCharacters=$.map(result,(doll,index)=>{
 				var timehour=parseInt(doll.buildTime/3600),
 				timemin=doll.buildTime%3600/60,
+				noval=doll.id;
+				switch (noval == noval){
+				case noval>20000:
+					noval="M"+(doll.id-20000);
+				break;
+				case noval>1000:
+					noval="X"+(doll.id-1000);
+				break;
+				}
 				character=$('<div class="item" data-time="'+timehour+timemin+'" data-type="'+doll.type+'" data-rarity="'+doll.rarity+'"></div>').detach(),
-				dollcon=`<div class="w3-text-white no">${doll.id}</div><p class="w3-text-black name podo f125">${doll.krName}</p><i class="star r${doll.rarity}"></i><i	class="incage doll info_cage_${doll.rarity}"></i><i class="type	doll ${doll.type}_${doll.rarity}"></i><img src="../img/t_doll/${doll.id}_i.png"	alt="icon"><div class="tag">${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}</div>`;
+				dollcon=`<div class="w3-text-white no">${noval}</div><p class="w3-text-black name podo">${doll.krName}</p><i class="star r${doll.rarity}"></i><i	class="incage doll info_cage_${doll.rarity}"></i><i class="type	doll ${doll.type}_${doll.rarity}"></i><img src="../img/t_doll/${doll.id}_i.png"	alt="icon"><div class="tag">${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}</div>`;
 				$(character).append(itemcon).find(".item-content").html(dollcon);
 				return character;
 			});
