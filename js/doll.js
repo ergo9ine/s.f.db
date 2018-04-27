@@ -15,7 +15,7 @@ $(document).ready(()=>{
 				break;
 				}
 				character=$('<div class="item" data-time="'+timehour+timemin+'" data-type="'+doll.type+'" data-rarity="'+doll.rarity+'"></div>').detach(),
-				dollcon=`<div class="w3-text-white no">${noval}</div><p class="w3-text-black name podo">${doll.krName}</p><i class="star r${doll.rarity}"></i><i	class="incage doll info_cage_${doll.rarity}"></i><i class="type	doll ${doll.type}_${doll.rarity}"></i><img src="../img/t_doll/${doll.id}_i.png"	alt="icon"><div class="tag">${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}</div>`;
+				dollcon=`<div class="w3-text-white no" data-no="${doll.id}">${noval}</div><p class="w3-text-black name podo">${doll.krName}</p><i class="star r${doll.rarity}"></i><i	class="incage doll info_cage_${doll.rarity}"></i><i class="type	doll ${doll.type}_${doll.rarity}"></i><img src="../img/t_doll/${doll.id}_i.png"	alt="icon"><div class="tag">${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}</div>`;
 				$(character).append(itemcon).find(".item-content").html(dollcon);
 				return character;
 			});
@@ -147,7 +147,7 @@ function loadComplete(){
 	});
 	$(".item-content").click(function(){
 		togglecon();
-		var clicked=$(this).children(".no").text();
+		var clicked=$(this).children(".no").attr("data-no");
 		$.ajax('../json/doll.json',{contentType:'application/json',dataType:'json',success:result=>{
 		$.each(result,(index,doll)=>{
 			if(doll.id==clicked){
@@ -167,16 +167,6 @@ function loadComplete(){
 				timemin=doll.buildTime%3600/60,
 				time=`${timehour}시간${timemin}분`,
 				ctx=$("#statisticschart"),
-				statisticschart={
-					labels:["체력","화력","회피","사속","명중"],
-					datasets:[{
-						label:doll.krName,
-						data:[doll.hp[100],doll.dmg[100],doll.dodge[100],doll.FoR[100],doll.hit[100]],
-						backgroundColor:['rgba(255,99,132,0.2)'],
-						borderColor:['rgba(255,99,132,1)'],
-						borderWidth:1
-					}]
-				},
 				chartOptions={
 					legend:{
 						display:false,
@@ -194,6 +184,29 @@ function loadComplete(){
 					},
 					scaleLabel:{display:false}
 				};
+				if (doll.mod == "true") {
+					statisticschart={
+						labels:["체력","화력","회피","사속","명중"],
+						datasets:[{
+							label:doll.krName,
+							data:[doll.hp.mod3,doll.dmg.mod3,doll.dodge.mod3,doll.FoR.mod3,doll.hit.mod3],
+							backgroundColor:['rgba(255,99,132,0.2)'],
+							borderColor:['rgba(255,99,132,1)'],
+							borderWidth:1
+						}]
+					}
+				} else {
+					statisticschart={
+						labels:["체력","화력","회피","사속","명중"],
+						datasets:[{
+							label:doll.krName,
+							data:[doll.hp[100],doll.dmg[100],doll.dodge[100],doll.FoR[100],doll.hit[100]],
+							backgroundColor:['rgba(255,99,132,0.2)'],
+							borderColor:['rgba(255,99,132,1)'],
+							borderWidth:1
+						}]
+					}
+				}
 				rCh=new Chart(ctx,{
 					type:'radar',
 					data:statisticschart,
@@ -242,8 +255,7 @@ function loadComplete(){
 		});
 	});
 	function Skinbutton(){
-		var imgtag=$(".w3-image"),
-		imgsrc=imgtag.attr('src').split(idir)[1].split(".png")[0],
+		var imgsrc=imgtag.attr('src').split(idir)[1].split(".png")[0],
 		imgM=imgsrc.indexOf('_d'),
 		imgT=imgsrc.slice(0,-2);
 		if (imgM != -1){
