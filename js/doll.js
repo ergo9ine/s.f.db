@@ -15,7 +15,7 @@ $(document).ready(()=>{
 				break;
 				}
 				character=$('<div class="item" data-time="'+timehour+timemin+'" data-type="'+doll.type+'" data-rarity="'+doll.rarity+'"></div>').detach(),
-				dollcon=`<div class="w3-text-white no" data-no="${doll.id}">${noval}</div><p class="w3-text-black name podo">${doll.krName}</p><i class="star r${doll.rarity}"></i><i	class="incage doll info_cage_${doll.rarity}"></i><i class="type	doll ${doll.type}_${doll.rarity}"></i><img src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@180428/img/t_doll/${doll.id}_i.png"	alt="icon"><div class="tag">${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}</div>`;
+				dollcon=`<div class="w3-text-white no" data-no="${doll.id}">${noval}</div><p class="w3-text-black name podo">${doll.krName}</p><i class="star r${doll.rarity}"></i><i	class="incage doll info_cage_${doll.rarity}"></i><i class="type	doll ${doll.type}_${doll.rarity}"></i><img src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@1.80428-2/img/t_doll/${doll.id}_i.png"	alt="icon"><div class="tag">${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}</div>`;
 				$(character).append(itemcon).find(".item-content").html(dollcon);
 				return character;
 			});
