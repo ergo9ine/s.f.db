@@ -13724,7 +13724,8 @@
 "id":1003,
 "name":"Kiana",
 "type":"hg",
-"rarity":"ex","mod":true,
+"rarity":"ex",
+"mod":true,
 "hp":{"1":"0","100":"0"},
 "dmg":{"1":"0","100":"0"},
 "dodge":{"1":"0","100":"0"},
@@ -14299,9 +14300,10 @@
 },
 "FoR":{
 "1":39,"100":61
-}
 },
-{
+"skins":["포터블 여왕 2세"]
+},	
+{	
 "id":1010,
 "name":"FAIL",
 "type":"hg",
@@ -14309,25 +14311,27 @@
 "krName":"페일",
 "hp":{
 "1":33,"100":66
-},
+},	
 "dmg":{
 "1":10,"100":31
-},
+},	
 "dodge":{
 "1":10,"100":88
-},
+},	
 "hit":{
 "1":7,"100":62
-},
+},	
 "FoR":{
 "1":39,"100":61
-}
+},	
+"skins":["포터블 여왕 3세"]
 },
 {
 "id":20002,
 "name":"M1911 Mod",
 "type":"hg",
-"rarity":"4","mod":"true",
+"rarity":"4",
+"mod":"true",
 "hp":{
 "mod1":74,"mod2":74,"mod3":75
 },
@@ -14350,7 +14354,8 @@
 "id":20005,
 "name":"나강 리볼버 Mod",
 "type":"hg",
-"rarity":4,"mod":"true",
+"rarity":4,
+"mod":"true",
 "hp":{
 "mod1":71,"mod2":71,"mod3":72
 },
@@ -14373,7 +14378,8 @@
 "id":20039,
 "name":"모신나강 Mod",
 "type":"rf",
-"rarity":5,"mod":"true",
+"rarity":5,
+"mod":"true",
 "hp":{
 "mod1":90,"mod2":90,"mod3":91
 },
@@ -14396,7 +14402,8 @@
 "id":20051,
 "name":"FN49 Mod",
 "type":"rf",
-"rarity":4,"mod":"true",
+"rarity":4,
+"mod":"true",
 "hp":{
 "mod1":94,"mod2":95,"mod3":95
 },
@@ -14419,7 +14426,8 @@
 "id":20055,
 "name":"M4A1 Mod",
 "type":"ar",
-"rarity":5,"mod":"true",
+"rarity":5,
+"mod":"true",
 "hp":{
 "mod1":112,"mod2":113,"mod3":113
 },
@@ -14442,7 +14450,8 @@
 "id":20057,
 "name":"AR15 Mod",
 "type":"ar",
-"rarity":5,"mod":"true",
+"rarity":5,
+"mod":"true",
 "hp":{
 "mod1":106,"mod2":107,"mod3":108
 },
@@ -14465,7 +14474,8 @@
 "id":20075,
 "name":"M1918 Mod",
 "type":"mg",
-"rarity":5,"mod":"true",
+"rarity":5,
+"mod":"true",
 "hp":{
 "mod1":159,"mod2":160,"mod3":161
 },
@@ -14488,7 +14498,8 @@
 "id":20091,
 "name":"MP-446 Mod",
 "type":"hg",
-"rarity":4,"mod":"true",
+"rarity":4,
+"mod":"true",
 "hp":{
 "mod1":67,"mod2":68,"mod3":68
 },
@@ -14511,7 +14522,8 @@
 "id":20093,
 "name":"IDW Mod",
 "type":"smg",
-"rarity":4,"mod":"true",
+"rarity":4,
+"mod":"true",
 "hp":{
 "mod1":152,"mod2":153,"mod3":154
 },
@@ -14534,7 +14546,8 @@
 "id":20094,
 "name":"64type Mod",
 "type":"smg",
-"rarity":4,"mod":"true",
+"rarity":4,
+"mod":"true",
 "hp":{
 "mod1":179,"mod2":180,"mod3":181
 },
