@@ -1426,7 +1426,7 @@
 "1":"63","100":"92"
 },
 "skill":{
-"name":"掩護專注","type":"buff","target":"self","firstCooldownTime":"6","cooldownTime":{
+"name":"회피기동","type":"buff","target":"self","firstCooldownTime":"6","cooldownTime":{
 "1":"10","10":"8"
 },
 "effect":{
@@ -1500,7 +1500,7 @@
 "1":"71","100":"101"
 },
 "skill":{
-"name":"燃燒彈","type":"attack","target":"enemy","firstCooldownTime":"3","cooldownTime":{
+"name":"소이탄","type":"attack","target":"enemy","firstCooldownTime":"3","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"1.5","effect":{
@@ -1576,7 +1576,7 @@
 "1":"65","100":"93"
 },
 "skill":{
-"name":"手榴彈","type":"attack","target":"enemy","firstCooldownTime":"3","cooldownTime":{
+"name":"수류탄","type":"attack","target":"enemy","firstCooldownTime":"3","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"2.5","effect":{
@@ -1651,7 +1651,7 @@
 "1":"52","100":"74"
 },
 "skill":{
-"name":"手榴彈","type":"attack","target":"enemy","firstCooldownTime":"3","cooldownTime":{
+"name":"수류탄","type":"attack","target":"enemy","firstCooldownTime":"3","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"2.5","effect":{
@@ -1796,7 +1796,7 @@
 "1":"57","100":"80"
 },
 "skill":{
-"name":"手榴彈","type":"attack","target":"enemy","firstCooldownTime":"3","cooldownTime":{
+"name":"수류탄","type":"attack","target":"enemy","firstCooldownTime":"3","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"2.5","effect":{
@@ -1867,7 +1867,7 @@
 "1":"52","100":"76"
 },
 "skill":{
-"name":"燃燒彈","type":"attack","target":"enemy","firstCooldownTime":"3","cooldownTime":{
+"name":"소이탄","type":"attack","target":"enemy","firstCooldownTime":"3","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"1.5","effect":{
@@ -1951,7 +1951,7 @@
 "1":"63","100":"89"
 },
 "skill":{
-"name":"力場盾","type":"buff","target":"self","firstCooldownTime":"8","cooldownTime":{
+"name":"포스실드","type":"buff","target":"self","firstCooldownTime":"8","cooldownTime":{
 "1":"20","10":"16"
 },
 "effect":{
@@ -2026,7 +2026,7 @@
 "1":"65","100":"95"
 },
 "skill":{
-"name":"燃燒彈","type":"attack","target":"enemy","firstCooldownTime":"3","cooldownTime":{
+"name":"소이탄","type":"attack","target":"enemy","firstCooldownTime":"3","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"1.5","effect":{
@@ -2233,7 +2233,7 @@
 "1":"52","100":"78"
 },
 "skill":{
-"name":"手榴彈","type":"attack","target":"enemy","firstCooldownTime":"3","cooldownTime":{
+"name":"수류탄","type":"attack","target":"enemy","firstCooldownTime":"3","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"2.5","effect":{
@@ -2311,7 +2311,7 @@
 "1":"52","100":"75"
 },
 "skill":{
-"name":"閃光彈","type":"debuff","target":"enemy","firstCooldownTime":"5","cooldownTime":{
+"name":"섬광탄","type":"debuff","target":"enemy","firstCooldownTime":"5","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"2.5","effect":{
@@ -2382,7 +2382,7 @@
 "1":"71","100":"104"
 },
 "skill":{
-"name":"燃燒彈","type":"attack","target":"enemy","firstCooldownTime":"3","cooldownTime":{
+"name":"소이탄","type":"attack","target":"enemy","firstCooldownTime":"3","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"1.5","effect":{
@@ -2463,7 +2463,7 @@
 "1":"52","100":"74"
 },
 "skill":{
-"name":"煙霧彈","type":"debuff","target":"enemy","firstCooldownTime":"1","cooldownTime":{
+"name":"연막탄","type":"debuff","target":"enemy","firstCooldownTime":"1","cooldownTime":{
 "1":"15","10":"12"
 },
 "radius":"2.5","effect":{
@@ -2752,7 +2752,7 @@
 "1":"30","100":"43"
 },
 "skill":{
-"name":"火力專注","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
+"name":"화력전개","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
 "1":"10","10":"8"
 },
 "effect":{
@@ -3533,7 +3533,7 @@
 "1":"25","100":"30"
 },
 "skill":{
-"name":"火力專注","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
+"name":"화력전개","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
 "1":"10","10":"8"
 },
 "effect":{
@@ -3604,7 +3604,7 @@
 "1":"23","100":"36"
 },
 "skill":{
-"name":"火力專注","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
+"name":"화력전개","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
 "1":"10","10":"8"
 },
 "effect":{
@@ -3675,7 +3675,7 @@
 "1":"22","100":"32"
 },
 "skill":{
-"name":"火力專注","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
+"name":"화력전개","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
 "1":"10","10":"8"
 },
 "effect":{
@@ -3885,7 +3885,7 @@
 "1":"52","100":"75"
 },
 "skill":{
-"name":"閃光彈","type":"debuff","target":"enemy","firstCooldownTime":"5","cooldownTime":{
+"name":"섬광탄","type":"debuff","target":"enemy","firstCooldownTime":"5","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"2.5","effect":{
@@ -4965,7 +4965,7 @@
 "1":"50","100":"73"
 },
 "skill":{
-"name":"火力專注","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
+"name":"화력전개","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
 "1":"10","10":"8"
 },
 "effect":{
@@ -5192,7 +5192,7 @@
 "1":"39","100":"59"
 },
 "skill":{
-"name":"火力專注","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
+"name":"화력전개","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
 "1":"10","10":"8"
 },
 "effect":{
@@ -6461,7 +6461,7 @@
 "1":"63","100":"88"
 },
 "skill":{
-"name":"掩護專注","type":"buff","target":"self","firstCooldownTime":"6","cooldownTime":{
+"name":"회피기동","type":"buff","target":"self","firstCooldownTime":"6","cooldownTime":{
 "1":"10","10":"8"
 },
 "effect":{
@@ -6529,7 +6529,7 @@
 "1":"49","100":"75"
 },
 "skill":{
-"name":"掩護專注","type":"buff","target":"self","firstCooldownTime":"6","cooldownTime":{
+"name":"회피기동","type":"buff","target":"self","firstCooldownTime":"6","cooldownTime":{
 "1":"10","10":"8"
 },
 "effect":{
@@ -6605,7 +6605,7 @@
 "1":"65","100":"93"
 },
 "skill":{
-"name":"閃光彈","type":"debuff","target":"enemy","firstCooldownTime":"5","cooldownTime":{
+"name":"섬광탄","type":"debuff","target":"enemy","firstCooldownTime":"5","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"2.5","effect":{
@@ -6755,7 +6755,7 @@
 "1":"36","100":"54"
 },
 "skill":{
-"name":"火力號令","type":"buff","target":"ally","firstCooldownTime":"6","cooldownTime":{
+"name":"일제사격","type":"buff","target":"ally","firstCooldownTime":"6","cooldownTime":{
 "1":"15","10":"12"
 },
 "effect":{
@@ -6840,7 +6840,7 @@
 "1":"49","100":"72"
 },
 "skill":{
-"name":"突擊號令","type":"buff","target":"ally","firstCooldownTime":"6","cooldownTime":{
+"name":"진압신호","type":"buff","target":"ally","firstCooldownTime":"6","cooldownTime":{
 "1":"15","10":"12"
 },
 "effect":{
@@ -7103,7 +7103,7 @@
 "1":"42","100":"61"
 },
 "skill":{
-"name":"掩護號令T","type":"buff","target":"ally","firstCooldownTime":"6","cooldownTime":{
+"name":"엄호개시T","type":"buff","target":"ally","firstCooldownTime":"6","cooldownTime":{
 "1":"15","10":"12"
 },
 "effect":{
@@ -7193,7 +7193,7 @@
 "1":"60","100":"87"
 },
 "skill":{
-"name":"閃光彈","type":"debuff","target":"enemy","firstCooldownTime":"5","cooldownTime":{
+"name":"섬광탄","type":"debuff","target":"enemy","firstCooldownTime":"5","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"2.5","effect":{
@@ -7362,7 +7362,7 @@
 "1":"57","100":"82"
 },
 "skill":{
-"name":"煙霧彈","type":"debuff","target":"enemy","firstCooldownTime":"1","cooldownTime":{
+"name":"연막탄","type":"debuff","target":"enemy","firstCooldownTime":"1","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"2.5","effect":{
@@ -7449,7 +7449,7 @@
 "1":"52","100":"83"
 },
 "skill":{
-"name":"力場盾","type":"buff","target":"self","firstCooldownTime":"8","cooldownTime":{
+"name":"포스실드","type":"buff","target":"self","firstCooldownTime":"8","cooldownTime":{
 "1":"20","10":"16"
 },
 "effect":{
@@ -7674,7 +7674,7 @@
 "1":"57","100":"81"
 },
 "skill":{
-"name":"火力專注","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
+"name":"화력전개","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
 "1":"10","10":"8"
 },
 "effect":{
@@ -8127,7 +8127,7 @@
 "1":"40","100":"58"
 },
 "skill":{
-"name":"火力號令","type":"buff","target":"ally","firstCooldownTime":"6","cooldownTime":{
+"name":"일제사격","type":"buff","target":"ally","firstCooldownTime":"6","cooldownTime":{
 "1":"15","10":"12"
 },
 "effect":{
@@ -8204,7 +8204,7 @@
 "1":"33","100":"52"
 },
 "criRate":"40","skill":{
-"name":"精確壓制","type":"debuff","target":"enemy_all","firstCooldownTime":"6","cooldownTime":{
+"name":"시야봉쇄","type":"debuff","target":"enemy_all","firstCooldownTime":"6","cooldownTime":{
 "1":"15","10":"12"
 },
 "effect":{
@@ -8289,7 +8289,7 @@
 "1":"60","100":"93"
 },
 "skill":{
-"name":"掩護專注","type":"buff","target":"self","firstCooldownTime":"6","cooldownTime":{
+"name":"회피기동","type":"buff","target":"self","firstCooldownTime":"6","cooldownTime":{
 "1":"10","10":"8"
 },
 "effect":{
@@ -8365,7 +8365,7 @@
 "1":"65","100":"77"
 },
 "skill":{
-"name":"燃燒彈","type":"attack","target":"enemy","firstCooldownTime":"3","cooldownTime":{
+"name":"소이탄","type":"attack","target":"enemy","firstCooldownTime":"3","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"1.5","effect":{
@@ -8905,7 +8905,7 @@
 "1":"42","100":"61"
 },
 "skill":{
-"name":"掩護號令","type":"buff","target":"ally","firstCooldownTime":"6","cooldownTime":{
+"name":"엄호개시","type":"buff","target":"ally","firstCooldownTime":"6","cooldownTime":{
 "1":"15","10":"12"
 },
 "effect":{
@@ -9224,7 +9224,7 @@
 "1":"63","100":"88"
 },
 "skill":{
-"name":"閃光彈","type":"debuff","target":"enemy","firstCooldownTime":"5","cooldownTime":{
+"name":"섬광탄","type":"debuff","target":"enemy","firstCooldownTime":"5","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"2.5","effect":{
@@ -9506,7 +9506,7 @@
 "1":"65","100":"93"
 },
 "skill":{
-"name":"手榴彈","type":"attack","target":"enemy","firstCooldownTime":"6","cooldownTime":{
+"name":"수류탄","type":"attack","target":"enemy","firstCooldownTime":"6","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"2.5","effect":{
@@ -9811,7 +9811,7 @@
 "1":"65","100":"90"
 },
 "skill":{
-"name":"火力專注","type":"buff","target":"self","firstCooldownTime":"4","cooldownTime":{
+"name":"화력전개","type":"buff","target":"self","firstCooldownTime":"4","cooldownTime":{
 "1":"10","10":"8"
 },
 "effect":{
@@ -9892,7 +9892,7 @@
 "1":"63","100":"91"
 },
 "skill":{
-"name":"手榴彈","type":"attack","target":"enemy","firstCooldownTime":"3","cooldownTime":{
+"name":"수류탄","type":"attack","target":"enemy","firstCooldownTime":"3","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"2.5","effect":{
@@ -10029,7 +10029,7 @@
 "1":"15","100":"40"
 },
 "skill":{
-"name":"火力號令","type":"buff","target":"ally","firstCooldownTime":"6","cooldownTime":{
+"name":"일제사격","type":"buff","target":"ally","firstCooldownTime":"6","cooldownTime":{
 "1":"15","10":"12"
 },
 "effect":{
@@ -10450,7 +10450,7 @@
 "1":"63","100":"88"
 },
 "skill":{
-"name":"閃光彈","type":"debuff","target":"enemy","firstCooldownTime":"5","cooldownTime":{
+"name":"섬광탄","type":"debuff","target":"enemy","firstCooldownTime":"5","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"2.5","effect":{
@@ -10595,7 +10595,7 @@
 "1":"26","100":"39"
 },
 "skill":{
-"name":"火力專注","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
+"name":"화력전개","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
 "1":"10","10":"8"
 },
 "effect":{
@@ -10667,7 +10667,7 @@
 "1":"20","100":"30"
 },
 "skill":{
-"name":"火力專注","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
+"name":"화력전개","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
 "1":"10","10":"8"
 },
 "effect":{
@@ -10912,7 +10912,7 @@
 "1":"65","100":"95"
 },
 "skill":{
-"name":"掩護專注","type":"buff","target":"self","firstCooldownTime":"6","cooldownTime":{
+"name":"회피기동","type":"buff","target":"self","firstCooldownTime":"6","cooldownTime":{
 "1":"10","10":"8"
 },
 "effect":{
@@ -11564,7 +11564,7 @@
 "1":"3","100":"20"
 },
 "skill":{
-"name":"火力專注SG","type":"buff","target":"self","firstCooldownTime":"8","cooldownTime":{
+"name":"화력전개SG","type":"buff","target":"self","firstCooldownTime":"8","cooldownTime":{
 "1":"20","10":"16"
 },
 "effect":{
@@ -11815,7 +11815,7 @@
 "1":"3","100":"20"
 },
 "skill":{
-"name":"火力專注SG","type":"buff","target":"self","firstCooldownTime":"8","cooldownTime":{
+"name":"화력전개SG","type":"buff","target":"self","firstCooldownTime":"8","cooldownTime":{
 "1":"20","10":"16"
 },
 "effect":{
@@ -11899,7 +11899,7 @@
 "1":"3","100":"21"
 },
 "skill":{
-"name":"火力專注SG","type":"buff","target":"self","firstCooldownTime":"8","cooldownTime":{
+"name":"화력전개SG","type":"buff","target":"self","firstCooldownTime":"8","cooldownTime":{
 "1":"20","10":"16"
 },
 "effect":{
@@ -12783,7 +12783,7 @@
 "1":"65","100":"93"
 },
 "skill":{
-"name":"掩護專注","type":"buff","target":"self","firstCooldownTime":"6","cooldownTime":{
+"name":"회피기동","type":"buff","target":"self","firstCooldownTime":"6","cooldownTime":{
 "1":"10","10":"8"
 },
 "effect":{
@@ -12861,7 +12861,7 @@
 "1":"68","100":"95"
 },
 "skill":{
-"name":"燃燒彈","type":"attack","target":"enemy","firstCooldownTime":"3","cooldownTime":{
+"name":"소이탄","type":"attack","target":"enemy","firstCooldownTime":"3","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"1.5","effect":{
@@ -12930,7 +12930,7 @@
 "1":"54","100":"79"
 },
 "skill":{
-"name":"煙霧彈","type":"debuff","target":"enemy","firstCooldownTime":"1","cooldownTime":{
+"name":"연막탄","type":"debuff","target":"enemy","firstCooldownTime":"1","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"2.5","effect":{
@@ -13699,7 +13699,7 @@
 "1":"42","100":"61"
 },
 "skill":{
-"name":"火力專注","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
+"name":"화력전개","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
 "1":"10","10":"8"
 },
 "effect":{
@@ -14682,7 +14682,7 @@
 "1":83,"100":118
 },
 "ammoCount":10,"skill":{
-"name":"火力專注MG","firstCooldownTime":8,"cooldownTime":{
+"name":"화력전개MG","firstCooldownTime":8,"cooldownTime":{
 "1":18,"10":18
 },
 "detailText":{
@@ -15656,11 +15656,11 @@
 "1":52,"100":74
 },
 "skill":{
-"name":"閃光彈","firstCooldownTime":5,"cooldownTime":{
+"name":"섬광탄","firstCooldownTime":5,"cooldownTime":{
 "1":20,"10":16
 },
 "detailText":{
-"0":"投擲閃光彈對半徑2.5範圍內的敵人造成持續{0}秒的暈眩","format":[
+"0":"投擲섬광탄對半徑2.5範圍內的敵人造成持續{0}秒的暈眩","format":[
 {
 "effectIndex":0,"attr":"time"
 }
@@ -15745,7 +15745,7 @@
 "1":36,"100":53
 },
 "skill":{
-"name":"火力號令","firstCooldownTime":6,"cooldownTime":{
+"name":"일제사격","firstCooldownTime":6,"cooldownTime":{
 "1":15,"10":12
 },
 "detailText":{
@@ -16786,7 +16786,7 @@
 "1":"0","100":"0"
 },
 "skill":{
-"name":"火力專注T","firstCooldownTime":4,"cooldownTime":{
+"name":"화력전개T","firstCooldownTime":4,"cooldownTime":{
 "1":20,"10":16
 },
 "detailText":{
@@ -16817,14 +16817,14 @@
 },
 "mod2Skill":{
 "name":"伸冤者印記","detailText":{
-"val":"開啟火力專注期間會對目標附加伸冤者印記<br>當我方場上單位數量為3及以下時,以攻速降低70%為代價,<br>每次普攻對目標造成{0}%的傷害,同時對2.5範圍內的目標<br>附加印記並造成100%的濺射傷害(期間火力專注仍然有效)"
+"val":"開啟화력전개期間會對目標附加伸冤者印記<br>當我方場上單位數量為3及以下時,以攻速降低70%為代價,<br>每次普攻對目標造成{0}%的傷害,同時對2.5範圍內的目標<br>附加印記並造成100%的濺射傷害(期間화력전개仍然有效)"
 },
 "effects":[
 {
 "filter":"active","allyCountLessOrEqualFilter":3,"type":"debuff","target":"self","attribute":"FoR","value":{
 "0":70
 },
-"untilBuffEnd":"火力專注T"
+"untilBuffEnd":"화력전개T"
 },
 {
 "filter":"attackReplace","buffFilter":"伸冤者印記","type":"attack","target":"enemy","certainToHit":true,
@@ -16835,7 +16835,7 @@
 }
 },
 {
-"filter":"attackAttacked","buffFilter":"火力專注T","type":"debuff","target":"enemyAttackAttacked","attribute":"dmg","value":{
+"filter":"attackAttacked","buffFilter":"화력전개T","type":"debuff","target":"enemyAttackAttacked","attribute":"dmg","value":{
 "0":0
 }
 },
@@ -17005,7 +17005,7 @@
 "1":"25","100":"37"
 },
 "skill":{
-"name":"掩護專注","firstCooldownTime":6,"cooldownTime":{
+"name":"회피기동","firstCooldownTime":6,"cooldownTime":{
 "1":10,"10":8
 },
 "detailText":{
@@ -17040,7 +17040,7 @@
 },
 "mod2Skill":{
 "name":"電光大狂歡","detailText":{
-"0":"戰鬥開始時擁有3格電量,每一點電量會提供額外{0}%的射速及{1}%的火力<br>電量每{2}秒消耗一格<br>開啟掩護專注時電量會充滿","format":[
+"0":"戰鬥開始時擁有3格電量,每一點電量會提供額外{0}%的射速及{1}%的火力<br>電量每{2}秒消耗一格<br>開啟회피기동時電量會充滿","format":[
 {
 "effectIndex":0,"attr":"value"
 },
@@ -17129,11 +17129,11 @@
 "1":38,"100":54
 },
 "skill":{
-"name":"閃光彈","firstCooldownTime":5,"cooldownTime":{
+"name":"섬광탄","firstCooldownTime":5,"cooldownTime":{
 "1":20,"10":16
 },
 "detailText":{
-"0":"投擲閃光彈對半徑2.5範圍內的敵人造成持續{0}秒的暈眩","format":[
+"0":"投擲섬광탄對半徑2.5範圍內的敵人造成持續{0}秒的暈眩","format":[
 {
 "effectIndex":0,"attr":"time"
 }
@@ -17167,7 +17167,7 @@
 },
 "mod2Skill":{
 "name":"沉默閃光","detailText":{
-"0":"閃光彈額外附帶{0}%的命中下降效果,持續{1}秒,該效果對免疫暈眩的單位有效","format":[
+"0":"섬광탄額外附帶{0}%的命中下降效果,持續{1}秒,該效果對免疫暈眩的單位有效","format":[
 {
 "effectIndex":0,"attr":"value"
 },
