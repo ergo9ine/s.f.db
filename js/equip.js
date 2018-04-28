@@ -6,7 +6,7 @@ $(document).ready(()=>{
 			itemcon='<div class="w3-hover-shadow equip item-content">';
 			var allCharacters=$.map(result,(equip,index)=>{
 				character = $('<div class="item" data-time="'+equip.time+'" data-type="'+equip.type+'" data-rarity="'+equip.rarity+'"></div>');
-				equipcon = '<p class="name pofa f125 er'+equip.rarity+'">'+equip.name+'</p><i class="star r'+equip.rarity+'"></i><i class="equip	equip_info_cage_'+equip.rarity+' incage"></i><i class="equip bg_'+equip.rarity+' bg"></i><i class="equip '+equip.type+'_'+equip.rarity+' etype"></i><img src="../img/equip/'+equip.img+'.png" class="icon2" alt="icon"><div class="tag">'+equip.tag+'/'+equip.time+'</div>';
+				equipcon = '<p class="name pofa f125 er'+equip.rarity+'">'+equip.name+'</p><i class="star r'+equip.rarity+'"></i><i class="equip	equip_info_cage_'+equip.rarity+' incage"></i><i class="equip bg_'+equip.rarity+' bg"></i><i class="equip '+equip.type+'_'+equip.rarity+' etype"></i><img src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@180428/img/equip/'+equip.img+'.png" class="icon2" alt="icon"><div class="tag">'+equip.tag+'/'+equip.time+'</div>';
 				$(character).append(itemcon).find(".item-content").html(equipcon);character;
 				return character;
 			});
