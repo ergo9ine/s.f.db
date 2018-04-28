@@ -3027,7 +3027,7 @@
 "1":"24","100":"34"
 },
 "skill":{
-"name":"突擊專注","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
+"name":"고속사격","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
 "1":"10","10":"8"
 },
 "effect":{
@@ -3100,7 +3100,7 @@
 "1":"18","100":"28"
 },
 "skill":{
-"name":"阻斷射擊","type":"attack","target":"enemy_nearest","firstCooldownTime":"15","cooldownTime":{
+"name":"확인사살","type":"attack","target":"enemy_nearest","firstCooldownTime":"15","cooldownTime":{
 "1":"20","10":"16"
 },
 "prepareTime":"2","effect":{
@@ -3169,7 +3169,7 @@
 "1":"25","100":"37"
 },
 "skill":{
-"name":"突擊專注","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
+"name":"고속사격","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
 "1":"10","10":"8"
 },
 "effect":{
@@ -3242,7 +3242,7 @@
 "1":"25","100":"37"
 },
 "skill":{
-"name":"阻斷射擊","type":"attack","target":"enemy_nearest","firstCooldownTime":"10","cooldownTime":{
+"name":"확인사살","type":"attack","target":"enemy_nearest","firstCooldownTime":"10","cooldownTime":{
 "1":"20","10":"16"
 },
 "prepareTime":"1.5","effect":{
@@ -3461,7 +3461,7 @@
 "1":"26","100":"39"
 },
 "skill":{
-"name":"突擊專注","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
+"name":"고속사격","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
 "1":"10","10":"8"
 },
 "effect":{
@@ -3748,7 +3748,7 @@
 "1":"27","100":"38"
 },
 "skill":{
-"name":"突擊專注","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
+"name":"고속사격","type":"buff","target":"self","firstCooldownTime":"5","cooldownTime":{
 "1":"10","10":"8"
 },
 "effect":{
@@ -3816,7 +3816,7 @@
 "1":"20","100":"30"
 },
 "skill":{
-"name":"阻斷射擊","type":"attack","target":"enemy_nearest","firstCooldownTime":"15","cooldownTime":{
+"name":"확인사살","type":"attack","target":"enemy_nearest","firstCooldownTime":"15","cooldownTime":{
 "1":"20","10":"16"
 },
 "prepareTime":"2","effect":{
@@ -4047,7 +4047,7 @@
 "1":"54","100":"78"
 },
 "skill":{
-"name":"殺傷榴彈","type":"attack","target":"enemy","firstCooldownTime":"8","cooldownTime":{
+"name":"살상류탄","type":"attack","target":"enemy","firstCooldownTime":"8","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"1.5","effect":{
@@ -4518,7 +4518,7 @@
 "1":"41","100":"61"
 },
 "skill":{
-"name":"殺傷榴彈","type":"attack","target":"enemy","firstCooldownTime":"8","cooldownTime":{
+"name":"살상류탄","type":"attack","target":"enemy","firstCooldownTime":"8","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"1.5","effect":{
@@ -4664,7 +4664,7 @@
 "1":"52","100":"76"
 },
 "skill":{
-"name":"殺傷榴彈","type":"attack","target":"enemy","firstCooldownTime":"8","cooldownTime":{
+"name":"살상류탄","type":"attack","target":"enemy","firstCooldownTime":"8","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"1.5","effect":{
@@ -5759,7 +5759,7 @@
 "1":"76","100":"114"
 },
 "ammoCount":"9","skill":{
-"name":"蓄勢待發","type":"buff","target":"self","firstCooldownTime":"8","cooldownTime":{
+"name":"준비만전","type":"buff","target":"self","firstCooldownTime":"8","cooldownTime":{
 "1":"18","10":"18"
 },
 "effect":{
@@ -6126,7 +6126,7 @@
 "1":"90","100":"130"
 },
 "ammoCount":"10","skill":{
-"name":"蓄勢待發","type":"buff","target":"self","firstCooldownTime":"8","cooldownTime":{
+"name":"준비만전","type":"buff","target":"self","firstCooldownTime":"8","cooldownTime":{
 "1":"18","10":"18"
 },
 "effect":{
@@ -6213,7 +6213,7 @@
 "1":"69","100":"102"
 },
 "ammoCount":"8","skill":{
-"name":"蓄勢待發","type":"buff","target":"self","firstCooldownTime":"8","cooldownTime":{
+"name":"준비만전","type":"buff","target":"self","firstCooldownTime":"8","cooldownTime":{
 "1":"18","10":"18"
 },
 "effect":{
@@ -8691,7 +8691,7 @@
 "1":"50","100":"73"
 },
 "skill":{
-"name":"殺傷榴彈","type":"attack","target":"enemy","firstCooldownTime":"8","cooldownTime":{
+"name":"살상류탄","type":"attack","target":"enemy","firstCooldownTime":"8","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"1.5","effect":{
@@ -9049,7 +9049,7 @@
 "1":"90","100":"139"
 },
 "ammoCount":"9","skill":{
-"name":"蓄勢待發","type":"buff","target":"self","firstCooldownTime":"8","cooldownTime":{
+"name":"준비만전","type":"buff","target":"self","firstCooldownTime":"8","cooldownTime":{
 "1":"18","10":"18"
 },
 "effect":{
@@ -9743,7 +9743,7 @@
 "1":"48","100":"71"
 },
 "skill":{
-"name":"殺傷榴彈","type":"attack","target":"enemy","firstCooldownTime":"8","cooldownTime":{
+"name":"살상류탄","type":"attack","target":"enemy","firstCooldownTime":"8","cooldownTime":{
 "1":"20","10":"16"
 },
 "radius":"1.5","effect":{
@@ -12626,7 +12626,7 @@
 "1":"21","100":"32"
 },
 "skill":{
-"name":"突擊專注N","type":"buff","target":"self","firstCooldownTime":"8","cooldownTime":{
+"name":"고속사격N","type":"buff","target":"self","firstCooldownTime":"8","cooldownTime":{
 "1":"10","10":"8"
 },
 "effect":{
@@ -13265,7 +13265,7 @@
 "1":"22","100":"32"
 },
 "skill":{
-"name":"突擊專注","type":"buff","target":"self","firstCooldownTime":"6","cooldownTime":{
+"name":"고속사격","type":"buff","target":"self","firstCooldownTime":"6","cooldownTime":{
 "1":"10","10":"8"
 },
 "effect":{
@@ -13517,7 +13517,7 @@
 "1":"94","100":"149"
 },
 "ammoCount":"8","skill":{
-"name":"蓄勢待發N","type":"buff","target":"self","firstCooldownTime":"8","cooldownTime":{
+"name":"준비만전N","type":"buff","target":"self","firstCooldownTime":"8","cooldownTime":{
 "1":"18","10":"18"
 },
 "effect":{
@@ -14782,7 +14782,7 @@
 "1":23,"100":35
 },
 "skill":{
-"name":"突擊專注N","firstCooldownTime":8,"cooldownTime":{
+"name":"고속사격N","firstCooldownTime":8,"cooldownTime":{
 "1":10,"10":8
 },
 "detailText":{
@@ -14885,7 +14885,7 @@
 "1":20,"100":30
 },
 "skill":{
-"name":"阻斷射擊","firstCooldownTime":15,"cooldownTime":{
+"name":"확인사살","firstCooldownTime":15,"cooldownTime":{
 "1":20,"10":16
 },
 "detailText":{
@@ -16301,7 +16301,7 @@
 "1":43,"100":62
 },
 "skill":{
-"name":"殺傷榴彈","firstCooldownTime":8,"cooldownTime":{
+"name":"살상류탄","firstCooldownTime":8,"cooldownTime":{
 "1":20,"10":16
 },
 "detailText":{
@@ -16385,7 +16385,7 @@
 "1":27,"100":40
 },
 "skill":{
-"name":"突擊專注T","firstCooldownTime":5,"cooldownTime":{
+"name":"고속사격T","firstCooldownTime":5,"cooldownTime":{
 "1":20,"10":16
 },
 "detailText":{
@@ -16906,7 +16906,7 @@
 "1":"23","100":"34"
 },
 "skill":{
-"name":"突擊專注T","firstCooldownTime":4,"cooldownTime":{
+"name":"고속사격T","firstCooldownTime":4,"cooldownTime":{
 "1":20,"10":16
 },
 "detailText":{
@@ -16937,16 +16937,16 @@
 },
 "mod2Skill":{
 "name":"罪與罰","detailText":{
-"val":"開啟突擊專注時會使用主副武器同時攻擊,<br>副武器造成{0}%的傷害,對受伸冤者印記影響的目標造成{1}%的傷害"
+"val":"開啟고속사격時會使用主副武器同時攻擊,<br>副武器造成{0}%的傷害,對受伸冤者印記影響的目標造成{1}%的傷害"
 },
 "effects":[
 {
-"filter":"attack","buffFilter":"突擊專注T","type":"attack","target":"enemy","targetNotWithBuff":"伸冤者印記","value":{
+"filter":"attack","buffFilter":"고속사격T","type":"attack","target":"enemy","targetNotWithBuff":"伸冤者印記","value":{
 "1":0.05,"10":0.1
 }
 },
 {
-"filter":"attack","buffFilter":"突擊專注T","type":"attack","target":"enemy","targetWithBuff":"伸冤者印記","value":{
+"filter":"attack","buffFilter":"고속사격T","type":"attack","target":"enemy","targetWithBuff":"伸冤者印記","value":{
 "1":0.1,"10":0.2
 }
 }
