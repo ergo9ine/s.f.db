@@ -1,7 +1,5 @@
 $(document).ready(()=>{
-	$.ajax('../json/equip.json',{
-		contentType:'application/json',
-		dataType:'json',
+	$.ajax('../json/equip.json',{contentType:'application/json',dataType:'json',
 		success:result=>{
 			itemcon='<div class="w3-hover-shadow equip item-content">';
 			var allCharacters=$.map(result,(equip,index)=>{
@@ -13,8 +11,7 @@ $(document).ready(()=>{
 			$('.grid').append(allCharacters);
 			loadComplete();
 		},
-		error:(request,errorType,errorMessage)=>{alert('Error:'+errorType+' With message:'+errorMessage)},
-		timeout:3000
+		timeout:10000
 	});
 });
 function sortrarity(){grid.sort('rarity')};
@@ -26,16 +23,16 @@ $("select").change(()=>{
 		switch (query){
 		case "기본":
 			new Muuri('.grid',{sordData:null});
-		break;
+		break
 		case "등급":
 			sortrarity();
-		break;
+		break
 		case "제조시간":
 			sorttime();
-		break;
+		break
 		case "종류":
 			sorttype();
-		break;
+		break
 		};
 	});
 });

@@ -1,387 +1,327 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/bootstrap@4/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pure-css-loader@3.1.2/dist/loader-border.css">
 <link rel="stylesheet" href="../css/css_overwrite.css">
 <link rel="stylesheet" href="../css/doll.css">
 <title>T-doll</title>
 </head>
 <body>
-<div class="w3-bar w3-black	w3-hide-small" id="filsor" style="padding:3px 0">
-	<div class="w3-half">필터:
-		<div class="btn btn-light btn-sm">All</div>
-		<div class="btn-group" role="group" aria-label="rank">
-			<button type="button" class="btn btn-light btn-sm">2성</button>
-			<button type="button" class="btn btn-light btn-sm">3성</button>
-			<button type="button" class="btn btn-light btn-sm">4성</button>
-			<button type="button" class="btn btn-light btn-sm">5성</button>
-			<button type="button" class="btn btn-light btn-sm">제조불가</button>
-		</div>
-		<div class="btn-group" role="group" aria-label="type">
-			<button type="button" class="btn btn-light btn-sm">HG</button>
-			<button type="button" class="btn btn-light btn-sm">SMG</button>
-			<button type="button" class="btn btn-light btn-sm">AR</button>
-			<button type="button" class="btn btn-light btn-sm">RF</button>
-			<button type="button" class="btn btn-light btn-sm">MG</button>
-			<button type="button" class="btn btn-light btn-sm">SG</button>
-		</div>
-	</div>
-	<div class="w3-half">정렬 :
-		<select>
-			<option>기본</option>
-			<option>등급</option>
-			<option>제조시간</option>
-			<option>종류</option>
-		</select>
-	</div>
-</div>
-<div id="mom" class="w3-bar	w3-black w3-hide-large w3-hide-medium">
-	<button id="f" class="w3-bar-item w3-button w3-border-right fltr">필터</button>
-	<button id="s" class="w3-bar-item w3-button w3-border-left fltr">정렬</button>
-	<div id="mf" class="w3-bar w3-display-container w3-hide">
-		<span class="w3-button w3-display-right x"><i class="fa fa-close"></i></span>
-		<div class="w3-button fc active">All</div>
-		<div class="w3-button fc">2성</div>
-		<div class="w3-button fc">3성</div>
-		<div class="w3-button fc">4성</div>
-		<div class="w3-button fc">5성</div>
-	</div>
-	<div id="fo" class="w3-bar w3-display-container w3-hide" style="height:2.5em">
-		<span class="w3-button w3-display-right x"><i class="fa fa-close"></i></span>
-		<select class="w3-display-middle" style="height:2.5em">
-			<option>기본</option>
-			<option>등급</option>
-			<option>제조시간</option>
-			<option>종류</option>
-		</select>
-	</div>
-</div>
-<input type="text" placeholder="검색" class="w3-input" id="search">
-<div class="w3-center grid ctr w3-hide" id="grid"></div>
-<style>
-	#sdc,#chart,#stat,#sec-fir,#sec-sec,#doll,#equip,#dolltext,#dolllore {
-		outline:1px solid grey
-	}
-	.ntg{margin-left:-1px}
-</style>
-<div class="w3-hide" id="func">
-	<div class="w3-container" id="contents">
-		<button type="button" class="close rounded-circle position-fixed w3-red xfunc" style="width:45px;height:45px;top:1%;right:1%">
-			<span class="align-text-top" aria-hidden="true">&times;</span>
-		</button>
-		<div class="dollname">
-			<label>NO.</label><label></label><span style="font-size:2em;font-weight:bold;margin:0 10px"></span>
-		</div>
-		<div class="space w3-black w3-section" style="height:2.5px"></div>
-		<div class="skinntg	w3-hide-small">
-			<button class="w3-button w3-round-xxlarge w3-hover-text-white w3-hover-cyan" style="background-color:#5bbab6;color:#fff;margin:2.5px">통상/부상변환</button>
-			<button class="w3-button w3-round-xxlarge w3-hover-text-white w3-hover-dark-grey" style="background-color:grey;color:#fff;margin:2.5px">기본	코스튬</button>
-		</div>
-		<button class="w3-button w3-block w3-black w3-left-align w3-hide-large w3-hide-medium w3-section">코스튬보기</button>
-		<div id="Demo1" class="w3-hide">
-			<a class="w3-button	w3-block w3-center" href="#">통상/부상변환</a>
-			<a class="w3-button w3-block w3-center" href="#">기본	코스튬</a>
-			<a class="w3-button	w3-block w3-center" href="#">제복	사냥꾼</a>
-			<a class="w3-button	w3-block w3-center" href="#">평생의 수호자</a>
-			<a class="w3-button	w3-block w3-center" href="#">양파	저격수</a>
-		</div>
-		<div class="w3-row	w3-center">
-			<div class="w3-col l5 w3-section" style="min-height:256px;min-width:256px"></div>
-			<div class="w3-col l7">
-				<div class="w3-third" style="max-height:400px;padding-right:10px">
-					<div class="w3-row w3-hide-small" style="height:35px"></div>
-					<div class="w3-row">
-						<div class="w3-row">
-							<div class="w3-col" id="sdc" style="width:150px;height:150px"></div>
-							<div class="w3-rest w3-display-container" style="min-width:56px;height:150px">
-							<div class="w3-display-topmiddle w3-center" style="width:56px;height:56px">
-								<svg><rect id="rec 1" width="56" height="56" rx="8" style="fill:orange"/></svg>
-								<img class="w3-display-topmiddle w3-center" src="../img/html/battle.png">
-							</div>
-							<div class="w3-display-bottommiddle w3-center" style="width:56px;height:56px">
-								<svg><rect id="rec2" width="56" height="56" rx="8" style="fill:grey"/></svg>
-								<img class="w3-display-bottommiddle w3-center" src="../img/html/dorm.png">
-							</div>
-							</div>
-						</div>
-						<div class="ntg w3-row">
-							<div class="w3-row w3-left-align" style="padding:10px 0;color:#fff">
-							<div class="w3-display-container" style="height:35px">
-								<svg width="125" height="35"><polygon fill="grey" points="0,0 0,35 0,35 100,35 125,0"></polygon></svg>
-								<div class="w3-center w3-display-left" style="width:100px;height:35px;line-height:35px">CV</div>
-								<div class="w3-center w3-display-right" style="width:100px;height:35px;line-height:35px;color:#000;white-space:nowrap"></div>
-							</div>
-							<div style="height:5px"></div>
-							<div class="w3-display-container" style="height:35px">
-								<svg width="125" height="35"><polygon fill="grey" points="0,0 0,35 0,35 100,35 125,0"></polygon></svg>
-								<div class="w3-center w3-display-left" style="width:100px;height:35px;line-height:35px">Illustrator</div>
-								<div class="w3-center w3-display-right" style="width:100px;height:35px;line-height:35px;color:#000;white-space:nowrap"></div>
-							</div>
-							<div style="height:5px"></div>
-							<div class="w3-display-container" style="height:35px">
-								<svg width="125" height="35"><polygon fill="grey" points="0,0 0,35 0,35 100,35 125,0"></polygon></svg>
-								<div class="w3-center w3-display-left" style="width:100px;height:35px;line-height:35px">Gun Name</div>
-								<div class="w3-center w3-display-right" style="width:100px;height:35px;line-height:35px;color:#000;white-space:nowrap"></div>
-							</div>
-							</div>
-						</div>
-					</div>
-					<div class="ntg w3-row w3-display-container	w3-left-align" style="height:50px;padding:7.5px 0;color:#fff">
-						<svg width="100" height="35"><polygon fill="grey" points="0,0 0,35 0,35 75,35 100,0"></polygon></svg>
-						<div class="w3-center w3-display-left" style="width:75px;height:35px;line-height:35px">Time</div>
-						<div class="w3-center w3-display-right" style="width:100px;height:35px;line-height:35px;color:#000;white-space:nowrap"></div>
-					</div>
-				</div>
-				<div class="w3-third" style="max-height:400px;max-width:90%;margin:auto">
-					<div class="ntg w3-row" style="position:relative;height:35px;width:200px">
-						<div class="w3-display-container" style="width:150px;height:35px">
-						<svg width="200" height="35"><polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon></svg>
-						<div class="w3-display-middle w3-center" style="width:150px;height:35px;color:#fff;font-size:1.5em">Statistics</div>
-						</div>
-					</div>
-					<div class="w3-row w3-display-container w3-hide-small" id="chart" style="height:315px">
-						<canvas class="w3-display-middle" id="statisticschart" height="250"></canvas>
-					</div>
-					<div class="ntg w3-row w3-display-container w3-left-align" style="width:200px;height:50px;padding:7.5px 0">
-						<svg width="200" height="35">
-						<polygon fill="grey" points="0,0 0,35 0,35 85,35 110,0"></polygon>
-						<polygon fill="orange" points="200,0 200,35 0,35 90,35 115,0"></polygon>
-						</svg>
-						<div class="w3-display-left w3-center"style="width:85px;height:35px;line-height:35px;color:#fff">Drop</div>
-						<div class="w3-display-right w3-center"style="width:85px;height:35px;line-height:35px;color:#000">More</div>
-					</div>
-				</div>
-				<div class="w3-third" style="max-height:400px">
-					<div class="w3-row w3-display-container" style="height:35px">
-						<style>
-							.ring{
-								width:23px;
-								height:30px;
-								background-image:url(../img/html/ring.png);
-								background-repeat:no-repeat;
-								display:block;
-								animation:play 1s steps(29) infinite
-							}
-							@keyframes play {
-								100% {background-position:0 -870px}
-							}
-						</style>
-						<div class="w3-display-right" style="width:150px;height:35px;display:flex">
-						<i class="ring" style="margin-bottom:5px"></i>
-						<input type="checkbox" checked="checked">
-						<div style="line-height:35px;margin:0 5px">Level:</div>
-						<select>
-							<option>100</option>
-							<option>99</option>
-							<option>98</option>
-							<option>97</option>
-							<option>96</option>
-							<option>95</option>
-							<option>94</option>
-							<option>93</option>
-							<option>92</option>
-							<option>91</option>
-							<option>90</option>
-							<option>89</option>
-							<option>88</option>
-							<option>87</option>
-							<option>86</option>
-							<option>85</option>
-							<option>84</option>
-							<option>83</option>
-							<option>82</option>
-							<option>81</option>
-							<option>80</option>
-							<option>79</option>
-							<option>78</option>
-							<option>77</option>
-							<option>76</option>
-							<option>75</option>
-							<option>74</option>
-							<option>73</option>
-							<option>72</option>
-							<option>71</option>
-							<option>70</option>
-							<option>69</option>
-							<option>68</option>
-							<option>67</option>
-							<option>66</option>
-							<option>65</option>
-							<option>64</option>
-							<option>63</option>
-							<option>62</option>
-							<option>61</option>
-							<option>60</option>
-							<option>59</option>
-							<option>58</option>
-							<option>57</option>
-							<option>56</option>
-							<option>55</option>
-							<option>54</option>
-							<option>53</option>
-							<option>52</option>
-							<option>51</option>
-							<option>50</option>
-							<option>49</option>
-							<option>48</option>
-							<option>47</option>
-							<option>46</option>
-							<option>45</option>
-							<option>44</option>
-							<option>43</option>
-							<option>42</option>
-							<option>41</option>
-							<option>40</option>
-							<option>39</option>
-							<option>38</option>
-							<option>37</option>
-							<option>36</option>
-							<option>35</option>
-							<option>34</option>
-							<option>33</option>
-							<option>32</option>
-							<option>31</option>
-							<option>30</option>
-							<option>29</option>
-							<option>28</option>
-							<option>27</option>
-							<option>26</option>
-							<option>25</option>
-							<option>24</option>
-							<option>23</option>
-							<option>22</option>
-							<option>21</option>
-							<option>20</option>
-							<option>19</option>
-							<option>18</option>
-							<option>17</option>
-							<option>16</option>
-							<option>15</option>
-							<option>14</option>
-							<option>13</option>
-							<option>12</option>
-							<option>11</option>
-							<option>10</option>
-							<option>9</option>
-							<option>8</option>
-							<option>7</option>
-							<option>6</option>
-							<option>5</option>
-							<option>4</option>
-							<option>3</option>
-							<option>2</option>
-							<option>1</option>
-						</select>
-						</div>
-					</div>
-					<div class="row w3-black" id="stat" style="height:315px;margin:0">
-						<div class="col" style="height:280px;padding:0.1px"></div>
-						<div class="col" style="height:280px;padding:0"></div>
-						<div class="w-100"></div>
-						<div class="col" style="height:35px;padding:0.1px"></div>
-						<div class="col" style="height:35px;padding:0"></div>
-					</div>
-					<div class="w3-row w3-white	w3-hide-small" style="height:50px"></div>
-				</div>
+<div class="loader loader-border is-active" data-blink data-text="Loading..."><object type="image/svg+xml" data="../img/logo/SFDB_main.svg"></object></div>
+<div class="d-none d-md-flex bg-dark text-white">
+	<div class="d-flex">
+		<div class="filter btn btn-light btn-sm mr-2">All</div>
+		<div class="dropdown mr-2">
+			<a class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rarity</a>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<a class="dropdown-item" href="#">2성</a>
+				<a class="dropdown-item" href="#">3성</a>
+				<a class="dropdown-item" href="#">4성</a>
+				<a class="dropdown-item" href="#">5성</a>
+				<a class="dropdown-item" href="#">EXTRA</a>
+				<a class="dropdown-item" href="#">제조불가</a>
 			</div>
-			<div class="w3-col l7 w3-section">
-				<div class="ntg w3-display-container" style="width:150px;height:35px">
-					<svg width="200" height="35">
-						<polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon>
-					</svg>
-					<div class="w3-display-middle w3-center" style="width:150px;height:35px;color:#fff;font-size:1.5em">Tiles / Skill</div>
-				</div>
-				<div class="w3-third" id="sec-fir" style="height:165px">
-					<div class="w3-row w3-display-container" style="height:82.5px">
-						<div class="w3-display-left w3-border" style="margin-left:5px;width:75px;height:75px">
-							<div class="row1" style="display:flex">
-								<div class="w3-border" id="grid1" style="width:25px;height:25px"></div>
-								<div class="w3-border" id="grid2" style="width:25px;height:25px"></div>
-								<div class="w3-border" id="grid3" style="width:25px;height:25px"></div>
-							</div>
-							<div class="row2" style="display:flex">
-								<div class="w3-border" id="grid4" style="width:25px;height:25px"></div>
-								<div class="w3-border" id="grid5" style="width:25px;height:25px"></div>
-								<div class="w3-border" id="grid6" style="width:25px;height:25px"></div>
-							</div>
-							<div class="row3" style="display:flex">
-								<div class="w3-border" id="grid7" style="width:25px;height:25px"></div>
-								<div class="w3-border" id="grid8" style="width:25px;height:25px"></div>
-								<div class="w3-border" id="grid9" style="width:25px;height:25px"></div>
-							</div>
-						</div>
-						<div class="w3-grey" style="margin-left:82.5px;height:82.5px;padding:4px 8px">
-						진형 버프 효과<br>
-						으르릉 컹컹 왈왈 낑낑 멍멍멍 떼굴멍
-						</div>
-					</div>
-					<div class="w3-row" style="height:82.5px">편제당인식</div>
-				</div>
-				<div class="w3-twothird" id="sec-sec" style="height:165px">
-					<div class="w3-row" style="height:82.5px">스킬</div>
-					<div class="w3-row" style="height:82.5px">동류인형</div>
-				</div>
+		</div>
+		<div class="dropdown mr-2">
+			<a class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type</a>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<a class="dropdown-item" href="#">HG</a>
+				<a class="dropdown-item" href="#">SMG</a>
+				<a class="dropdown-item" href="#">AR</a>
+				<a class="dropdown-item" href="#">RF</a>
+				<a class="dropdown-item" href="#">MG</a>
+				<a class="dropdown-item" href="#">SG</a>
 			</div>
-			<div class="w3-col l12"> <!-- 추천장비/인형 -->
-				<div class="w3-col l5 w3-section" style="height:250px;padding-right:20px">
-					<div class="ntg w3-display-container" style="width:200px;height:35px">
-						<svg width="250" height="35">
-							<polygon fill="grey" points="0,0 0,35 0,35 250,35 200,0"></polygon>
-						</svg>
-						<div class="w3-display-middle w3-center" style="width:200px;height:35px;color:#fff;font-size:1.5em">Offer	ment</div>
-					</div>
-					<div class="w3-col" id="equip">
-						<div style="height:35px">◆이런 장비를 사용하면 좋아요!</div>
-						<div style="height:180px">하나 둘 셋 짱구야 놀자</div>
-					</div>
-				</div>
-				<div class="w3-col l7 w3-section">
-					<div class="w3-col" style="height:250px">
-						<div class="ntg w3-display-container" style="width:150px;height:35px">
-							<svg width="200" height="35">
-								<polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon>
-							</svg>
-							<div class="w3-display-middle w3-center" style="width:150px;height:35px;color:#fff;font-size:1.5em">Offer T-dolls</div>
-						</div>
-						<div class="w3-col" id="doll">
-							<div style="height:35px">◆이런 인형들과 같이 쓰였어요!</div>
-							<div style="height:180px">하나 둘 셋 짱구야 놀자</div>
-						</div>
-					</div>
-				</div>
+		</div>
+		<div class="dropdown mr-2">
+			<a class="btn btn-info btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tile</a>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<a class="dropdown-item" href="#">준비중</a>
 			</div>
-			<div class="w3-col l12 w3-section"> <!-- 인형대사 -->
-				<div>
-					<div class="ntg w3-display-container" style="width:150px;height:35px">
-						<svg width="200" height="35">
-							<polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon>
-						</svg>
-						<div class="w3-display-middle w3-center" style="width:150px;height:35px;color:#fff;font-size:1.5em">Quotes</div>
-					</div>
-				</div>
-				<div class="w3-col l12" id="dolltext" style="height:415px"></div>
+		</div>
+		<div class="dropdown mr-2">
+			<a class="btn btn-info btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Voice</a>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<input placeholder="성우 검색" class="VAinput dropdown-item bg-dark text-white form-control form-control-sm col-10 mx-auto p-1" type="text">
+				<div class="dropdown-divider"></div>
+				<div class="VoC"></div>
 			</div>
-			<div class="w3-col l12 w3-section"> <!-- 인형대사 -->
-				<div>
-					<div class="ntg w3-display-container" style="width:150px;height:35px">
-						<svg width="200" height="35">
-							<polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon>
-						</svg>
-						<div class="w3-display-middle w3-center" style="width:150px;height:35px;color:#fff;font-size:1.5em">Lore</div>
-					</div>
-				</div>
-				<div class="w3-col l12" id="dolllore" style="height:415px"></div>
+		</div>
+		<div class="dropdown mr-2">
+			<a class="btn btn-info btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Artist</a>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<a class="dropdown-item" href="#">준비중</a>
+			</div>
+		</div>
+		<div class="dropdown mr-2">
+			<a class="btn btn-warning btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort</a>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<a class="dropdown-item" href="#">도감순</a>
+				<a class="dropdown-item" href="#">등급</a>
+				<a class="dropdown-item" href="#">제조시간</a>
+				<a class="dropdown-item" href="#">타입</a>
 			</div>
 		</div>
 	</div>
 </div>
-<div id="noResultMessage" class="no-results-container w3-black w3-center">
+<div class="d-none d-flex flex-column d-md-none bg-dark text-white">
+	<button class="flex-fill btn btn-dark">Filter</button>
+	<button class="flex-fill btn btn-dark">Sort</button>
+	<div class="d-none justify-content-center text-center">
+		<div class="filter btn btn-light btn-sm">All</div>
+		<div class="dropdown d-inline">
+			<a class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">등급</a>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<a class="dropdown-item" href="#">2성</a>
+				<a class="dropdown-item" href="#">3성</a>
+				<a class="dropdown-item" href="#">4성</a>
+				<a class="dropdown-item" href="#">5성</a>
+				<a class="dropdown-item" href="#">EXTRA</a>
+				<a class="dropdown-item" href="#">제조불가</a>
+			</div>
+		</div>
+		<div class="dropdown d-inline">
+			<a class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">타입</a>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<a class="dropdown-item" href="#">HG</a>
+				<a class="dropdown-item" href="#">SMG</a>
+				<a class="dropdown-item" href="#">AR</a>
+				<a class="dropdown-item" href="#">RF</a>
+				<a class="dropdown-item" href="#">MG</a>
+				<a class="dropdown-item" href="#">SG</a>
+			</div>
+		</div>
+		<div class="dropdown d-inline">
+			<a class="btn btn-info btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tile</a>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<a class="dropdown-item" href="#">준비중</a>
+			</div>
+		</div>
+		<div class="dropdown d-inline">
+			<a class="btn btn-info btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Voice</a>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<input placeholder="성우 검색" class="VAinput dropdown-item bg-dark text-white form-control form-control-sm col-10 mx-auto p-1" type="text">
+				<div class="dropdown-divider"></div>
+				<div class="VoC"></div>
+			</div>
+		</div>
+		<div class="dropdown d-inline">
+			<a class="btn btn-info btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Artist</a>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<a class="dropdown-item" href="#">준비중</a>
+			</div>
+		</div>
+	</div>
+	<div class="d-none justify-content-center text-center">
+		<div class="dropdown">
+			<a class="btn btn-warning btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">정렬</a>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<a class="dropdown-item" href="#">도감순</a>
+				<a class="dropdown-item" href="#">등급</a>
+				<a class="dropdown-item" href="#">제조시간</a>
+				<a class="dropdown-item" href="#">타입</a>
+			</div>
+		</div>
+	</div>
+</div>
+<input type="text" placeholder="검색" class="form-control form-control-sm" id="search">
+<div class="text-center grid mx-auto" id="grid"></div>
+<div class="d-none" id="func">
+<div class="px-3" id="contents">
+<button type="button" class="close rounded-circle position-fixed bg-danger xfunc" style="width:45px;height:45px;top:1%;right:1%;z-index:1"><span class="align-text-top" aria-hidden="true">×</span></button>
+<blockquote class="blockquote"><p class="mb-0 h1"></p><footer class="blockquote-footer">No. <cite></cite></footer></blockquote>
+<div class="space bg-dark text-white my-3" style="height:2.5px"></div>
+<div class="skinntg d-none d-sm-block">
+	<button type="button" class="btn btn-info btn-sm">통상/부상변환</button>
+	<button type="button" class="btn btn-secondary btn-sm">기본 코스튬</button>
+</div>
+<button class="btn btn-dark btn-sm btn-block d-block d-sm-none">코스튬보기</button>
+<div class="btn-group-vertical d-none">
+	<button type="button" class="btn btn-info btn-sm">통상/부상변환</button>
+	<button type="button" class="btn btn-secondary btn-sm">기본 코스튬</button>
+</div>
+<div class="row m-0 text-center">
+	<div class="col-lg-5 my-3 p-0"><img class="img-fluid"></div>
+	<div class="col-lg-7 row m-0 p-0">
+		<div class="col-6 col-lg-5 p-0" style="max-height:400px">
+			<div id="sdc" class="mx-auto"></div>
+			<div class="mx-auto clearfix my-1" style="width:144px;height:56px;position:relative">
+			<div class="float-left" style="width:56px;height:56px">
+				<svg width="56" height="56"><rect id="1" width="56" height="56" rx="8" style="fill:#ffc107"/></svg>
+				<img src="../img/html/battle.png" style="position:absolute;left:0">
+			</div>
+			<div class="float-right" style="width:56px;height:56px">
+				<svg width="56" height="56"><rect id="2" width="56" height="56" rx="8" style="fill:grey"/></svg>
+				<img src="../img/html/dorm.png" style="position:absolute;right:0px">
+			</div>
+			</div>
+			<div class="text-white mt-1">
+			<div class="d-flex no-gutters">
+				<svg class="col-6 svg mx-auto"><polygon points="0,0 0,35 0,35 100,35 125,0"></polygon><text x="45%" y="50%">CV</text></svg>
+				<svg class="col-6 svg mx-auto"><polygon points="125,0 125,35 0,35 0,35 25,0"></polygon><a href="#"><text id="CV" x="55%" y="50%"></text></a></svg>
+			</div>
+			<div class="d-flex no-gutters mt-1">
+				<svg class="col-6 svg mx-auto"><polygon points="0,0 0,35 0,35 100,35 125,0"></polygon><text x="45%" y="50%">Illustrator</text></svg>
+				<svg class="col-6 svg mx-auto"><polygon points="125,0 125,35 0,35 0,35 25,0"></polygon><a href="#"><text id="illust" x="55%" y="50%"></text></a></svg>
+			</div>
+			<div class="d-flex no-gutters mt-1">
+				<svg class="col-6 svg mx-auto"><polygon points="0,0 0,35 0,35 100,35 125,0"></polygon><text x="45%" y="50%">Gun Name</text></svg>
+				<svg class="col-6 svg mx-auto"><polygon points="125,0 125,35 0,35 0,35 25,0"></polygon><text id="GN" x="55%" y="50%" ></text></svg>
+			</div>
+			<div class="d-flex no-gutters mt-1">
+				<svg class="col-6 svg mx-auto"><polygon points="0,0 0,35 0,35 100,35 125,0"></polygon><text x="45%" y="50%">Time</text></svg>
+				<svg class="col-6 svg mx-auto"><polygon points="125,0 125,35 0,35 0,35 25,0"></polygon><text id="Time" x="55%" y="50%"></text></svg>
+			</div>
+			<div class="d-flex no-gutters mt-1">
+				<svg class="col-6 svg mx-auto"><polygon points="0,0 0,35 0,35 100,35 125,0"></polygon><text x="45%" y="50%">Drop</text></svg>
+				<svg class="col-6 svg mx-auto"><polygon points="125,0 125,35 0,35 0,35 25,0"></polygon><a href="#"><text id="Drop" x="55%" y="50%" title="Drop 지역" data-toggle="popover" data-placement="bottom">More</text></a></svg>
+			</div>
+			</div>
+		</div>
+		<div class="col-6 col-lg-7 p-0" style="max-height:400px">
+			<div class="ntg w3-display-container">
+				<svg width="200" height="35"><polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon></svg>
+				<div class="w3-display-left">Chart</div>
+			</div>
+			<div id="chart" style="height:365px">
+				<canvas id="statisticschart" height="250"></canvas>
+			</div>
+		</div>
+		<div class="col my-3 p-0 row m-0" style="height:335px">
+			<div class="ntg w3-display-container">
+				<svg width="200" height="35"><polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon></svg>
+				<div class="w3-display-left">ETC</div>
+			</div>
+			<div class="w-100"></div>
+			<div id="sec-fir" class="col-6 p-0 m-0">
+				<div class="col p-0">
+					<div class="bg-warning">TileBuff</div>
+					<div class="d-flex w3-rightbar w3-leftbar w3-border-white w3-hover-border-black">
+					<div class="m-auto d-flex">
+						<div class="row1">
+							<div class="border border-dark" id="grid1"></div>
+							<div class="border border-dark" id="grid4"></div>
+							<div class="border border-dark" id="grid7"></div>
+						</div>
+						<div class="row2">
+							<div class="border border-dark" id="grid2"></div>
+							<div class="border border-dark" id="grid5"></div>
+							<div class="border border-dark" id="grid8"></div>
+						</div>
+						<div class="row3">
+							<div class="border border-dark" id="grid3"></div>
+							<div class="border border-dark" id="grid6"></div>
+							<div class="border border-dark" id="grid9"></div>
+						</div>
+					</div>
+					<div class="text-center p-1 h-100 w-100" style="width:100%;overflow:auto">
+					</div>
+				</div>
+				</div>
+				<div class="col p-0">
+					<div class="bg-warning">Cost</div>
+					<div class="w3-rightbar w3-leftbar w3-border-white w3-hover-border-black p-1"></div>
+				</div>
+				<div class="col p-0">
+					<div class="bg-warning">Skill</div>
+					<div class="d-flex w3-rightbar w3-leftbar w3-border-white w3-hover-border-black">
+						<img class="img-fluid">
+						<div class="text-center p-1 h-100 w-100" style="overflow:auto"></div>
+					</div>
+				</div>
+			</div>
+			<div id="sec-sec" class="col-6 p-0 m-0">
+				<div style="max-height:300px;height:300px">
+				<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="30000">
+				<div class="carousel-inner">
+				<div class="carousel-item active">
+					<div class="bg-dark text-white">
+						<div id="table" class="row m-0">
+						<div class="col-6 bg-dark">체력</div>
+						<div class="col bg-secondary"></div>
+						<div class="col-6 bg-dark">입수 방법</div>
+						<div class="col bg-secondary"></div>
+						<div class="col-6 bg-dark">화력</div>
+						<div class="col bg-secondary"></div>
+						<div class="col-6 bg-dark">회피</div>
+						<div class="col bg-secondary"></div>
+						<div class="col-6 bg-dark">명중</div>
+						<div class="col bg-secondary"></div>
+						<div class="col-6 bg-dark">사속</div>
+						<div class="col bg-secondary"></div>
+						<div class="col-6 bg-dark">치명타율</div>
+						<div class="col bg-secondary"></div>
+						<div class="col-6 bg-dark">치명타 피해</div>
+						<div class="col bg-secondary"></div>
+						<div class="col-6 bg-dark">방어력 관통</div>
+						<div class="col bg-secondary"></div>
+						<div class="col-6 bg-dark">탄창 크기</div>
+						<div class="col bg-secondary"></div>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="bg-dark text-white">
+						<div id="graph" class="row m-0">
+						<div class="col-6 bg-dark">TEST</div>
+						<div class="col bg-secondary">TEST</div>
+						<div class="col-6 bg-dark">TEST</div>
+						<div class="col bg-secondary">TEST</div>
+						<div class="col-6 bg-dark">TEST</div>
+						<div class="col bg-secondary">TEST</div>
+						<div class="col-6 bg-dark">TEST</div>
+						<div class="col bg-secondary">TEST</div>
+						<div class="col-6 bg-dark">TEST</div>
+						<div class="col bg-secondary">TEST</div>
+						<div class="col-6 bg-dark">TEST</div>
+						<div class="col bg-secondary">TEST</div>
+						<div class="col-6 bg-dark">TEST</div>
+						<div class="col bg-secondary">TEST</div>
+						<div class="col-6 bg-dark">TEST</div>
+						<div class="col bg-secondary">TEST</div>
+						<div class="col-6 bg-dark">TEST</div>
+						<div class="col bg-secondary">TEST</div>
+						<div class="col-6 bg-dark">TEST</div>
+						<div class="col bg-secondary">TEST</div>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev" style="width:4%"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a>
+				<a class="carousel-control-next" href="#carousel" role="button" data-slide="next" style="width:4%"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
+				</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-5 p-0 pr-lg-3 my-3">
+		<div class="ntg w3-display-container">
+			<svg width="200" height="35"><polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon></svg>
+			<div class="w3-display-left">Specifications</div>
+		</div>
+		<div id="doll" style="height:315px"></div>
+	</div>
+	<div class="col-lg-7 p-0 my-3"> <!-- 인형대사 -->
+		<div class="ntg w3-display-container">
+			<svg width="200" height="35"><polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon></svg>
+			<div class="w3-display-left">Lore</div>
+		</div>
+		<div id="dolllore" style="height:315px"></div>
+	</div>
+	<div class="col-12 p-0 my-3"> <!-- 인형로어 -->
+		<div class="ntg w3-display-container">
+			<svg width="200" height="35"><polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon></svg>
+			<div class="w3-display-left">Quotes</div>
+		</div>
+		<div id="dolltext" style="height:515px"></div>
+	</div>
+</div>
+</div>
+</div>
+<div id="noResultMessage" class="no-results-container bg-dark text-white text-center">
 	<label class="fw f115">검색가능한 종류</label>
-	<p>인형이름:콜트	리볼버 / 콜트<br>
-	도감넘버:1 / 215<br>
+	<p>인형이름:콜트 리볼버 / 콜트<br>
+	도감넘버:1 / 218<br>
 	제조시간:50분 = 50<br>
 	별명 :콜라</p>
 </div>
@@ -389,11 +329,9 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.quicksearch@2/dist/jquery.quicksearch.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/muuri@0.5.4/muuri.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/hammerjs@2/hammer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2/web-animations.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2/dist/Chart.bundle.min.js"></script>
-<script src="../js/index.js"></script>
-<script src="../js/doll.js"></script>
-</body>
-</html>
+<script src="https://cdn.jsdelivr.net/npm/hammerjs@2/hammer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/muuri@0.5.4/muuri.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2/dist/Chart.min.js"></script>
+<script src="../js/doll.js?v=180623"></script>
+</body></html>
