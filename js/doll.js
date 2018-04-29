@@ -1,4 +1,7 @@
 $(document).ready(()=>{
+	contentsload();
+});
+function contentsload(){
 	$.ajax('../json/doll.json',{contentType:'application/json',dataType:'json',
 		success:result=>{
 			var itemcon='<div class="w3-hover-shadow tdoll item-content">',
@@ -15,7 +18,13 @@ $(document).ready(()=>{
 				break;
 				}
 				character=$('<div class="item" data-time="'+timehour+timemin+'" data-type="'+doll.type+'" data-rarity="'+doll.rarity+'"></div>').detach(),
-				dollcon=`<div class="w3-text-white no" data-no="${doll.id}">${noval}</div><p class="w3-text-black name podo">${doll.krName}</p><i class="star r${doll.rarity}"></i><i	class="incage doll info_cage_${doll.rarity}"></i><i class="type	doll ${doll.type}_${doll.rarity}"></i><img src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@1.80428-2/img/t_doll/${doll.id}_i.png"	alt="icon"><div class="tag">${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}</div>`;
+				dollcon=`<div class="w3-text-white no" data-no="${doll.id}">${noval}</div>
+					<p class="w3-text-black name podo">${doll.krName}</p>
+					<i class="star r${doll.rarity}"></i>
+					<i	class="incage doll info_cage_${doll.rarity}"></i>
+					<i class="type	doll ${doll.type}_${doll.rarity}"></i>
+					<img src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@1.80428-2/img/t_doll/${doll.id}_i.png"	alt="icon">
+					<div class="tag">${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}</div>`;
 				$(character).append(itemcon).find(".item-content").html(dollcon);
 				return character;
 			});
@@ -24,7 +33,7 @@ $(document).ready(()=>{
 		},
 		error:(request,errorType,errorMessage)=>{alert('Error:'+errorType+' With message:'+errorMessage)},timeout:5000
 	});
-});
+};
 function sortrarity(){grid.sort('rarity')};
 function sorttime(){grid.sort('time')};
 function sorttype(){grid.sort('type')};
@@ -99,28 +108,6 @@ function loadComplete(){
 		*/
 		case "제조불가":
 			grid.filter('[data-time="00"]')
-		break;
-		/*
-		case "특전":
-			grid.filter('[data-time="00"]')
-			active()
-		break;
-		case "타일효과":
-			grid.filter('[data-time="00"]')
-			active()
-		break;
-		case "일러스트레이터":
-			grid.filter('[data-time="00"]')
-			active()
-		break;
-		case "성우":
-			grid.filter('[data-time="00"]')
-			active()
-		break;
-		*/
-		case "제조불가":
-			grid.filter('[data-time="00"]')
-			active()
 		break;
 		case "All":
 			grid.filter('[data-type]')
@@ -214,12 +201,20 @@ function loadComplete(){
 						statisticschart.datasets[1].data=[183,28,70,86,13]
 					break;
 					case "ar":
+						statisticschart.datasets[1].label="AR평균"
+						statisticschart.datasets[1].data=[115,51,43,72,47]
 					break;
 					case "rf":
+						statisticschart.datasets[1].label="RF평균"
+						statisticschart.datasets[1].data=[86,128,33,34,74]
 					break;
 					case "mg":
+						statisticschart.datasets[1].label="MG평균"
+						statisticschart.datasets[1].data=[171,89,28,119,28]
 					break;
 					case "sg":
+						statisticschart.datasets[1].label="SG평균"
+						statisticschart.datasets[1].data=[261,32,11,28,11]
 					break;
 					}
 				};

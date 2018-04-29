@@ -11,4 +11,4 @@
 # Staff
 - @typenine (Maintainer)
 - @mamiller (WebDesign)
-- @kosehy (Dorm - battery calclator part)
+- @kosehy (Dorm - Battery calclator part/doll.json)
