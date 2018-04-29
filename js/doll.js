@@ -1,3 +1,4 @@
+dollData=[];
 $(document).ready(()=>{
 	contentsload();
 });
@@ -30,6 +31,7 @@ function contentsload(){
 			});
 			$('#grid').append(allCharacters);
 			loadComplete();
+			dollData=result;
 		},
 		error:(request,errorType,errorMessage)=>{alert('Error:'+errorType+' With message:'+errorMessage)},timeout:5000
 	});
@@ -135,8 +137,7 @@ function loadComplete(){
 	$(".item-content").click(function(){
 		togglecon();
 		var clicked=$(this).children(".no").attr("data-no");
-		$.ajax('../json/doll.json',{contentType:'application/json',dataType:'json',success:result=>{
-		$.each(result,(index,doll)=>{
+		$.each(dollData,(index,doll)=>{
 			if(doll.id==clicked){
 				$("body,html").animate({scrollTop:0},0);
 				$(".dollname label:nth-child(2)").html(doll.id);
@@ -262,8 +263,7 @@ function loadComplete(){
 				$("div.w3-third:nth-child(1)>div:nth-child(3)>div:nth-child(3)").html(time);
 				rCh.update();
 			}
-		})},error:(request,errorType,errorMessage)=>{alert('Error:'+errorType+' With message:'+errorMessage)},timeout:5000
-		});
+		})
 	});
 	function Skinbutton(){
 		var imgsrc=imgtag.attr('src').split(idir)[1].split(".png")[0],
