@@ -154,7 +154,7 @@ function loadComplete(){
 				timehour=parseInt(doll.buildTime/3600),
 				timemin=doll.buildTime%3600/60,
 				time=`${timehour}시간${timemin}분`,
-				ctx=$("#statisticschart"),
+				ctx="statisticschart",
 				statisticschart={
 					datasets:[{
 						label:doll.krName,
@@ -176,6 +176,7 @@ function loadComplete(){
 					}]
 				},
 				chartOptions={
+					maintainAspectRatio:false,
 					title:{display:false},
 					scale:{ticks:{fontSize:9,beginAtZero:true}},
 					scaleLabel:{display:false}
@@ -223,7 +224,7 @@ function loadComplete(){
 					type:'radar',
 					data:statisticschart,
 					options:chartOptions
-				});
+				}),
 				imgtag=$(".w3-image");
 				$(".skinntg>button").click(function(){switch($(this).index()){
 					case 1:
@@ -254,13 +255,12 @@ function loadComplete(){
 						imgtag.attr('src',simg+'_8.png');
 					break;}
 				});
-				$('div.w3-row:nth-child(7)>div:nth-child(1)').append(w3img);
-				imgtag=$(".w3-image");
-				$("div.w3-row>div:nth-child(1)>img:nth-child(1)").attr("src",cimg);
-				$("div.w3-left-align:nth-child(1)>div:nth-child(1)>div:nth-child(3)").html(doll.voice);
-				$("div.w3-left-align:nth-child(1)>div:nth-child(3)>div:nth-child(3)").html(doll.illust);
-				$("div.w3-display-container:nth-child(5)>div:nth-child(3)").html(doll.name);
-				$("div.w3-third:nth-child(1)>div:nth-child(3)>div:nth-child(3)").html(time);
+				$('.w3-row:nth-child(7)>div:nth-child(1)').append(w3img);
+				$(".w3-row>div:nth-child(1)>img:nth-child(1)").attr("src",cimg);
+				$(".w3-left-align:nth-child(1)>div:nth-child(1)>div:nth-child(3)").html(doll.voice);
+				$(".w3-left-align:nth-child(1)>div:nth-child(3)>div:nth-child(3)").html(doll.illust);
+				$(".w3-display-container:nth-child(5)>div:nth-child(3)").html(doll.name);
+				$(".w3-display-container:nth-child(7)>div:nth-child(3)").html(time);
 				rCh.update();
 			}
 		})
@@ -268,7 +268,7 @@ function loadComplete(){
 	function Skinbutton(){
 		var imgsrc=imgtag.attr('src').split(idir)[1].split(".png")[0],
 		imgM=imgsrc.indexOf('_d'),
-		imgT=imgsrc.slice(0,-2);
+		imgT=imgsrc.slice(0,-2); 
 		if (imgM != -1){
 			imgtag.attr('src',idir+imgT+'.png');
 		} else {
