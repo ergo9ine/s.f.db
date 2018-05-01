@@ -1,6 +1,7 @@
 dollData=[];
 $(document).ready(()=>{
 	contentsload();
+	$('[data-toggle="popover"]').popover();
 });
 function contentsload(){
 	$.ajax('../json/doll.json',{contentType:'application/json',dataType:'json',
@@ -160,6 +161,7 @@ function loadComplete(){
 				$(".w3-left-align:nth-child(1)>div:nth-child(3)>div:nth-child(3)").html(doll.illust);
 				$(".w3-display-container:nth-child(5)>div:nth-child(3)").html(doll.name);
 				$(".w3-display-container:nth-child(7)>div:nth-child(3)").html(time);
+				$(".w3-display-right:nth-child(4)").attr("data-content",doll.drop);
 				imgtag=$(".w3-image");
 				ctx="statisticschart",
 				statisticschart={
@@ -278,6 +280,7 @@ function loadComplete(){
 	$(".xfunc").click(()=>{
 		togglecon();
 		imgtag.remove();
+		$('[data-toggle="popover"]').popover('hide')
 		rCh.destroy();
 	});
 };
