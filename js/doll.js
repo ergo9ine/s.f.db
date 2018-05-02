@@ -1,4 +1,4 @@
-dollData=[];
+var dollData=[],w3img='<img class="w3-image">',idir='../img/t_doll/';
 $(document).ready(()=>{
 	contentsload();
 	$('[data-toggle="popover"]').popover();
@@ -19,7 +19,7 @@ function contentsload(){
 					noval="X"+(doll.id-1000);
 				break;
 				}
-				character=$('<div class="item" data-time="'+timehour+timemin+'" data-type="'+doll.type+'" data-rarity="'+doll.rarity+'"></div>').detach(),
+				character=$(`<div class="item" data-time="${timehour}${timemin}" data-type="${doll.type}" data-rarity="${doll.rarity}"></div>`).detach(),
 				dollcon=`<div class="w3-text-white no" data-no="${doll.id}">${noval}</div>
 					<p class="w3-text-black name podo">${doll.krName}</p>
 					<i class="star r${doll.rarity}"></i>
@@ -37,10 +37,6 @@ function contentsload(){
 		error:(request,errorType,errorMessage)=>{alert('Error:'+errorType+' With message:'+errorMessage)},timeout:5000
 	});
 };
-function sortrarity(){grid.sort('rarity')};
-function sorttime(){grid.sort('time')};
-function sorttype(){grid.sort('type')};
-function togglecon(){$(".grid,#search,#filsor,#func").toggleClass('w3-hide')};
 function loadComplete(){
 	$('#grid').removeClass('w3-hide');
 	grid=new Muuri('#grid',{
@@ -137,24 +133,30 @@ function loadComplete(){
 	});
 	$(".item-content").click(function(){
 		togglecon();
-		var clicked=$(this).children(".no").attr("data-no"),
-		w3img='<img class="w3-image">',
-		idir='../img/t_doll/';
+		var clicked=$(this).children(".no").attr("data-no");
 		$.each(dollData,(index,doll)=>{
 			if(doll.id==clicked){
 				var simg=idir+doll.id,
 				cimg=simg+'.png',
 				timehour=parseInt(doll.buildTime/3600),
 				timemin=doll.buildTime%3600/60,
-				time=`${timehour}시간${timemin}분`;
+				time=`${timehour}시간${timemin}분`,
+				gridself=`#grid${doll.effect.self}`,
+				gridPos=[];
+				$.each(doll.effect.tile,(index,value)=>{
+					gridPos.push(`#grid${value}`);
+				});
+				gridPos=gridPos.toString();
 				$("body,html").animate({scrollTop:0},0);
 				$(".dollname label:nth-child(2)").html(doll.id);
 				$(".dollname span").html(doll.krName);
 				$(".skins").remove();
+				skins=[];
 				$.each(doll.skins,(index,value)=>{
-					var skins=`<button class="w3-button w3-round-xxlarge w3-hover-text-white w3-hover-orange skins" style="background-color:#feb976;color:#fff;margin:2.5px">${value}</button>`
-					$(".skinntg").append(skins);
+					skins.push(`<button class="w3-button w3-round-xxlarge w3-hover-text-white w3-hover-orange skins" style="background-color:#feb976;color:#fff;margin:2.5px">${value}</button>`)
 				});
+				$(".skinntg").append(skins);
+				SKB();
 				$('.w3-row:nth-child(7)>div:nth-child(1)').append(w3img);
 				$(".w3-row>div:nth-child(1)>img:nth-child(1)").attr("src",cimg);
 				$(".w3-left-align:nth-child(1)>div:nth-child(1)>div:nth-child(3)").html(doll.voice);
@@ -162,7 +164,8 @@ function loadComplete(){
 				$(".w3-display-container:nth-child(5)>div:nth-child(3)").html(doll.name);
 				$(".w3-display-container:nth-child(7)>div:nth-child(3)").html(time);
 				$(".w3-display-right:nth-child(4)").attr("data-content",doll.drop);
-				imgtag=$(".w3-image");
+				$(gridself).addClass("w3-black");
+				$(gridPos).addClass("w3-cyan");
 				ctx="statisticschart",
 				statisticschart={
 					datasets:[{
@@ -234,53 +237,48 @@ function loadComplete(){
 					data:statisticschart,
 					options:chartOptions
 				});
-				$(".skinntg>button").click(function(){switch($(this).index()){
-					case 0:
-						var imgsrc=imgtag.attr('src').split(idir)[1].split(".png")[0],
-						imgM=imgsrc.indexOf('_d'),
-						imgT=imgsrc.slice(0,-2); 
-						if (imgM != -1){
-							imgtag.attr('src',idir+imgT+'.png');
-						} else {
-							imgtag.attr('src',idir+imgsrc+'_d.png');
-						}
-					break;
-					case 1:
-						imgtag.attr('src',cimg);
-					break;
-					case 2:
-						imgtag.attr('src',simg+'_1.png');
-					break;
-					case 3:
-						imgtag.attr('src',simg+'_2.png');
-					break;
-					case 4:
-						imgtag.attr('src',simg+'_3.png');
-					break;
-					case 5:
-						imgtag.attr('src',simg+'_4.png');
-					break;
-					case 6:
-						imgtag.attr('src',simg+'_5.png');
-					break;
-					case 7:
-						imgtag.attr('src',simg+'_6.png');
-					break;
-					case 8:
-						imgtag.attr('src',simg+'_7.png');
-					break;
-					case 9:
-						imgtag.attr('src',simg+'_8.png');
-					break;}
-				});
 				rCh.update();
 			}
 		})
 	});
 	$(".xfunc").click(()=>{
 		togglecon();
-		imgtag.remove();
+		$(".w3-image").remove();
 		$('[data-toggle="popover"]').popover('hide')
 		rCh.destroy();
+		$(".skinntg>button").off("click")
 	});
 };
+function sortrarity(){grid.sort('rarity')};
+function sorttime(){grid.sort('time')};
+function sorttype(){grid.sort('type')};
+function togglecon(){
+	$(".grid,#search,#filsor,#func").toggleClass('w3-hide')
+	for (x=1;x<10;x++){
+		$("#grid"+x+"").removeClass("w3-black w3-cyan")
+	}
+};
+function SKB(){
+	$(".skinntg>button").click(function(){
+		var imgtag=$(".w3-image"),
+		iX=$(this).index();
+		No=$(".dollname>label:nth-child(2)").text(),
+		Isrc=idir+No+'.png';
+		if(iX == 0){
+			var imgsrc=imgtag.attr('src').split(idir)[1].split(".png")[0];
+			imgM=imgsrc.indexOf('_d');
+			imgT=imgsrc.slice(0,-2); 
+			if (imgM != -1){
+				imgtag.attr('src',idir+imgT+'.png');
+			} else {
+				imgtag.attr('src',idir+imgsrc+'_d.png');
+			}
+		} else if (iX == 1){
+			imgtag.attr('src',Isrc);
+		} else {
+			var iX=iX-1;
+			var ISrc=idir+No+'_'+iX+'.png';
+			imgtag.attr('src',ISrc);
+		}
+	});
+}
