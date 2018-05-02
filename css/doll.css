@@ -10,6 +10,13 @@
 	z-index:1;
 	margin:14.5px 12.5px;
 }
+div.w3-third:nth-child(1){
+padding-right:0;
+}
+div.w3-twothird:nth-child(2){
+margin-top:16px;
+margin-bottom:16px;
+}
 @media all and (min-width:201px)
 {
 	.grid {
@@ -26,6 +33,12 @@
 {
 	.grid {
 		max-width:600px;
+	}
+	div.w3-third:nth-child(1){
+		padding-right:10px
+	}
+	div.w3-twothird:nth-child(2){
+	margin:auto
 	}
 }
 @media all and (min-width:801px)
