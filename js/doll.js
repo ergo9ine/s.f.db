@@ -164,8 +164,8 @@ function loadComplete(){
 				$(".w3-display-container:nth-child(5)>div:nth-child(3)").html(doll.name);
 				$(".w3-display-container:nth-child(7)>div:nth-child(3)").html(time);
 				$(".w3-display-right:nth-child(4)").attr("data-content",doll.drop);
-				$(gridself).addClass("w3-black");
-				$(gridPos).addClass("w3-cyan");
+				$(gridself).addClass("w3-grey");
+				$(gridPos).addClass("w3-aqua");
 				var ctx="statisticschart",
 				statisticschart={
 					datasets:[{
