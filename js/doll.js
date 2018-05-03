@@ -25,7 +25,7 @@ function contentsload(){
 					<i class="star r${doll.rarity}"></i>
 					<i	class="incage doll info_cage_${doll.rarity}"></i>
 					<i class="type doll ${doll.type}_${doll.rarity}"></i>
-					<img src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@1.80428-2/img/t_doll/${doll.id}_i.png" alt="icon">
+					<img width="175" height="276" Class="w3-grey" src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@1.80428-2/img/t_doll/${doll.id}_i.png" onload="$(this).removeClass('w3-grey')">
 					<div class="tag">${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}</div>`;
 				$(character).append(itemcon).find(".item-content").html(dollcon);
 				return character;
@@ -319,8 +319,9 @@ function SKB(){
 		} else if (iX==1){
 			imgtag.attr('src',Isrc);
 		} else {
-			var iX=iX-1;
-			var ISrc=idir+No+'_'+iX+'.png';
+			var iX=iX-1,
+			ISrc=idir+No+'_'+iX+'.png',
+			loadI=imgtag.attr('src');
 			imgtag.attr('src',ISrc);
 		}
 	});
