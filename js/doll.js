@@ -24,8 +24,8 @@ function contentsload(){
 					<p class="w3-text-black name podo">${doll.krName}</p>
 					<i class="star r${doll.rarity}"></i>
 					<i	class="incage doll info_cage_${doll.rarity}"></i>
-					<i class="type	doll ${doll.type}_${doll.rarity}"></i>
-					<img src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@1.80428-2/img/t_doll/${doll.id}_i.png"	alt="icon">
+					<i class="type doll ${doll.type}_${doll.rarity}"></i>
+					<img src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@1.80428-2/img/t_doll/${doll.id}_i.png" alt="icon">
 					<div class="tag">${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}</div>`;
 				$(character).append(itemcon).find(".item-content").html(dollcon);
 				return character;
@@ -131,6 +131,14 @@ function loadComplete(){
 			};
 		});
 	});
+	$("button.w3-bar-item:nth-child(1)").click(()=>{
+		$("div.w3-bar:nth-child(3)").removeClass("w3-hide")
+		$("div.w3-bar:nth-child(4)").addClass("w3-hide")
+	});
+	$("button.w3-bar-item:nth-child(2)").click(()=>{
+		$("div.w3-bar:nth-child(4)").removeClass("w3-hide")
+		$("div.w3-bar:nth-child(3)").addClass("w3-hide")
+	});
 	$(".item-content").click(function(){
 		togglecon();
 		var clicked=$(this).children(".no").attr("data-no");
@@ -164,8 +172,8 @@ function loadComplete(){
 				$(".w3-display-container:nth-child(5)>div:nth-child(3)").html(doll.name);
 				$(".w3-display-container:nth-child(7)>div:nth-child(3)").html(time);
 				$(".w3-display-right:nth-child(4)").attr("data-content",doll.drop);
-				$(gridself).addClass("w3-grey");
-				$(gridPos).addClass("w3-aqua");
+				$(gridself).removeClass("w3-grey").addClass("w3-white");
+				$(gridPos).removeClass("w3-grey").addClass("w3-aqua");
 				var ctx="statisticschart",
 				statisticschart={
 					datasets:[{
@@ -191,42 +199,86 @@ function loadComplete(){
 				if (doll.mod=="true") {
 					statisticschart.labels=["체력","화력","회피","사속","명중"];
 					statisticschart.datasets[0].data=[doll.hp.mod3,doll.dmg.mod3,doll.dodge.mod3,doll.FoR.mod3,doll.hit.mod3];
-					dolltype=doll.type;
-					typechk();
 				} else {
 					statisticschart.labels=["체력","화력","회피","사속","명중"];
 					statisticschart.datasets[0].data=[doll.hp[100],doll.dmg[100],doll.dodge[100],doll.FoR[100],doll.hit[100]];
-					dolltype=doll.type;
-					typechk();
 				};
-				function typechk(){
-					switch (dolltype){
-					case "hg":
-						statisticschart.datasets[1].label="HG평균"
-						statisticschart.datasets[1].data=[71,31,79,58,55]
+				switch (doll.type){
+				case "hg":
+					statisticschart.datasets[1].label="HG평균"
+					statisticschart.datasets[1].data=[71,31,79,58,55]
+				break;
+				case "smg":
+					statisticschart.datasets[1].label="SMG평균"
+					statisticschart.datasets[1].data=[183,28,70,86,13]
+				break;
+				case "ar":
+					statisticschart.datasets[1].label="AR평균"
+					statisticschart.datasets[1].data=[115,51,43,72,47]
+				break;
+				case "rf":
+					statisticschart.datasets[1].label="RF평균"
+					statisticschart.datasets[1].data=[86,128,33,34,74]
+				break;
+				case "mg":
+					statisticschart.datasets[1].label="MG평균"
+					statisticschart.datasets[1].data=[171,89,28,119,28]
+				break;
+				case "sg":
+					statisticschart.datasets[1].label="SG평균"
+					statisticschart.datasets[1].data=[261,32,11,28,11]
+				break;
+				};
+				var TS="타일 위 타겟에게";
+				switch (doll.Fx.target){
+				case "all":
+					TS=TS.replace("타겟","모든 총기")
+				break;
+				case "hg":
+					TS=TS.replace("타겟","HG")
+				break;
+				case "smg":
+					TS=TS.replace("타겟","SMG")
+				break;
+				case "ar":
+					TS=TS.replace("타겟","AR")
+				break;
+				case "rf":
+					TS=TS.replace("타겟","RF")
+				break;
+				case "mg":
+					TS=TS.replace("타겟","MG")
+				break;
+				case "sg":
+					TS=TS.replace("타겟","SG")
+				break;
+				};
+				$.each(doll.Fx.TileFx,(index,value)=>{
+					switch (index){
+					case "dmg":
+						TS=TS+"<br>화력 "+value+"%증가"
 					break;
-					case "smg":
-						statisticschart.datasets[1].label="SMG평균"
-						statisticschart.datasets[1].data=[183,28,70,86,13]
+					case "dodge":
+						TS=TS+"<br>회피 "+value+"%증가"
 					break;
-					case "ar":
-						statisticschart.datasets[1].label="AR평균"
-						statisticschart.datasets[1].data=[115,51,43,72,47]
+					case "hit":
+						TS=TS+"<br>명중 "+value+"%증가"
 					break;
-					case "rf":
-						statisticschart.datasets[1].label="RF평균"
-						statisticschart.datasets[1].data=[86,128,33,34,74]
+					case "FoR":
+						TS=TS+"<br>사속 "+value+"%증가"
 					break;
-					case "mg":
-						statisticschart.datasets[1].label="MG평균"
-						statisticschart.datasets[1].data=[171,89,28,119,28]
+					case "crit":
+						TS=TS+"<br>치명타율 "+value+"%증가"
 					break;
-					case "sg":
-						statisticschart.datasets[1].label="SG평균"
-						statisticschart.datasets[1].data=[261,32,11,28,11]
+					case "time":
+						TS=TS+"<br>쿨타임 "+value+"%증가"
+					break;
+					case "armor":
+						TS=TS+"<br>장갑 "+value+"%증가"
 					break;
 					}
-				};
+				});
+				$("#sec-fir>div:nth-child(1)>div:nth-child(2)").html(TS);
 				rCh=new Chart(ctx,{type:'radar',data:statisticschart,options:chartOptions});
 				rCh.update();
 			}
@@ -246,7 +298,7 @@ function sorttype(){grid.sort('type')};
 function togglecon(){
 	$(".grid,#search,#filsor,#func").toggleClass('w3-hide')
 	for (x=1;x<10;x++){
-		$("#grid"+x+"").removeClass("w3-black w3-cyan")
+		$("#grid"+x+"").removeClass("w3-white w3-aqua w3-grey").addClass("w3-grey")
 	}
 };
 function SKB(){

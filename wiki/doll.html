@@ -12,7 +12,7 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
 <body>
-<div class="w3-bar w3-black	w3-hide-small" id="filsor" style="padding:3px 0">
+<div class="w3-bar w3-black	w3-hide-small"style="padding:3px 0">
 	<div class="w3-half">필터:
 		<div class="btn btn-light btn-sm">All</div>
 		<div class="btn-group" role="group" aria-label="rank">
@@ -40,19 +40,29 @@
 		</select>
 	</div>
 </div>
-<div id="mom" class="w3-bar	w3-black w3-hide-large w3-hide-medium">
-	<button id="f" class="w3-bar-item w3-button w3-border-right fltr">필터</button>
-	<button id="s" class="w3-bar-item w3-button w3-border-left fltr">정렬</button>
-	<div id="mf" class="w3-bar w3-display-container w3-hide">
-		<span class="w3-button w3-display-right x"><i class="fa fa-close"></i></span>
-		<div class="w3-button fc active">All</div>
-		<div class="w3-button fc">2성</div>
-		<div class="w3-button fc">3성</div>
-		<div class="w3-button fc">4성</div>
-		<div class="w3-button fc">5성</div>
+<div class="w3-bar w3-black w3-hide-large w3-hide-medium">
+	<button class="w3-bar-item w3-button w3-border-right" style="width:50%">필터</button>
+	<button class="w3-bar-item w3-button w3-border-left" style="width:50%">정렬</button>
+	<div class="w3-bar w3-display-container w3-hide">
+		<button class="btn btn-dark rounded-0 w3-display-right w3-border-bottom w3-border-left" style="height:34px"><p class="w3-display-middle align-text-top" style="color:#fff">×</p></button>
+		<div class="btn-group" role="group" aria-label="rank">
+			<button type="button" class="btn btn-light btn-sm">2성</button>
+			<button type="button" class="btn btn-light btn-sm">3성</button>
+			<button type="button" class="btn btn-light btn-sm">4성</button>
+			<button type="button" class="btn btn-light btn-sm">5성</button>
+			<button type="button" class="btn btn-light btn-sm">제조불가</button>
+		</div>
+		<div class="btn-group" role="group" aria-label="type">
+			<button type="button" class="btn btn-light btn-sm">HG</button>
+			<button type="button" class="btn btn-light btn-sm">SMG</button>
+			<button type="button" class="btn btn-light btn-sm">AR</button>
+			<button type="button" class="btn btn-light btn-sm">RF</button>
+			<button type="button" class="btn btn-light btn-sm">MG</button>
+			<button type="button" class="btn btn-light btn-sm">SG</button>
+		</div>
 	</div>
-	<div id="fo" class="w3-bar w3-display-container w3-hide" style="height:2.5em">
-		<span class="w3-button w3-display-right x"><i class="fa fa-close"></i></span>
+	<div class="w3-bar w3-display-container w3-hide" style="height:2.5em">
+		<button class="btn btn-dark rounded-0 w3-display-right w3-border-left x" style="height:34px"><p class="w3-display-middle align-text-top" style="color:#fff">×</p></button>
 		<select class="w3-display-middle" style="height:2.5em">
 			<option>기본</option>
 			<option>등급</option>
@@ -162,25 +172,25 @@
 					<div class="w3-display-middle w3-center" style="width:150px;height:35px;color:#fff;font-size:1.5em">ETC</div>
 				</div>
 				<div class="w3-half" id="sec-fir">
-					<div class="w3-row w3-display-container" style="height:100px">
-						<div class="w3-display-left w3-border" style="margin-left:5px;width:75px;height:75px">
+					<div class="d-flex" style="height:100px">
+						<div class="flex-shrink-1" style="margin:12.5px 5px;width:75px;height:75px">
 							<div class="row1" style="display:flex">
-								<div class="w3-border w3-border-black" id="grid1" style="width:25px;height:25px"></div>
-								<div class="w3-border w3-border-black" id="grid2" style="width:25px;height:25px"></div>
-								<div class="w3-border w3-border-black" id="grid3" style="width:25px;height:25px"></div>
+								<div class="w3-border w3-border-black w3-grey" id="grid1" style="width:25px;height:25px"></div>
+								<div class="w3-border w3-border-black w3-grey" id="grid2" style="width:25px;height:25px"></div>
+								<div class="w3-border w3-border-black w3-grey" id="grid3" style="width:25px;height:25px"></div>
 							</div>
 							<div class="row2" style="display:flex">
-								<div class="w3-border w3-border-black" id="grid4" style="width:25px;height:25px"></div>
-								<div class="w3-border w3-border-black" id="grid5" style="width:25px;height:25px"></div>
-								<div class="w3-border w3-border-black" id="grid6" style="width:25px;height:25px"></div>
+								<div class="w3-border w3-border-black w3-grey" id="grid4" style="width:25px;height:25px"></div>
+								<div class="w3-border w3-border-black w3-grey" id="grid5" style="width:25px;height:25px"></div>
+								<div class="w3-border w3-border-black w3-grey" id="grid6" style="width:25px;height:25px"></div>
 							</div>
 							<div class="row3" style="display:flex">
-								<div class="w3-border w3-border-black" id="grid7" style="width:25px;height:25px"></div>
-								<div class="w3-border w3-border-black" id="grid8" style="width:25px;height:25px"></div>
-								<div class="w3-border w3-border-black" id="grid9" style="width:25px;height:25px"></div>
+								<div class="w3-border w3-border-black w3-grey" id="grid7" style="width:25px;height:25px"></div>
+								<div class="w3-border w3-border-black w3-grey" id="grid8" style="width:25px;height:25px"></div>
+								<div class="w3-border w3-border-black w3-grey" id="grid9" style="width:25px;height:25px"></div>
 							</div>
 						</div>
-						<div class="w3-grey" style="margin-left:82.5px;height:100px;padding:4px 8px">
+						<div class="text-center" style="width:100%;height:100px;padding:12.5px 10px">
 						</div>
 					</div>
 					<div class="w3-row w3-red" style="height:100px">편제당인식</div>
@@ -229,7 +239,7 @@
 				</div>
 				<div class="w3-col l12" id="dolltext" style="height:415px"></div>
 			</div>
-			<div class="w3-col l12 w3-section"> <!-- 인형대사 -->
+			<div class="w3-col l12 w3-section"> <!-- 인형로어 -->
 				<div>
 					<div class="ntg w3-display-container" style="width:150px;height:35px">
 						<svg width="200" height="35">
@@ -256,7 +266,6 @@
 <script src="https://cdn.jsdelivr.net/npm/hammerjs@2/hammer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2/web-animations.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2/dist/Chart.min.js"></script>
-<script src="../js/index.js"></script>
 <script src="../js/doll.js"></script>
 </body>
 </html>
