@@ -141,9 +141,9 @@ function loadComplete(){
 				timehour=parseInt(doll.buildTime/3600),
 				timemin=doll.buildTime%3600/60,
 				time=`${timehour}시간${timemin}분`,
-				gridself=`#grid${doll.effect.self}`,
+				gridself=`#grid${doll.Fx.self}`,
 				gridPos=[];
-				$.each(doll.effect.tile,(index,value)=>{
+				$.each(doll.Fx.tile,(index,value)=>{
 					gridPos.push(`#grid${value}`);
 				});
 				gridPos=gridPos.toString();
@@ -166,33 +166,28 @@ function loadComplete(){
 				$(".w3-display-right:nth-child(4)").attr("data-content",doll.drop);
 				$(gridself).addClass("w3-black");
 				$(gridPos).addClass("w3-cyan");
-				ctx="statisticschart",
+				var ctx="statisticschart",
 				statisticschart={
 					datasets:[{
 						label:doll.krName,
 						backgroundColor:"rgba(255,99,132,0.2)",
 						borderColor:"rgb(255,99,132)",
-						pointBackgroundColor:"rgb(255, 99, 132)",
+						pointBackgroundColor:"rgb(255,99,132)",
 						pointBorderColor:"#fff",
 						pointHoverBackgroundColor:"#fff",
-						pointHoverBorderColor:"rgb(255, 99, 132)",
+						pointHoverBorderColor:"rgb(255,99,132)",
 						borderWidth:1
 					},{
 						backgroundColor:"rgba(54,162,235,0.2)",
 						borderColor:"rgb(54,162,235)",
-						pointBackgroundColor:"rgb(54, 162, 235)",
+						pointBackgroundColor:"rgb(54,162,235)",
 						pointBorderColor:"#fff",
 						pointHoverBackgroundColor:"#fff",
-						pointHoverBorderColor:"rgb(54, 162, 235)",
+						pointHoverBorderColor:"rgb(54,162,235)",
 						borderWidth:1
 					}]
 				},
-				chartOptions={
-					maintainAspectRatio:false,
-					title:{display:false},
-					scale:{ticks:{fontSize:9,beginAtZero:true}},
-					scaleLabel:{display:false}
-				};
+				chartOptions={maintainAspectRatio:false,title:{display:false},scale:{ticks:{fontSize:9,beginAtZero:true}},scaleLabel:{display:false}};
 				if (doll.mod=="true") {
 					statisticschart.labels=["체력","화력","회피","사속","명중"];
 					statisticschart.datasets[0].data=[doll.hp.mod3,doll.dmg.mod3,doll.dodge.mod3,doll.FoR.mod3,doll.hit.mod3];
@@ -203,7 +198,7 @@ function loadComplete(){
 					statisticschart.datasets[0].data=[doll.hp[100],doll.dmg[100],doll.dodge[100],doll.FoR[100],doll.hit[100]];
 					dolltype=doll.type;
 					typechk();
-				}
+				};
 				function typechk(){
 					switch (dolltype){
 					case "hg":
@@ -232,11 +227,7 @@ function loadComplete(){
 					break;
 					}
 				};
-				rCh=new Chart(ctx,{
-					type:'radar',
-					data:statisticschart,
-					options:chartOptions
-				});
+				rCh=new Chart(ctx,{type:'radar',data:statisticschart,options:chartOptions});
 				rCh.update();
 			}
 		})
@@ -264,16 +255,16 @@ function SKB(){
 		iX=$(this).index();
 		No=$(".dollname>label:nth-child(2)").text(),
 		Isrc=idir+No+'.png';
-		if(iX == 0){
+		if(iX==0){
 			var imgsrc=imgtag.attr('src').split(idir)[1].split(".png")[0];
 			imgM=imgsrc.indexOf('_d');
-			imgT=imgsrc.slice(0,-2); 
-			if (imgM != -1){
+			imgT=imgsrc.slice(0,-2);
+			if (imgM!=-1){
 				imgtag.attr('src',idir+imgT+'.png');
 			} else {
 				imgtag.attr('src',idir+imgsrc+'_d.png');
 			}
-		} else if (iX == 1){
+		} else if (iX==1){
 			imgtag.attr('src',Isrc);
 		} else {
 			var iX=iX-1;
@@ -281,4 +272,4 @@ function SKB(){
 			imgtag.attr('src',ISrc);
 		}
 	});
-}
+};
