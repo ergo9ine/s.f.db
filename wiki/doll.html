@@ -8,11 +8,13 @@
 <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/loaders.css@0.1.2/loaders.min.css"> -->
 <link rel="stylesheet" href="../css/css_overwrite.css">
 <link rel="stylesheet" href="../css/doll.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pure-css-loader@3.1.2/dist/css-loader.css">
 <title>T-doll</title>
 </head>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
 <body>
+<div class="loader loader-border is-active" data-blink data-text="로딩중"></div>
 <div class="w3-bar w3-black	w3-hide-small"style="padding:3px 0">
 	<div class="w3-half">필터:
 		<div class="btn btn-light btn-sm">All</div>
@@ -83,7 +85,7 @@
 <div class="w3-hide" id="func">
 	<div class="w3-container" id="contents">
 		<button type="button" class="close rounded-circle position-fixed w3-red xfunc" style="width:45px;height:45px;top:1%;right:1%">
-			<span class="align-text-top" aria-hidden="true">&times;</span>
+			<span class="align-text-top" aria-hidden="true">×</span>
 		</button>
 		<div class="dollname">
 			<label>NO.</label><label></label><span style="font-size:2em;font-weight:bold;margin:0 10px"></span>
@@ -96,7 +98,7 @@
 		<button class="w3-button w3-block w3-black w3-left-align w3-hide-large w3-hide-medium w3-section">코스튬보기</button>
 		<div id="Demo1" class="w3-hide">
 			<a class="w3-button	w3-block w3-center" href="#">통상/부상변환</a>
-			<a class="w3-button w3-block w3-center" href="#">기본	코스튬</a>
+			<a class="w3-button w3-block w3-center" href="#">기본 코스튬</a>
 		</div>
 		<div class="w3-row	w3-center">
 			<div class="w3-col l5 w3-section" style="min-height:256px;min-width:256px"></div>
@@ -194,7 +196,7 @@
 						<div class="text-center" style="width:100%;height:100px;padding:12.5px 10px">
 						</div>
 					</div>
-					<div class="w3-row w3-red" style="height:100px">편제당인식</div>
+					<div class="w3-row" style="height:100px">편제소모자원</div>
 					<div class="w3-row w3-blue" style="height:100px">스킬</div>
 				</div>
 				<div class="w3-half" id="sec-sec">
@@ -256,7 +258,7 @@
 </div>
 <div id="noResultMessage" class="no-results-container w3-black w3-center">
 	<label class="fw f115">검색가능한 종류</label>
-	<p>인형이름:콜트	리볼버 / 콜트<br>
+	<p>인형이름:콜트 리볼버 / 콜트<br>
 	도감넘버:1 / 215<br>
 	제조시간:50분 = 50<br>
 	별명 :콜라</p>

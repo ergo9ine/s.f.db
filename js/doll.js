@@ -1,4 +1,4 @@
-var dollData=[],w3img='<img class="w3-image">',idir='../img/t_doll/';
+var dollData=[],w3img='<img class="w3-image w3-grey" width="256" height="256">',idir='../img/t_doll/';
 $(document).ready(()=>{
 	contentsload();
 	$('[data-toggle="popover"]').popover();
@@ -25,7 +25,7 @@ function contentsload(){
 					<i class="star r${doll.rarity}"></i>
 					<i	class="incage doll info_cage_${doll.rarity}"></i>
 					<i class="type doll ${doll.type}_${doll.rarity}"></i>
-					<img width="175" height="276" Class="w3-grey" src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@1.80428-2/img/t_doll/${doll.id}_i.png" onload="$(this).removeClass('w3-grey')">
+					<img width="175" height="276" Class="w3-grey" src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@1.80428-2/img/t_doll/${doll.id}_i.png" onload="$(this).removeClass('w3-grey').removeAttr('onload')">
 					<div class="tag">${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}</div>`;
 				$(character).append(itemcon).find(".item-content").html(dollcon);
 				return character;
@@ -46,6 +46,7 @@ function loadComplete(){
 			rarity:(item,element)=>element.getAttribute('data-rarity')
 		},layout:{fillGaps:true,rounding:true}
 	});
+	$(".loader").removeClass("is-active");
 	$('#search').quicksearch('.item',{
 		noResults:"#noResultMessage",
 		'bind':'keyup keydown click input',
@@ -166,7 +167,7 @@ function loadComplete(){
 				$(".skinntg").append(skins);
 				SKB();
 				$('.w3-row:nth-child(7)>div:nth-child(1)').append(w3img);
-				$(".w3-row>div:nth-child(1)>img:nth-child(1)").attr("src",cimg);
+				$(".w3-row>div:nth-child(1)>img:nth-child(1)").attr("src",cimg).removeClass("w3-grey").removeAttr("width height");
 				$(".w3-left-align:nth-child(1)>div:nth-child(1)>div:nth-child(3)").html(doll.voice);
 				$(".w3-left-align:nth-child(1)>div:nth-child(3)>div:nth-child(3)").html(doll.illust);
 				$(".w3-display-container:nth-child(5)>div:nth-child(3)").html(doll.name);
@@ -227,8 +228,7 @@ function loadComplete(){
 				case "sg":
 					statisticschart.datasets[1].label="SG평균"
 					statisticschart.datasets[1].data=[261,32,11,28,11]
-				break;
-				};
+				break};
 				var TS="타일 위 타겟에게";
 				switch (doll.Fx.target){
 				case "all":
@@ -251,8 +251,7 @@ function loadComplete(){
 				break;
 				case "sg":
 					TS=TS.replace("타겟","SG")
-				break;
-				};
+				break};
 				$.each(doll.Fx.TileFx,(index,value)=>{
 					switch (index){
 					case "dmg":
@@ -275,8 +274,27 @@ function loadComplete(){
 					break;
 					case "armor":
 						TS=TS+"<br>장갑 "+value+"%증가"
+					break};
+					var D="타일 위 타겟에게";
+					switch (doll.type){
+					case "hg":
+						$("#sec-fir>div:nth-child(2)").
 					break;
-					}
+					case "smg":
+						TS=TS.replace("타겟","SMG")
+					break;
+					case "ar":
+						TS=TS.replace("타겟","AR")
+					break;
+					case "rf":
+						TS=TS.replace("타겟","RF")
+					break;
+					case "mg":
+						TS=TS.replace("타겟","MG")
+					break;
+					case "sg":
+						TS=TS.replace("타겟","SG")
+					break}
 				});
 				$("#sec-fir>div:nth-child(1)>div:nth-child(2)").html(TS);
 				rCh=new Chart(ctx,{type:'radar',data:statisticschart,options:chartOptions});
@@ -320,8 +338,7 @@ function SKB(){
 			imgtag.attr('src',Isrc);
 		} else {
 			var iX=iX-1,
-			ISrc=idir+No+'_'+iX+'.png',
-			loadI=imgtag.attr('src');
+			ISrc=idir+No+'_'+iX+'.png';
 			imgtag.attr('src',ISrc);
 		}
 	});
