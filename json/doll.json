@@ -88,7 +88,7 @@
 		"Fx":{
 			"FoR":{"1":20,"10":36},
 			"movementSpeed":{"1":28,"10":45},
-			"time":{"1":"2.5","10":4}
+			"time":{"1":2.5,"10":4}
 		},
 		"id":15,
 		"dataPool":{
@@ -1886,7 +1886,7 @@
 		"self":5,
 		"tile":[6],
 		"TileFx":{
-			"cooldown":12
+			"time":12
 		}
 	},
 	"krName":"M1 개런드",
@@ -1942,7 +1942,7 @@
 		"self":5,
 		"tile":[2,8],
 		"TileFx":{
-			"cooldown":12
+			"time":12
 		}
 	},
 	"krName":"M1A1",
@@ -1998,7 +1998,7 @@
 		"self":5,
 		"tile":[9],
 		"TileFx":{
-			"cooldown":15
+			"time":15
 		}
 	},
 	"krName":"스프링필드",
@@ -2054,7 +2054,7 @@
 		"self":5,
 		"tile":[3,9],
 		"TileFx":{
-			"cooldown":12
+			"time":12
 		}
 	},
 	"krName":"M14",
@@ -2110,7 +2110,7 @@
 		"self":5,
 		"tile":[2,8],
 		"TileFx":{
-			"cooldown":12
+			"time":12
 		}
 	},
 	"krName":"M21",
@@ -2166,7 +2166,7 @@
 		"self":5,
 		"tile":[2],
 		"TileFx":{
-			"cooldown":15
+			"time":15
 		}
 	},
 	"krName":"모신나강",
@@ -2222,7 +2222,7 @@
 		"self":5,
 		"tile":[6],
 		"TileFx":{
-			"cooldown":10
+			"time":10
 		}
 	},
 	"krName":"SVT-38",
@@ -2278,7 +2278,7 @@
 		"self":5,
 		"tile":[2,8],
 		"TileFx":{
-			"cooldown":10
+			"time":10
 		}
 	},
 	"krName":"시모노프",
@@ -2334,7 +2334,7 @@
 		"self":5,
 		"tile":[8],
 		"TileFx":{
-			"cooldown":15
+			"time":15
 		}
 	},
 	"krName":"PTRD",
@@ -2390,7 +2390,7 @@
 		"self":5,
 		"tile":[3,9],
 		"TileFx":{
-			"cooldown":15
+			"time":15
 		}
 	},
 	"krName":"SVD",
@@ -2446,7 +2446,7 @@
 		"self":5,
 		"tile":[3],
 		"TileFx":{
-			"cooldown":12
+			"time":12
 		}
 	},
 	"krName":"SV-98",
@@ -2503,7 +2503,7 @@
 		"self":5,
 		"tile":[3,9],
 		"TileFx":{
-			"cooldown":18
+			"time":18
 		}
 	},
 	"krName":"Kar98k",
@@ -2568,7 +2568,7 @@
 		"self":5,
 		"tile":[3,9],
 		"TileFx":{
-			"cooldown":10
+			"time":10
 		}
 	},
 	"krName":"G43",
@@ -2624,7 +2624,7 @@
 		"self":5,
 		"tile":[6],
 		"TileFx":{
-			"cooldown":18
+			"time":18
 		}
 	},
 	"krName":"WA2000",
@@ -2680,7 +2680,7 @@
 		"self":5,
 		"tile":[2,8],
 		"TileFx":{
-			"cooldown":12
+			"time":12
 		}
 	},
 	"krName":"56식 반",
@@ -2736,7 +2736,7 @@
 		"self":5,
 		"tile":[2,8],
 		"TileFx":{
-			"cooldown":18
+			"time":18
 		}
 	},
 	"krName":"리엔필드",
@@ -2792,7 +2792,7 @@
 		"self":5,
 		"tile":[3,9],
 		"TileFx":{
-			"cooldown":10
+			"time":10
 		}
 	},
 	"krName":"FN-49",
@@ -2848,7 +2848,7 @@
 		"self":5,
 		"tile":[6],
 		"TileFx":{
-			"cooldown":10
+			"time":10
 		}
 	},
 	"krName":"BM59",
@@ -2904,7 +2904,7 @@
 		"self":5,
 		"tile":[6],
 		"TileFx":{
-			"cooldown":18
+			"time":18
 		}
 	},
 	"krName":"NTW-20",
@@ -5075,7 +5075,7 @@
 		"self":5,
 		"tile":[6],
 		"TileFx":{
-			"cooldown":12
+			"time":12
 		}
 	},
 	"krName":"한양조 88식",
@@ -6370,7 +6370,7 @@
 		"self":5,
 		"tile":[2,8],
 		"TileFx":{
-			"cooldown":15
+			"time":15
 		}
 	},
 	"krName":"PSG-1",
@@ -6787,7 +6787,7 @@
 		"self":5,
 		"tile":[9],
 		"TileFx":{
-			"cooldown":12
+			"time":12
 		}
 	},
 	"krName":"Super SASS",
@@ -7016,7 +7016,7 @@
 		"self":5,
 		"tile":[6],
 		"TileFx":{
-			"cooldown":18
+			"time":18
 		}
 	},
 	"krName":"M99",
@@ -8020,7 +8020,7 @@
 		"self":5,
 		"tile":[3,9],
 		"TileFx":{
-			"cooldown":12
+			"time":12
 		}
 	},
 	"grow":135
@@ -8078,7 +8078,7 @@
 		"self":5,
 		"tile":[2,8],
 		"TileFx":{
-			"cooldown":15
+			"time":15
 		}
 	},
 	"grow":120
@@ -8134,7 +8134,7 @@
 		"self":5,
 		"tile":[6],
 		"TileFx":{
-			"cooldown":12
+			"time":12
 		}
 	},
 	"grow":120
@@ -8193,7 +8193,7 @@
 		"self":5,
 		"tile":[2,8],
 		"TileFx":{
-			"cooldown":18
+			"time":18
 		}
 	},
 	"grow":130
@@ -9788,7 +9788,7 @@
 		"self":5,
 		"tile":[9],
 		"TileFx":{
-			"cooldown":12
+			"time":12
 		}
 	},
 	"grow":125
@@ -10100,7 +10100,7 @@
 		"self":4,
 		"tile":[5,6],
 		"TileFx":{
-			"cooldown":18
+			"time":18
 		}
 	},
 	"grow":138
@@ -10162,7 +10162,7 @@
 		"self":5,
 		"tile":[2,8],
 		"TileFx":{
-			"cooldown":15
+			"time":15
 		}
 	},
 	"grow":130
@@ -10298,7 +10298,7 @@
 		"self":5,
 		"tile":[3],
 		"TileFx":{
-			"cooldown":12
+			"time":12
 		}
 	},
 	"grow":110
@@ -10425,7 +10425,7 @@
 		"self":5,
 		"tile":[2,3],
 		"TileFx":{
-			"cooldown":15
+			"time":15
 		}
 	},
 	"grow":117
@@ -11181,7 +11181,7 @@
 		"self":5,
 		"tile":[3,9],
 		"TileFx":{
-			"cooldown":18
+			"time":18
 		}
 	},
 	"krName":"JS05",
@@ -11763,7 +11763,7 @@
 		"self":7,
 		"tile":[1,4],
 		"TileFx":{
-			"cooldown":10
+			"time":10
 		}
 	},
 	"krName":"카르카노M1891",
@@ -11877,7 +11877,7 @@
 		"self":1,
 		"tile":[4,7],
 		"TileFx":{
-			"cooldown":10
+			"time":10
 		}
 	},
 	"krName":"카르카노M91/38",
@@ -12022,7 +12022,7 @@
 		"self":5,
 		"tile":[6,9],
 		"TileFx":{
-			"cooldown":15
+			"time":15
 		}
 	},
 	"krName":"XM3",
@@ -12107,7 +12107,7 @@
 		"self":5,
 		"tile":[3,6],
 		"TileFx":{
-			"cooldown":12
+			"time":12
 		}
 	},
 	"krName":"게파드 M1",
@@ -12358,7 +12358,7 @@
 		"self":5,
 		"tile":[3,9],
 		"TileFx":{
-			"cooldown":18
+			"time":18
 		}
 	},
 	"krName":"발리스타",
@@ -12949,7 +12949,7 @@
 		"self":5,
 		"tile":[3,6],
 		"TileFx":{
-			"cooldown":18
+			"time":18
 		}
 	},
 	"krName":"SRS",
@@ -13363,36 +13363,36 @@
 		"TileFx":{
 			"dmg":20,
 			"dodge":15,
-			"cooldown":12
+			"time":12
 		}
 	},
 	"krName":"SM-1",
 	"grow":115
 },{
 	"id":218,
-	"krName":"SM-1",
-	"name":"T77",
+	"krName":"T77",
+	"name":"HFS T77",
 	"type":"smg",
 	"rarity":3,
 	"hp":{
-		"1":0,
-		"100":0
+		"1":93,
+		"100":185
 	},
 	"dmg":{
-		"1":0,
-		"100":0
+		"1":10,
+		"100":24
 	},
 	"dodge":{
-		"1":0,
-		"100":0
+		"1":10,
+		"100":69
 	},
 	"hit":{
-		"1":0,
-		"100":0
+		"1":2,
+		"100":11
 	},
 	"FoR":{
-		"1":0,
-		"100":0
+		"1":66,
+		"100":92
 	},
 	"illust":"",
 	"voice":"",
@@ -13752,7 +13752,7 @@
 		"self":5,
 		"tile":[8,9],
 		"TileFx":{
-			"cooldown":18
+			"time":18
 		}
 	},
 	"krName":"라이덴 메이",
@@ -13849,7 +13849,7 @@
 		"self":5,
 		"tile":[2,3],
 		"TileFx":{
-			"cooldown":18
+			"time":18
 		}
 	},
 	"krName":"브로냐 자이칙",
@@ -14404,7 +14404,7 @@
 		"self":5,
 		"tile":[2],
 		"TileFx":{
-			"cooldown":18
+			"time":18
 		}
 	},
 	"skill":{
@@ -14459,7 +14459,7 @@
 		"self":5,
 		"tile":[3,9],
 		"TileFx":{
-			"cooldown":15
+			"time":15
 		}
 	},
 	"skill":{

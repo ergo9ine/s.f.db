@@ -12,12 +12,8 @@ function contentsload(){
 				timemin=doll.buildTime%3600/60,
 				noval=doll.id;
 				switch (noval == noval){
-				case noval>20000:
-					noval="M"+(doll.id-20000);
-				break;
-				case noval>1000:
-					noval="X"+(doll.id-1000);
-				break;
+				case noval>20000:noval="M"+(doll.id-20000);break;
+				case noval>1000:noval="X"+(doll.id-1000);break;
 				}
 				character=$(`<div class="item" data-time="${timehour}${timemin}" data-type="${doll.type}" data-rarity="${doll.rarity}"></div>`).detach(),
 				dollcon=`<div class="w3-text-white no" data-no="${doll.id}">${noval}</div>
@@ -270,33 +266,34 @@ function loadComplete(){
 						TS=TS+"<br>치명타율 "+value+"%증가"
 					break;
 					case "time":
-						TS=TS+"<br>쿨타임 "+value+"%증가"
+						TS=TS+"<br>쿨타임 "+value+"%감소"
 					break;
 					case "armor":
 						TS=TS+"<br>장갑 "+value+"%증가"
 					break};
-					var D="타일 위 타겟에게";
-					switch (doll.type){
-					case "hg":
-						$("#sec-fir>div:nth-child(2)").
-					break;
-					case "smg":
-						TS=TS.replace("타겟","SMG")
-					break;
-					case "ar":
-						TS=TS.replace("타겟","AR")
-					break;
-					case "rf":
-						TS=TS.replace("타겟","RF")
-					break;
-					case "mg":
-						TS=TS.replace("타겟","MG")
-					break;
-					case "sg":
-						TS=TS.replace("타겟","SG")
-					break}
 				});
-				$("#sec-fir>div:nth-child(1)>div:nth-child(2)").html(TS);
+				var D="편제당<br>탄약 C, 식량 M 소모";
+				switch (doll.type){
+				case "hg":
+					D=D.replace("C","10").replace("M","10")
+				break;
+				case "smg":
+					D=D.replace("C","25").replace("M","20")
+				break;
+				case "ar":
+					D=D.replace("C","20").replace("M","20")
+				break;
+				case "rf":
+					D=D.replace("C","15").replace("M","30")
+				break;
+				case "mg":
+					D=D.replace("C","40").replace("M","30")
+				break;
+				case "sg":
+					D=D.replace("C","30").replace("M","40")
+				break}
+				$(".text-center").html(TS);
+				$(".w3-padding").append(D);
 				rCh=new Chart(ctx,{type:'radar',data:statisticschart,options:chartOptions});
 				rCh.update();
 			}
