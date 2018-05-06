@@ -72,9 +72,7 @@
 <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@10/dist/lazyload.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
 <script>new LazyLoad({elements_selector:"iframe"})</script>
-<script>
-$(()=>{$("#index").load("tools/index.html",()=>{$("object:nth-child(1)").ready(()=>{$(".loader").removeClass("is-active")})})});
-</script>
+<script>$(()=>{$("#index").load("tools/index.html",()=>{$("object:nth-child(1)").ready(()=>{$(".loader").removeClass("is-active")})})});</script>
 <script src="js/index.js"></script>
 <!-- <script src="js/search.js"></script> -->
 </body>

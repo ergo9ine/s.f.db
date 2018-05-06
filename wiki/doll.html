@@ -13,7 +13,7 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
 <body>
-<div class="loader loader-border is-active" data-blink data-text="로딩중"></div>
+<div class="loader loader-border is-active w3-display-container" data-blink data-text="Loading..."><object class="w3-display-topmiddle" type="image/svg+xml" data="../img/logo/SFDB_main.svg"></object></div>
 <div class="w3-bar w3-black	w3-hide-small"style="padding:3px 0">
 	<div class="w3-half">필터:
 		<div class="btn btn-light btn-sm">All</div>
@@ -76,7 +76,7 @@
 <input type="text" placeholder="검색" class="w3-input" id="search">
 <div class="w3-center grid ctr w3-hide" id="grid"></div>
 <style>
-	#sdc,#chart,#stat,#sec-fir,#sec-sec,#doll,#equip,#dolltext,#dolllore,.w3-orange{
+	#sdc,#chart,#stat,#sec-fir,#sec-sec,#doll,#equip,#dolltext,#dolllore{
 		outline:1px solid grey
 	}
 	.ntg{margin-left:-1px}
@@ -174,8 +174,8 @@
 					<div class="w3-display-middle w3-center" style="width:150px;height:35px;color:#fff;font-size:1.5em">ETC</div>
 				</div>
 				<div class="w3-half" id="sec-fir">
-					<div class="w3-container w3-orange">TileBuff</div>
-					<div class="w3-row d-flex" style="height:77.2px">
+					<div class="w3-container w3-rightbar w3-leftbar w3-border-white w3-amber w3-border-orange w3-hover-border-black">TileBuff</div>
+					<div class="w3-row d-flex w3-rightbar w3-leftbar w3-border-white w3-hover-border-black" style="height:77.2px">
 						<div class="w3-container" style="height:100%">
 							<div style="margin:auto 10px;width:75px;height:75px">
 							<div class="row1" style="display:flex">
@@ -199,12 +199,12 @@
 						</div>
 					</div>
 					<div class="w3-row" style="height:100px">
-						<div class="w3-container w3-orange">Cost</div>
-						<div class="w3-container w3-padding"></div>
+						<div class="w3-container w3-rightbar w3-leftbar w3-border-white w3-amber w3-border-orange w3-hover-border-grey">Cost</div>
+						<div class="w3-container w3-rightbar w3-leftbar w3-border-white w3-hover-border-grey w3-padding" style="height:77.2px"></div>
 					</div>
 					<div class="w3-row" style="height:100px">
-						<div class="w3-container w3-orange">Skill</div>
-						<div class="w3-container w3-padding"></div>
+						<div class="w3-container w3-rightbar w3-leftbar w3-border-white w3-amber w3-border-orange w3-hover-border-black">Skill</div>
+						<div class="w3-container w3-rightbar w3-leftbar w3-border-white w3-hover-border-black w3-padding" style="height:77.2px"></div>
 					</div>
 				</div>
 				<div class="w3-half" id="sec-sec">

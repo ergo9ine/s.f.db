@@ -20,6 +20,7 @@
 <meta name="twiiter:image" content="http://sf2031.com/img/html/og_icon.png">
 <link rel="icon" sizes="128x128" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/bootstrap@4/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pure-css-loader@3.1.2/dist/loader-border.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="css/css_overwrite.css">
 <link rel="stylesheet" href="css/index.css">
@@ -283,9 +284,7 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@10/dist/lazyload.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-$(()=>{$("#index").load("tools/index.html");});
-</script>
+<script>$(()=>{$("#index").load("tools/index.html",()=>{$("object:nth-child(1)").ready(()=>{$(".loader").removeClass("is-active")})})});</script>
 <script src="js/index.js"></script>
 <script src="js/simulator.js"></script>
 </body>
