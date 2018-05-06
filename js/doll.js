@@ -1,4 +1,4 @@
-var dollData=[],w3img='<img class="w3-image w3-grey" width="256" height="256">',idir='../img/t_doll/';
+var dollData=[],w3img='<img class="w3-image w3-grey" width="256" height="256">',idir='../img/t_doll/',loader=$(".loader");
 $(document).ready(()=>{
 	contentsload();
 	$('[data-toggle="popover"]').popover();
@@ -42,7 +42,7 @@ function loadComplete(){
 			rarity:(item,element)=>element.getAttribute('data-rarity')
 		},layout:{fillGaps:true,rounding:true}
 	});
-	$(".loader").removeClass("is-active");
+	loader.removeClass("is-active");
 	$('#search').quicksearch('.item',{
 		noResults:"#noResultMessage",
 		'bind':'keyup keydown click input',
@@ -192,7 +192,9 @@ function loadComplete(){
 						borderWidth:1
 					}]
 				},
-				chartOptions={maintainAspectRatio:false,title:{display:false},scale:{ticks:{fontSize:9,beginAtZero:true}},scaleLabel:{display:false}};
+				chartOptions={maintainAspectRatio:false,title:{display:false},scale:{ticks:{fontSize:9,beginAtZero:true}},scaleLabel:{display:false}},
+				TS="타일 위 타겟에게",
+				D="편제당<br>탄약 C, 식량 M 소모";
 				if (doll.mod=="true") {
 					statisticschart.labels=["체력","화력","회피","사속","명중"];
 					statisticschart.datasets[0].data=[doll.hp.mod3,doll.dmg.mod3,doll.dodge.mod3,doll.FoR.mod3,doll.hit.mod3];
@@ -204,26 +206,32 @@ function loadComplete(){
 				case "hg":
 					statisticschart.datasets[1].label="HG평균"
 					statisticschart.datasets[1].data=[71,31,79,58,55]
+					D=D.replace("C","10").replace("M","10")
 				break;
 				case "smg":
 					statisticschart.datasets[1].label="SMG평균"
 					statisticschart.datasets[1].data=[183,28,70,86,13]
+					D=D.replace("C","25").replace("M","20")
 				break;
 				case "ar":
 					statisticschart.datasets[1].label="AR평균"
 					statisticschart.datasets[1].data=[115,51,43,72,47]
+					D=D.replace("C","20").replace("M","20")
 				break;
 				case "rf":
 					statisticschart.datasets[1].label="RF평균"
 					statisticschart.datasets[1].data=[86,128,33,34,74]
+					D=D.replace("C","15").replace("M","30")
 				break;
 				case "mg":
 					statisticschart.datasets[1].label="MG평균"
 					statisticschart.datasets[1].data=[171,89,28,119,28]
+					D=D.replace("C","40").replace("M","30")
 				break;
 				case "sg":
 					statisticschart.datasets[1].label="SG평균"
 					statisticschart.datasets[1].data=[261,32,11,28,11]
+					D=D.replace("C","30").replace("M","40")
 				break};
 				var TS="타일 위 타겟에게";
 				switch (doll.Fx.target){
@@ -272,28 +280,8 @@ function loadComplete(){
 						TS=TS+"<br>장갑 "+value+"%증가"
 					break};
 				});
-				var D="편제당<br>탄약 C, 식량 M 소모";
-				switch (doll.type){
-				case "hg":
-					D=D.replace("C","10").replace("M","10")
-				break;
-				case "smg":
-					D=D.replace("C","25").replace("M","20")
-				break;
-				case "ar":
-					D=D.replace("C","20").replace("M","20")
-				break;
-				case "rf":
-					D=D.replace("C","15").replace("M","30")
-				break;
-				case "mg":
-					D=D.replace("C","40").replace("M","30")
-				break;
-				case "sg":
-					D=D.replace("C","30").replace("M","40")
-				break}
 				$(".text-center").html(TS);
-				$(".w3-padding").append(D);
+				$(".w3-row:nth-child(3)>div:nth-child(2)").append(D);
 				rCh=new Chart(ctx,{type:'radar',data:statisticschart,options:chartOptions});
 				rCh.update();
 			}
@@ -327,9 +315,11 @@ function SKB(){
 			imgM=imgsrc.indexOf('_d');
 			imgT=imgsrc.slice(0,-2);
 			if (imgM!=-1){
-				imgtag.attr('src',idir+imgT+'.png');
+				loader.addClass("is-active");
+				imgtag.attr('src',idir+imgT+'.png').ready(()=>{loader.removeClass("is-active")});
 			} else {
-				imgtag.attr('src',idir+imgsrc+'_d.png');
+				loader.addClass("is-active");
+				imgtag.attr('src',idir+imgsrc+'_d.png').ready(()=>{loader.removeClass("is-active")});
 			}
 		} else if (iX==1){
 			imgtag.attr('src',Isrc);
