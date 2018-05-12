@@ -316,10 +316,10 @@ function SKB(){
 			imgT=imgsrc.slice(0,-2);
 			if (imgM!=-1){
 				loader.addClass("is-active");
-				imgtag.attr('src',idir+imgT+'.png').ready(()=>{loader.removeClass("is-active")});
+				(imgtag.attr('src',idir+imgT+'.png')).ready(()=>{loader.removeClass("is-active")});
 			} else {
 				loader.addClass("is-active");
-				imgtag.attr('src',idir+imgsrc+'_d.png').ready(()=>{loader.removeClass("is-active")});
+				(imgtag.attr('src',idir+imgsrc+'_d.png')).ready(()=>{loader.removeClass("is-active")});
 			}
 		} else if (iX==1){
 			imgtag.attr('src',Isrc);

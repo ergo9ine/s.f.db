@@ -1,59 +1,61 @@
 //JavaScript Document
 //index
+var TogV="invisible";
 $(document).ready(()=>{
 	$(".x").click(()=>{
-		$(this).parent().addClass("w3-hide");
+		$(this).parent().addClass(TogV);
 	});
 	$("#mom button").click(()=>{
 		if ($(this).attr("id") === "f"){
-			$("#mf").toggleClass("w3-hide");
-			$("#fo").addClass("w3-hide");
+			$("#mf").toggleClass(TogV);
+			$("#fo").addClass(TogV);
 			$("#s").toggleClass("w3-border-bottom");
 			$("#f").removeClass("w3-border-bottom");
 		}
 		if ($(this).attr("id") === "s"){
-			$("#fo").toggleClass("w3-hide");
-			$("#mf").addClass("w3-hide");
+			$("#fo").toggleClass(TogV);
+			$("#mf").addClass(TogV);
 			$("#f").toggleClass("w3-border-bottom");
 			$("#s").removeClass("w3-border-bottom");
 		}
 	});
 	$("#close,#open").click(()=>{
-		$("#Sidebar").toggleClass("w3-hide");
+		$("#Sidebar").toggleClass(TogV);
 	});
 	$("#lo,#lc").click(()=>{
-		$("#lm").toggleClass("w3-hide");
+		$("#lm").toggleClass(TogV);
 	});
 	$("#ro,#rc").click(()=>{
-		$("#rm").toggleClass("w3-hide");
+		$("#rm").toggleClass(TogV);
 	});
 	$("#info").click(()=>{
 		$(".tab").removeClass("w3-red");
 		$(this).addClass("w3-red");
-		$("#contents>div").addClass("w3-hide");
-		$("#index").removeClass("w3-hide");
+		$("#contents>div").addClass(TogV);
+		$("#index").removeClass(TogV);
 	});
 	$(".tab").click(function(){
-		var tis=$(this),Classes=(tis.attr("class")).split(" "),
-		t1="#tab1",t2="#tab2",t3="#tab3",t4="#tab4",t5="#tab5",findC=".content";
+		var tis=$(this),
+		Classes=(tis.attr("class")).split(" "),
+		T=["#tab1","#tab2","#tab3","#tab4","#tab5",".content"];
 		$("#info,.tab").removeClass("w3-red");
 		tis.addClass("w3-red");
 		for (var a=0,len=Classes.length;a<len;a++){
 			switch (Classes[a]){
 			case "m1":
-				$(t1).removeClass("w3-hide").parent().find(findC).not(t1).addClass("w3-hide")
+				$(T[0]).removeClass(TogV).parent().find(T[5]).not(T[0]).addClass(TogV)
 			break;
 			case "m2":
-				$(t2).removeClass("w3-hide").parent().find(findC).not(t2).addClass("w3-hide")
+				$(T[1]).removeClass(TogV).parent().find(T[5]).not(T[1]).addClass(TogV)
 			break;
 			case "m3":
-				$(t3).removeClass("w3-hide").parent().find(findC).not(t3).addClass("w3-hide")
+				$(T[2]).removeClass(TogV).parent().find(T[5]).not(T[2]).addClass(TogV)
 			break;
 			case "m4":
-				$(t4).removeClass("w3-hide").parent().find(findC).not(t4).addClass("w3-hide")
+				$(T[3]).removeClass(TogV).parent().find(T[5]).not(T[3]).addClass(TogV)
 			break;
 			case "m5":
-				$(t5).removeClass("w3-hide").parent().find(findC).not(t5).addClass("w3-hide")
+				$(T[4]).removeClass(TogV).parent().find(T[5]).not(T[4]).addClass(TogV)
 			break;
 			}
 		}
