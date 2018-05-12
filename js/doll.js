@@ -197,10 +197,10 @@ function loadComplete(){
 				D="편제당<br>탄약 C, 식량 M 소모";
 				if (doll.mod=="true") {
 					statisticschart.labels=["체력","화력","회피","사속","명중"];
-					statisticschart.datasets[0].data=[doll.hp.mod3,doll.dmg.mod3,doll.dodge.mod3,doll.FoR.mod3,doll.hit.mod3];
+					statisticschart.datasets[0].data=[doll.hp[2],doll.dmg[2],doll.dodge[2],doll.FoR[2],doll.hit[2]];
 				} else {
 					statisticschart.labels=["체력","화력","회피","사속","명중"];
-					statisticschart.datasets[0].data=[doll.hp[100],doll.dmg[100],doll.dodge[100],doll.FoR[100],doll.hit[100]];
+					statisticschart.datasets[0].data=[doll.hp[1],doll.dmg[1],doll.dodge[1],doll.FoR[1],doll.hit[1]];
 				};
 				switch (doll.type){
 				case "hg":
