@@ -1,24 +1,5 @@
 $(document).ready(()=>{
-	$.ajaxSetup({
-		error:function(x,e){
-			if(x.status==0){
-			alert('You are offline!!n Please Check Your Network.');
-			}else if(x.status==404){
-			alert('Requested URL not found.');
-			}else if(x.status==500){
-			alert('Internel Server Error.');
-			}else if(e=='parsererror'){
-			alert('Error.nParsing JSON Request failed.');
-			}else if(e=='timeout'){
-			alert('Request Time out.');
-			}else {
-			alert('Unknow Error.n'+x.responseText);
-			}
-		}
-	});
-	$.ajax('../json/fairy.json',{
-		contentType:'application/json',
-		dataType:'json',
+	$.ajax('../json/fairy.json',{contentType:'application/json',dataType:'json',
 		success:result=>{
 			var itemcon = '<div class="w3-hover-shadow fairy item-content">',
 			allCharacters = $.map(result,(fairy,index)=>{
@@ -29,7 +10,7 @@ $(document).ready(()=>{
 			});
 			$('.grid').append(allCharacters);
 		},
-		timeout:3000
+		timeout:10000
 	});
 }).ajaxStop(()=>{loadComplete()});
 function sortnum(){grid.sort('num')};

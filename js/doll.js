@@ -29,7 +29,8 @@ function contentsload(){
 			$('#grid').append(allCharacters);
 			loadComplete();
 			dollData=result;
-		}
+		},
+		timeout:10000
 	});
 };
 function loadComplete(){
@@ -279,7 +280,7 @@ function loadComplete(){
 					break};
 				});
 				$(".text-center").html(TS);
-				$(".w3-row:nth-child(3)>div:nth-child(2)").append(D);
+				$(".w3-row:nth-child(3)>div:nth-child(2)").html(D);
 				rCh=new Chart(ctx,{type:'radar',data:statisticschart,options:chartOptions});
 				rCh.update();
 			}
