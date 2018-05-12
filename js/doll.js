@@ -29,12 +29,10 @@ function contentsload(){
 			$('#grid').append(allCharacters);
 			loadComplete();
 			dollData=result;
-		},
-		error:(request,errorType,errorMessage)=>{alert('Error:'+errorType+' With message:'+errorMessage)},timeout:5000
+		}
 	});
 };
 function loadComplete(){
-	$('#grid').removeClass('w3-hide');
 	grid=new Muuri('#grid',{
 		sortData:{
 			time:(item,element)=>element.getAttribute('data-time'),
@@ -326,7 +324,8 @@ function SKB(){
 		} else {
 			var iX=iX-1,
 			ISrc=idir+No+'_'+iX+'.png';
-			imgtag.attr('src',ISrc);
+			loader.addClass("is-active");
+			(imgtag.attr('src',ISrc)).ready(()=>{loader.removeClass("is-active")});
 		}
 	});
 };
