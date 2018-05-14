@@ -121,7 +121,7 @@
 </div>
 </div>
 </div>
-<div id="tab1" class="content invisible"><iframe id="st" data-src="wiki/doll.html" style="height:100%;width:1px;min-width:100%;border:0;display:block" width="100%"></iframe></div>
+<div id="tab1" class="content invisible"><iframe data-src="wiki/doll.html" style="height:100%;width:1px;min-width:100%;border:0;display:block" width="100%"></iframe></div>
 <div id="tab2" class="content invisible"><iframe data-src="wiki/equip.html" style="height:100%;width:1px;min-width:100%;border:0;display:block" width="100%"></iframe></div>
 <div id="tab3" class="content invisible"><iframe data-src="wiki/fairy.html" style="height:100%;width:1px;min-width:100%;border:0;display:block" width="100%"></iframe></div>
 <div id="tab4" class="content bg-dark text-white invisible">
@@ -366,6 +366,9 @@
 <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@10/dist/lazyload.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/index.js"></script>
+<script>
+var LazyLoad=new LazyLoad({elements_selector:"iframe"});
+</script>
 <!-- <script src="js/search.js"></script> -->
 </body>
 </html>
