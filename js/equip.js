@@ -23,16 +23,16 @@ $("select").change(()=>{
 		switch (query){
 		case "기본":
 			new Muuri('.grid',{sordData:null});
-		break;
+		break
 		case "등급":
 			sortrarity();
-		break;
+		break
 		case "제조시간":
 			sorttime();
-		break;
+		break
 		case "종류":
 			sorttype();
-		break;
+		break
 		};
 	});
 });

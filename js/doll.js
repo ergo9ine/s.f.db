@@ -289,7 +289,7 @@ function loadComplete(){
 	$(".xfunc").click(()=>{
 		togglecon();
 		$(".w3-image").remove();
-		$('[data-toggle="popover"]').popover('hide')
+		$('[data-toggle="popover"]').popover('hide');
 		rCh.destroy();
 		$(".skinntg>button").off("click")
 	});

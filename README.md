@@ -12,3 +12,6 @@
 - @ergo9ine (Publisher)
 - @mamiller (Layout Design)
 - @kosehy (Dorm - Battery calclator part/doll.json)
+
+# Thanks
+- [@KOZ39](https://github.com/KOZ39) - [gfOperationReportCalculator](https://github.com/KOZ39/gfOperationReportCalculator)
