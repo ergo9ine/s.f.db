@@ -279,8 +279,8 @@ function loadComplete(){
 						TS=TS+"<br>장갑 "+value+"%증가"
 					break};
 				});
-				$(".text-center").html(TS);
-				$(".w3-row:nth-child(3)>div:nth-child(2)").html(D);
+				$("#sec-fir>div:nth-child(1)>div:nth-child(2)>div:nth-child(2)").html(TS);
+				$("div.w3-container:nth-child(2)").html(D);
 				rCh=new Chart(ctx,{type:'radar',data:statisticschart,options:chartOptions});
 				rCh.update();
 			}

@@ -9714,22 +9714,6 @@
 			"attribute":"stun",
 			"value":{"0":1,"1":20,"10":40},
 			"time":{"1":2,"10":3.5}
-		},{
-			"filter":"active",
-			"type":"buff",
-			"target":"self_aura_grid",
-			"targetTypes":["rf","ar"],
-			"attribute":"dmg",
-			"value":{"1":10,"10":22},
-			"time":{"1":5,"10":8}
-		},{
-			"filter":"active",
-			"type":"buff",
-			"target":"self_aura_grid",
-			"targetTypes":["mg","sg"],
-			"attribute":"hit",
-			"value":{"1":40,"10":80},
-			"time":{"1":5,"10":8}
 		}],
 		"id":16,
 		"dataPool":{
