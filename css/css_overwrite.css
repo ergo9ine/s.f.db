@@ -11,4 +11,4 @@
 .item.muuri-item-hidden {
 	z-index:0;
 }
-.w3-display-topmiddle{width:100%!important}.loader>object::after{animation: blink 1s linear infinite alternate!important}.loader[data-text]::before{font-size:5em!important}
+object.w3-display-topmiddle{width:100%!important}.loader>object::after{animation: blink 1s linear infinite alternate!important}.loader[data-text]::before{font-size:5em!important}

@@ -1,4 +1,4 @@
-var dollData=[],w3img='<img class="w3-image w3-grey" width="256" height="256">',idir='../img/t_doll/',loader=$(".loader");
+var dollData=[],dollSkill=[],w3img='<img class="w3-image w3-grey" width="256" height="256">',idir='../img/t_doll/',loader=$(".loader");
 $(document).ready(()=>{
 	contentsload();
 	$('[data-toggle="popover"]').popover();
@@ -7,13 +7,9 @@ function contentsload(){
 	$.ajax('../json/doll.json',{contentType:'application/json',dataType:'json',
 		success:result=>{
 			var itemcon='<div class="w3-hover-shadow tdoll item-content">',
-			allCharacters=$.map(result,(doll,index)=>{
-				var timehour=parseInt(doll.buildTime/3600),
-				timemin=doll.buildTime%3600/60,
-				noval=doll.id;
-				switch (noval == noval){
-				case noval>20000:noval="M"+(doll.id-20000);break;
-				case noval>1000:noval="X"+(doll.id-1000);break;
+			allCharacters=$.map(result,(doll,index)=>{var timehour=parseInt(doll.buildTime/3600),timemin=doll.buildTime%3600/60,noval=doll.id;
+				switch(noval){
+				case noval>20000:noval="M"+(doll.id-20000);break;case noval>1000:noval="X"+(doll.id-1000);break;
 				}
 				character=$(`<div class="item" data-time="${timehour}${timemin}" data-type="${doll.type}" data-rarity="${doll.rarity}"></div>`).detach(),
 				dollcon=`<div class="w3-text-white no" data-no="${doll.id}">${noval}</div>
@@ -162,7 +158,7 @@ function loadComplete(){
 				$(".skinntg").append(skins);
 				SKB();
 				$('.w3-row:nth-child(7)>div:nth-child(1)').append(w3img);
-				$(".w3-row>div:nth-child(1)>img:nth-child(1)").attr("src",cimg).removeClass("w3-grey").removeAttr("width height");
+				$(".w3-image").attr("src",cimg).removeClass("w3-grey").removeAttr("width height");
 				$(".w3-left-align:nth-child(1)>div:nth-child(1)>div:nth-child(3)").html(doll.voice);
 				$(".w3-left-align:nth-child(1)>div:nth-child(3)>div:nth-child(3)").html(doll.illust);
 				$(".w3-display-container:nth-child(5)>div:nth-child(3)").html(doll.name);
@@ -192,8 +188,7 @@ function loadComplete(){
 					}]
 				},
 				chartOptions={maintainAspectRatio:false,title:{display:false},scale:{ticks:{fontSize:9,beginAtZero:true}},scaleLabel:{display:false}},
-				TS="타일 위 타겟에게",
-				D="편제당<br>탄약 C, 식량 M 소모";
+				TS="타일 위 타겟에게",D="편제당<br>탄약 C, 식량 M 소모",dollSkill=["AimAttackCurrentTarge","AimAttackDistanceTarge","AimAttackSpecificTarge","airattack","airborne","AK12Buff","AN94Shot","AR15Shot","armor","armorBuff","armorBuffSelf","armorDebuff","armorDebuffSelf","BBNoel","bombard","Bronya","buff","Carcano1891","Carcano1938","CBJMS","Chloe","CLEAR","Coldweapon","comboBuffSelf","command","crit","critBuff","critBuffSelf","debuff","defense","dodgeBuff","dodgeBuffSelf","dodgeDebuff","empty","FAIL","fighting","Flare","Flashbomb","fortress","GGElfeldt","golden","Grenade","Himeko","hitBuff","hitBuffSelf","hitDebuff","illumine","Invincible","Invincible35","IWantU","Kaguya","Kiana","LadyMadeSTAR","Landmines","M4Nightmare","M1918","MosinNagant","Napalm","nightcritBuff","nightcritBuff38","nightcritBuffSelf","nightdodgeBuff","nightdodgeBuffSelf","nightdodgeDebuff","nighthitBuff","nighthitBuffSelf","nighthitDebuff","nightpowBuff","nightpowBuffSelf","nightpowDebuff","nightrateBuff","nightrateBuffSelf","nightrateDebuff","nightspeedDebuff","nighttargetdodgeDebuff","nighttargethitDebuff","nighttargetpowDebuff","nighttargetrateDebuff","nighttargetspeedDebuff","Noconsumption","position","powBuff","powBuffSelf","powBuffShield","powDebuff","RaidenMei","rateBuff","rateBuffSelf","rateDebuff","reinforce","rescue","RifleGrenade","roadblocks","Sakura","Seele","shield","Shotgun","Smoke","sniper","speedDebuff","target","targetdodgeDebuff","targethitDebuff","targetpowDebuff","targetrateDebuff","targetspeedDebuff","Theresa","VariableBuff"];
 				if (doll.mod=="true") {
 					statisticschart.labels=["체력","화력","회피","사속","명중"];
 					statisticschart.datasets[0].data=[doll.hp[2],doll.dmg[2],doll.dodge[2],doll.FoR[2],doll.hit[2]];
@@ -205,82 +200,50 @@ function loadComplete(){
 				case "hg":
 					statisticschart.datasets[1].label="HG평균"
 					statisticschart.datasets[1].data=[71,31,79,58,55]
-					D=D.replace("C","10").replace("M","10")
-				break;
+					D=D.replace("C","10").replace("M","10");break;
 				case "smg":
 					statisticschart.datasets[1].label="SMG평균"
 					statisticschart.datasets[1].data=[183,28,70,86,13]
-					D=D.replace("C","25").replace("M","20")
-				break;
+					D=D.replace("C","25").replace("M","20");break;
 				case "ar":
 					statisticschart.datasets[1].label="AR평균"
 					statisticschart.datasets[1].data=[115,51,43,72,47]
-					D=D.replace("C","20").replace("M","20")
-				break;
+					D=D.replace("C","20").replace("M","20");break;
 				case "rf":
 					statisticschart.datasets[1].label="RF평균"
 					statisticschart.datasets[1].data=[86,128,33,34,74]
-					D=D.replace("C","15").replace("M","30")
-				break;
+					D=D.replace("C","15").replace("M","30");break;
 				case "mg":
 					statisticschart.datasets[1].label="MG평균"
 					statisticschart.datasets[1].data=[171,89,28,119,28]
-					D=D.replace("C","40").replace("M","30")
-				break;
+					D=D.replace("C","40").replace("M","30");break;
 				case "sg":
 					statisticschart.datasets[1].label="SG평균"
 					statisticschart.datasets[1].data=[261,32,11,28,11]
-					D=D.replace("C","30").replace("M","40")
-				break};
+					D=D.replace("C","30").replace("M","40");break};
 				var TS="타일 위 타겟에게";
 				switch (doll.Fx.target){
-				case "all":
-					TS=TS.replace("타겟","모든 총기")
-				break;
-				case "hg":
-					TS=TS.replace("타겟","HG")
-				break;
-				case "smg":
-					TS=TS.replace("타겟","SMG")
-				break;
-				case "ar":
-					TS=TS.replace("타겟","AR")
-				break;
-				case "rf":
-					TS=TS.replace("타겟","RF")
-				break;
-				case "mg":
-					TS=TS.replace("타겟","MG")
-				break;
-				case "sg":
-					TS=TS.replace("타겟","SG")
-				break};
+				case "all":TS=TS.replace("타겟","모든 총기");break;
+				case "hg":TS=TS.replace("타겟","HG");break;
+				case "smg":TS=TS.replace("타겟","SMG");break;
+				case "ar":TS=TS.replace("타겟","AR");break;
+				case "rf":TS=TS.replace("타겟","RF");break;
+				case "mg":TS=TS.replace("타겟","MG");break;
+				case "sg":TS=TS.replace("타겟","SG");break};
 				$.each(doll.Fx.TileFx,(index,value)=>{
 					switch (index){
-					case "dmg":
-						TS=TS+"<br>화력 "+value+"%증가"
-					break;
-					case "dodge":
-						TS=TS+"<br>회피 "+value+"%증가"
-					break;
-					case "hit":
-						TS=TS+"<br>명중 "+value+"%증가"
-					break;
-					case "FoR":
-						TS=TS+"<br>사속 "+value+"%증가"
-					break;
-					case "crit":
-						TS=TS+"<br>치명타율 "+value+"%증가"
-					break;
-					case "time":
-						TS=TS+"<br>쿨타임 "+value+"%감소"
-					break;
-					case "armor":
-						TS=TS+"<br>장갑 "+value+"%증가"
-					break};
+					case "dmg":TS=`${TS}<br>화력 ${value}%증가`;break;
+					case "dodge":TS=`${TS}<br>회피 ${value}%증가`;break;
+					case "hit":TS=`${TS}<br>명중 ${value}%증가`;break;
+					case "FoR":TS=`${TS}<br>사속 ${value}%증가`;break;
+					case "crit":TS=`${TS}<br>치명타율 ${value}%증가`;break;
+					case "time":TS=`${TS}<br>쿨타임 ${value}%감소`;break;
+					case "armor":TS=`${TS}<br>장갑 ${value}%증가`;break};
 				});
 				$("#sec-fir>div:nth-child(1)>div:nth-child(2)>div:nth-child(2)").html(TS);
 				$("div.w3-container:nth-child(2)").html(D);
+				$(".text-center:nth-child(1)").append(w3img)
+				$("div.w3-row:nth-child(3)>div:nth-child(2)>img").attr('src',"../img/etc/skill/"+dollSkill[doll.skill.src]+".png")
 				rCh=new Chart(ctx,{type:'radar',data:statisticschart,options:chartOptions});
 				rCh.update();
 			}
