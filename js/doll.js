@@ -108,9 +108,7 @@ function loadComplete(){
 				$(".dollname span").html(doll.krName);
 				$(".skins").remove();
 				skins=[];
-				$.each(doll.skins,(index,value)=>{
-					skins.push(`<button class="w3-button w3-round-xxlarge w3-hover-text-white w3-hover-orange skins" style="background-color:#feb976;color:#fff;margin:2.5px">${value}</button>`)
-				});
+				$.each(doll.skins,(index,value)=>{skins.push(`<button class="w3-button w3-round-xxlarge w3-hover-text-white w3-hover-orange skins" style="background-color:#feb976;color:#fff;margin:2.5px">${value}</button>`)});
 				$(".skinntg").append(skins);
 				$('.w3-row:nth-child(7)>div:nth-child(1)').append(w3img);
 				$(".w3-image").attr("src",cimg).removeClass("w3-grey").removeAttr("width height");
