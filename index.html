@@ -27,53 +27,51 @@
 <title>SANGVIS FERRI DATABASE</title>
 </head>
 <body>
-<div id="Sidebar" class="w3-sidebar w3-bar-block bg-dark text-white invisible"><!-- 데스크탑 -->
-<button id="close" class="btn btn-dark rounded-0 w3-bar-item w3-display-container w3-border-bottom w3-border-right" style="height:34px"><p class="w3-display-middle align-text-top" style="color:#fff">×</p></button>
-<div class="logo w3-margin-bottom w3-margin-top text-center"><img src="img/logo/sidebar_gflogo.png" id="slogo"></div>
-<a class="w3-bar-item w3-button">도감</a>
-<a class="w3-bar-item w3-button">시뮬레이터</a>
-<a class="w3-bar-item w3-button w3-red" href="#">정보</a>
-<a class="w3-bar-item w3-button w3-disabled" href="#">About</a>
-<a class="w3-bar-item w3-button" href="https://discordapp.com/invite/7ZKwBrA" target="_parent">Contact</a>
+<div id="Sidebar" class="d-flex flex-column btn-dark bg-dark text-white invisible"><!-- 데스크탑 -->
+<button id="close" class="btn btn-dark rounded-0 w3-display-container w3-border-bottom w3-border-right"><p class="w3-display-middle">×</p></button>
+<div class="logo w3-section text-center"><img src="img/logo/sidebar_gflogo.png" id="slogo"></div>
+<button class="btn btn-dark">도감</button>
+<button class="btn btn-dark">시뮬레이터</button>
+<button class="btn btn-dark w3-red" href="#">정보</button>
+<button class="btn btn-dark" href="#" disabled>About</button>
+<button class="btn btn-dark" href="https://discordapp.com/invite/7ZKwBrA" target="_parent">Contact</button>
 </div>
-<div class="w3-bar bg-dark text-white d-none d-md-block">
-<a id="open" class="w3-bar-item w3-button w3-small">Menu</a>
-<a class="m1 w3-bar-item w3-button w3-small tab">인형 도감</a>
-<a class="m2 w3-bar-item w3-button w3-small tab">장비 도감</a>
-<a class="m3 w3-bar-item w3-button w3-small tab">요정 도감</a>
-<a class="m4 w3-bar-item w3-button w3-small tab" style="display:none">작전보고서 계산기</a>
-<a class="m5 w3-bar-item w3-button w3-small tab" style="display:none">전지 계산기</a>
-<a class="m6 w3-bar-item w3-button w3-small tab" style="display:none">강화 시뮬레이터</a>
+<div class="bg-dark text-white d-none d-md-block">
+<button id="open" class="btn btn-dark btn-sm">Menu</button>
+<button class="m1 btn btn-dark btn-sm tab">인형 도감</button>
+<button class="m2 btn btn-dark btn-sm tab">장비 도감</button>
+<button class="m3 btn btn-dark btn-sm tab">요정 도감</button>
+<button class="m4 btn btn-dark btn-sm tab" style="display:none">작전보고서 계산기</button>
+<button class="m5 btn btn-dark btn-sm tab" style="display:none">전지 계산기</button>
+<button class="m6 btn btn-dark btn-sm tab" style="display:none">강화 시뮬레이터</button>
 </div>
-<div id="lm" class="w3-sidebar w3-bar-block bg-dark text-white text-center invisible" style="z-index:16"><!-- 모바일 -->
-<button id="lc" class="btn btn-dark rounded-0 w3-bar-item w3-display-container w3-border-bottom w3-border-right" style="height:34px"><p class="w3-display-middle align-text-top" style="color:#fff">×</p></button>
-<a class="w3-bar-item w3-button">도감</a>
-<a class="w3-bar-item w3-button">시뮬레이터</a>
-<a class="w3-bar-item w3-button w3-red" href="#">정보</a>
-<a class="w3-bar-item w3-button w3-disabled" href="#" target="_parent">About</a>
-<a class="w3-bar-item w3-button" href="https://discordapp.com/invite/7ZKwBrA" target="_parent">Contact</a>
+<div id="lm" class="d-flex flex-column bg-dark text-white text-center invisible" style="z-index:16"><!-- 모바일 -->
+<button id="lc" class="btn btn-dark rounded-0 w3-display-container w3-border-bottom w3-border-right"><p class="w3-display-middle">×</p></button>
+<button class="btn btn-dark">도감</button>
+<button class="btn btn-dark">시뮬레이터</button>
+<button class="btn btn-dark w3-red" href="#">정보</button>
+<button class="btn btn-dark" href="#" target="_parent" disabled>About</button>
+<button class="btn btn-dark" href="https://discordapp.com/invite/7ZKwBrA" target="_parent">Contact</button>
 </div>
-<div id="rm" class="w3-sidebar w3-bar-block bg-dark text-white text-center invisible" style="z-index:16">
-<button id="rc" class="btn btn-dark rounded-0 w3-bar-item w3-display-container w3-border-bottom w3-border-left" style="height:34px"><p class="w3-display-middle align-text-top" style="color:#fff">×</p></button>
-<a class="m1 w3-bar-item w3-button tab">인형 도감</a>
-<a class="m2 w3-bar-item w3-button tab">장비 도감</a>
-<a class="m3 w3-bar-item w3-button tab">요정 도감</a>
-<a class="m4 w3-bar-item w3-button tab" style="display:none">작전보고서 계산기</a>
-<a class="m5 w3-bar-item w3-button tab" style="display:none">전지 계산기</a>
-<a class="m6 w3-bar-item w3-button tab" style="display:none">강화 시뮬레이터</a>
+<div id="rm" class="d-flex flex-column bg-dark text-white text-center invisible" style="z-index:16">
+<button id="rc" class="btn btn-dark rounded-0 w3-display-container w3-border-bottom w3-border-left"><p class="w3-display-middle">×</p></button>
+<button class="m1 btn btn-dark tab">인형 도감</button>
+<button class="m2 btn btn-dark tab">장비 도감</button>
+<button class="m3 btn btn-dark tab">요정 도감</button>
+<button class="m4 btn btn-dark tab" style="display:none">작전보고서 계산기</button>
+<button class="m5 btn btn-dark tab" style="display:none">전지 계산기</button>
+<button class="m6 btn btn-dark tab" style="display:none">강화 시뮬레이터</button>
 </div>
-<div class="w3-bar text-center bg-dark text-white d-md-none w3-display-container">
-<a id="lo" class="w3-bar-item w3-button w3-small w3-left">LeftMenu</a>
+<div class="text-center bg-dark text-white d-md-none w3-display-container">
+<button id="lo" class="btn btn-dark btn-sm float-left">LeftMenu</button>
 <div class="w3-display-middle">SFDB</div>
-<a id="ro" class="w3-bar-item w3-button w3-small w3-right">RightMenu</a>
+<button id="ro" class="btn btn-dark btn-sm float-right">RightMenu</button>
 </div>
 <div id="contents">
 <div id="index" class="content">
 <div class="ctr" style="max-width:1200px">
 <div class="ctr" style="width:50%"><object type="image/svg+xml" data="img/logo/SFDB_main.svg"></object></div>
-<div class="progress">
-<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" style="width:82%">SANGVIS FERRI DATABASE Loading... 82%</div>
-</div>
+<div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100" style="width:83%">SANGVIS FERRI DATABASE Loading... 83%</div></div>
 <div>
 <div class="w3-half w3-padding">
 <i class="nt"><div class="w3-text-white ntl">공지사항</div></i>

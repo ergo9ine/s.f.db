@@ -45,13 +45,13 @@ $("#lm").toggleClass(TogV);
 $("#ro,#rc").click(()=>{
 $("#rm").toggleClass(TogV);
 });
-$("#Sidebar>a:nth-child(3),#lm>a:nth-child(2)").click(()=>{
-$("div.w3-bar:nth-child(2)>a:eq(0)~a:hidden,#rm>a:hidden").css("display","block");
-$("div.w3-bar:nth-child(2)>a:eq(3)~a:visible,#rm>a:eq(2)~a:visible").css("display","none");
+$("#Sidebar>button:nth-child(3),#lm>button:nth-child(2)").click(()=>{
+$("body>div:nth-child(2)>button:hidden,#rm>button:hidden").css("display","inline-block");
+$("body>div:nth-child(2)>button:eq(3)~button:visible,#rm>button:eq(3)~button:visible").css("display","none");
 });
-$("#Sidebar>a:nth-child(4),#lm>a:nth-child(3)").click(()=>{
-$("div.w3-bar:nth-child(2)>a:eq(0)~a:visible,#rm>a:visible").css("display","none");
-$("div.w3-bar:nth-child(2)>a:eq(3)~a:hidden,#rm>a:eq(2)~a:hidden").css("display","block");
+$("#Sidebar>button:nth-child(4),#lm>button:nth-child(3)").click(()=>{
+$("body>div:nth-child(2)>button:eq(0)~button:visible,#rm>button:eq(0)~button:visible").css("display","none");
+$("body>div:nth-child(2)>button:eq(3)~button:hidden,#rm>button:eq(3)~button:hidden").css("display","inline-block");
 });
 $("#Sidebar>a:nth-child(5)").click(function(){
 $(".tab").removeClass("w3-red");
@@ -61,22 +61,25 @@ $("#index").removeClass(TogV);
 $("#result").empty();
 });
 $(".tab").click(function(){
-var tis=$(this),Classes=(tis.attr("class")).split(" "),T=["#tab1","#tab2","#tab3","#tab4","#tab5","#tab6","#tab7","#tab8","#tab9","#tab10",".content"];
+var tis=$(this),Classes=(tis.attr("class")).split(" "),T=["#tab1","#tab2","#tab3","#tab4","#tab5","#tab6","#tab7","#tab8","#tab9","#tab10"];
 $("#Sidebar>a,.tab").removeClass("w3-red");
 $("#result").empty();
 tis.addClass("w3-red");
 for (var a=0,len=Classes.length;a<len;a++){
 switch (Classes[a]){
-case "m1":$(T[0]).removeClass(TogV).parent().find(T[10]).not(T[0]).addClass(TogV);break
-case "m2":$(T[1]).removeClass(TogV).parent().find(T[10]).not(T[1]).addClass(TogV);break
-case "m3":$(T[2]).removeClass(TogV).parent().find(T[10]).not(T[2]).addClass(TogV);break
-case "m4":$(T[3]).removeClass(TogV).parent().find(T[10]).not(T[3]).addClass(TogV);break
-case "m5":$(T[4]).removeClass(TogV).parent().find(T[10]).not(T[4]).addClass(TogV);break
-case "m6":$(T[5]).removeClass(TogV).parent().find(T[10]).not(T[5]).addClass(TogV);break
-case "m7":$(T[6]).removeClass(TogV).parent().find(T[10]).not(T[6]).addClass(TogV);break
-case "m8":$(T[7]).removeClass(TogV).parent().find(T[10]).not(T[7]).addClass(TogV);break
-case "m9":$(T[8]).removeClass(TogV).parent().find(T[10]).not(T[8]).addClass(TogV);break
-case "m10":$(T[9]).removeClass(TogV).parent().find(T[10]).not(T[9]).addClass(TogV);break
+case "m1":hidden(0);break
+case "m2":hidden(1);break
+case "m3":hidden(2);break
+case "m4":hidden(3);break
+case "m5":hidden(4);break
+case "m6":hidden(5);break
+case "m7":hidden(6);break
+case "m8":hidden(7);break
+case "m9":hidden(8);break
+case "m10":hidden(9);break
+}
+function hidden(x){
+$(T[x]).removeClass(TogV).parent().find(".content").not(T[x]).addClass(TogV)
 }
 }
 });

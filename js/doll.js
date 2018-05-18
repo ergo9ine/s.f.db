@@ -87,13 +87,13 @@ function loadComplete(){
 			};
 		});
 	});
-	$("button.w3-bar-item:nth-child(1)").click(()=>{
-		$("div.w3-bar:nth-child(3)").removeClass("w3-hide")
-		$("div.w3-bar:nth-child(4)").addClass("w3-hide")
+	$("button.flex-fill:nth-child(1)").click(()=>{
+		$("div.justify-content-center:nth-child(3)").toggleClass("d-none")
+		$("div.justify-content-center:nth-child(4)").addClass("d-none")
 	});
-	$("button.w3-bar-item:nth-child(2)").click(()=>{
-		$("div.w3-bar:nth-child(4)").removeClass("w3-hide")
-		$("div.w3-bar:nth-child(3)").addClass("w3-hide")
+	$("button.flex-fill:nth-child(2)").click(()=>{
+		$("div.justify-content-center:nth-child(4)").toggleClass("d-none")
+		$("div.justify-content-center:nth-child(3)").addClass("d-none")
 	});
 	$(".item-content").click(function(){
 		togglecon();
