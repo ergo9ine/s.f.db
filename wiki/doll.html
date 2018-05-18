@@ -76,10 +76,11 @@
 <input type="text" placeholder="검색" class="w3-input" id="search">
 <div class="text-center grid ctr" id="grid"></div>
 <style>
-#sdc,#chart,#stat,#sec-fir,#sec-sec,#doll,#equip,#dolltext,#dolllore{
-		outline:1px solid grey
-	}
-	.ntg{margin-left:-1px}
+#sdc,#chart,#stat,#sec-fir,#sec-sec,#doll,#equip,#dolltext,#dolllore{outline:1px solid grey}
+.ntg{margin-left:-1px;width:200px;height:35px}
+.row1>div,.row2>div,.row3>div{width:25px;height:25px}
+#sec-fir>.w3-row{height:100px}
+#sec-fir>.w3-row>div:nth-child(2){height:77.2px}
 </style>
 <div class="w3-hide" id="func">
 	<div class="w3-container" id="contents">
@@ -118,7 +119,7 @@
 							</div>
 							</div>
 						</div>
-						<div class="ntg w3-row">
+						<div class="w3-row">
 							<div class="w3-row w3-left-align" style="margin-top:20px;color:#fff">
 							<div class="w3-display-container" style="height:35px">
 								<svg width="125" height="35"><polygon fill="grey" points="0,0 0,35 0,35 100,35 125,0"></polygon></svg>
@@ -155,10 +156,10 @@
 					</div>
 				</div>
 				<div class="w3-twothird" style="max-height:400px">
-					<div class="ntg w3-row" style="position:relative;height:35px;width:200px">
+					<div class="ntg w3-row">
 						<div class="w3-display-container" style="width:150px;height:35px">
 						<svg width="200" height="35"><polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon></svg>
-						<div class="w3-display-middle text-center" style="width:150px;height:35px;color:#fff;font-size:1.5em">Statistics Chart</div>
+						<div class="w3-display-left text-center" style="width:150px;height:35px;color:#fff;font-size:1.5em">Chart</div>
 						</div>
 					</div>
 					<div class="w3-row" id="chart" style="height:365px">
@@ -167,48 +168,46 @@
 				</div>
 			</div>
 			<div class="w3-col l7 w3-section">
-				<div class="ntg w3-display-container" style="width:150px;height:35px">
+				<div class="ntg w3-display-container">
 					<svg width="200" height="35">
 						<polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon>
 					</svg>
-					<div class="w3-display-middle text-center" style="width:150px;height:35px;color:#fff;font-size:1.5em">ETC</div>
+					<div class="w3-display-left text-center" style="width:150px;height:35px;color:#fff;font-size:1.5em">ETC</div>
 				</div>
 				<div class="w3-half" id="sec-fir">
-					<div class="w3-row" style="height:100px">
+					<div class="w3-row">
 						<div class="w3-amber">TileBuff</div>
-						<div class="w3-row d-flex w3-rightbar w3-leftbar w3-border-white w3-hover-border-black" style="height:77.2px">
+						<div class="w3-row d-flex w3-rightbar w3-leftbar w3-border-white w3-hover-border-black">
 						<div style="margin:auto">
 							<div class="row1" style="display:flex">
-								<div class="w3-border w3-border-black w3-grey" id="grid1" style="width:25px;height:25px"></div>
-								<div class="w3-border w3-border-black w3-grey" id="grid2" style="width:25px;height:25px"></div>
-								<div class="w3-border w3-border-black w3-grey" id="grid3" style="width:25px;height:25px"></div>
+								<div class="border border-dark" id="grid1"></div>
+								<div class="border border-dark" id="grid2"></div>
+								<div class="border border-dark" id="grid3"></div>
 							</div>
 							<div class="row2" style="display:flex">
-								<div class="w3-border w3-border-black w3-grey" id="grid4" style="width:25px;height:25px"></div>
-								<div class="w3-border w3-border-black w3-grey" id="grid5" style="width:25px;height:25px"></div>
-								<div class="w3-border w3-border-black w3-grey" id="grid6" style="width:25px;height:25px"></div>
+								<div class="border border-dark" id="grid4"></div>
+								<div class="border border-dark" id="grid5"></div>
+								<div class="border border-dark" id="grid6"></div>
 							</div>
 							<div class="row3" style="display:flex">
-								<div class="w3-border w3-border-black w3-grey" id="grid7" style="width:25px;height:25px"></div>
-								<div class="w3-border w3-border-black w3-grey" id="grid8" style="width:25px;height:25px"></div>
-								<div class="w3-border w3-border-black w3-grey" id="grid9" style="width:25px;height:25px"></div>
+								<div class="border border-dark" id="grid7"></div>
+								<div class="border border-dark" id="grid8"></div>
+								<div class="border border-dark" id="grid9"></div>
 							</div>
 						</div>
 						<div class="text-center" style="width:100%;height:100%;padding:5px 10px">
 						</div>
 					</div>
 					</div>
-					<div class="w3-row" style="height:100px">
+					<div class="w3-row">
 						<div class="w3-amber">Cost</div>
-						<div class="w3-rightbar w3-leftbar w3-border-white w3-hover-border-black w3-padding" style="height:77.2px"></div>
+						<div class="w3-rightbar w3-leftbar w3-border-white w3-hover-border-black w3-padding"></div>
 					</div>
-					<div class="w3-row" style="height:100px">
+					<div class="w3-row">
 						<div class="w3-amber">Skill</div>
-						<div class="w3-row d-flex w3-rightbar w3-leftbar w3-border-white w3-hover-border-black" style="height:77.2px">
+						<div class="w3-row d-flex w3-rightbar w3-leftbar w3-border-white w3-hover-border-black">
 						<img class="w3-images">
-						<div class="text-center" style="width:100%;height:100%;padding:5px 10px">
-							test
-						</div>
+						<div class="text-center" style="width:100%;height:100%;padding:5px 10px">test</div>
 						</div>
 					</div>
 				</div>
@@ -218,11 +217,11 @@
 			</div>
 			<div class="w3-col l12"> <!-- 추천장비/인형 -->
 				<div class="w3-col l5 w3-section" style="height:250px;padding-right:20px">
-					<div class="ntg w3-display-container" style="width:200px;height:35px">
-						<svg width="250" height="35">
-							<polygon fill="grey" points="0,0 0,35 0,35 250,35 200,0"></polygon>
+					<div class="ntg w3-display-container">
+						<svg width="200" height="35">
+							<polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon>
 						</svg>
-						<div class="w3-display-middle text-center" style="width:200px;height:35px;color:#fff;font-size:1.5em">Offer	ment</div>
+						<div class="w3-display-left text-center" style="width:150px;height:35px;color:#fff;font-size:1.5em">Offer	Equips</div>
 					</div>
 					<div class="w3-col" id="equip">
 						<div style="height:35px">◆이런 장비를 사용하면 좋아요!</div>
@@ -231,11 +230,11 @@
 				</div>
 				<div class="w3-col l7 w3-section">
 					<div class="w3-col" style="height:250px">
-						<div class="ntg w3-display-container" style="width:150px;height:35px">
+						<div class="ntg w3-display-container">
 							<svg width="200" height="35">
 								<polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon>
 							</svg>
-							<div class="w3-display-middle text-center" style="width:150px;height:35px;color:#fff;font-size:1.5em">Offer T-dolls</div>
+							<div class="w3-display-left text-center" style="width:150px;height:35px;color:#fff;font-size:1.5em">Offer T-dolls</div>
 						</div>
 						<div class="w3-col" id="doll">
 							<div style="height:35px">◆이런 인형들과 같이 쓰였어요!</div>
@@ -246,22 +245,22 @@
 			</div>
 			<div class="w3-col l12 w3-section"> <!-- 인형대사 -->
 				<div>
-					<div class="ntg w3-display-container" style="width:150px;height:35px">
+					<div class="ntg w3-display-container">
 						<svg width="200" height="35">
 							<polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon>
 						</svg>
-						<div class="w3-display-middle text-center" style="width:150px;height:35px;color:#fff;font-size:1.5em">Quotes</div>
+						<div class="w3-display-left text-center" style="width:150px;height:35px;color:#fff;font-size:1.5em">Quotes</div>
 					</div>
 				</div>
 				<div class="w3-col l12" id="dolltext" style="height:415px"></div>
 			</div>
 			<div class="w3-col l12 w3-section"> <!-- 인형로어 -->
 				<div>
-					<div class="ntg w3-display-container" style="width:150px;height:35px">
+					<div class="ntg w3-display-container">
 						<svg width="200" height="35">
 							<polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon>
 						</svg>
-						<div class="w3-display-middle text-center" style="width:150px;height:35px;color:#fff;font-size:1.5em">Lore</div>
+						<div class="w3-display-left text-center" style="width:150px;height:35px;color:#fff;font-size:1.5em">Lore</div>
 					</div>
 				</div>
 				<div class="w3-col l12" id="dolllore" style="height:415px"></div>

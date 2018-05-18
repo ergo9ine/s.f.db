@@ -2892,6 +2892,40 @@
 	"krName":"TAR-21",
 	"grow":115
 },{
+	"id":73,
+	"krName":"AUG",
+	"name":"Steyr AUG",
+	"type":"ar",
+	"rarity":5,
+	"hp":[1,121],
+	"dmg":[1,55],
+	"dodge":[1,46],
+	"hit":[1,57],
+	"FoR":[1,75],
+	"skill":{
+		"src":82,
+		"type":"buff",
+		"target":"self",
+		"Fx":{},
+		"dataPool":{}
+	},
+	"illust":"芙芙酱",
+	"voice":"",
+	"buildTime":0,
+	"drop":[],
+	"skins":[],
+	"nick":["어그"],
+	"Fx":{
+		"target":"all",
+		"self":5,
+		"tile":[2,3,6,8,9],
+		"TileFx":{
+			"dmg":12,
+			"hit":20
+		}
+	},
+	"grow":115
+},{
 	"id":74,
 	"krName":"SIG-510",
 	"name":"SIG510",

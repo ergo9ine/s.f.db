@@ -156,7 +156,6 @@ function loadComplete(){
 					skins.push(`<button class="w3-button w3-round-xxlarge w3-hover-text-white w3-hover-orange skins" style="background-color:#feb976;color:#fff;margin:2.5px">${value}</button>`)
 				});
 				$(".skinntg").append(skins);
-				SKB();
 				$('.w3-row:nth-child(7)>div:nth-child(1)').append(w3img);
 				$(".w3-image").attr("src",cimg).removeClass("w3-grey").removeAttr("width height");
 				$(".w3-left-align:nth-child(1)>div:nth-child(1)>div:nth-child(3)").html(doll.voice);
@@ -240,8 +239,9 @@ function loadComplete(){
 					case "time":TS=`${TS}<br>쿨타임 ${value}%감소`;break;
 					case "armor":TS=`${TS}<br>장갑 ${value}%증가`;break};
 				});
+				SKB();
 				$("#sec-fir>div:nth-child(1)>div:nth-child(2)>div:nth-child(2)").html(TS);
-				$("div.w3-container:nth-child(2)").html(D);
+				$("#sec-fir>div:nth-child(2)>div:nth-child(2)").html(D);
 				$(".text-center:nth-child(1)").append(w3img)
 				$("div.w3-row:nth-child(3)>div:nth-child(2)>img").attr('src',"../img/etc/skill/"+dollSkill[doll.skill.src]+".png")
 				rCh=new Chart(ctx,{type:'radar',data:statisticschart,options:chartOptions});
