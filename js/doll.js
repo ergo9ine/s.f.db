@@ -1,4 +1,4 @@
-var dollData=[],dollSkill=[],w3img='<img class="w3-image w3-grey" width="256" height="256">',idir='../img/t_doll/',loader=$(".loader");
+var dollData=[],w3img='<img class="w3-image w3-grey" width="256" height="256">',idir='../img/t_doll/',loader=$(".loader"),dollSkill=["AimAttackCurrentTarge","AimAttackDistanceTarge","AimAttackSpecificTarge","airattack","airborne","AK12Buff","AN94Shot","AR15Shot","armor","armorBuff","armorBuffSelf","armorDebuff","armorDebuffSelf","BBNoel","bombard","Bronya","buff","Carcano1891","Carcano1938","CBJMS","Chloe","CLEAR","Coldweapon","comboBuffSelf","command","crit","critBuff","critBuffSelf","debuff","defense","dodgeBuff","dodgeBuffSelf","dodgeDebuff","empty","FAIL","fighting","Flare","Flashbomb","fortress","GGElfeldt","golden","Grenade","Himeko","hitBuff","hitBuffSelf","hitDebuff","illumine","Invincible","Invincible35","IWantU","Kaguya","Kiana","LadyMadeSTAR","Landmines","M4Nightmare","M1918","MosinNagant","Napalm","nightcritBuff","nightcritBuff38","nightcritBuffSelf","nightdodgeBuff","nightdodgeBuffSelf","nightdodgeDebuff","nighthitBuff","nighthitBuffSelf","nighthitDebuff","nightpowBuff","nightpowBuffSelf","nightpowDebuff","nightrateBuff","nightrateBuffSelf","nightrateDebuff","nightspeedDebuff","nighttargetdodgeDebuff","nighttargethitDebuff","nighttargetpowDebuff","nighttargetrateDebuff","nighttargetspeedDebuff","Noconsumption","position","powBuff","powBuffSelf","powBuffShield","powDebuff","RaidenMei","rateBuff","rateBuffSelf","rateDebuff","reinforce","rescue","RifleGrenade","roadblocks","Sakura","Seele","shield","Shotgun","Smoke","sniper","speedDebuff","target","targetdodgeDebuff","targethitDebuff","targetpowDebuff","targetrateDebuff","targetspeedDebuff","Theresa","VariableBuff"];
 $(document).ready(()=>{
 	contentsload();
 	$('[data-toggle="popover"]').popover();
@@ -15,7 +15,7 @@ function contentsload(){
 					<i class="star r${doll.rarity}"></i>
 					<i	class="incage doll info_cage_${doll.rarity}"></i>
 					<i class="type doll ${doll.type}_${doll.rarity}"></i>
-					<img width="175" height="276" Class="w3-grey" src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@1.80428-2/img/t_doll/${doll.id}_i.png" onload="$(this).removeClass('w3-grey').removeAttr('onload')">
+					<img width="175" height="276" Class="w3-grey" src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@1.80518/img/t_doll/${doll.id}_i.png" onload="$(this).removeClass('w3-grey').removeAttr('onload')">
 					<div class="tag">${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}</div>`;
 				$(character).append(itemcon).find(".item-content").html(dollcon);
 				return character;
@@ -40,11 +40,9 @@ function loadComplete(){
 		noResults:"#noResultMessage",
 		'bind':'keyup keydown click input',
 		'hide':function(){
-			$(this).removeClass('muuri-item-shown').addClass('muuri-item-hidden').css("display","none");
-			grid.filter('.muuri-item-shown')},
+			$(this).removeClass('muuri-item-shown');grid.filter('.muuri-item-shown')},
 		'show':function(){
-			$(this).addClass('muuri-item-shown').removeClass('muuri-item-hidden').css("display","block");
-			grid.filter('.muuri-item-shown')}
+			$(this).addClass('muuri-item-shown');grid.filter('.muuri-item-shown')}
 	});
 	$(".btn").click(function(){
 		switch ($(this).text()){
@@ -96,7 +94,7 @@ function loadComplete(){
 		$("div.justify-content-center:nth-child(3)").addClass("d-none")
 	});
 	$(".item-content").click(function(){
-		togglecon();
+		$(".grid,#search,#filsor,#func").toggleClass('w3-hide');
 		var clicked=$(this).children(".no").attr("data-no");
 		$.each(dollData,(index,doll)=>{
 			if(doll.id==clicked){
@@ -119,34 +117,24 @@ function loadComplete(){
 				$(".w3-display-right:nth-child(4)").attr("data-content",doll.drop);
 				$(gridself).removeClass("w3-grey").addClass("w3-white");
 				$(gridPos).removeClass("w3-grey").addClass("w3-aqua");
-				var ctx="statisticschart",statisticschart={datasets:[{label:doll.krName,backgroundColor:"rgba(255,99,132,0.2)",borderColor:"rgb(255,99,132)",pointBackgroundColor:"rgb(255,99,132)",pointBorderColor:"#fff",pointHoverBackgroundColor:"#fff",pointHoverBorderColor:"rgb(255,99,132)",borderWidth:1},{backgroundColor:"rgba(54,162,235,0.2)",borderColor:"rgb(54,162,235)",pointBackgroundColor:"rgb(54,162,235)",pointBorderColor:"#fff",pointHoverBackgroundColor:"#fff",pointHoverBorderColor:"rgb(54,162,235)",borderWidth:1}]},chartOptions={maintainAspectRatio:false,title:{display:false},scale:{ticks:{fontSize:9,beginAtZero:true}},scaleLabel:{display:false}},dollSkill=["AimAttackCurrentTarge","AimAttackDistanceTarge","AimAttackSpecificTarge","airattack","airborne","AK12Buff","AN94Shot","AR15Shot","armor","armorBuff","armorBuffSelf","armorDebuff","armorDebuffSelf","BBNoel","bombard","Bronya","buff","Carcano1891","Carcano1938","CBJMS","Chloe","CLEAR","Coldweapon","comboBuffSelf","command","crit","critBuff","critBuffSelf","debuff","defense","dodgeBuff","dodgeBuffSelf","dodgeDebuff","empty","FAIL","fighting","Flare","Flashbomb","fortress","GGElfeldt","golden","Grenade","Himeko","hitBuff","hitBuffSelf","hitDebuff","illumine","Invincible","Invincible35","IWantU","Kaguya","Kiana","LadyMadeSTAR","Landmines","M4Nightmare","M1918","MosinNagant","Napalm","nightcritBuff","nightcritBuff38","nightcritBuffSelf","nightdodgeBuff","nightdodgeBuffSelf","nightdodgeDebuff","nighthitBuff","nighthitBuffSelf","nighthitDebuff","nightpowBuff","nightpowBuffSelf","nightpowDebuff","nightrateBuff","nightrateBuffSelf","nightrateDebuff","nightspeedDebuff","nighttargetdodgeDebuff","nighttargethitDebuff","nighttargetpowDebuff","nighttargetrateDebuff","nighttargetspeedDebuff","Noconsumption","position","powBuff","powBuffSelf","powBuffShield","powDebuff","RaidenMei","rateBuff","rateBuffSelf","rateDebuff","reinforce","rescue","RifleGrenade","roadblocks","Sakura","Seele","shield","Shotgun","Smoke","sniper","speedDebuff","target","targetdodgeDebuff","targethitDebuff","targetpowDebuff","targetrateDebuff","targetspeedDebuff","Theresa","VariableBuff"];
+				var ctx="statisticschart",statisticschart={datasets:[{label:doll.krName,backgroundColor:"rgba(255,99,132,0.2)",borderColor:"rgb(255,99,132)",pointBackgroundColor:"rgb(255,99,132)",pointBorderColor:"#fff",pointHoverBackgroundColor:"#fff",pointHoverBorderColor:"rgb(255,99,132)",borderWidth:1},{backgroundColor:"rgba(54,162,235,0.2)",borderColor:"rgb(54,162,235)",pointBackgroundColor:"rgb(54,162,235)",pointBorderColor:"#fff",pointHoverBackgroundColor:"#fff",pointHoverBorderColor:"rgb(54,162,235)",borderWidth:1}]},chartOptions={maintainAspectRatio:false,title:{display:false},scale:{ticks:{fontSize:9,beginAtZero:true}},scaleLabel:{display:false}};
 				chrtset(doll,statisticschart);
 				fxts(doll.Fx);
 				SKB();
-				$(".text-center:nth-child(1)").append(w3img)
-				$("div.w3-row:nth-child(3)>div:nth-child(2)>img").attr('src',"../img/etc/skill/"+dollSkill[doll.skill.src]+".png")
-				var rCh=new Chart(ctx,{type:'radar',data:statisticschart,options:chartOptions});
+				Skill(doll);
+				rCh=new Chart(ctx,{type:'radar',data:statisticschart,options:chartOptions});
 				rCh.update();
 			}
 		})
 	});
 	$(".xfunc").click(()=>{
-		togglecon();
-		$(".w3-image").remove();
-		$('[data-toggle="popover"]').popover('hide');
 		rCh.destroy();
-		$(".skinntg>button").off("click")
+		togglecon();
 	});
 };
 function sortrarity(){grid.sort('rarity')};
 function sorttime(){grid.sort('time')};
 function sorttype(){grid.sort('type')};
-function togglecon(){
-	$(".grid,#search,#filsor,#func").toggleClass('w3-hide')
-	for (x=1;x<10;x++){
-		$(`#grid${x}`).removeClass("w3-white w3-aqua w3-grey").addClass("w3-grey")
-	}
-};
 function chrtset(x,y){
 	var D="편제당<br>탄약 C, 식량 M 소모"
 	if (x.mod=="true"){Set1(2)} else{Set1(1)};
@@ -188,17 +176,15 @@ function SKB(){
 	$(".skinntg>button").click(function(){
 		var imgtag=$(".w3-image"),iX=$(this).index();No=$(".dollname>label:nth-child(2)").text(),Isrc=idir+No+'.png';
 		if(iX==0){
-			var imgsrc=imgtag.attr('src').split(idir)[1].split(".png")[0];
-			imgM=imgsrc.indexOf('_d');
-			imgT=imgsrc.slice(0,-2);
-			if (imgM!=-1){
+			var imgsrc=imgtag.attr('src').split(idir)[1].split(".png")[0],imgM=imgsrc.indexOf('_d'),imgT=imgsrc.slice(0,-2);
+			if(imgM!=-1){
 				loader.addClass("is-active");
 				(imgtag.attr('src',idir+imgT+'.png')).ready(()=>{loader.removeClass("is-active")});
 			} else {
 				loader.addClass("is-active");
 				(imgtag.attr('src',idir+imgsrc+'_d.png')).ready(()=>{loader.removeClass("is-active")});
 			}
-		} else if (iX==1){
+		} else if(iX==1){
 			imgtag.attr('src',Isrc);
 		} else {
 			var iX=iX-1,ISrc=idir+No+'_'+iX+'.png';
@@ -206,4 +192,28 @@ function SKB(){
 			(imgtag.attr('src',ISrc)).ready(()=>{loader.removeClass("is-active")});
 		}
 	});
+};
+function Skill(x){
+	$(".text-center:nth-child(1)").append(w3img);
+	$("div.w3-row:nth-child(3)>div:nth-child(2)>img").attr('src',"../img/etc/skill/"+dollSkill[x.skill.src]+".png")
+	var Sdesc;
+	switch (dollSkill[x.skill.src]) {
+	case 82:
+		text(아군,전체,화력,상승)
+	break
+	}
+	function text(a,b,c,d){
+		Sdesc=`a b c을 ${x.skill.Fx.dmg}% d시킨다. 지속시간 ${x.skill.Fx.time}초.
+		선쿨${x.skill.FCD}초,쿨타임${x.skill.CD[2]}초.`
+	}
+	$("div.w3-row:nth-child(3)>div:nth-child(2)>div:nth-child(2)").html(Sdesc)
+};
+function togglecon(){
+	$(".grid,#search,#filsor,#func").toggleClass('w3-hide');
+	$(".w3-image").remove();
+	$('[data-toggle="popover"]').popover('hide');
+	$(".skinntg>button").off("click");	
+	for (x=1;x<10;x++){
+		$(`#grid${x}`).removeClass("w3-white w3-aqua w3-grey").addClass("w3-grey")
+	}
 };
