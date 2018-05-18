@@ -108,7 +108,7 @@ function loadComplete(){
 				skins=[];
 				$.each(doll.skins,(index,value)=>{skins.push(`<button class="w3-button w3-round-xxlarge w3-hover-text-white w3-hover-orange skins" style="background-color:#feb976;color:#fff;margin:2.5px">${value}</button>`)});
 				$(".skinntg").append(skins);
-				$('.w3-row:nth-child(7)>div:nth-child(1)').append(w3img);
+				$(".w3-row.text-center>div:eq(0)").append(w3img);
 				$(".w3-image").attr("src",cimg).removeClass("w3-grey").removeAttr("width height");
 				$(".w3-left-align:nth-child(1)>div:nth-child(1)>div:nth-child(3)").html(doll.voice);
 				$(".w3-left-align:nth-child(1)>div:nth-child(3)>div:nth-child(3)").html(doll.illust);
@@ -174,7 +174,7 @@ function fxts(x){
 };
 function SKB(){
 	$(".skinntg>button").click(function(){
-		var imgtag=$(".w3-image"),iX=$(this).index();No=$(".dollname>label:nth-child(2)").text(),Isrc=idir+No+'.png';
+		var imgtag=$(".w3-image"),iX=$(this).index(),No=$(".dollname>label:nth-child(2)").text(),Isrc=idir+No+'.png';
 		if(iX==0){
 			var imgsrc=imgtag.attr('src').split(idir)[1].split(".png")[0],imgM=imgsrc.indexOf('_d'),imgT=imgsrc.slice(0,-2);
 			if(imgM!=-1){
@@ -187,14 +187,13 @@ function SKB(){
 		} else if(iX==1){
 			imgtag.attr('src',Isrc);
 		} else {
-			var iX=iX-1,ISrc=idir+No+'_'+iX+'.png';
+			iX=iX-1,ISrc=idir+No+'_'+iX+'.png';
 			loader.addClass("is-active");
 			(imgtag.attr('src',ISrc)).ready(()=>{loader.removeClass("is-active")});
 		}
 	});
 };
 function Skill(x){
-	$(".text-center:nth-child(1)").append(w3img);
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>img").attr('src',"../img/etc/skill/"+dollSkill[x.skill.src]+".png")
 	var Sdesc;
 	switch (dollSkill[x.skill.src]) {
