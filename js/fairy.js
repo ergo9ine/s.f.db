@@ -1,3 +1,10 @@
+var ig = new eg.InfiniteGrid("#grid",{isEqualSize:true});
+ig.setLayout(eg.InfiniteGrid.GridLayout,{
+	horizontal:false,
+	margin:25,
+	align:"center",
+	itemSize:175
+});
 $(document).ready(()=>{
 	$.ajax('../json/fairy.json',{contentType:'application/json',dataType:'json',
 		success:result=>{
@@ -8,76 +15,33 @@ $(document).ready(()=>{
 				$(character).append(itemcon).find(".item-content").html(fairycon);
 				return character;
 			});
-			$('.grid').append(allCharacters);
+			ig.append(allCharacters);
 		},
 		timeout:10000
 	});
 }).ajaxStop(()=>{loadComplete()});
-function sortnum(){grid.sort('num')};
-function sortsort(){grid.sort('time')};
-function sorttype(){grid.sort('type')};
 $("select").change(()=>{
 	$("select:focus option:selected").each(function(){
 		var query=$(this).text();
 		switch (query){
 		case "도감번호":
-			new Muuri('.grid',{sordData:null});
 		break;
 		case "제조시간":
-			sortsort();
 		break;
 		case "종류":
-			sorttype();
 		break;
 		};
 	});
 });
 function loadComplete(){
-	$('.grid').removeClass('w3-hide');
-	grid = new Muuri('.grid',{
-		sortData:{
-			time:(item,element)=>element.getAttribute('data-sort'),
-			type:(item,element)=>element.getAttribute('data-type').toUpperCase(),
-			num:(item,element)=>element.getAttribute('data-no')
-		},
-		layout:{fillGaps:true,rounding:true}
-	});
 	$('input#search').quicksearch('.grid .item',{
 		noResults:"#noResultMessage",
 		'bind':'keyup keydown click input',
-		'hide':()=>{
-			$(this).removeClass('muuri-item-shown').addClass('muuri-item-hidden').css("display","none")
-			grid.filter('.muuri-item-shown')
+		'hide':function(){
+
 		},
-		'show':()=>{
-			$(this).addClass('muuri-item-shown').removeClass('muuri-item-hidden').css("display","block")
-			grid.filter('.muuri-item-shown')
+		'show':function(){
+
 		}
 	});
-	function active(){$('.fc').removeClass('active')};
-	$(".fc").click(function(){
-		var query = $(this).text();
-		switch (query){
-		case "전투":
-			grid.filter('[data-type="Battle"]')
-			active()
-			$(this).addClass('active')
-		break;
-		case "전략":
-			grid.filter('[data-type="Strategy"]')
-			active()
-			$(this).addClass('active')
-		break;
-		case "이벤트":
-			grid.filter('[data-event="1"]')
-			active()
-			$(this).addClass('active')
-		break;
-		case "All":
-			grid.filter('[data-type]')
-			active()
-			$(this).addClass('active')
-		break; 
-		}
-	});
-}
+};
