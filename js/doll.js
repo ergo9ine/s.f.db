@@ -95,6 +95,7 @@ function loadComplete(){
 	});
 	$(".item-content").click(function(){
 		$(".grid,#search,#filsor,#func").toggleClass('w3-hide');
+		$("body>div:nth-child(2)").toggleClass("d-md-flex");
 		var clicked=$(this).children(".no").attr("data-no");
 		$.each(dollData,(index,doll)=>{
 			if(doll.id==clicked){
@@ -209,6 +210,7 @@ function Skill(x){
 };
 function togglecon(){
 	$(".grid,#search,#filsor,#func").toggleClass('w3-hide');
+	$("body>div:nth-child(2)").toggleClass("d-md-flex");
 	$(".w3-image").remove();
 	$('[data-toggle="popover"]').popover('hide');
 	$(".skinntg>button").off("click");	
