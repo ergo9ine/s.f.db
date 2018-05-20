@@ -150,15 +150,8 @@ function chrtset(x,y){
 	$("#sec-fir>div:nth-child(2)>div:nth-child(2)").html(D);
 };
 function fxts(x){
-	var TS="타일 위 타겟에게"
-	switch (x.target){
-	case "all":Set("모든 총기");break
-	case "hg":Set("HG");break
-	case "smg":Set("SMG");break
-	case "ar":Set("AR");break
-	case "rf":Set("RF");break
-	case "mg":Set("MG");break
-	case "sg":Set("SG");break}
+	var TS="타일 위 타겟에게";
+	switch (x.target){case "all":Set("모든 총기");break;case "hg":Set("HG");break;case "smg":Set("SMG");break;case "ar":Set("AR");break;case "rf":Set("RF");break;case "mg":Set("MG");break;case "sg":Set("SG");break}
 	$.each(x.TileFx,(index,value)=>{
 		switch (index){
 		case "dmg":TS=`${TS}<br>화력 ${value}%증가`;break;
@@ -194,18 +187,25 @@ function SKB(){
 	});
 };
 function Skill(x){
-	$("div.w3-row:nth-child(3)>div:nth-child(2)>img").attr('src',"../img/etc/skill/"+dollSkill[x.skill.src]+".png")
 	var Sdesc;
-	switch (dollSkill[x.skill.src]) {
-	case 82:
-		text(아군,전체,화력,상승)
-	break
-	}
-	function text(a,b,c,d){
-		Sdesc=`a b c을 ${x.skill.Fx.dmg}% d시킨다. 지속시간 ${x.skill.Fx.time}초.
-		선쿨${x.skill.FCD}초,쿨타임${x.skill.CD[2]}초.`
-	}
-	$("div.w3-row:nth-child(3)>div:nth-child(2)>div:nth-child(2)").html(Sdesc)
+	$("div.w3-row:nth-child(3)>div:nth-child(2)>img").attr('src',"../img/etc/skill/"+dollSkill[x.skill.src]+".png");
+	console.log(x.skill.src)
+	switch (x.skill.src){
+	case 81:
+		if(x.skill.target=="ally"){
+			c81("아군 전체");
+			if(x.id=="13"){
+				Sdesc=Sdesc.replace("화력","화력과 사속을 각각")
+			};
+		};
+		if(x.skill.target=="self_aura_grid"){
+			c81("스킬 발동 시 자신이 제공하는 버프칸에 있는 아군유닛의")
+		};
+	break};
+	function c81(a){
+		Sdesc=`${a} 화력을 ${x.skill.Fx.dmg[1]}% 상승시킨다. 지속시간 ${x.skill.Fx.time[1]}초.<br>선쿨${x.skill.FCD}초,쿨타임${x.skill.CD[1]}초.`;
+	};
+	$("div.w3-row:nth-child(3)>div:nth-child(2)>div:nth-child(2)").html(Sdesc);
 };
 function togglecon(){
 	$(".grid,#search,#filsor,#func").toggleClass('w3-hide');
@@ -214,5 +214,6 @@ function togglecon(){
 	$(".skinntg>button").off("click");	
 	for (x=1;x<10;x++){
 		$(`#grid${x}`).removeClass("w3-white w3-aqua w3-grey").addClass("w3-grey")
-	}
+	};
+	$("div.w3-row:nth-child(3)>div:nth-child(2)>div:nth-child(2)").empty();
 };
