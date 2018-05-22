@@ -157,6 +157,9 @@ function Skill(x){
 		if(x.skill.target=="self_aura_grid"){
 			c81("스킬 발동 시 자신이 제공하는 버프칸에 있는 아군유닛의")
 		};
+	break;
+	case 97:
+		Sdesc=`연막탄을 투척하여 반경 2.5범위 내의 적들의 공격속도를 ${x.skill.Fx.FoR[1]}%, 이동속도를 ${x.skill.Fx.MS[1]}% 감소시킨다. 지속시간 ${x.skill.Fx.time[1]}초.<br>선쿨${x.skill.FCD}초,쿨타임${x.skill.CD[1]}초.`
 	break};
 	function c81(a){
 		Sdesc=`${a} 화력을 ${x.skill.Fx.dmg[1]}% 상승시킨다. 지속시간 ${x.skill.Fx.time[1]}초.<br>선쿨${x.skill.FCD}초,쿨타임${x.skill.CD[1]}초.`;
