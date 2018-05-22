@@ -4,12 +4,11 @@ $(document).ready(()=>{
 	$('[data-toggle="popover"]').popover();
 });
 function contentsload(){
-	$.ajax('../json/doll.json',{contentType:'application/json',dataType:'json',
-		success:result=>{
-			var itemcon='<div class="w3-hover-shadow tdoll item-content">',
-			allCharacters=$.map(result,(doll,index)=>{var timehour=parseInt(doll.buildTime/3600),timemin=doll.buildTime%3600/60,noval=doll.id;
-				switch(noval){case noval>20000:noval="M"+(doll.id-20000);break;case noval>1000:noval="X"+(doll.id-1000);break}
-				var character=$(`<div class="item" data-time="${timehour}${timemin}" data-type="${doll.type}" data-rarity="${doll.rarity}"></div>`).detach(),
+	$.ajax('../json/doll.json',{contentType:'application/json',dataType:'json',success:result=>{
+		var itemcon='<div class="w3-hover-shadow tdoll item-content">',
+		allCharacters=$.map(result,(doll,index)=>{var timehour=parseInt(doll.buildTime/3600),timemin=doll.buildTime%3600/60,noval=doll.id;
+			switch(noval==noval){case noval>20000:noval="M"+(doll.id-20000);break;case noval>1000:noval="X"+(doll.id-1000);break};
+			var character=$(`<div class="item" data-time="${timehour}${timemin}" data-type="${doll.type}" data-rarity="${doll.rarity}"></div>`).detach(),
 				dollcon=`<div class="w3-text-white no" data-no="${doll.id}">${noval}</div>
 					<p class="w3-text-black name podo">${doll.krName}</p>
 					<i class="star r${doll.rarity}"></i>
@@ -17,9 +16,9 @@ function contentsload(){
 					<i class="type doll ${doll.type}_${doll.rarity}"></i>
 					<img width="175" height="276" src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@${ghver}/img/t_doll/${doll.id}_i.png" style="background-color:#2c343d" onload="$(this).css('background-color','').removeAttr('onload')">
 					<div class="tag">${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}</div>`;
-				$(character).append(itemcon).find(".item-content").html(dollcon);
-				return character;
-			});
+			$(character).append(itemcon).find(".item-content").html(dollcon);
+			return character;
+		});
 			$('#grid').append(allCharacters);
 			loadComplete();
 			dollData=result;
@@ -39,51 +38,8 @@ function loadComplete(){
 	$('#search').quicksearch('.item',{
 		noResults:"#noResultMessage",
 		'bind':'keyup keydown click input',
-		'hide':function(){
-			$(this).removeClass('muuri-item-shown');grid.filter('.muuri-item-shown')},
-		'show':function(){
-			$(this).addClass('muuri-item-shown');grid.filter('.muuri-item-shown')}
-	});
-	$(".btn").click(function(){
-		switch ($(this).text()){
-		case "2성":grid.filter('[data-rarity="2"]');break
-		case "3성":grid.filter('[data-rarity="3"]');break
-		case "4성":grid.filter('[data-rarity="4"]');break
-		case "5성":grid.filter('[data-rarity="5"]');break
-		case "HG":grid.filter('[data-type="hg"]');break
-		case "SMG":grid.filter('[data-type="smg"]');break
-		case "AR":grid.filter('[data-type="ar"]');break
-		case "RF":grid.filter('[data-type="rf"]');break
-		case "MG":grid.filter('[data-type="mg"]');break
-		case "SG":grid.filter('[data-type="sg"]');break
-		case "제조불가":grid.filter('[data-time="00"]');break
-		/*
-		case "특전":
-			grid.filter('[data-time="00"]')
-		break;
-		case "타일효과":
-			grid.filter('[data-time="00"]')
-		break;
-		case "일러스트레이터":
-			grid.filter('[data-time="00"]')
-		break;
-		case "성우":
-			grid.filter('[data-time="00"]')
-		break;
-		*/
-		case "제조불가":grid.filter('[data-time="00"]');break
-		case "All":grid.filter('[data-type]');break
-		}
-	});
-	$("select").change(()=>{
-		$("select:focus option:selected").each(function(){
-			switch ($(this).text()){
-			case "기본":new Muuri('.grid',{sordData:null});break
-			case "등급":sortrarity();break
-			case "제조시간":sorttime();break
-			case "종류":sorttype();break
-			};
-		});
+		'hide':function(){$(this).removeClass('muuri-item-shown');filter('.muuri-item-shown')},
+		'show':function(){$(this).addClass('muuri-item-shown');filter('.muuri-item-shown')}
 	});
 	$("button.flex-fill:nth-child(1)").click(()=>{
 		$("div.justify-content-center:nth-child(3)").toggleClass("d-none")
@@ -133,9 +89,8 @@ function loadComplete(){
 		togglecon();
 	});
 };
-function sortrarity(){grid.sort('rarity')};
-function sorttime(){grid.sort('time')};
-function sorttype(){grid.sort('type')};
+function sort(a){grid.sort(a)};
+function filter(a){grid.filter(`${a}`)};
 function chrtset(x,y){
 	var D="편제당<br>탄약 C, 식량 M 소모"
 	if (x.mod=="true"){Set1(2)} else{Set1(1)};
@@ -219,3 +174,44 @@ function togglecon(){
 	};
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>div:nth-child(2)").empty();
 };
+$("select").change(()=>{
+	$("select:focus option:selected").each(function(){
+		switch ($(this).text()){
+		case "기본":new Muuri('.grid',{sordData:null});break
+		case "등급":sort("rarity");break
+		case "제조시간":sort("time");break
+		case "종류":sort("type");break
+		};
+	});
+});
+$(".btn").click(function(){
+	switch ($(this).text()){
+	case "2성":filter('[data-rarity="2"]');break
+	case "3성":filter('[data-rarity="3"]');break
+	case "4성":filter('[data-rarity="4"]');break
+	case "5성":filter('[data-rarity="5"]');break
+	case "HG":filter('[data-type="hg"]');break
+	case "SMG":filter('[data-type="smg"]');break
+	case "AR":filter('[data-type="ar"]');break
+	case "RF":filter('[data-type="rf"]');break
+	case "MG":filter('[data-type="mg"]');break
+	case "SG":filter('[data-type="sg"]');break
+	case "제조불가":filter('[data-time="00"]');break
+	/*
+	case "특전":
+		grid.filter('[data-time="00"]')
+	break;
+	case "타일효과":
+		grid.filter('[data-time="00"]')
+	break;
+	case "일러스트레이터":
+		grid.filter('[data-time="00"]')
+	break;
+	case "성우":
+		grid.filter('[data-time="00"]')
+	break;
+	*/
+	case "제조불가":filter('[data-time="00"]');break
+	case "All":filter('[data-type]');break
+	}
+});
