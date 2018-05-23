@@ -85,30 +85,28 @@
 		<button type="button" class="close rounded-circle position-fixed w3-red xfunc" style="width:45px;height:45px;top:1%;right:1%">
 			<span class="align-text-top" aria-hidden="true">×</span>
 		</button>
-		<div class="dollname">
-			<label>NO.</label><label></label><span style="font-size:2em;font-weight:bold;margin:0 10px"></span>
-		</div>
+		<blockquote class="blockquote"><p class="mb-0 h1"></p><footer class="blockquote-footer">No. <cite></cite></footer></blockquote>
 		<div class="space bg-dark text-white w3-section" style="height:2.5px"></div>
-		<div class="skinntg	w3-hide-small">
-			<button class="w3-button w3-round-xxlarge w3-hover-text-white w3-hover-cyan" style="background-color:#5bbab6;color:#fff;margin:2.5px">통상/부상변환</button>
-			<button class="w3-button w3-round-xxlarge w3-hover-text-white w3-hover-dark-grey" style="background-color:grey;color:#fff;margin:2.5px">기본 코스튬</button>
+		<div class="skinntg d-none d-sm-block">
+			<button type="button" class="btn btn-info btn-sm">통상/부상변환</button>
+			<button type="button" class="btn btn-secondary btn-sm">기본 코스튬</button>
 		</div>
-		<button class="w3-button w3-block bg-dark text-white w3-left-align w3-hide-large w3-hide-medium w3-section">코스튬보기</button>
+		<button class="w3-button w3-block bg-dark text-white w3-left-align d-block d-sm-none w3-section">코스튬보기</button>
 		<div id="Demo1" class="w3-hide">
-			<a class="w3-button	w3-block text-center" href="#">통상/부상변환</a>
+			<a class="w3-button w3-block text-center" href="#">통상/부상변환</a>
 			<a class="w3-button w3-block text-center" href="#">기본 코스튬</a>
 		</div>
 		<div class="w3-row text-center">
 			<div class="w3-col l5 w3-section" style="min-height:256px;min-width:256px"></div>
 			<div class="w3-col l7">
 				<div class="w3-third" style="max-height:400px">
-					<div class="w3-row w3-hide-small" style="height:35px"></div>
+					<div class="w3-row d-none d-sm-block" style="height:35px"></div>
 					<div class="w3-row">
 						<div class="w3-row">
 							<div class="w3-col" id="sdc" style="width:150px;height:150px"></div>
 							<div class="w3-rest w3-display-container" style="min-width:56px;height:150px">
 							<div class="w3-display-topmiddle text-center" style="width:56px;height:56px">
-								<svg width="56" height="56"><rect id="1" width="56" height="56" rx="8" style="fill:orange"/></svg>
+								<svg width="56" height="56"><rect id="1" width="56" height="56" rx="8" style="fill:#ffc107"/></svg>
 								<img class="w3-display-topmiddle text-center" src="../img/html/battle.png">
 							</div>
 							<div class="w3-display-bottommiddle text-center" style="width:56px;height:56px">
@@ -144,8 +142,8 @@
 							</div>
 							<div style="height:5px"></div>
 							<div class="w3-display-container d-flex justify-content-between" style="height:35px">
-								<svg class="svg" width="125" height="35"><polygon fill="grey" points="0,0 0,35 0,35 100,35 125,0"></polygon></svg>
-								<svg class="svg" width="125" height="35"><polygon fill="orange" points="125,0 125,35 0,35 0,35 25,0"></polygon></svg>
+								<svg class="svg" width="125" height="35"><polygon points="0,0 0,35 0,35 100,35 125,0" style="fill:grey"/></svg>
+								<svg class="svg" width="125" height="35"><polygon points="125,0 125,35 0,35 0,35 25,0" style="fill:#ffc107"/></svg>
 								<div class="w3-display-left text-center" style="width:100px;height:35px;line-height:35px">Drop</div>
 								<div class="w3-display-right text-center" title="Drop 지역" data-toggle="popover" data-placement="bottom" data-content="" style="width:85px;height:35px;line-height:35px;color:#000">More</div>
 							</div>

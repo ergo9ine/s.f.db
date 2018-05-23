@@ -53,16 +53,16 @@ $("#Sidebar>button:nth-child(4),#lm>button:nth-child(3)").click(()=>{
 $("body>div:nth-child(2)>button:eq(0)~button:visible,#rm>button:eq(0)~button:visible").css("display","none");
 $("body>div:nth-child(2)>button:eq(3)~button:hidden,#rm>button:eq(3)~button:hidden").css("display","inline-block");
 });
-$("#Sidebar>a:nth-child(5)").click(function(){
+$("#Sidebar>button:nth-child(5),#lm>button:nth-child(4)").click(function(){
 $(".tab").removeClass("w3-red");
 $(this).addClass("w3-red");
-$("#contents>div").addClass(TogV);
-$("#index").removeClass(TogV);
+$("#contents>div").addClass("d-none");
+$("#index").removeClass("d-none");
 $("#result").empty();
 });
 $(".tab").click(function(){
 var tis=$(this),Classes=(tis.attr("class")).split(" "),T=["#tab1","#tab2","#tab3","#tab4","#tab5","#tab6","#tab7","#tab8","#tab9","#tab10"];
-$("#Sidebar>a,.tab").removeClass("w3-red");
+$("#Sidebar>button,.tab,#lm>button").removeClass("w3-red");
 $("#result").empty();
 tis.addClass("w3-red");
 for (var a=0,len=Classes.length;a<len;a++){

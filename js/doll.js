@@ -7,7 +7,7 @@ function contentsload(){
 	$.ajax('../json/doll.json',{contentType:'application/json',dataType:'json',success:result=>{
 		var itemcon='<div class="w3-hover-shadow tdoll item-content">',
 		allCharacters=$.map(result,(doll,index)=>{var timehour=parseInt(doll.buildTime/3600),timemin=doll.buildTime%3600/60,noval=doll.id;
-			switch(noval==noval){case noval>20000:noval="M"+(doll.id-20000);break;case noval>1000:noval="X"+(doll.id-1000);break};
+			noval>20000?noval="M"+(noval-20000):noval>1000&&(noval="X"+(noval-1000));
 			var character=$(`<div class="item" data-time="${timehour}${timemin}" data-type="${doll.type}" data-rarity="${doll.rarity}"></div>`).detach(),
 				dollcon=`<div class="w3-text-white no" data-no="${doll.id}">${noval}</div>
 					<p class="w3-text-black name podo">${doll.krName}</p>
@@ -55,15 +55,14 @@ function loadComplete(){
 		var clicked=$(this).children(".no").attr("data-no");
 		$.each(dollData,(index,doll)=>{
 			if(doll.id==clicked){
-				var simg=idir+doll.id,cimg=simg+'.png',timehour=parseInt(doll.buildTime/3600),timemin=doll.buildTime%3600/60,time=`${timehour}시간${timemin}분`,gridself=`#grid${doll.Fx.self}`,gridPos=[];
+				var simg=idir+doll.id,cimg=simg+'.png',timehour=parseInt(doll.buildTime/3600),timemin=doll.buildTime%3600/60,time=`${timehour}시간${timemin}분`,gridself=`#grid${doll.Fx.self}`,gridPos=[],skins=[];;
 				$.each(doll.Fx.tile,(index,value)=>{gridPos.push(`#grid${value}`)});
 				gridPos=gridPos.toString();
 				$("body,html").animate({scrollTop:0},0);
-				$(".dollname label:nth-child(2)").html(doll.id);
-				$(".dollname span").html(doll.krName);
+				$(".blockquote>p:nth-child(1)").html(doll.krName);
+				$(".blockquote-footer>cite:nth-child(1)").html(doll.id);
 				$(".skins").remove();
-				skins=[];
-				$.each(doll.skins,(index,value)=>{skins.push(`<button class="w3-button w3-round-xxlarge w3-hover-text-white w3-hover-orange skins" style="background-color:#feb976;color:#fff;margin:2.5px">${value}</button>`)});
+				$.each(doll.skins,(index,value)=>{skins.push(`<button type="button" class="btn btn-warning btn-sm">${value}</button>`)});
 				$(".skinntg").append(skins);
 				$(".w3-row.text-center>div:eq(0)").append(w3img);
 				$(".w3-image").attr("src",cimg).removeClass("w3-grey").removeAttr("width height");
@@ -173,27 +172,26 @@ function togglecon(){
 };
 $("select").change(()=>{
 	$("select:focus option:selected").each(function(){
-		switch ($(this).text()){
-		case "기본":new Muuri('.grid',{sordData:null});break
-		case "등급":sort("rarity");break
-		case "제조시간":sort("time");break
-		case "종류":sort("type");break
-		};
+		var sel=$(this).text();
+		sel=="기본"?new Muuri('.grid',{sordData:null}):
+		sel=="등급"?sort("rarity"):
+		sel=="제조시간"?sort("time"):
+		sel=="종류"&&sort("type");
 	});
 });
 $(".btn").click(function(){
-	switch ($(this).text()){
-	case "2성":filter('[data-rarity="2"]');break
-	case "3성":filter('[data-rarity="3"]');break
-	case "4성":filter('[data-rarity="4"]');break
-	case "5성":filter('[data-rarity="5"]');break
-	case "HG":filter('[data-type="hg"]');break
-	case "SMG":filter('[data-type="smg"]');break
-	case "AR":filter('[data-type="ar"]');break
-	case "RF":filter('[data-type="rf"]');break
-	case "MG":filter('[data-type="mg"]');break
-	case "SG":filter('[data-type="sg"]');break
-	case "제조불가":filter('[data-time="00"]');break
+	var filtr=$(this).text();
+	filtr=="2성"?filter('[data-rarity="2"]'):
+	filtr=="3성"?filter('[data-rarity="3"]'):
+	filtr=="4성"?filter('[data-rarity="4"]'):
+	filtr=="5성"?filter('[data-rarity="5"]'):
+	filtr=="HG"?filter('[data-type="hg"]'):
+	filtr=="SMG"?filter('[data-type="smg"]'):
+	filtr=="AR"?filter('[data-type="ar"]'):
+	filtr=="RF"?filter('[data-type="rf"]'):
+	filtr=="MG"?filter('[data-type="mg"]'):
+	filtr=="SG"?filter('[data-type="sg"]'):
+	filtr=="제조불가"?filter('[data-time="00"]'):
 	/*
 	case "특전":
 		grid.filter('[data-time="00"]')
@@ -208,7 +206,6 @@ $(".btn").click(function(){
 		grid.filter('[data-time="00"]')
 	break;
 	*/
-	case "제조불가":filter('[data-time="00"]');break
-	case "All":filter('[data-type]');break
-	}
+	filtr=="제조불가"?filter('[data-time="00"]'):
+	filtr=="All"&&filter('[data-type]');
 });
