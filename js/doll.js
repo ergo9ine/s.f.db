@@ -93,30 +93,34 @@ function sort(a){grid.sort(a)};
 function filter(a){grid.filter(`${a}`)};
 function chrtset(x,y){
 	var D="편제당<br>탄약 C, 식량 M 소모"
-	if (x.mod=="true"){Set1(2)} else{Set1(1)};
-	switch (x.type){
-	case "hg":Set2("HG평균",[71,31,79,58,55],10,10);break
-	case "smg":Set2("SMG평균",[183,28,70,86,13],25,20);break
-	case "ar":Set2("AR평균",[115,51,43,72,47],20,20);break
-	case "rf":Set2("RF평균",[86,128,33,34,74],15,30);break
-	case "mg":Set2("MG평균",[171,89,28,119,28],40,30);break
-	case "sg":Set2("SG평균",[261,32,11,28,11],30,40);break}
+	"true"==x.mod?Set1(2):Set1(1);
+	"hg"==x.type?Set2("HG평균",[71,31,79,58,55],10,10):
+	"smg"==x.type?Set2("SMG평균",[183,28,70,86,13],25,20):
+	"ar"==x.type?Set2("AR평균",[115,51,43,72,47],20,20):
+	"rf"==x.type?Set2("RF평균",[86,128,33,34,74],15,30):
+	"mg"==x.type?Set2("MG평균",[171,89,28,119,28],40,30):
+	"sg"==x.type&&Set2("SG평균",[261,32,11,28,11],30,40);
 	function Set1(z){y.labels=["체력","화력","회피","사속","명중"];y.datasets[0].data=[x.hp[z],x.dmg[z],x.dodge[z],x.FoR[z],x.hit[z]]};
 	function Set2(a,b,c,d){y.datasets[1].label=a;y.datasets[1].data=b;D=D.replace("C",c).replace("M",d)};
 	$("#sec-fir>div:nth-child(2)>div:nth-child(2)").html(D);
 };
 function fxts(x){
 	var TS="타일 위 타겟에게";
-	switch (x.target){case "all":Set("모든 총기");break;case "hg":Set("HG");break;case "smg":Set("SMG");break;case "ar":Set("AR");break;case "rf":Set("RF");break;case "mg":Set("MG");break;case "sg":Set("SG");break}
+	"all"==x.target?Set("모든 총기"):
+	"hg"==x.target?Set("HG"):
+	"smg"==x.target?Set("SMG"):
+	"ar"==x.target?Set("AR"):
+	"rf"==x.target?Set("RF"):
+	"mg"==x.target?Set("MG"):
+	"sg"==x.target&&Set("SG");
 	$.each(x.TileFx,(index,value)=>{
-		switch (index){
-		case "dmg":TS=`${TS}<br>화력 ${value}%증가`;break;
-		case "dodge":TS=`${TS}<br>회피 ${value}%증가`;break;
-		case "hit":TS=`${TS}<br>명중 ${value}%증가`;break;
-		case "FoR":TS=`${TS}<br>사속 ${value}%증가`;break;
-		case "crit":TS=`${TS}<br>치명타율 ${value}%증가`;break;
-		case "time":TS=`${TS}<br>쿨타임 ${value}%감소`;break;
-		case "armor":TS=`${TS}<br>장갑 ${value}%증가`;break};
+		"dmg"==index?TS=`${TS}<br>화력 ${value}%증가`:
+		"dodge"==index?TS=`${TS}<br>회피 ${value}%증가`:
+		"hit"==index?TS=`${TS}<br>명중 ${value}%증가`:
+		"FoR"==index?TS=`${TS}<br>사속 ${value}%증가`:
+		"crit"==index?TS=`${TS}<br>치명타율 ${value}%증가`:
+		"time"==index?TS=`${TS}<br>쿨타임 ${value}%감소`:
+		"armor"==index&&(TS=`${TS}<br>장갑 ${value}%증가`);
 	});
 	function Set(x){TS=TS.replace("타겟",x)};
 	$("#sec-fir>div:nth-child(1)>div:nth-child(2)>div:nth-child(2)").html(TS);
@@ -143,30 +147,17 @@ function SKB(){
 	});
 };
 function Skill(x){
-	var Sdesc;
-	$("div.w3-row:nth-child(3)>div:nth-child(2)>img").attr('src',"../img/etc/skill/"+dollSkill[x.skill.src]+".png");
-	console.log(x.skill.src)
-	switch (x.skill.src){
-	case 37:
-		Sdesc=`섬광탄을 투척하여 반경 2.5범위 내의 적들을 ${x.skill.Fx.time[1]}초 동안 기절 상태로 만든다 지속시간${x.skill.Fx.time[1]}초/선쿨${x.skill.FCD}초/쿨다운${x.skill.CD[1]}초`
-	break;
-	case 81:
-		if(x.skill.target=="ally"){
-			c81("아군 전체");
-			if(x.id=="13"){
-				Sdesc=Sdesc.replace("화력","화력과 사속을 각각")
-			};
-		};
-		if(x.skill.target=="self_aura_grid"){
-			c81("스킬 발동 시 자신이 제공하는 버프칸에 있는 아군유닛의")
-		};
-	break;
-	case 97:
-		Sdesc=`연막탄을 투척하여 반경 2.5범위 내의 적들의 공격속도를 ${x.skill.Fx.FoR[1]}%, 이동속도를 ${x.skill.Fx.MS[1]}% 감소시킨다.<br>지속시간${x.skill.Fx.time[1]}초/선쿨${x.skill.FCD}초/쿨타임${x.skill.CD[1]}초`
-	break};
+	var src=x.skill.src,Sdesc;
 	function c81(a){
 		Sdesc=`${a} 화력을 ${x.skill.Fx.dmg[1]}% 상승시킨다.<br>지속시간${x.skill.Fx.time[1]}초/선쿨${x.skill.FCD}초/쿨타임${x.skill.CD[1]}초`;
 	};
+	$("div.w3-row:nth-child(3)>div:nth-child(2)>img").attr('src',"../img/etc/skill/"+dollSkill[src]+".png");
+	console.log(src)
+	src==37?Sdesc=`섬광탄을 투척하여 반경 2.5범위 내의 적들을 ${x.skill.Fx.time[1]}초 동안 기절 상태로 만든다 지속시간${x.skill.Fx.time[1]}초/선쿨${x.skill.FCD}초/쿨다운${x.skill.CD[1]}초`:
+	src==81?
+		x.skill.target=="ally"?(c81("아군 전체"),x.id=="13"&&(Sdesc=Sdesc.replace("화력","화력과 사속을 각각"))):
+		x.skill.target=="self_aura_grid"&&c81("스킬 발동 시 자신이 제공하는 버프칸에 있는 아군유닛의"):
+	src==97&&(Sdesc=`연막탄을 투척하여 반경 2.5범위 내의 적들의 공격속도를 ${x.skill.Fx.FoR[1]}%, 이동속도를 ${x.skill.Fx.MS[1]}% 감소시킨다.<br>지속시간${x.skill.Fx.time[1]}초/선쿨${x.skill.FCD}초/쿨타임${x.skill.CD[1]}초`);
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>div:nth-child(2)").html(Sdesc);
 };
 function togglecon(){

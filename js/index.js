@@ -86,11 +86,11 @@ $(T[x]).removeClass("d-none").parent().find(".content").not(T[x]).addClass("d-no
 });
 // disc
 var dollAccExp=[0,0,1,3,6,10,15,21,28,36,45,55,66,78,91,105,120,136,153,171,190,210,231,253,276,300,325,351,379,410,444,486,532,582,636,694,757,824,896,973,1055,1143,1236,1335,1440,1551,1669,1794,1925,2064,2210,2364,2525,2694,2871,3057,3252,3456,3669,3892,4125,4368,4621,4884,5158,5443,5739,6047,6367,6699,7043,7494,7962,8448,8952,9474,10014,10573,11152,11750,12368,13007,13667,14348,15051,15777,16525,17296,18091,18910,19753,20879,22040,23235,24466,25733,27037,28378,29757,31175,32632,33632,34832,36232,37832,39632,41632,43832,46232,49032,52632,57432,63832,72832,84832,100832,122832,152832,192832,242832,302832];
-document.getElementById("oath").addEventListener("change",ReportCalc,false);
-document.getElementById("fairy").addEventListener("change",ReportCalc,false);
-document.getElementById("currentLv").addEventListener("keyup",ReportCalc,false);
-document.getElementById("currentExp").addEventListener("keyup",ReportCalc,false);
-document.getElementById("targetLv").addEventListener("keyup",ReportCalc,false);
+document.getElementById("oath").addEventListener("change",ReportCalc,!1);
+document.getElementById("fairy").addEventListener("change",ReportCalc,!1);
+document.getElementById("currentLv").addEventListener("keyup",ReportCalc,!1);
+document.getElementById("currentExp").addEventListener("keyup",ReportCalc,!1);
+document.getElementById("targetLv").addEventListener("keyup",ReportCalc,!1);
 function ReportCalc(){
 var oath=document.getElementById("oath").checked+1,fairy=document.getElementById("fairy").checked?3:1,currentLv=Number(document.getElementById("currentLv").value),currentExp=Number(document.getElementById("currentExp").value),targetLv=Number(document.getElementById("targetLv").value),report=0;
 if(IsValidLv(fairy,currentLv,currentExp,targetLv)){
