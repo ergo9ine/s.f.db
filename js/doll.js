@@ -147,6 +147,9 @@ function Skill(x){
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>img").attr('src',"../img/etc/skill/"+dollSkill[x.skill.src]+".png");
 	console.log(x.skill.src)
 	switch (x.skill.src){
+	case 37:
+		Sdesc=`섬광탄을 투척하여 반경 2.5범위 내의 적들을 ${x.skill.Fx.time[1]}초 동안 기절 상태로 만든다 지속시간${x.skill.Fx.time[1]}초/선쿨${x.skill.FCD}초/쿨다운${x.skill.CD[1]}초`
+	break;
 	case 81:
 		if(x.skill.target=="ally"){
 			c81("아군 전체");
@@ -159,10 +162,10 @@ function Skill(x){
 		};
 	break;
 	case 97:
-		Sdesc=`연막탄을 투척하여 반경 2.5범위 내의 적들의 공격속도를 ${x.skill.Fx.FoR[1]}%, 이동속도를 ${x.skill.Fx.MS[1]}% 감소시킨다. 지속시간 ${x.skill.Fx.time[1]}초.<br>선쿨${x.skill.FCD}초,쿨타임${x.skill.CD[1]}초.`
+		Sdesc=`연막탄을 투척하여 반경 2.5범위 내의 적들의 공격속도를 ${x.skill.Fx.FoR[1]}%, 이동속도를 ${x.skill.Fx.MS[1]}% 감소시킨다.<br>지속시간${x.skill.Fx.time[1]}초/선쿨${x.skill.FCD}초/쿨타임${x.skill.CD[1]}초`
 	break};
 	function c81(a){
-		Sdesc=`${a} 화력을 ${x.skill.Fx.dmg[1]}% 상승시킨다. 지속시간 ${x.skill.Fx.time[1]}초.<br>선쿨${x.skill.FCD}초,쿨타임${x.skill.CD[1]}초.`;
+		Sdesc=`${a} 화력을 ${x.skill.Fx.dmg[1]}% 상승시킨다.<br>지속시간${x.skill.Fx.time[1]}초/선쿨${x.skill.FCD}초/쿨타임${x.skill.CD[1]}초`;
 	};
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>div:nth-child(2)").html(Sdesc);
 };

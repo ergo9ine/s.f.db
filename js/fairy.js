@@ -60,6 +60,6 @@ $(".fc").click(function(){
 	case "전투":filter('[data-type="Battle"]');break;
 	case "전략":filter('[data-type="Strategy"]');break;
 	case "이벤트":filter('[data-event="1"]');break;
-	case "All":grid.filter('[data-type]');break; 
+	case "All":filter('[data-type]');break; 
 	}
 });
