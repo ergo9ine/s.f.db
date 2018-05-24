@@ -138,21 +138,24 @@ function SKB(){
 	});
 };
 function Skill(x){
-	var src=x.skill.src,Sdesc;
-	function c81(a){Sdesc=`${a} 화력을 ${x.skill.Fx.dmg[1]}% 상승시킨다.<br>지속시간${x.skill.Fx.time[1]}초/선쿨${x.skill.FCD}초/쿨타임${x.skill.CD[1]}초`};
+	var skill=x.skill,src=x.skill.src,Sdesc;
+	function c81(a){Sdesc=`${a} 화력을 ${skill.Fx.dmg[1]}% 상승시킨다.<br>지속시간${skill.Fx.time[1]}초/선쿨${skill.FCD}초/쿨타임${skill.CD[1]}초`};
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>img").attr('src',"../img/etc/skill/"+dollSkill[src]+".png");
 	console.log(src)
-	src==37?Sdesc=`섬광탄을 투척하여 반경 2.5범위 내의 적들을 ${x.skill.Fx.time[1]}초 동안 기절 상태로 만든다 지속시간${x.skill.Fx.time[1]}초/선쿨${x.skill.FCD}초/쿨다운${x.skill.CD[1]}초`:
+	src==37?Sdesc=`섬광탄을 투척하여 반경 2.5범위 내의 적들을 ${skill.Fx.time[1]}초 동안 기절 상태로 만든다<br>지속시간${skill.Fx.time[1]}초/선쿨${skill.FCD}초/쿨다운${skill.CD[1]}초`:
+	src==61?Sdesc=`아군 전체 회피를 ${skill.Fx.dodge[1]}% 상승시킨다.<br>지속시간${skill.Fx.time[1]}초/선쿨${skill.FCD}초/쿨다운${skill.CD[1]}초`:
+	src==69?Sdesc=`적군 전체 화력을 ${skill.Fx.dmg[1]}(${skill.FxNight.dmg[1]})% 하락시킨다<br>지속시간${skill.Fx.time[1]}(${skill.FxNight.time[1]})초/선쿨${skill.FCD}초/쿨다운${skill.CD[1]}초`:
 	src==81?
-		x.skill.target=="ally"?(c81("아군 전체"),x.id=="13"&&(Sdesc=Sdesc.replace("화력","화력과 사속을 각각"))):
-		x.skill.target=="self_aura_grid"&&c81("스킬 발동 시 자신이 제공하는 버프칸에 있는 아군유닛의"):
-	src==97&&(Sdesc=`연막탄을 투척하여 반경 2.5범위 내의 적들의 공격속도를 ${x.skill.Fx.FoR[1]}%,이동속도를 ${x.skill.Fx.MS[1]}% 감소시킨다.<br>지속시간${x.skill.Fx.time[1]}초/선쿨${x.skill.FCD}초/쿨타임${x.skill.CD[1]}초`);
+		skill.target=="ally"?(c81("아군 전체"),x.id=="13"&&(Sdesc=Sdesc.replace("화력","화력과 사속을 각각"))):
+		skill.target=="self_aura_grid"&&c81("스킬 발동 시 자신이 제공하는 버프칸에 있는 아군유닛의"):
+	src==97&&(Sdesc=`연막탄을 투척하여 반경 2.5범위 내의 적들의 공격속도를 ${skill.Fx.FoR[1]}%,이동속도를 ${skill.Fx.MS[1]}% 감소시킨다<br>지속시간${skill.Fx.time[1]}초/선쿨${skill.FCD}초/쿨타임${skill.CD[1]}초`);
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>div:nth-child(2)").html(Sdesc);
 };
 function togglecon(){
 	$(".grid,#search,#filsor,#func").toggleClass('w3-hide');
 	$("body>div:nth-child(2)").toggleClass("d-md-flex");
 	$("button.btn-warning,.w3-image").remove();
+	$(".w3-display-right:nth-child(4)").attr("data-content","");
 	$('[data-toggle="popover"]').popover('hide');
 	$(".skinntg>button").off("click");	
 	for (x=1;x<10;x++){
