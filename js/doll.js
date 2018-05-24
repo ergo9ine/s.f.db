@@ -28,11 +28,14 @@ function contentsload(){
 };
 function loadComplete(){
 	grid=new Muuri('#grid',{
+		showDuration:0,
+		hideDuration:0,
+		layoutDuration:0,
 		sortData:{
 			time:(item,element)=>element.getAttribute('data-time'),
 			type:(item,element)=>element.getAttribute('data-type').toUpperCase(),
 			rarity:(item,element)=>element.getAttribute('data-rarity')
-		},layout:{fillGaps:true,rounding:true}
+		},layout:{fillGaps:true}
 	});
 	loader.removeClass("is-active");
 	$('#search').quicksearch('.item',{
@@ -61,7 +64,6 @@ function loadComplete(){
 				$("body,html").animate({scrollTop:0},0);
 				$(".blockquote>p:nth-child(1)").html(doll.krName);
 				$(".blockquote-footer>cite:nth-child(1)").html(doll.id);
-				$(".skins").remove();
 				$.each(doll.skins,(index,value)=>{skins.push(`<button type="button" class="btn btn-warning btn-sm">${value}</button>`)});
 				$(".skinntg").append(skins);
 				$(".w3-row.text-center>div:eq(0)").append(w3img);
@@ -91,16 +93,16 @@ function loadComplete(){
 function sort(a){grid.sort(a)};
 function filter(a){grid.filter(`${a}`)};
 function chrtset(x,y){
-	var D="편제당<br>탄약 C, 식량 M 소모"
+	var D="편제당<br>탄약 C,식량 M 소모"
 	"true"==x.mod?Set1(2):Set1(1);
-	"hg"==x.type?Set2("HG평균",[71,31,79,58,55],10,10):
-	"smg"==x.type?Set2("SMG평균",[183,28,70,86,13],25,20):
-	"ar"==x.type?Set2("AR평균",[115,51,43,72,47],20,20):
-	"rf"==x.type?Set2("RF평균",[86,128,33,34,74],15,30):
-	"mg"==x.type?Set2("MG평균",[171,89,28,119,28],40,30):
-	"sg"==x.type&&Set2("SG평균",[261,32,11,28,11],30,40);
+	"hg"==x.type?Set2("HG",[71,31,79,58,55],10,10):
+	"smg"==x.type?Set2("SMG",[183,28,70,86,13],25,20):
+	"ar"==x.type?Set2("AR",[115,51,43,72,47],20,20):
+	"rf"==x.type?Set2("RF",[86,128,33,34,74],15,30):
+	"mg"==x.type?Set2("MG",[171,89,28,119,28],40,30):
+	"sg"==x.type&&Set2("SG",[261,32,11,28,11],30,40);
 	function Set1(z){y.labels=["체력","화력","회피","사속","명중"];y.datasets[0].data=[x.hp[z],x.dmg[z],x.dodge[z],x.FoR[z],x.hit[z]]};
-	function Set2(a,b,c,d){y.datasets[1].label=a;y.datasets[1].data=b;D=D.replace("C",c).replace("M",d)};
+	function Set2(a,b,c,d){y.datasets[1].label=a+"평균";y.datasets[1].data=b;D=D.replace("C",c).replace("M",d)};
 	$("#sec-fir>div:nth-child(2)>div:nth-child(2)").html(D);
 };
 function fxts(x){
@@ -126,43 +128,31 @@ function fxts(x){
 };
 function SKB(){
 	$(".skinntg>button").click(function(){
-		var imgtag=$(".w3-image"),iX=$(this).index(),No=$(".dollname>label:nth-child(2)").text(),Isrc=idir+No+'.png';
-		if(iX==0){
-			var imgsrc=imgtag.attr('src').split(idir)[1].split(".png")[0],imgM=imgsrc.indexOf('_d'),imgT=imgsrc.slice(0,-2);
-			if(imgM!=-1){
-				loader.addClass("is-active");
-				(imgtag.attr('src',idir+imgT+'.png')).ready(()=>{loader.removeClass("is-active")});
-			} else {
-				loader.addClass("is-active");
-				(imgtag.attr('src',idir+imgsrc+'_d.png')).ready(()=>{loader.removeClass("is-active")});
-			}
-		} else if(iX==1){
-			imgtag.attr('src',Isrc);
-		} else {
-			iX=iX-1,ISrc=idir+No+'_'+iX+'.png';
-			loader.addClass("is-active");
-			(imgtag.attr('src',ISrc)).ready(()=>{loader.removeClass("is-active")});
-		}
+		var imgtag=$(".w3-image"),iX=$(this).index(),No=$(".blockquote-footer>cite:nth-child(1)").text(),Isrc=idir+No+'.png';
+		if(0==iX){var imgsrc=imgtag.attr("src").split(idir)[1].split(".png")[0],imgM=imgsrc.indexOf("_d"),imgT=imgsrc.slice(0,-2);
+		-1!=imgM?(loader.addClass("is-active"),imgtag.attr("src",idir+imgT+".png").ready(()=>{loader.removeClass("is-active")})):
+		(loader.addClass("is-active"),imgtag.attr("src",idir+imgsrc+"_d.png").ready(()=>{loader.removeClass("is-active")}))}
+		else{1==iX?imgtag.attr("src",Isrc):
+		(--iX,ISrc=idir+No+"_"+iX+".png",loader.addClass("is-active"),imgtag.attr("src",ISrc).ready(()=>{loader.removeClass("is-active")}))
+		};
 	});
 };
 function Skill(x){
 	var src=x.skill.src,Sdesc;
-	function c81(a){
-		Sdesc=`${a} 화력을 ${x.skill.Fx.dmg[1]}% 상승시킨다.<br>지속시간${x.skill.Fx.time[1]}초/선쿨${x.skill.FCD}초/쿨타임${x.skill.CD[1]}초`;
-	};
+	function c81(a){Sdesc=`${a} 화력을 ${x.skill.Fx.dmg[1]}% 상승시킨다.<br>지속시간${x.skill.Fx.time[1]}초/선쿨${x.skill.FCD}초/쿨타임${x.skill.CD[1]}초`};
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>img").attr('src',"../img/etc/skill/"+dollSkill[src]+".png");
 	console.log(src)
 	src==37?Sdesc=`섬광탄을 투척하여 반경 2.5범위 내의 적들을 ${x.skill.Fx.time[1]}초 동안 기절 상태로 만든다 지속시간${x.skill.Fx.time[1]}초/선쿨${x.skill.FCD}초/쿨다운${x.skill.CD[1]}초`:
 	src==81?
 		x.skill.target=="ally"?(c81("아군 전체"),x.id=="13"&&(Sdesc=Sdesc.replace("화력","화력과 사속을 각각"))):
 		x.skill.target=="self_aura_grid"&&c81("스킬 발동 시 자신이 제공하는 버프칸에 있는 아군유닛의"):
-	src==97&&(Sdesc=`연막탄을 투척하여 반경 2.5범위 내의 적들의 공격속도를 ${x.skill.Fx.FoR[1]}%, 이동속도를 ${x.skill.Fx.MS[1]}% 감소시킨다.<br>지속시간${x.skill.Fx.time[1]}초/선쿨${x.skill.FCD}초/쿨타임${x.skill.CD[1]}초`);
+	src==97&&(Sdesc=`연막탄을 투척하여 반경 2.5범위 내의 적들의 공격속도를 ${x.skill.Fx.FoR[1]}%,이동속도를 ${x.skill.Fx.MS[1]}% 감소시킨다.<br>지속시간${x.skill.Fx.time[1]}초/선쿨${x.skill.FCD}초/쿨타임${x.skill.CD[1]}초`);
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>div:nth-child(2)").html(Sdesc);
 };
 function togglecon(){
 	$(".grid,#search,#filsor,#func").toggleClass('w3-hide');
 	$("body>div:nth-child(2)").toggleClass("d-md-flex");
-	$(".w3-image").remove();
+	$("button.btn-warning,.w3-image").remove();
 	$('[data-toggle="popover"]').popover('hide');
 	$(".skinntg>button").off("click");	
 	for (x=1;x<10;x++){
