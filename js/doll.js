@@ -61,6 +61,7 @@ function loadComplete(){
 				var simg=idir+doll.id,cimg=simg+'.png',timehour=parseInt(doll.buildTime/3600),timemin=doll.buildTime%3600/60,time=`${timehour}시간${timemin}분`,gridself=`#grid${doll.Fx.self}`,gridPos=[],skins=[];;
 				$.each(doll.Fx.tile,(index,value)=>{gridPos.push(`#grid${value}`)});
 				gridPos=gridPos.toString();
+				for (x=1;x<10;x++){$(`#grid${x}`).removeClass("w3-white w3-aqua w3-grey").addClass("w3-grey")};
 				$("body,html").animate({scrollTop:0},0);
 				$(".blockquote>p:nth-child(1)").html(doll.krName);
 				$(".blockquote-footer>cite:nth-child(1)").html(doll.id);
@@ -79,7 +80,7 @@ function loadComplete(){
 				chrtset(doll,statisticschart);
 				fxts(doll.Fx);
 				SKB();
-				Skill(doll);
+				Skill(doll.skill);
 				rCh=new Chart(ctx,{type:'radar',data:statisticschart,options:chartOptions});
 				rCh.update();
 			}
@@ -129,26 +130,26 @@ function fxts(x){
 function SKB(){
 	$(".skinntg>button").click(function(){
 		var imgtag=$(".w3-image"),iX=$(this).index(),No=$(".blockquote-footer>cite:nth-child(1)").text(),Isrc=idir+No+'.png';
-		if(0==iX){var imgsrc=imgtag.attr("src").split(idir)[1].split(".png")[0],imgM=imgsrc.indexOf("_d"),imgT=imgsrc.slice(0,-2);
-		-1!=imgM?(loader.addClass("is-active"),imgtag.attr("src",idir+imgT+".png").ready(()=>{loader.removeClass("is-active")})):
-		(loader.addClass("is-active"),imgtag.attr("src",idir+imgsrc+"_d.png").ready(()=>{loader.removeClass("is-active")}))}
-		else{1==iX?imgtag.attr("src",Isrc):
-		(--iX,ISrc=idir+No+"_"+iX+".png",loader.addClass("is-active"),imgtag.attr("src",ISrc).ready(()=>{loader.removeClass("is-active")}))
-		};
+		if(0==iX){var imgsrc=imgtag.attr("src").split(idir)[1].split(".png")[0],imgM=imgsrc.indexOf("_d"),imgT=imgsrc.slice(0,-2);-1!=imgM?(loader.addClass("is-active"),imgtag.attr("src",idir+imgT+".png").ready(()=>{loader.removeClass("is-active")})):(loader.addClass("is-active"),imgtag.attr("src",idir+imgsrc+"_d.png").ready(()=>{loader.removeClass("is-active")}))}
+		else{1==iX?imgtag.attr("src",Isrc):(--iX,ISrc=idir+No+"_"+iX+".png",loader.addClass("is-active"),imgtag.attr("src",ISrc).ready(()=>{loader.removeClass("is-active")}))};
 	});
 };
 function Skill(x){
-	var skill=x.skill,src=x.skill.src,Sdesc;
-	function c81(a){Sdesc=`${a} 화력을 ${skill.Fx.dmg[1]}% 상승시킨다.<br>지속시간${skill.Fx.time[1]}초/선쿨${skill.FCD}초/쿨타임${skill.CD[1]}초`};
+	var src=x.src,Sdesc="";
+	function c81(a){Sdesc=`${a} 화력을 ${x.Fx.dmg[1]}% 상승시킨다`};
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>img").attr('src',"../img/etc/skill/"+dollSkill[src]+".png");
 	console.log(src)
-	src==37?Sdesc=`섬광탄을 투척하여 반경 2.5범위 내의 적들을 ${skill.Fx.time[1]}초 동안 기절 상태로 만든다<br>지속시간${skill.Fx.time[1]}초/선쿨${skill.FCD}초/쿨다운${skill.CD[1]}초`:
-	src==61?Sdesc=`아군 전체 회피를 ${skill.Fx.dodge[1]}% 상승시킨다.<br>지속시간${skill.Fx.time[1]}초/선쿨${skill.FCD}초/쿨다운${skill.CD[1]}초`:
-	src==69?Sdesc=`적군 전체 화력을 ${skill.Fx.dmg[1]}(${skill.FxNight.dmg[1]})% 하락시킨다<br>지속시간${skill.Fx.time[1]}(${skill.FxNight.time[1]})초/선쿨${skill.FCD}초/쿨다운${skill.CD[1]}초`:
+	src==36?Sdesc=`[야간전용]아군 전체 명중을 ${x.FxNight.hit[1]}% 상승시킨다`:
+	src==37?Sdesc=`섬광탄을 투척하여 반경 2.5범위 내의 적들을 ${x.Fx.time[1]}초 동안 기절 상태로 만든다`:
+	src==45?Sdesc=`적군 전체 명중을 ${x.Fx.hit[1]}% 감소시킨다`:
+	src==61?Sdesc=`아군 전체 회피를 ${x.Fx.dodge[1]}% 상승시킨다`:
+	src==69?Sdesc=`적군 전체 화력을 ${x.Fx.dmg[1]}(${x.FxNight.dmg[1]})% 하락시킨다`:
 	src==81?
-		skill.target=="ally"?(c81("아군 전체"),x.id=="13"&&(Sdesc=Sdesc.replace("화력","화력과 사속을 각각"))):
-		skill.target=="self_aura_grid"&&c81("스킬 발동 시 자신이 제공하는 버프칸에 있는 아군유닛의"):
-	src==97&&(Sdesc=`연막탄을 투척하여 반경 2.5범위 내의 적들의 공격속도를 ${skill.Fx.FoR[1]}%,이동속도를 ${skill.Fx.MS[1]}% 감소시킨다<br>지속시간${skill.Fx.time[1]}초/선쿨${skill.FCD}초/쿨타임${skill.CD[1]}초`);
+		x.target=="ally"?(c81("아군 전체"),x.id=="13"&&(Sdesc=Sdesc.replace("화력","화력과 사속을 각각"))):
+		x.target=="self_aura_grid"&&c81("스킬 발동 시 자신이 제공하는 버프칸에 있는 아군유닛의"):
+	src==86?Sdesc=`아군 전체 사속을 ${x.Fx.FoR[1]}% 상승시킨다`:
+	src==97&&(Sdesc=`연막탄을 투척하여 반경 2.5범위 내의 적들의 공격속도를 ${x.Fx.FoR[1]}%,이동속도를 ${x.Fx.MS[1]}% 감소시킨다`);
+	Sdesc+=`<br>지속시간${x.Fx.time[1]}초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`;
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>div:nth-child(2)").html(Sdesc);
 };
 function togglecon(){
@@ -158,9 +159,6 @@ function togglecon(){
 	$(".w3-display-right:nth-child(4)").attr("data-content","");
 	$('[data-toggle="popover"]').popover('hide');
 	$(".skinntg>button").off("click");	
-	for (x=1;x<10;x++){
-		$(`#grid${x}`).removeClass("w3-white w3-aqua w3-grey").addClass("w3-grey")
-	};
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>div:nth-child(2)").empty();
 };
 $("select").change(()=>{
