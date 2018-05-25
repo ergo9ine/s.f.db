@@ -80,7 +80,7 @@ function loadComplete(){
 				chrtset(doll,statisticschart);
 				fxts(doll.Fx);
 				SKB();
-				Skill(doll.skill);
+				Skill(doll.id,doll.skill);
 				rCh=new Chart(ctx,{type:'radar',data:statisticschart,options:chartOptions});
 				rCh.update();
 			}
@@ -120,7 +120,7 @@ function fxts(x){
 		"dodge"==index?TS+=`<br>회피 ${value}%증가`:
 		"hit"==index?TS+=`<br>명중 ${value}%증가`:
 		"FoR"==index?TS+=`<br>사속 ${value}%증가`:
-		"crit"==index?TS+=`<br>치명타율 ${value}%증가`:
+		"cri"==index?TS+=`<br>치명타율 ${value}%증가`:
 		"time"==index?TS+=`<br>쿨타임 ${value}%감소`:
 		"armor"==index&&(TS+=`<br>장갑 ${value}%증가`);
 	});
@@ -134,22 +134,30 @@ function SKB(){
 		else{1==iX?imgtag.attr("src",Isrc):(--iX,ISrc=idir+No+"_"+iX+".png",loader.addClass("is-active"),imgtag.attr("src",ISrc).ready(()=>{loader.removeClass("is-active")}))};
 	});
 };
-function Skill(x){
-	var src=x.src,Sdesc="";
+function Skill(y,x){
+	var src=x.src,Sdesc="",time=`<br>지속시간${x.Fx.time[1]}초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`;
 	function c81(a){Sdesc=`${a} 화력을 ${x.Fx.dmg[1]}% 상승시킨다`};
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>img").attr('src',"../img/etc/skill/"+dollSkill[src]+".png");
 	console.log(src)
+	src==27?
+		y==10?Sdesc=`아군 전체 화력을 ${x.Fx.dmg[1]}%, 치명타율을 ${x.Fx.cri[1]}% 상승시킨다`:
+		y==170&&(Sdesc=`자신의 화력과 치명타율을 각각 ${x.Fx.dmg[1]}% 씩 상승시킨다`):
+	src==30?
+		y==11?Sdesc=`(야간)아군 전체 회피를 ${x.Fx.dodge[1]}(${x.FxNight.dodge[1]})% 상승시킨다.`:
+		y==140&&(Sdesc=`아군 전체 명중을 ${x.Fx.hit[1]}%, 회피를 ${x.Fx.dodge[1]}% 상승시킨다`):
 	src==36?Sdesc=`[야간전용]아군 전체 명중을 ${x.FxNight.hit[1]}% 상승시킨다`:
 	src==37?Sdesc=`섬광탄을 투척하여 반경 2.5범위 내의 적들을 ${x.Fx.time[1]}초 동안 기절 상태로 만든다`:
 	src==45?Sdesc=`적군 전체 명중을 ${x.Fx.hit[1]}% 감소시킨다`:
 	src==61?Sdesc=`아군 전체 회피를 ${x.Fx.dodge[1]}% 상승시킨다`:
-	src==69?Sdesc=`적군 전체 화력을 ${x.Fx.dmg[1]}(${x.FxNight.dmg[1]})% 하락시킨다`:
+	src==69?
+		y==5?Sdesc=`(야간)적군 전체 화력을 ${x.Fx.dmg[1]}(${x.FxNight.dmg[1]})% 하락시킨다`:
+		y==15&&(Sdesc=`적군 전체 화력을 ${x.Fx.dmg[1]}% 하락시킨다`):
 	src==81?
-		x.target=="ally"?(c81("아군 전체"),x.id=="13"&&(Sdesc=Sdesc.replace("화력","화력과 사속을 각각"))):
+		x.target=="ally"?(c81("아군 전체"),y=="13"&&(Sdesc=Sdesc.replace("화력","화력과 사속을 각각"))):
 		x.target=="self_aura_grid"&&c81("스킬 발동 시 자신이 제공하는 버프칸에 있는 아군유닛의"):
 	src==86?Sdesc=`아군 전체 사속을 ${x.Fx.FoR[1]}% 상승시킨다`:
 	src==97&&(Sdesc=`연막탄을 투척하여 반경 2.5범위 내의 적들의 공격속도를 ${x.Fx.FoR[1]}%,이동속도를 ${x.Fx.MS[1]}% 감소시킨다`);
-	Sdesc+=`<br>지속시간${x.Fx.time[1]}초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`;
+	if(y==11||y==5||y==20005){Sdesc+=`<br>지속시간${x.Fx.time[1]}(${x.FxNight.time[1]})초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`}else{Sdesc+=time}
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>div:nth-child(2)").html(Sdesc);
 };
 function togglecon(){
