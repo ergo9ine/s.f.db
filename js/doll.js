@@ -135,11 +135,11 @@ function SKB(){
 	});
 };
 function Skill(y,x){
-	var src=x.src,Sdesc="",time=`<br>지속시간${x.Fx.time[1]}초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`;
+	var src=x.src,Sdesc="";
 	function c81(a){Sdesc=`${a} 화력을 ${x.Fx.dmg[1]}% 상승시킨다`};
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>img").attr('src',"../img/etc/skill/"+dollSkill[src]+".png");
 	console.log(src)
-	src==27?
+	src==27?Sdesc=
 		y==10?Sdesc=`아군 전체 화력을 ${x.Fx.dmg[1]}%, 치명타율을 ${x.Fx.cri[1]}% 상승시킨다`:
 		y==170&&(Sdesc=`자신의 화력과 치명타율을 각각 ${x.Fx.dmg[1]}% 씩 상승시킨다`):
 	src==30?
@@ -147,7 +147,9 @@ function Skill(y,x){
 		y==140&&(Sdesc=`아군 전체 명중을 ${x.Fx.hit[1]}%, 회피를 ${x.Fx.dodge[1]}% 상승시킨다`):
 	src==36?Sdesc=`[야간전용]아군 전체 명중을 ${x.FxNight.hit[1]}% 상승시킨다`:
 	src==37?Sdesc=`섬광탄을 투척하여 반경 2.5범위 내의 적들을 ${x.Fx.time[1]}초 동안 기절 상태로 만든다`:
+	src==41?Sdesc=`수류탄을 투척하여 반경 2.5범위 내의 적들에게 ${x.Fx.dmg[1]}% 데미지를 입힌다`:
 	src==45?Sdesc=`적군 전체 명중을 ${x.Fx.hit[1]}% 감소시킨다`:
+	src==47?Sdesc=156==y||157==y?`자신의 회피를 ${x.Fx.dodge[1]}%, 장갑을 ${x.Fx.armor[1]}% 상승시킨다`:`어떠한 공격이라도 회피 할 수 있다.`:
 	src==61?Sdesc=`아군 전체 회피를 ${x.Fx.dodge[1]}% 상승시킨다`:
 	src==69?
 		y==5?Sdesc=`(야간)적군 전체 화력을 ${x.Fx.dmg[1]}(${x.FxNight.dmg[1]})% 하락시킨다`:
@@ -157,7 +159,8 @@ function Skill(y,x){
 		x.target=="self_aura_grid"&&c81("스킬 발동 시 자신이 제공하는 버프칸에 있는 아군유닛의"):
 	src==86?Sdesc=`아군 전체 사속을 ${x.Fx.FoR[1]}% 상승시킨다`:
 	src==97&&(Sdesc=`연막탄을 투척하여 반경 2.5범위 내의 적들의 공격속도를 ${x.Fx.FoR[1]}%,이동속도를 ${x.Fx.MS[1]}% 감소시킨다`);
-	if(y==11||y==5||y==20005){Sdesc+=`<br>지속시간${x.Fx.time[1]}(${x.FxNight.time[1]})초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`}else{Sdesc+=time}
+	Sdesc=11==y||5==y||20005==y?Sdesc+`<br>지속시간${x.Fx.time[1]}(${x.FxNight.time[1]})초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:
+	src==41?Sdesc+`<br>선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:Sdesc+`<br>지속시간${x.Fx.time[1]}초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`;
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>div:nth-child(2)").html(Sdesc);
 };
 function togglecon(){

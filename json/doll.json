@@ -534,12 +534,9 @@
 	"FoR":[57,82],
 	"skill":{
 		"src":47,
-		"type":"buff",
-		"target":"self",
 		"FCD":8,
 		"CD":[20,16],
 		"Fx":{
-		"immuneDamage":[1,1],
 		"time":[2,4]
 		}
 	},
@@ -571,15 +568,10 @@
 	"FoR":[46,68],
 	"skill":{
 		"src":41,
-		"type":"attack",
-		"target":"enemy",
 		"FCD":3,
 		"CD":[20,16],
 		"Fx":{
-		"attack":[1.8,5.5],
-		"time":[0,0],
-		"dmg":[180,220,260,300,340,390,430,470,510,550],
-		"FCD":3
+		"dmg":[180,550]
 		}
 	},
 	"illust":"november",
@@ -721,6 +713,7 @@
 	}
 	},{
 	"id":21,
+	"krName":"PPsh-41",
 	"name":"PPsh41",
 	"type":"smg",
 	"rarity":2,
@@ -730,17 +723,12 @@
 	"hit":[2,11],
 	"FoR":[65,93],
 	"skill":{
-		"type":"attack",
-		"target":"enemy",
+		"src":41,
 		"FCD":3,
 		"CD":[20,16],
 		"Fx":{
-		"attack":[1.8,5.5],
-		"time":[0,0],
-		"dmg":[180,220,260,300,340,390,430,470,510,550],
-		"FCD":3
-		},
-		"src":41
+		"dmg":[180,550]
+		}
 	},
 	"illust":"和茶",
 	"voice":"Uesaka Sumire",
@@ -758,10 +746,10 @@
 		"dmg":10,
 		"FoR":5
 		}
-	},
-	"krName":"PPsh-41"
+	}
 	},{
 	"id":22,
+	"krName":"PPS-43",
 	"name":"PPS43",
 	"type":"smg",
 	"rarity":3,
@@ -771,17 +759,12 @@
 	"hit":[2,13],
 	"FoR":[52,74],
 	"skill":{
-		"type":"attack",
-		"target":"enemy",
+		"src":41,
 		"FCD":3,
 		"CD":[20,16],
 		"Fx":{
-		"attack":[2,6],
-		"time":[0,0],
-		"dmg":[200,240,290,330,380,420,470,510,560,600],
-		"FCD":3
-		},
-		"src":41
+		"dmg":[200,600]
+		}
 	},
 	"illust":"两卡车",
 	"voice":"Uesaka Sumire",
@@ -798,8 +781,7 @@
 		"TileFx":{
 		"dmg":12
 		}
-	},
-	"krName":"PPS-43"
+	}
 	},{
 	"id":23,
 	"name":"PP90",
@@ -848,17 +830,12 @@
 	"hit":[2,11],
 	"FoR":[57,80],
 	"skill":{
-		"type":"attack",
-		"target":"enemy",
+		"src":41,
 		"FCD":3,
 		"CD":[20,16],
 		"Fx":{
-		"attack":[1.8,5.5],
-		"time":[0,0],
-		"dmg":[180,220,260,300,340,390,430,470,510,550],
-		"FCD":3
-		},
-		"src":41
+		"dmg":[180,550]
+		}
 	},
 	"illust":"NoriZC",
 	"voice":"Tamari Hinata",
@@ -934,17 +911,12 @@
 	"hit":[2,13],
 	"FoR":[63,89],
 	"skill":{
-		"type":"buff",
-		"target":"self",
+		"src":47,
 		"FCD":8,
 		"CD":[20,16],
 		"Fx":{
-		"immuneDamage":[1,1],
-		"time":[1.5,3],
-		"time":[1.5,1.7,1.8,2,2.2,2.3,2.5,2.7,2.8,3],
-		"FCD":8
-		},
-		"src":47
+		"time":[1.5,3]
+		}
 	},
 	"illust":"Saru",
 	"voice":"Naomi Mukaiyama",
@@ -1053,6 +1025,7 @@
 	"krName":"MP7"
 	},{
 	"id":29,
+	"krName":"스텐MkII",
 	"name":"StenMK2",
 	"type":"smg",
 	"rarity":3,
@@ -1062,17 +1035,12 @@
 	"hit":[2,15],
 	"FoR":[52,78],
 	"skill":{
-		"type":"attack",
-		"target":"enemy",
+		"src":41,
 		"FCD":3,
 		"CD":[20,16],
 		"Fx":{
-		"attack":[2,6],
-		"time":[0,0],
-		"dmg":[200,240,290,330,380,420,470,510,560,600],
-		"FCD":3
-		},
-		"src":41
+		"dmg":[200,600]
+		}
 	},
 	"illust":"真名",
 	"voice":"Kami Daimon",
@@ -1081,7 +1049,7 @@
 		"0-1","1-6","1-2e","1-3e","1-4e","2-1","2-2","2-3","2-5","2-6","2-1e","2-2e","2-3e","2-4e","3-1","3-2","3-3","3-4","3-5","3-6","3-2e","3-3e","4-2","4-3","4-5","4-6","4-1e","4-3e","5-1","5-3","5-5","5-6","5-1e","5-3e","5-4e","6-2","6-3","6-5","6-6","6-2e","6-4e","7-2","7-3","7-5","7-6","7-2e","7-4e","8-2","8-4","8-6","8-2e","8-4e"
 	],
 	"skins":["마음의 대답"],
-	"nick":["비빗쟈"],
+	"nick":["대괴수","비빗쟈"],
 	"Fx":{
 		"target":"ar",
 		"self":5,
@@ -1090,8 +1058,7 @@
 		"hit":10,
 		"dodge":30
 		}
-	},
-	"krName":"스텐MkII"
+	}
 	},{
 	"id":31,
 	"krName":"베레타 38형",
@@ -3775,9 +3742,6 @@
 		"target":"self",
 		"FCD":1,
 		"CD":[666,666],
-		"detailText":{
-		"val":"未釋放技能時<br> 每2秒回避上升{0}% 傷害下降{1}% 最多疊加5層。<br> 主動效果:清空當前所有被動效果，釋放後每2秒傷害上升{2}%，回避下降{3}% 最多疊加5層。"
-		},
 		"stack":5,
 		"Fx":{
 		"dodge":{
@@ -3885,17 +3849,12 @@
 	"hit":[2,13],
 	"FoR":[52,83],
 	"skill":{
-		"type":"buff",
-		"target":"self",
+		"src":47,
 		"FCD":8,
 		"CD":[20,16],
 		"Fx":{
-		"immuneDamage":[1,1],
-		"time":[2,4],
-		"time":[2,2.2,2.4,2.7,2.9,3.1,3.3,3.6,3.8,4],
-		"FCD":8
-		},
-		"src":47
+		"time":[2,4]
+		}
 	},
 	"illust":"Parsley",
 	"voice":"Akane Fujita",
@@ -4992,6 +4951,7 @@
 	"krName":"97식"
 	},{
 	"id":131,
+	"krName":"EVO 3",
 	"name":"CZ Scorpion EVO 3",
 	"type":"smg",
 	"rarity":3,
@@ -5001,17 +4961,12 @@
 	"hit":[2,13],
 	"FoR":[65,93],
 	"skill":{
-		"type":"attack",
-		"target":"enemy",
+		"src":41,
 		"FCD":6,
 		"CD":[20,16],
 		"Fx":{
-		"attack":[2,6],
-		"time":[0,0],
-		"dmg":[200,240,290,330,380,420,470,510,560,600],
-		"FCD":3
-		},
-		"src":41
+		"dmg":[200,600]
+		}
 	},
 	"illust":"钉田西瓜",
 	"voice":"Nozomi Yamamoto",
@@ -5026,8 +4981,7 @@
 		"TileFx":{
 		"hit":55
 		}
-	},
-	"krName":"EVO 3"
+	}
 	},{
 	"id":132,
 	"name":"59type",
@@ -5203,6 +5157,7 @@
 	}
 	},{
 	"id":136,
+	"krName":"PP-19",
 	"name":"PP19",
 	"type":"smg",
 	"rarity":4,
@@ -5212,17 +5167,12 @@
 	"hit":[2,14],
 	"FoR":[63,91],
 	"skill":{
-		"type":"attack",
-		"target":"enemy",
+		"src":41,
 		"FCD":3,
 		"CD":[20,16],
 		"Fx":{
-		"attack":[2.2,6.5],
-		"time":[0,0],
-		"dmg":[220,270,320,360,410,460,510,550,600,650],
-		"FCD":3
-		},
-		"src":41
+		"dmg":[220,650]
+		}
 	},
 	"illust":"八才",
 	"voice":"Serizawa Yuu",
@@ -5237,8 +5187,7 @@
 		"TileFx":{
 		"dmg":24
 		}
-	},
-	"krName":"PP-19"
+	}
 	},{
 	"id":137,
 	"name":"PP1901",
@@ -5848,17 +5797,6 @@
 		"dmg":20,
 		"hit":20
 		}
-	},
-	"stats":{
-		"hp":125,
-		"armor":120,
-		"dmg":125,
-		"hit":95,
-		"dodge":95,
-		"speed":100,
-		"FoR":80,
-		"armorPiercing":10,
-		"cri":40
 	}
 	},{
 	"id":152,
@@ -5901,17 +5839,6 @@
 		"TileFx":{
 		"hit":50
 		}
-	},
-	"stats":{
-		"hp":115,
-		"armor":115,
-		"dmg":120,
-		"hit":100,
-		"dodge":95,
-		"speed":100,
-		"FoR":100,
-		"armorPiercing":10,
-		"cri":40
 	}
 	},{
 	"id":153,
@@ -5954,17 +5881,6 @@
 		"TileFx":{
 		"dmg":18
 		}
-	},
-	"stats":{
-		"hp":115,
-		"armor":120,
-		"dmg":125,
-		"hit":120,
-		"dodge":115,
-		"speed":100,
-		"FoR":105,
-		"armorPiercing":10,
-		"cri":40
 	}
 	},{
 	"id":154,
@@ -6006,17 +5922,6 @@
 		"TileFx":{
 		"dmg":18
 		}
-	},
-	"stats":{
-		"hp":120,
-		"armor":115,
-		"dmg":110,
-		"hit":105,
-		"dodge":90,
-		"speed":100,
-		"FoR":115,
-		"armorPiercing":10,
-		"cri":40
 	}
 	},{
 	"id":155,
@@ -6058,17 +5963,6 @@
 		"TileFx":{
 		"hit":55
 		}
-	},
-	"stats":{
-		"hp":120,
-		"armor":120,
-		"dmg":115,
-		"hit":105,
-		"dodge":90,
-		"speed":100,
-		"FoR":120,
-		"armorPiercing":10,
-		"cri":40
 	}
 	},{
 	"id":156,
@@ -6084,20 +5978,14 @@
 	"ammoCount":3,
 	"armor":[3,20],
 	"skill":{
-		"type":"buff",
-		"target":"self",
+		"src":47,
 		"FCD":10,
 		"CD":[20,16],
 		"Fx":{
 		"armor":[25,50],
 		"dodge":[28,55],
-		"time":[4,6],
-		"DG":[25,28,31,33,36,39,42,44,47,50],
-		"AM":[28,31,34,37,40,43,46,49,52,55],
-		"time":[4,4.2,4.4,4.7,4.9,5.1,5.3,5.6,5.8,6],
-		"FCD":10
-		},
-		"src":47
+		"time":[4,6]
+		}
 	},
 	"illust":"废人",
 	"voice":0,
@@ -6113,17 +6001,6 @@
 		"dmg":15,
 		"hit":20
 		}
-	},
-	"stats":{
-		"hp":110,
-		"armor":110,
-		"dmg":85,
-		"hit":105,
-		"dodge":135,
-		"speed":100,
-		"FoR":110,
-		"armorPiercing":10,
-		"cri":40
 	}
 	},{
 	"id":157,
@@ -6139,20 +6016,14 @@
 	"ammoCount":5,
 	"armor":[3,24],
 	"skill":{
-		"type":"buff",
-		"target":"self",
+		"src":47,
 		"FCD":10,
 		"CD":[20,16],
 		"Fx":{
 		"armor":[30,60],
 		"dodge":[30,60],
-		"time":[4,6],
-		"DG":[30,33,37,40,43,47,50,53,57,60],
-		"AM":[30,33,37,40,43,47,50,53,57,60],
-		"time":[4,4.2,4.4,4.7,4.9,5.1,5.3,5.6,5.8,6],
-		"FCD":10
-		},
-		"src":47
+		"time":[4,6]
+		}
 	},
 	"illust":"neco",
 	"voice":"Shizuka Ito",
@@ -6167,17 +6038,6 @@
 		"TileFx":{
 		"dmg":20
 		}
-	},
-	"stats":{
-		"hp":115,
-		"armor":130,
-		"dmg":100,
-		"hit":115,
-		"dodge":110,
-		"speed":100,
-		"FoR":115,
-		"armorPiercing":10,
-		"cri":40
 	}
 	},{
 	"id":158,
@@ -6221,17 +6081,6 @@
 		"dmg":12,
 		"hit":30
 		}
-	},
-	"stats":{
-		"hp":125,
-		"armor":115,
-		"dmg":150,
-		"hit":85,
-		"dodge":90,
-		"speed":100,
-		"FoR":95,
-		"armorPiercing":10,
-		"cri":40
 	}
 	},{
 	"id":159,
@@ -6275,17 +6124,6 @@
 		"dmg":12,
 		"hit":30
 		}
-	},
-	"stats":{
-		"hp":110,
-		"armor":120,
-		"dmg":105,
-		"hit":95,
-		"dodge":120,
-		"speed":100,
-		"FoR":110,
-		"armorPiercing":10,
-		"cri":40
 	}
 	},{
 	"id":160,
@@ -6338,17 +6176,6 @@
 		"TileFx":{
 		"dmg":15
 		}
-	},
-	"stats":{
-		"hp":120,
-		"armor":125,
-		"dmg":100,
-		"hit":110,
-		"dodge":95,
-		"speed":100,
-		"FoR":135,
-		"armorPiercing":10,
-		"cri":40
 	}
 	},{
 	"id":161,
@@ -6391,18 +6218,7 @@
 		"dmg":12
 		}
 	},
-	"krName":"97식 산탄총",
-	"stats":{
-		"hp":120,
-		"armor":110,
-		"dmg":110,
-		"hit":100,
-		"dodge":115,
-		"speed":100,
-		"FoR":105,
-		"armorPiercing":10,
-		"cri":40
-	}
+	"krName":"97식 산탄총"
 	},{
 	"id":162,
 	"krName":"SPAS-12",
@@ -6444,17 +6260,6 @@
 		"TileFx":{
 		"dmg":20
 		}
-	},
-	"stats":{
-		"hp":125,
-		"armor":115,
-		"dmg":120,
-		"hit":110,
-		"dodge":85,
-		"speed":100,
-		"FoR":125,
-		"armorPiercing":10,
-		"cri":40
 	}
 	},{
 	"id":166,
@@ -7202,10 +7007,6 @@
 		"target":"enemy",
 		"FCD":6,
 		"CD":[15,12],
-		"prepareTime":1,
-		"detailText":{
-		"val":"經過1秒的瞄準後射出一顆特製子彈<br>造成{0}倍傷害<br>附加{1}%傷害加深<br>並使其成為我方集火目標<br>持續{2}秒。當競爭者位於前/中/後排時會變更技能目標，分別瞄準最遠/當前血量最高/最近的敵人<br>BOSS存在時則優先瞄準BOSS。"
-		},
 		"Fx":{
 		"attack":[1.5,3],
 		"reducedDamage":{
@@ -7429,9 +7230,6 @@
 		"target":"ally",
 		"FCD":2,
 		"CD":[12,8],
-		"detailText":{
-		"val":"給戰鬥中位於第一排的我方人形增加能吸收{0}點傷害的護盾<br>持續{1}秒。"
-		},
 		"Fx":{
 		"shield":[12,35],
 		"time":[3,5],
@@ -7455,17 +7253,6 @@
 		"dmg":10,
 		"hit":15
 		}
-	},
-	"stats":{
-		"hp":128,
-		"armor":120,
-		"dmg":105,
-		"hit":120,
-		"dodge":110,
-		"speed":100,
-		"FoR":130,
-		"armorPiercing":10,
-		"cri":40
 	}
 	},{
 	"id":189,
@@ -7483,9 +7270,6 @@
 	"skill":{
 		"FCD":1,
 		"CD":[20,16],
-		"detailText":{
-		"val":"{0}秒內提升攻速{1}%<br>並裝彈量增加{2}發<br>但該輪射擊後第一次換彈時間延長1秒。"
-		},
 		"Fxs":[
 		{
 			"filter":"active",
@@ -7547,17 +7331,6 @@
 		"dmg":15,
 		"hit":20
 		}
-	},
-	"stats":{
-		"hp":118,
-		"armor":120,
-		"dmg":100,
-		"hit":95,
-		"dodge":80,
-		"speed":100,
-		"FoR":140,
-		"armorPiercing":10,
-		"cri":40
 	}
 	},{
 	"id":190,
@@ -7609,17 +7382,6 @@
 		}
 	},
 	"krName":"NS2000",
-	"stats":{
-		"hp":115,
-		"armor":110,
-		"dmg":115,
-		"hit":110,
-		"dodge":95,
-		"speed":100,
-		"FoR":105,
-		"armorPiercing":10,
-		"cri":40
-	},
 	"ammoCount":5,
 	"armor":{
 		"1":3,
@@ -7689,25 +7451,6 @@
 	"skill":{
 		"FCD":6,
 		"CD":[20,16],
-		"detailText":{
-		"0":"戰鬥內點擊技能可切換攻擊模式。<br>Fever模式(預設):短點射模式<br>攻擊造成3次{0}%的傷害且槍管溫度提升1。溫度超過15後當前每點溫度降低命中和傷害{1}%(上限20層）。<br>Note模式:單發模式<br>每次攻擊溫度下降1<br>移速和回避降低{2}%<br>攻擊同一敵人時每次攻擊傷害上升{3}%（上限10層）。 ",
-		"format":[
-			{
-			"FxIndex":1,
-			"attr":"value",
-			"percent":true
-			},{
-			"FxIndex":6,
-			"attr":"value"
-			},{
-			"FxIndex":4,
-			"attr":"value"
-			},{
-			"FxIndex":10,
-			"attr":"value"
-			}
-		]
-		},
 		"Fxs":[
 		{
 			"filter":"battleStart",
@@ -7915,9 +7658,6 @@
 	"skill":{
 		"FCD":5,
 		"CD":[20,16],
-		"detailText":{
-		"val":"發射榴彈對半徑2.5範圍內的敵人造成{0}%的傷害<br>若命中3個及以上單位則對目標附加{1}%的增傷效果<br>持續{2}秒;若命中3個以下敵人則提升自身傷害{3}%<br>持續{4}秒。"
-		},
 		"Fxs":[
 		{
 			"filter":"active",
@@ -8024,23 +7764,7 @@
 		"CD":[5,3],
 		"detailText":{
 		"0":"戰鬥內點擊技能可切換攻擊模式。<br>Fever模式(預設):短點射模式<br>攻擊造成3次{0}%的傷害且槍管溫度提升1。溫度超過15後當前每點溫度降低命中和傷害{1}%(上限20層）。<br>Note模式:單發模式<br>每次攻擊溫度下降1<br>移速和回避降低{2}%<br>攻擊同一敵人時每次攻擊傷害上升{3}%（上限10層）。 ",
-		"val":"主動:使用後<br>隊伍中每存在一組步槍人形<br>自身暴擊與射速提升{0}%<br>持續{1}秒。被動：攻擊有40%機率使同列所有我方人形暴擊與射速提升{2}%<br>持續2秒(疊加上限3層).",
-		"format":[
-			{
-			"FxIndex":1,
-			"attr":"value",
-			"percent":true
-			},{
-			"FxIndex":6,
-			"attr":"value"
-			},{
-			"FxIndex":4,
-			"attr":"value"
-			},{
-			"FxIndex":10,
-			"attr":"value"
-			}
-		]
+		"val":"主動:使用後<br>隊伍中每存在一組步槍人形<br>自身暴擊與射速提升{0}%<br>持續{1}秒。被動：攻擊有40%機率使同列所有我方人形暴擊與射速提升{2}%<br>持續2秒(疊加上限3層)."
 		},
 		"stack":3,
 		"Fx":{
@@ -8277,26 +8001,6 @@
 	"skill":{
 		"FCD":6,
 		"CD":[10,8],
-		"detailText":{
-		"0":"被動:攻擊有{0}%機率增加2層印記。印記達到18層後<br>下次攻擊對精英單位造成{1}%的傷害(對普通單位造成{2}%)並立即重置印記層數。<br>主動:立即增加{3}層印記。",
-		"format":[
-			{
-			"FxIndex":1,
-			"attr":"FoR"
-			},{
-			"FxIndex":3,
-			"attr":"value",
-			"percent":true
-			},{
-			"FxIndex":4,
-			"attr":"value",
-			"percent":true
-			},{
-			"FxIndex":5,
-			"attr":"value"
-			}
-		]
-		},
 		"Fxs":[
 		{
 			"filter":"battleStart",
@@ -8424,15 +8128,6 @@
 		"CD":[20,16],
 		"detailText":{
 		"0":"提升自身火力{0}%,持續{1}秒",
-		"format":[
-			{
-			"FxIndex":0,
-			"attr":"value"
-			},{
-			"FxIndex":0,
-			"attr":"time"
-			}
-		],
 		"val":"發射榴彈對半徑2.5範圍內的敵人造成{0}%的傷害<br>若命中3個及以上單位則對目標附加{1}%的增傷效果<br>持續{2}秒;若命中3個以下敵人則提升自身傷害{3}%<br>持續{4}秒。"
 		},
 		"Fxs":[
@@ -8523,18 +8218,6 @@
 		"CD":[10,8],
 		"detailText":{
 		"0":"夜間作戰時,提升自身射速{0}%(晝間衰減至{1}%),持續{2}秒",
-		"format":[
-			{
-			"FxIndex":1,
-			"attr":"value"
-			},{
-			"FxIndex":0,
-			"attr":"value"
-			},{
-			"FxIndex":0,
-			"attr":"time"
-			}
-		],
 		"val":"主動:使用後<br>隊伍中每存在一組步槍人形<br>自身暴擊與射速提升{0}%<br>持續{1}秒。被動：攻擊有40%機率使同列所有我方人形暴擊與射速提升{2}%<br>持續2秒(疊加上限3層)."
 		},
 		"Fxs":[
@@ -8659,9 +8342,6 @@
 			"FxIndex":4,
 			"attr":"value",
 			"percent":true
-			},{
-			"FxIndex":5,
-			"attr":"value"
 			}
 		]
 		},
@@ -8794,19 +8474,6 @@
 	"skill":{
 		"FCD":8,
 		"CD":[18,18],
-		"detailText":{
-		"0":"提升自身火力{0}%,持續{1}秒",
-		"format":[
-			{
-			"FxIndex":0,
-			"attr":"value",
-			"percent":true
-			},{
-			"FxIndex":0,
-			"attr":"time"
-			}
-		]
-		},
 		"Fxs":[
 		{
 			"filter":"active",
@@ -8866,19 +8533,7 @@
 		"CD":[10,8],
 		"detailText":{
 		"0":"夜間作戰時,提升自身射速{0}%(晝間衰減至{1}%),持續{2}秒",
-		"val":"提升自身火力{0}%和迴避{1}%,持續{2}秒",
-		"format":[
-			{
-			"FxIndex":1,
-			"attr":"value"
-			},{
-			"FxIndex":0,
-			"attr":"value"
-			},{
-			"FxIndex":0,
-			"attr":"time"
-			}
-		]
+		"val":"提升自身火力{0}%和迴避{1}%,持續{2}秒"
 		},
 		"Fxs":[
 		{
@@ -8953,18 +8608,6 @@
 	"skill":{
 		"FCD":15,
 		"CD":[20,16],
-		"detailText":{
-		"0":"進行2秒的瞄準，對最近目標造成{0}倍的傷害。",
-		"format":[
-			{
-			"FxIndex":0,
-			"attr":"value"
-			},{
-			"FxIndex":1,
-			"attr":"time"
-			}
-		]
-		},
 		"Fxs":[
 		{
 			"filter":"active",
@@ -9052,17 +8695,6 @@
 	"skill":{
 		"FCD":4,
 		"CD":[15,12],
-		"detailText":{
-		"0":"進行1秒的瞄準後對最近目標造成{0}%的傷害<br>但傷害可能會被閃避且射擊後需要消耗2秒再次裝填。",
-		"format":[
-			{
-			"textIndex":0,
-			"FxIndex":0,
-			"attr":"value",
-			"percent":true
-			}
-		]
-		},
 		"Fxs":[
 		{
 			"filter":"active",
@@ -9130,17 +8762,6 @@
 		"CD":[10,8],
 		"detailText":{
 		"0":"提升{0}%火力,射速,命中和暴擊率,持續{1}秒",
-		"format":[
-			{
-			"textIndex":0,
-			"FxIndex":0,
-			"attr":"value"
-			},{
-			"textIndex":1,
-			"FxIndex":0,
-			"attr":"time"
-			}
-		],
 		"val":"提升自身火力{0}%和迴避{1}%,持續{2}秒"
 		},
 		"Fxs":[
@@ -9239,16 +8860,7 @@
 		"CD":[20,16],
 		"detailText":{
 		"0":"被動:每隔{0}秒會週期性給敵人添加1層標記。開啟技能後每次普攻會觸發一次額外攻擊<br>指向被標記目標並消耗1層標記。主動效果持續{1}秒或至標記全部消耗。",
-		"val":"日戰提升傷害{0}%和暴擊{1}%,夜戰提升命中{2}%和射速{3}%,持續{4}秒",
-		"format":[
-			{
-			"FxIndex":0,
-			"attr":"whenEveryXSeconds"
-			},{
-			"FxIndex":1,
-			"attr":"time"
-			}
-		]
+		"val":"日戰提升傷害{0}%和暴擊{1}%,夜戰提升命中{2}%和射速{3}%,持續{4}秒"
 		},
 		"Fxs":[
 		{
@@ -9360,25 +8972,6 @@
 	"skill":{
 		"FCD":6,
 		"CD":[10,8],
-		"detailText":{
-		"0":"變更攻擊目標時會造成兩次傷害。<br>開啟技能期間每次攻擊都會造成兩次傷害,持續{0}秒",
-		"format":[
-			{
-			"FxIndex":0,
-			"attr":"time",
-			"textIndex":0
-			},{
-			"FxIndex":1,
-			"attr":"value"
-			},{
-			"FxIndex":2,
-			"attr":"value"
-			},{
-			"FxIndex":2,
-			"attr":"time"
-			}
-		]
-		},
 		"Fxs":[
 		{
 			"filter":"active",
@@ -9469,10 +9062,6 @@
 			"FxIndex":0,
 			"attr":"value",
 			"textIndex":0
-			},{
-			"textIndex":1,
-			"FxIndex":0,
-			"attr":"time"
 			}
 		]
 		},
@@ -9613,24 +9202,6 @@
 	"skill":{
 		"FCD":8,
 		"CD":[18,18],
-		"detailText":{
-		"0":"提升裝彈量{0}<br>火力{1}%以及命中{2}%<br>同時進入掃射模式<br>每次攻擊都會切換攻擊目標<br>但移動速度下降50%<br>持續{3}秒。",
-		"format":[
-			{
-			"FxIndex":0,
-			"attr":"value"
-			},{
-			"FxIndex":1,
-			"attr":"value"
-			},{
-			"FxIndex":2,
-			"attr":"value"
-			},{
-			"FxIndex":2,
-			"attr":"time"
-			}
-		]
-		},
 		"Fxs":[
 		{
 			"filter":"active",
@@ -9790,19 +9361,8 @@
 		"detailText":{
 		"0":"提升自身火力{0}%和命中{1}%,持續{2}秒",
 		"format":[
-			{
-			"FxIndex":0,
-			"attr":"value"
-			},{
-			"FxIndex":1,
-			"attr":"value"
-			},{
-			"FxIndex":0,
-			"attr":"time"
-			},{
-			"FxIndex":3,
-			"attr":"value"
-			},{
+	{
+
 			"FxIndex":0,
 			"attr":"time"
 			}
@@ -9904,24 +9464,6 @@
 	"skill":{
 		"FCD":6,
 		"CD":[15,12],
-		"detailText":{
-		"0":"根據位於影響格上隊友的種類提升不同能力:手槍/衝鋒槍提升閃避{0}%<br>步槍/突擊步槍提升傷害{1}%<br>機槍/霰彈槍提升命中{2}%<br>持續{3}秒。",
-		"format":[
-			{
-			"FxIndex":0,
-			"attr":"value"
-			},{
-			"FxIndex":1,
-			"attr":"value"
-			},{
-			"FxIndex":2,
-			"attr":"value"
-			},{
-			"FxIndex":0,
-			"attr":"time"
-			}
-		]
-		},
 		"Fxs":[
 		{
 			"filter":"active",
@@ -10008,21 +9550,6 @@
 	"skill":{
 		"FCD":1,
 		"CD":[1,1],
-		"detailText":{
-		"0":"點擊技能在不同彈藥間進行切換<br>每種彈藥提供不同的常駐狀態效果:亞音速彈(默認):提升回避{0}%/勺尖彈:提升火力{1}%/標準彈:提升命中{2}%",
-		"format":[
-			{
-			"FxIndex":0,
-			"attr":"value"
-			},{
-			"FxIndex":1,
-			"attr":"value"
-			},{
-			"FxIndex":2,
-			"attr":"value"
-			}
-		]
-		},
 		"Fxs":[
 		{
 			"filter":"battleStart",
@@ -10107,25 +9634,7 @@
 		"CD":[20,16],
 		"detailText":{
 		"0":"若戰鬥內前方一格存在隊友時為隊友提供護盾{0}點和閃避{1}%<br>若不存在則提升自身火力{2}%和射速{3}%<br>持續{4}秒",
-		"val":"向敵方衝刺<br>並對小範圍內的敵人造成8次{0}倍的傷害。",
-		"format":[
-			{
-			"FxIndex":0,
-			"attr":"value"
-			},{
-			"FxIndex":1,
-			"attr":"value"
-			},{
-			"FxIndex":2,
-			"attr":"value"
-			},{
-			"FxIndex":3,
-			"attr":"value"
-			},{
-			"FxIndex":0,
-			"attr":"time"
-			}
-		]
+		"val":"向敵方衝刺<br>並對小範圍內的敵人造成8次{0}倍的傷害。"
 		},
 		"Fx":{
 		"attack":{
@@ -10303,16 +9812,7 @@
 		"prepareTime":1.5,
 		"detailText":{
 		"0":"提升自身射速{0}%,持續{1}秒",
-		"val":"进行1.5秒的瞄准,对最远目标造成{0}倍的伤害，同时在{1}秒内对目标附加麻痹（无法移动和攻击）效果。",
-		"format":[
-			{
-			"FxIndex":0,
-			"attr":"value"
-			},{
-			"FxIndex":0,
-			"attr":"time"
-			}
-		]
+		"val":"进行1.5秒的瞄准,对最远目标造成{0}倍的伤害，同时在{1}秒内对目标附加麻痹（无法移动和攻击）效果。"
 		},
 		"Fx":{
 		"attack":[2.5,5],
@@ -10422,9 +9922,6 @@
 		"target":"enemy",
 		"FCD":6,
 		"CD":[15,12],
-		"detailText":{
-		"val":"向敵方衝刺<br>並對小範圍內的敵人造成8次{0}倍的傷害。"
-		},
 		"Fx":{
 		"attack":{
 			"1":0.6,
@@ -10463,26 +9960,12 @@
 		"hit":15
 		}
 	},
-	"stats":{
-		"hp":125,
-		"armor":125,
-		"dmg":130,
-		"hit":120,
-		"dodge":80,
-		"speed":100,
-		"FoR":110,
-		"armorPiercing":10,
-		"cri":40
-	},
 	"skill":{
 		"src":39,
 		"type":"attack",
 		"target":"enemy",
 		"FCD":10,
 		"CD":[20,16],
-		"detailText":{
-		"val":"造成{0}倍的傷害並鎖定目標<br>隨後發射導彈<br>對目標周圍1.5範圍內的敵人造成{1}倍的傷害。"
-		},
 		"Fx":{
 		"attack":[4,8],
 		"attack2":{
@@ -10515,9 +9998,6 @@
 	"skill":{
 		"FCD":4,
 		"CD":[20,16],
-		"detailText":{
-		"val":"提升自身火力{0}%,持續{1}秒"
-		},
 		"Fxs":[
 		{
 			"filter":"active",
@@ -10541,9 +10021,6 @@
 		}
 	},
 	"Mod2Skill":{
-		"detailText":{
-		"val":"開啟화력전개期間會對目標附加伸冤者印記<br>當我方場上單位數量為3及以下時,以攻速降低70%為代價,<br>每次普攻對目標造成{0}%的傷害,同時對2.5範圍內的目標<br>附加印記並造成100%的濺射傷害(期間화력전개仍然有效)"
-		},
 		"Fxs":[
 		{
 			"filter":"active",
@@ -10620,9 +10097,6 @@
 	"skill":{
 		"FCD":6,
 		"CD":[20,16],
-		"detailText":{
-		"val":"进行1.5秒的瞄准,对最远目标造成{0}倍的伤害，同时在{1}秒内对目标附加麻痹（无法移动和攻击）效果。"
-		},
 		"Fxs":[
 		{
 			"filter":"active",
@@ -10652,9 +10126,6 @@
 		}
 	},
 	"Mod2Skill":{
-		"detailText":{
-		"val":"開啟고속사격時會使用主副武器同時攻擊,<br>副武器造成{0}%的傷害,對受伸冤者印記影響的目標造成{1}%的傷害"
-		},
 		"Fxs":[
 		{
 			"filter":"attack",
@@ -10708,18 +10179,6 @@
 	"skill":{
 		"FCD":6,
 		"CD":[10,8],
-		"detailText":{
-		"0":"提升自身迴避{0}%,持續{1}秒",
-		"format":[
-			{
-			"FxIndex":0,
-			"attr":"value"
-			},{
-			"FxIndex":0,
-			"attr":"time"
-			}
-		]
-		},
 		"Fxs":[
 		{
 			"filter":"active",
@@ -10739,69 +10198,8 @@
 		"src":15,
 		"Fx":{
 		"DMG":[10,11,12,13,14,15,16,17,18,20],
-		"time":[2,2.3,2.7,3,3.3,3.7,4,4.3,4.7,5],
-		"CD":1
+		"time":[2,2.3,2.7,3,3.3,3.7,4,4.3,4.7,5]
 		}
-	},
-	"Mod2Skill":{
-		"detailText":{
-		"0":"戰鬥開始時擁有3格電量,每一點電量會提供額外{0}%的射速及{1}%的火力<br>電量每{2}秒消耗一格<br>開啟회피기동時電量會充滿",
-		"format":[
-			{
-			"FxIndex":0,
-			"attr":"value"
-			},{
-			"FxIndex":1,
-			"attr":"value"
-			},{
-			"FxIndex":1,
-			"attr":"stackDownWhenEveryTime"
-			}
-		]
-		},
-		"Fxs":[
-		{
-			"filter":"battleStart",
-			"type":"buff",
-			"target":"self",
-			"attribute":"FoR",
-			"value":{
-			"1":6,
-			"10":10
-			},
-			"initStack":3,
-			"stackMax":3,
-			"stackDownWhenEveryTime":{
-			"1":1,
-			"10":2
-			}
-		},
-		{
-			"filter":"battleStart",
-			"type":"buff",
-			"target":"self",
-			"attribute":"dmg",
-			"value":{
-			"1":12,
-			"10":20
-			},
-			"initStack":3,
-			"stackMax":3,
-			"stackDownWhenEveryTime":{
-			"1":1,
-			"10":2
-			}
-		},
-		{
-			"filter":"active",
-			"type":"buffStackAdd",
-			"target":"self",
-			"buffName":"電光大狂歡",
-			"value":{
-			"0":3
-			}
-		}
-		]
 	},
 	"rarity":"ex",
 	"illust":"水熊",
@@ -10860,18 +10258,6 @@
 		}
 	},
 	"Mod2Skill":{
-		"detailText":{
-		"0":"섬광탄額外附帶{0}%的命中下降效果,持續{1}秒,該效果對免疫暈眩的單位有效",
-		"format":[
-			{
-			"FxIndex":0,
-			"attr":"value"
-			},{
-			"FxIndex":0,
-			"attr":"time"
-			}
-		]
-		},
 		"Fxs":[
 		{
 			"filter":"active",
@@ -10973,18 +10359,7 @@
 		"dmg":[150,170,180,200,220,230,250,270,280,300]
 		}
 	},
-	"krName":"제레 발레리",
-	"stats":{
-		"hp":112,
-		"armor":120,
-		"dmg":128,
-		"hit":110,
-		"dodge":130,
-		"speed":100,
-		"FoR":108,
-		"armorPiercing":10,
-		"cri":40
-	}
+	"krName":"제레 발레리"
 	},{
 	"id":1009,
 	"name":"CLEAR",
@@ -11181,20 +10556,6 @@
 		"src":82,
 		"FCD":5,
 		"CD":[10,8],
-		"detailText":{
-		"0":"提升自身火力{0}%,持續{1}秒",
-		"format":[
-			{
-			"textIndex":0,
-			"FxIndex":0,
-			"attr":"value"
-			},{
-			"textIndex":1,
-			"FxIndex":0,
-			"attr":"time"
-			}
-		]
-		},
 		"Fxs":[
 		{
 			"filter":"active",
@@ -11225,20 +10586,6 @@
 		}
 	},
 	"Mod2Skill":{
-		"detailText":{
-		"0":"火力專注發動時會額外提升射速{0}%,持續{1}秒",
-		"format":[
-			{
-			"textIndex":0,
-			"FxIndex":0,
-			"attr":"value"
-			},{
-			"textIndex":1,
-			"FxIndex":0,
-			"attr":"time"
-			}
-		]
-		},
 		"Fxs":[
 		{
 			"filter":"active",
@@ -11281,9 +10628,6 @@
 		"src":82,
 		"FCD":4,
 		"CD":[20,16],
-		"detailText":{
-		"val":"提升自身火力{0}%,持續{1}秒"
-		},
 		"Fxs":[
 		{
 			"filter":"active",
@@ -11313,9 +10657,6 @@
 		}
 	},
 	"Mod2Skill":{
-		"detailText":{
-		"val":"開啟火力專注期間會對目標附加伸冤者印記<br>當我方場上單位數量為3及以下時,以攻速降低70%為代價,<br>每次普攻對目標造成{0}%的傷害,同時對2.5範圍內的目標<br>附加印記並造成100%的濺射傷害(期間火力專注仍然有效) "
-		},
 		"Fxs":[
 		{
 			"filter":"active",
@@ -11388,9 +10729,6 @@
 		"src":87,
 		"FCD":4,
 		"CD":[20,16],
-		"detailText":{
-		"val":"提升自身射速{0}%,持續{1}秒"
-		},
 		"Fxs":[
 		{
 			"filter":"active",
@@ -11417,9 +10755,6 @@
 		"src":87
 	},
 	"Mod2Skill":{
-		"detailText":{
-		"val":"開啟突擊專注時會使用主副武器同時攻擊,<br>副武器造成{0}%的傷害,對受伸冤者印記影響的目標造成{1}%的傷害"
-		},
 		"Fxs":[
 		{
 			"filter":"attack",
@@ -11470,18 +10805,6 @@
 		"src":82,
 		"FCD":8,
 		"CD":[18,18],
-		"detailText":{
-		"0":"提升自身火力{0}%,持續{1}秒",
-		"format":[
-			{
-			"FxIndex":0,
-			"attr":"value"
-			},{
-			"FxIndex":0,
-			"attr":"time"
-			}
-		]
-		},
 		"Fxs":[
 		{
 			"filter":"active",
@@ -11513,18 +10836,6 @@
 	},
 	"ammoCount":8,
 	"Mod2Skill":{
-		"detailText":{
-		"0":"換彈時間縮短至{0}秒,且換彈後的前3次攻擊傷害提升{1}%(包括首輪攻擊)",
-		"format":[
-			{
-			"FxIndex":0,
-			"attr":"value"
-			},{
-			"FxIndex":1,
-			"attr":"value"
-			}
-		]
-		},
 		"Fxs":[
 		{
 			"filter":"changeAmmo",
@@ -11593,18 +10904,6 @@
 		"src":88,
 		"FCD":6,
 		"CD":[15,12],
-		"detailText":{
-		"0":"降低敵方全體射速{0}% 持續{1}秒。",
-		"format":[
-			{
-			"FxIndex":0,
-			"attr":"value"
-			},{
-			"FxIndex":0,
-			"attr":"time"
-			}
-		]
-		},
 		"Fxs":[
 		{
 			"filter":"active",
@@ -11639,18 +10938,6 @@
 		}
 	},
 	"Mod2Skill":{
-		"detailText":{
-		"0":"突擊壓制發動時 會提升影響格上友方的射速{0}%持續{1}秒",
-		"format":[
-			{
-			"FxIndex":0,
-			"attr":"value"
-			},{
-			"FxIndex":0,
-			"attr":"time"
-			}
-		]
-		},
 		"Fxs":[
 		{
 			"filter":"active",
@@ -11693,18 +10980,6 @@
 		"src":31,
 		"FCD":6,
 		"CD":[10,8],
-		"detailText":{
-		"0":"提升自身迴避{0}%,持續{1}秒",
-		"format":[
-			{
-			"FxIndex":0,
-			"attr":"value"
-			},{
-			"FxIndex":0,
-			"attr":"time"
-			}
-		]
-		},
 		"Fxs":[
 		{
 			"filter":"active",
@@ -11730,21 +11005,6 @@
 		"src":31
 	},
 	"Mod2Skill":{
-		"detailText":{
-		"0":"戰鬥開始時擁有3格電量,每一點電量會提供額外{0}%的射速及{1}%的火力<br>電量每{2}秒消耗一格<br>開啟掩護專注時電量會充滿",
-		"format":[
-			{
-			"FxIndex":0,
-			"attr":"value"
-			},{
-			"FxIndex":1,
-			"attr":"value"
-			},{
-			"FxIndex":1,
-			"attr":"stackDownWhenEveryTime"
-			}
-		]
-		},
 		"Fxs":[
 		{
 			"filter":"battleStart",
@@ -11821,18 +11081,6 @@
 		"src":37
 	},
 	"Mod2Skill":{
-		"detailText":{
-		"0":"閃光彈額外附帶{0}%的命中下降效果,持續{1}秒,該效果對免疫暈眩的單位有效",
-		"format":[
-			{
-			"FxIndex":0,
-			"attr":"value"
-			},{
-			"FxIndex":0,
-			"attr":"time"
-			}
-		]
-		},
 		"Fxs":[
 		{
 			"filter":"active",
