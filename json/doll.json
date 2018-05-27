@@ -3772,16 +3772,14 @@
 			"10":30,
 			"type":"buff",
 			"stackMax":5,
-			"stackUpWhenEveryTime":2,
-			"cleanBuff":"102_p"
+			"stackUpWhenEveryTime":2
 		},
 		"dodge":{
 			"1":-20,
 			"10":-25,
 			"type":"buff",
 			"stackMax":5,
-			"stackUpWhenEveryTime":2,
-			"cleanBuff":"102_p"
+			"stackUpWhenEveryTime":2
 		},
 		"time":[0,0]
 		},
@@ -6554,14 +6552,8 @@
 		"extraAttack":{
 			"1":1,
 			"10":1,
-			"FoR":{
-			"1":5,
-			"10":20
-			},
-			"criAttack":{
-			"1":1,
-			"10":1
-			}
+			"FoR":[5,20],
+			"criAttack":[1,1]
 		},
 		"time":[0,0],
 		"PB":[5,7,8,10,12,13,15,17,18,20]
@@ -6820,10 +6812,7 @@
 		"attack":{
 			"1":2.5,
 			"10":6,
-			"attackToArmor":{
-			"1":4.5,
-			"10":10
-			}
+			"attackToArmor":[4.5,10]
 		},
 		"time":[0,0],
 		"ND":[250,280,320,360,400,440,480,520,560,600],
@@ -6867,10 +6856,7 @@
 		"attack":{
 			"1":0.8,
 			"10":1.8,
-			"extraToTarget":{
-			"1":0.8,
-			"10":1.8
-			}
+			"extraToTarget":[0.8,1.8]
 		},
 		"time":[0,0],
 		"PD":[80,90,100,110,120,130,140,150,160,180],
@@ -7272,24 +7258,14 @@
 		"CD":[20,16],
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"FoR",
-			"value":{
-			"1":32,
-			"10":60
-			},
-			"time":{
-			"1":6,
-			"10":8
-			}
+			"value":[32,60],
+			"time":[6,8]
 		},
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"ammoCount",
 			"value":{
 			"1":1,
 			"2":2,
@@ -7300,10 +7276,8 @@
 			}
 		},
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"changeAmmoTime",
 			"value":{
 			"0":1
 			}
@@ -7453,85 +7427,59 @@
 		"CD":[20,16],
 		"Fxs":[
 		{
-			"filter":"battleStart",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
 			"value":{
 			"0":0
 			}
 		},
 		{
-			"filter":"attackReplace",
-			"buffFilter":"Fever模式",
 			"type":"attack",
 			"target":"enemy",
 			"value":{
 			"1":0.4,
 			"9":0.496,
 			"10":0.52
-			},
-			"toFixedCount":3
+			}
 		},
 		{
-			"filter":"attack",
-			"buffFilter":"Fever模式",
 			"type":"attack",
 			"target":"enemy",
 			"value":{
 			"1":0.4,
 			"9":0.496,
 			"10":0.52
-			},
-			"toFixedCount":3
+			}
 		},
 		{
-			"filter":"attack",
-			"buffFilter":"Fever模式",
 			"type":"attack",
 			"target":"enemy",
 			"value":{
 			"1":0.4,
 			"9":0.496,
 			"10":0.52
-			},
-			"toFixedCount":3
+			}
 		},
 		{
-			"filter":"active",
-			"buffFilter":"Fever模式",
 			"type":"debuff",
 			"target":"self",
-			"attribute":"dodge",
 			"value":{
 			"1":60,
 			"9":44,
 			"10":40
-			},
-			"cleanBuff":"Fever模式"
+			}
 		},
 		{
-			"filter":"active",
-			"buffFilter":"Note模式",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
 			"value":{
 			"0":0
-			},
-			"cleanBuff":"Note模式"
+			}
 		},
 		{
-			"filter":"attack",
-			"buffFilter":"Fever模式",
 			"type":"debuff",
 			"target":"self",
-			"attribute":"hit",
-			"value":{
-			"1":3.2,
-			"10":2
-			},
-			"toFixedCount":1,
+			"value":[3.2,2],
 			"stackMax":20,
 			"workWhenHaveBuff":"Fever模式",
 			"workWhenStackGreater":15,
@@ -7539,16 +7487,9 @@
 			"initStack":1
 		},
 		{
-			"filter":"attack",
-			"buffFilter":"Note模式",
 			"type":"debuff",
 			"target":"self",
-			"attribute":"hit",
-			"value":{
-			"1":3.2,
-			"10":2
-			},
-			"toFixedCount":1,
+			"value":[3.2,2],
 			"stackMax":20,
 			"workWhenHaveBuff":"Fever模式",
 			"workWhenStackGreater":15,
@@ -7556,16 +7497,9 @@
 			"stackAdd":-1
 		},
 		{
-			"filter":"attack",
-			"buffFilter":"Fever模式",
 			"type":"debuff",
 			"target":"self",
-			"attribute":"dmg",
-			"value":{
-			"1":3.2,
-			"10":2
-			},
-			"toFixedCount":1,
+			"value":[3.2,2],
 			"stackMax":20,
 			"workWhenHaveBuff":"Fever模式",
 			"workWhenStackGreater":15,
@@ -7573,16 +7507,9 @@
 			"initStack":1
 		},
 		{
-			"filter":"attack",
-			"buffFilter":"Note模式",
 			"type":"debuff",
 			"target":"self",
-			"attribute":"dmg",
-			"value":{
-			"1":3.2,
-			"10":2
-			},
-			"toFixedCount":1,
+			"value":[3.2,2],
 			"stackMax":20,
 			"workWhenHaveBuff":"Fever模式",
 			"workWhenStackGreater":15,
@@ -7590,11 +7517,8 @@
 			"stackAdd":-1
 		},
 		{
-			"filter":"attack",
-			"buffFilter":"Note模式",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
 			"value":{
 			"1":2,
 			"3":2.6,
@@ -7604,7 +7528,6 @@
 			"9":4.6,
 			"10":5
 			},
-			"toFixedCount":1,
 			"stackMax":10,
 			"stackType":"count",
 			"initStack":1
@@ -7660,44 +7583,23 @@
 		"CD":[20,16],
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"attack",
 			"target":"enemy",
 			"allLinkDo":false,
-			"value":{
-			"1":1.2,
-			"10":3
-			}
+			"value":[1.2,3]
 		},
 		{
-			"filter":"activeAttacked",
-			"countGreaterOrEqual":3,
 			"type":"debuff",
 			"target":"enemyActiveAttacked",
-			"attribute":"reducedDamage",
-			"value":{
-			"1":10,
-			"10":15
-			},
-			"time":{
-			"1":2,
-			"10":3
-			}
+			"value":[10,15],
+			"time":[2,3]
 		},
 		{
-			"filter":"activeAttacked",
 			"countLess":3,
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
-			"value":{
-			"1":40,
-			"10":60
-			},
-			"time":{
-			"1":5,
-			"10":8
-			}
+			"value":[40,60],
+			"time":[5,8]
 		}
 		],
 		"src":91,
@@ -7762,10 +7664,6 @@
 		"everyAttackChance":40,
 		"FCD":8,
 		"CD":[5,3],
-		"detailText":{
-		"0":"戰鬥內點擊技能可切換攻擊模式。<br>Fever模式(預設):短點射模式<br>攻擊造成3次{0}%的傷害且槍管溫度提升1。溫度超過15後當前每點溫度降低命中和傷害{1}%(上限20層）。<br>Note模式:單發模式<br>每次攻擊溫度下降1<br>移速和回避降低{2}%<br>攻擊同一敵人時每次攻擊傷害上升{3}%（上限10層）。 ",
-		"val":"主動:使用後<br>隊伍中每存在一組步槍人形<br>自身暴擊與射速提升{0}%<br>持續{1}秒。被動：攻擊有40%機率使同列所有我方人形暴擊與射速提升{2}%<br>持續2秒(疊加上限3層)."
-		},
 		"stack":3,
 		"Fx":{
 		"cri":{
@@ -7805,94 +7703,65 @@
 			"initStack":1,
 			"stackMax":3
 			},
-			"time":{
-			"1":2,
-			"10":2
-			}
+			"time":[2,2]
 		}
 		},
 		"src":23,
 		"Fxs":[
 		{
-			"filter":"battleStart",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
 			"value":{
 			"0":0
 			}
 		},
 		{
-			"filter":"attackReplace",
-			"buffFilter":"Fever模式",
 			"type":"attack",
 			"target":"enemy",
 			"value":{
 			"1":0.4,
 			"9":0.496,
 			"10":0.52
-			},
-			"toFixedCount":3
+			}
 		},
 		{
-			"filter":"attack",
-			"buffFilter":"Fever模式",
 			"type":"attack",
 			"target":"enemy",
 			"value":{
 			"1":0.4,
 			"9":0.496,
 			"10":0.52
-			},
-			"toFixedCount":3
+			}
 		},
 		{
-			"filter":"attack",
-			"buffFilter":"Fever模式",
 			"type":"attack",
 			"target":"enemy",
 			"value":{
 			"1":0.4,
 			"9":0.496,
 			"10":0.52
-			},
-			"toFixedCount":3
+			}
 		},
 		{
-			"filter":"active",
-			"buffFilter":"Fever模式",
 			"type":"debuff",
 			"target":"self",
-			"attribute":"dodge",
 			"value":{
 			"1":60,
 			"9":44,
 			"10":40
-			},
-			"cleanBuff":"Fever模式"
+			}
 		},
 		{
-			"filter":"active",
-			"buffFilter":"Note模式",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
 			"value":{
 			"0":0
-			},
-			"cleanBuff":"Note模式"
+			}
 		},
 		{
-			"filter":"attack",
-			"buffFilter":"Fever模式",
 			"type":"debuff",
 			"target":"self",
-			"attribute":"hit",
-			"value":{
-			"1":3.2,
-			"10":2
-			},
-			"toFixedCount":1,
+			"value":[3.2,2],
 			"stackMax":20,
 			"workWhenHaveBuff":"Fever模式",
 			"workWhenStackGreater":15,
@@ -7900,16 +7769,9 @@
 			"initStack":1
 		},
 		{
-			"filter":"attack",
-			"buffFilter":"Note模式",
 			"type":"debuff",
 			"target":"self",
-			"attribute":"hit",
-			"value":{
-			"1":3.2,
-			"10":2
-			},
-			"toFixedCount":1,
+			"value":[3.2,2],
 			"stackMax":20,
 			"workWhenHaveBuff":"Fever模式",
 			"workWhenStackGreater":15,
@@ -7917,16 +7779,9 @@
 			"stackAdd":-1
 		},
 		{
-			"filter":"attack",
-			"buffFilter":"Fever模式",
 			"type":"debuff",
 			"target":"self",
-			"attribute":"dmg",
-			"value":{
-			"1":3.2,
-			"10":2
-			},
-			"toFixedCount":1,
+			"value":[3.2,2],
 			"stackMax":20,
 			"workWhenHaveBuff":"Fever模式",
 			"workWhenStackGreater":15,
@@ -7934,16 +7789,9 @@
 			"initStack":1
 		},
 		{
-			"filter":"attack",
-			"buffFilter":"Note模式",
 			"type":"debuff",
 			"target":"self",
-			"attribute":"dmg",
-			"value":{
-			"1":3.2,
-			"10":2
-			},
-			"toFixedCount":1,
+			"value":[3.2,2],
 			"stackMax":20,
 			"workWhenHaveBuff":"Fever模式",
 			"workWhenStackGreater":15,
@@ -7951,11 +7799,8 @@
 			"stackAdd":-1
 		},
 		{
-			"filter":"attack",
-			"buffFilter":"Note模式",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
 			"value":{
 			"1":2,
 			"3":2.6,
@@ -7965,7 +7810,6 @@
 			"9":4.6,
 			"10":5
 			},
-			"toFixedCount":1,
 			"stackMax":10,
 			"stackType":"count",
 			"initStack":1
@@ -8003,20 +7847,15 @@
 		"CD":[10,8],
 		"Fxs":[
 		{
-			"filter":"battleStart",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
 			"value":{
 			"0":0
 			}
 		},
 		{
-			"filter":"preAttack",
-			"buffFilter":"墨爾斯假面",
 			"type":"buffStackAdd",
 			"target":"self",
-			"buffName":"墨爾斯假面",
 			"value":{
 			"1":1,
 			"6":1,
@@ -8031,20 +7870,13 @@
 			}
 		},
 		{
-			"filter":"activeAttacked",
-			"buffFilter":"墨爾斯假面",
-			"buffFilterStackGreaterOrEqual":18,
 			"type":"buffStackAdd",
 			"target":"self",
-			"buffName":"墨爾斯假面",
 			"value":{
 			"0":-99
 			}
 		},
 		{
-			"filter":"otherActive",
-			"buffFilter":"墨爾斯假面",
-			"buffFilterStackGreaterOrEqual":18,
 			"type":"attack",
 			"target":"enemy",
 			"eliteTarget":true,
@@ -8056,13 +7888,9 @@
 			"4":2.1,
 			"5":2.25,
 			"10":3
-			},
-			"toFixedCount":2
+			}
 		},
 		{
-			"filter":"otherActive",
-			"buffFilter":"墨爾斯假面",
-			"buffFilterStackGreaterOrEqual":18,
 			"type":"attack",
 			"target":"enemy",
 			"eliteTarget":false,
@@ -8074,18 +7902,12 @@
 			"4":31.5,
 			"5":33.75,
 			"10":45
-			},
-			"toFixedCount":2
+			}
 		},
 		{
-			"filter":"active",
 			"type":"buffStackAdd",
 			"target":"self",
-			"buffName":"墨爾斯假面",
-			"value":{
-			"1":12,
-			"10":18
-			}
+			"value":[12,18]
 		}
 		],
 		"src":23,
@@ -8126,55 +7948,26 @@
 	"skill":{
 		"FCD":4,
 		"CD":[20,16],
-		"detailText":{
-		"0":"提升自身火力{0}%,持續{1}秒",
-		"val":"發射榴彈對半徑2.5範圍內的敵人造成{0}%的傷害<br>若命中3個及以上單位則對目標附加{1}%的增傷效果<br>持續{2}秒;若命中3個以下敵人則提升自身傷害{3}%<br>持續{4}秒。"
-		},
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"attack",
 			"target":"enemy",
-			"attribute":"dmg",
-			"value":{
-			"1":1.2,
-			"10":3
-			},
-			"time":{
-			"1":4,
-			"10":6
-			},
+			"value":[1.2,3],
+			"time":[4,6],
 			"allLinkDo":false
 		},
 		{
-			"filter":"activeAttacked",
-			"countGreaterOrEqual":3,
 			"type":"debuff",
 			"target":"enemyActiveAttacked",
-			"attribute":"reducedDamage",
-			"value":{
-			"1":10,
-			"10":15
-			},
-			"time":{
-			"1":2,
-			"10":3
-			}
+			"value":[10,15],
+			"time":[2,3]
 		},
 		{
-			"filter":"activeAttacked",
 			"countLess":3,
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
-			"value":{
-			"1":40,
-			"10":60
-			},
-			"time":{
-			"1":5,
-			"10":8
-			}
+			"value":[40,60],
+			"time":[5,8]
 		}
 		],
 		"src":91,
@@ -8216,40 +8009,18 @@
 	"skill":{
 		"FCD":6,
 		"CD":[10,8],
-		"detailText":{
-		"0":"夜間作戰時,提升自身射速{0}%(晝間衰減至{1}%),持續{2}秒",
-		"val":"主動:使用後<br>隊伍中每存在一組步槍人形<br>自身暴擊與射速提升{0}%<br>持續{1}秒。被動：攻擊有40%機率使同列所有我方人形暴擊與射速提升{2}%<br>持續2秒(疊加上限3層)."
-		},
 		"Fxs":[
 		{
-			"filter":"active",
-			"environment":"day",
 			"type":"buff",
 			"target":"self",
-			"attribute":"FoR",
-			"value":{
-			"1":18,
-			"10":32
-			},
-			"time":{
-			"1":3,
-			"10":5
-			}
+			"value":[18,32],
+			"time":[3,5]
 		},
 		{
-			"filter":"active",
-			"environment":"night",
 			"type":"buff",
 			"target":"self",
-			"attribute":"FoR",
-			"value":{
-			"1":55,
-			"10":100
-			},
-			"time":{
-			"1":3,
-			"10":5
-			}
+			"value":[55,100],
+			"time":[3,5]
 		}
 		],
 		"src":17,
@@ -8292,10 +8063,7 @@
 			"initStack":1,
 			"stackMax":3
 			},
-			"time":{
-			"1":2,
-			"10":2
-			}
+			"time":[2,2]
 		}
 		}
 	},
@@ -8328,26 +8096,8 @@
 		"src":18,
 		"FCD":6,
 		"CD":[10,8],
-		"detailText":{
-		"0":"被動:攻擊有{0}%機率增加2層印記。印記達到18層後<br>下次攻擊對精英單位造成{1}%的傷害(對普通單位造成{2}%)並立即重置印記層數。<br>主動:立即增加{3}層印記。",
-		"format":[
-			{
-			"FxIndex":1,
-			"attr":"FoR"
-			},{
-			"FxIndex":3,
-			"attr":"value",
-			"percent":true
-			},{
-			"FxIndex":4,
-			"attr":"value",
-			"percent":true
-			}
-		]
-		},
 		"Fxs":[
 		{
-			"filter":"battleStart",
 			"type":"buff",
 			"target":"self",
 			"prepareTime":2,
@@ -8357,16 +8107,11 @@
 			"1":3,
 			"10":6.5
 			},
-			"toFixedCount":2,
-			"attribute":"dmg",
 			"initStack":0
 		},
 		{
-			"filter":"preAttack",
-			"buffFilter":"墨爾斯假面",
 			"type":"buffStackAdd",
 			"target":"self",
-			"buffName":"墨爾斯假面",
 			"value":{
 			"1":1,
 			"6":1,
@@ -8381,20 +8126,13 @@
 			}
 		},
 		{
-			"filter":"activeAttacked",
-			"buffFilter":"墨爾斯假面",
-			"buffFilterStackGreaterOrEqual":18,
 			"type":"buffStackAdd",
 			"target":"self",
-			"buffName":"墨爾斯假面",
 			"value":{
 			"0":-99
 			}
 		},
 		{
-			"filter":"otherActive",
-			"buffFilter":"墨爾斯假面",
-			"buffFilterStackGreaterOrEqual":18,
 			"type":"attack",
 			"target":"enemy",
 			"eliteTarget":true,
@@ -8406,13 +8144,9 @@
 			"4":2.1,
 			"5":2.25,
 			"10":3
-			},
-			"toFixedCount":2
+			}
 		},
 		{
-			"filter":"otherActive",
-			"buffFilter":"墨爾斯假面",
-			"buffFilterStackGreaterOrEqual":18,
 			"type":"attack",
 			"target":"enemy",
 			"eliteTarget":false,
@@ -8424,18 +8158,12 @@
 			"4":31.5,
 			"5":33.75,
 			"10":45
-			},
-			"toFixedCount":2
+			}
 		},
 		{
-			"filter":"active",
 			"type":"buffStackAdd",
 			"target":"self",
-			"buffName":"墨爾斯假面",
-			"value":{
-			"1":12,
-			"10":18
-			}
+			"value":[12,18]
 		}
 		],
 		"Fx":{
@@ -8476,22 +8204,13 @@
 		"CD":[18,18],
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
 			"prepareTime":1,
 			"postReloadTime":2,
 			"allLinkDo":true,
-			"value":{
-			"1":25,
-			"10":70
-			},
-			"toFixedCount":1,
-			"attribute":"dmg",
-			"time":{
-			"1":4,
-			"10":6
-			}
+			"value":[25,70],
+			"time":[4,6]
 		}
 		],
 		"src":82,
@@ -8531,40 +8250,18 @@
 	"skill":{
 		"FCD":8,
 		"CD":[10,8],
-		"detailText":{
-		"0":"夜間作戰時,提升自身射速{0}%(晝間衰減至{1}%),持續{2}秒",
-		"val":"提升自身火力{0}%和迴避{1}%,持續{2}秒"
-		},
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"FoR",
-			"value":{
-			"1":18,
-			"10":32
-			},
-			"time":{
-			"1":3,
-			"10":5
-			},
-			"environment":"day"
+			"value":[18,32],
+			"time":[3,5]
 		},
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"FoR",
-			"value":{
-			"1":55,
-			"10":100
-			},
-			"time":{
-			"1":3,
-			"10":5
-			},
-			"environment":"night"
+			"value":[55,100],
+			"time":[3,5]
 		}
 		],
 		"src":87,
@@ -8610,39 +8307,26 @@
 		"CD":[20,16],
 		"Fxs":[
 		{
-			"filter":"active",
-			"whenEveryXSeconds":{
-			"1":3,
-			"10":1.5
-			},
+			"whenEveryXSeconds":[3,1.5],
 			"type":"attack",
 			"target":"enemy",
-			"attribute":"dmg",
 			"value":{
 			"0":0,
 			"1":3,
 			"10":6.5
 			},
 			"prepareTime":2,
-			"allLinkDo":true,
-			"toFixedCount":2
+			"allLinkDo":true
 		},
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
 			"value":{
 			"0":0
 			},
-			"time":{
-			"1":4,
-			"10":6
-			}
+			"time":[4,6]
 		},
 		{
-			"filter":"attack",
-			"buffFilter":"獵鷹刑場",
 			"type":"attack",
 			"target":"enemy",
 			"targetWithBuff":"獵鷹刑場",
@@ -8651,11 +8335,8 @@
 			}
 		},
 		{
-			"filter":"attack",
-			"buffFilter":"獵鷹刑場",
 			"type":"cleanBuff",
 			"target":"enemy",
-			"buffName":"獵鷹刑場",
 			"value":{
 			"0":0
 			}
@@ -8697,27 +8378,19 @@
 		"CD":[15,12],
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"attack",
 			"target":"enemy",
-			"attribute":"dmg",
 			"value":{
 			"0":0,
 			"1":8,
 			"10":12
 			},
-			"time":{
-			"1":3,
-			"10":5
-			},
+			"time":[3,5],
 			"prepareTime":1,
 			"postReloadTime":2,
-			"allLinkDo":true,
-			"toFixedCount":1
+			"allLinkDo":true
 		},
 		{
-			"filter":"attack",
-			"buffFilter":"人偶板機",
 			"type":"attack",
 			"target":"enemy",
 			"value":{
@@ -8760,66 +8433,30 @@
 	"skill":{
 		"FCD":6,
 		"CD":[10,8],
-		"detailText":{
-		"0":"提升{0}%火力,射速,命中和暴擊率,持續{1}秒",
-		"val":"提升自身火力{0}%和迴避{1}%,持續{2}秒"
-		},
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
-			"value":{
-			"1":110,
-			"10":160
-			},
-			"time":{
-			"1":3,
-			"10":5
-			}
+			"value":[110,160],
+			"time":[3,5]
 		},
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dodge",
-			"value":{
-			"1":25,
-			"10":40
-			},
-			"time":{
-			"1":3,
-			"10":5
-			}
+			"value":[25,40],
+			"time":[3,5]
 		},
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"hit",
-			"value":{
-			"1":15,
-			"10":35
-			},
-			"time":{
-			"1":3,
-			"10":5
-			}
+			"value":[15,35],
+			"time":[3,5]
 		},
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"cri",
-			"value":{
-			"1":15,
-			"10":35
-			},
-			"time":{
-			"1":3,
-			"10":5
-			}
+			"value":[15,35],
+			"time":[3,5]
 		}
 		],
 		"src":82,
@@ -8858,82 +8495,48 @@
 	"skill":{
 		"FCD":8,
 		"CD":[20,16],
-		"detailText":{
-		"0":"被動:每隔{0}秒會週期性給敵人添加1層標記。開啟技能後每次普攻會觸發一次額外攻擊<br>指向被標記目標並消耗1層標記。主動效果持續{1}秒或至標記全部消耗。",
-		"val":"日戰提升傷害{0}%和暴擊{1}%,夜戰提升命中{2}%和射速{3}%,持續{4}秒"
-		},
 		"Fxs":[
 		{
-			"filter":"whenEveryXSeconds",
-			"environment":"day",
 			"type":"debuff",
 			"target":"enemy",
-			"attribute":"dmg",
 			"value":{
 			"0":0,
 			"1":40,
 			"10":65
 			},
-			"time":{
-			"1":6,
-			"10":10
-			},
-			"whenEveryXSeconds":{
-			"1":3,
-			"10":1.5
-			}
+			"time":[6,10],
+			"whenEveryXSeconds":[3,1.5]
 		},
 		{
-			"filter":"active",
-			"environment":"day",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
 			"value":{
 			"0":0,
 			"1":15,
 			"10":25
 			},
-			"time":{
-			"1":4,
-			"10":6
-			}
+			"time":[4,6]
 		},
 		{
-			"filter":"attack",
-			"environment":"night",
 			"type":"attack",
 			"target":"enemy",
-			"attribute":"hit",
 			"value":{
 			"0":1,
 			"1":30,
 			"10":40
 			},
-			"time":{
-			"1":6,
-			"10":10
-			},
-			"buffFilter":"獵鷹刑場",
+			"time":[6,10],
 			"targetWithBuff":"獵鷹刑場"
 		},
 		{
-			"filter":"attack",
-			"environment":"night",
 			"type":"cleanBuff",
 			"target":"enemy",
-			"attribute":"FoR",
 			"value":{
 			"0":0,
 			"1":30,
 			"10":50
 			},
-			"time":{
-			"1":6,
-			"10":10
-			},
-			"buffFilter":"獵鷹刑場",
-			"buffName":"獵鷹刑場"
+			"time":[6,10]
 		}
 		],
 		"src":23,
@@ -8974,10 +8577,8 @@
 		"CD":[10,8],
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
 			"value":{
 			"0":0,
 			"1":1,
@@ -8985,40 +8586,23 @@
 			"4":2,
 			"10":2
 			},
-			"time":{
-			"1":3,
-			"10":5
-			}
+			"time":[3,5]
 		},
 		{
-			"filter":"attack",
 			"type":"attack",
 			"target":"enemy",
-			"attribute":"dmg",
 			"value":{
 			"0":1,
 			"1":10,
 			"10":40
 			},
-			"time":{
-			"1":6,
-			"10":8
-			},
-			"buffFilter":"人偶板機"
+			"time":[6,8]
 		},
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"hit",
-			"value":{
-			"1":15,
-			"10":30
-			},
-			"time":{
-			"1":6,
-			"10":8
-			}
+			"value":[15,30],
+			"time":[6,8]
 		}
 		],
 		"src":6,
@@ -9055,73 +8639,34 @@
 	"skill":{
 		"FCD":6,
 		"CD":[10,8],
-		"detailText":{
-		"0":"提升{0}%火力,射速,命中和暴擊率,持續{1}秒",
-		"format":[
-			{
-			"FxIndex":0,
-			"attr":"value",
-			"textIndex":0
-			}
-		]
-		},
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
 			"value":{
 			"0":1,
 			"1":15,
 			"10":35
 			},
-			"time":{
-			"1":3,
-			"10":5
-			}
+			"time":[3,5]
 		},
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"FoR",
-			"value":{
-			"1":15,
-			"10":35
-			},
-			"time":{
-			"1":3,
-			"10":5
-			}
+			"value":[15,35],
+			"time":[3,5]
 		},
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"hit",
-			"value":{
-			"1":15,
-			"10":35
-			},
-			"time":{
-			"1":3,
-			"10":5
-			}
+			"value":[15,35],
+			"time":[3,5]
 		},
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"cri",
-			"value":{
-			"1":15,
-			"10":35
-			},
-			"time":{
-			"1":3,
-			"10":5
-			}
+			"value":[15,35],
+			"time":[3,5]
 		}
 		],
 		"src":5,
@@ -9204,48 +8749,27 @@
 		"CD":[18,18],
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"ammoCount",
 			"value":{
 			"1":1,
 			"3":1,
 			"4":2,
 			"10":2
 			},
-			"time":{
-			"1":3,
-			"10":5
-			}
+			"time":[3,5]
 		},
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
-			"value":{
-			"1":10,
-			"10":40
-			},
-			"time":{
-			"1":6,
-			"10":8
-			}
+			"value":[10,40],
+			"time":[6,8]
 		},
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"hit",
-			"value":{
-			"1":15,
-			"10":30
-			},
-			"time":{
-			"1":6,
-			"10":8
-			}
+			"value":[15,30],
+			"time":[6,8]
 		}
 		],
 		"src":23,
@@ -9358,76 +8882,34 @@
 		"src":82,
 		"FCD":6,
 		"CD":[10,8],
-		"detailText":{
-		"0":"提升自身火力{0}%和命中{1}%,持續{2}秒",
-		"format":[
-	{
-
-			"FxIndex":0,
-			"attr":"time"
-			}
-		]
-		},
 		"Fxs":[
 		{
-			"filter":"active",
 			"allyInFrontOfMe":true,
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
-			"value":{
-			"1":30,
-			"10":60
-			},
-			"time":{
-			"1":3,
-			"10":5
-			}
+			"value":[30,60],
+			"time":[3,5]
 		},
 		{
-			"filter":"active",
 			"allyInFrontOfMe":true,
 			"type":"buff",
 			"target":"self",
-			"attribute":"hit",
-			"value":{
-			"1":20,
-			"10":40
-			},
-			"time":{
-			"1":3,
-			"10":5
-			}
+			"value":[20,40],
+			"time":[3,5]
 		},
 		{
-			"filter":"active",
 			"allyInFrontOfMe":false,
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
-			"value":{
-			"1":20,
-			"10":45
-			},
-			"time":{
-			"1":6,
-			"10":10
-			}
+			"value":[20,45],
+			"time":[6,10]
 		},
 		{
-			"filter":"active",
 			"allyInFrontOfMe":false,
 			"type":"buff",
 			"target":"self",
-			"attribute":"FoR",
-			"value":{
-			"1":10,
-			"10":22
-			},
-			"time":{
-			"1":6,
-			"10":10
-			}
+			"value":[10,22],
+			"time":[6,10]
 		}
 		],
 		"Fx":{
@@ -9466,51 +8948,27 @@
 		"CD":[15,12],
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self_aura_grid",
 			"radius":1.5,
 			"allLinkDo":false,
-			"value":{
-			"1":20,
-			"10":40
-			},
+			"value":[20,40],
 			"targetTypes":["hg","smg"],
-			"attribute":"dodge",
-			"time":{
-			"1":5,
-			"10":8
-			}
+			"time":[5,8]
 		},
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self_aura_grid",
 			"targetTypes":["rf","ar"],
-			"attribute":"dmg",
-			"value":{
-			"1":10,
-			"10":22
-			},
-			"time":{
-			"1":5,
-			"10":8
-			}
+			"value":[10,22],
+			"time":[5,8]
 		},
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self_aura_grid",
 			"targetTypes":["mg","sg"],
-			"attribute":"hit",
-			"value":{
-			"1":40,
-			"10":80
-			},
-			"time":{
-			"1":5,
-			"10":8
-			}
+			"value":[40,80],
+			"time":[5,8]
 		}
 		],
 		"src":107,
@@ -9552,42 +9010,24 @@
 		"CD":[1,1],
 		"Fxs":[
 		{
-			"filter":"battleStart",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dodge",
-			"value":{
-			"1":30,
-			"10":65
-			},
-			"time":{
-			"1":9,
-			"10":15
-			},
+			"value":[30,65],
+			"time":[9,15],
 			"grouped":true,
 			"indexGrouped":1
 		},
 		{
-			"filter":"battleStart",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
-			"value":{
-			"1":40,
-			"10":85
-			},
+			"value":[40,85],
 			"grouped":true,
 			"indexGrouped":2
 		},
 		{
-			"filter":"battleStart",
 			"type":"buff",
 			"target":"self",
-			"attribute":"hit",
-			"value":{
-			"1":110,
-			"10":200
-			},
+			"value":[110,200],
 			"grouped":true,
 			"indexGrouped":3
 		}
@@ -9632,10 +9072,6 @@
 		"target":"enemy",
 		"FCD":4,
 		"CD":[20,16],
-		"detailText":{
-		"0":"若戰鬥內前方一格存在隊友時為隊友提供護盾{0}點和閃避{1}%<br>若不存在則提升自身火力{2}%和射速{3}%<br>持續{4}秒",
-		"val":"向敵方衝刺<br>並對小範圍內的敵人造成8次{0}倍的傷害。"
-		},
 		"Fx":{
 		"attack":{
 			"1":0.6,
@@ -9653,64 +9089,32 @@
 		"src":83,
 		"Fxs":[
 		{
-			"filter":"active",
 			"allyInFrontOfMe":true,
 			"type":"buff",
 			"target":"allyInFrontOfMe",
-			"attribute":"shield",
-			"value":{
-			"1":15,
-			"10":40
-			},
-			"time":{
-			"1":6,
-			"10":10
-			}
+			"value":[15,40],
+			"time":[6,10]
 		},
 		{
-			"filter":"active",
 			"allyInFrontOfMe":true,
 			"type":"buff",
 			"target":"allyInFrontOfMe",
-			"attribute":"dodge",
-			"value":{
-			"1":40,
-			"10":80
-			},
-			"time":{
-			"1":6,
-			"10":10
-			}
+			"value":[40,80],
+			"time":[6,10]
 		},
 		{
-			"filter":"active",
 			"allyInFrontOfMe":false,
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
-			"value":{
-			"1":20,
-			"10":45
-			},
-			"time":{
-			"1":6,
-			"10":10
-			}
+			"value":[20,45],
+			"time":[6,10]
 		},
 		{
-			"filter":"active",
 			"allyInFrontOfMe":false,
 			"type":"buff",
 			"target":"self",
-			"attribute":"FoR",
-			"value":{
-			"1":10,
-			"10":22
-			},
-			"time":{
-			"1":6,
-			"10":10
-			}
+			"value":[10,22],
+			"time":[6,10]
 		}
 		]
 	},
@@ -9747,11 +9151,6 @@
 		"target":"enemy",
 		"FCD":8,
 		"CD":[20,16],
-		"detailText":{
-		"0":"發射榴彈對半徑1.5範圍內的敵人造成{0}倍的傷害。",
-		"val":"造成{0}倍的傷害並鎖定目標<br>隨後發射導彈<br>對目標周圍1.5範圍內的敵人造成{1}倍的傷害。",
-		"format":[{ "FxIndex":0,"attr":"value" }]
-		},
 		"Fx":{
 		"attack":[4,8],
 		"attack2":{
@@ -9766,15 +9165,11 @@
 		"src":91,
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"attack",
 			"target":"enemy",
 			"radius":1.5,
 			"allLinkDo":false,
-			"value":{
-			"1":5,
-			"10":12
-			}
+			"value":[5,12]
 		}
 		]
 	},
@@ -9810,10 +9205,6 @@
 		"FCD":5,
 		"CD":[20,16],
 		"prepareTime":1.5,
-		"detailText":{
-		"0":"提升自身射速{0}%,持續{1}秒",
-		"val":"进行1.5秒的瞄准,对最远目标造成{0}倍的伤害，同时在{1}秒内对目标附加麻痹（无法移动和攻击）效果。"
-		},
 		"Fx":{
 		"attack":[2.5,5],
 		"paralysis":[1,1],
@@ -9825,18 +9216,10 @@
 		"src":91,
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"FoR",
-			"value":{
-			"1":22,
-			"10":40
-			},
-			"time":{
-			"1":9,
-			"10":15
-			}
+			"value":[22,40],
+			"time":[9,15]
 		}
 		]
 	},
@@ -10000,18 +9383,10 @@
 		"CD":[20,16],
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
-			"value":{
-			"1":45,
-			"10":75
-			},
-			"time":{
-			"1":6,
-			"10":10
-			}
+			"value":[45,75],
+			"time":[6,10]
 		}
 		],
 		"src":51,
@@ -10023,42 +9398,30 @@
 	"Mod2Skill":{
 		"Fxs":[
 		{
-			"filter":"active",
 			"allyCountLessOrEqualFilter":3,
 			"type":"debuff",
 			"target":"self",
-			"attribute":"FoR",
 			"value":{
 			"0":70
 			},
 			"untilBuffEnd":"화력전개T"
 		},
 		{
-			"filter":"attackReplace",
-			"buffFilter":"伸冤者印記",
 			"type":"attack",
 			"target":"enemy",
 			"certainToHit":true,
 			"ignoreArmor":true,
 			"canCri":false,
-			"value":{
-			"1":3,
-			"10":6
-			}
+			"value":[3,6]
 		},
 		{
-			"filter":"attackAttacked",
-			"buffFilter":"화력전개T",
 			"type":"debuff",
 			"target":"enemyAttackAttacked",
-			"attribute":"dmg",
 			"value":{
 			"0":0
 			}
 		},
 		{
-			"filter":"attack",
-			"buffFilter":"伸冤者印記",
 			"type":"attack",
 			"target":"enemy",
 			"allLinkDo":false,
@@ -10099,18 +9462,10 @@
 		"CD":[20,16],
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"FoR",
-			"value":{
-			"1":30,
-			"10":50
-			},
-			"time":{
-			"1":9,
-			"10":15
-			}
+			"value":[30,50],
+			"time":[9,15]
 		}
 		],
 		"src":85,
@@ -10128,26 +9483,16 @@
 	"Mod2Skill":{
 		"Fxs":[
 		{
-			"filter":"attack",
-			"buffFilter":"고속사격T",
 			"type":"attack",
 			"target":"enemy",
 			"targetNotWithBuff":"伸冤者印記",
-			"value":{
-			"1":0.05,
-			"10":0.1
-			}
+			"value":[0.05,0.1]
 		},
 		{
-			"filter":"attack",
-			"buffFilter":"고속사격T",
 			"type":"attack",
 			"target":"enemy",
 			"targetWithBuff":"伸冤者印記",
-			"value":{
-			"1":0.1,
-			"10":0.2
-			}
+			"value":[0.1,0.2]
 		}
 		]
 	},
@@ -10181,18 +9526,10 @@
 		"CD":[10,8],
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dodge",
-			"value":{
-			"1":70,
-			"10":130
-			},
-			"time":{
-			"1":3,
-			"10":5
-			}
+			"value":[70,130],
+			"time":[3,5]
 		}
 		],
 		"src":15,
@@ -10230,23 +9567,14 @@
 	"skill":{
 		"FCD":5,
 		"CD":[20,16],
-		"detailText":{
-		"0":"投擲섬광탄對半徑2.5範圍內的敵人造成持續{0}秒的暈眩",
-		"format":[{ "FxIndex":0,"attr":"time" }]
-		},
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"debuff",
 			"target":"enemy",
-			"attribute":"stun",
 			"value":{
 			"0":1
 			},
-			"time":{
-			"1":2.2,
-			"10":4
-			}
+			"time":[2.2,4]
 		}
 		],
 		"src":106,
@@ -10260,18 +9588,10 @@
 	"Mod2Skill":{
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"debuff",
 			"target":"enemy",
-			"attribute":"hit",
-			"value":{
-			"1":25,
-			"10":40
-			},
-			"time":{
-			"1":5,
-			"10":8
-			}
+			"value":[25,40],
+			"time":[5,8]
 		}
 		]
 	},
@@ -10558,18 +9878,10 @@
 		"CD":[10,8],
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
-			"value":{
-			"1":40,
-			"10":65
-			},
-			"time":{
-			"1":3,
-			"10":5
-			}
+			"value":[40,65],
+			"time":[3,5]
 		}
 		],
 		"Fx":{
@@ -10588,18 +9900,10 @@
 	"Mod2Skill":{
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"FoR",
-			"value":{
-			"1":6,
-			"10":15
-			},
-			"time":{
-			"1":3,
-			"10":5
-			}
+			"value":[6,15],
+			"time":[3,5]
 		}
 		]
 	}
@@ -10630,18 +9934,10 @@
 		"CD":[20,16],
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
-			"value":{
-			"1":45,
-			"10":75
-			},
-			"time":{
-			"1":6,
-			"10":10
-			}
+			"value":[45,75],
+			"time":[6,10]
 		}
 		],
 		"Fx":{
@@ -10659,42 +9955,30 @@
 	"Mod2Skill":{
 		"Fxs":[
 		{
-			"filter":"active",
 			"allyCountLessOrEqualFilter":3,
 			"type":"debuff",
 			"target":"self",
-			"attribute":"FoR",
 			"value":{
 			"0":70
 			},
 			"untilBuffEnd":"火力專注T"
 		},
 		{
-			"filter":"attackReplace",
-			"buffFilter":"伸冤者印記",
 			"type":"attack",
 			"target":"enemy",
 			"certainToHit":true,
 			"ignoreArmor":true,
 			"canCri":false,
-			"value":{
-			"1":3,
-			"10":6
-			}
+			"value":[3,6]
 		},
 		{
-			"filter":"attackAttacked",
-			"buffFilter":"火力專注T",
 			"type":"debuff",
 			"target":"enemyAttackAttacked",
-			"attribute":"dmg",
 			"value":{
 			"0":0
 			}
 		},
 		{
-			"filter":"attack",
-			"buffFilter":"伸冤者印記",
 			"type":"attack",
 			"target":"enemy",
 			"allLinkDo":false,
@@ -10731,18 +10015,10 @@
 		"CD":[20,16],
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"FoR",
-			"value":{
-			"1":30,
-			"10":50
-			},
-			"time":{
-			"1":9,
-			"10":15
-			}
+			"value":[30,50],
+			"time":[9,15]
 		}
 		],
 		"Fx":{
@@ -10757,26 +10033,16 @@
 	"Mod2Skill":{
 		"Fxs":[
 		{
-			"filter":"attack",
-			"buffFilter":"突擊專注T",
 			"type":"attack",
 			"target":"enemy",
 			"targetNotWithBuff":"伸冤者印記",
-			"value":{
-			"1":0.05,
-			"10":0.1
-			}
+			"value":[0.05,0.1]
 		},
 		{
-			"filter":"attack",
-			"buffFilter":"突擊專注T",
 			"type":"attack",
 			"target":"enemy",
 			"targetWithBuff":"伸冤者印記",
-			"value":{
-			"1":0.1,
-			"10":0.2
-			}
+			"value":[0.1,0.2]
 		}
 		]
 	}
@@ -10807,18 +10073,10 @@
 		"CD":[18,18],
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
-			"value":{
-			"1":28,
-			"10":75
-			},
-			"time":{
-			"1":4,
-			"10":6
-			}
+			"value":[28,75],
+			"time":[4,6]
 		}
 		],
 		"Fx":{
@@ -10838,42 +10096,24 @@
 	"Mod2Skill":{
 		"Fxs":[
 		{
-			"filter":"changeAmmo",
 			"type":"changeAmmoTime",
 			"target":"self",
-			"attribute":"changeAmmoTime",
-			"value":{
-			"1":5.5,
-			"10":5
-			},
-			"toFixedCount":1
+			"value":[5.5,5]
 		},
 		{
-			"filter":"changeAmmo",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
-			"value":{
-			"1":25,
-			"10":40
-			}
+			"value":[25,40]
 		},
 		{
-			"filter":"battleStart",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
-			"value":{
-			"1":25,
-			"10":40
-			}
+			"value":[25,40]
 		},
 		{
-			"filter":"attackedTimes",
 			"attackedTimes":3,
 			"type":"cleanBuff",
 			"target":"self",
-			"buffName":"戰地魔術",
 			"value":{
 			"0":0
 			}
@@ -10906,14 +10146,9 @@
 		"CD":[15,12],
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"debuff",
 			"target":"enemy_all",
-			"attribute":"FoR",
-			"value":{
-			"1":16,
-			"10":28
-			},
+			"value":[16,28],
 			"time":{
 			"1":5,
 			"2":6,
@@ -10940,18 +10175,10 @@
 	"Mod2Skill":{
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self_aura_grid",
-			"attribute":"FoR",
-			"value":{
-			"1":10,
-			"10":20
-			},
-			"time":{
-			"1":2,
-			"10":4
-			}
+			"value":[10,20],
+			"time":[2,4]
 		}
 		]
 	}
@@ -10982,18 +10209,10 @@
 		"CD":[10,8],
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dodge",
-			"value":{
-			"1":70,
-			"10":130
-			},
-			"time":{
-			"1":3,
-			"10":5
-			}
+			"value":[70,130],
+			"time":[3,5]
 		}
 		],
 		"Fx":{
@@ -11007,42 +10226,24 @@
 	"Mod2Skill":{
 		"Fxs":[
 		{
-			"filter":"battleStart",
 			"type":"buff",
 			"target":"self",
-			"attribute":"FoR",
-			"value":{
-			"1":6,
-			"10":10
-			},
+			"value":[6,10],
 			"initStack":3,
 			"stackMax":3,
-			"stackDownWhenEveryTime":{
-			"1":1,
-			"10":2
-			}
+			"stackDownWhenEveryTime":[1,2]
 		},
 		{
-			"filter":"battleStart",
 			"type":"buff",
 			"target":"self",
-			"attribute":"dmg",
-			"value":{
-			"1":12,
-			"10":20
-			},
+			"value":[12,20],
 			"initStack":3,
 			"stackMax":3,
-			"stackDownWhenEveryTime":{
-			"1":1,
-			"10":2
-			}
+			"stackDownWhenEveryTime":[1,2]
 		},
 		{
-			"filter":"active",
 			"type":"buffStackAdd",
 			"target":"self",
-			"buffName":"電光大狂歡",
 			"value":{
 			"0":3
 			}
@@ -11083,18 +10284,10 @@
 	"Mod2Skill":{
 		"Fxs":[
 		{
-			"filter":"active",
 			"type":"debuff",
 			"target":"enemy",
-			"attribute":"hit",
-			"value":{
-			"1":25,
-			"10":40
-			},
-			"time":{
-			"1":5,
-			"10":8
-			}
+			"value":[25,40],
+			"time":[5,8]
 		}
 		]
 	}
