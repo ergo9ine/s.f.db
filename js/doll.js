@@ -116,13 +116,13 @@ function fxts(x){
 	"mg"==x.target?Set("MG"):
 	"sg"==x.target&&Set("SG");
 	$.each(x.TileFx,(index,value)=>{
-		"dmg"==index?TS+=`<br>화력 ${value}%증가`:
-		"dodge"==index?TS+=`<br>회피 ${value}%증가`:
-		"hit"==index?TS+=`<br>명중 ${value}%증가`:
-		"FoR"==index?TS+=`<br>사속 ${value}%증가`:
-		"cri"==index?TS+=`<br>치명타율 ${value}%증가`:
-		"time"==index?TS+=`<br>쿨타임 ${value}%감소`:
-		"armor"==index&&(TS+=`<br>장갑 ${value}%증가`);
+		"dmg"==index?TS+`<br>화력 ${value}%증가`:
+		"dodge"==index?TS+`<br>회피 ${value}%증가`:
+		"hit"==index?TS+`<br>명중 ${value}%증가`:
+		"FoR"==index?TS+`<br>사속 ${value}%증가`:
+		"cri"==index?TS+`<br>치명타율 ${value}%증가`:
+		"time"==index?TS+`<br>쿨타임 ${value}%감소`:
+		"armor"==index&&(TS+`<br>장갑 ${value}%증가`);
 	});
 	function Set(x){TS=TS.replace("타겟",x)};
 	$("#sec-fir>div:nth-child(1)>div:nth-child(2)>div:nth-child(2)").html(TS);
@@ -139,17 +139,24 @@ function Skill(y,x){
 	function c81(a){Sdesc=`${a} 화력을 ${x.Fx.dmg[1]}% 상승시킨다`};
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>img").attr('src',"../img/etc/skill/"+dollSkill[src]+".png");
 	console.log(src)
-	src==27?Sdesc=
+	0==src?
+		x.target=="enemy_current"?(Sdesc=`1.5초간 조준 후, 현재 공격하던 대상에게 ${x.Fx.dmg[1]*10}% 데미지를 입힌다`,y==46&&(Sdesc=Sdesc.replace("1.5초간 조준 후","1초씩 두번 조준 사격하여"))):
+		x.target=="enemy_farthest"?Sdesc=`1.5초간 조준 후, 가장 멀리있는 대상에게 ${x.Fx.dmg[1]*10}% 데미지를 입힌다`:
+		x.target=="enemy_specific"?Sdesc=`1.5초간 조준 후, 특정한 대상에게 ${x.Fx.dmg[1]*10}% 데미지를 입힌다`:
+		x.target=="enemy_nearest"&&(Sdesc=`1.5초간 조준 후, 가장 가까운 대상에게 ${x.Fx.dmg[1]*10}% 데미지를 입힌다`,y==53&&(Sdesc=Sdesc.replace("1.5","2"))):
+	src==27?
 		y==10?Sdesc=`아군 전체 화력을 ${x.Fx.dmg[1]}%, 치명타율을 ${x.Fx.cri[1]}% 상승시킨다`:
 		y==170&&(Sdesc=`자신의 화력과 치명타율을 각각 ${x.Fx.dmg[1]}% 씩 상승시킨다`):
 	src==30?
 		y==11?Sdesc=`(야간)아군 전체 회피를 ${x.Fx.dodge[1]}(${x.FxNight.dodge[1]})% 상승시킨다.`:
 		y==140&&(Sdesc=`아군 전체 명중을 ${x.Fx.hit[1]}%, 회피를 ${x.Fx.dodge[1]}% 상승시킨다`):
+	src==31?Sdesc=28==y?`자신의 사속이 ${x.Fx.FoR[1]}%, 명중이 ${x.Fx.hit[1]}% 만큼 감소하는 대신 이동속도가 ${x.Fx.MS[1]}%, 회피가 ${x.Fx.dodge[1]}% 만큼 증가한다`:`자신의 회피를 ${x.Fx.dodge[1]}% 상승시킨다`:
 	src==36?Sdesc=`[야간전용]아군 전체 명중을 ${x.FxNight.hit[1]}% 상승시킨다`:
 	src==37?Sdesc=`섬광탄을 투척하여 반경 2.5범위 내의 적들을 ${x.Fx.time[1]}초 동안 기절 상태로 만든다`:
-	src==41?Sdesc=`수류탄을 투척하여 반경 2.5범위 내의 적들에게 ${x.Fx.dmg[1]}% 데미지를 입힌다`:
+	src==41?Sdesc=`수류탄을 투척하여 반경 2.5범위 내의 적들에게 ${x.Fx.dmg[1]*10}% 데미지를 입힌다`:
 	src==45?Sdesc=`적군 전체 명중을 ${x.Fx.hit[1]}% 감소시킨다`:
 	src==47?Sdesc=156==y||157==y?`자신의 회피를 ${x.Fx.dodge[1]}%, 장갑을 ${x.Fx.armor[1]}% 상승시킨다`:`어떠한 공격이라도 회피 할 수 있다.`:
+	src==57?Sdesc=`소이탄을 투척하여 반경 1.5범위 내의 적들에게 ${x.Fx.dmg1[1]*10}% 폭발 데미지를 입히고 매 0.33초당 ${x.Fx.dmg2[1]*10}% 화상 데미지를 입힌다 `:
 	src==61?Sdesc=`아군 전체 회피를 ${x.Fx.dodge[1]}% 상승시킨다`:
 	src==69?
 		y==5?Sdesc=`(야간)적군 전체 화력을 ${x.Fx.dmg[1]}(${x.FxNight.dmg[1]})% 하락시킨다`:
@@ -160,7 +167,7 @@ function Skill(y,x){
 	src==86?Sdesc=`아군 전체 사속을 ${x.Fx.FoR[1]}% 상승시킨다`:
 	src==97&&(Sdesc=`연막탄을 투척하여 반경 2.5범위 내의 적들의 공격속도를 ${x.Fx.FoR[1]}%,이동속도를 ${x.Fx.MS[1]}% 감소시킨다`);
 	Sdesc=11==y||5==y||20005==y?Sdesc+`<br>지속시간${x.Fx.time[1]}(${x.FxNight.time[1]})초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:
-	src==41?Sdesc+`<br>선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:Sdesc+`<br>지속시간${x.Fx.time[1]}초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`;
+	src==0||src==41?Sdesc+`<br>선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:Sdesc+`<br>지속시간${x.Fx.time[1]}초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`;
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>div:nth-child(2)").html(Sdesc);
 };
 function togglecon(){
