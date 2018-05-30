@@ -116,13 +116,13 @@ function fxts(x){
 	"mg"==x.target?Set("MG"):
 	"sg"==x.target&&Set("SG");
 	$.each(x.TileFx,(index,value)=>{
-		"dmg"==index?TS+`<br>화력 ${value}%증가`:
-		"dodge"==index?TS+`<br>회피 ${value}%증가`:
-		"hit"==index?TS+`<br>명중 ${value}%증가`:
-		"FoR"==index?TS+`<br>사속 ${value}%증가`:
-		"cri"==index?TS+`<br>치명타율 ${value}%증가`:
-		"time"==index?TS+`<br>쿨타임 ${value}%감소`:
-		"armor"==index&&(TS+`<br>장갑 ${value}%증가`);
+		"dmg"==index?TS+=`<br>화력 ${value}%증가`:
+		"dodge"==index?TS+=`<br>회피 ${value}%증가`:
+		"hit"==index?TS+=`<br>명중 ${value}%증가`:
+		"FoR"==index?TS+=`<br>사속 ${value}%증가`:
+		"cri"==index?TS+=`<br>치명타율 ${value}%증가`:
+		"time"==index?TS+=`<br>쿨타임 ${value}%감소`:
+		"armor"==index&&(TS+=`<br>장갑 ${value}%증가`);
 	});
 	function Set(x){TS=TS.replace("타겟",x)};
 	$("#sec-fir>div:nth-child(1)>div:nth-child(2)>div:nth-child(2)").html(TS);
