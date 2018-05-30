@@ -2,23 +2,7 @@
 //index
 var TogV="invisible";
 $(document).ready(()=>{
-$.ajaxSetup({
-error:function(x,e){
-if(x.status==0){
-alert('You are offline!!\n Please Check Your Network.');
-}else if(x.status==404){
-alert('Requested URL not found.');
-}else if(x.status==500){
-alert('Internel Server Error.');
-}else if(e=='parsererror'){
-alert('Error.nParsing JSON Request failed.');
-}else if(e=='timeout'){
-alert('Request Time out.');
-}else {
-alert('Unknow Error.n'+x.responseText);
-}
-}
-});
+$.ajaxSetup({error:function(x,e){0==x.status?alert("You are offline!!\n Please Check Your Network."):404==x.status?alert("Requested URL not found."):500==x.status?alert("Internel Server Error."):"parsererror"==e?alert("Error.nParsing JSON Request failed."):"timeout"==e?alert("Request Time out."):alert("Unknow Error.n"+x.responseText)}});
 $(".x").click(()=>{
 $(this).parent().addClass(TogV);
 });

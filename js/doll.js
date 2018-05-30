@@ -140,10 +140,10 @@ function Skill(y,x){
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>img").attr('src',"../img/etc/skill/"+dollSkill[src]+".png");
 	console.log(src)
 	0==src?
-		x.target=="enemy_current"?(Sdesc=`1.5초간 조준 후, 현재 공격하던 대상에게 ${x.Fx.dmg[1]*10}% 데미지를 입힌다`,y==46&&(Sdesc=Sdesc.replace("1.5초간 조준 후","1초씩 두번 조준 사격하여"))):
+		x.target=="enemy_current"?(Sdesc=`1.5초간 조준 후, 현재 공격하던 대상에게 ${x.Fx.dmg[1]*10}% 데미지를 입힌다`,y==145?(Sdesc=Sdesc.replace("1.5","2")):y==46&&(Sdesc=Sdesc.replace("1.5초간 조준 후","1초씩 두번 조준 사격하여"))):
 		x.target=="enemy_farthest"?Sdesc=`1.5초간 조준 후, 가장 멀리있는 대상에게 ${x.Fx.dmg[1]*10}% 데미지를 입힌다`:
 		x.target=="enemy_specific"?Sdesc=`1.5초간 조준 후, 특정한 대상에게 ${x.Fx.dmg[1]*10}% 데미지를 입힌다`:
-		x.target=="enemy_nearest"&&(Sdesc=`1.5초간 조준 후, 가장 가까운 대상에게 ${x.Fx.dmg[1]*10}% 데미지를 입힌다`,y==53&&(Sdesc=Sdesc.replace("1.5","2"))):
+		x.target=="enemy_nearest"&&(Sdesc=`1.5초간 조준 후, 가장 가까운 대상에게 ${x.Fx.dmg[1]*10}% 데미지를 입힌다`,y==53||y==128&&(Sdesc=Sdesc.replace("1.5","2"))):
 	src==27?
 		y==10?Sdesc=`아군 전체 화력을 ${x.Fx.dmg[1]}%, 치명타율을 ${x.Fx.cri[1]}% 상승시킨다`:
 		y==170&&(Sdesc=`자신의 화력과 치명타율을 각각 ${x.Fx.dmg[1]}% 씩 상승시킨다`):

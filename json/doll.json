@@ -4212,6 +4212,7 @@
 	}
 	},{
 	"id":117,
+	"krName":"PSG-1",
 	"name":"PSG1",
 	"type":"rf",
 	"rarity":4,
@@ -4221,17 +4222,13 @@
 	"hit":[10,73],
 	"FoR":[27,39],
 	"skill":{
-		"type":"attack",
+		"src":0,
 		"target":"enemy_farthest",
 		"FCD":10,
 		"CD":[20,16],
-		"prepareTime":1.5,
 		"Fx":{
-		"attack":[3,6],
-		"time":[0,0],
-		"dmg":[300,330,370,400,430,470,500,530,570,600]
-		},
-		"src":0
+		"dmg":[30,60]
+		}
 	},
 	"illust":"CanceR",
 	"voice":"Asami Imai",
@@ -4246,8 +4243,7 @@
 		"TileFx":{
 		"time":15
 		}
-	},
-	"krName":"PSG-1"
+	}
 	},{
 	"id":118,
 	"name":"9A91",
@@ -4512,6 +4508,7 @@
 	}
 	},{
 	"id":124,
+	"krName":"Super SASS",
 	"name":"SuperSASS",
 	"type":"rf",
 	"rarity":3,
@@ -4521,17 +4518,13 @@
 	"hit":[9,65],
 	"FoR":[27,39],
 	"skill":{
-		"type":"attack",
+		"src":0,
 		"target":"enemy_specific",
 		"FCD":10,
 		"CD":[20,16],
-		"prepareTime":1.5,
 		"Fx":{
-		"attack":[2.8,5.5],
-		"time":[0,0],
-		"dmg":[280,310,340,370,400,430,460,490,520,550]
-		},
-		"src":0
+		"dmg":[28,55]
+		}
 	},
 	"illust":"受菟",
 	"voice":"Ricca Tachibana",
@@ -4546,8 +4539,7 @@
 		"TileFx":{
 		"time":12
 		}
-	},
-	"krName":"Super SASS"
+	}
 	},{
 	"id":125,
 	"name":"MG4",
@@ -4664,6 +4656,7 @@
 	}
 	},{
 	"id":128,
+	"krName":"M99",
 	"name":"M99",
 	"type":"rf",
 	"rarity":5,
@@ -4673,17 +4666,13 @@
 	"hit":[9,81],
 	"FoR":[21,32],
 	"skill":{
-		"type":"attack",
+		"src":0,
 		"target":"enemy_nearest",
 		"FCD":15,
 		"CD":[20,16],
-		"prepareTime":2,
 		"Fx":{
-		"attack":[3.5,8],
-		"time":[0,0],
-		"dmg":[350,400,450,500,550,600,650,700,750,800]
-		},
-		"src":0
+		"dmg":[35,80]
+		}
 	},
 	"illust":"Saru",
 	"voice":"Rumi Okubo",
@@ -4698,8 +4687,7 @@
 		"TileFx":{
 		"time":18
 		}
-	},
-	"krName":"M99"
+	}
 	},{
 	"id":129,
 	"krName":"95식",
@@ -5336,17 +5324,13 @@
 	"hit":[8,67],
 	"FoR":[18,28],
 	"skill":{
-		"type":"attack",
-		"target":"enemy",
+		"src":0,
+		"target":"enemy_current",
 		"FCD":15,
 		"CD":[20,16],
-		"prepareTime":2,
 		"Fx":{
-		"attack":[3,6.5],
-		"time":[0,0],
-		"dmg":[300,340,380,420,460,490,530,570,610,650]
-		},
-		"src":0
+		"dmg":[30,65]
+		}
 	},
 	"illust":"rosele",
 	"voice":"Rie Takahashi",
