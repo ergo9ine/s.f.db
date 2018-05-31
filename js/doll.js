@@ -136,14 +136,18 @@ function SKB(){
 };
 function Skill(y,x){
 	var src=x.src,Sdesc="";
+	function rep(a,b){Sdesc=Sdesc.replace(a,b)};
+	function pt(a){Sdesc=Sdesc.replace("1.5",a)};
 	function c81(a){Sdesc=`${a} 화력을 ${x.Fx.dmg[1]}% 상승시킨다`};
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>img").attr('src',"../img/etc/skill/"+dollSkill[src]+".png");
 	console.log(src)
 	0==src?
-		x.target=="enemy_current"?(Sdesc=`1.5초간 조준 후, 현재 공격하던 대상에게 ${x.Fx.dmg[1]*10}% 데미지를 입힌다`,y==145?(Sdesc=Sdesc.replace("1.5","2")):y==46&&(Sdesc=Sdesc.replace("1.5초간 조준 후","1초씩 두번 조준 사격하여"))):
-		x.target=="enemy_farthest"?Sdesc=`1.5초간 조준 후, 가장 멀리있는 대상에게 ${x.Fx.dmg[1]*10}% 데미지를 입힌다`:
-		x.target=="enemy_specific"?Sdesc=`1.5초간 조준 후, 특정한 대상에게 ${x.Fx.dmg[1]*10}% 데미지를 입힌다`:
-		x.target=="enemy_nearest"&&(Sdesc=`1.5초간 조준 후, 가장 가까운 대상에게 ${x.Fx.dmg[1]*10}% 데미지를 입힌다`,y==53||y==128&&(Sdesc=Sdesc.replace("1.5","2"))):
+		y==148?Sdesc=`자신의 사속을 ${x.Fx.FoR[1]}% 감소시키고, 화력을 ${x.Fx.dmg[1]}% 상승시킨다`:
+		x.target=="enemy_current"?(Sdesc=`1.5초간 조준 후, 현재 현재 공격하던 타깃에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다`,y==145?(pt("2")):y==46&&(Sdesc=Sdesc.replace("1.5초간 조준 후","1초씩 두번 조준 사격하여"))):
+		x.target=="enemy_farthest"?(Sdesc=`1.5초간 조준 후, 가장 멀리있는 타깃에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다`,y==180&&(rep("1.5","2"),rep("대상","적"),rep(`에게 ${x.Fx.dmg[1]/10}배의 피해를 입힌다`,`에게 관통효과를 지닌 탄환을 발사하여, 뚫고 지나간 모든 적에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입히며, 목표 대상에겐 추가로 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다`))):
+		x.target=="enemy_specific"?Sdesc=`1.5초간 조준 후, 특정한 타깃에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다`:
+		x.target=="enemy_hp_highest"?Sdesc=`2초간 조준 후, 가장 체력이 많은 적에게 공격력의 ${x.Fx.dmg1[1]/10}배의 피해를 입힌다. 만약 목표 대상이 장갑형 개체일 경우 ${x.Fx.dmg2[1]/10}배의 피해를 입힌다`:
+		x.target=="enemy_nearest"&&(Sdesc=`1.5초간 조준 후, 가장 가까운 타깃에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다`,y==53||y==128&&(pt("2"))):
 	src==27?
 		y==10?Sdesc=`아군 전체 화력을 ${x.Fx.dmg[1]}%, 치명타율을 ${x.Fx.cri[1]}% 상승시킨다`:
 		y==170&&(Sdesc=`자신의 화력과 치명타율을 각각 ${x.Fx.dmg[1]}% 씩 상승시킨다`):
@@ -153,21 +157,23 @@ function Skill(y,x){
 	src==31?Sdesc=28==y?`자신의 사속이 ${x.Fx.FoR[1]}%, 명중이 ${x.Fx.hit[1]}% 만큼 감소하는 대신 이동속도가 ${x.Fx.MS[1]}%, 회피가 ${x.Fx.dodge[1]}% 만큼 증가한다`:`자신의 회피를 ${x.Fx.dodge[1]}% 상승시킨다`:
 	src==36?Sdesc=`[야간전용]아군 전체 명중을 ${x.FxNight.hit[1]}% 상승시킨다`:
 	src==37?Sdesc=`섬광탄을 투척하여 반경 2.5범위 내의 적들을 ${x.Fx.time[1]}초 동안 기절 상태로 만든다`:
-	src==41?Sdesc=`수류탄을 투척하여 반경 2.5범위 내의 적들에게 ${x.Fx.dmg[1]*10}% 데미지를 입힌다`:
+	src==41?Sdesc=`수류탄을 투척하여 반경 2.5범위 내의 적들에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다`:
 	src==45?Sdesc=`적군 전체 명중을 ${x.Fx.hit[1]}% 감소시킨다`:
-	src==47?Sdesc=156==y||157==y?`자신의 회피를 ${x.Fx.dodge[1]}%, 장갑을 ${x.Fx.armor[1]}% 상승시킨다`:`어떠한 공격이라도 회피 할 수 있다.`:
-	src==57?Sdesc=`소이탄을 투척하여 반경 1.5범위 내의 적들에게 ${x.Fx.dmg1[1]*10}% 폭발 데미지를 입히고 매 0.33초당 ${x.Fx.dmg2[1]*10}% 화상 데미지를 입힌다 `:
+	src==47?Sdesc=
+		y==156||y==157?`자신의 회피를 ${x.Fx.dodge[1]}%, 장갑을 ${x.Fx.armor[1]}% 상승시킨다`:`어떠한 공격이라도 회피 할 수 있다.`:
+	src==57?Sdesc=`소이탄을 투척하여 반경 1.5범위 내의 적들에게 공격력의 ${x.Fx.dmg1[1]/10}% 폭발 데미지와 함께, 매 0.33초당 공격력의 ${x.Fx.dmg2[1]*10}% 화상 도트 데미지를 입힌다 `:
 	src==61?Sdesc=`아군 전체 회피를 ${x.Fx.dodge[1]}% 상승시킨다`:
 	src==69?
 		y==5?Sdesc=`(야간)적군 전체 화력을 ${x.Fx.dmg[1]}(${x.FxNight.dmg[1]})% 하락시킨다`:
 		y==15&&(Sdesc=`적군 전체 화력을 ${x.Fx.dmg[1]}% 하락시킨다`):
 	src==81?
-		x.target=="ally"?(c81("아군 전체"),y=="13"&&(Sdesc=Sdesc.replace("화력","화력과 사속을 각각"))):
+		x.target=="ally"?(c81("아군 전체"),y==13&&(Sdesc=Sdesc.replace("화력","화력과 사속을 각각"))):
 		x.target=="self_aura_grid"&&c81("스킬 발동 시 자신이 제공하는 버프칸에 있는 아군유닛의"):
 	src==86?Sdesc=`아군 전체 사속을 ${x.Fx.FoR[1]}% 상승시킨다`:
 	src==97&&(Sdesc=`연막탄을 투척하여 반경 2.5범위 내의 적들의 공격속도를 ${x.Fx.FoR[1]}%,이동속도를 ${x.Fx.MS[1]}% 감소시킨다`);
-	Sdesc=11==y||5==y||20005==y?Sdesc+`<br>지속시간${x.Fx.time[1]}(${x.FxNight.time[1]})초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:
+	Sdesc=y==5||y==11||y==20005?Sdesc+`<br>지속시간${x.Fx.time[1]}(${x.FxNight.time[1]})초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:
 	src==0||src==41?Sdesc+`<br>선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:Sdesc+`<br>지속시간${x.Fx.time[1]}초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`;
+	y==148&&(Sdesc=Sdesc.replace(`<br>`,`<br>지속시간${x.Fx.time[1]}초/`));
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>div:nth-child(2)").html(Sdesc);
 };
 function togglecon(){
