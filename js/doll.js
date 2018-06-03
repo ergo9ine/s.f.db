@@ -141,13 +141,14 @@ function Skill(y,x){
 	function c81(a){Sdesc=`${a} 화력을 ${x.Fx.dmg[1]}% 상승시킨다`};
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>img").attr('src',"../img/etc/skill/"+dollSkill[src]+".png");
 	console.log(src)
-	0==src?
-		y==148?Sdesc=`자신의 사속을 ${x.Fx.FoR[1]}% 감소시키고, 화력을 ${x.Fx.dmg[1]}% 상승시킨다`:
-		x.target=="enemy_current"?(Sdesc=`1.5초간 조준 후, 현재 현재 공격하던 타깃에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다`,y==145?(pt("2")):y==46&&(Sdesc=Sdesc.replace("1.5초간 조준 후","1초씩 두번 조준 사격하여"))):
-		x.target=="enemy_farthest"?(Sdesc=`1.5초간 조준 후, 가장 멀리있는 타깃에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다`,y==180&&(rep("1.5","2"),rep("대상","적"),rep(`에게 ${x.Fx.dmg[1]/10}배의 피해를 입힌다`,`에게 관통효과를 지닌 탄환을 발사하여, 뚫고 지나간 모든 적에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입히며, 목표 대상에겐 추가로 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다`))):
-		x.target=="enemy_specific"?Sdesc=`1.5초간 조준 후, 특정한 타깃에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다`:
-		x.target=="enemy_hp_highest"?Sdesc=`2초간 조준 후, 가장 체력이 많은 적에게 공격력의 ${x.Fx.dmg1[1]/10}배의 피해를 입힌다. 만약 목표 대상이 장갑형 개체일 경우 ${x.Fx.dmg2[1]/10}배의 피해를 입힌다`:
-		x.target=="enemy_nearest"&&(Sdesc=`1.5초간 조준 후, 가장 가까운 타깃에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다`,y==53||y==128&&(pt("2"))):
+	src==0||src==1?
+		y==148?Sdesc=`지속시간 동안 자신의 공격속도를 ${x.Fx.FoR[1]}% 감소시키고, 화력을 ${x.Fx.dmg[1]}% 상승시킨다.`:
+		y==183?Sdesc=`1초간 조준 후 특수한 탄환을 발사하여 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입히고 3초간 받는 피해량을 ${x.Fx.after[1]}% 증가시키며 아군의 화력을 집중시킨다. 보스급의 적을 우선 조준하며 컨텐더의 위치에 따라 전열 : 가장 멀리있는 / 중간 : 가장 체력이 많은 / 후열 : 가장 가까운 적을 조준한다.`:
+		x.target=="enemy_current"?(Sdesc=`1.5초간 조준 후, 현재 공격하던 타깃에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다.`,y==145?(pt("2")):y==46&&(Sdesc=Sdesc.replace("1.5초간 조준 후","1초씩 두번 조준 사격하여"))):
+		x.target=="enemy_farthest"?(Sdesc=`1.5초간 조준 후, 가장 멀리있는 타깃에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다.`,y==180||y==192&&(rep("1.5","2"),rep("대상","적"),rep(`에게 ${x.Fx.dmg[1]/10}배의 피해를 입힌다`,`에게 관통효과를 지닌 탄환을 발사하여, 뚫고 지나간 모든 적에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입히며, 목표 대상에겐 추가로 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다0`))):
+		x.target=="enemy_specific"?Sdesc=`1.5초간 조준 후, 특정한 타깃에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다.`:
+		x.target=="enemy_hp_highest"?Sdesc=`2초간 조준 후, 가장 체력이 많은 적에게 공격력의 ${x.Fx.dmg1[1]/10}배의 피해를 입힌다. 만약 목표 대상이 장갑형 개체일 경우 ${x.Fx.dmg2[1]/10}배의 피해를 입힌다.`:
+		x.target=="enemy_nearest"&&(Sdesc=`1.5초간 조준 후, 가장 가까운 타깃에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다.`,y==53||y==128&&(pt("2")),y==202&&(rep(`${x.Fx.dmg[1]/10}`,`${x.Fx.dmg[1]*100}`),rep("1.5","1"),rep("배의 피해를 입힌다.","%의 피해를 입힌다. 단 빗나갈 수 있으며 사격 후 재장전에 2초가 소요된다."))):
 	src==27?
 		y==10?Sdesc=`아군 전체 화력을 ${x.Fx.dmg[1]}%, 치명타율을 ${x.Fx.cri[1]}% 상승시킨다`:
 		y==170&&(Sdesc=`자신의 화력과 치명타율을 각각 ${x.Fx.dmg[1]}% 씩 상승시킨다`):
@@ -172,8 +173,8 @@ function Skill(y,x){
 	src==86?Sdesc=`아군 전체 사속을 ${x.Fx.FoR[1]}% 상승시킨다`:
 	src==97&&(Sdesc=`연막탄을 투척하여 반경 2.5범위 내의 적들의 공격속도를 ${x.Fx.FoR[1]}%,이동속도를 ${x.Fx.MS[1]}% 감소시킨다`);
 	Sdesc=y==5||y==11||y==20005?Sdesc+`<br>지속시간${x.Fx.time[1]}(${x.FxNight.time[1]})초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:
-	src==0||src==41?Sdesc+`<br>선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:Sdesc+`<br>지속시간${x.Fx.time[1]}초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`;
-	y==148&&(Sdesc=Sdesc.replace(`<br>`,`<br>지속시간${x.Fx.time[1]}초/`));
+	src==0||src==1||src==41?Sdesc+`<br>선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:Sdesc+`<br>지속시간${x.Fx.time[1]}초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`;
+	y==148||y==183&&(Sdesc=Sdesc.replace(`<br>`,`<br>지속시간${x.Fx.time[1]}초/`));
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>div:nth-child(2)").html(Sdesc);
 };
 function togglecon(){
