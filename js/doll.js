@@ -67,7 +67,8 @@ function loadComplete(){
 				$(".blockquote>p:nth-child(1)").html(doll.krName);
 				$(".blockquote-footer>cite:nth-child(1)").html(doll.id);
 				$.each(doll.skins,(index,value)=>{skins.push(`<button type="button" class="btn btn-warning btn-sm">${value}</button>`)});
-				$(".skinntg").append(skins);
+				$(".skinntg,#contents>div:nth-child(6)").append(skins);
+				$("#contents>div:nth-child(6)>button").addClass("btn-block")
 				$(".w3-row.text-center>div:eq(0)").append(w3img);
 				$(".w3-image").attr("src",cimg).removeClass("w3-grey").removeAttr("width height");
 				$(".w3-left-align:nth-child(1)>div:nth-child(1)>div:nth-child(3)").html(doll.voice);
@@ -86,6 +87,9 @@ function loadComplete(){
 				rCh.update();
 			}
 		})
+	});
+	$("button.btn-dark:nth-child(5)").click(()=>{
+		$("#contents>div:nth-child(6)").toggleClass("d-none d-block")
 	});
 	$(".xfunc").click(()=>{
 		rCh.destroy();
@@ -129,7 +133,7 @@ function fxts(x){
 	$("#sec-fir>div:nth-child(1)>div:nth-child(2)>div:nth-child(2)").html(TS);
 };
 function SKB(){
-	$(".skinntg>button").click(function(){
+	$(".skinntg>button,#contents>div:nth-child(6)>button").click(function(){
 		var imgtag=$(".w3-image"),iX=$(this).index(),No=$(".blockquote-footer>cite:nth-child(1)").text(),Isrc=idir+No+'.png';
 		if(0==iX){var imgsrc=imgtag.attr("src").split(idir)[1].split(".png")[0],imgM=imgsrc.indexOf("_d"),imgT=imgsrc.slice(0,-2);-1!=imgM?(loader.addClass("is-active"),imgtag.attr("src",idir+imgT+".png").ready(()=>{loader.removeClass("is-active")})):(loader.addClass("is-active"),imgtag.attr("src",idir+imgsrc+"_d.png").ready(()=>{loader.removeClass("is-active")}))}
 		else{1==iX?imgtag.attr("src",Isrc):(--iX,Isrc=idir+No+"_"+iX+".png",loader.addClass("is-active"),imgtag.attr("src",Isrc).ready(()=>{loader.removeClass("is-active")}))};
@@ -194,10 +198,11 @@ function Skill(y,x){
 function togglecon(){
 	$(".grid,#search,#filsor,#func").toggleClass('w3-hide');
 	$("body>div:nth-child(2)").toggleClass("d-md-flex");
+	$("body>div:nth-child(3)").toggleClass("d-flex");
 	$("button.btn-warning,.w3-image").remove();
 	$(".w3-display-right:nth-child(4)").attr("data-content","");
 	$('[data-toggle="popover"]').popover('hide');
-	$(".skinntg>button").off("click");	
+	$(".skinntg>button,#contents>div:nth-child(6)>button").off("click");	
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>div:nth-child(2)").empty();
 };
 $("select").change(()=>{
@@ -209,7 +214,7 @@ $("select").change(()=>{
 		sel=="종류"&&sort("type");
 	});
 });
-$(".btn").click(function(){
+$("div.btn-group:nth-child(1)>button").click(function(){
 	var filtr=$(this).text();
 	filtr=="2성"?filter('[data-rarity="2"]'):
 	filtr=="3성"?filter('[data-rarity="3"]'):
