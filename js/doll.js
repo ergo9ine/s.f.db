@@ -139,25 +139,25 @@ function Skill(y,x){
 	var src=x.src,Sdesc="";
 	function rep(a,b){Sdesc=Sdesc.replace(a,b)};
 	function pt(a){Sdesc=Sdesc.replace("1.5",a)};
-	function c81(a){Sdesc=`${a} 화력을 ${x.Fx.dmg[1]}% 상승시킨다`};
+	function sniper(time,target){Sdesc=`${time}초간 조준 후, ${target}에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다.`};
+	function c81(a){Sdesc=`${a} 화력을 ${x.Fx.dmg[1]}% 상승시킨다.`};
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>img").attr('src',"../img/etc/skill/"+dollSkill[src]+".png");
 	console.log(src)
 	src==0||src==1?
 		y==148?Sdesc=`지속시간 동안 자신의 공격속도를 ${x.Fx.FoR[1]}% 감소시키고, 화력을 ${x.Fx.dmg[1]}% 상승시킨다.`:
 		y==183?Sdesc=`1초간 조준 후 특수한 탄환을 발사하여 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입히고 3초간 받는 피해량을 ${x.Fx.after[1]}% 증가시키며 아군의 화력을 집중시킨다. 보스급의 적을 우선 조준하며 컨텐더의 위치에 따라 전열 : 가장 멀리있는 / 중간 : 가장 체력이 많은 / 후열 : 가장 가까운 적을 조준한다.`:
-		x.target=="enemy_current"?(Sdesc=`1.5초간 조준 후, 현재 공격하던 타깃에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다.`,
+		x.target=="enemy_current"?(sniper("1.5","현재 공격하던 타깃"),
 			y==145?(pt("2")):
-			y==46&&(Sdesc.replace("1.5초간 조준 후","1초씩 두번 조준 사격하여"))):
-		x.target=="enemy_farthest"?(Sdesc=`1.5초간 조준 후, 가장 멀리있는 타깃에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다.`,
-			y==180||y==192&&(pt("2"),rep("대상","적"),rep(`에게 ${x.Fx.dmg[1]/10}배의 피해를 입힌다`,`에게 관통효과를 지닌 탄환을 발사하여, 뚫고 지나간 모든 적에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입히며, 목표 대상에겐 추가로 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다.`))):
-		x.target=="enemy_specific"?Sdesc=`1.5초간 조준 후, 특정한 타깃에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다.`:
+			y==46&&(rep("1.5초간 조준 후","1초씩 두번 조준 사격하여"))):
+		x.target=="enemy_farthest"?(sniper("1.5","가장 멀리 있는 적"),
+			y==180||y==192&&(pt("2"),rep(`에게 ${x.Fx.dmg[1]/10}배의 피해를 입힌다`,`에게 관통효과를 지닌 탄환을 발사하여, 뚫고 지나간 모든 적에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입히며, 목표 대상에겐 추가로 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다.`))):
+		x.target=="enemy_specific"?sniper("1.5","특정한 타깃"):
 		x.target=="enemy_hp_highest"?Sdesc=`2초간 조준 후, 가장 체력이 많은 적에게 공격력의 ${x.Fx.dmg1[1]/10}배의 피해를 입힌다. 만약 목표 대상이 장갑형 개체일 경우 ${x.Fx.dmg2[1]/10}배의 피해를 입힌다.`:
-		x.target=="enemy_nearest"&&(Sdesc=`1.5초간 조준 후, 가장 가까운 타깃에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다.`,
+		x.target=="enemy_nearest"&&(sniper("1.5","가장 가까운 타깃"),
 			y==53||y==128&&(pt("2")),
 			y==202&&(rep(`${x.Fx.dmg[1]/10}`,`${x.Fx.dmg[1]*100}`),pt("1"),rep("배의 피해를 입힌다.","%의 피해를 입힌다. 단 빗나갈 수 있으며 사격 후 재장전에 2초가 소요된다."))):
-	src==27?Sdesc=
-		y==10?`아군 전체 화력을 ${x.Fx.dmg[1]}%, 치명타율을 ${x.Fx.cri[1]}% 상승시킨다.`:
-		y==170&&(`자신의 화력과 치명타율을 각각 ${x.Fx.dmg[1]}% 씩 상승시킨다.`):
+	src==26?Sdesc=`아군 전체 화력을 ${x.Fx.dmg[1]}%, 치명타율을 ${x.Fx.cri[1]}% 상승시킨다.`:
+	src==27?Sdesc=`자신의 화력과 치명타율을 각각 ${x.Fx.dmg[1]}% 씩 상승시킨다.`:
 	src==30?Sdesc=
 		y==11?`(야간)아군 전체 회피를 ${x.Fx.dodge[1]}(${x.FxNight.dodge[1]})% 상승시킨다.`:
 		y==140&&(`아군 전체 명중을 ${x.Fx.hit[1]}%, 회피를 ${x.Fx.dodge[1]}% 상승시킨다.`):
