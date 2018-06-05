@@ -1,4 +1,4 @@
-"use strict";var rCh,ghver=1.80519,dollData=[],w3img='<img class="w3-image" width="256" height="256">',idir='../img/t_doll/',loader=$(".loader"),dollSkill=["AimAttackCurrentTarge","AimAttackDistanceTarge","AimAttackSpecificTarge","airattack","airborne","AK12Buff","AN94Shot","AR15Shot","armor","armorBuff","armorBuffSelf","armorDebuff","armorDebuffSelf","BBNoel","bombard","Bronya","buff","Carcano1891","Carcano1938","CBJMS","Chloe","CLEAR","Coldweapon","comboBuffSelf","command","crit","critBuff","critBuffSelf","debuff","defense","dodgeBuff","dodgeBuffSelf","dodgeDebuff","empty","FAIL","fighting","Flare","Flashbomb","fortress","GGElfeldt","golden","Grenade","Himeko","hitBuff","hitBuffSelf","hitDebuff","illumine","Invincible","Invincible35","IWantU","Kaguya","Kiana","LadyMadeSTAR","Landmines","M4Nightmare","M1918","MosinNagant","Napalm","nightcritBuff","nightcritBuff38","nightcritBuffSelf","nightdodgeBuff","nightdodgeBuffSelf","nightdodgeDebuff","nighthitBuff","nighthitBuffSelf","nighthitDebuff","nightpowBuff","nightpowBuffSelf","nightpowDebuff","nightrateBuff","nightrateBuffSelf","nightrateDebuff","nightspeedDebuff","nighttargetdodgeDebuff","nighttargethitDebuff","nighttargetpowDebuff","nighttargetrateDebuff","nighttargetspeedDebuff","Noconsumption","position","powBuff","powBuffSelf","powBuffShield","powDebuff","RaidenMei","rateBuff","rateBuffSelf","rateDebuff","reinforce","rescue","RifleGrenade","roadblocks","Sakura","Seele","shield","Shotgun","Smoke","sniper","speedDebuff","target","targetdodgeDebuff","targethitDebuff","targetpowDebuff","targetrateDebuff","targetspeedDebuff","Theresa","VariableBuff"];
+"use strict";var rCh,ghver=1.80519,dollData=[],w3img='<img class="w3-image" width="256" height="256">',idir='../img/t_doll/',loader=$(".loader"),dollSkill=["AimAttackCurrentTarge","AimAttackDistanceTarge","AimAttackSpecificTarge","airattack","airborne","AK12Buff","AN94Shot","AR15Shot","armor","armorBuff","armorBuffSelf","armorDebuff","armorDebuffSelf","BBNoel","bombard","Bronya","buff","Carcano1891","Carcano1938","CBJMS","Chloe","CLEAR","Coldweapon","comboBuffSelf","command","crit","critBuff","critBuffSelf","debuff","defense","dodgeBuff","dodgeBuffSelf","dodgeDebuff","empty","FAIL","fighting","Flare","Flashbomb","fortress","GGElfeldt","golden","Grenade","Himeko","hitBuff","hitBuffSelf","hitDebuff","illumine","Invincible","Invincible35","IWantU","Kaguya","Kiana","LadyMadeSTAR","Landmines","M4Nightmare","M1918","MosinNagant","Napalm","nightcritBuff","nightcritBuff38","nightcritBuffSelf","nightdodgeBuff","nightdodgeBuffSelf","nightdodgeDebuff","nighthitBuff","nighthitBuffSelf","nighthitDebuff","nightpowBuff","nightpowBuffSelf","nightpowDebuff","nightrateBuff","nightrateBuffSelf","nightrateDebuff","nightspeedDebuff","nighttargetdodgeDebuff","nighttargethitDebuff","nighttargetpowDebuff","nighttargetrateDebuff","nighttargetspeedDebuff","Noconsumption","position","powBuff","powBuffSelf","powBuffShield","powDebuff","RaidenMei","rateBuff","rateBuffSelf","rateDebuff","reinforce","rescue","RifleGrenade","roadblocks","Sakura","Seele","shield","Shotgun","Smoke","sniper","speedDebuff","target","targetdodgeDebuff","targethitDebuff","targetpowDebuff","targetrateDebuff","targetspeedDebuff","Theresa","VariableBuff","augbuff"];
 $(document).ready(()=>{
 	contentsload();
 	$('[data-toggle="popover"]').popover();
@@ -135,64 +135,72 @@ function fxts(x){
 function SKB(){
 	$(".skinntg>button,#contents>div:nth-child(6)>button").click(function(){
 		var imgtag=$(".w3-image"),iX=$(this).index(),No=$(".blockquote-footer>cite:nth-child(1)").text(),Isrc=idir+No+'.png';
-		if(0==iX){var imgsrc=imgtag.attr("src").split(idir)[1].split(".png")[0],imgM=imgsrc.indexOf("_d"),imgT=imgsrc.slice(0,-2);-1!=imgM?(loader.addClass("is-active"),imgtag.attr("src",idir+imgT+".png").ready(()=>{loader.removeClass("is-active")})):(loader.addClass("is-active"),imgtag.attr("src",idir+imgsrc+"_d.png").ready(()=>{loader.removeClass("is-active")}))}
-		else{1==iX?imgtag.attr("src",Isrc):(--iX,Isrc=idir+No+"_"+iX+".png",loader.addClass("is-active"),imgtag.attr("src",Isrc).ready(()=>{loader.removeClass("is-active")}))};
+		if(0==iX){var imgsrc=imgtag.attr("src").split(idir)[1].split(".png")[0],imgM=imgsrc.indexOf("_d"),imgT=imgsrc.slice(0,-2);-1!=imgM?(loader.addClass("is-active"),imgtag.attr("src",idir+imgT+".png")):(loader.addClass("is-active"),imgtag.attr("src",idir+imgsrc+"_d.png"))}
+		else{1==iX?imgtag.attr("src",Isrc):(--iX,Isrc=idir+No+"_"+iX+".png",loader.addClass("is-active"),imgtag.attr("src",Isrc))};
 	});
 };
 function Skill(y,x){
-	var src=x.src,Sdesc="";
+	var src=x.src,dmg=x.Fx.dmg,dodge=x.Fx.dodge,hit=x.Fx.hit,FoR=x.Fx.FoR,time=x.Fx.time,MS=x.Fx.MS,Sdesc="";
 	function rep(a,b){Sdesc=Sdesc.replace(a,b)};
 	function pt(a){Sdesc=Sdesc.replace("1.5",a)};
-	function sniper(time,target){Sdesc=`${time}초간 조준 후, ${target}에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다.`};
-	function c81(a){Sdesc=`${a} 화력을 ${x.Fx.dmg[1]}% 상승시킨다.`};
+	function sniper(time,target){Sdesc=`${time}초간 조준 후, ${target}에게 공격력의 ${dmg[1]/10}배의 피해를 입힌다.`};
+	function c81(a){Sdesc=`${a} 화력을 ${dmg[1]}% 상승시킨다.`};
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>img").attr('src',"../img/etc/skill/"+dollSkill[src]+".png");
 	console.log(src)
 	src==0||src==1?
-		y==148?Sdesc=`지속시간 동안 자신의 공격속도를 ${x.Fx.FoR[1]}% 감소시키고, 화력을 ${x.Fx.dmg[1]}% 상승시킨다.`:
-		y==183?Sdesc=`1초간 조준 후 특수한 탄환을 발사하여 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입히고 3초간 받는 피해량을 ${x.Fx.after[1]}% 증가시키며 아군의 화력을 집중시킨다. 보스급의 적을 우선 조준하며 컨텐더의 위치에 따라 전열 : 가장 멀리있는 / 중간 : 가장 체력이 많은 / 후열 : 가장 가까운 적을 조준한다.`:
+		y==148?Sdesc=`지속시간 동안 자신의 공격속도를 ${FoR[1]}% 감소시키고, 화력을 ${dmg[1]}% 상승시킨다.`:
+		y==183?Sdesc=`1초간 조준 후 특수한 탄환을 발사하여 공격력의 ${dmg[1]/10}배의 피해를 입히고 3초간 받는 피해량을 ${x.Fx.after[1]}% 증가시키며 아군의 화력을 집중시킨다. 보스급의 적을 우선 조준하며 컨텐더의 위치에 따라 전열 : 가장 멀리있는 / 중간 : 가장 체력이 많은 / 후열 : 가장 가까운 적을 조준한다.`:
 		x.target=="enemy_current"?(sniper("1.5","현재 공격하던 타깃"),
 			y==145?(pt("2")):
 			y==46&&(rep("1.5초간 조준 후","1초씩 두번 조준 사격하여"))):
 		x.target=="enemy_farthest"?(sniper("1.5","가장 멀리 있는 적"),
-			y==180||y==192&&(pt("2"),rep(`에게 ${x.Fx.dmg[1]/10}배의 피해를 입힌다`,`에게 관통효과를 지닌 탄환을 발사하여, 뚫고 지나간 모든 적에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입히며, 목표 대상에겐 추가로 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다.`))):
+			y==180||y==192&&(pt("2"),rep(`에게 ${dmg[1]/10}배의 피해를 입힌다`,`에게 관통효과를 지닌 탄환을 발사하여, 뚫고 지나간 모든 적에게 공격력의 ${dmg[1]/10}배의 피해를 입히며, 목표 대상에겐 추가로 공격력의 ${dmg[1]/10}배의 피해를 입힌다.`))):
 		x.target=="enemy_specific"?sniper("1.5","특정한 타깃"):
 		x.target=="enemy_hp_highest"?Sdesc=`2초간 조준 후, 가장 체력이 많은 적에게 공격력의 ${x.Fx.dmg1[1]/10}배의 피해를 입힌다. 만약 목표 대상이 장갑형 개체일 경우 ${x.Fx.dmg2[1]/10}배의 피해를 입힌다.`:
 		x.target=="enemy_nearest"&&(sniper("1.5","가장 가까운 타깃"),
 			y==53||y==128&&(pt("2")),
-			y==202&&(rep(`${x.Fx.dmg[1]/10}`,`${x.Fx.dmg[1]*100}`),pt("1"),rep("배의 피해를 입힌다.","%의 피해를 입힌다. 단 빗나갈 수 있으며 사격 후 재장전에 2초가 소요된다."))):
-	src==26?Sdesc=`아군 전체 화력을 ${x.Fx.dmg[1]}%, 치명타율을 ${x.Fx.cri[1]}% 상승시킨다.`:
-	src==27?Sdesc=`자신의 화력과 치명타율을 각각 ${x.Fx.dmg[1]}% 씩 상승시킨다.`:
+			y==202&&(rep(`${dmg[1]/10}`,`${dmg[1]*100}`),pt("1"),rep("배의 피해를 입힌다.","%의 피해를 입힌다. 단 빗나갈 수 있으며 사격 후 재장전에 2초가 소요된다."))):
+	src==26?Sdesc=`아군 전체 화력을 ${dmg[1]}%, 치명타율을 ${cri[1]}% 상승시킨다.`:
+	src==27?Sdesc=`자신의 화력과 치명타율을 각각 ${dmg[1]}% 씩 상승시킨다.`:
 	src==30?Sdesc=
-		y==11?`(야간)아군 전체 회피를 ${x.Fx.dodge[1]}(${x.FxNight.dodge[1]})% 상승시킨다.`:
-		y==140&&(`아군 전체 명중을 ${x.Fx.hit[1]}%, 회피를 ${x.Fx.dodge[1]}% 상승시킨다.`):
+		y==11?`(야간)아군 전체 회피를 ${dodge[1]}(${x.FxNight.dodge[1]})% 상승시킨다.`:
+		y==140&&(`아군 전체 명중을 ${hit[1]}%, 회피를 ${dodge[1]}% 상승시킨다.`):
 	src==31?Sdesc=
-		y==28?`자신의 사속이 ${x.Fx.FoR[1]}%, 명중이 ${x.Fx.hit[1]}% 만큼 감소하는 대신 이동속도가 ${x.Fx.MS[1]}%, 회피가 ${x.Fx.dodge[1]}% 만큼 증가한다`:
-		`자신의 회피를 ${x.Fx.dodge[1]}% 상승시킨다.`:
+		y==28?`자신의 사속이 ${FoR[1]}%, 명중이 ${hit[1]}% 만큼 감소하는 대신 이동속도가 ${MS[1]}%, 회피가 ${dodge[1]}% 만큼 증가한다`:
+		`자신의 회피를 ${dodge[1]}% 상승시킨다.`:
 	src==36?Sdesc=`[야간전용]아군 전체 명중을 ${x.FxNight.hit[1]}% 상승시킨다`:
-	src==37?Sdesc=`섬광탄을 투척하여 반경 2.5범위 내의 적들을 ${x.Fx.time[1]}초 동안 기절 상태로 만든다.`:
-	src==41?Sdesc=`수류탄을 투척하여 반경 2.5범위 내의 적들에게 공격력의 ${x.Fx.dmg[1]/10}배의 피해를 입힌다.`:
-	src==45?Sdesc=`적군 전체 명중을 ${x.Fx.hit[1]}% 감소시킨다`:
+	src==37?Sdesc=`섬광탄을 투척하여 반경 2.5범위 내의 적들을 ${time[1]}초 동안 기절 상태로 만든다.`:
+	src==41?Sdesc=`수류탄을 투척하여 반경 2.5범위 내의 적들에게 공격력의 ${dmg[1]/10}배의 피해를 입힌다.`:
+	src==45?Sdesc=`적군 전체 명중을 ${hit[1]}% 감소시킨다`:
 	src==47?Sdesc=
-		y==156||y==157?`자신의 회피를 ${x.Fx.dodge[1]}%, 장갑을 ${x.Fx.armor[1]}% 상승시킨다`:
+		y==156||y==157?`자신의 회피를 ${dodge[1]}%, 장갑을 ${x.Fx.armor[1]}% 상승시킨다`:
 		`어떠한 공격이라도 회피 할 수 있다.`:
-	src==57?Sdesc=`소이탄을 투척하여 반경 1.5범위 내의 적들에게 공격력의 ${x.Fx.dmg1[1]/10}% 폭발 데미지와 함께, 매 0.33초당 공격력의 ${x.Fx.dmg2[1]*10}% 화상 도트 데미지를 입힌다.`:
-	src==61?Sdesc=`아군 전체 회피를 ${x.Fx.dodge[1]}% 상승시킨다.`:
+	src==57?Sdesc=`소이탄을 투척하여 반경 1.5범위 내의 적들에게 공격력의 ${x.Fx.dmg1[1]/10}% 폭발 데미지와 함께, 매 0.33초당 공격력의 ${dmg2[1]*10}% 화상 도트 데미지를 입힌다.`:
+	src==61?Sdesc=`아군 전체 회피를 ${dodge[1]}% 상승시킨다.`:
 	src==69?Sdesc=
-		y==5?`(야간)적군 전체 화력을 ${x.Fx.dmg[1]}(${x.FxNight.dmg[1]})% 하락시킨다.`:
-		y==15&&(`적군 전체 화력을 ${x.Fx.dmg[1]}% 하락시킨다`):
+		y==5?`(야간)적군 전체 화력을 ${dmg[1]}(${x.FxNight.dmg[1]})% 하락시킨다.`:
+		y==15&&(`적군 전체 화력을 ${dmg[1]}% 하락시킨다`):
 	src==81?
 		x.target=="ally"?(c81("아군 전체"),
 			y==13&&(Sdesc=Sdesc.replace("화력","화력과 사속을 각각"))):
 		x.target=="self_aura_grid"&&c81("스킬 발동 시 자신이 제공하는 버프칸에 있는 아군유닛의"):
-	src==86?Sdesc=`아군 전체 사속을 ${x.Fx.FoR[1]}% 상승시킨다.`:
+	src==82?Sdesc=
+		y==58||y==172?(`자신의 화력을 ${dmg[1]}% 명중을 ${hit[1]}% 상승시킨다.`,
+			y==172&&(rep("자신","스킬 발동 시 자신"),rep("킨다","시키며 후열의 적을 우선적으로 공격하게된다."))):
+		y==60||y==78||y==111?`(야간)자신의 화력을 ${dmg[1]}(180)% 상승시킨다.`:
+		y==102?`패시브 효과 : 스킬 미발동 시 매 2초마다 회피 상승 ${x.Fx.dmg}% 화력 감소 ${x.Fx.dodge}%(최대 5회 중첩) & 액티브 효과 : 누적된 패시브 효과를 초기화 한 뒤 매 2초마다 화력 상승 ${x.Fx.dmg2[1]}% 회피감소 ${x.Fx.dodge2[1]}% (최대 5회 중첩)`:
+		y==169||y==203?`자신의 화력을 ${dmg[1]}% 회피를 ${dodge[1]}% 상승시킨다.`:
+		y==175?`자신의 화력을 ${dmg[1]}% 사속을 ${FoR[1]}% 상승시킨다.`:
+		`자신의 화력을 ${dmg[1]}% 상승시킨다.`:
+	src==86?Sdesc=`아군 전체 사속을 ${FoR[1]}% 상승시킨다.`:
 	src==87?Sdesc=
-		y==47||y==174||y==200?`(야간)자신의 사속을 ${x.Fx.FoR[1]}(${x.FxNight.FoR[1]})% 상승시킨다.`:
-		y==184?`자신의 사속을 ${x.Fx.FoR[1]}% 명중을 ${x.Fx.hit[1]}% 상승시킨다.`:
-		`자신의 사속을 ${x.Fx.FoR[1]}% 상승시킨다.`:
-	src==97&&(Sdesc=`연막탄을 투척하여 반경 2.5범위 내의 적들의 공격속도를 ${x.Fx.FoR[1]}%,이동속도를 ${x.Fx.MS[1]}% 감소시킨다`);
-	Sdesc=y==5||y==11||y==47||y==174||y==200||y==20005?Sdesc+`<br>지속시간${x.Fx.time[1]}(${x.FxNight.time[1]})초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:
-	src==0||src==1||src==37||src==41?Sdesc+`<br>선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:Sdesc+`<br>지속시간${x.Fx.time[1]}초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`;
-	y==148||y==183&&(Sdesc=Sdesc.replace(`<br>`,`<br>지속시간${x.Fx.time[1]}초.`));
+		y==47||y==174||y==200?`(야간)자신의 사속을 ${FoR[1]}(${x.FxNight.FoR[1]})% 상승시킨다.`:
+		y==184?`자신의 사속을 ${FoR[1]}% 명중을 ${hit[1]}% 상승시킨다.`:
+		`자신의 사속을 ${FoR[1]}% 상승시킨다.`:
+	src==97&&(Sdesc=`연막탄을 투척하여 반경 2.5범위 내의 적들의 공격속도를 ${FoR[1]}%,이동속도를 ${MS[1]}% 감소시킨다`);
+	Sdesc=y==5||y==11||y==47||y==174||y==200||y==20005?Sdesc+`<br>지속시간${time[1]}(${x.FxNight.time[1]})초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:
+	src==0||src==1||src==37||src==41||y==102?Sdesc+`<br>선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:Sdesc+`<br>지속시간${time[1]}초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`;
+	y==148||y==183&&(Sdesc=Sdesc.replace(`<br>`,`<br>지속시간${time[1]}초.`));
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>div:nth-child(2)").html(Sdesc);
 };
 function togglecon(){
