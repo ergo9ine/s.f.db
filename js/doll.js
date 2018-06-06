@@ -142,13 +142,12 @@ function SKB(){
 	});
 };
 function Skill(y,x){
-	var src=x.src,dmg=x.Fx.dmg,dodge=x.Fx.dodge,hit=x.Fx.hit,FoR=x.Fx.FoR,time=x.Fx.time,MS=x.Fx.MS,Sdesc="";
+	var src=x.src,dmg=x.Fx.dmg,dodge=x.Fx.dodge,hit=x.Fx.hit,FoR=x.Fx.FoR,cri=x.Fx.cri,time=x.Fx.time,MS=x.Fx.MS,Sdesc="";
 	function sniper(time,target){Sdesc=`${time}초간 조준 후, ${target}에게 공격력의 ${dmg[1]/10}배의 피해를 입힌다.`};
 	function c81(a){Sdesc=`${a} 화력을 ${dmg[1]}% 상승시킨다.`};
 	function rep(a,b){Sdesc=Sdesc.replace(a,b)};
 	function pt(a){Sdesc=Sdesc.replace("1.5",a)};
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>img").attr('src',"../img/etc/skill/"+dollSkill[src]+".png");
-	console.log(y)
 	console.log(src)
 	src==0||src==1?
 		y==148?Sdesc=`지속시간 동안 자신의 공격속도를 ${FoR[1]}% 감소시키고, 화력을 ${dmg[1]}% 상승시킨다.`:
@@ -174,11 +173,12 @@ function Skill(y,x){
 	src==36?Sdesc=`[야간전용]아군 전체 명중을 ${x.FxNight.hit[1]}% 상승시킨다`:
 	src==37?Sdesc=`섬광탄을 투척하여 반경 2.5범위 내의 적들을 ${time[1]}초 동안 기절 상태로 만든다.`:
 	src==41?Sdesc=`수류탄을 투척하여 반경 2.5범위 내의 적들에게 공격력의 ${dmg[1]/10}배의 피해를 입힌다.`:
+	src==44?Sdesc=`자신의 명중을 ${hit[1]*100}% 상승시킨다.`:
 	src==45?Sdesc=`적군 전체 명중을 ${hit[1]}% 감소시킨다`:
 	src==47?Sdesc=
 		y==156||y==157?`자신의 회피를 ${dodge[1]}%, 장갑을 ${x.Fx.armor[1]}% 상승시킨다`:
 		`어떠한 공격이라도 회피 할 수 있다.`:
-	src==57?Sdesc=`소이탄을 투척하여 반경 1.5범위 내의 적들에게 공격력의 ${x.Fx.dmg1[1]/10}% 폭발 데미지와 함께, 매 0.33초당 공격력의 ${dmg2[1]*10}% 화상 도트 데미지를 입힌다.`:
+	src==57?Sdesc=`소이탄을 투척하여 반경 1.5범위 내의 적들에게 공격력의 ${x.Fx.dmg1[1]/10}배의 폭발 대미지와 함께 ${time[1]}초 동안 매 ${x.Fx.dmg2[1]/10}초당 공격력의 0.5배의 화상 도트 대미지를 지속적으로 입힌다.`:
 	src==61?Sdesc=`아군 전체 회피를 ${dodge[1]}% 상승시킨다.`:
 	src==69?Sdesc=
 		y==5?`(야간)적군 전체 화력을 ${dmg[1]}(${x.FxNight.dmg[1]})% 하락시킨다.`:
@@ -207,12 +207,9 @@ function Skill(y,x){
 		y==196?`유탄을 발사하여 반경 2.5범위 내의 적들에게 공격력의 ${x.Fx.dmg1[1]}%의 피해를 입히며 3기 이상의 적 명중 시 ${x.Fx.time1[1]}초 동안 타깃의 받는 피해량을 ${x.Fx.dmg2[1]}% 증가시키고 3기 미만의 적 명중 시 ${x.Fx.time2[1]}초 동안 자신의 대미지가 ${x.Fx.dmg3[1]}% 상승한다.`:
 		`유탄을 발사하여 반경 1.5범위 내의 적들에게 공격력의 ${dmg[1]}배의 피해를 입힌다.`:
 	src==97&&(Sdesc=`연막탄을 투척하여 반경 2.5범위 내의 적들의 공격속도를 ${FoR[1]}%,이동속도를 ${MS[1]}% 감소시킨다`);
-	console.log(Sdesc)
 	Sdesc=y==5||y==11||y==47||y==174||y==200||y==20005?Sdesc+`<br>지속시간${time[1]}(${x.FxNight.time[1]})초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:
-	src==0||src==1||src==37||src==41||src==91||y==102?Sdesc+`<br>선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:Sdesc+`<br>지속시간${time[1]}초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`;
+	src==0||src==1||src==37||src==41||src==57||src==91||y==102?Sdesc+`<br>선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:Sdesc+`<br>지속시간${time[1]}초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`;
 	y==148||y==183&&(Sdesc=Sdesc.replace(`<br>`,`<br>지속시간${time[1]}초.`));
-
-	console.log(Sdesc)
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>div:nth-child(2)").html(Sdesc);
 };
 function togglecon(){
