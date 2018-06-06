@@ -3,19 +3,21 @@ $(document).ready(()=>{
 	contentsload();
 	$('[data-toggle="popover"]').popover();
 });
+//FIXME Line 12: 스킬 검색용(필터)으로 일시 지정, 추후 스킬 이름으로 변환 바람
+//FIXME Line 20: 스킬 검색용(타이핑)으로 일시 지정, 추후 스킬 이름으로 변환 바람
 function contentsload(){
 	$.ajax('../json/doll.json',{contentType:'application/json',dataType:'json',success:result=>{
 		var itemcon='<div class="w3-hover-shadow tdoll item-content">',
 		allCharacters=$.map(result,(doll,index)=>{var timehour=parseInt(doll.buildTime/3600),timemin=doll.buildTime%3600/60,noval=doll.id;
 			noval>20000?noval="M"+(noval-20000):noval>1000&&(noval="X"+(noval-1000));
-			var character=$(`<div class="item" data-time="${timehour}${timemin}" data-type="${doll.type}" data-rarity="${doll.rarity}"></div>`).detach(),
+			var character=$(`<div class="item" data-time="${timehour}${timemin}" data-type="${doll.type}" data-rarity="${doll.rarity}" data-skill="${doll.skill.src}"></div>`).detach(),
 				dollcon=`<div class="w3-text-white no" data-no="${doll.id}">${noval}</div>
 					<p class="w3-text-black name podo">${doll.krName}</p>
 					<i class="star r${doll.rarity}"></i>
 					<i	class="incage doll info_cage_${doll.rarity}"></i>
 					<i class="type doll ${doll.type}_${doll.rarity}"></i>
 					<img width="175" height="276" src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@${ghver}/img/t_doll/${doll.id}_i.png" style="background-color:#2c343d" onload="$(this).css('background-color','').removeAttr('onload')">
-					<div class="tag">${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}</div>`;
+					<div class="tag">${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}/${doll.skill.src}</div>`;
 			$(character).append(itemcon).find(".item-content").html(dollcon);
 			return character;
 		});
@@ -59,7 +61,7 @@ function loadComplete(){
 		var clicked=$(this).children(".no").attr("data-no");
 		$.each(dollData,(index,doll)=>{
 			if(doll.id==clicked){
-				var simg=idir+doll.id,cimg=simg+'.png',timehour=parseInt(doll.buildTime/3600),timemin=doll.buildTime%3600/60,time=`${timehour}시간${timemin}분`,gridself=`#grid${doll.Fx.self}`,gridPos=[],skins=[];;
+				var simg=idir+doll.id,cimg=simg+'.png',timehour=parseInt(doll.buildTime/3600),timemin=doll.buildTime%3600/60,time=`${timehour}시간${timemin}분`,gridself=`#grid${doll.Fx.self}`,gridPos=[],skins=[];
 				$.each(doll.Fx.tile,(index,value)=>{gridPos.push(`#grid${value}`)});
 				gridPos=gridPos.toString();
 				for (var x=1;x<10;x++){$(`#grid${x}`).removeClass("w3-white w3-aqua w3-grey").addClass("w3-grey")};
@@ -141,11 +143,12 @@ function SKB(){
 };
 function Skill(y,x){
 	var src=x.src,dmg=x.Fx.dmg,dodge=x.Fx.dodge,hit=x.Fx.hit,FoR=x.Fx.FoR,time=x.Fx.time,MS=x.Fx.MS,Sdesc="";
-	function rep(a,b){Sdesc=Sdesc.replace(a,b)};
-	function pt(a){Sdesc=Sdesc.replace("1.5",a)};
 	function sniper(time,target){Sdesc=`${time}초간 조준 후, ${target}에게 공격력의 ${dmg[1]/10}배의 피해를 입힌다.`};
 	function c81(a){Sdesc=`${a} 화력을 ${dmg[1]}% 상승시킨다.`};
+	function rep(a,b){Sdesc=Sdesc.replace(a,b)};
+	function pt(a){Sdesc=Sdesc.replace("1.5",a)};
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>img").attr('src',"../img/etc/skill/"+dollSkill[src]+".png");
+	console.log(y)
 	console.log(src)
 	src==0||src==1?
 		y==148?Sdesc=`지속시간 동안 자신의 공격속도를 ${FoR[1]}% 감소시키고, 화력을 ${dmg[1]}% 상승시킨다.`:
@@ -158,7 +161,7 @@ function Skill(y,x){
 		x.target=="enemy_specific"?sniper("1.5","특정한 타깃"):
 		x.target=="enemy_hp_highest"?Sdesc=`2초간 조준 후, 가장 체력이 많은 적에게 공격력의 ${x.Fx.dmg1[1]/10}배의 피해를 입힌다. 만약 목표 대상이 장갑형 개체일 경우 ${x.Fx.dmg2[1]/10}배의 피해를 입힌다.`:
 		x.target=="enemy_nearest"&&(sniper("1.5","가장 가까운 타깃"),
-			y==53||y==128&&(pt("2")),
+			y==53||y==128?pt("2"):
 			y==202&&(rep(`${dmg[1]/10}`,`${dmg[1]*100}`),pt("1"),rep("배의 피해를 입힌다.","%의 피해를 입힌다. 단 빗나갈 수 있으며 사격 후 재장전에 2초가 소요된다."))):
 	src==26?Sdesc=`아군 전체 화력을 ${dmg[1]}%, 치명타율을 ${cri[1]}% 상승시킨다.`:
 	src==27?Sdesc=`자신의 화력과 치명타율을 각각 ${dmg[1]}% 씩 상승시킨다.`:
@@ -185,11 +188,11 @@ function Skill(y,x){
 			y==13&&(Sdesc=Sdesc.replace("화력","화력과 사속을 각각"))):
 		x.target=="self_aura_grid"&&c81("스킬 발동 시 자신이 제공하는 버프칸에 있는 아군유닛의"):
 	src==82?Sdesc=
-		y==58||y==172?(`자신의 화력을 ${dmg[1]}% 명중을 ${hit[1]}% 상승시킨다.`,
-			y==172&&(rep("자신","스킬 발동 시 자신"),rep("킨다","시키며 후열의 적을 우선적으로 공격하게된다."))):
+		y==58?`자신의 화력을 ${dmg[1]}% 명중을 ${hit[1]}% 상승시킨다.`:
 		y==60||y==78||y==111?`(야간)자신의 화력을 ${dmg[1]}(180)% 상승시킨다.`:
 		y==102?`패시브 효과 : 스킬 미발동 시 매 2초마다 회피 상승 ${dmg}% 화력 감소 ${dodge}%(최대 5회 중첩) & 액티브 효과 : 누적된 패시브 효과를 초기화 한 뒤 매 2초마다 화력 상승 ${x.Fx.dmg2[1]}% 회피감소 ${x.Fx.dodge2[1]}% (최대 5회 중첩)`:
 		y==169||y==203?`자신의 화력을 ${dmg[1]}% 회피를 ${dodge[1]}% 상승시킨다.`:
+		y==172?`스킬 발동 시 자신의 화력을 ${dmg[1]}% 명중을 ${hit[1]}% 상승시키며 후열의 적을 우선적으로 공격하게된다.`:
 		y==175?`자신의 화력을 ${dmg[1]}% 사속을 ${FoR[1]}% 상승시킨다.`:
 		`자신의 화력을 ${dmg[1]}% 상승시킨다.`:
 	src==86?Sdesc=`아군 전체 사속을 ${FoR[1]}% 상승시킨다.`:
@@ -204,9 +207,12 @@ function Skill(y,x){
 		y==196?`유탄을 발사하여 반경 2.5범위 내의 적들에게 공격력의 ${x.Fx.dmg1[1]}%의 피해를 입히며 3기 이상의 적 명중 시 ${x.Fx.time1[1]}초 동안 타깃의 받는 피해량을 ${x.Fx.dmg2[1]}% 증가시키고 3기 미만의 적 명중 시 ${x.Fx.time2[1]}초 동안 자신의 대미지가 ${x.Fx.dmg3[1]}% 상승한다.`:
 		`유탄을 발사하여 반경 1.5범위 내의 적들에게 공격력의 ${dmg[1]}배의 피해를 입힌다.`:
 	src==97&&(Sdesc=`연막탄을 투척하여 반경 2.5범위 내의 적들의 공격속도를 ${FoR[1]}%,이동속도를 ${MS[1]}% 감소시킨다`);
+	console.log(Sdesc)
 	Sdesc=y==5||y==11||y==47||y==174||y==200||y==20005?Sdesc+`<br>지속시간${time[1]}(${x.FxNight.time[1]})초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:
 	src==0||src==1||src==37||src==41||src==91||y==102?Sdesc+`<br>선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:Sdesc+`<br>지속시간${time[1]}초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`;
 	y==148||y==183&&(Sdesc=Sdesc.replace(`<br>`,`<br>지속시간${time[1]}초.`));
+
+	console.log(Sdesc)
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>div:nth-child(2)").html(Sdesc);
 };
 function togglecon(){
