@@ -2233,7 +2233,7 @@
 	"dodge":[4,33],
 	"hit":[4,31],
 	"FoR":[76,114],
-	"ammoCount":8,
+	"ammo":8,
 	"skill":{
 		"src":82,
 		"FCD":8,
@@ -2259,6 +2259,7 @@
 		"armor":10
 		}}},{
 	"id":77,
+	"krName":"M2HB",
 	"name":"M2HB",
 	"type":"mg",
 	"rarity":3,
@@ -2267,20 +2268,12 @@
 	"dodge":[3,16],
 	"hit":[3,18],
 	"FoR":[72,100],
-	"ammoCount":10,
+	"ammo":10,
 	"skill":{
-		"type":"passive",
-		"target":"enemy",
-		"FCD":0,
-		"CD":[20,16],
-		"everyAttackTimesOnNext":3,
+		"src":23,
 		"Fx":{
-		"attack":[1.2,2.4],
-		"time":[0,0],
-		"dmg":[120,130,150,160,170,190,200,210,230,240]
-		},
-		"src":23
-	},
+		"dmg":[12,24]
+		}},
 	"illust":"15K",
 	"voice":"Izumi Iwamatsu",
 	"buildTime":22200,
@@ -2293,9 +2286,7 @@
 		"tile":[6],
 		"TileFx":{
 		"dmg":22
-		}},
-	"krName":"M2HB"
-	},{
+		}}},{
 	"id":78,
 	"krName":"M60",
 	"name":"M60",
@@ -2306,7 +2297,7 @@
 	"dodge":[4,26],
 	"hit":[4,26],
 	"FoR":[76,111],
-	"ammoCount":9,
+	"ammo":9,
 	"skill":{
 		"src":82,
 		"FCD":8,
@@ -2334,6 +2325,7 @@
 		"FoR":8
 		}}},{
 	"id":79,
+	"krName":"M249 SAW",
 	"name":"M249SAW",
 	"type":"mg",
 	"rarity":3,
@@ -2342,31 +2334,20 @@
 	"dodge":[4,36],
 	"hit":[4,35],
 	"FoR":[90,139],
-	"ammoCount":8,
+	"ammo":8,
 	"skill":{
-		"type":"buff",
-		"target":"self",
+		"src":23,
 		"FCD":8,
 		"CD":[18,18],
 		"Fx":{
 		"dmg":[8,15],
-		"ammoCount":[1,4],
-		"time":[6,8],
-		"dmg":[8,9,10,10,11,12,13,13,14,15],
-		"BL":[1,2,2,2,2,3,3,3,3,4],
-		"time":[6,6.2,6.4,6.7,6.9,7.1,7.3,7.6,7.8,8]
+		"ammo":[1,4],
+		"time":[6,8]
 		},
 		"FxNight":{
 		"dmg":[16,28],
-		"ammoCount":[1,4],
+		"ammo":[1,4],
 		"time":[6,8]
-		},
-		"src":23,
-		"nightFx":{
-		"dmg":[16,17,19,20,21,23,24,25,27,28]
-		},
-		"nightFx":{
-		"dmg":[16,17,19,20,21,23,24,25,27,28]
 		}},
 	"illust":"雪樱樱",
 	"voice":"Yoshino Nanjo",
@@ -2381,10 +2362,9 @@
 		"TileFx":{
 		"FoR":12,
 		"hit":10
-		}},
-	"krName":"M249 SAW"
-	},{
+		}}},{
 	"id":80,
+	"krName":"M1919A4",
 	"name":"M1919A4",
 	"type":"mg",
 	"rarity":3,
@@ -2393,21 +2373,15 @@
 	"dodge":[3,22],
 	"hit":[4,26],
 	"FoR":[69,99],
-	"ammoCount":9,
+	"ammo":9,
 	"skill":{
-		"type":"buff",
-		"target":"self",
+		"src":23,
 		"FCD":3,
 		"CD":[18,18],
 		"Fx":{
 		"hit":[25,65],
-		"criAttack":[1,1],
-		"time":[1,6],
-		"HT":[25,29,34,38,43,47,52,56,61,65],
-		"time":[1,1.6,2.1,2.7,3.2,3.8,4.3,4.9,5.4,6]
-		},
-		"src":23
-	},
+		"time":[1,6]
+		}},
 	"illust":"AS109",
 	"voice":"Sachiyo Yoshida",
 	"buildTime":20400,
@@ -2421,10 +2395,9 @@
 		"TileFx":{
 		"hit":25,
 		"armor":10
-		}},
-	"krName":"M1919A4"
-	},{
+		}}},{
 	"id":81,
+	"krName":"LWMMG",
 	"name":"LWMMG",
 	"type":"mg",
 	"rarity":2,
@@ -2433,21 +2406,15 @@
 	"dodge":[4,22],
 	"hit":[4,24],
 	"FoR":[65,90],
-	"ammoCount":9,
+	"ammo":9,
 	"skill":{
-		"type":"buff",
-		"target":"self",
+		"src":23,
 		"FCD":3,
 		"CD":[18,18],
 		"Fx":{
 		"hit":[22,60],
-		"criAttack":[1,1],
-		"time":[1,6],
-		"HT":[22,26,30,35,39,43,47,52,56,60],
-		"time":[1,1.6,2.1,2.7,3.2,3.8,4.3,4.9,5.4,6]
-		},
-		"src":23
-	},
+		"time":[1,6]
+		}},
 	"illust":"RFF",
 	"voice":"Hiyori Nitta",
 	"buildTime":18600,
@@ -2461,9 +2428,7 @@
 		"TileFx":{
 		"dmg":10,
 		"FoR":10
-		}},
-	"krName":"LWMMG"
-	},{
+		}}},{
 	"id":82,
 	"name":"DP28",
 	"type":"mg",
@@ -2473,7 +2438,7 @@
 	"dodge":[4,31],
 	"hit":[4,28],
 	"FoR":[76,114],
-	"ammoCount":9,
+	"ammo":9,
 	"skill":{
 		"type":"buff",
 		"target":"self",
@@ -2481,7 +2446,7 @@
 		"CD":[18,18],
 		"Fx":{
 		"dmg":[16,28],
-		"ammoCount":[1,3],
+		"ammo":[1,3],
 		"time":[6,8],
 		"dmg":[16,17,19,20,21,23,24,25,27,28],
 		"BL":[1,1,2,2,2,2,3,3,3,3],
@@ -2514,7 +2479,7 @@
 	"dodge":[4,34],
 	"hit":[4,34],
 	"FoR":[80,121],
-	"ammoCount":8,
+	"ammo":8,
 	"skill":{
 		"src":82,
 		"FCD":8,
@@ -2545,20 +2510,12 @@
 	"dodge":[3,23],
 	"hit":[3,21],
 	"FoR":[58,84],
-	"ammoCount":11,
+	"ammo":11,
 	"skill":{
-		"type":"passive",
-		"target":"enemy",
-		"everyAttackTimesOnNext":3,
-		"FCD":0,
-		"CD":[20,16],
+		"src":23,
 		"Fx":{
-		"attack":[1.5,2.6],
-		"time":[0,0],
-		"dmg":[150,160,170,190,200,210,220,240,250,260]
-		},
-		"src":23
-	},
+		"dmg":[15,26]
+		}},
 	"illust":"木shiyo",
 	"voice":"Kaori Nazuka",
 	"buildTime":23400,
@@ -2584,7 +2541,7 @@
 	"dodge":[4,26],
 	"hit":[3,23],
 	"FoR":[90,132],
-	"ammoCount":10,
+	"ammo":10,
 	"skill":{
 		"src":82,
 		"FCD":8,
@@ -2616,7 +2573,7 @@
 	"dodge":[4,25],
 	"hit":[3,22],
 	"FoR":[83,120],
-	"ammoCount":10,
+	"ammo":10,
 	"skill":{
 		"src":82,
 		"FCD":8,
@@ -2647,7 +2604,7 @@
 	"dodge":[3,21],
 	"hit":[4,26],
 	"FoR":[90,130],
-	"ammoCount":10,
+	"ammo":10,
 	"skill":{
 		"type":"buff",
 		"target":"self",
@@ -2655,7 +2612,7 @@
 		"CD":[18,18],
 		"Fx":{
 		"dmg":[18,30],
-		"ammoCount":[1,4],
+		"ammo":[1,4],
 		"time":[6,8],
 		"dmg":[18,19,21,22,23,25,26,27,29,30],
 		"BL":[1,2,2,2,2,3,3,3,3,4],
@@ -2688,7 +2645,7 @@
 	"dodge":[4,28],
 	"hit":[4,31],
 	"FoR":[69,102],
-	"ammoCount":8,
+	"ammo":8,
 	"skill":{
 		"type":"buff",
 		"target":"self",
@@ -2696,7 +2653,7 @@
 		"CD":[18,18],
 		"Fx":{
 		"dmg":[18,30],
-		"ammoCount":[1,3],
+		"ammo":[1,3],
 		"time":[6,8],
 		"dmg":[18,19,21,22,23,25,26,27,29,30],
 		"BL":[1,1,2,2,2,2,3,3,3,3],
@@ -3350,6 +3307,7 @@
 		"hit":50
 		}}},{
 	"id":109,
+	"krName":"MG5"
 	"name":"MG5",
 	"type":"mg",
 	"rarity":5,
@@ -3358,20 +3316,12 @@
 	"dodge":[4,27],
 	"hit":[4,27],
 	"FoR":[83,120],
-	"ammoCount":11,
+	"ammo":11,
 	"skill":{
-		"type":"passive",
-		"target":"enemy",
-		"everyAttackTimesOnNext":3,
-		"FCD":0,
-		"CD":[20,16],
+		"src":23,
 		"Fx":{
-		"attack":[1.5,3],
-		"time":[0,0],
-		"dmg":[150,170,180,200,220,230,250,270,280,300]
-		},
-		"src":23
-	},
+		"dmg":[15,30]
+		}},
 	"illust":"音符",
 	"voice":"Koshimizu Ami",
 	"buildTime":24300,
@@ -3385,10 +3335,9 @@
 		"TileFx":{
 		"dmg":10,
 		"armor":10
-		}},
-	"krName":"MG5"
-	},{
+		}}},{
 	"id":110,
+	"krName":"FG42",
 	"name":"FG42",
 	"type":"mg",
 	"rarity":2,
@@ -3397,21 +3346,16 @@
 	"dodge":[5,33],
 	"hit":[4,28],
 	"FoR":[83,121],
-	"ammoCount":8,
+	"ammo":8,
 	"skill":{
-		"type":"buff",
-		"target":"self",
+		"src":23,
 		"FCD":3,
 		"CD":[18,18],
 		"Fx":{
 		"hit":[22,60],
 		"criAttack":[1,1],
-		"time":[1,6],
-		"HT":[22,26,30,35,39,43,47,52,56,60],
-		"time":[1,1.6,2.1,2.7,3.2,3.8,4.3,4.9,5.4,6]
-		},
-		"src":23
-	},
+		"time":[1,6]
+		}},
 	"illust":"叽困",
 	"voice":"Asuka Ito",
 	"buildTime":17400,
@@ -3424,9 +3368,7 @@
 		"tile":[3,9],
 		"TileFx":{
 		"hit":30
-		}},
-	"krName":"FG42"
-	},{
+		}}},{
 	"id":111,
 	"krName":"AAT-52",
 	"name":"AAT52",
@@ -3437,7 +3379,7 @@
 	"dodge":[4,22],
 	"hit":[4,24],
 	"FoR":[87,119],
-	"ammoCount":10,
+	"ammo":10,
 	"skill":{
 		"src":82,
 		"FCD":8,
@@ -3468,11 +3410,11 @@
 	"dodge":[4,36],
 	"hit":[4,35],
 	"FoR":[90,139],
-	"ammoCount":9,
+	"ammo":9,
 	"skill":{
 		"type":"passive",
 		"target":"self",
-		"everyChangeAmmoCount":1,
+		"everyChangeammo":1,
 		"FCD":0,
 		"CD":[20,16],
 		"Fx":{
@@ -3760,6 +3702,7 @@
 		"hit":50
 		}}},{
 	"id":121,
+	"krName":"Mk48",
 	"name":"Mk48",
 	"type":"mg",
 	"rarity":4,
@@ -3768,21 +3711,15 @@
 	"dodge":[4,26],
 	"hit":[4,25],
 	"FoR":[80,112],
-	"ammoCount":10,
+	"ammo":10,
 	"skill":{
-		"type":"buff",
-		"target":"self",
+		"src":23,
 		"FCD":3,
 		"CD":[18,18],
 		"Fx":{
 		"hit":[30,70],
-		"criAttack":[1,1],
-		"time":[1,6],
-		"HT":[30,34,39,43,48,52,57,61,66,70],
-		"time":[1,1.6,2.1,2.7,3.2,3.8,4.3,4.9,5.4,6]
-		},
-		"src":23
-	},
+		"time":[1,6]
+		}},
 	"illust":"SA",
 	"voice":"Ricca Tachibana",
 	"buildTime":22800,
@@ -3795,9 +3732,7 @@
 		"tile":[3,9],
 		"TileFx":{
 		"FoR":18
-		}},
-	"krName":"Mk48"
-	},{
+		}}},{
 	"id":122,
 	"name":"G11",
 	"type":"ar",
@@ -3907,7 +3842,7 @@
 	"dodge":[4,34],
 	"hit":[4,34],
 	"FoR":[90,139],
-	"ammoCount":9,
+	"ammo":9,
 	"skill":{
 		"type":"buff",
 		"target":"self",
@@ -3915,7 +3850,7 @@
 		"CD":[18,18],
 		"Fx":{
 		"dmg":[20,35],
-		"ammoCount":[1,4],
+		"ammo":[1,4],
 		"time":[6,8],
 		"dmg":[20,22,23,25,27,28,30,32,33,35],
 		"BL":[1,2,2,2,2,3,3,3,3,4],
@@ -4197,8 +4132,7 @@
 		"Fx":{
 		"hit":[2,5],
 		"time":[9,15]
-		}
-	},
+		}},
 	"illust":"TOMATO",
 	"voice":"Saya Horigom",
 	"buildTime":9900,
@@ -4725,7 +4659,7 @@
 	"dodge":[4,28],
 	"hit":[4,29],
 	"FoR":[21,32],
-	"ammoCount":10,
+	"ammo":10,
 	"skill":{
 		"type":"buff",
 		"target":"self",
@@ -4808,7 +4742,7 @@
 	"dodge":[2,12],
 	"hit":[2,12],
 	"FoR":[15,22],
-	"ammoCount":4,
+	"ammo":4,
 	"armor":[3,22],
 	"skill":{
 		"src":91,
@@ -4842,7 +4776,7 @@
 	"dodge":[2,11],
 	"hit":[2,11],
 	"FoR":[18,26],
-	"ammoCount":4,
+	"ammo":4,
 	"armor":[3,21],
 	"skill":{
 		"type":"attack",
@@ -4881,7 +4815,7 @@
 	"dodge":[2,12],
 	"hit":[2,12],
 	"FoR":[19,26],
-	"ammoCount":4,
+	"ammo":4,
 	"armor":[3,22],
 	"skill":{
 		"type":"attack",
@@ -4920,7 +4854,7 @@
 	"dodge":[2,10],
 	"hit":[2,11],
 	"FoR":[21,29],
-	"ammoCount":4,
+	"ammo":4,
 	"armor":[3,21],
 	"skill":{
 		"type":"buff",
@@ -4956,7 +4890,7 @@
 	"dodge":[2,10],
 	"hit":[2,11],
 	"FoR":[22,31],
-	"ammoCount":4,
+	"ammo":4,
 	"armor":[3,22],
 	"skill":{
 		"type":"buff",
@@ -4994,7 +4928,7 @@
 	"dodge":[3,19],
 	"hit":[2,14],
 	"FoR":[20,30],
-	"ammoCount":3,
+	"ammo":3,
 	"armor":[3,20],
 	"skill":{
 		"src":47,
@@ -5029,7 +4963,7 @@
 	"dodge":[2,12],
 	"hit":[2,13],
 	"FoR":[21,30],
-	"ammoCount":5,
+	"ammo":5,
 	"armor":[3,24],
 	"skill":{
 		"src":47,
@@ -5063,7 +4997,7 @@
 	"dodge":[2,10],
 	"hit":[2,9],
 	"FoR":[18,25],
-	"ammoCount":3,
+	"ammo":3,
 	"armor":[3,20],
 	"skill":{
 		"src":82,
@@ -5097,7 +5031,7 @@
 	"dodge":[2,13],
 	"hit":[2,11],
 	"FoR":[20,25],
-	"ammoCount":4,
+	"ammo":4,
 	"armor":[3,22],
 	"skill":{
 		"type":"attack",
@@ -5137,7 +5071,7 @@
 	"dodge":[2,11],
 	"hit":[2,12],
 	"FoR":[25,35],
-	"ammoCount":5,
+	"ammo":5,
 	"armor":[3,23],
 	"skill":{
 		"type":"attack",
@@ -5182,7 +5116,7 @@
 	"dodge":[2,13],
 	"hit":[2,12],
 	"FoR":[19,27],
-	"ammoCount":3,
+	"ammo":3,
 	"armor":[3,20],
 	"skill":{
 		"src":82,
@@ -5215,7 +5149,7 @@
 	"dodge":[2,9],
 	"hit":[2,11],
 	"FoR":[23,32],
-	"ammoCount":4,
+	"ammo":4,
 	"armor":[3,21],
 	"skill":{
 		"src":82,
@@ -5491,7 +5425,7 @@
 	"dodge":[4,29],
 	"hit":[4,31],
 	"FoR":[87,127],
-	"ammoCount":10,
+	"ammo":10,
 	"skill":{
 		"type":"passive",
 		"target":"enemy",
@@ -5913,31 +5847,20 @@
 	"dodge":[5,42],
 	"hit":[4,38],
 	"FoR":[94,149],
-	"ammoCount":8,
+	"ammo":8,
 	"skill":{
-		"type":"buff",
-		"target":"self",
+		"src":23,
 		"FCD":8,
 		"CD":[18,18],
 		"Fx":{
 		"dmg":[6,11],
-		"ammoCount":[1,4],
-		"time":[6,8],
-		"dmg":[6,6,7,8,8,9,9,10,10,11],
-		"BL":[1,2,2,2,2,3,3,3,3,4],
-		"time":[6,6.2,6.4,6.7,6.9,7.1,7.3,7.6,7.8,8]
+		"ammo":[1,4],
+		"time":[6,8]
 		},
 		"FxNight":{
 		"dmg":[28,50],
-		"ammoCount":[1,4],
+		"ammo":[1,4],
 		"time":[6,8]
-		},
-		"src":23,
-		"nightFx":{
-		"dmg":[28,30,33,35,38,40,43,45,48,50]
-		},
-		"nightFx":{
-		"dmg":[28,30,33,35,38,40,43,45,48,50]
 		}},
 	"illust":"水熊",
 	"voice":0,
@@ -6034,7 +5957,7 @@
 	"dodge":[2,12],
 	"hit":[2,13],
 	"FoR":[24,33],
-	"ammoCount":4,
+	"ammo":4,
 	"armor":[3,22],
 	"skill":{
 		"type":"buff",
@@ -6073,7 +5996,7 @@
 	"dodge":[2,10],
 	"hit":[2,11],
 	"FoR":[26,37],
-	"ammoCount":5,
+	"ammo":5,
 	"armor":[3,22],
 	"skill":{
 		"FCD":1,
@@ -6135,7 +6058,7 @@
 		"dmg":15
 		}},
 	"krName":"NS2000",
-	"ammoCount":5,
+	"ammo":5,
 	"armor":{
 		"1":3,
 		"100":20
@@ -6366,7 +6289,7 @@
 	"hit":[6,48],
 	"dodge":[5,41],
 	"FoR":[83,118],
-	"ammoCount":10,
+	"ammo":10,
 	"skill":{
 		"src":91,
 		"FCD":4,
@@ -6518,7 +6441,7 @@
 		"dmg":10,
 		"hit":15
 		}},
-	"ammoCount":10
+	"ammo":10
 	},{
 	"id":200,
 	"krName":"XM3",
@@ -6691,7 +6614,7 @@
 	"hit":[9,67],
 	"dodge":[6,48],
 	"FoR":[90,135],
-	"ammoCount":10,
+	"ammo":10,
 	"skill":{
 		"FCD":6,
 		"CD":[10,8],
@@ -6823,7 +6746,7 @@
 		"armor":15
 		}},
 	"krName":"HK21",
-	"ammoCount":10
+	"ammo":10
 	},{
 	"id":209,
 	"krName":"OTs-39",
@@ -7217,7 +7140,7 @@
 		"TD":[400,440,490,530,580,620,670,710,760,800],
 		"AD":[600,670,730,800,870,930,1000,1070,1130,1200]
 		}},
-	"ammoCount":5,
+	"ammo":5,
 	"armor":{
 		"1":3,
 		"100":23
@@ -7707,7 +7630,7 @@
 		"dmg":[25,40],
 		"re":[5.5,5]
 		}},
-	"ammoCount":8
+	"ammo":8
 	},{
 	"id":20091,
 	"name":"MP446 Mod",
