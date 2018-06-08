@@ -246,16 +246,7 @@ function togglecon(){
 	$(".skinntg>button,#contents>div:nth-child(6)>button").off("click");	
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>div:nth-child(2)").empty();
 };
-$("select").change(()=>{
-	$("select:focus option:selected").each(function(){
-		var sel=$(this).text();
-		sel=="기본"?new Muuri('.grid',{sordData:null}):
-		sel=="등급"?sort("rarity"):
-		sel=="제조시간"?sort("time"):
-		sel=="종류"&&sort("type");
-	});
-});
-$(".btn").click(function(){
+$(".filter").click(function(){
 	var filtr=$(this).text();
 	filtr=="2성"?filter('[data-rarity="2"]'):
 	filtr=="3성"?filter('[data-rarity="3"]'):
@@ -284,4 +275,9 @@ $(".btn").click(function(){
 	*/
 	filtr=="제조불가"?filter('[data-time="00"]'):
 	filtr=="All"&&filter('[data-type]');
+	//정렬
+	filtr=="기본"?new Muuri('.grid',{sordData:null}):
+	filtr=="등급"?sort("rarity"):
+	filtr=="제조시간"?sort("time"):
+	filtr=="타입"&&sort("type");
 });

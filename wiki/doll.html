@@ -1,5 +1,4 @@
-<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/bootstrap@4/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="../css/css_overwrite.css">
@@ -7,65 +6,80 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pure-css-loader@3.1.2/dist/loader-border.css">
 <title>T-doll</title>
 </head>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
 <body>
 <div class="loader loader-border is-active w3-display-container" data-blink data-text="Loading..."><object class="w3-display-topmiddle" type="image/svg+xml" data="../img/logo/SFDB_main.svg"></object></div>
 <div class="d-none d-md-flex bg-dark text-white">
-	<div class="flex-fill">필터:
-		<div class="btn btn-light btn-sm">All</div>
-		<div class="btn-group" role="group" aria-label="rank">
-			<button type="button" class="btn btn-light btn-sm">2성</button>
-			<button type="button" class="btn btn-light btn-sm">3성</button>
-			<button type="button" class="btn btn-light btn-sm">4성</button>
-			<button type="button" class="btn btn-light btn-sm">5성</button>
-			<button type="button" class="btn btn-light btn-sm">제조불가</button>
+	<div class="d-flex">필터:
+		<div class="filter btn btn-light btn-sm mr-2">All</div>
+		<div class="dropdown mr-2">
+			<a class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">등급</a>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<a class="filter dropdown-item" href="#">2성</a>
+				<a class="filter dropdown-item" href="#">3성</a>
+				<a class="filter dropdown-item" href="#">4성</a>
+				<a class="filter dropdown-item" href="#">5성</a>
+				<a class="filter dropdown-item" href="#">제조불가</a>
+			</div>
 		</div>
-		<div class="btn-group" role="group" aria-label="type">
-			<button type="button" class="btn btn-light btn-sm">HG</button>
-			<button type="button" class="btn btn-light btn-sm">SMG</button>
-			<button type="button" class="btn btn-light btn-sm">AR</button>
-			<button type="button" class="btn btn-light btn-sm">RF</button>
-			<button type="button" class="btn btn-light btn-sm">MG</button>
-			<button type="button" class="btn btn-light btn-sm">SG</button>
+		<div class="dropdown mr-2">
+			<a class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">타입</a>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<a class="filter dropdown-item" href="#">HG</a>
+				<a class="filter dropdown-item" href="#">SMG</a>
+				<a class="filter dropdown-item" href="#">AR</a>
+				<a class="filter dropdown-item" href="#">RF</a>
+				<a class="filter dropdown-item" href="#">MG</a>
+				<a class="filter dropdown-item" href="#">SG</a>
+			</div>
 		</div>
-	</div>
-	<div class="flex-fill">정렬 :
-		<select>
-			<option>기본</option>
-			<option>등급</option>
-			<option>제조시간</option>
-			<option>종류</option>
-		</select>
+		<div class="dropdown">
+			<a class="btn btn-info btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">정렬</a>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<a class="filter dropdown-item" href="#">기본</a>
+				<a class="filter dropdown-item" href="#">등급</a>
+				<a class="filter dropdown-item" href="#">제조시간</a>
+				<a class="filter dropdown-item" href="#">타입</a>
+			</div>
+		</div>
 	</div>
 </div>
 <div class="d-none d-flex flex-column d-md-none bg-dark text-white">
 	<button class="flex-fill btn btn-dark">필터</button>
 	<button class="flex-fill btn btn-dark">정렬</button>
 	<div class="d-none justify-content-center text-center">
-		<div class="btn-group" role="group" aria-label="rank">
-			<button type="button" class="btn btn-light btn-sm">2성</button>
-			<button type="button" class="btn btn-light btn-sm">3성</button>
-			<button type="button" class="btn btn-light btn-sm">4성</button>
-			<button type="button" class="btn btn-light btn-sm">5성</button>
-			<button type="button" class="btn btn-light btn-sm">제조불가</button>
+		<div class="filter btn btn-light btn-sm">All</div>
+		<div class="dropdown d-inline">
+			<a class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">등급</a>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<a class="filter dropdown-item" href="#">2성</a>
+				<a class="filter dropdown-item" href="#">3성</a>
+				<a class="filter dropdown-item" href="#">4성</a>
+				<a class="filter dropdown-item" href="#">5성</a>
+				<a class="filter dropdown-item" href="#">제조불가</a>
+			</div>
 		</div>
-		<div class="btn-group" role="group" aria-label="type">
-			<button type="button" class="btn btn-light btn-sm">HG</button>
-			<button type="button" class="btn btn-light btn-sm">SMG</button>
-			<button type="button" class="btn btn-light btn-sm">AR</button>
-			<button type="button" class="btn btn-light btn-sm">RF</button>
-			<button type="button" class="btn btn-light btn-sm">MG</button>
-			<button type="button" class="btn btn-light btn-sm">SG</button>
+		<div class="dropdown d-inline">
+			<a class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">타입</a>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<a class="filter dropdown-item" href="#">HG</a>
+				<a class="filter dropdown-item" href="#">SMG</a>
+				<a class="filter dropdown-item" href="#">AR</a>
+				<a class="filter dropdown-item" href="#">RF</a>
+				<a class="filter dropdown-item" href="#">MG</a>
+				<a class="filter dropdown-item" href="#">SG</a>
+			</div>
 		</div>
 	</div>
 	<div class="d-none justify-content-center text-center">
-		<select>
-			<option>기본</option>
-			<option>등급</option>
-			<option>제조시간</option>
-			<option>종류</option>
-		</select>
+		<div class="dropdown">
+			<a class="btn btn-info btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">정렬</a>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<a class="filter dropdown-item" href="#">기본</a>
+				<a class="filter dropdown-item" href="#">등급</a>
+				<a class="filter dropdown-item" href="#">제조시간</a>
+				<a class="filter dropdown-item" href="#">타입</a>
+			</div>
+		</div>
 	</div>
 </div>
 <input type="text" placeholder="검색" class="w3-input" id="search">
@@ -269,6 +283,8 @@
 	별명 : 콜라</p>
 </div>
 <!-- <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3,npm/bootstrap@4/dist/js/bootstrap.bundle.min.js,npm/jquery.quicksearch@2,npm/muuri@0.5,npm/hammerjs@2,npm/web-animations-js@2,npm/chart.js@2/dist/Chart.bundle.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.quicksearch@2/dist/jquery.quicksearch.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2/web-animations.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/hammerjs@2/hammer.min.js"></script>
