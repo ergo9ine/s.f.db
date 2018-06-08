@@ -6422,6 +6422,7 @@
 	"cri":20
 	}}},{
 "id":204,
+"krName":"발리스타",
 "name":"Ballista",
 "type":"rf",
 "rarity":5,
@@ -6450,8 +6451,7 @@
 	"tile":[3,9],
 	"TileFx":{
 	"time":18
-	}},
-"krName":"발리스타"
+	}}
 },{
 "id":205,
 "name":"AN94",
@@ -6711,7 +6711,7 @@
 	"time":[5,8]
 	}},
 "illust":"lpip",
-"voice":0,
+"voice":"Ami Nanase",
 "buildTime":3180,
 "drop":[],
 "skins":["둥근 달빛"],
@@ -6901,6 +6901,38 @@
 	"TileFx":{
 	"FoR":12
 	}}},{
+"id":221,
+"krName":"GSh-18",
+"name":"GSh-18",
+"type":"hg",
+"rarity":3,
+"hp":[35,70],
+"dmg":[15,33],
+"dodge":[12,86],
+"hit":[7,48],
+"FoR":[36,52],
+"illust":"AC-130",
+"voice":0,
+"buildTime":0,
+"drop":[],
+"skins":[],
+"nick":["찐빵"],
+"skill":{
+	"src":109,
+	"FCD":6,
+	"CD":[15,12],
+	"Fx":{
+	"dmg":[2,4],
+	"time":[3,6]
+	}},
+"Fx":{
+	"target":"all",
+	"self":5,
+	"tile":[1,2,4,7,8],
+	"TileFx":{
+	"dmg":24,
+	"hit":40
+	}}},{
 "id":1001,
 "krName":"노엘 버밀리온",
 "name":"BB_Noel",
@@ -7076,6 +7108,7 @@
 "krName":"브로냐 자이칙"
 },{
 "id":1006,
+"krName":"테레사 아포칼립스",
 "name":"Theresa",
 "type":"hg",
 "rarity":"ex",
@@ -7108,10 +7141,9 @@
 	"TileFx":{
 	"FoR":15,
 	"hit":25
-	}},
-"krName":"테레사 아포칼립스"
-},{
+	}}},{
 "id":1007,
+"krName":"무라타 히메코",
 "name":"Himeko",
 "rarity":"ex",
 "type":"ar",
@@ -7140,9 +7172,7 @@
 	"DMG":[30,33,37,40,43,47,50,53,57,60],
 	"dmg":[15,17,18,20,22,23,25,27,28,30],
 	"time":[3,3.2,3.4,3.7,3.9,4.1,4.3,4.6,4.8,5]
-	}},
-"krName":"무라타 히메코"
-},{
+	}}},{
 "id":1008,
 "krName":"제레 발레리",
 "name":"Seele",
@@ -7202,10 +7232,10 @@
 	"time":[3,3,3,3,3,3,3,3,3,3]
 	}}},{
 "id":1010,
+"krName":"페일",
 "name":"FAIL",
 "type":"hg",
 "rarity":"ex",
-"krName":"페일",
 "hp":[33,66],
 "dmg":[10,31],
 "dodge":[10,88],
