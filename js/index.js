@@ -20,9 +20,9 @@ $("#f").toggleClass("w3-border-bottom");
 $("#s").removeClass("w3-border-bottom");
 }
 });
-$("#close,#open").click(()=>{$("#Sidebar").toggleClass(TogV);});
-$("#lo,#lc").click(()=>{$("#lm").toggleClass(TogV);});
-$("#ro,#rc").click(()=>{$("#rm").toggleClass(TogV);});
+$("#close,#open").click(()=>{$("#Sidebar").toggleClass(TogV)});
+$("#lo,#lc").click(()=>{$("#lm").toggleClass(TogV)});
+$("#ro,#rc").click(()=>{$("#rm").toggleClass(TogV)});
 $("#Sidebar>button:nth-child(3),#lm>button:nth-child(2)").click(()=>{
 $("body>div:nth-child(2)>button:hidden,#rm>button:hidden").css("display","inline-block");
 $("body>div:nth-child(2)>button:eq(3)~button:visible,#rm>button:eq(3)~button:visible").css("display","none");
