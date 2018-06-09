@@ -3,9 +3,7 @@
 var TogV="invisible";
 $(document).ready(()=>{
 $.ajaxSetup({error:function(x,e){0==x.status?alert("You are offline!!\n Please Check Your Network."):404==x.status?alert("Requested URL not found."):500==x.status?alert("Internel Server Error."):"parsererror"==e?alert("Error.nParsing JSON Request failed."):"timeout"==e?alert("Request Time out."):alert("Unknow Error.n"+x.responseText)}});
-$(".x").click(()=>{
-$(this).parent().addClass(TogV);
-});
+$(".x").click(()=>{$(this).parent().addClass(TogV)});
 $("#mom button").click(()=>{
 if($(this).attr("id")==="f"){
 $("#mf").toggleClass(TogV);

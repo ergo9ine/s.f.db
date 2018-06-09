@@ -4168,7 +4168,7 @@
 "voice":"Serizawa Yuu",
 "buildTime":0,
 "drop":["특별구출작전G 4-6","특별구출작전G 4-4E"],
-"skins":[],
+"skins":["개구리 공주"],
 "nick":[],
 "Fx":{
 	"target":"ar",
@@ -4376,7 +4376,7 @@
 "voice":"Akane Fujita",
 "buildTime":0,
 "drop":[],
-"skins":["크루즈의 여왕님","꿈꿔왔던 미소"],
+"skins":["크루즈의 여왕님","꿈꿔왔던 미소","행복한 세상의 담비"],
 "nick":["HOXY","파세"],
 "Fx":{
 	"target":"all",
@@ -6215,7 +6215,7 @@
 "voice":"Reina Ueda",
 "buildTime":16680,
 "drop":[],
-"skins":[],
+"skins":["용감한 재봉사"],
 "nick":["딸기카노"],
 "Fx":{
 	"target":"rf",
@@ -6249,7 +6249,7 @@
 "voice":"Reina Ueda",
 "buildTime":16920,
 "drop":[],
-"skins":[],
+"skins":["세노키오"],
 "nick":["포도카노"],
 "Fx":{
 	"target":"rf",
@@ -6725,7 +6725,7 @@
 	"hit":20
 	}}},{
 "id":213,
-"name":"CBJMS",
+"name":"CBJ-MS",
 "type":"smg",
 "rarity":5,
 "hp":[93,185],
@@ -6749,7 +6749,7 @@
 "voice":0,
 "buildTime":8880,
 "drop":[],
-"skins":[],
+"skins":["거위의 신비한 여행"],
 "nick":["츤쨩"],
 "Fx":{
 	"target":"ar",

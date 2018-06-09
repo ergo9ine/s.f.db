@@ -3,8 +3,5 @@
 #Sidebar,#lm,#rm{height:100%;position:fixed!important;z-index:1;overflow:auto}
 #close,#lc,#rc,div.text-center:nth-child(5){height:29.2px}
 .skinntg>button{margin:0 2.5px}
-.grid {position:relative}
-.item.muuri-item-dragging {z-index:3}
-.item.muuri-item-releasing {z-index:2}
-.item.muuri-item-hidden {z-index:0}
+.grid{position:relative}.item.muuri-item-dragging{z-index:3}.item.muuri-item-releasing{z-index:2}.item.muuri-item-hidden{z-index:0}
 object.w3-display-topmiddle{width:100%!important}.loader>object::after{animation: blink 1s linear infinite alternate!important}.loader[data-text]::before{font-size:5em!important}
