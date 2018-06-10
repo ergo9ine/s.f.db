@@ -4,24 +4,12 @@ var TogV="invisible";
 $(document).ready(()=>{
 $.ajaxSetup({error:function(x,e){0==x.status?alert("You are offline!!\n Please Check Your Network."):404==x.status?alert("Requested URL not found."):500==x.status?alert("Internel Server Error."):"parsererror"==e?alert("Error.nParsing JSON Request failed."):"timeout"==e?alert("Request Time out."):alert("Unknow Error.n"+x.responseText)}});
 $(".x").click(()=>{$(this).parent().addClass(TogV)});
-$("#mom button").click(()=>{
-if($(this).attr("id")==="f"){
-$("#mf").toggleClass(TogV);
-$("#fo").addClass(TogV);
-$("#s").toggleClass("w3-border-bottom");
-$("#f").removeClass("w3-border-bottom");
-}
-if($(this).attr("id")==="s"){
-$("#fo").toggleClass(TogV);
-$("#mf").addClass(TogV);
-$("#f").toggleClass("w3-border-bottom");
-$("#s").removeClass("w3-border-bottom");
-}
-});
 $("#close,#open").click(()=>{$("#Sidebar").toggleClass(TogV)});
 $("#lo,#lc").click(()=>{$("#lm").toggleClass(TogV)});
 $("#ro,#rc").click(()=>{$("#rm").toggleClass(TogV)});
-$("#Sidebar>button:nth-child(3),#lm>button:nth-child(2)").click(()=>{
+$("#lm>button").click(function(){var sel=$(this).index();sel==1||sel==2?($("#rm").removeClass(TogV),$("#lm").addClass(TogV)):$("#lm").addClass(TogV);});
+$("#rm>button").click(function(){$("#rm").addClass(TogV);});
+$("#Sidebar>button,#lm>button").click(()=>{
 $("body>div:nth-child(2)>button:hidden,#rm>button:hidden").css("display","inline-block");
 $("body>div:nth-child(2)>button:eq(3)~button:visible,#rm>button:eq(3)~button:visible").css("display","none");
 });
@@ -30,17 +18,17 @@ $("body>div:nth-child(2)>button:eq(0)~button:visible,#rm>button:eq(0)~button:vis
 $("body>div:nth-child(2)>button:eq(3)~button:hidden,#rm>button:eq(3)~button:hidden").css("display","inline-block");
 });
 $("#Sidebar>button:nth-child(5),#lm>button:nth-child(4)").click(function(){
-$(".tab").removeClass("w3-red");
-$(this).addClass("w3-red");
+$(".tab").removeClass("bg-danger");
+$(this).addClass("bg-danger");
 $("#contents>div").addClass("d-none");
 $("#index").removeClass("d-none");
 $("#result").empty();
 });
 $(".tab").click(function(){
 var tis=$(this),Classes=(tis.attr("class")).split(" "),T=["#tab1","#tab2","#tab3","#tab4","#tab5","#tab6","#tab7","#tab8","#tab9","#tab10"];
-$("#Sidebar>button,.tab,#lm>button").removeClass("w3-red");
+$("#Sidebar>button,.tab,#lm>button").removeClass("bg-danger");
 $("#result").empty();
-tis.addClass("w3-red");
+tis.addClass("bg-danger");
 for (var a=0,len=Classes.length;a<len;a++){
 switch (Classes[a]){
 case "m1":hidden(0);break

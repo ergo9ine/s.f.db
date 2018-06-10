@@ -29,9 +29,9 @@
 <div class="logo w3-section text-center"><img src="img/logo/sidebar_gflogo.png" id="slogo"></div>
 <button class="btn btn-dark">도감</button>
 <button class="btn btn-dark">시뮬레이터</button>
-<button class="btn btn-dark w3-red" href="#">정보</button>
+<button class="btn btn-dark bg-danger" href="#">정보</button>
 <button class="btn btn-dark" href="#" disabled>About</button>
-<button class="btn btn-dark" href="https://discordapp.com/invite/7ZKwBrA" target="_parent">Contact</button>
+<a class="btn btn-dark" href="https://discordapp.com/invite/7ZKwBrA" target="_parent">Contact</a>
 </div>
 <div class="bg-dark text-white d-none d-md-block">
 <button id="open" class="btn btn-dark btn-sm">Menu</button>
@@ -46,9 +46,9 @@
 <button id="lc" class="btn btn-dark rounded-0 w3-display-container w3-border-bottom w3-border-right"><p class="w3-display-middle">×</p></button>
 <button class="btn btn-dark">도감</button>
 <button class="btn btn-dark">시뮬레이터</button>
-<button class="btn btn-dark w3-red" href="#">정보</button>
+<button class="btn btn-dark bg-danger" href="#">정보</button>
 <button class="btn btn-dark" href="#" target="_parent" disabled>About</button>
-<button class="btn btn-dark" href="https://discordapp.com/invite/7ZKwBrA" target="_parent">Contact</button>
+<a class="btn btn-dark" href="https://discordapp.com/invite/7ZKwBrA" target="_parent">Contact</a>
 </div>
 <div id="rm" class="d-flex flex-column bg-dark text-white text-center invisible" style="z-index:16">
 <button id="rc" class="btn btn-dark rounded-0 w3-display-container w3-border-bottom w3-border-left"><p class="w3-display-middle">×</p></button>
@@ -88,12 +88,10 @@
 <ol class="carousel-indicators">
 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 </ol>
 <div class="carousel-inner">
-<div class="carousel-item active"><img class="d-block w-100" src="img/html/s1.png"><div class="carousel-caption d-none d-md-block"><p>글로벌 2주년 기념 복주머니 소개!</p></div></div>
-<div class="carousel-item"><img class="d-block w-100" src="img/html/s2.png"><div class="carousel-caption d-none d-md-block"><p>글로벌 2주년 기념 특별 코스튬 [한여름 밤의 꿈] 오픈!</p></div></div>
-<div class="carousel-item"><img class="d-block w-100" src="img/html/s3.png"><div class="carousel-caption d-none d-md-block"><p>신규 포인트 이벤트! - 코드네임 블랙 쉐도우</p></div></div>
+<div class="carousel-item active"><img class="d-block w-100" src="img/html/s1.png"></div>
+<div class="carousel-item"><img class="d-block w-100" src="img/html/s2.png"></div>
 </div>
 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a>
 <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
@@ -265,10 +263,10 @@
 <div class="w3-half text-center font">
 <nav class="navbar navbar-dark bg-warning text-dark"><div class="container"><a class="navbar-brand">강화 시뮬레이터</a><p>계산을 원하는 스탯의 수치를 입력하세요.</p></div></nav>
 <form id="stat" class="w3-padding-64">
-<p class="w3-tooltip"><span class="w3-text w3-tag w3-red tp">화력</span><input id="atk" min="0" placeholder="0" value="0" required class="w3-input text-center in ctr"></p>
-<p class="w3-tooltip"><span class="w3-text w3-tag w3-red tp">회피</span><input id="dod" min="0" placeholder="0" value="0" required class="w3-input text-center in ctr"></p>
-<p class="w3-tooltip"><span class="w3-text w3-tag w3-red tp">명중</span><input id="hit" min="0" placeholder="0" value="0" required class="w3-input text-center in ctr"></p>
-<p class="w3-tooltip"><span class="w3-text w3-tag w3-red tp">사속</span><input id="spd" min="0" placeholder="0" value="0" required class="w3-input text-center in ctr"></p>
+<p class="w3-tooltip"><span class="w3-text w3-tag bg-danger tp">화력</span><input id="atk" min="0" placeholder="0" value="0" required class="w3-input text-center in ctr"></p>
+<p class="w3-tooltip"><span class="w3-text w3-tag bg-danger tp">회피</span><input id="dod" min="0" placeholder="0" value="0" required class="w3-input text-center in ctr"></p>
+<p class="w3-tooltip"><span class="w3-text w3-tag bg-danger tp">명중</span><input id="hit" min="0" placeholder="0" value="0" required class="w3-input text-center in ctr"></p>
+<p class="w3-tooltip"><span class="w3-text w3-tag bg-danger tp">사속</span><input id="spd" min="0" placeholder="0" value="0" required class="w3-input text-center in ctr"></p>
 <button type="submit" id="clickme" class="w3-btn w3-wide bg-info">계산</button>
 </form>
 </div>
