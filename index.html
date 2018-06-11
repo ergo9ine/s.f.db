@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="css/index.css">
 <title>SANGVIS FERRI DATABASE</title>
 </head>
-<body>
+<body class="bg-dark">
 <div id="Sidebar" class="d-flex flex-column btn-dark bg-dark text-white invisible"><!-- 데스크탑 -->
 <button id="close" class="btn btn-dark rounded-0 w3-display-container w3-border-bottom w3-border-right"><p class="w3-display-middle">×</p></button>
 <div class="logo w3-section text-center"><img src="img/logo/sidebar_gflogo.png" id="slogo"></div>
@@ -65,7 +65,7 @@
 <button id="ro" class="btn btn-dark btn-sm float-right">RightMenu</button>
 </div>
 <div id="contents">
-<div id="index" class="content">
+<div id="index" class="content bg-white">
 <div class="ctr" style="max-width:1200px">
 <div class="ctr" style="width:50%"><object type="image/svg+xml" data="img/logo/SFDB_main.svg"></object></div>
 <div class="progress"><div class="bg-dark progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100" style="width:87%">SANGVIS FERRI DATABASE Loading... 87%</div></div>
@@ -101,9 +101,9 @@
 </div>
 </div>
 </div>
-<div id="tab1" class="content d-none"><iframe data-src="wiki/doll.html" style="height:100%;width:1px;min-width:100%;border:0;display:block" width="100%"></iframe></div>
-<div id="tab2" class="content d-none"><iframe data-src="wiki/equip.html" style="height:100%;width:1px;min-width:100%;border:0;display:block" width="100%"></iframe></div>
-<div id="tab3" class="content d-none"><iframe data-src="wiki/fairy.html" style="height:100%;width:1px;min-width:100%;border:0;display:block" width="100%"></iframe></div>
+<div id="tab1" class="content bg-white d-none"><iframe data-src="wiki/doll.html" style="height:100%;width:1px;min-width:100%;border:0;display:block" width="100%"></iframe></div>
+<div id="tab2" class="content bg-white d-none"><iframe data-src="wiki/equip.html" style="height:100%;width:1px;min-width:100%;border:0;display:block" width="100%"></iframe></div>
+<div id="tab3" class="content bg-white d-none"><iframe data-src="wiki/fairy.html" style="height:100%;width:1px;min-width:100%;border:0;display:block" width="100%"></iframe></div>
 <div id="tab4" class="content bg-dark text-white d-none">
 <nav class="navbar navbar-dark bg-warning text-dark"><div class="container"><a class="navbar-brand">작전보고서 계산기</a></div></nav>
 <div class="container text-center">
@@ -134,8 +134,7 @@
 <input type="number" class="form-control" id="targetLv" pattern="\d*">
 </div>
 </div>
-<hr>
-필요 작전보고서 :<span id="reportCalcResult">N/A</span>개
+<hr>필요 작전보고서 :<span id="reportCalcResult">N/A</span>개
 </div>
 </div>
 </div>
@@ -222,8 +221,8 @@
 </tr>
 </table>
 </div>
-<div class="w3-panel w3-third">
-<div class="w3-panel w3-half">
+<div class="my-3 w3-third bg-dark">
+<div class="my-3 w3-half">
 <div>
 <tr><th>총 안락도</th></tr>
 <tr><p id="tTcom"></p></tr>
@@ -241,7 +240,7 @@
 <tr><p id="abtr"></p></tr>
 </div>
 </div>
-<div class="w3-panel w3-half">
+<div class="my-3 w3-half">
 <table class="table table-dark table-sm">
 <tr><td colspan="2">숙소 개방당 얻는 전지 수:</td></tr>
 <tr><td>2</td><th>50</th></tr>
