@@ -142,7 +142,7 @@ function SKB(){
 	});
 };
 function Skill(y,x){
-	var src=x.src,dmg=x.Fx.dmg,dmg1=dmg1,dmg2=dmg2,dmg3=dmg3,dodge=x.Fx.dodge,hit=x.Fx.hit,FoR=x.Fx.FoR,cri=x.Fx.cri,time=x.Fx.time,MS=x.Fx.MS,Sdesc="";
+	var src=x.src,dmg=x.Fx.dmg,dmg1=x.Fx.dmg1,dmg2=x.Fx.dmg2,dmg3=x.Fx.dmg3,armor=x.Fx.armor,dodge=x.Fx.dodge,hit=x.Fx.hit,FoR=x.Fx.FoR,cri=x.Fx.cri,time=x.Fx.time,MS=x.Fx.MS,Sdesc="";
 	function sniper(time,target){Sdesc=`${time}초간 조준 후, ${target}에게 공격력의 ${dmg[1]/10}배의 피해를 입힌다.`};
 	function c81(a){Sdesc=`${a} 화력을 ${dmg[1]}% 상승시킨다.`};
 	function rep(a,b){Sdesc=Sdesc.replace(a,b)};
@@ -162,6 +162,7 @@ function Skill(y,x){
 		x.target=="enemy_nearest"&&(sniper("1.5","가장 가까운 타깃"),
 			y==53||y==128?pt("2"):
 			y==202&&(rep(`${dmg[1]/10}`,`${dmg[1]*100}`),pt("1"),rep("배의 피해를 입힌다.","%의 피해를 입힌다. 단 빗나갈 수 있으며 사격 후 재장전에 2초가 소요된다."))):
+	src==10?Sdesc=`자신의 장갑을 ${armor[1]}% 상승시킨다.`:
 	src==13?Sdesc=`적을 향해 필살기를 사용하여 일정 범위 내의 적들에게 공격력의 ${dmg[1]/10}배의 대미지를 총 8회 입힌다`:
 	src==17?Sdesc=`스킬 발동 시 제대에 배속된 RF 1기마다(편제무관) 자신의 치명률과 사속 ${FoR[1]}%씩 상승. ${time[1]}초 지속 【패시브 : 공격 시 40%의 확률로 2초 동안 같은 열에 있는 모든 아군의 치명률과 사속 ${cri[1]}% 상승(최대 3회 중첩)】`:
 	src==18?Sdesc=`발동 시 ${dmg1[1]}개의 각인을 새긴다. 【패시브 : 공격 시 ${cri[1]}% 확률로 각인을 ${x.Fx.ammo[1]}개씩 새긴다. 18개 도달 시 다음 공격으로 엘리트 적에게 공격력의 ${dmg2[1]*10}%(통상 적에게 ${dmg3[1]*10}%)의 피해를 입히며 각인 수는 리셋된다.】`:
@@ -192,7 +193,7 @@ function Skill(y,x){
 	src==44?Sdesc=`자신의 명중을 ${hit[1]*100}% 상승시킨다.`:
 	src==45?Sdesc=`적군 전체 명중을 ${hit[1]}% 감소시킨다`:
 	src==47?Sdesc=
-		y==156||y==157?`자신의 회피를 ${dodge[1]}%, 장갑을 ${x.Fx.armor[1]}% 상승시킨다`:
+		y==156||y==157?`자신의 회피를 ${dodge[1]}%, 장갑을 ${armor[1]}% 상승시킨다`:
 		`어떠한 공격이라도 회피 할 수 있다.`:
 	src==57?Sdesc=`소이탄을 투척하여 반경 1.5범위 내의 적들에게 공격력의 ${dmg1[1]/10}배의 폭발 대미지와 함께 ${time[1]}초 동안 매 ${dmg2[1]/10}초당 공격력의 0.5배의 화상 도트 대미지를 지속적으로 입힌다.`:
 	src==61?Sdesc=`야간작전에서 아군 전체 회피를 ${x.FxNight.dodge[1]}% 상승시킨다. (주간 보정치 : ${dodge[1]}%)`:
@@ -226,14 +227,19 @@ function Skill(y,x){
 		y==196?`유탄을 발사하여 반경 2.5범위 내의 적들에게 공격력의 ${dmg1[1]}%의 피해를 입히며 3기 이상의 적 명중 시 ${x.Fx.time1[1]}초 동안 타깃의 받는 피해량을 ${dmg2[1]}% 증가시키고 3기 미만의 적 명중 시 ${x.Fx.time2[1]}초 동안 자신의 대미지가 ${dmg3[1]}% 상승한다.`:
 		`유탄을 발사하여 반경 1.5범위 내의 적들에게 공격력의 ${dmg[1]}배의 피해를 입힌다.`:
 	src==94?Sdesc=`스킬 발동 후 공격의 마지막 탄환이 적에게 공격력의 ${dmg[1]}%의 대미지를 입히고 자신의 탄창을 즉시 장전한다.`:
-	src==95?Sdesc=`전투 중 전열에 존재하는 아군측 인형에게 ${x.Fx.armor}의 피해를 흡수하는 실드를 부여한다.`:
+	src==95?Sdesc=`전투 중 전열에 존재하는 아군측 인형에게 ${armor[1]}의 피해를 흡수하는 실드를 부여한다.`:
+	src==96?Sdesc=
+		y==160?`다음 3회의 공격을 점차 강화 하여 각각 타깃에게 자신의 공격력의 ${dmg1[1]}/${dmg2[1]}/${dmg3[1]}배의 피해를 입힌다.`:
+		`공격력의 ${dmg[1]}배의 피해를 주는 추가탄을 발사하고 거리 ${x.Fx.KB[1]}칸 만큼 적을 밀어낸다.`:
 	src==97?Sdesc=`연막탄을 투척하여 반경 2.5범위 내의 적들의 공격속도를 ${FoR[1]}%,이동속도를 ${MS[1]}% 감소시킨다`:
 	src==107?Sdesc=`자신의 버프칸에 위치한 아군 인형에게 그 종류에 따라 강화 부여 : HG/SMG 회피 ${dodge[1]}% 상승 RF/AR 화력 ${dmg[1]}% 상승 MG/SG 명중 ${hit[1]}% 상승`:
 	src==108&&(Sdesc=`자신의 명중을 ${hit[1]}% 감소시키는 대신 사속을 150까지 상승시키고 난사합니다`);
 	Sdesc=y==5||y==11||y==47||y==174||y==200||y==20005?Sdesc+`<br>지속시간${time[1]}(${x.FxNight.time[1]})초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:
 	src==94||y==77||y==85||y==109||y==173?``:
-	src==0||src==1||src==22||src==37||src==39||src==41||src==57||src==91||y==79||y==102||y==185?Sdesc+`<br>선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:Sdesc+`<br>지속시간${time[1]}초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`;
+	src==0||src==1||src==13||src==22||src==37||src==39||src==41||src==57||src==91||src==94||src==96||y==79||y==102||y==185?Sdesc+`<br>선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:
+	Sdesc+`<br>지속시간${time[1]}초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`;
 	y==148||y==183&&(Sdesc=Sdesc.replace(`<br>`,`<br>지속시간${time[1]}초.`));
+	console.log(Sdesc)
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>div:nth-child(2)").html(Sdesc);
 };
 function togglecon(){
@@ -241,7 +247,7 @@ function togglecon(){
 	$("body>div:nth-child(2)").toggleClass("d-md-flex");
 	$("body>div:nth-child(3)").toggleClass("d-flex");
 	$("button.btn-warning,.w3-image").remove();
-	$(".w3-display-right:nth-child(4)").attr("data-content","");
+	$(".w3-display-right:nth-child(4)").data("content","");
 	$('[data-toggle="popover"]').popover('hide');
 	$(".skinntg>button,#contents>div:nth-child(6)>button").off("click");	
 	$("div.w3-row:nth-child(3)>div:nth-child(2)>div:nth-child(2)").empty();
@@ -273,7 +279,6 @@ $(".filter").click(function(){
 		grid.filter('[data-time="00"]')
 	break;
 	*/
-	filtr=="제조불가"?filter('[data-time="00"]'):
 	filtr=="All"&&filter('[data-type]');
 	//정렬
 	filtr=="기본"?new Muuri('.grid',{sordData:null}):
