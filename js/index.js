@@ -9,7 +9,7 @@ $("#lo,#lc").click(()=>{$("#lm").toggleClass(TogV)});
 $("#ro,#rc").click(()=>{$("#rm").toggleClass(TogV)});
 $("#lm>button").click(function(){var sel=$(this).index();sel==1||sel==2?($("#rm").removeClass(TogV),$("#lm").addClass(TogV)):$("#lm").addClass(TogV);});
 $("#rm>button").click(function(){$("#rm").addClass(TogV);});
-$("#Sidebar>button,#lm>button").click(()=>{
+$("#Sidebar>button:nth-child(3),#lm>button:nth-child(2)").click(()=>{
 $("body>div:nth-child(2)>button:hidden,#rm>button:hidden").css("display","inline-block");
 $("body>div:nth-child(2)>button:eq(3)~button:visible,#rm>button:eq(3)~button:visible").css("display","none");
 });
