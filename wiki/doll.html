@@ -84,7 +84,7 @@
 		</div>
 	</div>
 </div>
-<input type="text" placeholder="검색" class="w3-input" id="search">
+<input type="text" placeholder="검색" class="form-control form-control-sm" id="search">
 <div class="text-center grid ctr" id="grid"></div>
 <style>
 #sdc,#chart,#stat,#sec-fir,#sec-sec,#doll,#equip,#dolltext,#dolllore{outline:1px solid grey}
@@ -92,6 +92,7 @@
 .row1>div,.row2>div,.row3>div{width:25px;height:25px}
 #sec-fir>.w3-row{height:100px}
 #sec-fir>.w3-row>div:nth-child(2){height:77.2px}
+#table>div,#graph>div{height:30px;padding:0 !important}
 </style>
 <div class="w3-hide" id="func">
 <div class="px-3" id="contents">
@@ -158,7 +159,7 @@
 						<svg class="svg" width="125" height="35"><polygon points="0,0 0,35 0,35 100,35 125,0" style="fill:grey"/></svg>
 						<svg class="svg" width="125" height="35"><polygon points="125,0 125,35 0,35 0,35 25,0" style="fill:#ffc107"/></svg>
 						<div class="w3-display-left text-center" style="width:100px;height:35px;line-height:35px">Drop</div>
-						<div class="w3-display-right text-center" title="Drop 지역" data-toggle="popover" data-placement="bottom" data-content=""tyle="width:85px;height:35px;line-height:35px;color:#000">More</div>
+						<div class="w3-display-right text-center" title="Drop 지역" data-toggle="popover" data-placement="bottom" data-content="" style="width:85px;height:35px;line-height:35px;color:#000">More</div>
 					</div>
 					</div>
 				</div>
@@ -221,7 +222,69 @@
 			</div>
 		</div>
 		<div class="w3-half" id="sec-sec">
-			<div class="w3-row" style="height:300px">스테이터스</div>
+			<div style="max-height:300px;height:300px">
+			<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="20000">
+			<div class="carousel-inner">
+			<div class="carousel-item active">
+				<div class="bg-dark text-white">
+					<div id="table" class="row m-0">
+					<div class="col-6 bg-dark">체력</div>
+					<div class="col bg-secondary">1</div>
+					<div class="col-6 bg-dark">입수 방법</div>
+					<div class="col bg-secondary">
+						<button class="btn btn-sm bg-warning" disabled>Normal</button>
+						<button class="btn btn-sm bg-danger" disabled>Heavy</button>
+						<button class="btn btn-sm bg-info" disabled>Drop</button>
+					</div>
+					<div class="col-6 bg-dark">화력</div>
+					<div class="col bg-secondary">2</div>
+					<div class="col-6 bg-dark">회피</div>
+					<div class="col bg-secondary">3</div>
+					<div class="col-6 bg-dark">명중</div>
+					<div class="col bg-secondary">4</div>
+					<div class="col-6 bg-dark">사속</div>
+					<div class="col bg-secondary">5</div>
+					<div class="col-6 bg-dark">치명타율</div>
+					<div class="col bg-secondary">6</div>
+					<div class="col-6 bg-dark">치명타 피해</div>
+					<div class="col bg-secondary">7</div>
+					<div class="col-6 bg-dark">방어력 관통</div>
+					<div class="col bg-secondary">8</div>
+					<div class="col-6 bg-dark">탄창 크기</div>
+					<div class="col bg-secondary">9</div>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<div class="bg-dark text-white">
+					<div id="graph" class="row m-0">
+					<div class="col-6 bg-dark">TEST</div>
+					<div class="col bg-secondary">TEST</div>
+					<div class="col-6 bg-dark">TEST</div>
+					<div class="col bg-secondary">TEST</div>
+					<div class="col-6 bg-dark">TEST</div>
+					<div class="col bg-secondary">TEST</div>
+					<div class="col-6 bg-dark">TEST</div>
+					<div class="col bg-secondary">TEST</div>
+					<div class="col-6 bg-dark">TEST</div>
+					<div class="col bg-secondary">TEST</div>
+					<div class="col-6 bg-dark">TEST</div>
+					<div class="col bg-secondary">TEST</div>
+					<div class="col-6 bg-dark">TEST</div>
+					<div class="col bg-secondary">TEST</div>
+					<div class="col-6 bg-dark">TEST</div>
+					<div class="col bg-secondary">TEST</div>
+					<div class="col-6 bg-dark">TEST</div>
+					<div class="col bg-secondary">TEST</div>
+					<div class="col-6 bg-dark">TEST</div>
+					<div class="col bg-secondary">TEST</div>
+					</div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a>
+			<a class="carousel-control-next" href="#carousel" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
+			</div>
+			</div>
 		</div>
 	</div>
 	<div class="w3-col l12"> <!-- 추천장비/인형 -->

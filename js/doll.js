@@ -98,13 +98,38 @@ function sort(a){grid.sort(a)};
 function filter(a){grid.filter(`${a}`)};
 function chrtset(x,y){
 	var D="편제당<br>탄약 C,식량 M 소모"
-	"true"==x.mod?Set1(2):Set1(1);
+	"true"==x.mod?(Set1(2),table(2)):(Set1(1),table(1));
 	"hg"==x.type?Set2("HG",[71,31,79,58,55],10,10):
 	"smg"==x.type?Set2("SMG",[183,28,70,86,13],25,20):
 	"ar"==x.type?Set2("AR",[115,51,43,72,47],20,20):
 	"rf"==x.type?Set2("RF",[86,128,33,34,74],15,30):
 	"mg"==x.type?Set2("MG",[171,89,28,119,28],40,30):
 	"sg"==x.type&&Set2("SG",[261,32,11,28,11],30,40);
+	function table(k){
+		var a,b;
+		for (var n=2;n<22;n=n+2){
+			n==2?a=`${x.hp[0]} ~ ${x.hp[k]}`:
+			n==4?a=`<button class="btn btn-sm bg-warning" disabled>Normal</button><button class="btn btn-sm bg-danger" disabled>Heavy</button><button class="btn btn-sm bg-info" disabled>Drop</button>`:
+			n==6?a=`${x.dmg[0]} ~ ${x.dmg[k]}`:
+			n==8?a=`${x.dodge[0]} ~ ${x.dodge[k]}`:
+			n==10?a=`${x.hit[0]} ~ ${x.hit[k]}`:
+			n==12?a=`${x.FR[0]} ~ ${x.FR[k]}`:
+			n==14?a=
+				x.type=="hg"?`20%`:
+				x.type=="smg"?`5%`:
+				x.type=="ar"?`20%`:
+				x.type=="rf"?`40%`:
+				x.type=="mg"?`5%`:
+				`40%`:
+			n==16?a=`50%`:
+			n==18?a=`10`:
+			n==20&&(a=`${x.ammo}`);
+			$(`#table>div:nth-child(${n})`).html(a);
+			if ($("#table>div:nth-child(20)").text()=="undefined"){$("#table>div:nth-child(20)").text("")}
+			{
+			}
+		}
+	}
 	function Set1(z){y.labels=["체력","화력","회피","사속","명중"];y.datasets[0].data=[x.hp[z],x.dmg[z],x.dodge[z],x.FR[z],x.hit[z]]};
 	function Set2(a,b,c,d){y.datasets[1].label=a+"평균";y.datasets[1].data=b;D=D.replace("C",c).replace("M",d)};
 	$("#sec-fir>div:nth-child(2)>div:nth-child(2)").html(D);
