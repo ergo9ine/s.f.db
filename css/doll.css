@@ -51,3 +51,13 @@ div.w3-row:nth-child(3)>div:nth-child(2)>img{width:77.2px;height:77.2px}
 		max-width:1400px;
 	}
 }
+@media all and (min-width:1601px){
+	.grid {
+		max-width:1600px;
+	}
+}
+@media all and (min-width:1801px){
+	.grid {
+		max-width:1800px;
+	}
+}
