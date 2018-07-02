@@ -1,50 +1,57 @@
-"use strict";var grid,rCh,ghver=1.80623,dollData=[],idir='../img/t_doll/',loader=$(".loader"),dollSkill=["AimAttackCurrentTarge","AimAttackDistanceTarge","AimAttackSpecificTarge","airattack","airborne","AK12Buff","AN94Shot","AR15Shot","armor","armorBuff","armorBuffSelf","armorDebuff","armorDebuffSelf","BBNoel","bombard","Bronya","buff","Carcano1891","Carcano1938","CBJMS","Chloe","CLEAR","Coldweapon","comboBuffSelf","command","crit","critBuff","critBuffSelf","debuff","defense","dodgeBuff","dodgeBuffSelf","dodgeDebuff","empty","FAIL","fighting","Flare","Flashbomb","fortress","GGElfeldt","golden","Grenade","Himeko","hitBuff","hitBuffSelf","hitDebuff","illumine","Invincible","Invincible35","IWantU","Kaguya","Kiana","LadyMadeSTAR","Landmines","M4Nightmare","M1918","MosinNagant","Napalm","nightcritBuff","nightcritBuff38","nightcritBuffSelf","nightdodgeBuff","nightdodgeBuffSelf","nightdodgeDebuff","nighthitBuff","nighthitBuffSelf","nighthitDebuff","nightpowBuff","nightpowBuffSelf","nightpowDebuff","nightrateBuff","nightrateBuffSelf","nightrateDebuff","nightspeedDebuff","nighttargetdodgeDebuff","nighttargethitDebuff","nighttargetpowDebuff","nighttargetrateDebuff","nighttargetspeedDebuff","Noconsumption","position","powBuff","powBuffSelf","powBuffShield","powDebuff","RaidenMei","rateBuff","rateBuffSelf","rateDebuff","reinforce","rescue","RifleGrenade","roadblocks","Sakura","Seele","shield","Shotgun","Smoke","sniper","speedDebuff","target","targetdodgeDebuff","targethitDebuff","targetpowDebuff","targetrateDebuff","targetspeedDebuff","Theresa","VariableBuff","augbuff","OblivioN"];
-var VoActor=["나즈카 카오리","마츠이 에리코","마이하라 유메","무카이야마 나오미","미사키 마미","미타라이 카린","사토 리나","사쿠마 히로미","스자키 아야","시노하라 나루미","시미즈 아이","아마노 미라이","아마미야 소라","아야미야 유키코","야마네 노조미","야츠루기 스미레","오구라 유이","오오니시 사오리","요시다 사치요","요시오카 카오리","요코야 사야카","우에사카 스미레","유우키 아오이","이와마츠 이즈미","이카다이 카나에","이타타니 아야카","이토 아스카","이데 카오리","츄조 토모요","타나카 아이미","타네다 리사","타카하시 하루카","토마츠 하루카","카나에 토오루","카야노 아이","코이즈미 타카오","호리에 유이","하나다 마미코","하나타 타마리","나카하라 마이","난죠 요시노","노나카 아이","노미즈 이오리","노토 마미코","닛타 히요리","다이몬 카미","미네우치 토모미","미모리 스즈코","사쿠라 아야네","세리자와 유우","스와 아야카","아카오 히카루","오오츠보 유카","우에마 에미","우치다 마아야","우치야마 유미","이가라시 히로미","코가 아오이","코시미즈 아미","쿠기미야 리에","카와스미 아야코","카토 에미리","쿠로사와 토모요","키타무라 에리"];
-var VA=["Kaori Nazuka","Eriko Matsui","Yume Maihara","Naomi Mukaiyama","Mami Misaki","Karin Mitarai","Rina Sato","Hiromi Sakuma","Aya Suzaki","Narumi Sinohara","Ai Shimizu","Mirai Amano","Sora Amamiya","Yukiko Ayamiya","Nozomi Amane","Sumire Yatsurugi","Ogura Yui","Saori Onishi","Sachiyo Yoshida","Kaori Yoshioka","Sayaka Yokoya","Uesaka Sumire","Yuuki Aoi","Izumi Iwamatsu","Kanae Ikadai","Ayaka Itatani","Asuka Ito","Kaori Ide","Tomoyo Chuujou","Aimi Tanaka","Risa Taneda","Haruka Takahashi","Haruka Tomatsu","Tooru Kanae","Ai Kayano","Takao Koizumi","Yui Horie","Mamiko Hanada","Tamari Hinata","Mai Nakahara","Yoshino Nanjo","Ai Nonaka","Iori Nomizu","Mamiko Noto","Hiyori Nitta","Kami Daimon","Tomomi Mineuchi","Suzuko Mimori","Ayane Sakura","Serizawa Yuu","Ayaka Suwa","Hikaru Akao","Yuka Ootsubo","Emi Uema","Maaya Uchida","Yumi Uchiyama","Hiromi Igarashi","Aoi Koga","Koshimizu Ami","Rie Kugimiya","Ayako Kawasumi","Emiri Katou","Tomoyo Kurosawa","Eri Kitamura"];
+"use strict";var grid,rCh,ghver=1.80723,dollData=[],dollT=[0,0,0,0,0,0,0,0,0],Tile=[0,0,0,0,0,0,0,0,0],idir='../img/t_doll/',loader=$(".loader"),dollSkill=["AimAttackCurrentTarge","AimAttackDistanceTarge","AimAttackSpecificTarge","airattack","airborne","AK12Buff","AN94Shot","AR15Shot","armor","armorBuff","armorBuffSelf","armorDebuff","armorDebuffSelf","BBNoel","bombard","Bronya","buff","Carcano1891","Carcano1938","CBJMS","Chloe","CLEAR","Coldweapon","comboBuffSelf","command","crit","critBuff","critBuffSelf","debuff","defense","dodgeBuff","dodgeBuffSelf","dodgeDebuff","empty","FAIL","fighting","Flare","Flashbomb","fortress","GGElfeldt","golden","Grenade","Himeko","hitBuff","hitBuffSelf","hitDebuff","illumine","Invincible","Invincible35","IWantU","Kaguya","Kiana","LadyMadeSTAR","Landmines","M4Nightmare","M1918","MosinNagant","Napalm","nightcritBuff","nightcritBuff38","nightcritBuffSelf","nightdodgeBuff","nightdodgeBuffSelf","nightdodgeDebuff","nighthitBuff","nighthitBuffSelf","nighthitDebuff","nightpowBuff","nightpowBuffSelf","nightpowDebuff","nightrateBuff","nightrateBuffSelf","nightrateDebuff","nightspeedDebuff","nighttargetdodgeDebuff","nighttargethitDebuff","nighttargetpowDebuff","nighttargetrateDebuff","nighttargetspeedDebuff","Noconsumption","position","powBuff","powBuffSelf","powBuffShield","powDebuff","RaidenMei","rateBuff","rateBuffSelf","rateDebuff","reinforce","rescue","RifleGrenade","roadblocks","Sakura","Seele","shield","Shotgun","Smoke","sniper","speedDebuff","target","targetdodgeDebuff","targethitDebuff","targetpowDebuff","targetrateDebuff","targetspeedDebuff","Theresa","VariableBuff","augbuff","OblivioN"];
+var VoActor=["나즈카 카오리","마츠이 에리코","마이하라 유메","무카이야마 나오미","미사키 마미","미타라이 카린","사토 리나","사쿠마 히로미","스자키 아야","시노하라 나루미","시미즈 아이","아마노 미라이","아마미야 소라","아야미야 유키코","야마네 노조미","야츠루기 스미레","오구라 유이","오오니시 사오리","요시다 사치요","요시오카 카오리","요코야 사야카","우에사카 스미레","유우키 아오이","이와마츠 이즈미","이카다이 카나에","이타타니 아야카","이토 아스카","이데 카오리","츄조 토모요","타나카 아이미","타네다 리사","타카하시 하루카","토마츠 하루카","카나에 토오루","카야노 아이","코이즈미 타카오","호리에 유이","하나다 마미코","하나타 타마리","나카하라 마이","난죠 요시노","노나카 아이","노미즈 이오리","노토 마미코","닛타 히요리","다이몬 카미","미네우치 토모미","미모리 스즈코","사쿠라 아야네","세리자와 유우","스와 아야카","아카오 히카루","오오츠보 유카","우에마 에미","우치다 마아야","우치야마 유미","이가라시 히로미","코가 아오이","코시미즈 아미","쿠기미야 리에","카와스미 아야코","카토 에미리","쿠로사와 토모요","키타무라 에리","타무라 유카리","타카하시 미카코","토쿠이 소라","하나자와 아카네","하야미 사오리","후쿠하라 아야카","호리고메 사야","나바타메 히토미","사토 아리세","아오키 루리코","아오키 시키","아이사카 유카","야마모토 노조미","오오쿠보 루미","요시무라 하루카","이노우에 마리나","이마이 아사미","이토 시즈카","나나미 카린","나나세 아미","마에카와 료코","사이토 유카","사토 사토미","세토 아사미","아사쿠라 아즈미","아이하라 코토미","오우사키 치요","우에다 레이나","이다 아리사","이토 카나에","츠다 미나미","카네모토 히사코","코보리 미유키","코이치 마코토","코키도 시호","키부네 사치호","타자와 리이코","후지이 유키요","후지이 아야카","히다카 리나"],
+		VA=["Kaori Nazuka","Eriko Matsui","Yume Maihara","Naomi Mukaiyama","Mami Misaki","Karin Mitarai","Rina Sato","Hiromi Sakuma","Aya Suzaki","Narumi Sinohara","Ai Shimizu","Mirai Amano","Sora Amamiya","Yukiko Ayamiya","Nozomi Amane","Sumire Yatsurugi","Ogura Yui","Saori Onishi","Sachiyo Yoshida","Kaori Yoshioka","Sayaka Yokoya","Uesaka Sumire","Yuuki Aoi","Izumi Iwamatsu","Kanae Ikadai","Ayaka Itatani","Asuka Ito","Kaori Ide","Tomoyo Chuujou","Aimi Tanaka","Risa Taneda","Haruka Takahashi","Haruka Tomatsu","Tooru Kanae","Ai Kayano","Takao Koizumi","Yui Horie","Mamiko Hanada","Tamari Hinata","Mai Nakahara","Yoshino Nanjo","Ai Nonaka","Iori Nomizu","Mamiko Noto","Hiyori Nitta","Kami Daimon","Tomomi Mineuchi","Suzuko Mimori","Ayane Sakura","Serizawa Yuu","Ayaka Suwa","Hikaru Akao","Yuka Ootsubo","Emi Uema","Maaya Uchida","Yumi Uchiyama","Hiromi Igarashi","Aoi Koga","Koshimizu Ami","Rie Kugimiya","Ayako Kawasumi","Emiri Katou","Tomoyo Kurosawa","Eri Kitamura","Yukari Tamura","Mikako Takahashi","Sora Tokui","Akane Hanazawa","Saori Hayami","Ayaka Fukuhara","Saya Horigome","Hitomi Nabatame","Arise Sato","Ruriko Aoki","Shiki Aoki","Yuuka Aisaka","Nozomi Yamamoto","Rumi Okubo","Haruka Yoshimura","Marina Inoue","Asami Imai","Shizuka Ito","Karin Nanami","Ami Nanase","Ryoko Maekawa","Yuka Saito","Satomi Sato","Asami Seto","Azumi Asakura","Kotomi Aihara","Chiyo Ousaki","Reina Ueda","Arisa Ida","Kanae Ito","Minami Tsuda","Hisako Kanemoto","Miyuki Kobori","Makoto Koichi","Shiho Kokido","Sachiho Kibune","Riiko Tazawa","Yukiyo Fujii","Ayaka Fujii","Rina Hidaka"],
+		Illustrator=["15K","92M","AC-130","ALLENES","Anmi","AS109","ASK","BIBIA","Bison仓鼠","CanceR","DDAL","DOGALA","Evan揚","hanasa","HIKARI","HJL","KAN","KIncora","Ki桑","Krenz","KY","liduke","LIN+","Lino","lpip","lyo","M.vv","MKiiiiii","neco","NIN","nineo","NIXOO","NoriZC","NorthAbyssor","november","NS","Parsley","phantania","PHI","Rain Lan","RAN","REALMBW","rei","Renatus.Z","RFF","rosele","SA","Sam_Ashton","Saru","Silverwing","Skade","sola7764","spirtie","TAMAXI","TOMATO","XQ","X布","ZAGALA","zui","かれい","とり","ミカピカゾ","两卡车","仙女V","兔爷","八云玖","八才","十月十日奏","卑しい人间","厕所董事长","原子Dan","受菟","叽困","和茶","咩爆","哈路卡","团子","堀森","多元菌","小吃","小迪","工口牛","幻象黑兔","废人","戏言咸咸","拿铁","时辰","木shiyo","木子翔","林大B","林檎愛す","死盖","水乌龟","水熊","河马","油库狸","洲川Terras","海猫络合物","熊猫印象","狂気の君","猫头神","百足","真名","細重ソウジ","羽中","能登ツグミ","芙芙酱","荒境TS","莲子","薯子Imoko","虎三","钉田西瓜","防弹乳牛","陆生の洲川","雪樱樱","音符","鳗鱼子","麻将"];
 $(document).ready(()=>{
-	contentsload(),$('[data-toggle="popover"]').popover()
+	contentsload()
+	$('[data-toggle="popover"]').popover()
+	$(".tileFilter").popover({html:true,content:function(){return $("#tileFilter").html()}});
 });
 //FIXME Line 12: 스킬 검색용(필터)으로 일시 지정, 추후 스킬 이름으로 변환 바람
 //FIXME Line 20: 스킬 검색용(타이핑)으로 일시 지정, 추후 스킬 이름으로 변환 바람
 function contentsload(){
-	$.ajax('../json/doll.json',{contentType:'application/json',dataType:'json',
-		success:result=>{
-		var allCharacters=$.map(result,(doll,index)=>{var timehour=parseInt(doll.buildTime/3600),timemin=doll.buildTime%3600/60,noval=doll.id;
+	$.ajax("../json/doll.json",{contentType:'application/json',dataType:'json',success:result=>{
+		var allCharacters=$.map(result,(doll,index)=>{var timehour=parseInt(doll.buildTime/3600),timemin=doll.buildTime%3600/60,noval=doll.id,dollT=[0,0,0,0,0,0,0,0,0];
 			noval>20000?noval="M"+(noval-20000):noval>1000&&(noval="X"+(noval-1000));
+			$.each(doll.Fx.tile,(index,value)=>{dollT[value-1]=1}),dollT[doll.Fx.self-1]=2;
 			var character=$(`<div class="item" data-time="${timehour}${timemin}" data-type="${doll.type}" data-rarity="${doll.rarity}" data-skill="${doll.skill.src}"></div>`).detach(),
-				dollcon=`<div class="text-white no" data-no="${doll.id}">${noval}</div><p class="name podo">${doll.krName}</p><i class="star r${doll.rarity}"></i><i class="incage doll info_cage_${doll.rarity}"></i><i class="type doll ${doll.type}_${doll.rarity}"></i><img width="175" height="276" src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@${ghver}/img/t_doll/${doll.id}_i.png" style="background-color:#2c343d" onload="$(this).css('background-color','').removeAttr('onload')"><div class="tag">${doll.type}/${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}/${doll.skill.src}</div>`;
+				dollcon=`<div class="text-white no" data-no="${doll.id}">${noval}</div><p class="name podo">${doll.krName}</p><i class="star r${doll.rarity}"></i><i class="incage doll info_cage_${doll.rarity}"></i><i class="type doll ${doll.type}_${doll.rarity}"></i><img width="175" height="276" src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@${ghver}/img/t_doll/${doll.id}_i.png" style="background-color:#2c343d" onload="$(this).css('background-color','').removeAttr('onload')"><div class="tag">${doll.type}/${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}/${doll.skill.src}/${dollT}</div>`;
 			$(character).append(`<div class="tdoll item-content">`).find(".item-content").html(dollcon);
 			return character
 		});
-		$('#grid').append(allCharacters),loadComplete();
+		$("#grid").append(allCharacters),loadComplete();
 		dollData=result
-		}})
+	}})
 };
 function loadComplete(){
-	grid=new Muuri('#grid',{
-		showDuration:0,hideDuration:0,layoutDuration:0,
+	grid=new Muuri("#grid",{
+		showDuration:null,hideDuration:null,layoutDuration:null,showEasing:null,hideEasing:null,layoutEasing:null,
+		visibleStyles:{},hiddenStyles:{},
 		sortData:{
 			time:(item,element)=>element.getAttribute('data-time'),
 			type:(item,element)=>element.getAttribute('data-type').toUpperCase(),
 			rarity:(item,element)=>element.getAttribute('data-rarity')
-		},layout:{fillGaps:true}
+		}
 	});
 	loader.removeClass("is-active");
-	$('#search').quicksearch('.item',{
+	$("#search").quicksearch(".item",{
 		noResults:"#noResultMessage",
-		'bind':'keyup keydown click change blur focus',
-		'hide':function(){$(this).removeClass('muuri-item-shown');filter('.muuri-item-shown')},
-		'show':function(){$(this).addClass('muuri-item-shown');filter('.muuri-item-shown')}
+		'bind':'click input',
+		'hide':function(){grid.hide([this])},
+		'show':function(){grid.show([this])}
 	});
-	$('.VAinput').quicksearch('.VA',{
-		'bind':'keyup keydown click change blur focus',
-		'hide':function(){$(this).addClass('d-none')},
-		'show':function(){$(this).removeClass('d-none')}
+	$(".VAinput").quicksearch(".VA",{
+		'bind':'input',
+		'hide':function(){this.classList.add("d-none")},
+		'show':function(){this.classList.remove("d-none")}
 	});
-	$("button.flex-fill:nth-child(1)").click(()=>{$("div.justify-content-center:nth-child(3)").toggleClass("d-none"),$("div.justify-content-center:nth-child(4)").addClass("d-none")});
-	$("button.flex-fill:nth-child(2)").click(()=>{$("div.justify-content-center:nth-child(4)").toggleClass("d-none"),$("div.justify-content-center:nth-child(3)").addClass("d-none")});
+	$(".Artinput").quicksearch(".Illustrator",{
+		'bind':'input',
+		'hide':function(){this.classList.add("d-none")},
+		'show':function(){this.classList.remove("d-none")}
+	});
 	$(".item-content").click(function(){
-		$(".grid,#search,#func").toggleClass('d-none'),$("body>div:nth-child(2)").toggleClass("d-md-flex"),$("body>div:nth-child(3)").toggleClass("d-flex");
+		$(".grid,#search,#func").toggleClass("d-none"),$("#filter").toggleClass("d-flex d-none"),$(".tileFilter").popover('hide');
 		var clicked=$(this).children(".no").attr("data-no");
 		$.each(dollData,(index,doll)=>{
 			if(doll.id==clicked){
@@ -72,16 +79,19 @@ function loadComplete(){
 				SKB();
 				Skill(doll.id,doll.skill);
 				rCh=new Chart(ctx,{type:'radar',data:statisticschart,options:chartOptions});
-				rCh.update();
+				rCh.update()
 			}
 		})
 	});
-	$("button.btn-dark:nth-child(5)").click(()=>{$("#contents>div:nth-child(6)").toggleClass("d-none d-block")});
-	$(".xfunc").click(()=>{rCh.destroy(),togglecon()});
+	$(".btn-dark:nth-child(5)").click(()=>{$("#contents>div:nth-child(6)").toggleClass("d-none d-block")});
+	$(".xfunc").click(()=>{togglecon()})
 };
 function VAfltr(a){
-	var b=cho_hangul(a)
+	var b=cho_hangul(a);
 	$(".VoC").append(`<a class="dropdown-item VA" href="#"><span>${a}</span><span class="d-none">${b}/</span></a>`)
+};
+function Artfltr(a){
+	$(".IoC").append(`<a class="dropdown-item Illustrator" href="#"><span>${a}</span></a>`)
 };
 function sort(a){grid.sort(a)};
 function filter(a){grid.filter(`${a}`)};
@@ -97,7 +107,7 @@ function chrtset(x,y){
 	"sg"==x.type&&Set2("SG",[261,32,11,28,11],30,40);
 	function table(k){
 		var a,b;
-		for (var n=2;n<22;n=n+2){
+		for(var n=2;n<22;n=n+2){
 			n==2?a=`${x.hp[0]} ~ ${x.hp[k]}`:
 			n==4?a=`<div class="btn-group" role="group" aria-label="Acquisition"><button class="btn btn-sm bg-warning" disabled>Normal</button><button class="btn btn-sm bg-danger" disabled>Heavy</button><button class="btn btn-sm bg-info" disabled>Drop</button></div>`:
 			n==6?a=`${x.dmg[0]} ~ ${x.dmg[k]}`:
@@ -115,12 +125,13 @@ function chrtset(x,y){
 			n==18?a=`10`:
 			n==20&&(a=`${x.ammo}`);
 			$(`#table>div:nth-child(${n})`).html(a);
-			if ($("#table>div:nth-child(20)").text()=="undefined"){$("#table>div:nth-child(20)").text("")};
-			if (Array.isArray(x.drop)==true){$("#table>div:nth-child(4)>.btn-group>button:nth-child(3)").removeAttr("disabled").addClass("text-white")};
-		}}
+			if($("#table>div:nth-child(20)").text()=="undefined"){$("#table>div:nth-child(20)").text("")};
+			if(Array.isArray(x.drop)==true){$("#table>div:nth-child(4)>.btn-group>button:nth-child(3)").removeAttr("disabled").addClass("text-white")}
+		}
+	};
 	function Set1(z){y.labels=["체력","화력","회피","사속","명중"];y.datasets[0].data=[x.hp[z],x.dmg[z],x.dodge[z],x.FR[z],x.hit[z]]};
 	function Set2(a,b,c,d){y.datasets[1].label=a+"평균";y.datasets[1].data=b;D=D.replace("C",c).replace("M",d)};
-	$("#sec-fir>div:nth-child(2)>div:nth-child(2)").html(D);
+	$("#sec-fir>div:nth-child(2)>div:nth-child(2)").html(D)
 };
 function fxts(x){
 	var TS="타일 위 타겟에게";
@@ -141,17 +152,17 @@ function fxts(x){
 		"armor"==index&&(TS+=`<br>장갑 ${value}%증가`);
 	});
 	function Set(x){TS=TS.replace("타겟",x)};
-	$("#sec-fir>div:nth-child(1)>div:nth-child(2)>div:nth-child(2)").html(TS);
+	$("#sec-fir>div:nth-child(1)>div:nth-child(2)>div:nth-child(2)").html(TS)
 };
 function SKB(){
 	$(".skinntg>button,#contents>div:nth-child(6)>button").click(function(){
 		var imgtag=$(".col-lg-5:nth-child(1)>img"),iX=$(this).index(),No=$(".blockquote-footer>cite:nth-child(1)").text(),Isrc=idir+No+'.png';
 		if(0==iX){var imgsrc=imgtag.attr("src").split(idir)[1].split(".png")[0],imgM=imgsrc.indexOf("_d"),imgT=imgsrc.slice(0,-2);-1!=imgM?(imgtag.attr("src",idir+imgT+".png")):(imgtag.attr("src",idir+imgsrc+"_d.png"))}
 		else{1==iX?imgtag.attr("src",Isrc):(--iX,Isrc=idir+No+"_"+iX+".png",imgtag.attr("src",Isrc))};
-	});
+	})
 };
 function Skill(y,x){
-	var src=x.src,dmg=x.Fx.dmg,dmg1=x.Fx.dmg1,dmg2=x.Fx.dmg2,dmg3=x.Fx.dmg3,armor=x.Fx.armor,dodge=x.Fx.dodge,hit=x.Fx.hit,FR=x.Fx.FR,cri=x.Fx.cri,time=x.Fx.time,MS=x.Fx.MS,Sdesc="";
+	var src=x.src,dmg=x.Fx.dmg,dmg1=x.Fx.dmg1,dmg2=x.Fx.dmg2,dmg3=x.Fx.dmg3,ammo=x.Fx.ammo,armor=x.Fx.armor,dodge=x.Fx.dodge,hit=x.Fx.hit,FR=x.Fx.FR,cri=x.Fx.cri,time=x.Fx.time,MS=x.Fx.MS,Sdesc="";
 	function sniper(time,target){Sdesc=`${time}초간 조준 후, ${target}에게 공격력의 ${dmg[1]/10}배의 피해를 입힌다.`};
 	function c81(a){Sdesc=`${a} 화력을 ${dmg[1]}% 상승시킨다.`};
 	function rep(a,b){Sdesc=Sdesc.replace(a,b)};
@@ -178,21 +189,21 @@ function Skill(y,x){
 	src==13?Sdesc=`적을 향해 필살기를 사용하여 일정 범위 내의 적들에게 공격력의 ${dmg[1]/10}배의 대미지를 총 8회 입힌다`:
 	src==15?Sdesc=`블랙홀을 발생시키는 수류탄을 던져 ${time[1]}초 동안 반경 2.5 범위 내의 적을 끌어당기고 중심에서 1.5 범위 내의 적들에게 초당 공격력의 ${dmg[1]}%의 피해를 준다.`:
 	src==17?Sdesc=`스킬 발동 시 제대에 배속된 RF 1기마다(편제무관) 자신의 치명률과 사속 ${FR[1]}%씩 상승. ${time[1]}초 지속 【패시브 : 공격 시 40%의 확률로 2초 동안 같은 열에 있는 모든 아군의 치명률과 사속 ${cri[1]}% 상승(최대 3회 중첩)】`:
-	src==18?Sdesc=`발동 시 ${dmg1[1]}개의 각인을 새긴다. 【패시브 : 공격 시 ${cri[1]}% 확률로 각인을 ${x.Fx.ammo[1]}개씩 새긴다. 18개 도달 시 다음 공격으로 엘리트 적에게 공격력의 ${dmg2[1]*10}%(통상 적에게 ${dmg3[1]*10}%)의 피해를 입히며 각인 수는 리셋된다.】`:
+	src==18?Sdesc=`발동 시 ${dmg1[1]}개의 각인을 새긴다. 【패시브 : 공격 시 ${cri[1]}% 확률로 각인을 ${ammo[1]}개씩 새긴다. 18개 도달 시 다음 공격으로 엘리트 적에게 공격력의 ${dmg2[1]*10}%(통상 적에게 ${dmg3[1]*10}%)의 피해를 입히며 각인 수는 리셋된다.】`:
 	src==19?Sdesc=`스킬을 발동할 때마다 다른 효과를 가진 탄환으로 교체 : <color=#91c1f0>아음속탄</color>(기본) : 회피 ${dodge[1]}% 상승 / <color=#db3d3d>ST탄</color> : 화력 ${dmg[1]}% 상승 / <color=#ffb400>일반탄</color> : 명중 ${hit[1]}% 상승`:
 	src==21?Sdesc=`공격을 멈추고 다섯 차례 연주한다 매 연주는 무작위 아군 하나의 화력과 명중을 ${dmg1[1]}%(Glory Light 장착시 ${dmg2[1]}%) 상승시킨다<br>중첩 불가<br>연주당 지속시간 각 3초.`:
 	src==22?Sdesc=`투척용 도끼를 던져 타깃에게 공격력의 ${dmg[1]}배의 피해를 입힌다.`:
 	src==23?Sdesc=
-		y==79||y==185?`야간작전에서 ${time[1]}초 동안 자신의 화력을 ${x.FxNight.dmg[1]}%(주간 보정치 : ${dmg[1]}%) 상승시키며 사격 중 장탄수를 ${x.Fx.ammo[1]}발 추가한다.`:
+		y==79||y==185?`야간작전에서 ${time[1]}초 동안 자신의 화력을 ${x.FxNight.dmg[1]}%(주간 보정치 : ${dmg[1]}%) 상승시키며 사격 중 장탄수를 ${ammo[1]}발 추가한다.`:
 		y==80||y==81||y==110||y==121?`자신의 명중을 ${hit[1]}% 상승시키며 지속시간 동안 모든 공격이 치명타로 적용된다.`:
 		y==77||y==85||y==109?`패시브 스킬 <br> 매 3회 공격 시 그 다음 공격은 타깃에게 ${dmg[1]/10}배의 피해를 입힌다.`:
 		y==112?`재장전 할 때 마다 25초간 자신의 화력이 ${dmg[1]}% 상승하는 버프를 받는다 (각 버프는 중첩가능)`:
-		y==163||y==164||y==165?`스크립트 준비중`:
+		y==163?`장탄수를 ${ammo[1]}발 사속을 ${FR[1]}% 상승시키며 공격이 적을 밀어낼 확률이 ${x.Fx.KB[1]}%로 상승하지만 화력이 ${dmg[1]}% 감소한다.`:
 		y==173?`매 공격시 ${cri[1]}%의 확률로 반드시 치명상을 입히는 탄환 한 발을 발사한다.`:
-		y==189?`${time[1]}초 동안 사속이 ${FR[1]}% 상승하며 장탄수가 ${x.Fx.ammo[1]}발 증가한다. 단 다음 탄창 교체에 걸리는 시간이 1초 증가한다.`:
+		y==189?`${time[1]}초 동안 사속이 ${FR[1]}% 상승하며 장탄수가 ${ammo[1]}발 증가한다. 단 다음 탄창 교체에 걸리는 시간이 1초 증가한다.`:
 		y==203?`패시브 효과 : ${dmg[1]}초마다 적에게 표식 1개를 새긴다. (중첩 가능)<br>액티브 효과 : 스킬 발동 후 일반 사격 시 표식이 남겨진 목표에게 추가타가 발생하며 표식을 1개 소모한다. 액티브 효과는 최대 ${time[1]}초 혹은 표식이 전부 소모될 때까지 지속된다.`:
-		y==208?`자신의 화력을 ${dmg[1]}% 명중을 ${hit[1]}% 상승시키고 장탄수가 ${x.Fx.ammo[1]}발 추가되며 난사 모드로 진입하여 매 공격 시 타깃을 변경한다. 단 자신의 이동속도가 50% 감소한다.`:
-		`${time[1]}초 동안 자신의 화력을 ${dmg[1]}% 상승시키며 사격 중 장탄수를 ${x.Fx.ammo[1]}발 추가한다.`:
+		y==208?`자신의 화력을 ${dmg[1]}% 명중을 ${hit[1]}% 상승시키고 장탄수가 ${ammo[1]}발 추가되며 난사 모드로 진입하여 매 공격 시 타깃을 변경한다. 단 자신의 이동속도가 50% 감소한다.`:
+		`${time[1]}초 동안 자신의 화력을 ${dmg[1]}% 상승시키며 사격 중 장탄수를 ${ammo[1]}발 추가한다.`:
 	src==26?Sdesc=`아군 전체 화력을 ${dmg[1]}%, 치명타율을 ${cri[1]}% 상승시킨다.`:
 	src==27?Sdesc=`자신의 화력과 치명타율을 각각 ${dmg[1]}% 씩 상승시킨다.`:
 	src==30?Sdesc=
@@ -218,7 +229,7 @@ function Skill(y,x){
 	src==57?Sdesc=`소이탄을 투척하여 반경 1.5범위 내의 적들에게 공격력의 ${dmg1[1]/10}배의 폭발 대미지와 함께 ${time[1]}초 동안 0.33초당 공격력의 ${dmg2[1]/10}배의 화상 도트 대미지를 지속적으로 입힌다.`:
 	src==60?Sdesc=`야간작전에서 자신의 화력을 ${x.FxNight.dmg[1]}%(주간 보정치 없음) 명중을 ${hit[1]}%(주간 보정치 : ${hit[1]}%) 상승시키며 지속시간 동안 모든 공격이 치명타로 적용된다.`:
 	src==61?Sdesc=`야간작전에서 아군 전체 회피를 ${x.FxNight.dodge[1]}% 상승시킨다. (주간 보정치 : ${dodge[1]}%)`:
-	src==63?Sdesc=`야간작전에서 적군 전체 회피를 ${x.Fx.dodge[1]}% 감소시킨다. (주간 보정치 : ${dodge[1]}%)`:
+	src==63?Sdesc=`야간작전에서 적군 전체 회피를 ${x.FxNight.dodge[1]}% 감소시킨다. (주간 보정치 : ${dodge[1]}%)`:
 	src==67?Sdesc=`야간작전에서 자신의 화력을 ${x.FxNight.dmg[1]}% 상승시킨다. (주간 보정치 : ${dmg[1]}%)`:
 	src==68?Sdesc=`주간전에서 화력이 ${dmg[1]}% 치명률이 ${cri[1]}% 상승하며 야간전일 경우 명중이 ${x.FxNight.hit[1]}% 사속이 ${x.FxNight.FR[1]}% 상승한다.`:
 	src==69?Sdesc=`(야간)적군 전체 화력을 ${dmg[1]}(${x.FxNight.dmg[1]})% 하락시킨다.`:
@@ -258,7 +269,7 @@ function Skill(y,x){
 		`유탄을 발사하여 반경 1.5범위 내의 적들에게 공격력의 ${dmg[1]}배의 피해를 입힌다.`:
 	src==94?Sdesc=`스킬 발동 후 공격의 마지막 탄환이 적에게 공격력의 ${dmg[1]}%의 대미지를 입히고 자신의 탄창을 즉시 장전한다.`:
 	src==95?Sdesc=
-		y==164?`스크립트 준비중`:
+		y==164?`자신이 위치한 열에 무작위로 방패를 2개 설치하여 작은 범위에 ${dmg[1]}% 피해를 주고 밀어낸다. 방패가 설치된 칸에 있는 아군은 받는 피해가 ${armor[1]}% 감소한다.`:
 		`전투 중 전열에 존재하는 아군측 인형에게 ${armor[1]}의 피해를 흡수하는 실드를 부여한다.`:
 	src==96?Sdesc=
 		y==160?`다음 3회의 공격을 점차 강화 하여 각각 타깃에게 자신의 공격력의 ${dmg1[1]}/${dmg2[1]}/${dmg3[1]}배의 피해를 입힌다.`:
@@ -270,24 +281,23 @@ function Skill(y,x){
 	src==109&&(Sdesc=`스킬 지속시간 동안 쌍총으로 공격하여 2회의 피해를 입히며 반드시 치명타가 됩니다.`);
 	Sdesc=y==5||y==11||y==47||y==174||y==200||y==20005?Sdesc+`<br>지속시간${x.FxNight.time[1]}초(주간 보정치 : ${time[1]}초)/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:
 	src==94||y==77||y==85||y==109||y==173?Sdesc+``:
-	src==0||src==1||src==13||src==22||src==37||src==39||src==39||src==41||src==57||src==91||src==94||src==96||y==79||y==102||y==185||y==213||y==1004||y==1005||y==1006||y==1009||y==1010?Sdesc+`<br>선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:
+	src==0||src==1||src==13||src==22||src==37||src==39||src==39||src==41||src==57||src==91||src==94||src==96||y==79||y==102||y==185||y==198||y==213||y==1004||y==1005||y==1006||y==1009||y==1010?Sdesc+`<br>선쿨${x.FCD}초/쿨타임${x.CD[1]}초`:
 	Sdesc+`<br>지속시간${time[1]}초/선쿨${x.FCD}초/쿨타임${x.CD[1]}초`;
 	y==148||y==183&&(Sdesc=Sdesc.replace(`<br>`,`<br>지속시간${time[1]}초.`));
 	$("#sec-fir>div:nth-child(3)>div:nth-child(2)>div").html(Sdesc);
 };
 function togglecon(){
-	$(".grid,#search,#func").toggleClass('d-none');
-	$("body>div:nth-child(2)").toggleClass("d-md-flex");
-	$("body>div:nth-child(3)").toggleClass("d-flex");
+	rCh.destroy();
+	$(".grid,#search,#func").toggleClass("d-none");
+	$("#filter").toggleClass("d-flex d-none");
 	$("button.btn-warning").remove();
 	$(".img-fluid").attr("src","");
-	$("div.w3-display-container:nth-child(9)>div:nth-child(4)").removeAttr("data-content");
-	$('[data-toggle="popover"]').popover('hide');
-	$(".skinntg>button,#contents>div:nth-child(6)>button").off("click");
+	$("#drop").removeAttr("data-content");
+	$('[data-toggle="popover"]').popover("hide");
+	$(".skinntg>button").off("click")
 };
-VoActor.forEach(VAfltr);
 $(".filter,.dropdown-menu>a").click(function(){
-	var filtr=$(this).text();
+	var filtr=$(this).text(),t0=$('[data-time="00"]');
 	filtr=="2성"?filter('[data-rarity="2"]'):
 	filtr=="3성"?filter('[data-rarity="3"]'):
 	filtr=="4성"?filter('[data-rarity="4"]'):
@@ -310,27 +320,29 @@ $(".filter,.dropdown-menu>a").click(function(){
 	*/
 	filtr=="All"&&filter('[data-type]');
 	//정렬
-	filtr=="도감순"?new Muuri('.grid',{sordData:null}):
-	filtr=="등급"?sort("rarity"):
-	filtr=="제조시간"?sort("time"):
-	filtr=="타입"&&sort("type");
+	filtr=="Index No"?(t0.addClass('muuri-item-shown'),filter(".muuri-item-shown"),new Muuri("#grid",{sordData:null})):
+	filtr=="Rarity"?(t0.addClass('muuri-item-shown'),filter(".muuri-item-shown"),sort("rarity")):
+	filtr=="Build Time"?(t0.removeClass('muuri-item-shown'),filter(".muuri-item-shown"),sort("time")):
+	filtr=="Type"&&(t0.addClass('muuri-item-shown'),filter(".muuri-item-shown"),sort("type"));
 });
-$(".VA").click(function(){
-	var voice=$(this).find("span:nth-child(1)").text();
-	Sval(VA[VoActor.indexOf(voice)])
+$(".tileFilter").on('shown.bs.popover',()=>{
+	$("#tileFilter").remove();
+	$(".Target>div>div>div,.Self>div>div>div").click(function(){
+		this.classList.toggle("CC");
+		for(var n=1;n<10;n++){if($(`#gridT${n}`).hasClass("CC")==1){dollT[n-1]=1}else(dollT[n-1]=0);if($(`#gridS${n}`).hasClass("CC")==1){dollT[n-1]=2}};
+		Sval(dollT.toString())
+	})
 });
-$("#CV,#illust").click(function(){
-	var ClickText=$(this).text();
-	togglecon();
-	Sval(ClickText);
-});
+$(".tileFilter").on('hide.bs.popover',()=>{$(".Target>div>div>div,.Self>div>div>div").off("click");for(var n=1;n<10;n++){$(`#gridT${n},#gridS${n}`).removeClass("CC")}});
+VoActor.forEach(VAfltr),$(".VA").click(function(){Sval(VA[VoActor.indexOf($(this).find("span:nth-child(1)").text())])});
+Illustrator.forEach(Artfltr),$(".Illustrator").click(function(){Sval(Illustrator[Illustrator.indexOf($(this).find("span:nth-child(1)").text())])});
+$("#CV,#illust").click(function(){togglecon(),Sval($(this).text())});
 function cho_hangul(str){
-	var cho=["ㄱ","ㄲ","ㄴ","ㄷ","ㄸ","ㄹ","ㅁ","ㅂ","ㅃ","ㅅ","ㅆ","ㅇ","ㅈ","ㅉ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ"];
-	var result = "";
-	var i;
-	for(i=0;i<str.length;i++) {
-		var code = str.charCodeAt(i)-44032;
-		if(code>-1 && code<11172) result += cho[Math.floor(code/588)];
+	var cho=["ㄱ","ㄲ","ㄴ","ㄷ","ㄸ","ㄹ","ㅁ","ㅂ","ㅃ","ㅅ","ㅆ","ㅇ","ㅈ","ㅉ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ"],
+			result="",i,code,strleng=str.length;
+	for(i=0;i<strleng;i++){
+		code=str.charCodeAt(i)-44032;
+		if(code>-1&&code<11172)result+=cho[Math.floor(code/588)]
 	}
-	return result;
+	return result
 }

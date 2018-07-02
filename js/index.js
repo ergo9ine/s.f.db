@@ -10,24 +10,9 @@ $("#lo,#lc").click(()=>{$("#lm").toggleClass(TogV)});
 $("#ro,#rc").click(()=>{$("#rm").toggleClass(TogV)});
 $("#lm>button").click(function(){var sel=$(this).index();sel==1||sel==2?($("#rm").removeClass(TogV),$("#lm").addClass(TogV)):$("#lm").addClass(TogV);});
 $("#rm>button").click(function(){$("#rm").addClass(TogV);});
-$("#Sidebar>button:nth-child(3),#lm>button:nth-child(2)").click(()=>{
-$("body>div:nth-child(2)>button:hidden,#rm>button:hidden").css("display","inline-block");
-$("body>div:nth-child(2)>button:eq(3)~button:visible,#rm>button:eq(3)~button:visible").css("display","none");
-});
-$("#Sidebar>button:nth-child(4),#lm>button:nth-child(3)").click(()=>{
-$("body>div:nth-child(2)>button:eq(0)~button:visible,#rm>button:eq(0)~button:visible").css("display","none");
-$("body>div:nth-child(2)>button:eq(3)~button:hidden,#rm>button:eq(3)~button:hidden").css("display","inline-block");
-});
-$("#Sidebar>button:nth-child(5),#lm>button:nth-child(4)").click(function(){
-$(".tab").removeClass("bg-danger");
-$(this).addClass("bg-danger");
-$("#contents>div").addClass("d-none");
-$("#index").removeClass("d-none");
-$("#result").empty();
-});
 $(".tab").click(function(){
 var tis=$(this),Classes=(tis.attr("class")).split(" "),T=["#tab1","#tab2","#tab3","#tab4","#tab5","#tab6","#tab7","#tab8","#tab9","#tab10"];
-$("#Sidebar>button,.tab,#lm>button").removeClass("bg-danger");
+$("#Sidebar>button:nth-child(5),#lm>button:nth-child(4),.tab").removeClass("bg-danger");
 $("#result").empty();
 tis.addClass("bg-danger");
 for (var a=0,len=Classes.length;a<len;a++){
@@ -45,6 +30,13 @@ case "m10":hidden(9);break
 }
 function hidden(x){$(T[x]).removeClass("d-none").parent().find(".content").not(T[x]).addClass("d-none")}
 }
+});
+$("#Sidebar>button:not(#close),#lm>button:not(#lc)").click(function(){
+	var tis=$(this),db=$(".db"),sm=$(".sm"),close=$(".close"),rc=$("#rc"),sel=tis.text();
+	tis.addClass("bg-danger").parent().find("button").not(tis).removeClass("bg-danger");
+	sel=="Database"?db.removeClass("d-none").parent().find(sm).addClass("d-none"):
+	sel=="Simulator"?sm.removeClass("d-none").parent().find(db).addClass("d-none"):
+	sel=="Information"&&($("#contents>div").addClass("d-none"),$("#index").removeClass("d-none"),$(".tab").removeClass("bg-danger"),$("#result").empty());
 });
 });
 // disc

@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/bootstrap@4/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pure-css-loader@3.1.2/dist/loader-border.css">
 <link rel="stylesheet" href="../css/css_overwrite.css">
 <link rel="stylesheet" href="../css/doll.css">
@@ -8,119 +8,99 @@
 </head>
 <body>
 <div class="loader loader-border is-active" data-blink data-text="Loading..."><object type="image/svg+xml" data="../img/logo/SFDB_main.svg"></object></div>
-<div class="d-none d-md-flex bg-dark text-white">
-	<div class="d-flex">
-		<div class="filter btn btn-light btn-sm mr-2">All</div>
-		<div class="dropdown mr-2">
-			<a class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rarity</a>
-			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-				<a class="dropdown-item" href="#">2성</a>
-				<a class="dropdown-item" href="#">3성</a>
-				<a class="dropdown-item" href="#">4성</a>
-				<a class="dropdown-item" href="#">5성</a>
-				<a class="dropdown-item" href="#">EXTRA</a>
-				<a class="dropdown-item" href="#">제조불가</a>
-			</div>
+<div id="filter" class="d-flex bg-dark text-white justify-content-center">
+	<div class="filter btn btn-light btn-sm mr-2">All</div>
+	<div class="dropdown mr-2">
+		<a class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rarity</a>
+		<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+			<a class="dropdown-item" href="#">2성</a>
+			<a class="dropdown-item" href="#">3성</a>
+			<a class="dropdown-item" href="#">4성</a>
+			<a class="dropdown-item" href="#">5성</a>
+			<a class="dropdown-item" href="#">EXTRA</a>
+			<a class="dropdown-item" href="#">제조불가</a>
 		</div>
-		<div class="dropdown mr-2">
-			<a class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type</a>
-			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-				<a class="dropdown-item" href="#">HG</a>
-				<a class="dropdown-item" href="#">SMG</a>
-				<a class="dropdown-item" href="#">AR</a>
-				<a class="dropdown-item" href="#">RF</a>
-				<a class="dropdown-item" href="#">MG</a>
-				<a class="dropdown-item" href="#">SG</a>
-			</div>
+	</div>
+	<div class="dropdown mr-2">
+		<a class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type</a>
+		<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+			<a class="dropdown-item" href="#">HG</a>
+			<a class="dropdown-item" href="#">SMG</a>
+			<a class="dropdown-item" href="#">AR</a>
+			<a class="dropdown-item" href="#">RF</a>
+			<a class="dropdown-item" href="#">MG</a>
+			<a class="dropdown-item" href="#">SG</a>
 		</div>
-		<div class="dropdown mr-2">
-			<a class="btn btn-info btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tile</a>
-			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-				<a class="dropdown-item" href="#">준비중</a>
+	</div>
+	<div class="dropdown mr-2">
+		<a class="btn btn-info btn-sm dropdown-toggle tileFilter" href="#" data-placement="bottom">Tile</a>
+		<div class="d-none" id="tileFilter">
+			<h6 class="dropdown-header text-center">Target</h6>
+				<div class="Target d-flex">
+					<div class="m-auto d-flex">
+						<div class="row1">
+						<div class="border border-dark grey" id="gridT1"></div>
+						<div class="border border-dark grey" id="gridT4"></div>
+						<div class="border border-dark grey" id="gridT7"></div>
+					</div>
+					<div class="row2">
+						<div class="border border-dark grey" id="gridT2"></div>
+						<div class="border border-dark grey" id="gridT5"></div>
+						<div class="border border-dark grey" id="gridT8"></div>
+					</div>
+					<div class="row3">
+						<div class="border border-dark grey" id="gridT3"></div>
+						<div class="border border-dark grey" id="gridT6"></div>
+						<div class="border border-dark grey" id="gridT9"></div>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="dropdown mr-2">
-			<a class="btn btn-info btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Voice</a>
-			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-				<input placeholder="성우 검색" class="VAinput dropdown-item bg-dark text-white form-control form-control-sm col-10 mx-auto p-1" type="text">
-				<div class="dropdown-divider"></div>
-				<div class="VoC"></div>
-			</div>
-		</div>
-		<div class="dropdown mr-2">
-			<a class="btn btn-info btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Artist</a>
-			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-				<a class="dropdown-item" href="#">준비중</a>
-			</div>
-		</div>
-		<div class="dropdown mr-2">
-			<a class="btn btn-warning btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort</a>
-			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-				<a class="dropdown-item" href="#">도감순</a>
-				<a class="dropdown-item" href="#">등급</a>
-				<a class="dropdown-item" href="#">제조시간</a>
-				<a class="dropdown-item" href="#">타입</a>
+			<div class="dropdown-divider"></div>
+			<h6 class="dropdown-header text-center">Self</h6>
+				<div class="Self d-flex">
+					<div class="m-auto d-flex">
+						<div class="row1">
+						<div class="border border-dark grey" id="gridS1"></div>
+						<div class="border border-dark grey" id="gridS4"></div>
+						<div class="border border-dark grey" id="gridS7"></div>
+					</div>
+					<div class="row2">
+						<div class="border border-dark grey" id="gridS2"></div>
+						<div class="border border-dark grey" id="gridS5"></div>
+						<div class="border border-dark grey" id="gridS8"></div>
+					</div>
+					<div class="row3">
+						<div class="border border-dark grey" id="gridS3"></div>
+						<div class="border border-dark grey" id="gridS6"></div>
+						<div class="border border-dark grey" id="gridS9"></div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<div class="d-none d-flex flex-column d-md-none bg-dark text-white">
-	<button class="flex-fill btn btn-dark">Filter</button>
-	<button class="flex-fill btn btn-dark">Sort</button>
-	<div class="d-none justify-content-center text-center">
-		<div class="filter btn btn-light btn-sm">All</div>
-		<div class="dropdown d-inline">
-			<a class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">등급</a>
-			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-				<a class="dropdown-item" href="#">2성</a>
-				<a class="dropdown-item" href="#">3성</a>
-				<a class="dropdown-item" href="#">4성</a>
-				<a class="dropdown-item" href="#">5성</a>
-				<a class="dropdown-item" href="#">EXTRA</a>
-				<a class="dropdown-item" href="#">제조불가</a>
-			</div>
-		</div>
-		<div class="dropdown d-inline">
-			<a class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">타입</a>
-			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-				<a class="dropdown-item" href="#">HG</a>
-				<a class="dropdown-item" href="#">SMG</a>
-				<a class="dropdown-item" href="#">AR</a>
-				<a class="dropdown-item" href="#">RF</a>
-				<a class="dropdown-item" href="#">MG</a>
-				<a class="dropdown-item" href="#">SG</a>
-			</div>
-		</div>
-		<div class="dropdown d-inline">
-			<a class="btn btn-info btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tile</a>
-			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-				<a class="dropdown-item" href="#">준비중</a>
-			</div>
-		</div>
-		<div class="dropdown d-inline">
-			<a class="btn btn-info btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Voice</a>
-			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-				<input placeholder="성우 검색" class="VAinput dropdown-item bg-dark text-white form-control form-control-sm col-10 mx-auto p-1" type="text">
-				<div class="dropdown-divider"></div>
-				<div class="VoC"></div>
-			</div>
-		</div>
-		<div class="dropdown d-inline">
-			<a class="btn btn-info btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Artist</a>
-			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-				<a class="dropdown-item" href="#">준비중</a>
-			</div>
+	<div class="dropdown mr-2">
+		<a class="btn btn-info btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Voice</a>
+		<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+			<input placeholder="검색" class="VAinput dropdown-item bg-dark text-white form-control form-control-sm col-10 mx-auto p-1" type="text">
+			<div class="dropdown-divider"></div>
+			<div class="VoC"></div>
 		</div>
 	</div>
-	<div class="d-none justify-content-center text-center">
-		<div class="dropdown">
-			<a class="btn btn-warning btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">정렬</a>
-			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-				<a class="dropdown-item" href="#">도감순</a>
-				<a class="dropdown-item" href="#">등급</a>
-				<a class="dropdown-item" href="#">제조시간</a>
-				<a class="dropdown-item" href="#">타입</a>
-			</div>
+	<div class="dropdown mr-2">
+		<a class="btn btn-info btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Illustrator</a>
+		<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+			<input placeholder="검색" class="Artinput dropdown-item bg-dark text-white form-control form-control-sm col-10 mx-auto p-1" type="text">
+			<div class="dropdown-divider"></div>
+			<div class="IoC"></div>
+		</div>
+	</div>
+	<div class="dropdown mr-2">
+		<a class="btn btn-warning btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort</a>
+		<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+			<a class="dropdown-item" href="#">Index No</a>
+			<a class="dropdown-item" href="#">Rarity</a>
+			<a class="dropdown-item" href="#">Build Time</a>
+			<a class="dropdown-item" href="#">Type</a>
 		</div>
 	</div>
 </div>
@@ -155,25 +135,25 @@
 				<img src="../img/html/dorm.png" style="position:absolute;right:0px">
 			</div>
 			</div>
-			<div class="text-white mt-1">
-			<div class="d-flex no-gutters">
-				<svg class="col-6 svg mx-auto"><polygon points="0,0 0,35 0,35 100,35 125,0"></polygon><text x="45%" y="50%">CV</text></svg>
+			<div class="text-white mt-1" style="overflow-y:auto;height:200px">
+			<div class="d-flex no-gutters row">
+				<svg class="col-6 svg mx-auto"><polygon points="0,0 0,35 0,36 100,36 125,0"></polygon><text x="45%" y="50%">CV</text></svg>
 				<svg class="col-6 svg mx-auto"><polygon points="125,0 125,35 0,35 0,35 25,0"></polygon><a href="#"><text id="CV" x="55%" y="50%"></text></a></svg>
 			</div>
-			<div class="d-flex no-gutters mt-1">
-				<svg class="col-6 svg mx-auto"><polygon points="0,0 0,35 0,35 100,35 125,0"></polygon><text x="45%" y="50%">Illustrator</text></svg>
+			<div class="d-flex no-gutters row mt-1">
+				<svg class="col-6 svg mx-auto"><polygon points="0,0 0,35 0,36 100,36 125,0"></polygon><text x="45%" y="50%">Illustrator</text></svg>
 				<svg class="col-6 svg mx-auto"><polygon points="125,0 125,35 0,35 0,35 25,0"></polygon><a href="#"><text id="illust" x="55%" y="50%"></text></a></svg>
 			</div>
-			<div class="d-flex no-gutters mt-1">
-				<svg class="col-6 svg mx-auto"><polygon points="0,0 0,35 0,35 100,35 125,0"></polygon><text x="45%" y="50%">Gun Name</text></svg>
+			<div class="d-flex no-gutters row mt-1">
+				<svg class="col-6 svg mx-auto"><polygon points="0,0 0,35 0,36 100,36 125,0"></polygon><text x="45%" y="50%">Gun Name</text></svg>
 				<svg class="col-6 svg mx-auto"><polygon points="125,0 125,35 0,35 0,35 25,0"></polygon><text id="GN" x="55%" y="50%" ></text></svg>
 			</div>
-			<div class="d-flex no-gutters mt-1">
-				<svg class="col-6 svg mx-auto"><polygon points="0,0 0,35 0,35 100,35 125,0"></polygon><text x="45%" y="50%">Time</text></svg>
+			<div class="d-flex no-gutters row mt-1">
+				<svg class="col-6 svg mx-auto"><polygon points="0,0 0,35 0,36 100,36 125,0"></polygon><text x="45%" y="50%">Time</text></svg>
 				<svg class="col-6 svg mx-auto"><polygon points="125,0 125,35 0,35 0,35 25,0"></polygon><text id="Time" x="55%" y="50%"></text></svg>
 			</div>
-			<div class="d-flex no-gutters mt-1">
-				<svg class="col-6 svg mx-auto"><polygon points="0,0 0,35 0,35 100,35 125,0"></polygon><text x="45%" y="50%">Drop</text></svg>
+			<div class="d-flex no-gutters row mt-1">
+				<svg class="col-6 svg mx-auto"><polygon points="0,0 0,35 0,36 100,36 125,0"></polygon><text x="45%" y="50%">Drop</text></svg>
 				<svg class="col-6 svg mx-auto"><polygon points="125,0 125,35 0,35 0,35 25,0"></polygon><a href="#"><text id="Drop" x="55%" y="50%" title="Drop 지역" data-toggle="popover" data-placement="bottom">More</text></a></svg>
 			</div>
 			</div>
@@ -326,12 +306,12 @@
 	별명 :콜라</p>
 </div>
 <!-- <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3,npm/bootstrap@4/dist/js/bootstrap.bundle.min.js,npm/jquery.quicksearch@2,npm/muuri@0.5,npm/hammerjs@2,npm/web-animations-js@2,npm/chart.js@2/dist/Chart.bundle.min.js"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery.quicksearch@2/dist/jquery.quicksearch.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/web-animations-js@2/web-animations.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.quicksearch@2.4.0/dist/jquery.quicksearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.1/web-animations.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/hammerjs@2/hammer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/muuri@0.5.4/muuri.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2/dist/Chart.min.js"></script>
-<script src="../js/doll.js?v=180623"></script>
+<script src="https://cdn.jsdelivr.net/npm/muuri@0.6.2/dist/muuri.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.2/dist/Chart.min.js"></script>
+<script src="../js/doll.js?v=180713"></script>
 </body></html>

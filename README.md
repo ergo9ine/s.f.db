@@ -1,6 +1,11 @@
 # [SANGVIS FERRI DATABASE (G.F.DB Project)](https://sf2031.com)
 
-「SANGVIS FERRI DATABASE (Girls' Frontline Database Project)」 is licensed under the MIT License
+「SANGVIS FERRI DATABASE (Girls' FrontLine Database Project)」 is licensed under the MIT License
+
+## Note
+- We're Find a translators. [EN,JP,CN and others]
+- [Join and Please call Ergo9ine](https://discordapp.com/invite/8eTFTSa) 
+- If you don't want to participate, please PR.
 
 ## Process
 - [trello](https://trello.com/b/sPsg0jzu/gfdb-process)
