@@ -4,6 +4,12 @@
 "name":"M1873",
 "type":"hg",
 "rarity":4,
+"illust":"Saru",
+"voice":"Aimi Tanaka",
+"buildTime":3000,
+"drop":["0-1","1-4E","3-1E","3-4E","4-1","4-1E","5-1","5-1E","6-5","6-1E","7-5","7-2E","8-2","8-1E","9-4","9-3E","10-3","10-1E"],
+"skins":["별똥별의 소원","기적의 여왕"],
+"nick":["콜라"],
 "hp":[40,80],
 "dmg":[12,36],
 "dodge":[9,76],
@@ -17,12 +23,6 @@
 "dmg":[12,22],
 "time":[5,8]
 }},
-"illust":"Saru",
-"voice":"Aimi Tanaka",
-"buildTime":3000,
-"drop":["0-1","1-4E","3-1E","3-4E","4-1","4-1E","5-1","5-1E","6-5","6-1E","7-5","7-2E","8-2","8-1E","9-4","9-3E","10-3","10-1E"],
-"skins":["별똥별의 소원","기적의 여왕"],
-"nick":["콜라"],
 "Fx":{
 "target":"all",
 "self":5,
@@ -32,10 +32,16 @@
 "hit":50
 }}},{
 "id":2,
+"OC":[150,2425],
 "krName":"M1911",
-"name":"Colt M1911",
+"name":"M1911",
 "type":"hg",
 "rarity":2,
+"illust":"spirtie",
+"voice":"Eriko Matsui",
+"buildTime":1200,
+"drop":["모든 맵"],
+"nick":["운메이","운명이"],
 "hp":[37,73],
 "dmg":[10,27],
 "dodge":[9,74],
@@ -50,11 +56,6 @@
 "MS":[28,45],
 "time":[2.5,4]
 }},
-"illust":"spirtie",
-"voice":"Eriko Matsui",
-"buildTime":1200,
-"drop":["모든 맵"],
-"nick":["운메이","운명이"],
 "Fx":{
 "target":"all",
 "self":5,
@@ -68,6 +69,11 @@
 "name":"M9",
 "type":"hg",
 "rarity":3,
+"illust":"M.vv",
+"voice":"Aya Suzaki",
+"buildTime":2400,
+"drop":["1-1~1-3을 제외한 모든 맵"],
+"nick":["엠구","엠구나노"],
 "hp":[38,76],
 "dmg":[11,29],
 "dodge":[9,66],
@@ -80,11 +86,6 @@
 "Fx":{
 "time":[1.6,3.2]
 }},
-"illust":"M.vv",
-"voice":"Aya Suzaki",
-"buildTime":2400,
-"drop":["1-1~1-3을 제외한 모든 맵"],
-"nick":["엠구","엠구나노"],
 "Fx":{
 "target":"all",
 "self":5,
@@ -93,9 +94,39 @@
 "dmg":20,
 "dodge":20
 }}},{
+"id":4,
+"OC":[149],
+"krName":"콜트 파이슨",
+"name":"Python",
+"type":"hg",
+"rarity":5,
+"illust":"REALMBW",
+"voice":"",
+"buildTime":0,
+"nick":["파이썬"],
+"hp":[35,70],
+"dmg":[13,40],
+"dodge":[9,82],
+"hit":[9,81],
+"FR":[31,49],
+"skill":{
+"src":"temp",
+"FCD":6,
+"CD":[15,12],
+"Fx":{}
+},
+"Fx":{
+"target":"all",
+"self":5,
+"tile":[2,3,4,6,7,8],
+"TileFx":{
+"dmg":30,
+"dodge":20
+}}},{
 "id":5,
+"OC":[130,2467],
 "krName":"나강 리볼버",
-"name":"Nagant M1895 Revolver",
+"name":"M1895",
 "type":"hg",
 "rarity":2,
 "hp":[35,70],
@@ -220,8 +251,9 @@
 "FR":12
 }}},{
 "id":9,
+"OC":[128,2399],
 "krName":"P38",
-"name":"Walther P.38",
+"name":"P38",
 "type":"hg",
 "rarity":2,
 "hp":[33,66],
@@ -253,8 +285,9 @@
 "hit":56
 }}},{
 "id":10,
+"OC":[126,2448],
 "krName":"PPK",
-"name":"Walther Polizeipistole Kriminalmodell",
+"name":"PPK",
 "type":"hg",
 "rarity":2,
 "hp":[29,57],
@@ -472,6 +505,7 @@
 "dodge":15
 }}},{
 "id":17,
+"OC":[197,3737],
 "krName":"M3",
 "name":"M3",
 "type":"smg",
@@ -592,6 +626,7 @@
 "FR":25
 }}},{
 "id":21,
+"OC":[201,3601],
 "krName":"PPsh-41",
 "name":"PPsh41",
 "type":"smg",
@@ -681,6 +716,7 @@
 "dodge":20
 }}},{
 "id":24,
+"OC":[188,3541],
 "krName":"PP-2000",
 "name":"PP2000",
 "type":"smg",
@@ -710,6 +746,7 @@
 "hit":25
 }}},{
 "id":25,
+"OC":[196,3537],
 "krName":"MP40",
 "name":"MP40",
 "type":"smg",
@@ -870,6 +907,7 @@
 "dodge":30
 }}},{
 "id":31,
+"OC":[204,3611],
 "krName":"베레타 38형",
 "name":"MAB38",
 "type":"smg",
@@ -933,6 +971,7 @@
 "dmg":18
 }}},{
 "id":33,
+"OC":[198,3620],
 "krName":"m45",
 "name":"Carl Gustav m/45",
 "type":"smg",
@@ -965,6 +1004,7 @@
 "dodge":10
 }}},{
 "id":34,
+"OC":[172,3457],
 "krName":"M1 개런드",
 "name":"M1",
 "type":"rf",
@@ -995,6 +1035,7 @@
 "time":12
 }}},{
 "id":35,
+"OC":[164,3320],
 "krName":"M1A1",
 "name":"M1A1",
 "type":"rf",
@@ -1055,6 +1096,7 @@
 "time":15
 }}},{
 "id":37,
+"OC":[173,3587],
 "krName":"M14",
 "name":"M14",
 "type":"rf",
@@ -1086,6 +1128,7 @@
 "time":12
 }}},{
 "id":38,
+"OC":[173,3435],
 "krName":"M21",
 "name":"M21",
 "type":"rf",
@@ -1145,6 +1188,7 @@
 "time":15
 }}},{
 "id":40,
+"OC":[156,3116],
 "krName":"SVT-38",
 "name":"SVT38",
 "type":"rf",
@@ -1174,6 +1218,7 @@
 "time":10
 }}},{
 "id":41,
+"OC":[159,3059],
 "krName":"시모노프",
 "name":"SKS",
 "type":"rf",
@@ -1265,6 +1310,7 @@
 "time":15
 }}},{
 "id":44,
+"OC":[169,3547],
 "krName":"SV-98",
 "name":"SV98",
 "type":"rf",
@@ -1324,6 +1370,7 @@
 "time":18
 }}},{
 "id":47,
+"OC":[156,3314],
 "krName":"G43",
 "name":"G43",
 "type":"rf",
@@ -1388,6 +1435,7 @@
 "time":18
 }}},{
 "id":49,
+"OC":[167,3308],
 "krName":"56식 반",
 "name":"56typeR",
 "type":"rf",
@@ -1446,6 +1494,7 @@
 "time":18
 }}},{
 "id":51,
+"OC":[157,3109],
 "krName":"FN-49",
 "name":"FN49",
 "type":"rf",
@@ -1476,6 +1525,7 @@
 "time":10
 }}},{
 "id":52,
+"OC":[167,3156],
 "krName":"BM59",
 "name":"BM59",
 "type":"rf",
@@ -1526,7 +1576,7 @@
 "voice":"Ai Kayano",
 "buildTime":17100,
 "drop":["8-4e"],
-"skins":["루돌프","무더위 속 임무"],
+"skins":["루돌프","무더위 속 임무","VIP 체험관"],
 "nick":["노태우","죽창이"],
 "Fx":{
 "target":"hg",
@@ -1788,6 +1838,7 @@
 "dodge":15
 }}},{
 "id":63,
+"OC":[158,3090],
 "krName":"G3",
 "name":"H&K G3",
 "type":"ar",
@@ -1911,6 +1962,7 @@
 "cri":10
 }}},{
 "id":68,
+"OC":[147,3074],
 "krName":"L85A1",
 "name":"L85A1 IW",
 "type":"ar",
@@ -2007,6 +2059,7 @@
 "dodge":12
 }}},{
 "id":71,
+"OC":[152,3082],
 "krName":"갈릴",
 "name":"IMI Gali",
 "type":"ar",
@@ -2103,6 +2156,7 @@
 "hit":20
 }}},{
 "id":74,
+"OC":[159,3063],
 "krName":"SIG-510",
 "name":"SIG SG 510",
 "type":"ar",
@@ -2298,6 +2352,7 @@
 "armor":10
 }}},{
 "id":81,
+"OC":[230,3885],
 "krName":"LWMMG",
 "name":"LWMMG",
 "type":"mg",
@@ -2331,6 +2386,7 @@
 "FR":10
 }}},{
 "id":82,
+"OC":[207,3894],
 "krName":"DP28",
 "name":"DP28",
 "type":"mg",
@@ -2451,6 +2507,7 @@
 "dmg":22
 }}},{
 "id":87,
+"OC":[216,3849],
 "krName":"MG34",
 "name":"MG34",
 "type":"mg",
@@ -2547,6 +2604,7 @@
 "hit":12
 }}},{
 "id":90,
+"OC":[129,2385],
 "krName":"FNP-9",
 "name":"FN FNP9",
 "type":"hg",
@@ -2577,6 +2635,7 @@
 "hit":20
 }}},{
 "id":91,
+"OC":[130,2421],
 "krName":"MP-446",
 "name":"MP-446 Viking",
 "type":"hg",
@@ -2608,6 +2667,7 @@
 "dmg":14
 }}},{
 "id":92,
+"OC":[167,3580],
 "krName":"Spectre M4",
 "name":"Spectre M4",
 "type":"smg",
@@ -2638,6 +2698,7 @@
 "dmg":20
 }}},{
 "id":93,
+"OC":[177,3643],
 "krName":"IDW",
 "name":"IDW",
 "type":"smg",
@@ -2668,6 +2729,7 @@
 "dodge":20
 }}},{
 "id":94,
+"OC":[193,3609],
 "krName":"64식",
 "name":"64type",
 "type":"smg",
@@ -2697,6 +2759,7 @@
 "FR":20
 }}},{
 "id":95,
+"OC":[165,3210],
 "krName":"한양조 88식",
 "name":"88type",
 "type":"rf",
@@ -2782,7 +2845,7 @@
 "illust":"音符",
 "voice":"Aoi Koga",
 "buildTime":3900,
-"skins":["당번대표","축제 시작이야!"],
+"skins":["당번대표","축제 시작이야!","집안일 테스트"],
 "nick":["캘리코","미역"],
 "Fx":{
 "target":"all",
@@ -3078,6 +3141,7 @@
 "dodge":20
 }}},{
 "id":107,
+"OC":[161,3101],
 "krName":"F2000",
 "name":"FN F2000",
 "type":"ar",
@@ -3169,6 +3233,7 @@
 "armor":10
 }}},{
 "id":110,
+"OC":[212,3871],
 "krName":"FG42",
 "name":"FG42",
 "type":"mg",
@@ -3200,6 +3265,7 @@
 "hit":30
 }}},{
 "id":111,
+"OC":[237,3876],
 "krName":"AAT-52",
 "name":"AAT52",
 "type":"mg",
@@ -3560,8 +3626,7 @@
 "CD":[20,16],
 "Fx":{
 "time":[3,4.5],
-"AC":[2,2,2,2,2,2,2,2,3,3],
-"time":[3,3.2,3.3,3.5,3.7,3.8,4,4.2,4.3,4.5]
+"AC":[2,2,2,2,2,2,2,2,3,3]
 }},
 "illust":"音符",
 "voice":"Ayaka Fukuhara",
@@ -3606,6 +3671,7 @@
 "dodge":18
 }}},{
 "id":124,
+"OC":[172,3495],
 "krName":"Super SASS",
 "name":"SuperSASS",
 "type":"rf",
@@ -3885,6 +3951,7 @@
 "hit":25
 }}},{
 "id":133,
+"OC":[153,3089],
 "krName":"63식",
 "name":"Type 63",
 "type":"ar",
@@ -4068,6 +4135,7 @@
 "dmg":35
 }}},{
 "id":139,
+"OC":[137,2372],
 "krName":"Bren Ten",
 "name":"Bren Ten",
 "type":"hg",
@@ -4130,6 +4198,7 @@
 "dodge":18
 }}},{
 "id":141,
+"OC":[132,2479],
 "krName":"USP Compact",
 "name":"H&K USP Compact",
 "type":"hg",
@@ -4147,8 +4216,7 @@
 "CD":[15,12],
 "Fx":{
 "hit":[50,100],
-"time":[5,8],
-"hit":[50,56,61,67,72,78,83,89,94,100]
+"time":[5,8]
 }},
 "illust":"哈路卡",
 "voice":"Arise Sato",
@@ -4254,6 +4322,7 @@
 "dodge":12
 }}},{
 "id":145,
+"OC":[154,3433],
 "krName":"OTs-44",
 "name":"OC44",
 "type":"rf",
@@ -4306,7 +4375,7 @@
 "voice":"Nozomi Yamamoto",
 "buildTime":15600,
 "drop":["저체온증 1-4","저체온증 3-3","저체온증 3-4"],
-"skins":["트로피컬 스톰"],
+"skins":["트로피컬 스톰","맥주목장"],
 "nick":["시금치"],
 "Fx":{
 "target":"hg",
@@ -4316,6 +4385,7 @@
 "time":15
 }}},{
 "id":147,
+"OC":[163,3384],
 "krName":"SSG 69",
 "name":"SSG 69",
 "type":"rf",
@@ -4907,8 +4977,7 @@
 "Fx":{
 "time":[6,8],
 "dmg":[20,50],
-"armor":[15,30],
-"time":[6,8]
+"armor":[15,30]
 }},
 "illust":"DDAL",
 "buildTime":26040,
@@ -5162,6 +5231,7 @@
 "hit":12
 }}},{
 "id":174,
+"OC":[160,3359],
 "krName":"81식 카빈",
 "name":"81typeR",
 "type":"rf",
@@ -5421,6 +5491,7 @@
 "dodge":12
 }}},{
 "id":182,
+"OC":[171,1000],
 "krName":"wz.29",
 "name":"wz29",
 "type":"rf",
@@ -5471,7 +5542,7 @@
 "illust":"細重ソウジ",
 "voice":"Asami Seto",
 "buildTime":3720,
-"skins":["오페라의 유령"],
+"skins":["오페라의 유령","백화집사"],
 "nick":["로이"],
 "Fx":{
 "target":"all",
@@ -5562,9 +5633,7 @@
 "CD":[15,12],
 "Fx":{
 "FR":[15,25],
-"time":[5,8],
-"FR":[15,25],
-"time":[4,6]
+"time":[5,8]
 }},
 "illust":"PHI",
 "voice":"Ryoko Maekawa",
@@ -5822,40 +5891,8 @@
 "FR":[22,34],
 "skill":{
 "src":23,
-"type":"buff",
-"target":"self",
-"everyAttackChance":40,
 "FCD":8,
-"CD":[5,3],
-"stack":3,
-"Fx":{
-"cri":{
-"multiplyByTypeCount":"rf"
-},
-"FR":{
-"multiplyByTypeCount":"rf"
-},
-"time":[5,7.5],
-"FP":[40,41.2,42.4,43.6,44.8,46,47.2,48.4,49.6,52],
-"FC":3,
-"OH":[3.2,3.1,3,2.8,2.7,2.6,2.4,2.3,2.2,2],
-"OP":[3.2,3.1,3,2.8,2.7,2.6,2.4,2.3,2.2,2],
-"ND":[2,2.3,2.6,3,3.3,3.6,4,4.3,4.7,5],
-"NS":[60,58,56,54,52,50,48,46,44,40],
-"NP":[60,58,56,54,52,50,48,46,44,40]
-},
-"howOccur":"attack",
-"type":"buff",
-"target":"self_column_grid",
-"Fx":{
-"cri":{
-"initStack":1,
-"stackMax":3
-},
-"FR":{
-"initStack":1,
-"stackMax":3
-}}},
+"CD":[5,3]},
 "illust":"Anmi",
 "voice":"Yukiyo Fujii",
 "buildTime":13920,
@@ -6062,6 +6099,7 @@
 "time":15
 }}},{
 "id":201,
+"OC":[170],
 "krName":"게파드 M1",
 "name":"GepardM1",
 "type":"rf",
@@ -6082,6 +6120,7 @@
 "illust":"荒境TS",
 "voice":"",
 "buildTime":0,
+"skins":["1일 계약"],
 "Fx":{
 "target":"hg",
 "self":5,
@@ -6517,6 +6556,7 @@
 "dodge":15
 }}},{
 "id":217,
+"OC":[166,3367],
 "krName":"SM-1",
 "name":"Hezi SM-1",
 "type":"rf",
@@ -6675,9 +6715,9 @@
 "illust":"X布",
 "voice":"",
 "buildTime":0,
-"drop":["18년 7월 출석보상"]
+"drop":["18년 7월 출석보상"],
 "skill":{
-"src":1,
+"src":87,
 "FCD":5,
 "CD":[10,8],
 "Fx":{
@@ -6708,11 +6748,17 @@
 "voice":"",
 "buildTime":0,
 "skill":{
-"src":1,
-"FCD":10,
+"src":62,
+"FCD":4,
 "CD":[20,16],
 "Fx":{
-"dmg":[2.5,4.5]
+"dodge":[30,50],
+"hit":[20,40],
+"time":[6,10]
+},
+"FxNight":{
+"dodge":[60,150],
+"hit":[40,80]
 }},
 "Fx":{
 "target":"ar",
@@ -6721,6 +6767,36 @@
 "TileFx":{
 "dmg":12,
 "hit":35
+}}},{
+"id":230,
+"OC":[168],
+"krName":"OBR",
+"name":"OBR",
+"type":"rf",
+"rarity":3,
+"hp":[41,81],
+"dmg":[42,117],
+"dodge":[4,32],
+"hit":[10,80],
+"FR":[25,37],
+"illust":"卑しい人间",
+"voice":"",
+"buildTime":0,
+"skill":{
+"src":87,
+"FCD":6,
+"CD":[10,8],
+"Fx":{
+"FR":[27,45],
+"hit":[27,45],
+"time":[3,6]
+}},
+"Fx":{
+"target":"hg",
+"self":5,
+"tile":[3,9],
+"TileFx":{
+"time":12
 }}},{
 "id":1001,
 "krName":"노엘 버밀리온",
@@ -7034,6 +7110,40 @@
 "dmg1":[7,12],
 "dmg2":[10,15]
 }}},{
+"id":20001,
+"name":"M1873 Mod",
+"type":"hg",
+"rarity":5,
+"Mod":true,
+"hp":[82,82,83],
+"dmg":[36,37,37],
+"dodge":[78,79,80],
+"hit":[50,50,51],
+"FR":[50,50,50],
+"voice":"Eriko Matsui",
+"buildTime":0,
+"Fx":{
+"target":"all",
+"self":5,
+"tile":[2,4,6,8],
+"TileFx":{
+"FR":24,
+"hit":60
+}},
+"skill":{
+"src":97,
+"FCD":1,
+"CD":[15,12],
+"Fx":{
+"FR":[25,40],
+"MS":[30,50],
+"time":[2.5,4]
+}},
+"skill2":{
+"src":0,
+"Fx":{
+"dmg":[150,200]
+}}},{
 "id":20002,
 "name":"M1911 Mod",
 "type":"hg",
@@ -7055,13 +7165,12 @@
 "hit":50
 }},
 "skill":{
-"src":97,
-"FCD":1,
+"src":81,
+"FCD":6,
 "CD":[15,12],
 "Fx":{
-"FR":[25,40],
-"MS":[30,50],
-"time":[2.5,4]
+"dmg":[12,22],
+"time":[5,8]
 }},
 "skill2":{
 "src":0,
@@ -7138,6 +7247,40 @@
 "Fx":{
 "dmg":[10,20],
 "FR":[15,30]
+}}},{
+"id":20044,
+"name":"SV98 Mod",
+"type":"rf",
+"rarity":4,
+"Mod":true,
+"hp":[85,86,86],
+"dmg":[126,127,128],
+"dodge":[29,29,29],
+"hit":[74,80,81],
+"FR":[37,37,37],
+"illust":"幻象黑兔",
+"voice":"Mamiko Hanada",
+"buildTime":0,
+"Fx":{
+"target":"hg",
+"self":5,
+"tile":[9],
+"TileFx":{
+"time":15
+}},
+"skill":{
+"src":0,
+"target":"enemy_nearest",
+"FCD":10,
+"CD":[20,16],
+"Fx":{
+"dmg":[28,55]
+}},
+"skill2":{
+"src":82,
+"Fx":{
+"FR":[6,15],
+"time":[3,5]
 }}},{
 "id":20051,
 "name":"FN49 Mod",
@@ -7237,6 +7380,37 @@
 "skill2":{
 "src":7
 }},{
+"id":20063,
+"name":"G41 Mod",
+"type":"ar",
+"rarity":4,
+"Mod":true,
+"hp":[112,113,113],
+"dmg":[57,58,58],
+"dodge":[39,39,40],
+"hit":[54,54,55],
+"FR":[64,64,64],
+"illust":"PHI",
+"voice":"Kaori Yoshioka",
+"buildTime":0,
+"Fx":{
+"target":"smg",
+"self":5,
+"tile":[8],
+"TileFx":{
+"FR":25,
+"hit":55
+}},
+"skill":{
+"src":91,
+"FCD":8,
+"CD":[20,16],
+"Fx":{
+"dmg":[4,10]
+}},
+"skill2":{
+"src":7
+}},{
 "id":20075,
 "name":"M1918 Mod",
 "type":"mg",
@@ -7247,6 +7421,7 @@
 "hit":[33,34,34],
 "dodge":[33,34,34],
 "FR":[115,115,115],
+"ammo":8,
 "voice":"Yuuki Aoi",
 "buildTime":0,
 "Fx":{
@@ -7270,9 +7445,44 @@
 "Fx":{
 "dmg":[25,40],
 "re":[5.5,5]
+}}},{
+"id":20089,
+"name":"BrenMK Mod",
+"type":"mg",
+"rarity":4,
+"Mod":true,
+"hp":[176,177,178],
+"dmg":[96,96,97],
+"hit":[33,34,34],
+"dodge":[29,29,29],
+"FR":[103,103,103],
+"ammo":8,
+"illust":"废人",
+"voice":"Sora Amamiya",
+"buildTime":0,
+"Fx":{
+"target":"sg",
+"self":7,
+"tile":[3,9],
+"TileFx":{
+"FR":10,
+"hit":15
 }},
-"ammo":8
-},{
+"skill":{
+"src":23,
+"FCD":8,
+"CD":[18,18],
+"Fx":{
+"dmg":[18,30],
+"ammo":[1,4],
+"time":[6,8]
+}},
+"skill2":{
+"src":55,
+"Fx":{
+"dmg":[25,40],
+"re":[5.5,5]
+}}},{
 "id":20091,
 "name":"MP446 Mod",
 "type":"hg",

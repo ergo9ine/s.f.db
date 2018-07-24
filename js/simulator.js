@@ -1,5 +1,5 @@
 ﻿//함수 선언//
-var star,man.ammo,meal,tool,type,logic,pluslogic;
+var star,man,ammo,meal,tool,type,logic,pluslogic;
 var arrplus=[];
 ///////////////입력 부분////////////////
 man     = prompt('인력');
