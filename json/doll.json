@@ -276,6 +276,7 @@
 "voice":"Tooru Kanae",
 "buildTime":1200,
 "drop":["모든맵"],
+"skins":["여름보다 뜨거운 인형"],
 "Fx":{
 "target":"all",
 "self":5,
@@ -867,6 +868,7 @@
 "illust":"戏言咸咸",
 "voice":"",
 "buildTime":0,
+"skins":["사탕발린 총알"],
 "Fx":{
 "target":"ar",
 "self":5,
@@ -1829,6 +1831,7 @@
 "buildTime":14700,
 "drop":["9-4e"],
 "nick":["댕댕이"],
+"skins":["비치핑크 2064"],
 "Fx":{
 "target":"smg",
 "self":5,
@@ -1889,7 +1892,7 @@
 "illust":"薯子Imoko",
 "voice":"Koshimizu Ami",
 "buildTime":13200,
-"skins":["꼬마 메이드","바텐더","순백의 수레국화"],
+"skins":["꼬마 메이드","바텐더","순백의 수레국화","50일의 메이드"],
 "nick":["지상렬","메이드"],
 "Fx":{
 "target":"smg",
@@ -3131,7 +3134,7 @@
 "illust":"水乌龟",
 "voice":"Haruka Yoshimura",
 "buildTime":13500,
-"skins":["겨울 보급작전","최고로 중요한 날"],
+"skins":["겨울 보급작전","최고로 중요한 날","FAL의 여름"],
 "nick":["족제비"],
 "Fx":{
 "target":"smg",
@@ -4888,6 +4891,7 @@
 "voice":"Miyuki Kobori",
 "buildTime":27600,
 "nick":["갤주님","스파스"],
+"skins":["한여름의 열매"],
 "Fx":{
 "target":"mg",
 "self":6,
@@ -4921,6 +4925,7 @@
 "illust":"Silverwing",
 "nick":["에일리","아일리"],
 "buildTime":29520,
+"skins":["태양을 피하는 방법"],
 "Fx":{
 "target":"mg",
 "self":6,
@@ -5608,7 +5613,7 @@
 "illust":"水熊",
 "voice":"Chiyo Ousaki",
 "buildTime":23100,
-"skins":["선물은 성탄절 트리"],
+"skins":["선물은 성탄절 트리","아멜리 리시브"],
 "Fx":{
 "target":"sg",
 "self":4,
@@ -6236,6 +6241,7 @@
 "voice":"",
 "buildTime":14940,
 "nick":["안구사"],
+"skins":["잠수종과 나비"],
 "Fx":{
 "target":"smg",
 "self":8,
@@ -6266,6 +6272,7 @@
 "voice":"",
 "buildTime":15120,
 "nick":["마일리"],
+"skins":["빙수시대"],
 "Fx":{
 "target":"smg",
 "self":2,

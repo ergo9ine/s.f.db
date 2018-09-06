@@ -6,6 +6,7 @@ $(document).ready(()=>{
 	contentsload();
 	$("[data-toggle='popover']").popover();
 	$(".tileFilter").popover({html:true,content:function(){return $("#tileFilter").html();}});
+	game.init();
 });
 function contentsload(){
 	$.ajax("../json/doll.json",{contentType:"application/json",dataType:"json",success:result=>{
@@ -69,6 +70,7 @@ function loadComplete(){
 				$("#CV").text(doll.voice);
 				$("#illust").text(doll.illust);
 				$("#GN").html(doll.name);
+				preview.ready(doll.name);
 				$("#Time").html(time);
 				$("#Drop").attr("data-content",doll.drop);
 				$(gridself).removeClass("grey").addClass("bg-white");
@@ -79,7 +81,7 @@ function loadComplete(){
 				SKB();
 				Skill(doll.id,doll.skill);
 				rCh=new Chart(ctx,{type:"radar",data:statisticschart,options:chartOptions});
-				rCh.update()
+				rCh.update();
 			}
 		})
 	});
@@ -299,7 +301,8 @@ function togglecon(){
 	$(".img-fluid").attr("src","");
 	$("#drop").removeAttr("data-content");
 	$("[data-toggle='popover']").popover("hide");
-	$(".skinntg>button").off("click")
+	$(".skinntg>button").off("click");
+	preview.stage.off("pointerdown");
 };
 $(".filter,.dropdown-menu>a").click(function(){
 	var filtr=$(this).text(),t0=$("[data-time='00']");
@@ -351,3 +354,109 @@ function cho_hangul(str){
 	}
 	return result
 }
+if(typeof resPasePath==='undefined'){var resPasePath=''};
+var game={
+	init:function(chr){
+		game.girls=new Girls(resPasePath+"../gf-spine-simulator/character/");
+		preview.init();
+		var stageLoaded=false;
+		if(typeof defaultStageData!=='undefined'){
+			preview.loadStage(defaultStageData);
+			stageLoaded=true
+		}
+		if(window.location.hash&&stageLoaded==false){
+			var hash=window.location.hash.substring(1);
+			preview.loadStage(hash);
+			stageLoaded=true
+		}
+	}
+};
+var preview={
+	init:function(){
+		preview.canvas=$("#sdc");
+		preview.isUpdate=true;
+		preview.selectScale=0.75;
+		preview.selectX=preview.canvas.width()*0.5;
+		preview.selectY=preview.canvas.height()*0.925;
+		preview.stage=new PIXI.Container;
+		preview.renderer=PIXI.autoDetectRenderer(preview.canvas.width(),preview.canvas.height(),{transparent:true});
+		preview.lastTime=new Date().getTime();
+		preview.nowTime=new Date().getTime();
+		preview.animationFrame=window.requestAnimationFrame(preview.animate);
+		preview.canvas.html(preview.renderer.view);
+		preview.stage.interactive=true;
+	},
+	ready:function(doll_name){
+		game.girls.load(doll_name,doll_name,preview);
+	},
+	changeCanvas:function(skeletonData){
+		preview.stage.removeChildren();
+		preview.name=skeletonData.name;
+		preview.skeletonData=skeletonData;
+		preview.spine=new PIXI.spine.Spine(skeletonData);
+			preview.spine.x=preview.selectX;
+			preview.spine.y=preview.selectY;
+			preview.spine.scale.x=preview.selectScale;
+		preview.spine.scale.y=preview.selectScale;
+		var animations=preview.spine.spineData.animations;
+		var aniName=animations;
+		var stringAnimations="";
+		var anilength=animations.length;
+		var n,nowSkin=0;
+		preview.changeAnimation(0);
+		preview.spine.skeleton.setToSetupPose();
+		preview.spine.update(0);
+		preview.spine.autoUpdate=false;
+		preview.stage.addChild(preview.spine);
+		var Canilength=preview.stage.children[0].state.data.skeletonData.animations.length;
+		preview.stage.on('pointerdown',function(){
+			if(nowSkin>=Canilength){
+				preview.changeAnimation(0);
+				nowSkin=0
+			}else{
+				preview.changeAnimation(nowSkin);
+				nowSkin+=1
+			};
+		})
+	},
+	loadToStage:function(defaultStageData,spineData){
+		for(i in defaultStageData){
+			var role=defaultStageData[i];
+			var spine=spineData[role.name][role.skin];
+				spine.code=role.name;
+				spine.skin=role.skin;
+				spine.x=role.x;
+				spine.y=role.y;
+				spine.scale=role.scale;
+				spine.animation=role.animation;
+			gameview.addRole(spine,role.animation)
+		}
+	},
+	animate:function(){
+		preview.lastTime=preview.nowTime;
+		preview.nowTime=new Date().getTime();
+		preview.animationFrame=window.requestAnimationFrame(preview.animate);
+		if(preview.isUpdate&&preview.spine){preview.spine.update((preview.nowTime-preview.lastTime)/1000)}
+		preview.renderer.render(preview.stage)
+	},
+	changeAnimation:function(num){
+		var name=preview.spine.spineData.animations[num].name;
+		var isload=true;
+		//if(name=="die"||name=="reload"||name=="victory"){
+		//	isload=false;
+		//};
+		preview.spine.state.setAnimationByName(0,name,isload,0);
+		preview.spine.update(0)
+	},
+	loadStage:function(jsonString){
+		var defaultStageData=JSON.parse(decodeURIComponent(jsonString));
+		if(defaultStageData.ro){
+			for(i in defaultStageData.ro){
+				var role=defaultStageData.ro[i];
+				game.girls.loadAsync(role.name,role.skin,preview);
+			}
+			game.girls.loadAll(defaultStageData.ro)
+		}
+		gameview.selectBackground.val(defaultStageData.bg).change()
+	}
+};
