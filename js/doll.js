@@ -1,5 +1,6 @@
-"use strict";var grid,rCh,ghver=1.80902,dollData=[],dollT=[0,0,0,0,0,0,0,0,0],idir="../img/t_doll/",loader=$(".loader"),imgtag=$(".col-lg-5:nth-child(1)>img"),dollSkill=["AimAttackCurrentTarge","AimAttackDistanceTarge","AimAttackSpecificTarge","airattack","airborne","AK12Buff","AN94Shot","AR15Shot","armor","armorBuff","armorBuffSelf","armorDebuff","armorDebuffSelf","BBNoel","bombard","Bronya","buff","Carcano1891","Carcano1938","CBJMS","Chloe","CLEAR","Coldweapon","comboBuffSelf","command","crit","critBuff","critBuffSelf","debuff","defense","dodgeBuff","dodgeBuffSelf","dodgeDebuff","empty","FAIL","fighting","Flare","Flashbomb","fortress","GGElfeldt","golden","Grenade","Himeko","hitBuff","hitBuffSelf","hitDebuff","illumine","Invincible","Invincible35","IWantU","Kaguya","Kiana","LadyMadeSTAR","Landmines","M4Nightmare","M1918","MosinNagant","Napalm","nightcritBuff","nightcritBuff38","nightcritBuffSelf","nightdodgeBuff","nightdodgeBuffSelf","nightdodgeDebuff","nighthitBuff","nighthitBuffSelf","nighthitDebuff","nightpowBuff","nightpowBuffSelf","nightpowDebuff","nightrateBuff","nightrateBuffSelf","nightrateDebuff","nightspeedDebuff","nighttargetdodgeDebuff","nighttargethitDebuff","nighttargetpowDebuff","nighttargetrateDebuff","nighttargetspeedDebuff","Noconsumption","position","powBuff","powBuffSelf","powBuffShield","powDebuff","RaidenMei","rateBuff","rateBuffSelf","rateDebuff","reinforce","rescue","RifleGrenade","roadblocks","Sakura","Seele","shield","Shotgun","Smoke","sniper","speedDebuff","target","targetdodgeDebuff","targethitDebuff","targetpowDebuff","targetrateDebuff","targetspeedDebuff","Theresa","VariableBuff","augbuff","OblivioN"];
-const VoActor=["나즈카 카오리","마츠이 에리코","마이하라 유메","무카이야마 나오미","미사키 마미","미타라이 카린","사토 리나","사쿠마 히로미","스자키 아야","시노하라 나루미","시미즈 아이","아마노 미라이","아마미야 소라","아야미야 유키코","야마네 노조미","야츠루기 스미레","오구라 유이","오오니시 사오리","요시다 사치요","요시오카 카오리","요코야 사야카","우에사카 스미레","유우키 아오이","이와마츠 이즈미","이카다이 카나에","이타타니 아야카","이토 아스카","이데 카오리","츄조 토모요","타나카 아이미","타네다 리사","타카하시 하루카","토마츠 하루카","카나에 토오루","카야노 아이","코이즈미 타카오","호리에 유이","하나다 마미코","하나타 타마리","나카하라 마이","난죠 요시노","노나카 아이","노미즈 이오리","노토 마미코","닛타 히요리","다이몬 카미","미네우치 토모미","미모리 스즈코","사쿠라 아야네","세리자와 유우","스와 아야카","아카오 히카루","오오츠보 유카","우에마 에미","우치다 마아야","우치야마 유미","이가라시 히로미","코가 아오이","코시미즈 아미","쿠기미야 리에","카와스미 아야코","카토 에미리","쿠로사와 토모요","키타무라 에리","타무라 유카리","타카하시 미카코","토쿠이 소라","하나자와 아카네","하야미 사오리","후쿠하라 아야카","호리고메 사야","나바타메 히토미","사토 아리세","아오키 루리코","아오키 시키","아이사카 유카","야마모토 노조미","오오쿠보 루미","요시무라 하루카","이노우에 마리나","이마이 아사미","이토 시즈카","나나미 카린","나나세 아미","마에카와 료코","사이토 유카","사토 사토미","세토 아사미","아사쿠라 아즈미","아이하라 코토미","오우사키 치요","우에다 레이나","이다 아리사","이토 카나에","츠다 미나미","카네모토 히사코","코보리 미유키","코이치 마코토","코키도 시호","키부네 사치호","타자와 리이코","후지이 유키요","후지이 아야카","히다카 리나"],
+"use strict";var grid,rCh,ghver=1.80902,idir="../img/t_doll/",dollData=[],dollT=[0,0,0,0,0,0,0,0,0],dollSkill=["AimAttackCurrentTarge","AimAttackDistanceTarge","AimAttackSpecificTarge","airattack","airborne","AK12Buff","AN94Shot","AR15Shot","armor","armorBuff","armorBuffSelf","armorDebuff","armorDebuffSelf","BBNoel","bombard","Bronya","buff","Carcano1891","Carcano1938","CBJMS","Chloe","CLEAR","Coldweapon","comboBuffSelf","command","crit","critBuff","critBuffSelf","debuff","defense","dodgeBuff","dodgeBuffSelf","dodgeDebuff","empty","FAIL","fighting","Flare","Flashbomb","fortress","GGElfeldt","golden","Grenade","Himeko","hitBuff","hitBuffSelf","hitDebuff","illumine","Invincible","Invincible35","IWantU","Kaguya","Kiana","LadyMadeSTAR","Landmines","M4Nightmare","M1918","MosinNagant","Napalm","nightcritBuff","nightcritBuff38","nightcritBuffSelf","nightdodgeBuff","nightdodgeBuffSelf","nightdodgeDebuff","nighthitBuff","nighthitBuffSelf","nighthitDebuff","nightpowBuff","nightpowBuffSelf","nightpowDebuff","nightrateBuff","nightrateBuffSelf","nightrateDebuff","nightspeedDebuff","nighttargetdodgeDebuff","nighttargethitDebuff","nighttargetpowDebuff","nighttargetrateDebuff","nighttargetspeedDebuff","Noconsumption","position","powBuff","powBuffSelf","powBuffShield","powDebuff","RaidenMei","rateBuff","rateBuffSelf","rateDebuff","reinforce","rescue","RifleGrenade","roadblocks","Sakura","Seele","shield","Shotgun","Smoke","sniper","speedDebuff","target","targetdodgeDebuff","targethitDebuff","targetpowDebuff","targetrateDebuff","targetspeedDebuff","Theresa","VariableBuff","augbuff","OblivioN"];
+const tableB=$("#table"),main=$("#grid"),loader=$(".loader"),imgtag=$(".col-lg-5:nth-child(1)>img"),
+	VoActor=["나즈카 카오리","마츠이 에리코","마이하라 유메","무카이야마 나오미","미사키 마미","미타라이 카린","사토 리나","사쿠마 히로미","스자키 아야","시노하라 나루미","시미즈 아이","아마노 미라이","아마미야 소라","아야미야 유키코","야마네 노조미","야츠루기 스미레","오구라 유이","오오니시 사오리","요시다 사치요","요시오카 카오리","요코야 사야카","우에사카 스미레","유우키 아오이","이와마츠 이즈미","이카다이 카나에","이타타니 아야카","이토 아스카","이데 카오리","츄조 토모요","타나카 아이미","타네다 리사","타카하시 하루카","토마츠 하루카","카나에 토오루","카야노 아이","코이즈미 타카오","호리에 유이","하나다 마미코","하나타 타마리","나카하라 마이","난죠 요시노","노나카 아이","노미즈 이오리","노토 마미코","닛타 히요리","다이몬 카미","미네우치 토모미","미모리 스즈코","사쿠라 아야네","세리자와 유우","스와 아야카","아카오 히카루","오오츠보 유카","우에마 에미","우치다 마아야","우치야마 유미","이가라시 히로미","코가 아오이","코시미즈 아미","쿠기미야 리에","카와스미 아야코","카토 에미리","쿠로사와 토모요","키타무라 에리","타무라 유카리","타카하시 미카코","토쿠이 소라","하나자와 아카네","하야미 사오리","후쿠하라 아야카","호리고메 사야","나바타메 히토미","사토 아리세","아오키 루리코","아오키 시키","아이사카 유카","야마모토 노조미","오오쿠보 루미","요시무라 하루카","이노우에 마리나","이마이 아사미","이토 시즈카","나나미 카린","나나세 아미","마에카와 료코","사이토 유카","사토 사토미","세토 아사미","아사쿠라 아즈미","아이하라 코토미","오우사키 치요","우에다 레이나","이다 아리사","이토 카나에","츠다 미나미","카네모토 히사코","코보리 미유키","코이치 마코토","코키도 시호","키부네 사치호","타자와 리이코","후지이 유키요","후지이 아야카","히다카 리나"],
 	VA=["Kaori Nazuka","Eriko Matsui","Yume Maihara","Naomi Mukaiyama","Mami Misaki","Karin Mitarai","Rina Sato","Hiromi Sakuma","Aya Suzaki","Narumi Sinohara","Ai Shimizu","Mirai Amano","Sora Amamiya","Yukiko Ayamiya","Nozomi Amane","Sumire Yatsurugi","Ogura Yui","Saori Onishi","Sachiyo Yoshida","Kaori Yoshioka","Sayaka Yokoya","Uesaka Sumire","Yuuki Aoi","Izumi Iwamatsu","Kanae Ikadai","Ayaka Itatani","Asuka Ito","Kaori Ide","Tomoyo Chuujou","Aimi Tanaka","Risa Taneda","Haruka Takahashi","Haruka Tomatsu","Tooru Kanae","Ai Kayano","Takao Koizumi","Yui Horie","Mamiko Hanada","Tamari Hinata","Mai Nakahara","Yoshino Nanjo","Ai Nonaka","Iori Nomizu","Mamiko Noto","Hiyori Nitta","Kami Daimon","Tomomi Mineuchi","Suzuko Mimori","Ayane Sakura","Serizawa Yuu","Ayaka Suwa","Hikaru Akao","Yuka Ootsubo","Emi Uema","Maaya Uchida","Yumi Uchiyama","Hiromi Igarashi","Aoi Koga","Koshimizu Ami","Rie Kugimiya","Ayako Kawasumi","Emiri Katou","Tomoyo Kurosawa","Eri Kitamura","Yukari Tamura","Mikako Takahashi","Sora Tokui","Akane Hanazawa","Saori Hayami","Ayaka Fukuhara","Saya Horigome","Hitomi Nabatame","Arise Sato","Ruriko Aoki","Shiki Aoki","Yuuka Aisaka","Nozomi Yamamoto","Rumi Okubo","Haruka Yoshimura","Marina Inoue","Asami Imai","Shizuka Ito","Karin Nanami","Ami Nanase","Ryoko Maekawa","Yuka Saito","Satomi Sato","Asami Seto","Azumi Asakura","Kotomi Aihara","Chiyo Ousaki","Reina Ueda","Arisa Ida","Kanae Ito","Minami Tsuda","Hisako Kanemoto","Miyuki Kobori","Makoto Koichi","Shiho Kokido","Sachiho Kibune","Riiko Tazawa","Yukiyo Fujii","Ayaka Fujii","Rina Hidaka"],
 	Illustrator=["15K","92M","AC-130","ALLENES","Anmi","AS109","ASK","BIBIA","Bison仓鼠","CanceR","DDAL","DOGALA","Evan揚","hanasa","HIKARI","HJL","KAN","KIncora","Ki桑","Krenz","KY","liduke","LIN+","Lino","lpip","lyo","M.vv","MKiiiiii","neco","NIN","nineo","NIXOO","NoriZC","NorthAbyssor","november","NS","Parsley","phantania","PHI","Rain Lan","RAN","REALMBW","rei","Renatus.Z","RFF","rosele","SA","Sam_Ashton","Saru","Silverwing","Skade","sola7764","spirtie","TAMAXI","TOMATO","XQ","X布","ZAGALA","zui","かれい","とり","ミカピカゾ","两卡车","仙女V","兔爷","八云玖","八才","十月十日奏","卑しい人间","厕所董事长","原子Dan","受菟","叽困","和茶","咩爆","哈路卡","团子","堀森","多元菌","小吃","小迪","工口牛","幻象黑兔","废人","戏言咸咸","拿铁","时辰","木shiyo","木子翔","林大B","林檎愛す","死盖","水乌龟","水熊","河马","油库狸","洲川Terras","海猫络合物","熊猫印象","狂気の君","猫头神","百足","真名","細重ソウジ","羽中","能登ツグミ","芙芙酱","荒境TS","莲子","薯子Imoko","虎三","钉田西瓜","防弹乳牛","陆生の洲川","雪樱樱","音符","鳗鱼子","麻将"];
 $(document).ready(()=>{
@@ -9,20 +10,21 @@ $(document).ready(()=>{
 	game.init();
 });
 function contentsload(){
-	$.ajax("../json/doll.json",{contentType:"application/json",dataType:"json",success:result=>{
-		var allCharacters=$.map(result,(doll,index)=>{
-			var timehour=parseInt(doll.buildTime/3600,10),timemin=doll.buildTime%3600/60,noval=doll.id,dollT=[0,0,0,0,0,0,0,0,0],cho=cho_hangul(`${doll.krName}`);
-			noval>2E4?noval="M"+(noval-2E4):noval>1E3&&(noval="X"+(noval-1E3));
-			$.each(doll.Fx.tile,(index,value)=>dollT[value-1]=1),dollT[doll.Fx.self-1]=2;
-			var character=$(`<div class="item" data-time="${timehour}${timemin}" data-type="${doll.type}" data-rarity="${doll.rarity}" data-skill="${doll.skill.src}"></div>`).detach(),
-				dollcon=`<div class="text-white no" data-no="${doll.id}">${noval}</div><p class="name podo">${doll.krName}</p><i class="star r${doll.rarity}"></i><i class="incage doll info_cage_${doll.rarity}"></i><i class="type doll ${doll.type}_${doll.rarity}"></i><img class="dollbg" width="175" height="276" data-src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@${ghver}/img/t_doll/${doll.id}_i.jpg" onload="this.removeAttribute('class'),this.removeAttribute('onload')"><div class="tag">${doll.type}/${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}/${doll.skill.src}/${dollT}/${cho}</div>`;
-			$(character).append(`<div class="tdoll item-content">`).find(".item-content").html(dollcon);
-			return character;
-		});
-		$("#grid").append(allCharacters),loadComplete(),LazyLoad.update();
-		dollData=result;
-	}});
-}
+	fetch("../json/doll.json").then(response=>response.json())
+		.then(function(tdoll){
+			dollData=tdoll;
+			var allCharacters=$.map(dollData,(doll,index)=>{
+				var timehour=(doll.buildTime/3600|0),timemin=doll.buildTime%3600/60,noval=doll.id,dollT=[0,0,0,0,0,0,0,0,0],cho=cho_hangul(`${doll.krName}`);
+				noval>2E4?noval="M"+(noval-2E4):noval>1E3&&(noval="X"+(noval-1E3));
+				$.each(doll.Fx.tile,(index,value)=>dollT[value-1]=1),dollT[doll.Fx.self-1]=2;
+				var character=$(`<div class="item" data-time="${timehour}${timemin}" data-type="${doll.type}" data-rarity="${doll.rarity}" data-skill="${doll.skill.src}"></div>`).detach()
+					,dollcon=`<div class="text-white no" data-no="${doll.id}">${noval}</div><p class="name podo">${doll.krName}</p><i class="star r${doll.rarity}"></i><i class="incage doll info_cage_${doll.rarity}"></i><i class="type doll ${doll.type}_${doll.rarity}"></i><img class="dollbg" width="175" height="276" data-src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@${ghver}/img/t_doll/${doll.id}_i.jpg" onload="this.removeAttribute('class'),this.removeAttribute('onload')"><div class="tag">${doll.type}/${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}/${doll.skill.src}/${dollT}/${cho}</div>`;
+				character.append(`<div class="tdoll item-content">`).find(".item-content").html(dollcon);
+				return character;
+			});
+			main.append(allCharacters),loadComplete(),LazyLoad.update();
+		})
+};
 function loadComplete(){
 	grid=new Muuri("#grid",{
 		showDuration:null,hideDuration:null,layoutDuration:null,showEasing:null,hideEasing:null,layoutEasing:null,
@@ -52,11 +54,11 @@ function loadComplete(){
 	});
 	$(".item-content").click(function(){
 		loader.addClass("is-active");
-		$(".grid,#search,#func").toggleClass("d-none"),$("#filter").toggleClass("d-flex d-none"),$(".tileFilter").popover("hide");
-		var clicked=Number($(this).children(".no").attr("data-no"));
+		$("#grid,#search,#func").toggleClass("d-none"),$("#filter").toggleClass("d-flex d-none"),$(".tileFilter").popover("hide");
+		var clicked=($(this).children(".no").attr("data-no")|0);
 		$.each(dollData,(index,doll)=>{
 			if(doll.id===clicked){
-				var simg=idir+doll.id,cimg=simg+".png",timehour=parseInt(doll.buildTime/3600,10),timemin=doll.buildTime%3600/60,time=`${timehour}시간${timemin}분`,gridself=`#grid${doll.Fx.self}`,gridPos=[],skins=[];
+				var simg=idir+doll.id,cimg=simg+".png",timehour=(doll.buildTime/3600|0),timemin=doll.buildTime%3600/60,time=`${timehour}시간${timemin}분`,gridself=`#grid${doll.Fx.self}`,gridPos=[],skins=[];
 				$.each(doll.Fx.tile,(index,value)=>gridPos.push(`#grid${value}`));
 				gridPos=gridPos.toString();
 				for(let x=1;x<10;x++){$(`#grid${x}`).removeClass("bg-white aqua grey").addClass("grey")};
@@ -99,7 +101,7 @@ function sort(a){grid.sort(a)};
 function filter(a){grid.filter(`${a}`)};
 function Sval(a){$("#search").val(a),$("#search").click()};
 function chrtset(x,y){
-	var D="5링크시 <br>탄약 C,식량 M 소모"
+	var D="5링크시 <br>탄약 C,식량 M 소모";
 	"true"==x.mod?(Set1(2),table(2)):(Set1(1),table(1));
 	"hg"==x.type?Set2("HG",[71,31,79,58,55],30,30):
 	"smg"==x.type?Set2("SMG",[183,28,70,86,13],85,60):
@@ -126,9 +128,9 @@ function chrtset(x,y){
 			n==16?a=`50%`:
 			n==18?a=`10`:
 			n==20&&(a=`${x.ammo}`);
-			$(`#table>div:nth-child(${n})`).html(a);
-			if($("#table>div:nth-child(20)").text()=="undefined"){$("#table>div:nth-child(20)").text("")};
-			if(Array.isArray(x.drop)){$("#table>div:nth-child(4)>.btn-group>button:nth-child(3)").removeAttr("disabled").addClass("text-white")}
+			tableB.find(`div:nth-child(${n})`).html(a);
+			if(tableB.find("div:nth-child(20)").text()=="undefined"){tableB.find("div:nth-child(20)").text("")};
+			if(Array.isArray(x.drop)){tableB.find("div:nth-child(4)>.btn-group>button:nth-child(3)").removeAttr("disabled").addClass("text-white")}
 		}
 	};
 	function Set1(z){y.labels=["체력","화력","회피","사속","명중"];y.datasets[0].data=[x.hp[z],x.dmg[z],x.dodge[z],x.FR[z],x.hit[z]]};
@@ -195,7 +197,7 @@ function Skill(y,x){
 	src==15?Sdesc=`블랙홀을 발생시키는 수류탄을 던져 ${time[1]}초 동안 반경 2.5 범위 내의 적을 끌어당기고 중심에서 1.5 범위 내의 적들에게 초당 공격력의 ${dmg[1]}%의 피해를 준다.`:
 	src==17?Sdesc=`스킬 발동 시 제대에 배속된 RF 1기마다(편제무관) 자신의 치명률과 사속 ${FR[1]}%씩 상승. ${time[1]}초 지속 【패시브 : 공격 시 40%의 확률로 2초 동안 같은 열에 있는 모든 아군의 치명률과 사속 ${cri[1]}% 상승(최대 3회 중첩)】`:
 	src==18?Sdesc=`발동 시 ${dmg1[1]}개의 각인을 새긴다. 【패시브 : 공격 시 ${cri[1]}% 확률로 각인을 ${ammo[1]}개씩 새긴다. 18개 도달 시 다음 공격으로 엘리트 적에게 공격력의 ${dmg2[1]*10}%(통상 적에게 ${dmg3[1]*10}%)의 피해를 입히며 각인 수는 리셋된다.】`:
-	src==19?Sdesc=`스킬을 발동할 때마다 다른 효과를 가진 탄환으로 교체 : <color=#91c1f0>아음속탄</color>(기본) : 회피 ${dodge[1]}% 상승 / <color=#db3d3d>ST탄</color> : 화력 ${dmg[1]}% 상승 / <color=#ffb400>일반탄</color> : 명중 ${hit[1]}% 상승`:
+	src==19?Sdesc=`스킬을 발동할 때마다 다른 효과를 가진 탄환으로 교체 : <span style=color:#91c1f0;font-weight:bold>아음속탄</span>(기본) : 회피 ${dodge[1]}% 상승 / <span style=color:#db3d3d;font-weight:bold>ST탄</span>: 화력 ${dmg[1]}% 상승 / <span style=color:#ffb400;font-weight:bold>일반탄</span> : 명중 ${hit[1]}% 상승`:
 	src==21?Sdesc=`공격을 멈추고 다섯 차례 연주한다 매 연주는 무작위 아군 하나의 화력과 명중을 ${dmg1[1]}%(Glory Light 장착시 ${dmg2[1]}%) 상승시킨다<br>중첩 불가<br>연주당 지속시간 각 3초.`:
 	src==22?Sdesc=`투척용 도끼를 던져 타깃에게 공격력의 ${dmg[1]}배의 피해를 입힌다.`:
 	src==23?Sdesc=
@@ -295,7 +297,7 @@ function Skill(y,x){
 };
 function togglecon(){
 	rCh.destroy();
-	$(".grid,#search,#func").toggleClass("d-none");
+	$("#grid,#search,#func").toggleClass("d-none");
 	$("#filter").toggleClass("d-flex d-none");
 	$("button.btn-warning").remove();
 	$(".img-fluid").attr("src","");
@@ -320,10 +322,10 @@ $(".filter,.dropdown-menu>a").click(function(){
 	filtr=="제조불가"?filter("[data-time='00']"):
 	/*
 	case "타일효과":
-		grid.filter('[data-time="00"]')
+		grid.filter("[data-time='00']')
 	break;
 	case "일러스트레이터":
-		grid.filter('[data-time="00"]')
+		grid.filter("[data-time='00']")
 	break;
 	*/
 	filtr=="All"&&filter("[data-type]");
@@ -354,13 +356,13 @@ function cho_hangul(str){
 	}
 	return result
 }
-if(typeof resPasePath==='undefined'){var resPasePath=''};
+if(typeof resPasePath==="undefined"){var resPasePath=""};
 var game={
 	init:function(chr){
 		game.girls=new Girls(resPasePath+"../gf-spine-simulator/character/");
 		preview.init();
 		var stageLoaded=false;
-		if(typeof defaultStageData!=='undefined'){
+		if(typeof defaultStageData!=="undefined"){
 			preview.loadStage(defaultStageData);
 			stageLoaded=true
 		}
@@ -409,7 +411,7 @@ var preview={
 		preview.spine.autoUpdate=false;
 		preview.stage.addChild(preview.spine);
 		var Canilength=preview.stage.children[0].state.data.skeletonData.animations.length;
-		preview.stage.on('pointerdown',function(){
+		preview.stage.on("pointerdown",function(){
 			if(nowSkin>=Canilength){
 				preview.changeAnimation(0);
 				nowSkin=0

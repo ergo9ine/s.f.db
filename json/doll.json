@@ -1,5 +1,6 @@
 [{
 "id":1,
+"OC":[143,2671],
 "krName":"콜트 리볼버",
 "name":"M1873",
 "type":"hg",
@@ -129,6 +130,11 @@
 "name":"M1895",
 "type":"hg",
 "rarity":2,
+"illust":"X布",
+"voice":"Narumi Sinohara",
+"buildTime":1200,
+"drop":["모든맵"],
+"nick":["할매"],
 "hp":[35,70],
 "dmg":[11,32],
 "dodge":[11,92],
@@ -146,11 +152,6 @@
 "dmg":[20,35],
 "time":[5,8]
 }},
-"illust":"X布",
-"voice":"Narumi Sinohara",
-"buildTime":1200,
-"drop":["모든맵"],
-"nick":["할매"],
 "Fx":{
 "target":"all",
 "self":5,
