@@ -14,6 +14,8 @@
 - @ergo9ine (Publisher)
 
 # Thanks
-- @mamiller (Layout Design/Resource Extract)
+- @mamiller - Layout Design/Resource Extract
 - [@kosehy](https://github.com/kosehy)
 - [@KOZ39](https://github.com/KOZ39) - [gfOperationReportCalculator](https://github.com/KOZ39/gfOperationReportCalculator)
+- [@rare0619](https://github.com/rare0619) - [GirlsFrontlineCalculator](https://github.com/rare0619/GirlsFrontlineCalculator)
+- [@hyunjun529](https://github.com/hyunjun529) - [https://github.com/gfKeySystem/gfKeySystem.github.io](https://github.com/gfKeySystem/gfKeySystem.github.io)

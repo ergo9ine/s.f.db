@@ -1,3 +1,6 @@
 [submodule "gf-spine-simulator"]
 	path = gf-spine-simulator
 	url = https://github.com/ergo9ine/gf-spine-simulator
+[submodule "gfKeySystem"]
+	path = gfKeySystem
+	url = https://github.com/ergo9ine/gfKeySystem
