@@ -16,6 +16,8 @@
 .ntg>svg>polygon{fill:gray}
 .ntg>svg>text{font-size:1.5em}
 .row1>div,.row2>div,.row3>div{width:25px;height:25px}
+.bg-warning~div>.w-100{overflow:auto;vertical-align:middle;display:flex;justify-content:center;flex-direction:column}
+#battle,#battlei,#dorm,#dormi{display:flex;justify-content:center;flex-direction:column;margin:auto;position:absolute;top:22px;left:calc(50% - 28px)}
 #sec-fir>div{height:100px}
 #sec-fir>div>div:nth-child(2){height:76px}
 #sec-fir>div:nth-child(3)>div:nth-child(2)>img{width:76px}
