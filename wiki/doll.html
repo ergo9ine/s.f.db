@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pure-css-loader@3.1.2/dist/loader-border.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@3.0.0-beta.5/dist/simplebar.min.css">
 <link rel="stylesheet" href="../css/css_overwrite.css">
 <link rel="stylesheet" href="../css/doll.css">
 <title>T-doll</title>
@@ -60,20 +60,20 @@
 				<div class="Self d-flex">
 					<div class="m-auto d-flex">
 						<div class="row1">
-						<div class="border border-dark grey" id="gridS1"></div>
-						<div class="border border-dark grey" id="gridS4"></div>
-						<div class="border border-dark grey" id="gridS7"></div>
-					</div>
-					<div class="row2">
-						<div class="border border-dark grey" id="gridS2"></div>
-						<div class="border border-dark grey" id="gridS5"></div>
-						<div class="border border-dark grey" id="gridS8"></div>
-					</div>
-					<div class="row3">
-						<div class="border border-dark grey" id="gridS3"></div>
-						<div class="border border-dark grey" id="gridS6"></div>
-						<div class="border border-dark grey" id="gridS9"></div>
-					</div>
+							<div class="border border-dark grey" id="gridS1"></div>
+							<div class="border border-dark grey" id="gridS4"></div>
+							<div class="border border-dark grey" id="gridS7"></div>
+						</div>
+						<div class="row2">
+							<div class="border border-dark grey" id="gridS2"></div>
+							<div class="border border-dark grey" id="gridS5"></div>
+							<div class="border border-dark grey" id="gridS8"></div>
+						</div>
+						<div class="row3">
+							<div class="border border-dark grey" id="gridS3"></div>
+							<div class="border border-dark grey" id="gridS6"></div>
+							<div class="border border-dark grey" id="gridS9"></div>
+						</div>
 				</div>
 			</div>
 		</div>
@@ -162,7 +162,7 @@
 			<div class="ntg">
 				<svg width="200" height="35"><polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon><text x="40%" y="50%">Chart</text></svg>
 			</div>
-			<div id="chart" style="height:365px"><canvas id="statisticschart" height="250"></canvas></div>
+			<div id="chart" style="height:365px"></div>
 		</div>
 		<div class="col my-3 pl-lg-3 row no-gutters" style="height:335px">
 			<div class="ntg">
@@ -190,7 +190,7 @@
 							<div class="border border-dark" id="grid9"></div>
 						</div>
 					</div>
-					<div class="w-100"></div>
+					<div id="Tdesc" class="w-100"></div>
 				</div>
 				</div>
 				<div class="col-12">
@@ -201,7 +201,7 @@
 					<div class="bg-warning">Skill</div>
 					<div class="d-flex px-1">
 						<img class="img-fluid" src="">
-						<div class="w-100"></div>
+						<div id="Sdesc" class="w-100"></div>
 					</div>
 				</div>
 			</div>
@@ -212,52 +212,12 @@
 				<div class="carousel-item active">
 					<div class="bg-dark text-white">
 						<div id="table" class="row m-0">
-						<div class="col-6 bg-dark">체력</div>
-						<div class="col-6 bg-secondary"></div>
-						<div class="col-6 bg-dark">입수 방법</div>
-						<div class="col-6 bg-secondary"></div>
-						<div class="col-6 bg-dark">화력</div>
-						<div class="col-6 bg-secondary"></div>
-						<div class="col-6 bg-dark">회피</div>
-						<div class="col-6 bg-secondary"></div>
-						<div class="col-6 bg-dark">명중</div>
-						<div class="col-6 bg-secondary"></div>
-						<div class="col-6 bg-dark">사속</div>
-						<div class="col-6 bg-secondary"></div>
-						<div class="col-6 bg-dark">치명타율</div>
-						<div class="col-6 bg-secondary"></div>
-						<div class="col-6 bg-dark">치명타 피해</div>
-						<div class="col-6 bg-secondary"></div>
-						<div class="col-6 bg-dark">방어력 관통</div>
-						<div class="col-6 bg-secondary"></div>
-						<div class="col-6 bg-dark">탄창 크기</div>
-						<div class="col-6 bg-secondary"></div>
 						</div>
 					</div>
 				</div>
 				<div class="carousel-item">
 					<div class="bg-dark text-white">
 						<div id="graph" class="row m-0">
-						<div class="col-6 bg-dark">장갑</div>
-						<div class="col-6 bg-secondary">test</div>
-						<div class="col-6 bg-dark">기동력</div>
-						<div class="col-6 bg-secondary">test</div>
-						<div class="col-6 bg-dark">풀네임</div>
-						<div class="col-6 bg-secondary">test</div>
-						<div class="col-6 bg-dark">설계 국가</div>
-						<div class="col-6 bg-secondary">test</div>
-						<div class="col-6 bg-dark">제조사</div>
-						<div class="col-6 bg-secondary">test</div>
-						<div class="col-6 bg-dark">세력</div>
-						<div class="col-6 bg-secondary">test</div>
-						<div class="col-6 bg-dark">전용장비</div>
-						<div class="col-6 bg-secondary">test</div>
-						<div class="col-6 bg-dark">개조유무</div>
-						<div class="col-6 bg-secondary">test</div>
-						<div class="col-6 bg-dark">성장등급</div>
-						<div class="col-6 bg-secondary">test</div>
-						<div class="col-6 bg-dark">작전능력</div>
-						<div class="col-6 bg-secondary">test</div>
 						</div>
 					</div>
 				</div>
@@ -297,13 +257,13 @@
 제조시간 :50분 = 50<br>
 별명 :콜라</p>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@10.17.0/dist/lazyload.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@10.18.0/dist/lazyload.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.quicksearch@2.4.0/dist/jquery.quicksearch.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/muuri@0.7.0/dist/muuri.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.2/dist/Chart.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/muuri@0.7.1/dist/muuri.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts@2.0.1/dist/apexcharts.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/simplebar@3.0.0-beta.5/dist/simplebar.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/pixi.js@4.6.2/dist/pixi.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/pixi-spine@1.0.10/bin/pixi-spine.min.js"></script>
 <script src="../gf-spine-simulator/js/girlsData.js"></script>
