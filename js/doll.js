@@ -8,7 +8,7 @@ $(document).ready(()=>{
 	dominit();
 	contentsload();
 	$("[data-toggle='popover']").popover();
-	$(".tileFilter").popover({html:true,content:function(){return $("#tileFilter").html();}});
+	$(".tileFilter").popover({html:true,content:function(){return $("#tileFilter").html()}});
 	game.init();
 });
 function dominit(){
@@ -70,7 +70,7 @@ function loadComplete(){
 				for(let x=1;x<10;x++){$(`#grid${x}`).removeClass("bg-white aqua grey").addClass("grey")};
 				$("body,html").animate({scrollTop:0},0);
 				$(".blockquote>p:nth-child(1)").html(doll.krName);
-				$(".blockquote-footer>cite:nth-child(1)").html(doll.id);
+				utteranc(doll.id);
 				$.each(doll.skins,(index,value)=>skins.push(`<button type="button" class="btn btn-warning btn-sm">${value}</button>`));
 				$(".skinntg,#contents>div:nth-child(6)").append(skins);
 				$("#contents>div:nth-child(6)>button").addClass("btn-block");
@@ -142,6 +142,14 @@ var fltr={
 function sort(a){grid.sort(a)};
 function filter(a){grid.filter(`${a}`)};
 function Sval(a){$("#search").val(a),$("#search").click()};
+function utteranc(index){
+	$(".blockquote-footer>cite:nth-child(1)").html(index);
+	//var sc=document.createElement("script");
+	//$(sc).attr({"async":"async","repo":"ergo9ine/sfdb_tracker","issue-term":index,"theme":"github-dark","crossorigin":"anonymous","src":"https://utteranc.es/client.js"});
+	$("meta[property='title']").attr("content","doll No."+index);
+	var utteranc=$("<script type='text/javascript' src='https://utteranc.es/client.js' issue-term='title' repo='ergo9ine/sfdb_tracker' theme='github-dark' crossorigin='anonymous' async><\/script>").detach();
+	$("#dolldiscussion").html(utteranc);
+};
 function chrtset(x,y){
 	var ty=x.type,D="5링크시 <br>탄약 C,식량 M 소모";
 	"true"==x.mod?(Set1(2),table(2)):(Set1(1),table(1));
@@ -405,7 +413,7 @@ function Skill(y,x){
 	Sdesc+`<br>지속시간${time[1]}초/선쿨${FCD}초/쿨타임${CD[1]}초`;
 	y==148||y==183&&(Sdesc=Sdesc.replace(`<br>`,`<br>지속시간${time[1]}초.`));
 	$("#Sdesc").html(Sdesc);
-	var el = new SimpleBar(document.getElementById('Sdesc'));
+	var el=new SimpleBar(document.getElementById('Sdesc'));
 	el.getContentElement();
 };
 function togglecon(){
@@ -419,6 +427,7 @@ function togglecon(){
 	$(".skinntg>button").off("click");
 	preview.stage.off("pointerdown");
 	SimpleBar.removeObserver();
+	$("#dolldiscussion").empty();
 };
 $(".filter,.dropdown-menu>a").click(function(){
 	var filtr=$(this).text(),t0=$("[data-time='00']");

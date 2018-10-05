@@ -11,7 +11,7 @@
 .Target .CC,.aqua{background-color:#0ff}
 .Self .CC{background-color:#fff}
 .grey{background-color:#9e9e9e}
-#sdc,#chart,#stat,#sec-fir,#sec-sec,#doll,#equip,#dolltext,#dolllore{outline:1px solid gray}
+#sdc,#chart,#stat,#sec-fir,#sec-sec,#doll,#equip,#dolltext,#dolllore,#dolldiscussion{outline:1px solid gray}
 .ntg{margin-left:-1px;width:200px;height:35px}
 .ntg>svg>polygon{fill:gray}
 .ntg>svg>text{font-size:1.5em}

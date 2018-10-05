@@ -1,6 +1,6 @@
 [submodule "gf-spine-simulator"]
 	path = gf-spine-simulator
-	url = https://github.com/ergo9ine/gf-spine-simulator
-[submodule "gfKeySystem"]
-	path = gfKeySystem
-	url = https://github.com/ergo9ine/gfKeySystem
+	url = https://github.com/SFDB-Team/gf-spine-simulator
+[submodule "gf-bingo-calculator"]
+	path = gf-bingo-calculator
+	url = https://github.com/SFDB-Team/gf-bingo-calculator

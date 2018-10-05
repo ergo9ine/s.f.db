@@ -3,19 +3,17 @@
 const TogV="invisible";
 $(document).ready(()=>{
 $(`[data-toggle="tooltip"]`).tooltip();
-$.ajaxSetup({error:function(x,e){0==x.status?alert("You are offline!!\n Please Check Your Network."):404==x.status?alert("Requested URL not found."):500==x.status?alert("Internel Server Error."):"parsererror"==e?alert("Error.nParsing JSON Request failed."):"timeout"==e?alert("Request Time out."):alert("Unknow Error.n"+x.responseText)}});
-$(".x").click(()=>{$(this).parent().addClass(TogV)});
 $("#close,#open").click(()=>{$("#Sidebar").toggleClass(TogV)});
 $("#lo,#lc").click(()=>{$("#lm").toggleClass(TogV)});
 $("#ro,#rc").click(()=>{$("#rm").toggleClass(TogV)});
 $("#lm>button").click(function(){var sel=$(this).index();sel==1||sel==2?($("#rm").removeClass(TogV),$("#lm").addClass(TogV)):$("#lm").addClass(TogV)});
 $("#rm>button").click(function(){$("#rm").addClass(TogV);});
 $(".tab").click(function(){
-var tis=$(this),Classes=(tis.attr("class")).split(" "),T=["#tab1","#tab2","#tab3","#tab4","#tab5","#tab6","#tab7","#tab8","#tab9","#tab10"];
+var tis=$(this),Classes=(tis.attr("class")).split(" "),T="#tab1 #tab2 #tab3 #tab4 #tab5 #tab6 #tab7 #tab8 #tab9 #tab10".split(" "),a;
 $("#Sidebar>button:nth-child(5),#lm>button:nth-child(4),.tab").removeClass("bg-danger");
 $("#result").empty();
 tis.addClass("bg-danger");
-for (var a=0,len=Classes.length;a<len;a++){
+for(a in Classes){
 var sel=Classes[a];
 "m1"==sel?hide(0):
 "m2"==sel?hide(1):
@@ -52,20 +50,54 @@ document.getElementById("hocCurrentExp").addEventListener("keyup",HocOperationRe
 document.getElementById("hocTargetLv").addEventListener("keyup",HocOperationReportCalc);
 document.getElementById("hocTrainingGroundLv").addEventListener("keyup",HocOperationReportCalc);
 function DollOperationReportCalc(){
-let oath=document.getElementById("oath").checked+1,fairy=document.getElementById("fairy").checked?3:1,currentLv=Number(document.getElementById("dollCurrentLv").value),currentExp=Number(document.getElementById("dollCurrentExp").value),targetLv=Number(document.getElementById("dollTargetLv").value),operationReport=0;
-if(IsValidLv(currentLv,currentExp,targetLv,fairy,0,dollAccExp)){if(targetLv>115){operationReport+=Math.ceil((dollAccExp[targetLv]-dollAccExp[Math.max(currentLv,115)]-currentExp)/(30*oath));targetLv=115;currentExp=0}if(targetLv>110&&currentLv<115){operationReport+=Math.ceil((dollAccExp[targetLv]-dollAccExp[Math.max(currentLv,110)]-currentExp)/(30*oath));targetLv=110;currentExp=0}if(targetLv>100&&currentLv<110){operationReport+=Math.ceil((dollAccExp[targetLv]-dollAccExp[Math.max(currentLv,100)]-currentExp)/(30*oath));targetLv=100;currentExp=0}if(targetLv<=100&&currentLv<100)operationReport+=Math.ceil(((dollAccExp[targetLv]-dollAccExp[currentLv])*fairy-currentExp)/30);document.getElementById("dollOperationReportResult").innerText=`필요 작전보고서 : ${operationReport} 개`}else{document.getElementById("dollOperationReportResult").innerText=`필요 작전보고서 : N/A`}
+let oath=document.getElementById("oath").checked+1,fairy=document.getElementById("fairy").checked?3:1,currentLv=document.getElementById("dollCurrentLv").value,currentExp=document.getElementById("dollCurrentExp").value/100,targetLv=document.getElementById("dollTargetLv").value,operationReport=0;
+if(IsValidLv(currentLv,currentExp,targetLv,fairy,0,dollAccExp)){if(targetLv>115){operationReport+=Math.ceil((dollAccExp[targetLv]-dollAccExp[Math.max(currentLv,115)]-currentExp)/(30*oath));targetLv=115;currentExp=0}
+if(targetLv>110&&currentLv<115){operationReport+=Math.ceil((dollAccExp[targetLv]-dollAccExp[Math.max(currentLv,110)]-currentExp)/(30*oath));targetLv=110;currentExp=0}if(targetLv>100&&currentLv<110){operationReport+=Math.ceil((dollAccExp[targetLv]-dollAccExp[Math.max(currentLv,100)]-currentExp)/(30*oath));targetLv=100;currentExp=0}if(targetLv<=100&&currentLv<100)operationReport+=Math.ceil(((dollAccExp[targetLv]-dollAccExp[currentLv])*fairy-currentExp)/30);document.getElementById("dollOperationReportResult").innerText=`필요 작전보고서 : ${operationReport} 개`}
+else{document.getElementById("dollOperationReportResult").innerText=`필요 작전보고서 : N/A`}
 }
 function HocOperationReportCalc(){
-let currentLv=Number(document.getElementById("hocCurrentLv").value),currentExp=Number(document.getElementById("hocCurrentExp").value),targetLv=Number(document.getElementById("hocTargetLv").value),trainingGroundLv=Number(document.getElementById("hocTrainingGroundLv").value),operationReport=0,trainingTime=0,battery=0;
-if(IsValidLv(currentLv,currentExp,targetLv,1,trainingGroundLv,squadAccExp)){operationReport=Math.ceil((squadAccExp[targetLv]-squadAccExp[currentLv]-currentExp)/30);trainingTime=Math.ceil(operationReport/PerHour[trainingGroundLv]);battery=trainingTime*5;document.getElementById("hocOperationReportResult").innerText=`필요 특수작전보고서 : ${operationReport} 개\n훈련시간 : ${trainingTime} 시간\n전지 : ${battery} 개`}else{document.getElementById("hocOperationReportResult").innerText=`필요 특수작전보고서 : N/A\n훈련시간 : N/A\n전지 : N/A`}
+let currentLv=Number(document.getElementById("hocCurrentLv").value),currentExp=document.getElementById("hocCurrentExp").value/100,targetLv=document.getElementById("hocTargetLv").value,trainingGroundLv=document.getElementById("hocTrainingGroundLv").value,operationReport=0,trainingTime=0,battery=0;
+if(IsValidLv(currentLv,currentExp,targetLv,1,trainingGroundLv,squadAccExp)){operationReport=Math.ceil((squadAccExp[targetLv]-squadAccExp[currentLv]-currentExp)/30);trainingTime=Math.ceil(operationReport/PerHour[trainingGroundLv]);battery=trainingTime*5;document.getElementById("hocOperationReportResult").innerText=`필요 특수작전보고서 : ${operationReport} 개\n훈련시간 : ${trainingTime} 시간\n전지 : ${battery} 개`}
+else{document.getElementById("hocOperationReportResult").innerText=`필요 특수작전보고서 : N/A\n훈련시간 : N/A\n전지 : N/A`}
 }
-function IsValidLv(currentLv, currentExp, targetLv, fairy, trainingGroundLv, AccExp){if (currentLv < targetLv && currentExp >= 0 && (AccExp[currentLv + 1] - AccExp[currentLv]) * fairy > currentExp && (fairy == 1 && targetLv < AccExp.length || fairy == 3 && targetLv <= 100) && trainingGroundLv >= 0 && PerHour.length > trainingGroundLv) return true;return false}
+function IsValidLv(currentLv,currentExp,targetLv,fairy,trainingGroundLv,AccExp){
+	if(currentLv<targetLv&&currentExp>=0&&(AccExp[currentLv+1]-AccExp[currentLv])*fairy>currentExp&&(fairy==1&&targetLv<AccExp.length||fairy==3&&targetLv<=100)&&trainingGroundLv>=0&&PerHour.length>trainingGroundLv)return true;return false}
 // enhanced
-var HG={avg:[.21,.25,.35,.24],M1911:[.2,.2323,.3176,.2426],"나강 리볼버":[.2164,.2323,.3667,.1944],P38:[.2,.2323,.3429,.2426],"FNP-9":[.2164,.2625,.3667,.2625],PPK:[.183,.263,.389,.263],"MP-446":[.2164,.2625,.3176,.2526],"Bren Ten":[.2323,.2625,.3176,.2526],"USP Compact":[.1831,.2909,.3667,.2722]},SMG={avg:[.21,.09,.32,.31],M3:[.2164,.0889,.3176,.2816],"PPSh-41":[.2,.0889,.2909,.3628],PP2000:[.2323,.0889,.3667,.3304],"MP-40":[.2164,.0889,.2909,.3089],"베레타38형":[.2323,.0889,.2625,.3089],m45:[.2323,.0889,.3176,.3089],"Spectre M4":[.2,.0889,.3429,.3549],IDW:[.1831,.0889,.3429,.2955],"64식":[.2164,.0889,.3176,.3628]},RF={avg:[.54,.31,.18,.17],"SVT-38":[.526,.291,.2,.166],G43:[.541,.291,.166,.183],"시모노프":[.5258,.2909,.2,.1655],"FN-49":[.5407,.2909,.1655,.1535],BM59:[.5548,.2909,.1655,.1831]},AR={avg:[.32,.21,.2,.27],G3:[.3781,.2323,.2,.2576],L85A1:[.3304,.2,.2,.2674],"갈릴":[.3176,.2,.2,.3089],"SIG-510":[.3781,.2,.2,.2476],F2000:[.3176,.2323,.2323,.3304],"63식":[.3667,.2,.2,.3]},MG={avg:[.48,.15,.17,.41],LWMMG:[.5258,.1655,.1655,.3628],DP28:[.4593,.1655,.1655,.4035],MG34:[.4683,.1286,.1655,.4275],FG42:[.4683,.1655,.2,.4275],"AAT-52":[.4857,.1655,.1655,.4405]};function getOneTypeCount(b,c){count=[0,0,0,0];for(var a=0;4>a;a++)count[a]=Math.ceil(b[a]/c[a]);return max=Math.max.apply(Math,count)}function getFinalValue(b,c){final=[0,0,0,0];for(var a=0;4>a;a++)final[a]=Math.floor(b*c[a]);return final}
-$("#stat").on("submit",()=>{$("#result").html("<thead><tr><th>명칭</th><th>소모량</th><th>상승예측량</th></tr></thead><tbody></tbody>");arr=[$("#atk").val(),$("#hit").val(),$("#dod").val(),$("#spd").val()];for(i in HG)num=getOneTypeCount(arr,HG[i]),result=getFinalValue(num,HG[i]),"avg"==i?$("#result").append(`<tr><td><img src="img/etc/hg.png"></td><td>${num}</td><td><img src="img/etc/Icon_dmg_b.png" style="width:5%">화력:${result[0]}<img src="img/etc/Icon_eva_b.png" style="width:5%">회피:${result[2]}<img src="img/etc/Icon_acc_b.png" style="width:5%">명중:${result[1]}<img src="img/etc/Icon_rof_b.png" style="width:5%">사속:${result[3]}</td></tr>`):$("#result").append(`<tr><td>${i}</td><td>${num}</td><td><img src="img/etc/Icon_dmg.png" style="width:5%">:${result[0]}<img src="img/etc/Icon_eva.png" style="width:5%">:${result[2]}<img src="img/etc/Icon_acc.png" style="width:5%">:${result[1]}<img src="img/etc/Icon_rof.png" style="width:5%">:${result[3]}</td></tr>`);for(i in SMG)num=getOneTypeCount(arr,SMG[i]),result=getFinalValue(num,SMG[i]),"avg"==i?$("#result").append(`<tr><td><img src="img/etc/smg.png"></td><td>${num}</td><td><img src="img/etc/Icon_dmg_b.png" style="width:5%">화력:${result[0]}<img src="img/etc/Icon_eva_b.png" style="width:5%">회피:${result[2]}<img src="img/etc/Icon_acc_b.png" style="width:5%">명중:${result[1]}<img src="img/etc/Icon_rof_b.png" style="width:5%">사속:${result[3]}</td></tr>`):$("#result").append(`<tr><td>${i}</td><td>${num}</td><td><img src="img/etc/Icon_dmg.png" style="width:5%">:${result[0]}<img src="img/etc/Icon_eva.png" style="width:5%">:${result[2]}<img src="img/etc/Icon_acc.png" style="width:5%">:${result[1]}<img src="img/etc/Icon_rof.png" style="width:5%">:${result[3]}</td></tr>`);for(i in RF)num=getOneTypeCount(arr,RF[i]),result=getFinalValue(num,RF[i]),"avg"==i?$("#result").append(`<tr><td><img src="img/etc/rf.png"></td><td>${num}</td><td><img src="img/etc/Icon_dmg_b.png" style="width:5%">화력:${result[0]}<img src="img/etc/Icon_eva_b.png" style="width:5%">회피:${result[2]}<img src="img/etc/Icon_acc_b.png" style="width:5%">명중:${result[1]}<img src="img/etc/Icon_rof_b.png" style="width:5%">사속:${result[3]}</td></tr>`):$("#result").append(`<tr><td>${i}</td><td>${num}</td><td><img src="img/etc/Icon_dmg.png" style="width:5%">:${result[0]}<img src="img/etc/Icon_eva.png" style="width:5%">:${result[2]}<img src="img/etc/Icon_acc.png" style="width:5%">:${result[1]}<img src="img/etc/Icon_rof.png" style="width:5%">:${result[3]}</td></tr>`);for(i in AR)num=getOneTypeCount(arr,AR[i]),result=getFinalValue(num,AR[i]),"avg"==i?$("#result").append(`<tr><td><img src="img/etc/ar.png"></td><td>${num}</td><td><img src="img/etc/Icon_dmg_b.png" style="width:5%">화력:${result[0]}<img src="img/etc/Icon_eva_b.png" style="width:5%">회피:${result[2]}<img src="img/etc/Icon_acc_b.png" style="width:5%">명중:${result[1]}<img src="img/etc/Icon_rof_b.png" style="width:5%">사속:${result[3]}</td></tr>`):$("#result").append(`<tr><td>${i}</td><td>${num}</td><td><img src="img/etc/Icon_dmg.png" style="width:5%">:${result[0]}<img src="img/etc/Icon_eva.png" style="width:5%">:${result[2]}<img src="img/etc/Icon_acc.png" style="width:5%">:${result[1]}<img src="img/etc/Icon_rof.png" style="width:5%">:${result[3]}</td></tr>`);for(i in MG)num=getOneTypeCount(arr,MG[i]),result=getFinalValue(num,MG[i]),"avg"==i?$("#result").append(`<tr><td><img src="img/etc/mg.png"></td><td>${num}</td><td><img src="img/etc/Icon_dmg_b.png" style="width:5%">화력:${result[0]}<img src="img/etc/Icon_eva_b.png" style="width:5%">회피:${result[2]}<img src="img/etc/Icon_acc_b.png" style="width:5%">명중:${result[1]}<img src="img/etc/Icon_rof_b.png" style="width:5%">사속:${result[3]}</td></tr>`):$("#result").append(`<tr><td>${i}</td><td>${num}</td><td><img src="img/etc/Icon_dmg.png" style="width:5%">:${result[0]}<img src="img/etc/Icon_eva.png" style="width:5%">:${result[2]}<img src="img/etc/Icon_acc.png" style="width:5%">:${result[1]}<img src="img/etc/Icon_rof.png" style="width:5%">:${result[3]}</td></tr>`);return!1});
+$("#atk,#dod,#hit,#spd").addClass("my-2 rounded-0 form-control text-center mx-auto").attr({"data-toggle":"tooltip","data-placement":"top"})
+var HG={avg:[.21,.25,.35,.24],M1911:[.2,.2323,.3176,.2426],"나강 리볼버":[.2164,.2323,.3667,.1944],P38:[.2,.2323,.3429,.2426],"FNP-9":[.2164,.2625,.3667,.2625],PPK:[.183,.263,.389,.263],"MP-446":[.2164,.2625,.3176,.2526],"Bren Ten":[.2323,.2625,.3176,.2526],"USP Compact":[.1831,.2909,.3667,.2722]},
+	SMG={avg:[.21,.09,.32,.31],M3:[.2164,.0889,.3176,.2816],"PPSh-41":[.2,.0889,.2909,.3628],PP2000:[.2323,.0889,.3667,.3304],"MP-40":[.2164,.0889,.2909,.3089],"베레타38형":[.2323,.0889,.2625,.3089],m45:[.2323,.0889,.3176,.3089],"Spectre M4":[.2,.0889,.3429,.3549],IDW:[.1831,.0889,.3429,.2955],"64식":[.2164,.0889,.3176,.3628]},
+	RF={avg:[.54,.31,.18,.17],"SVT-38":[.526,.291,.2,.166],G43:[.541,.291,.166,.183],"시모노프":[.5258,.2909,.2,.1655],"FN-49":[.5407,.2909,.1655,.1535],BM59:[.5548,.2909,.1655,.1831]},
+	AR={avg:[.32,.21,.2,.27],G3:[.3781,.2323,.2,.2576],L85A1:[.3304,.2,.2,.2674],"갈릴":[.3176,.2,.2,.3089],"SIG-510":[.3781,.2,.2,.2476],F2000:[.3176,.2323,.2323,.3304],"63식":[.3667,.2,.2,.3]},
+	MG={avg:[.48,.15,.17,.41],LWMMG:[.5258,.1655,.1655,.3628],DP28:[.4593,.1655,.1655,.4035],MG34:[.4683,.1286,.1655,.4275],FG42:[.4683,.1655,.2,.4275],"AAT-52":[.4857,.1655,.1655,.4405]},
+	dir="img/etc/";
+function getOneTypeCount(c){
+	var b=[0,0,0,0],c=["atk","hit","dod","spd"],a;
+	for(a=0;4>a;a++)b[a]=Math.ceil(""==document.getElementById(c[a]).value?0:document.getElementById(c[a]).value/d[a]);
+	return max=Math.max.apply(Math,b)
+};
+function getFinalValue(b,c){
+	final=[0,0,0,0];
+	for(var a=0;4>a;a++){final[a]=Math.floor(b*c[a])}
+	return final
+}
+function resulttable(type,TI,i){
+	num=getOneTypeCount(type[i]),result=getFinalValue(num,type[i]);
+	"avg"==i?$("#result").append(`<tr><td><img src="${dir}${TI}.png"></td><td>${num}</td><td><img src="${dir}Icon_dmg_b.png">화력:${result[0]}<img src="${dir}Icon_eva_b.png">회피:${result[2]}<img src="${dir}Icon_acc_b.png">명중:${result[1]}<img src="${dir}Icon_rof_b.png">사속:${result[3]}</td></tr>`):$("#result").append(`<tr><td>${i}</td><td>${num}</td><td><img src="${dir}Icon_dmg.png">:${result[0]}<img src="${dir}Icon_eva.png">:${result[2]}<img src="${dir}Icon_acc.png">:${result[1]}<img src="${dir}Icon_rof.png">:${result[3]}</td></tr>`);
+}
+$("#clickme").click(()=>{
+	$("#result").html("<thead><tr><th>명칭</th><th>소모량</th><th>상승예측량</th></tr></thead><tbody></tbody>");
+	for(;;){
+		for(i in HG){resulttable(HG,"hg",i)}
+		for(i in SMG){resulttable(SMG,"smg",i)}
+		for(i in RF){resulttable(RF,"rf",i)}
+		for(i in AR){resulttable(AR,"ar",i)}
+		for(i in MG){resulttable(MG,"mg",i)}
+		$("#tab6").css("height",($("#tab6").children()[2].clientHeight*1.4|1)+"px");
+	return!1};
+});
 // battery by kosehy
 var arrCom="1com 2com 3com 4com 5com 6com 7com 8com 9com 10com".split(" "),arrSet="1set 2set 3set 4set 5set 6set 7set 8set 9set 10set".split(" "),arrPet="1pet 2pet 3pet 4pet 5pet 6pet 7pet 8pet 9pet 10pet".split(" "),arrTcom="1tcom 2tcom 3tcom 4tcom 5tcom 6tcom 7tcom 8tcom 9tcom 10tcom".split(" "),arrTnr=[0,50,85,95,99,101,102,102,102.5,103,103.5],i;
-for(i=0;i<arrCom.length;i++){
+for(i in arrCom){
 document.getElementById(arrCom[i]).addEventListener("keyup",sumComfort);
 document.getElementById(arrSet[i]).addEventListener("keyup",sumComfort);
 document.getElementById(arrPet[i]).addEventListener("keyup",sumComfort);
@@ -73,7 +105,7 @@ document.getElementById(arrTcom[i]).addEventListener("keyup",sumComfort)
 }
 var totalCom=0,totalTcom=0,numOfroom=0,totalBr=0,averageTbr=0;
 function sumComfort(){
-for(i=0;i<arrCom.length;i++){
+for(i in arrCom){
 totalCom=Number(document.getElementById(arrCom[i]).value)+Number(document.getElementById(arrSet[i]).value)+Number(document.getElementById(arrPet[i]).value);
 document.getElementById(arrTcom[i]).value=totalCom;
 totalCom=0;
