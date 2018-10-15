@@ -19,18 +19,19 @@ function dominit(){
 function contentsload(){
 	fetch("../json/doll.json").then(response=>response.json().then(function(tdoll){
 		dollData=tdoll;
-		var allCharacters=$.map(dollData,(doll,index)=>{
-			var timehour=(doll.buildTime/3600|0),timemin=doll.buildTime%3600/60,noval=doll.id,dollT=[0,0,0,0,0,0,0,0,0],cho=cho_hangul(`${doll.krName}`);
+		var allCharacters=dollData.map(doll=>{
+			var temp=document.createDocumentFragment(),timehour=(doll.buildTime/3600|0),timemin=doll.buildTime%3600/60,noval=doll.id,dollT=[0,0,0,0,0,0,0,0,0],cho=cho_hangul(`${doll.krName}`);
 			noval>2E4?noval="M"+(noval-2E4):noval>1E3&&(noval="X"+(noval-1E3));
-			$.each(doll.Fx.tile,(index,value)=>dollT[value-1]=1),dollT[doll.Fx.self-1]=2;
-			var character=$(`<div class="item" data-time="${timehour}${timemin}" data-type="${doll.type}" data-rarity="${doll.rarity}" data-skill="${doll.skill.src}"></div>`).detach()
-				,dollcon=`<div class="text-white no" data-no="${doll.id}">${noval}</div><p class="name podo">${doll.krName}</p><i class="star r${doll.rarity}"></i><i class="incage doll info_cage_${doll.rarity}"></i><i class="type doll ${doll.type}_${doll.rarity}"></i><img class="dollbg" width="175" height="276" data-src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@${ghver}/img/t_doll/${doll.id}_i.jpg" onload="this.removeAttribute('class'),this.removeAttribute('onload')"><div class="tag">${doll.type}/${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}/${doll.skill.src}/${dollT}/${cho}</div>`;
-			character.append(`<div class="tdoll item-content">`).find(".item-content").html(dollcon);
-			return character;
+			doll.Fx.tile.map(tile=>dollT[tile-1]=1,dollT[doll.Fx.self-1]=2);
+			temp.appendChild(document.createElement("div")).classList.add("item");
+			setAttributes(temp.querySelector(".item"),{"data-time":timehour+timemin,"data-type":doll.type,"data-rarity":doll.rarity,"data-skill":doll.skill.src});
+			temp.querySelector(".item").innerHTML=`<div class="tdoll item-content"><div class="text-white no" data-no="${doll.id}">${noval}</div><p class="name podo">${doll.krName}</p><i class="star r${doll.rarity}"></i><i class="incage doll info_cage_${doll.rarity}"></i><i class="type doll ${doll.type}_${doll.rarity}"></i><img class="dollbg" width="175" height="276" data-src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@${ghver}/img/t_doll/${doll.id}_i.jpg" onload="this.removeAttribute('class'),this.removeAttribute('onload')"><div class="tag">${doll.type}/${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}/${doll.skill.src}/${dollT}/${cho}</div></div>`;
+			return temp
 		});
 		main.append(allCharacters),loadComplete(),LazyLoad.update();
 	}));
 };
+function setAttributes(el,attrs){for(var key in attrs){el.setAttribute(key,attrs[key])}};
 function loadComplete(){
 	grid=new Muuri("#grid",{
 		showDuration:null,hideDuration:null,layoutDuration:null,showEasing:null,hideEasing:null,layoutEasing:null,
@@ -62,24 +63,21 @@ function loadComplete(){
 		loader.addClass("is-active");
 		$("#grid,#search,#func").toggleClass("d-none"),$("#filter").toggleClass("d-flex d-none"),$(".tileFilter").popover("hide");
 		var clicked=($(this).children(".no").attr("data-no")|0);
-		$.each(dollData,(index,doll)=>{
+		dollData.map(doll=>{
 			if(doll.id===clicked){
 				var simg=idir+doll.id,cimg=simg+".png",timehour=(doll.buildTime/3600|0),timemin=doll.buildTime%3600/60,time=`${timehour}시간${timemin}분`,gridself=`#grid${doll.Fx.self}`,gridPos=[],skins=[];
-				$.each(doll.Fx.tile,(index,value)=>gridPos.push(`#grid${value}`));
+				doll.Fx.tile.map(tile=>gridPos.push(`#grid${tile}`));
 				gridPos=gridPos.toString();
 				for(let x=1;x<10;x++){$(`#grid${x}`).removeClass("bg-white aqua grey").addClass("grey")};
 				$("body,html").animate({scrollTop:0},0);
-				$(".blockquote>p:nth-child(1)").html(doll.krName);
-				utteranc(doll.id);
-				$.each(doll.skins,(index,value)=>skins.push(`<button type="button" class="btn btn-warning btn-sm">${value}</button>`));
+				if(typeof doll.skins!=="undefined"){doll.skins.map(skin=>skins.push(`<button type="button" class="btn btn-warning btn-sm">${skin}</button>`))}
 				$(".skinntg,#contents>div:nth-child(6)").append(skins);
 				$("#contents>div:nth-child(6)>button").addClass("btn-block");
 				imgtag.attr("src",cimg);
-				$("#CV").text(doll.voice);
-				$("#illust").text(doll.illust);
-				$("#GN").html(doll.name);
+				var stat={".blockquote>p":doll.krName,"#CV":doll.voice,"#illust":doll.illust,"#GN":doll.name,"#Time":time};
+				utteranc(doll.id);
+				for(var key in stat)document.querySelector(key).innerHTML=stat[key];
 				preview.ready(doll.name,doll.name);
-				$("#Time").html(time);
 				$("#Drop").attr("data-content",doll.drop);
 				$(gridself).removeClass("grey").addClass("bg-white");
 				$(gridPos).removeClass("grey").addClass("aqua");
@@ -160,9 +158,9 @@ function chrtset(x,y){
 	"mg"==ty?Set2("MG",[171,89,28,119,28],140,90):
 	"sg"==ty&&Set2("SG",[261,32,11,28,11],90,140);
 	function table(k){
-		var a,hp=x.hp,dmg=x.dmg,ammo=x.ammo,armor=x.armor,dodge=x.dodge,hit=x.hit,FR=x.FR,cri=x.cri,time=x.time,MS=x.MS,OC=x.OC,errchk=[armor,OC,ammo];
+		var a,n,hp=x.hp,dmg=x.dmg,ammo=x.ammo,armor=x.armor,dodge=x.dodge,hit=x.hit,FR=x.FR,cri=x.cri,time=x.time,MS=x.MS,OC=x.OC,errchk=[armor,OC,ammo];
 		$.each(errchk,(index,chkname)=>{typeof chkname=="undefined"?index===0?armor=["",""]:index===1?OC=["",""]:index===2&&(ammo=[""]):``});
-		for(let n=1;n<21;n++){
+		for(n=1;n<21;n++){
 			n==1?a=`체력`:
 			n==2?a=`${hp[0]} ~ ${hp[k]}`:
 			n==3?a=`입수 방법`:
@@ -191,7 +189,7 @@ function chrtset(x,y){
 			n==20&&(a=`${ammo}`);
 			tableA.find(`div:nth-child(${n})`).html(a);
 		}
-		for(let n=1;n<21;n++){
+		for(n=1;n<21;n++){
 			n==1?a=`장갑`:
 			n==2?a=`${armor[0]} ~ ${armor[k]}`:
 			n==3?a=`기동력`:
