@@ -93,7 +93,7 @@ function getFinalValue(b,c){
 }
 function resulttable(type,TI,i){
 	dom=doc.getElementById("result"),num=getOneTypeCount(type[i]),result=getFinalValue(num,type[i]);
-	"avg"==i?$("#result").append(`<tr><td><img src="${dir}${TI}.png"></td><td>${num}</td><td><img src="${dir}Icon_dmg_b.png">화력:${result[0]}<img src="${dir}Icon_eva_b.png">회피:${result[2]}<img src="${dir}Icon_acc_b.png">명중:${result[1]}<img src="${dir}Icon_rof_b.png">사속:${result[3]}</td></tr>`):$("#result").append(`<tr><td>${i}</td><td>${num}</td><td><img src="${dir}Icon_dmg.png">:${result[0]}<img src="${dir}Icon_eva.png">:${result[2]}<img src="${dir}Icon_acc.png">:${result[1]}<img src="${dir}Icon_rof.png">:${result[3]}</td></tr>`);
+	"avg"==i?$("#result").append(`<tr><td><img src="${dir}${TI}.png"></td><td>${num}</td><td><img src="${dir}Icon_dmg_b.png">화력 :${result[0]}   <img src="${dir}Icon_eva_b.png">회피 :${result[2]}   <img src="${dir}Icon_acc_b.png">명중 :${result[1]}   <img src="${dir}Icon_rof_b.png">사속 :${result[3]}</td></tr>`) :$("#result").append(`<tr><td>${i}</td><td>${num}</td><td><img src="${dir}Icon_dmg.png"> :${result[0]}   <img src="${dir}Icon_eva.png"> :${result[2]}   <img src="${dir}Icon_acc.png"> :${result[1]}   <img src="${dir}Icon_rof.png"> :${result[3]}</td></tr>`);
 }
 $("#clickme").click(()=>{
 	doc.getElementById("result").innerHTML="<thead><tr><th>명칭</th><th>소모량</th><th>상승예측량</th></tr></thead><tbody></tbody>";

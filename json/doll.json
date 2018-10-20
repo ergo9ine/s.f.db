@@ -32,10 +32,15 @@
 "dmg":24,
 "hit":50
 }},
-"spec":["Type Revolver Weight 1.048 g (with 7½\" barrel)",
-"Length 11\" (279 mm – with 5½\" barrel); 12.5\" (318 mm – with 7½\" barrel)",
-"Cartridge .45 Colt. .44-40 WCF. .38-40 WCF. .32-20 WCF. .38 Colt and many others. including .22 LR. .38 Special. .357 Magnum and .44 Special",
-"Action Single-action revolver",
+"respec":[
+	{"Type":"Revolver"},
+	{"Weight":"1.048 g (with 7½\" barrel)"},
+	{"Length":["11\" (279 mm – with 5½\" barrel);","12.5\" (318 mm – with 7½\" barrel)"]}
+],
+"spec":["Type Revolver Weight 1.048 g (with 7½\" barrel)\n",
+"Length 11\" (279 mm – with 5½\" barrel); 12.5\" (318 mm – with 7½\" barrel)\n",
+"Cartridge .45 Colt. .44-40 WCF. .38-40 WCF. .32-20 WCF. .38 Colt and many others. including .22 LR. .38 Special. .357 Magnum and .44 Special\n",
+"Action Single-action revolver\n",
 "Feed system 6-shot Cylinder"]},{
 "id":2,
 "OC":[150,2425],

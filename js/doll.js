@@ -65,22 +65,26 @@ function loadComplete(){
 		var clicked=($(this).children(".no").attr("data-no")|0);
 		dollData.map(doll=>{
 			if(doll.id===clicked){
-				var simg=idir+doll.id,cimg=simg+".png",timehour=(doll.buildTime/3600|0),timemin=doll.buildTime%3600/60,time=`${timehour}시간${timemin}분`,gridself=`#grid${doll.Fx.self}`,gridPos=[],skins=[];
+				var simg=idir+doll.id,cimg=simg+".png",timehour=(doll.buildTime/3600|0),timemin=doll.buildTime%3600/60,time=`${timehour}시간${timemin}분`,gridself=`#grid${doll.Fx.self}`,gridPos=[],skins=[],i=0,x,name;
 				doll.Fx.tile.map(tile=>gridPos.push(`#grid${tile}`));
-				gridPos=gridPos.toString();
-				for(let x=1;x<10;x++){$(`#grid${x}`).removeClass("bg-white aqua grey").addClass("grey")};
+				for(x=1;x<10;x++){$(`#grid${x}`).removeClass("bg-white aqua grey").addClass("grey")};
+				document.querySelector(gridself).classList.add("grey");
+				document.querySelector(gridself).classList.add("bg-white");
+				for(var target of document.querySelectorAll(gridPos)){target.classList.remove("grey"),target.classList.add("aqua")}
 				$("body,html").animate({scrollTop:0},0);
-				if(typeof doll.skins!=="undefined"){doll.skins.map(skin=>skins.push(`<button type="button" class="btn btn-warning btn-sm">${skin}</button>`))}
-				$(".skinntg,#contents>div:nth-child(6)").append(skins);
-				$("#contents>div:nth-child(6)>button").addClass("btn-block");
-				imgtag.attr("src",cimg);
+				if(typeof doll.skins!=="undefined"){doll.skins.map(skin=>{for(var target of document.querySelectorAll(".skinntg,#contents>div:nth-child(6)")){target.innerHTML+=`<button type="button" class="btn btn-warning btn-sm">${skin}</button>`}})};
+				document.querySelector("#contents>div:nth-child(6)>button").classList.add("btn-block");
 				var stat={".blockquote>p":doll.krName,"#CV":doll.voice,"#illust":doll.illust,"#GN":doll.name,"#Time":time};
-				utteranc(doll.id);
 				for(var key in stat)document.querySelector(key).innerHTML=stat[key];
-				preview.ready(doll.name,doll.name);
+				utteranc(doll.id);
+				if(typeof doll.skins!=="undefined"){for(var line of doll.respec){
+					for(name in line){name=name};
+					document.getElementById("doll").innerHTML+=`<div id="${name}" class="row no-gutters"><div class="head col-4">${name}</div><div class="tail col-8"></div></div>`;
+					if(Array.isArray(line[name])){for(var val of line[name]){if(line[name].indexOf(val)==0){document.getElementById(name).querySelector(".tail").innerHTML=`${val}`}else{document.getElementById(name).querySelector(".tail").innerHTML+=`<br>${val}`}}}else{document.getElementById(name).querySelector(".tail").innerHTML+=`${line[name]}`}
+				}}
+				imgtag.attr("src",cimg);
 				$("#Drop").attr("data-content",doll.drop);
-				$(gridself).removeClass("grey").addClass("bg-white");
-				$(gridPos).removeClass("grey").addClass("aqua");
+				preview.ready(doll.name,doll.name);
 				var options={
 					chart:{height:365,type:'line',stacked:false},
 					dataLabels:{enabled:false},
@@ -104,7 +108,7 @@ function loadComplete(){
 							position:'topLeft',// topRight,topLeft,bottomRight,bottomLeft
 							offsetY:30,
 							offsetX:60
-						},
+						}
 					},
 					legend:{
 						horizontalAlign:'left',
