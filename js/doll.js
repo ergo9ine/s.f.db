@@ -7,14 +7,13 @@ const tableA=$("#table"),tableB=$("#graph"),main=$("#grid"),loader=$(".loader"),
 $(document).ready(()=>{
 	dominit();
 	contentsload();
-	$("[data-toggle='popover']").popover();
-	$(".tileFilter").popover({html:true,content:function(){return $("#tileFilter").html()}});
 	game.init();
 });
 function dominit(){
-	const stat=$("#table,#graph");
-	for(let n=0;n<20;n++){stat.append("<div></div>")}
+	for(var item of document.querySelectorAll("#table,#graph")){for(let n=0;n<20;n++){item.appendChild(document.createElement("div"))}};
 	$("#table,#graph").children().addClass("col-6").parent().children("div:nth-child(2n-2)").addClass("bg-secondary").parent().children("div:nth-child(2n-1)").addClass("bg-dark");
+	$("[data-toggle='popover']").popover();
+	$(".tileFilter").popover({html:true,content:function(){return $("#tileFilter").html()}});
 }
 function contentsload(){
 	fetch("../json/doll.json").then(response=>response.json().then(function(tdoll){
@@ -77,7 +76,7 @@ function loadComplete(){
 				var stat={".blockquote>p":doll.krName,"#CV":doll.voice,"#illust":doll.illust,"#GN":doll.name,"#Time":time};
 				for(var key in stat)document.querySelector(key).innerHTML=stat[key];
 				utteranc(doll.id);
-				if(typeof doll.skins!=="undefined"){for(var line of doll.respec){
+				if(typeof doll.respec!=="undefined"){for(var line of doll.respec){
 					for(name in line){name=name};
 					document.getElementById("doll").innerHTML+=`<div id="${name}" class="row no-gutters"><div class="head col-4">${name}</div><div class="tail col-8"></div></div>`;
 					if(Array.isArray(line[name])){for(var val of line[name]){if(line[name].indexOf(val)==0){document.getElementById(name).querySelector(".tail").innerHTML=`${val}`}else{document.getElementById(name).querySelector(".tail").innerHTML+=`<br>${val}`}}}else{document.getElementById(name).querySelector(".tail").innerHTML+=`${line[name]}`}
@@ -146,11 +145,15 @@ function filter(a){grid.filter(`${a}`)};
 function Sval(a){$("#search").val(a),$("#search").click()};
 function utteranc(index){
 	$(".blockquote-footer>cite:nth-child(1)").html(index);
-	//var sc=document.createElement("script");
-	//$(sc).attr({"async":"async","repo":"ergo9ine/sfdb_tracker","issue-term":index,"theme":"github-dark","crossorigin":"anonymous","src":"https://utteranc.es/client.js"});
-	$("meta[property='title']").attr("content","doll No."+index);
-	var utteranc=$("<script type='text/javascript' src='https://utteranc.es/client.js' issue-term='title' repo='ergo9ine/sfdb_tracker' theme='github-dark' crossorigin='anonymous' async><\/script>").detach();
-	$("#dolldiscussion").html(utteranc);
+	var discussion=document.getElementById('dolldiscussion');
+	if(!discussion)return;
+	var script=document.createElement('script');
+	script.src='https://utteranc.es/client.js';
+	script.setAttribute('repo','ergo9ine/sfdb_tracker');
+	script.setAttribute('issue-term',index);
+	script.setAttribute('theme','github-dark');
+	script.setAttribute('crossorigin','anonymous');
+	discussion.appendChild(script);
 };
 function chrtset(x,y){
 	var ty=x.type,D="5링크시 <br>탄약 C,식량 M 소모";
@@ -429,7 +432,8 @@ function togglecon(){
 	$(".skinntg>button").off("click");
 	preview.stage.off("pointerdown");
 	SimpleBar.removeObserver();
-	$("#dolldiscussion").empty();
+	document.getElementById("doll").innerHTML="";
+	document.getElementById("dolldiscussion").innerHTML="";
 };
 $(".filter,.dropdown-menu>a").click(function(){
 	var filtr=$(this).text(),t0=$("[data-time='00']");
