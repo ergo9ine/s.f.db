@@ -33,7 +33,8 @@
 svg>text{fill:#fff}
 #chart{background-color:#fff}
 #CV,#Drop,#GN,#Time,#illust,svg>text{dominant-baseline:central;text-anchor:middle}
-#CV,#Drop,#illust{fill:#261dae}
+#CV,#Drop,#illust{fill:dodgerblue}
+#graph>div>a{color:aquamarine}
 #GN,#Time{fill:#000}
 @media all and (min-width:201px){
 	#grid {

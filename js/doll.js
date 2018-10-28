@@ -25,7 +25,7 @@ function contentsload(){
 			doll.Fx.tile.map(tile=>dollT[tile-1]=1,dollT[doll.Fx.self-1]=2);
 			temp.appendChild(document.createElement("div")).classList.add("item");
 			setAttributes(temp.querySelector(".item"),{"data-time":timehour+timemin,"data-type":doll.type,"data-rarity":doll.rarity,"data-skill":doll.skill.src});
-			temp.querySelector(".item").innerHTML=`<div class="tdoll item-content"><div class="text-white no" data-no="${doll.id}">${noval}</div><p class="name podo">${doll.krName}</p><i class="star r${doll.rarity}"></i><i class="incage doll info_cage_${doll.rarity}"></i><i class="type doll ${doll.type}_${doll.rarity}"></i><img class="dollbg" width="175" height="276" data-src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@${ghver}/img/t_doll/${doll.id}_i.jpg" onload="this.removeAttribute('class'),this.removeAttribute('onload')"><div class="tag">${doll.type}/${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}/${doll.skill.src}/${dollT}/${cho}</div></div>`;
+			temp.querySelector(".item").innerHTML=`<div class="tdoll item-content"><div class="text-white no" data-no="${doll.id}">${noval}</div><p class="name podo">${doll.krName}</p><i class="star r${doll.rarity}"></i><i class="incage doll info_cage_${doll.rarity}"></i><i class="type doll ${doll.type}_${doll.rarity}"></i><img class="dollbg" width="175" height="276" data-src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@${ghver}/img/t_doll/${doll.id}_i.jpg" onload="this.removeAttribute('class'),this.removeAttribute('onload')"><div class="tag">${doll.type}/${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}/${doll.skill.src}/${dollT}/${cho}/${doll.Country}/${doll.Manuf}/${doll.faction}</div></div>`;
 			return temp
 		});
 		main.append(allCharacters),loadComplete(),LazyLoad.update();
@@ -138,7 +138,7 @@ function dollload(num){
 };
 function sort(a){grid.sort(a)};
 function filter(a){grid.filter(`${a}`)};
-function Sval(a){$("#search").val(a),$("#search").click()};
+function Sval(a){document.getElementById("search").value=a;document.getElementById("search").click()};
 function utteranc(index){
 	document.querySelector(".blockquote-footer>cite:nth-child(1)").innerHTML=index;
 	var discussion=document.getElementById('dolldiscussion');
@@ -162,10 +162,13 @@ function chrtset(x,y){
 	"sg"==ty&&(Set2("SG",[261,32,11,28,11],90,140),spd=6,crit=40);
 	"true"==x.mod?(Set1(2),table(2)):(Set1(1),table(1));
 	function table(k){
-		var a,n,mod,Fname=x.Fname,Country=x.Country,Manuf=x.Manuf,faction=x.faction,Potential=x.Potential,hp=x.hp,dmg=x.dmg,ammo=x.ammo,armor=x.armor,dodge=x.dodge,hit=x.hit,FR=x.FR,cri=x.cri,time=x.time,MS=x.MS,OC=x.OC,Teuqip=x.Teuqip;
-		var modchk=Number(document.querySelector(".blockquote-footer>cite:nth-child(1)").innerHTML)+20000;
-		if(!armor){armor=["",""]}
-		if(!OC){OC=["",""]}
+		var a,n,mod,wiki=x.wiki,Fname=x.Fname,Country=x.Country,Manuf=x.Manuf,faction=x.faction,Potential=x.Potential,hp=x.hp,dmg=x.dmg,ammo=x.ammo,armor=x.armor,dodge=x.dodge,hit=x.hit,FR=x.FR,time=x.time,MS=x.MS,OC=x.OC,Teuqip=x.Teuqip;
+		var modchk=x.id+20000;
+		if(!armor){armor=["",""]};
+		if(wiki){Fname=`<a href="https://en.wikipedia.org/wiki/${wiki}" style="color:aquamarine">${Fname}</a>`};
+		if(!OC){OC=["",""]};
+		if(!wiki){wiki=""};
+		if(x.id==20056){crit=30};
 		dollData.map(doll=>{if(doll.id==modchk){mod=doll.name}});
 		for(n=1;n<21;n++){
 			a=
@@ -182,7 +185,7 @@ function chrtset(x,y){
 			n==11?`사속`:
 			n==12?`${FR[0]} ~ ${FR[k]}`:
 			n==13?`치명타율`:
-			n==14?`${crit}`:
+			n==14?`${crit}%`:
 			n==15?`치명타 피해`:
 			n==16?`50%`:
 			n==17?`방어력 관통`:
@@ -200,11 +203,11 @@ function chrtset(x,y){
 			n==5?`풀네임`:
 			n==6?`${Fname}`:
 			n==7?`설계 국가`:
-			n==8?`${Country}`:
+			n==8?`<a href="#">${Country}</a>`:
 			n==9?`제조사`:
-			n==10?`${Manuf}`:
+			n==10?`<a href="#">${Manuf}</a>`:
 			n==11?`소속`:
-			n==12?`${faction}`:
+			n==12?`<a href="#">${faction}</a>`:
 			n==13?`전용장비`:
 			n==14?`${Teuqip}`:
 			n==15?`개조유무`:
@@ -226,7 +229,14 @@ function chrtset(x,y){
 	};
 	function Set1(z){y.series[0].data=[x.hp[z],x.dmg[z],x.dodge[z],x.FR[z],x.hit[z]]};
 	function Set2(a,b,c,d){y.series[1].name=a+" 평균";y.series[1].data=b;D=D.replace("C",c).replace("M",d)};
-	document.querySelector("#sec-fir>div:nth-child(2)>div:nth-child(2)").innerHTML=D
+	document.querySelector("#sec-fir>div:nth-child(2)>div:nth-child(2)").innerHTML=D;
+	//$("#graph>div:nth-child(8)").click(function(){togglecon(),Sval(this.innerHTML)});
+	var text,graph=document.querySelector("#graph");
+	for(var i=0;i<6;i+=2){
+		var target=graph.querySelector(`div:nth-child(${i+8})>a`);
+		if(!target){return};
+		target.addEventListener("click",function(){text=this.innerHTML.replace("&amp;","&").replace("G&K - ",""),search(text)})
+	}
 };
 function fxts(x){
 	var TS="타일 위 타겟에게";
@@ -422,7 +432,6 @@ function Skill(y,x){
 	document.getElementById("Sdesc").innerHTML=Sdesc;
 };
 function togglecon(){
-	rCh.destroy();
 	$("#grid,#search,#func").toggleClass("d-none");
 	$("#filter").toggleClass("d-flex d-none");
 	$("button.btn-warning").remove();
@@ -434,6 +443,7 @@ function togglecon(){
 	SimpleBar.removeObserver();
 	document.getElementById("doll").innerHTML="";
 	document.getElementById("dolldiscussion").innerHTML="";
+	rCh.clearDomElements();
 };
 $(".filter,.dropdown-menu>a").click(function(){
 	var filtr=$(this).text(),t0=$("[data-time='0']");
@@ -478,7 +488,8 @@ $(".tileFilter").on("hide.bs.popover",()=>{
 );
 VoActor.forEach(fltr.VA),$(".VA").click(function(){Sval(VA[VoActor.indexOf($(this).find("span:nth-child(1)").text())])});
 Illustrator.forEach(fltr.Art),$(".Illustrator").click(function(){Sval(Illustrator[Illustrator.indexOf($(this).find("span:nth-child(1)").text())])});
-$("#CV,#illust").click(function(){togglecon(),Sval($(this).text())});
+$("#CV,#illust").click(function(){search(this.innerHTML)});
+function search(query){togglecon(),Sval(query)};
 function cho_hangul(str){
 	var cho=["ㄱ","ㄲ","ㄴ","ㄷ","ㄸ","ㄹ","ㅁ","ㅂ","ㅃ","ㅅ","ㅆ","ㅇ","ㅈ","ㅉ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ"],
 			result="",code,strleng=str.length;

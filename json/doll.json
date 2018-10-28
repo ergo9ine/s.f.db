@@ -5,6 +5,7 @@
 "krName":"콜트 리볼버",
 "name":"M1873",
 "Fname":"Colt Single Action Army Revolver",
+"wiki":"Colt_Single_Action_Army",
 "Country":"United States",
 "Manuf":"Colt Manufacturing Company",
 "rarity":4,
@@ -145,7 +146,7 @@
 "Manuf":"Colt Manufacturing Company",
 "rarity":5,
 "illust":"REALMBW",
-"Potential":"A",
+"Potential":"SS",
 "faction":"Griffin & Kryuger",
 "nick":["파이썬"],
 "hp":[35,70],
@@ -423,7 +424,7 @@
 "type":"hg",
 "krName":"PPK",
 "name":"PPK",
-"Fname":"Walther Polizeipistole Kriminalmodell ",
+"Fname":"Walther Polizeipistole Kriminalmodell",
 "Country":"Germany (Weimar Republic)",
 "Manuf":"Carl Walther GmbH Sportwaffen, Manurhin, InterArms, Smith & Wesson",
 "rarity":2,
@@ -613,7 +614,7 @@
 {"Action":["Short recoil, locked breech,","rotating barrel lock"]},
 {"Muzzle velocity":"350m/s (1,150ft/s) (9×19mm Parabellum)"},
 {"Effective firing range":"50m (9×19mm Parabellum)"},
-{"Feed system ":["Detachable box magazine; capacities:","15 rounds (9×19mm)","20 rounds (5.8×21mm)"]},
+{"Feed system":["Detachable box magazine; capacities:","15 rounds (9×19mm)","20 rounds (5.8×21mm)"]},
 {"Sights":"Fixed, 3-dot type"}]},{
 "id":14,
 "OC":[141,2538],
@@ -788,7 +789,7 @@
 }},"respec":[
 {"Type":"Submachine gun"},
 {"Weight":"8.15lb (3.70kg)"},
-{"Length":["29.8in (760mm) stock extended / ","22.8in (579.1mm) stock collapsed"]},
+{"Length":["29.8in (760mm) stock extended /","22.8in (579.1mm) stock collapsed"]},
 {"Barrel length":"8in (203.2mm)"},
 {"Cartridge":[".45 ACP (11.43x23mm)","9×19mm Parabellum"]},
 {"Action":"Blowback, open bolt"},
@@ -1122,7 +1123,7 @@
 {"Rate of fire":"600–800RPM"},
 {"Effective firing range":"100m (9×19mm Parabellum), 200m (9×19mm 7N31 +P+)"},
 {"Feed system":"20 or 44-round detachable box magazine"},
-{"Sights":["Front post, rear notch; ","MIL-STD-1913 rail provided for optics"]}]},{
+{"Sights":["Front post, rear notch;","MIL-STD-1913 rail provided for optics"]}]},{
 "id":25,
 "OC":[196,3537],
 "type":"smg",
@@ -1271,7 +1272,7 @@
 {"Rate of fire":"850RPM (vz. 61, vz. 61 E)"},
 {"Muzzle velocity":"320m/s (1,050ft/s) (vz. 61, vz. 61 E, vz. 82)"},
 {"Effective firing range":"50–150m(vz. 61, .32 ACP)"},
-{"Feed system":["10 or 20-round curvedmagazine, ","straight boxmagazinein 9mm variants"]},
+{"Feed system":["10 or 20-round curvedmagazine,","straight boxmagazinein 9mm variants"]},
 {"Sights":["Adjustable front post, flip-up rear sight","148mm (5.8in) sight radius"]}]},{
 "id":28,
 "OC":[244],
@@ -1311,7 +1312,7 @@
 }},"respec":[
 {"Type":"Submachine Gun"},
 {"Weight":"1.90kg (4.2lb)"},
-{"Length":["638mm (25.1in) stock extended ","415mm (16.3in) stock collapsed"]},
+{"Length":["638mm (25.1in) stock extended","415mm (16.3in) stock collapsed"]},
 {"Barrel length":"180mm (7.1in)"},
 {"Cartridge":"4.6×30mm"},
 {"Action":"Gas-operated, short stroke piston, rotating bolt"},
@@ -1364,7 +1365,7 @@
 {"Cartridge":"9×19mm Parabellum"},
 {"Action":"Blowback-operated, Open bolt"},
 {"Rate of fire":"version dependent; ~500RPM"},
-{"Muzzle velocity ":["365m/s (1,198ft/s)","305m/s (1,001ft/s) (suppressedmodels)"]},
+{"Muzzle velocity":["365m/s (1,198ft/s)","305m/s (1,001ft/s) (suppressedmodels)"]},
 {"Effective firing range":"100m"},
 {"Feed system":"32-round detachable boxmagazine"},
 {"Sights":"fixed peep rear, post front"}]},{
@@ -1551,9 +1552,9 @@
 }},"respec":[
 {"Type":"Semi-automatic rifle"},
 {"Weight":"9.5lb (4.31kg) to 11.6lb (5.3kg)"},
-{"Length":"43.5in (1,100mm"},
-{"Barrel length":"24in (609.6mm"},
-{"Cartridge":[".30-06 Springfield (7.62×63mm)","7.62×51mm NATO (.308 Winchester) ","(Used by the U.S. Navy and some commercial","companies to modernize the M1 and","increase performance)"]},
+{"Length":"43.5in (1,100mm)"},
+{"Barrel length":"24in (609.6mm)"},
+{"Cartridge":[".30-06 Springfield (7.62×63mm)","7.62×51mm NATO (.308 Winchester)","(Used by the U.S. Navy and some commercial","companies to modernize the M1 and","increase performance)"]},
 {"Action":"Gas-operated, rotating bolt"},
 {"Rate of fire":"40−50RPM"},
 {"Muzzle velocity":"2,800ft/s (853m/s)"},
@@ -1650,9 +1651,9 @@
 {"Rate of fire":"20-30RPM"},
 {"Muzzle velocity":"854m/s (2,800ft/s)"},
 {"Effective firing range":"914m (2,999ft)"},
-{"Maximum firing range":["5,029m (5,500yd) ","with .30 M1 Ball cartridge"]},
-{"Feed system":["5-round stripper clip, ","25-round (Air Service variant) ","internal box magazine"]},
-{"Sights":["Flip-up rear sight graduated to","2,500m (2,700yd), ","barleycorn-type front sight","M1903A3: Aperture rear sight, ","barleycorn-type front sight"]},
+{"Maximum firing range":["5,029m (5,500yd)","with .30 M1 Ball cartridge"]},
+{"Feed system":["5-round stripper clip,","25-round (Air Service variant)","internal box magazine"]},
+{"Sights":["Flip-up rear sight graduated to","2,500m (2,700yd),","barleycorn-type front sight","M1903A3: Aperture rear sight,","barleycorn-type front sight"]},
 {"Blade type":"Bayonet"}]},{
 "id":37,
 "OC":[173,3587],
@@ -1693,8 +1694,8 @@
 }},"respec":[
 {"Type":"Battle rifle"},
 {"Weight":["9.2lb (4.1kg) empty","10.7lb (5.2kg) w/ loaded magazine"]},
-{"Length":"44.3in (1,126mm"},
-{"Barrel length":"22in (559mm"},
+{"Length":"44.3in (1,126mm)"},
+{"Barrel length":"22in (559mm)"},
 {"Cartridge":"7.62×51mm NATO (.308 Winchester)"},
 {"Action":"Gas-operated, rotating bolt"},
 {"Rate of fire":"700–750RPM"},
@@ -2071,8 +2072,7 @@
 {"Muzzle velocity":"760m/s (2,493ft/s)"},
 {"Effective firing range":["500m (550yd) with iron sights","1,000m (1,090yd) with telescopic sight"]},
 {"Feed system":"5-round stripper clip,internal magazine"},
-{"Sights":"Iron sights or telescopic sight."}
-]},{
+{"Sights":"Iron sights or telescopic sight."}]},{
 "id":47,
 "OC":[156,3314],
 "type":"rf",
@@ -2121,8 +2121,7 @@
 {"Muzzle velocity":"746–776m/s (2,448–2,546ft/s)"},
 {"Effective firing range":"500 m, 800m with scope"},
 {"Feed system":"10-round detachable box magazine, stripper clip fed"},
-{"Sights":"Iron sights, Zf42 optical crosshair sight"}
-]},{
+{"Sights":"Iron sights, Zf42 optical crosshair sight"}]},{
 "id":48,
 "type":"rf",
 "krName":"WA2000",
@@ -2167,9 +2166,8 @@
 {"Action":"Gas-operated, rotating bolt"},
 {"Rate of fire":"Semi-automatic"},
 {"Effective firing range":"700m (766yds)"},
-{"Feed system":["6-round detachable box magazine.","A 10-round magazine was also made ","but never used nor exported."]},
-{"Sights":"Schmidt & Bender 2.5–10X telescopic sight"}
-]},{
+{"Feed system":["6-round detachable box magazine.","A 10-round magazine was also made","but never used nor exported."]},
+{"Sights":"Schmidt & Bender 2.5–10X telescopic sight"}]},{
 "id":49,
 "OC":[167,3308],
 "type":"rf",
@@ -2203,7 +2201,16 @@
 "tile":[2,8],
 "TileFx":{
 "time":12
-}}},{
+}},"respec":[
+{"Type":"Semi-automatic rifle"},
+{"Weight":"3.85kg"},
+{"Length":"1025mm"},
+{"Barrel length":"521mm"},
+{"Cartridge":"7.62×39mm"},
+{"Action":"Short stroke gas piston, rotating bolt"},
+{"Muzzle velocity":"730m/s"},
+{"Effective firing range":"400m"},
+{"Feed system":"10-round detachable box magazine"}]},{
 "id":50,
 "OC":[168,3914],
 "type":"rf",
@@ -2238,16 +2245,35 @@
 "tile":[2,8],
 "TileFx":{
 "time":18
-}}},{
+}},"respec":[
+{"Type":"Bolt-action rifle"},
+{"Weight":"4kg (8.8lb)"},
+{"Length":"SMLE: 44in (1,118mm)"},
+{"Barrel length":["MLE: 30.2in (767mm)","SMLE: 25.2in (640mm)"]},
+{"Cartridge":".303 Mk VII SAA Ball"},
+{"Action":"Bolt-action"},
+{"Rate of fire":"20–30 aimed shots per minute"},
+{"Muzzle velocity":"744m/s (2,441ft/s)"},
+{"Effective firing range":"550yd (503m)"},
+{"Maximum firing range":"3,000yd (2,743m)"},
+{"Feed system":"10-round magazine, loaded with 5-round charger clips"},
+{"Sights":["Sliding ramp rear sights, fixed-post front sights,","\"dial\" long-range volley sights;","telescopic sights on sniper models."]}]},{
 "id":51,
 "OC":[157,3109],
 "type":"rf",
 "krName":"FN-49",
 "name":"FN49",
-"Fname":" ",
-"Country":" ",
-"Manuf":" ",
+"Fname":"Fabrique Nationale Model 1949",
+"Country":"Belgium",
+"Manuf":"Fabrique Nationale (FN)",
 "rarity":2,
+"illust":"Bison仓鼠",
+"voice":"Mami Misaki",
+"Potential":"A",
+"faction":"G&K - FN Squad",
+"buildTime":11400,
+"drop":["2-5부터 모든 지역"],
+"nick":["요요요"],
 "hp":[47,93],
 "dmg":[41,111],
 "dodge":[4,32],
@@ -2261,29 +2287,36 @@
 "dmg":[32,55],
 "time":[3,5]
 }},
-"illust":"Bison仓鼠",
-"voice":"Mami Misaki",
-"Potential":" ",
-"faction":"G&K - FN Squad",
-"buildTime":11400,
-"drop":["2-5부터 모든 지역"],
-"nick":["요요요"],
 "Fx":{
 "target":"hg",
 "self":5,
 "tile":[3,9],
 "TileFx":{
 "time":10
-}}},{
+}},"respec":[
+{"Type":"Semi-Automatic Rifle"},
+{"Weight":"4.31kg (9lb 8oz)"},
+{"Length":"1116mm (43.5in)"},
+{"Barrel length":"590mm (23.2in)"},
+{"Cartridge":[".30-06 Springfield,","7.92×57mm Mauser,","7×57mm Mauser,","7.62×51mm NATO,","7.65×53mm Argentine"]},
+{"Action":"Gas-operated, tilting bolt"},
+{"Feed system":["10-round fixed box magazine,","20-round detachable box magazinein Argentine","7.62 NATO conversions"]},
+{"Sights":"Iron sights"}]},{
 "id":52,
 "OC":[167,3156],
 "type":"rf",
 "krName":"BM59",
 "name":"BM59",
-"Fname":" ",
-"Country":" ",
-"Manuf":" ",
+"Fname":"Beretta BM 59",
+"Country":"Italy",
+"Manuf":"Beretta, Bandung Weapons Factory, Defence Industries Corporation",
 "rarity":2,
+"illust":"原子Dan",
+"voice":"Tomoyo Chuujou",
+"Potential":"B",
+"faction":"Griffin & Kryuger",
+"buildTime":12000,
+"drop":["4-2e","4-3e","4-4e","5-2","5-3","5-4","5-5","5-6","5-1e","5-2e","5-3e","5-4e","6-2","6-3","6-4","6-5","6-6","6-1e","6-2e","6-3e","6-4e","7-2","7-3","7-4","7-5","7-6","7-1e","8-2","8-4"],
 "hp":[49,97],
 "dmg":[43,104],
 "dodge":[4,25],
@@ -2297,27 +2330,38 @@
 "FR":[32,55],
 "time":[3,5]
 }},
-"illust":"原子Dan",
-"voice":"Tomoyo Chuujou",
-"Potential":" ",
-"faction":"Griffin & Kryuger",
-"buildTime":12000,
-"drop":["4-2e","4-3e","4-4e","5-2","5-3","5-4","5-5","5-6","5-1e","5-2e","5-3e","5-4e","6-2","6-3","6-4","6-5","6-6","6-1e","6-2e","6-3e","6-4e","7-2","7-3","7-4","7-5","7-6","7-1e","8-2","8-4"],
 "Fx":{
 "target":"hg",
 "self":5,
 "tile":[6],
 "TileFx":{
 "time":10
-}}},{
+}},"respec":[
+{"Type":"Battle rifle"},
+{"Weight":"4.4kg (9.70lb)"},
+{"Length":"1,095mm (43.1in)"},
+{"Barrel length":"491mm (19.3in)"},
+{"Cartridge":"7.62×51mm"},
+{"Action":"Gas-operated, rotating bolt"},
+{"Rate of fire":"750rounds per minute"},
+{"Feed system":"120-round detachable box magazine"},
+{"Sights":"Rear aperture, front post"}]},{
 "id":53,
 "type":"rf",
 "krName":"NTW-20",
 "name":"NTW20",
-"Fname":" ",
-"Country":" ",
-"Manuf":" ",
+"Fname":"Denel NTW-20",
+"Country":"South Africa",
+"Manuf":"Denel Land Systems",
 "rarity":5,
+"illust":"RAN",
+"voice":"Ai Kayano",
+"Potential":"S",
+"faction":"Griffin & Kryuger",
+"buildTime":17100,
+"drop":["8-4e"],
+"skins":["루돌프","무더위 속 임무","VIP 체험관"],
+"nick":["노태우","죽창이"],
 "hp":[47,93],
 "dmg":[56,165],
 "dodge":[4,29],
@@ -2331,29 +2375,38 @@
 "Fx":{
 "dmg":[35,80]
 }},
-"illust":"RAN",
-"voice":"Ai Kayano",
-"Potential":" ",
-"faction":"Griffin & Kryuger",
-"buildTime":17100,
-"drop":["8-4e"],
-"skins":["루돌프","무더위 속 임무","VIP 체험관"],
-"nick":["노태우","죽창이"],
 "Fx":{
 "target":"hg",
 "self":5,
 "tile":[6],
 "TileFx":{
 "time":18
-}}},{
+}},"respec":[
+{"Type":"Anti-materiel rifle"},
+{"Weight":"31kg"},
+{"Length":"1,795mm"},
+{"Barrel length":"1,000mm"},
+{"Crew":["Two; rifle breaks downinto two parts for","transport and fitsinto two backpacks","weighing 15kg each, one containing the weapon","receiver section, while the other contains the","barrel and ammunition"]},
+{"Cartridge":"20×82mm"},
+{"Action":"Bolt-action, recoiling barrel"},
+{"Muzzle velocity":"720m/s"},
+{"Effective firing range":"1,500m"},
+{"Feed system":["3-round detachable box magazine","(20 x 82mm and 14.5 x 114mm)","Single shot (20 x 110mm)"]},
+{"Sights":"8x56 Lynx Telescopic sight"}]},{
 "id":54,
 "type":"ar",
 "krName":"M16A1",
 "name":"M16A1",
-"Fname":" ",
-"Country":" ",
-"Manuf":" ",
+"Fname":"Rifle, Caliber 5.56 mm, M16",
+"Country":"United States",
+"Manuf":"Colt's Manufacturing Company",
 "rarity":4,
+"illust":"海猫络合物",
+"voice":"Yamane Nozomi",
+"Potential":"A",
+"faction":"16LAB - Anti Rain Team",
+"drop":["4-6"],
+"nick":["우리형"],
 "hp":[61,121],
 "dmg":[18,47],
 "dodge":[6,44],
@@ -2366,12 +2419,6 @@
 "Fx":{
 "time":[2.2,4]
 }},
-"illust":"海猫络合物",
-"voice":"Yamane Nozomi",
-"Potential":" ",
-"faction":"16LAB - Anti Rain Team",
-"drop":["4-6"],
-"nick":["우리형"],
 "Fx":{
 "target":"smg",
 "self":5,
@@ -2379,15 +2426,34 @@
 "TileFx":{
 "dmg":10,
 "dodge":12
-}}},{
+}},"respec":[
+{"Type":"Assault rifle"},
+{"Weight":["7.18lb (3.26kg) (unloaded)","8.79lb (3.99kg) (loaded)"]},
+{"Length":"39.5in (1,003mm)"},
+{"Barrel length":"20in (508mm)"},
+{"Cartridge":"5.56×45mm NATO"},
+{"Action":["Gas-operated,","rotating bolt (direct impingement)"]},
+{"Rate of fire":["12–15rounds/min sustained","45–60rounds/min semi-automatic","700–950rounds/min cyclic"]},
+{"Muzzle velocity":"3,110ft/s (948m/s)"},
+{"Effective firing range":["550m (601yd) (point target)","800m (875yd) (area target)"]},
+{"Maximum firing range":"3,600m (3,937yd)"},
+{"Feed system":["20-round detachable box magazine:","0.211lb (96 g) empty / 0.738lb (335 g) full)","30-round detachable box magazine:","0.257lb (117 g) empty / 1.06lb (480 g) full)","Beta C-Mag 100-round double-lobed drum:","2.20lb (1,000 g) empty / 4.81lb (2,180 g) full)"]},
+{"Sights":"Iron sights"}]},{
 "id":55,
+"OC":[175,3484],
 "type":"ar",
 "krName":"M4A1",
 "name":"M4A1",
-"Fname":" ",
-"Country":" ",
-"Manuf":" ",
+"Fname":"M4A1",
+"Country":"United States",
+"Manuf":"Colt's Manufacturing Company",
 "rarity":4,
+"illust":"海猫络合物",
+"voice":"Haruka Tomatsu",
+"Potential":"A",
+"faction":"Griffin & Kryuger",
+"drop":["2-6"],
+"nick":["엠포챠","혐포","시나몬롤"],
 "hp":[55,110],
 "dmg":[17,46],
 "dodge":[6,48],
@@ -2401,12 +2467,6 @@
 "dmg":[40,70],
 "time":[6,10]
 }},
-"illust":"海猫络合物",
-"voice":"Haruka Tomatsu",
-"Potential":" ",
-"faction":"Griffin & Kryuger",
-"drop":["2-6"],
-"nick":["엠포챠","혐포"],
 "Fx":{
 "target":"ar",
 "self":5,
@@ -2414,15 +2474,37 @@
 "TileFx":{
 "dmg":18,
 "cri":30
-}}},{
+}},
+"respec":[
+{"Type":"Assault rifle"},
+{"Weight":["6.36lb (2.88kg) empty","7.5lb (3.4kg) with 30rounds"]},
+{"Length":["33in (840mm (stock extended)","29.75in (756mm) (stock retracted)"]},
+{"Barrel length":"14.5in (370mm)"},
+{"Cartridge":"5.56×45mm NATO"},
+{"Caliber":"5.56mm (.223in)"},
+{"Barrels":"1"},
+{"Action":"Gas-operated, rotating bolt (Direct impingement)"},
+{"Rate of fire":"700–950round/min cyclic"},
+{"Muzzle velocity":"2,900ft/s (880m/s)"},
+{"Effective firing range":"500m (550yd)"},
+{"Feed system":["30-round box magazine or other STANAG magazines.","Other magazines with different","capacities also available."]},
+{"Sights":"Iron sights or various optics"}
+]},{
 "id":56,
+"OC":[176,3528],
 "type":"ar",
 "krName":"M4 SOP ModII",
 "name":"M4 SOP Mod II",
-"Fname":" ",
-"Country":" ",
-"Manuf":" ",
+"Fname":"M4 SOPMOD Block II",
+"Country":"United States",
+"Manuf":"Colt's Manufacturing Company",
 "rarity":4,
+"illust":"海猫络合物",
+"voice":"Yukari Tamura",
+"Potential":"A",
+"faction":"16LAB - Anti Rain Team",
+"drop":["3-3"],
+"nick":["솦모","솦챠","소프챠"],
 "hp":[55,110],
 "dmg":[19,50],
 "dodge":[6,44],
@@ -2435,12 +2517,6 @@
 "Fx":{
 "dmg":[5,12]
 }},
-"illust":"海猫络合物",
-"voice":"Yukari Tamura",
-"Potential":" ",
-"faction":"16LAB - Anti Rain Team",
-"drop":["3-3"],
-"nick":["솦모","솦챠","소프챠"],
 "Fx":{
 "target":"smg",
 "self":5,
@@ -2448,14 +2524,29 @@
 "TileFx":{
 "hit":50,
 "dodge":12
-}}},{
+}},
+"respec":[
+{"Type":"Assault rifle"},
+{"Weight":["6.36lb (2.88kg) empty","7.5lb (3.4kg) with 30rounds"]},
+{"Length":["33in (840mm (stock extended)","29.75in (756mm) (stock retracted)"]},
+{"Barrel length":"14.5in (370mm)"},
+{"Cartridge":"5.56×45mm NATO"},
+{"Caliber":"5.56mm (.223in)"},
+{"Barrels":"1"},
+{"Action":"Gas-operated, rotating bolt (Direct impingement)"},
+{"Rate of fire":"700–950round/min cyclic"},
+{"Muzzle velocity":"2,900ft/s (880m/s)"},
+{"Effective firing range":"500m (550yd)"},
+{"Feed system":["30-round box magazine or other STANAG magazines.","Other magazines with different","capacities also available."]},
+{"Sights":"Iron sights or various optics"}]},{
 "id":57,
+"OC":[167,3493],
 "type":"ar",
 "krName":"ST AR-15",
 "name":"AR15",
-"Fname":" ",
-"Country":" ",
-"Manuf":" ",
+"Fname":"Spikes Tactical 10th Anniversary AR-15",
+"Country":"United States",
+"Manuf":"Spikes Tactical",
 "rarity":4,
 "hp":[53,105],
 "dmg":[17,48],
@@ -2476,7 +2567,7 @@
 "faction":"16LAB - Anti Rain Team",
 "drop":["3-6"],
 "skins":["계절학교에 가다"],
-"nick":["스타"],
+"nick":["스타","찐타"],
 "Fx":{
 "target":"smg",
 "self":5,
@@ -2484,7 +2575,19 @@
 "TileFx":{
 "FR":10,
 "dodge":12
-}}},{
+}},
+"respec":[
+{"Type":"Semi-automatic rifle"},
+{"Weight":"2.27kg–3.9kg (5.5–8.5lb)"},
+{"Length":"991mm (39in)"},
+{"Barrel length":["24in (610mm)","20in (510mm (standard)","18in (460mm)","16in (410mm) (civilian standard)","14.5in (370mm) M4 Military Standard","11.5in (290mm)","10in (250mm","7in (180mm)","6.5in (170mm)"]},
+{"Cartridge":"5.56×45mm NATO and others"},
+{"Action":"Direct impingement or Gas Piston / Via a Rotating bolt"},
+{"Rate of fire":"Depends on operator's speed when pulling trigger"},
+{"Muzzle velocity":"975m/s (3,200ft/s)"},
+{"Effective firing range":"400–600m (avg 547yd)"},
+{"Feed system":"Various STANAG magazines. 5–100-round capacity"},
+{"Sights":"Adjustable front and rear iron sights"}]},{
 "id":58,
 "type":"ar",
 "krName":"AK-47",
@@ -8816,6 +8919,7 @@
 "time":[3,5]
 }}},{
 "id":20055,
+"OC":[3484,4007],
 "type":"ar",
 "name":"M4A1 Mod",
 "Fname":" ",
@@ -8853,12 +8957,45 @@
 "Fx":{
 "dmg":[300,600]
 }}},{
+"id":20056,
+"OC":[3528,4028],
+"Fname":"M4 SOPMOD Block II",
+"Country":"United States",
+"Manuf":"Colt's Manufacturing Company",
+"type":"ar",
+"rarity":5,
+"Mod":true,
+"rarity":4,
+"illust":"ZAGALA",
+"voice":"Yukari Tamura",
+"Potential":"A",
+"faction":"16LAB - Anti Rain Team",
+"drop":["3-3"],
+"nick":["솦모","솦챠","소프챠"],
+"hp":[55,110],
+"dmg":[19,50],
+"dodge":[6,44],
+"hit":[7,49],
+"FR":[54,78],
+"Fx":{
+"target":"smg",
+"self":5,
+"tile":[3,6,9],
+"TileFx":{
+"hit":50,
+"dodge":15
+}},
+"skill":{
+"src":91,
+"FCD":8,
+"CD":[20,16],
+"Fx":{
+"dmg":[6,15]}
+}},{
 "id":20057,
+"OC":[3493,3972],
 "type":"ar",
 "name":"AR15 Mod",
-"Fname":" ",
-"Country":" ",
-"Manuf":" ",
 "rarity":5,
 "Mod":true,
 "hp":[106,107,108],
@@ -8867,7 +9004,6 @@
 "hit":[54,54,55],
 "FR":[78,78,78],
 "voice":"Emiri Katou",
-"Potential":" ",
 "faction":"Griffin & Kryuger",
 "Fx":{
 "target":"smg",
