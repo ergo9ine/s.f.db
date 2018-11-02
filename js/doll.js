@@ -1,8 +1,8 @@
 "use strict";
 var grid,rCh,ghver=1.80902,idir="../img/t_doll/",dollData=[],dollT=[0,0,0,0,0,0,0,0,0],dollSkill=["AimAttackCurrentTarge","AimAttackDistanceTarge","AimAttackSpecificTarge","airattack","airborne","AK12Buff","AN94Shot","AR15Shot","armor","armorBuff","armorBuffSelf","armorDebuff","armorDebuffSelf","BBNoel","bombard","Bronya","buff","Carcano1891","Carcano1938","CBJMS","Chloe","CLEAR","Coldweapon","comboBuffSelf","command","crit","critBuff","critBuffSelf","debuff","defense","dodgeBuff","dodgeBuffSelf","dodgeDebuff","empty","FAIL","fighting","Flare","Flashbomb","fortress","GGElfeldt","golden","Grenade","Himeko","hitBuff","hitBuffSelf","hitDebuff","illumine","Invincible","Invincible35","IWantU","Kaguya","Kiana","LadyMadeSTAR","Landmines","M4Nightmare","M1918","MosinNagant","Napalm","nightcritBuff","nightcritBuff38","nightcritBuffSelf","nightdodgeBuff","nightdodgeBuffSelf","nightdodgeDebuff","nighthitBuff","nighthitBuffSelf","nighthitDebuff","nightpowBuff","nightpowBuffSelf","nightpowDebuff","nightrateBuff","nightrateBuffSelf","nightrateDebuff","nightspeedDebuff","nighttargetdodgeDebuff","nighttargethitDebuff","nighttargetpowDebuff","nighttargetrateDebuff","nighttargetspeedDebuff","Noconsumption","position","powBuff","powBuffSelf","powBuffShield","powDebuff","RaidenMei","rateBuff","rateBuffSelf","rateDebuff","reinforce","rescue","RifleGrenade","roadblocks","Sakura","Seele","shield","Shotgun","Smoke","sniper","speedDebuff","target","targetdodgeDebuff","targethitDebuff","targetpowDebuff","targetrateDebuff","targetspeedDebuff","Theresa","VariableBuff","augbuff","OblivioN"];
 const main=$("#grid"),loader=document.getElementById("loader"),imgtag=$(".col-lg-5:nth-child(1)>img"),
-	VoActor=["나즈카 카오리","마츠이 에리코","마이하라 유메","무카이야마 나오미","미사키 마미","미타라이 카린","사토 리나","사쿠마 히로미","스자키 아야","시노하라 나루미","시미즈 아이","아마노 미라이","아마미야 소라","아야미야 유키코","야마네 노조미","야츠루기 스미레","오구라 유이","오오니시 사오리","요시다 사치요","요시오카 카오리","요코야 사야카","우에사카 스미레","유우키 아오이","이와마츠 이즈미","이카다이 카나에","이타타니 아야카","이토 아스카","이데 카오리","츄조 토모요","타나카 아이미","타네다 리사","타카하시 하루카","토마츠 하루카","카나에 토오루","카야노 아이","코이즈미 타카오","호리에 유이","하나다 마미코","하나타 타마리","나카하라 마이","난죠 요시노","노나카 아이","노미즈 이오리","노토 마미코","닛타 히요리","다이몬 카미","미네우치 토모미","미모리 스즈코","사쿠라 아야네","세리자와 유우","스와 아야카","아카오 히카루","오오츠보 유카","우에마 에미","우치다 마아야","우치야마 유미","이가라시 히로미","코가 아오이","코시미즈 아미","쿠기미야 리에","카와스미 아야코","카토 에미리","쿠로사와 토모요","키타무라 에리","타무라 유카리","타카하시 미카코","토쿠이 소라","하나자와 아카네","하야미 사오리","후쿠하라 아야카","호리고메 사야","나바타메 히토미","사토 아리세","아오키 루리코","아오키 시키","아이사카 유카","야마모토 노조미","오오쿠보 루미","요시무라 하루카","이노우에 마리나","이마이 아사미","이토 시즈카","나나미 카린","나나세 아미","마에카와 료코","사이토 유카","사토 사토미","세토 아사미","아사쿠라 아즈미","아이하라 코토미","오우사키 치요","우에다 레이나","이다 아리사","이토 카나에","츠다 미나미","카네모토 히사코","코보리 미유키","코이치 마코토","코키도 시호","키부네 사치호","타자와 리이코","후지이 유키요","후지이 아야카","히다카 리나"],
-	VA=["Kaori Nazuka","Eriko Matsui","Yume Maihara","Naomi Mukaiyama","Mami Misaki","Karin Mitarai","Rina Sato","Hiromi Sakuma","Aya Suzaki","Narumi Sinohara","Ai Shimizu","Mirai Amano","Sora Amamiya","Yukiko Ayamiya","Nozomi Amane","Sumire Yatsurugi","Ogura Yui","Saori Onishi","Sachiyo Yoshida","Kaori Yoshioka","Sayaka Yokoya","Uesaka Sumire","Yuuki Aoi","Izumi Iwamatsu","Kanae Ikadai","Ayaka Itatani","Asuka Ito","Kaori Ide","Tomoyo Chuujou","Aimi Tanaka","Risa Taneda","Haruka Takahashi","Haruka Tomatsu","Tooru Kanae","Ai Kayano","Takao Koizumi","Yui Horie","Mamiko Hanada","Tamari Hinata","Mai Nakahara","Yoshino Nanjo","Ai Nonaka","Iori Nomizu","Mamiko Noto","Hiyori Nitta","Kami Daimon","Tomomi Mineuchi","Suzuko Mimori","Ayane Sakura","Serizawa Yuu","Ayaka Suwa","Hikaru Akao","Yuka Ootsubo","Emi Uema","Maaya Uchida","Yumi Uchiyama","Hiromi Igarashi","Aoi Koga","Koshimizu Ami","Rie Kugimiya","Ayako Kawasumi","Emiri Katou","Tomoyo Kurosawa","Eri Kitamura","Yukari Tamura","Mikako Takahashi","Sora Tokui","Akane Hanazawa","Saori Hayami","Ayaka Fukuhara","Saya Horigome","Hitomi Nabatame","Arise Sato","Ruriko Aoki","Shiki Aoki","Yuuka Aisaka","Nozomi Yamamoto","Rumi Okubo","Haruka Yoshimura","Marina Inoue","Asami Imai","Shizuka Ito","Karin Nanami","Ami Nanase","Ryoko Maekawa","Yuka Saito","Satomi Sato","Asami Seto","Azumi Asakura","Kotomi Aihara","Chiyo Ousaki","Reina Ueda","Arisa Ida","Kanae Ito","Minami Tsuda","Hisako Kanemoto","Miyuki Kobori","Makoto Koichi","Shiho Kokido","Sachiho Kibune","Riiko Tazawa","Yukiyo Fujii","Ayaka Fujii","Rina Hidaka"],
+	VoActor=["나즈카 카오리","누마쿠라 마나미","마츠이 에리코","마이하라 유메","무카이야마 나오미","미사키 마미","미타라이 카린","사토 리나","사쿠마 히로미","소와 하루미","스자키 아야","시노하라 나루미","시미즈 아이","아마노 미라이","아마미야 소라","아야미야 유키코","아이미","야마네 노조미","야츠루기 스미레","오구라 유이","오오니시 사오리","와키 아즈미","요시다 사치요","요시오카 카오리","요코야 사야카","우에사카 스미레","유우키 아오이","이나모토 치히로","이와마츠 이즈미","이카다이 카나에","이타타니 아야카","이토 아스카","이데 카오리","츄조 토모요","타나카 아이미","타네다 리사","타카하시 하루카","토마츠 하루카","카나에 토오루","카야노 아이","코이즈미 타카오","호리에 유이","하나다 마미코","하나타 타마리","나카하라 마이","난죠 요시노","노나카 아이","노미즈 이오리","노토 마미코","닛타 히요리","다이몬 카미","미네우치 토모미","미모리 스즈코","사쿠라 아야네","세리자와 유우","스와 아야카","아카오 히카루","오오츠보 유카","우에마 에미","우치다 마아야","우치야마 유미","이가라시 히로미","코가 아오이","코시미즈 아미","쿠기미야 리에","카와스미 아야코","카토 에미리","쿠로사와 토모요","키타무라 에리","타무라 유카리","타카하시 미카코","토쿠이 소라","하나자와 아카네","하야미 사오리","후쿠하라 아야카","호리고메 사야","나바타메 히토미","사토 아리세","아오키 루리코","아오키 시키","아이사카 유카","야마모토 노조미","오오쿠보 루미","요시무라 하루카","이노우에 마리나","이마이 아사미","이토 시즈카","나나미 카린","나나세 아미","마에카와 료코","사이토 유카","사토 사토미","세토 아사미","아사쿠라 아즈미","아이하라 코토미","오우사키 치요","우에다 레이나","이다 아리사","이토 카나에","츠다 미나미","치바 이즈미","카네모토 히사코","카와카미 아스카","코리 아리사","코보리 미유키","코이치 마코토","코키도 시호","쿠보타 리사","쿠와하라 유우키","키부네 사치호","타자와 리이코","하루노 안즈","혼다 마리코","후지이 유키요","후지이 아야카","히다카 리나","Lynn"],
+	VA=["Kaori Nazuka","Manami Numakura","Eriko Matsui","Yume Maihara","Naomi Mukaiyama","Mami Misaki","Karin Mitarai","Rina Sato","Hiromi Sakuma","Harumi Sowa","Aya Suzaki","Narumi Sinohara","Ai Shimizu","Mirai Amano","Sora Amamiya","Yukiko Ayamiya","Aimi","Nozomi Amane","Sumire Yatsurugi","Ogura Yui","Saori Onishi","Azumi Waki","Sachiyo Yoshida","Kaori Yoshioka","Sayaka Yokoya","Uesaka Sumire","Yuuki Aoi","Chihiro Inamoto","Izumi Iwamatsu","Kanae Ikadai","Ayaka Itatani","Asuka Ito","Kaori Ide","Tomoyo Chuujou","Aimi Tanaka","Risa Taneda","Haruka Takahashi","Haruka Tomatsu","Tooru Kanae","Ai Kayano","Takao Koizumi","Yui Horie","Mamiko Hanada","Tamari Hinata","Mai Nakahara","Yoshino Nanjo","Ai Nonaka","Iori Nomizu","Mamiko Noto","Hiyori Nitta","Kami Daimon","Tomomi Mineuchi","Suzuko Mimori","Ayane Sakura","Serizawa Yuu","Ayaka Suwa","Hikaru Akao","Yuka Ootsubo","Emi Uema","Maaya Uchida","Yumi Uchiyama","Hiromi Igarashi","Aoi Koga","Koshimizu Ami","Rie Kugimiya","Ayako Kawasumi","Emiri Katou","Tomoyo Kurosawa","Eri Kitamura","Yukari Tamura","Mikako Takahashi","Sora Tokui","Akane Hanazawa","Saori Hayami","Ayaka Fukuhara","Saya Horigome","Hitomi Nabatame","Arise Sato","Ruriko Aoki","Shiki Aoki","Yuuka Aisaka","Nozomi Yamamoto","Rumi Okubo","Haruka Yoshimura","Marina Inoue","Asami Imai","Shizuka Ito","Karin Nanami","Ami Nanase","Ryoko Maekawa","Yuka Saito","Satomi Sato","Asami Seto","Azumi Asakura","Kotomi Aihara","Chiyo Ousaki","Reina Ueda","Arisa Ida","Kanae Ito","Minami Tsuda","Izumi Chiba","Hisako Kanemoto","Asuka Kawakami","Arisa Kori","Miyuki Kobori","Makoto Koichi","Shiho Kokido","Risa Kubota","Yuuki Kuwahara","Sachiho Kibune","Riiko Tazawa","Anzu Haruno","Mariko Honda","Yukiyo Fujii","Ayaka Fujii","Rina Hidaka","Lynn"],
 	Illustrator=["15K","92M","AC-130","ALLENES","Anmi","AS109","ASK","BIBIA","Bison仓鼠","CanceR","DDAL","DOGALA","Evan揚","hanasa","HIKARI","HJL","KAN","KIncora","Ki桑","Krenz","KY","liduke","LIN+","Lino","lpip","lyo","M.vv","MKiiiiii","neco","NIN","nineo","NIXOO","NoriZC","NorthAbyssor","november","NS","Parsley","phantania","PHI","Rain Lan","RAN","REALMBW","rei","Renatus.Z","RFF","rosele","SA","Sam_Ashton","Saru","Silverwing","Skade","sola7764","spirtie","TAMAXI","TOMATO","XQ","X布","ZAGALA","zui","かれい","とり","ミカピカゾ","两卡车","仙女V","兔爷","八云玖","八才","十月十日奏","卑しい人间","厕所董事长","原子Dan","受菟","叽困","和茶","咩爆","哈路卡","团子","堀森","多元菌","小吃","小迪","工口牛","幻象黑兔","废人","戏言咸咸","拿铁","时辰","木shiyo","木子翔","林大B","林檎愛す","死盖","水乌龟","水熊","河马","油库狸","洲川Terras","海猫络合物","熊猫印象","狂気の君","猫头神","百足","真名","細重ソウジ","羽中","能登ツグミ","芙芙酱","荒境TS","莲子","薯子Imoko","虎三","钉田西瓜","防弹乳牛","陆生の洲川","雪樱樱","音符","鳗鱼子","麻将"];
 $(document).ready(()=>{
 	dominit();
@@ -67,15 +67,15 @@ function loadComplete(){
 		var on=$(this).attr("id"),dorm=$("#dorm>rect"),battle=$("#battle>rect"),dollname=$("#GN").text();
 		on==="dormi"?(battle.css("fill","grey"),dorm.css("fill","#ffc107"),preview.ready(dollname,"R"+dollname)):(battle.css("fill","#ffc107"),dorm.css("fill","grey"),preview.ready(dollname,dollname));
 	});
-	$(".xfunc").click(()=>togglecon())
+	document.querySelector(".xfunc").addEventListener("click",()=>togglecon());
 };
 var fltr={
 	VA:(a)=>{
 		var b=cho_hangul(a);
-		$(".VoC").append(`<a class="dropdown-item VA" href="#"><span>${a}</span><span class="d-none">${b}/</span></a>`);
+		document.querySelector(".VoC").innerHTML+=`<a class="dropdown-item VA" href="#"><span>${a}</span><span class="d-none">${b}/</span></a>`;
 	},
 	Art:(a)=>{
-		$(".IoC").append(`<a class="dropdown-item Illustrator" href="#"><span>${a}</span></a>`)
+		document.querySelector(".IoC").innerHTML+=`<a class="dropdown-item Illustrator" href="#"><span>${a}</span></a>`;
 	}
 };
 function dollload(num){
@@ -230,7 +230,6 @@ function chrtset(x,y){
 	function Set1(z){y.series[0].data=[x.hp[z],x.dmg[z],x.dodge[z],x.FR[z],x.hit[z]]};
 	function Set2(a,b,c,d){y.series[1].name=a+" 평균";y.series[1].data=b;D=D.replace("C",c).replace("M",d)};
 	document.querySelector("#sec-fir>div:nth-child(2)>div:nth-child(2)").innerHTML=D;
-	//$("#graph>div:nth-child(8)").click(function(){togglecon(),Sval(this.innerHTML)});
 	var text,graph=document.querySelector("#graph");
 	for(var i=0;i<6;i+=2){
 		var target=graph.querySelector(`div:nth-child(${i+8})>a`);
@@ -261,7 +260,7 @@ function fxts(x){
 	document.querySelector("#sec-fir>div:nth-child(1)>div:nth-child(2)>div:nth-child(2)").innerHTML=TS;
 };
 function SKB2(){
-	$(".skinntg>button,#contents>div:nth-child(6)>button").click(function(){
+	$(".skinntg>button,#contents>div:nth-child(6)>button").click(function skin(){
 		loader.classList.add("is-active");
 		let _thisimg=$(this).index(),No=$(".blockquote-footer>cite:nth-child(1)").text(),Isrc=idir+No+".png";
 		if(0===_thisimg){
@@ -432,17 +431,15 @@ function Skill(y,x){
 	document.getElementById("Sdesc").innerHTML=Sdesc;
 };
 function togglecon(){
-	$("#grid,#search,#func").toggleClass("d-none");
-	$("#filter").toggleClass("d-flex d-none");
+	for(var i of document.querySelectorAll("#grid,#search,#func,#filter")){i.classList.toggle("d-none")};
+	document.getElementById("filter").classList.toggle("d-flex");
 	$("button.btn-warning").remove();
-	$(".img-fluid").attr("src","");
-	document.getElementById("Drop").removeAttribute("data-content");
+	for(var i of document.querySelectorAll(".img-fluid,#drop")){i.removeAttribute("src","data-content")};
 	$("[data-toggle='popover']").popover("hide");
-	$(".skinntg>button").off("click");
-	preview.stage.off("pointerdown");
-	SimpleBar.removeObserver();
 	document.getElementById("doll").innerHTML="";
 	document.getElementById("dolldiscussion").innerHTML="";
+	preview.stage.off("pointerdown");
+	SimpleBar.removeObserver();
 	rCh.clearDomElements();
 };
 $(".filter,.dropdown-menu>a").click(function(){
@@ -478,7 +475,10 @@ $(".tileFilter").on("shown.bs.popover",()=>{
 	$("#tileFilter").remove();
 	$(".Target>div>div>div,.Self>div>div>div").click(function(){
 		this.classList.toggle("CC");
-		for(let n=1;n<10;n++){if($(`#gridT${n}`).hasClass("CC")==1){dollT[n-1]=1}else(dollT[n-1]=0);if($(`#gridS${n}`).hasClass("CC")==1){dollT[n-1]=2}};
+		for(let n=1;n<10;n++){
+			if($(`#gridT${n}`).hasClass("CC")){dollT[n-1]=1}else(dollT[n-1]=0);
+			if($(`#gridS${n}`).hasClass("CC")){dollT[n-1]=2}
+		};
 		Sval(dollT.toString())
 	})
 });
@@ -529,10 +529,10 @@ var preview={
 		preview.nowTime=new Date().getTime();
 		preview.animationFrame=window.requestAnimationFrame(preview.animate);
 		preview.canvas.html(preview.renderer.view);
-		preview.stage.interactive=true;
+		preview.stage.interactive=true
 	},
 	ready:function(doll_name,doll_skin){
-		game.girls.load(doll_name,doll_skin,preview);
+		game.girls.load(doll_name,doll_skin,preview)
 	},
 	changeCanvas:function(skeletonData){
 		preview.stage.removeChildren();
@@ -544,9 +544,7 @@ var preview={
 			preview.spine.scale.x=preview.selectScale;
 		preview.spine.scale.y=preview.selectScale;
 		var animations=preview.spine.spineData.animations;
-		var aniName=animations;
 		var stringAnimations="";
-		var anilength=animations.length;
 		var n,nowSkin=0;
 		preview.changeAnimation(0);
 		preview.spine.skeleton.setToSetupPose();
@@ -581,7 +579,7 @@ var preview={
 		preview.lastTime=preview.nowTime;
 		preview.nowTime=new Date().getTime();
 		preview.animationFrame=window.requestAnimationFrame(preview.animate);
-		if(preview.isUpdate&&preview.spine){preview.spine.update((preview.nowTime-preview.lastTime)/1000)}
+		if(preview.isUpdate&&preview.spine){preview.spine.update((preview.nowTime-preview.lastTime)/1000)};
 		preview.renderer.render(preview.stage)
 	},
 	changeAnimation:function(num){
