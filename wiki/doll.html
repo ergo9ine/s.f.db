@@ -13,103 +13,105 @@
 </head>
 <body>
 <div id="loader" class="loader loader-border is-active" data-blink data-text="Loading..."><object type="image/svg+xml" data="../img/logo/SFDB_main.svg"></object></div>
-<div id="filter" class="d-flex bg-dark text-white justify-content-center">
-	<div class="filter btn btn-light btn-sm mr-2">All</div>
-	<div class="dropdown mr-2">
-		<a class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rarity</a>
-		<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-			<a class="dropdown-item" href="#">2성</a>
-			<a class="dropdown-item" href="#">3성</a>
-			<a class="dropdown-item" href="#">4성</a>
-			<a class="dropdown-item" href="#">5성</a>
-			<a class="dropdown-item" href="#">EXTRA</a>
-			<a class="dropdown-item" href="#">제조불가</a>
-		</div>
-	</div>
-	<div class="dropdown mr-2">
-		<a class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type</a>
-		<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-			<a class="dropdown-item" href="#">HG</a>
-			<a class="dropdown-item" href="#">SMG</a>
-			<a class="dropdown-item" href="#">AR</a>
-			<a class="dropdown-item" href="#">RF</a>
-			<a class="dropdown-item" href="#">MG</a>
-			<a class="dropdown-item" href="#">SG</a>
-		</div>
-	</div>
-	<div class="dropdown mr-2">
-		<a class="btn btn-info btn-sm dropdown-toggle tileFilter" href="#" data-placement="bottom">Tile</a>
-		<div class="d-none" id="tileFilter">
-			<h6 class="dropdown-header text-center">Target</h6>
-				<div class="Target d-flex">
-					<div class="m-auto d-flex">
-						<div class="row1">
-						<div class="border border-dark grey" id="gridT1"></div>
-						<div class="border border-dark grey" id="gridT4"></div>
-						<div class="border border-dark grey" id="gridT7"></div>
-					</div>
-					<div class="row2">
-						<div class="border border-dark grey" id="gridT2"></div>
-						<div class="border border-dark grey" id="gridT5"></div>
-						<div class="border border-dark grey" id="gridT8"></div>
-					</div>
-					<div class="row3">
-						<div class="border border-dark grey" id="gridT3"></div>
-						<div class="border border-dark grey" id="gridT6"></div>
-						<div class="border border-dark grey" id="gridT9"></div>
-					</div>
-				</div>
+<div id="toolbar" class="fixed-top">
+	<div id="filter" class="d-flex bg-dark text-white justify-content-center">
+		<div class="filter btn btn-light btn-sm mr-2">All</div>
+		<div class="dropdown mr-2">
+			<a class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rarity</a>
+			<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+				<a class="dropdown-item" href="#">2성</a>
+				<a class="dropdown-item" href="#">3성</a>
+				<a class="dropdown-item" href="#">4성</a>
+				<a class="dropdown-item" href="#">5성</a>
+				<a class="dropdown-item" href="#">EXTRA</a>
+				<a class="dropdown-item" href="#">제조불가</a>
 			</div>
-			<div class="dropdown-divider"></div>
-			<h6 class="dropdown-header text-center">Self</h6>
-				<div class="Self d-flex">
-					<div class="m-auto d-flex">
-						<div class="row1">
-							<div class="border border-dark grey" id="gridS1"></div>
-							<div class="border border-dark grey" id="gridS4"></div>
-							<div class="border border-dark grey" id="gridS7"></div>
+		</div>
+		<div class="dropdown mr-2">
+			<a class="btn btn-light btn-sm dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type</a>
+			<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+				<a class="dropdown-item" href="#">HG</a>
+				<a class="dropdown-item" href="#">SMG</a>
+				<a class="dropdown-item" href="#">AR</a>
+				<a class="dropdown-item" href="#">RF</a>
+				<a class="dropdown-item" href="#">MG</a>
+				<a class="dropdown-item" href="#">SG</a>
+			</div>
+		</div>
+		<div class="dropdown mr-2">
+			<a class="btn btn-info btn-sm dropdown-toggle tileFilter" href="#" data-placement="bottom">Tile</a>
+			<div class="d-none" id="tileFilter">
+				<h6 class="dropdown-header text-center">Target</h6>
+					<div class="Target d-flex">
+						<div class="m-auto d-flex">
+							<div class="row1">
+							<div class="border border-dark grey" id="gridT1"></div>
+							<div class="border border-dark grey" id="gridT4"></div>
+							<div class="border border-dark grey" id="gridT7"></div>
 						</div>
 						<div class="row2">
-							<div class="border border-dark grey" id="gridS2"></div>
-							<div class="border border-dark grey" id="gridS5"></div>
-							<div class="border border-dark grey" id="gridS8"></div>
+							<div class="border border-dark grey" id="gridT2"></div>
+							<div class="border border-dark grey" id="gridT5"></div>
+							<div class="border border-dark grey" id="gridT8"></div>
 						</div>
 						<div class="row3">
-							<div class="border border-dark grey" id="gridS3"></div>
-							<div class="border border-dark grey" id="gridS6"></div>
-							<div class="border border-dark grey" id="gridS9"></div>
+							<div class="border border-dark grey" id="gridT3"></div>
+							<div class="border border-dark grey" id="gridT6"></div>
+							<div class="border border-dark grey" id="gridT9"></div>
 						</div>
+					</div>
+				</div>
+				<div class="dropdown-divider"></div>
+				<h6 class="dropdown-header text-center">Self</h6>
+					<div class="Self d-flex">
+						<div class="m-auto d-flex">
+							<div class="row1">
+								<div class="border border-dark grey" id="gridS1"></div>
+								<div class="border border-dark grey" id="gridS4"></div>
+								<div class="border border-dark grey" id="gridS7"></div>
+							</div>
+							<div class="row2">
+								<div class="border border-dark grey" id="gridS2"></div>
+								<div class="border border-dark grey" id="gridS5"></div>
+								<div class="border border-dark grey" id="gridS8"></div>
+							</div>
+							<div class="row3">
+								<div class="border border-dark grey" id="gridS3"></div>
+								<div class="border border-dark grey" id="gridS6"></div>
+								<div class="border border-dark grey" id="gridS9"></div>
+							</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="dropdown mr-2">
-		<a class="btn btn-info btn-sm dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Voice</a>
-		<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-			<input placeholder="검색" class="VAinput dropdown-item bg-dark text-white form-control form-control-sm col-10 mx-auto p-1" type="text">
-			<div class="dropdown-divider"></div>
-			<div class="VoC"></div>
+		<div class="dropdown mr-2">
+			<a class="btn btn-info btn-sm dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Voice</a>
+			<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+				<input placeholder="검색" class="VAinput dropdown-item bg-dark text-white form-control form-control-sm col-10 mx-auto p-1" type="text">
+				<div class="dropdown-divider"></div>
+				<div class="VoC"></div>
+			</div>
+		</div>
+		<div class="dropdown mr-2">
+			<a class="btn btn-info btn-sm dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Illustrator</a>
+			<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+				<input placeholder="검색" class="Artinput dropdown-item bg-dark text-white form-control form-control-sm col-10 mx-auto p-1" type="text">
+				<div class="dropdown-divider"></div>
+				<div class="IoC"></div>
+			</div>
+		</div>
+		<div class="dropdown mr-2">
+			<a class="btn btn-warning btn-sm dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort</a>
+			<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+				<a class="dropdown-item" href="#">Index No</a>
+				<a class="dropdown-item" href="#">Rarity</a>
+				<a class="dropdown-item" href="#">Build Time</a>
+				<a class="dropdown-item" href="#">Type</a>
+			</div>
 		</div>
 	</div>
-	<div class="dropdown mr-2">
-		<a class="btn btn-info btn-sm dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Illustrator</a>
-		<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-			<input placeholder="검색" class="Artinput dropdown-item bg-dark text-white form-control form-control-sm col-10 mx-auto p-1" type="text">
-			<div class="dropdown-divider"></div>
-			<div class="IoC"></div>
-		</div>
-	</div>
-	<div class="dropdown mr-2">
-		<a class="btn btn-warning btn-sm dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort</a>
-		<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-			<a class="dropdown-item" href="#">Index No</a>
-			<a class="dropdown-item" href="#">Rarity</a>
-			<a class="dropdown-item" href="#">Build Time</a>
-			<a class="dropdown-item" href="#">Type</a>
-		</div>
-	</div>
+	<input id="search" type="text" placeholder="검색" class="form-control form-control-sm">
 </div>
-<input type="text" placeholder="검색" class="form-control form-control-sm" id="search">
 <div class="text-center grid mx-auto" id="grid"></div>
 <div class="d-none" id="func">
 <div class="px-3" id="contents">
@@ -142,37 +144,33 @@
 			</div>
 			<div class="text-white pt-1 col-12 h-100">
 			<div class="d-flex no-gutters row">
-				<svg class="col-6 svg mx-auto"><polygon points="0,0 0,35 0,36 100,36 125,0"></polygon><text x="45%" y="50%">CV</text></svg>
-				<svg class="col-6 svg mx-auto"><polygon points="125,0 125,35 0,35 0,35 25,0"></polygon><a href="#"><text id="CV" x="55%" y="50%"></text></a></svg>
+				<svg><polygon></polygon><text x="45%" y="50%">CV</text></svg>
+				<svg><polygon></polygon><a href="#"><text id="CV" x="55%" y="50%"></text></a></svg>
 			</div>
 			<div class="d-flex no-gutters row mt-1">
-				<svg class="col-6 svg mx-auto"><polygon points="0,0 0,35 0,36 100,36 125,0"></polygon><text x="45%" y="50%">Illustrator</text></svg>
-				<svg class="col-6 svg mx-auto"><polygon points="125,0 125,35 0,35 0,35 25,0"></polygon><a href="#"><text id="illust" x="55%" y="50%"></text></a></svg>
+				<svg><polygon></polygon><text x="45%" y="50%">Illustrator</text></svg>
+				<svg><polygon></polygon><a href="#"><text id="illust" x="55%" y="50%"></text></a></svg>
 			</div>
 			<div class="d-flex no-gutters row mt-1">
-				<svg class="col-6 svg mx-auto"><polygon points="0,0 0,35 0,36 100,36 125,0"></polygon><text x="45%" y="50%">Code Name</text></svg>
-				<svg class="col-6 svg mx-auto"><polygon points="125,0 125,35 0,35 0,35 25,0"></polygon><text id="GN" x="55%" y="50%" ></text></svg>
+				<svg><polygon></polygon><text x="45%" y="50%">Code Name</text></svg>
+				<svg><polygon></polygon><text id="GN" x="55%" y="50%" ></text></svg>
 			</div>
 			<div class="d-flex no-gutters row mt-1">
-				<svg class="col-6 svg mx-auto"><polygon points="0,0 0,35 0,36 100,36 125,0"></polygon><text x="45%" y="50%">Time</text></svg>
-				<svg class="col-6 svg mx-auto"><polygon points="125,0 125,35 0,35 0,35 25,0"></polygon><text id="Time" x="55%" y="50%"></text></svg>
+				<svg><polygon></polygon><text x="45%" y="50%">Time</text></svg>
+				<svg><polygon></polygon><text id="Time" x="55%" y="50%"></text></svg>
 			</div>
 			<div class="d-flex no-gutters row mt-1">
-				<svg class="col-6 svg mx-auto"><polygon points="0,0 0,35 0,36 100,36 125,0"></polygon><text x="45%" y="50%">Drop</text></svg>
-				<svg class="col-6 svg mx-auto"><polygon points="125,0 125,35 0,35 0,35 25,0"></polygon><a href="#"><text id="Drop" x="55%" y="50%" title="Drop 지역" data-toggle="popover" data-placement="bottom">More</text></a></svg>
+				<svg><polygon></polygon><text x="45%" y="50%">Drop</text></svg>
+				<svg><polygon></polygon><a href="#"><text id="Drop" x="55%" y="50%" title="Drop 지역" data-toggle="popover" data-placement="bottom">More</text></a></svg>
 			</div>
 			</div>
 		</div>
 		<div class="col-12 col-lg-7 mt-3 mt-lg-0">
-			<div class="ntg">
-				<svg width="200" height="35"><polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon><text x="40%" y="50%">Chart</text></svg>
-			</div>
+			<div class="ntg"><svg><polygon></polygon><text>Chart</text></svg></div>
 			<div id="chart" style="height:365px"></div>
 		</div>
 		<div class="col my-3 pl-lg-3 row no-gutters">
-			<div class="ntg">
-				<svg width="200" height="35"><polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon><text x="40%" y="50%">ETC</text></svg>
-			</div>
+			<div class="ntg"><svg><polygon></polygon><text>ETC</text></svg></div>
 			<div id="stats" class="row no-gutters">
 			<div id="sec-fir" class="col-12 col-lg-6 row no-gutters">
 				<div class="col-12">
@@ -236,19 +234,19 @@
 		</div>
 	</div>
 	<div class="col-lg-5 p-3">
-		<div class="ntg"><svg width="200" height="35"><polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon><text x="40%" y="50%">Specifications</text></svg></div>
+		<div class="ntg"><svg><polygon></polygon><text>Specifications</text></svg></div>
 		<div id="doll" style="height:315px"></div>
 	</div>
 	<div class="col-lg-7 p-3"> <!-- 인형로어 -->
-		<div class="ntg"><svg width="200" height="35"><polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon><text x="40%" y="50%">Lore</text></svg></div>
+		<div class="ntg"><svg><polygon></polygon><text>Lore</text></svg></div>
 		<div id="dolllore" style="height:315px"></div>
 	</div>
 	<div class="col-lg-5 p-3"> <!-- 인형대사 -->
-		<div class="ntg"><svg width="200" height="35"><polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon><text x="40%" y="50%">Quotes</text></svg></div>
+		<div class="ntg"><svg><polygon></polygon><text>Quotes</text></svg></div>
 		<div id="dolltext" style="height:515px"></div>
 	</div>
 	<div class="col-lg-7 p-3"> <!-- 인형반응 -->
-		<div class="ntg"><svg width="200" height="35"><polygon fill="grey" points="0,0 0,35 0,35 200,35 150,0"></polygon><text x="40%" y="50%">Discussion</text></svg></div>
+		<div class="ntg"><svg><polygon></polygon><text>Discussion</text></svg></div>
 		<div id="dolldiscussion" style="height:515px"></div>
 	</div>
 </div>
@@ -267,7 +265,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.quicksearch@2.4.0/dist/jquery.quicksearch.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/muuri@0.7.1/dist/muuri.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/apexcharts@2.1.8/dist/apexcharts.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts@2.1.9/dist/apexcharts.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/simplebar@3.0.0-beta.5/dist/simplebar.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/pixi.js@4.8.2/dist/pixi.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/pixi-spine@1.0.10/bin/pixi-spine.min.js"></script>

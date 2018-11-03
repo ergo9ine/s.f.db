@@ -1,6 +1,6 @@
 "use strict";
 var grid,rCh,ghver=1.80902,idir="../img/t_doll/",dollData=[],dollT=[0,0,0,0,0,0,0,0,0],dollSkill=["AimAttackCurrentTarge","AimAttackDistanceTarge","AimAttackSpecificTarge","airattack","airborne","AK12Buff","AN94Shot","AR15Shot","armor","armorBuff","armorBuffSelf","armorDebuff","armorDebuffSelf","BBNoel","bombard","Bronya","buff","Carcano1891","Carcano1938","CBJMS","Chloe","CLEAR","Coldweapon","comboBuffSelf","command","crit","critBuff","critBuffSelf","debuff","defense","dodgeBuff","dodgeBuffSelf","dodgeDebuff","empty","FAIL","fighting","Flare","Flashbomb","fortress","GGElfeldt","golden","Grenade","Himeko","hitBuff","hitBuffSelf","hitDebuff","illumine","Invincible","Invincible35","IWantU","Kaguya","Kiana","LadyMadeSTAR","Landmines","M4Nightmare","M1918","MosinNagant","Napalm","nightcritBuff","nightcritBuff38","nightcritBuffSelf","nightdodgeBuff","nightdodgeBuffSelf","nightdodgeDebuff","nighthitBuff","nighthitBuffSelf","nighthitDebuff","nightpowBuff","nightpowBuffSelf","nightpowDebuff","nightrateBuff","nightrateBuffSelf","nightrateDebuff","nightspeedDebuff","nighttargetdodgeDebuff","nighttargethitDebuff","nighttargetpowDebuff","nighttargetrateDebuff","nighttargetspeedDebuff","Noconsumption","position","powBuff","powBuffSelf","powBuffShield","powDebuff","RaidenMei","rateBuff","rateBuffSelf","rateDebuff","reinforce","rescue","RifleGrenade","roadblocks","Sakura","Seele","shield","Shotgun","Smoke","sniper","speedDebuff","target","targetdodgeDebuff","targethitDebuff","targetpowDebuff","targetrateDebuff","targetspeedDebuff","Theresa","VariableBuff","augbuff","OblivioN"];
-const main=$("#grid"),loader=document.getElementById("loader"),imgtag=$(".col-lg-5:nth-child(1)>img"),
+const main=document.getElementById("grid"),loader=document.getElementById("loader"),imgtag=document.querySelector(".col-lg-5:nth-child(1)>img"),
 	VoActor=["나즈카 카오리","누마쿠라 마나미","마츠이 에리코","마이하라 유메","무카이야마 나오미","미사키 마미","미타라이 카린","사토 리나","사쿠마 히로미","소와 하루미","스자키 아야","시노하라 나루미","시미즈 아이","아마노 미라이","아마미야 소라","아야미야 유키코","아이미","야마네 노조미","야츠루기 스미레","오구라 유이","오오니시 사오리","와키 아즈미","요시다 사치요","요시오카 카오리","요코야 사야카","우에사카 스미레","유우키 아오이","이나모토 치히로","이와마츠 이즈미","이카다이 카나에","이타타니 아야카","이토 아스카","이데 카오리","츄조 토모요","타나카 아이미","타네다 리사","타카하시 하루카","토마츠 하루카","카나에 토오루","카야노 아이","코이즈미 타카오","호리에 유이","하나다 마미코","하나타 타마리","나카하라 마이","난죠 요시노","노나카 아이","노미즈 이오리","노토 마미코","닛타 히요리","다이몬 카미","미네우치 토모미","미모리 스즈코","사쿠라 아야네","세리자와 유우","스와 아야카","아카오 히카루","오오츠보 유카","우에마 에미","우치다 마아야","우치야마 유미","이가라시 히로미","코가 아오이","코시미즈 아미","쿠기미야 리에","카와스미 아야코","카토 에미리","쿠로사와 토모요","키타무라 에리","타무라 유카리","타카하시 미카코","토쿠이 소라","하나자와 아카네","하야미 사오리","후쿠하라 아야카","호리고메 사야","나바타메 히토미","사토 아리세","아오키 루리코","아오키 시키","아이사카 유카","야마모토 노조미","오오쿠보 루미","요시무라 하루카","이노우에 마리나","이마이 아사미","이토 시즈카","나나미 카린","나나세 아미","마에카와 료코","사이토 유카","사토 사토미","세토 아사미","아사쿠라 아즈미","아이하라 코토미","오우사키 치요","우에다 레이나","이다 아리사","이토 카나에","츠다 미나미","치바 이즈미","카네모토 히사코","카와카미 아스카","코리 아리사","코보리 미유키","코이치 마코토","코키도 시호","쿠보타 리사","쿠와하라 유우키","키부네 사치호","타자와 리이코","하루노 안즈","혼다 마리코","후지이 유키요","후지이 아야카","히다카 리나","Lynn"],
 	VA=["Kaori Nazuka","Manami Numakura","Eriko Matsui","Yume Maihara","Naomi Mukaiyama","Mami Misaki","Karin Mitarai","Rina Sato","Hiromi Sakuma","Harumi Sowa","Aya Suzaki","Narumi Sinohara","Ai Shimizu","Mirai Amano","Sora Amamiya","Yukiko Ayamiya","Aimi","Nozomi Amane","Sumire Yatsurugi","Ogura Yui","Saori Onishi","Azumi Waki","Sachiyo Yoshida","Kaori Yoshioka","Sayaka Yokoya","Uesaka Sumire","Yuuki Aoi","Chihiro Inamoto","Izumi Iwamatsu","Kanae Ikadai","Ayaka Itatani","Asuka Ito","Kaori Ide","Tomoyo Chuujou","Aimi Tanaka","Risa Taneda","Haruka Takahashi","Haruka Tomatsu","Tooru Kanae","Ai Kayano","Takao Koizumi","Yui Horie","Mamiko Hanada","Tamari Hinata","Mai Nakahara","Yoshino Nanjo","Ai Nonaka","Iori Nomizu","Mamiko Noto","Hiyori Nitta","Kami Daimon","Tomomi Mineuchi","Suzuko Mimori","Ayane Sakura","Serizawa Yuu","Ayaka Suwa","Hikaru Akao","Yuka Ootsubo","Emi Uema","Maaya Uchida","Yumi Uchiyama","Hiromi Igarashi","Aoi Koga","Koshimizu Ami","Rie Kugimiya","Ayako Kawasumi","Emiri Katou","Tomoyo Kurosawa","Eri Kitamura","Yukari Tamura","Mikako Takahashi","Sora Tokui","Akane Hanazawa","Saori Hayami","Ayaka Fukuhara","Saya Horigome","Hitomi Nabatame","Arise Sato","Ruriko Aoki","Shiki Aoki","Yuuka Aisaka","Nozomi Yamamoto","Rumi Okubo","Haruka Yoshimura","Marina Inoue","Asami Imai","Shizuka Ito","Karin Nanami","Ami Nanase","Ryoko Maekawa","Yuka Saito","Satomi Sato","Asami Seto","Azumi Asakura","Kotomi Aihara","Chiyo Ousaki","Reina Ueda","Arisa Ida","Kanae Ito","Minami Tsuda","Izumi Chiba","Hisako Kanemoto","Asuka Kawakami","Arisa Kori","Miyuki Kobori","Makoto Koichi","Shiho Kokido","Risa Kubota","Yuuki Kuwahara","Sachiho Kibune","Riiko Tazawa","Anzu Haruno","Mariko Honda","Yukiyo Fujii","Ayaka Fujii","Rina Hidaka","Lynn"],
 	Illustrator=["15K","92M","AC-130","ALLENES","Anmi","AS109","ASK","BIBIA","Bison仓鼠","CanceR","DDAL","DOGALA","Evan揚","hanasa","HIKARI","HJL","KAN","KIncora","Ki桑","Krenz","KY","liduke","LIN+","Lino","lpip","lyo","M.vv","MKiiiiii","neco","NIN","nineo","NIXOO","NoriZC","NorthAbyssor","november","NS","Parsley","phantania","PHI","Rain Lan","RAN","REALMBW","rei","Renatus.Z","RFF","rosele","SA","Sam_Ashton","Saru","Silverwing","Skade","sola7764","spirtie","TAMAXI","TOMATO","XQ","X布","ZAGALA","zui","かれい","とり","ミカピカゾ","两卡车","仙女V","兔爷","八云玖","八才","十月十日奏","卑しい人间","厕所董事长","原子Dan","受菟","叽困","和茶","咩爆","哈路卡","团子","堀森","多元菌","小吃","小迪","工口牛","幻象黑兔","废人","戏言咸咸","拿铁","时辰","木shiyo","木子翔","林大B","林檎愛す","死盖","水乌龟","水熊","河马","油库狸","洲川Terras","海猫络合物","熊猫印象","狂気の君","猫头神","百足","真名","細重ソウジ","羽中","能登ツグミ","芙芙酱","荒境TS","莲子","薯子Imoko","虎三","钉田西瓜","防弹乳牛","陆生の洲川","雪樱樱","音符","鳗鱼子","麻将"];
@@ -10,8 +10,20 @@ $(document).ready(()=>{
 	game.init()
 });
 function dominit(){
-	for(var item of document.querySelectorAll("#table,#graph")){for(let n=0;n<20;n++){item.appendChild(document.createElement("div"))}};
-	$("#table,#graph").children("div:nth-child(2n-2)").addClass("col-8 bg-secondary").parent().children("div:nth-child(2n-1)").addClass("col-4 bg-dark");
+	var i;
+	for(i of document.querySelectorAll("#table,#graph")){for(let n=0;n<20;n++){i.appendChild(document.createElement("div"))}};
+	for(i of document.querySelectorAll("#table,#graph")){
+		for(let v=0;v<20;v+=2){i.children[v].classList.add("col-4","bg-dark")};
+		for(let v=1;v<20;v+=2){i.children[v].classList.add("col-8","bg-secondary")}
+	};
+	for(i of document.querySelectorAll(".text-white svg")){i.classList.add("col-6","svg","mx-auto")};
+	for(i of document.querySelectorAll(".d-flex>svg:nth-child(1)>polygon")){i.setAttribute("points","0,0 0,35 0,36 100,36 125,0")};
+	for(i of document.querySelectorAll(".d-flex>svg:nth-child(2)>polygon")){i.setAttribute("points","125,0 125,35 0,35 0,35 25,0")};
+	for(i of document.querySelectorAll(".ntg>svg")){
+		setAttributes(i,{"width":200,"height":35});
+		setAttributes(i.querySelector("polygon"),{"fill":"grey","points":"0,0 0,35 0,35 200,35 150,0"});
+		setAttributes(i.querySelector("text"),{"x":"40%","y":"50%"})
+	};
 	$("[data-toggle='popover']").popover();
 	$(".tileFilter").popover({html:true,content:function(){return $("#tileFilter").html()}})
 }
@@ -20,19 +32,22 @@ function contentsload(){
 		dollData=tdoll;
 		var allCharacters=dollData.map(doll=>{
 			if(!doll.buildTime){doll.buildTime=0};
+			if(!doll.faction){doll.faction="Griffin & Kryuger"}
 			var temp=document.createDocumentFragment(),timehour=(doll.buildTime/3600|0),timemin=doll.buildTime%3600/60,noval=doll.id,dollT=[0,0,0,0,0,0,0,0,0],cho=cho_hangul(`${doll.krName}`);
 			noval>2E4?noval="M"+(noval-2E4):noval>1E3&&(noval="X"+(noval-1E3));
 			doll.Fx.tile.map(tile=>dollT[tile-1]=1,dollT[doll.Fx.self-1]=2);
 			temp.appendChild(document.createElement("div")).classList.add("item");
 			setAttributes(temp.querySelector(".item"),{"data-time":timehour+timemin,"data-type":doll.type,"data-rarity":doll.rarity,"data-skill":doll.skill.src});
-			temp.querySelector(".item").innerHTML=`<div class="tdoll item-content"><div class="text-white no" data-no="${doll.id}">${noval}</div><p class="name podo">${doll.krName}</p><i class="star r${doll.rarity}"></i><i class="incage doll info_cage_${doll.rarity}"></i><i class="type doll ${doll.type}_${doll.rarity}"></i><img class="dollbg" width="175" height="276" data-src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@${ghver}/img/t_doll/${doll.id}_i.jpg" onload="this.removeAttribute('class'),this.removeAttribute('onload')"><div class="tag">${doll.type}/${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}/${doll.skill.src}/${dollT}/${cho}/${doll.Country}/${doll.Manuf}/${doll.faction}</div></div>`;
+			temp.querySelector(".item").innerHTML=`<div class="tdoll item-content"><div class="text-white no" data-no="${doll.id}">${noval}</div><p class="name podo">${doll.krName}</p><i class="star r${doll.rarity}"></i><i class="incage doll info_cage_${doll.rarity}"></i><i class="type doll ${doll.type}_${doll.rarity}"></i><img class="dollbg" width="175" height="276" data-src="https://cdn.jsdelivr.net/gh/ergo9ine/sfdb_img@${ghver}/img/t_doll/${doll.id}_i.jpg" onload="this.removeAttribute('class'),this.removeAttribute('onload')"><div class="tag">${doll.type}/${doll.nick}/${timehour}${timemin}/${doll.voice}/${doll.illust}/${doll.skill.src}/${dollT}/${cho}/From:${doll.Country}/Manufacturer:${doll.Manuf}/Faction:${doll.faction}</div></div>`;
 			return temp
 		});
-		main.append(allCharacters),loadComplete(),LazyLoad.update();
+		for(var i of allCharacters){main.appendChild(i)};
+		loadComplete(),LazyLoad.update();
 	}));
 };
 function setAttributes(el,attrs){for(var key in attrs){el.setAttribute(key,attrs[key])}};
 function loadComplete(){
+	var Show=[],Hide=[];
 	grid=new Muuri("#grid",{
 		showDuration:null,hideDuration:null,layoutDuration:null,showEasing:null,hideEasing:null,layoutEasing:null,
 		visibleStyles:{},hiddenStyles:{},
@@ -45,8 +60,13 @@ function loadComplete(){
 	$("#search").quicksearch(".item",{
 		noResults:"#noResultMessage",
 		"bind":"click input",
-		"hide":function(){grid.hide([this])},
-		"show":function(){grid.show([this])}
+		"hide":function(){Hide.push(this)},
+		"show":function(){Show.push(this)},
+		"onAfter":()=>{
+			grid.hide(Hide,{instant:true});
+			grid.show(Show,{instant:true});
+			Hide=[],Show=[];
+		}
 	});
 	$(".VAinput").quicksearch(".VA",{
 		"bind":"input",
@@ -59,15 +79,21 @@ function loadComplete(){
 		"show":function(){this.classList.remove("d-none")}
 	});
 	loader.classList.remove("is-active");
-	$(".item-content").click(function(){
-		dollload(Number(this.querySelector(".no").getAttribute("data-no")));
-	});
-	$(".btn-dark:nth-child(5)").click(()=>$("#contents>div:nth-child(6)").toggleClass("d-none d-block"));
+	for(var i of document.querySelectorAll(".item-content")){
+		i.addEventListener("click",(e)=>{
+			for(i of document.querySelectorAll("#grid,#toolbar,#func")){i.classList.toggle("d-none")};
+			document.getElementById("noResultMessage").style.display="none";
+			document.getElementById("search").value="";
+			$(".tileFilter").popover("hide");
+			dollload(Number(e.target.parentNode.querySelector(".no").getAttribute("data-no")))
+		})
+	};
+	document.querySelector(".btn-dark:nth-child(5)").addEventListener("click",(e)=>e.target.nextElementSibling.classList.toggle("d-block"));
 	$("#dormi,#battlei").click(function(){
 		var on=$(this).attr("id"),dorm=$("#dorm>rect"),battle=$("#battle>rect"),dollname=$("#GN").text();
 		on==="dormi"?(battle.css("fill","grey"),dorm.css("fill","#ffc107"),preview.ready(dollname,"R"+dollname)):(battle.css("fill","#ffc107"),dorm.css("fill","grey"),preview.ready(dollname,dollname));
 	});
-	document.querySelector(".xfunc").addEventListener("click",()=>togglecon());
+	document.querySelector(".xfunc").addEventListener("click",togglecon);
 };
 var fltr={
 	VA:(a)=>{
@@ -79,32 +105,44 @@ var fltr={
 	}
 };
 function dollload(num){
-	var options;
+	var options,i;
+	document.getElementById("doll").innerHTML="";
+	document.getElementById("dolldiscussion").innerHTML="";
+	for(i of document.querySelectorAll(".btn-warning")){i.parentNode.removeChild(i)};
+	rCh?rCh.clearDomElements():rCh=``;
 	loader.classList.add("is-active");
-	$("#grid,#search,#func").toggleClass("d-none"),$("#filter").toggleClass("d-flex d-none"),$(".tileFilter").popover("hide");
 	dollData.map(doll=>{
 		if(doll.id===num){
 			var simg=idir+doll.id,cimg=simg+".png",timehour=(doll.buildTime/3600|0),timemin=doll.buildTime%3600/60,time=`${timehour}시간${timemin}분`,gridself=`#grid${doll.Fx.self}`,gridPos=[],skins=[],i=0,x,name;
 			doll.Fx.tile.map(tile=>gridPos.push(`#grid${tile}`));
-			for(x=1;x<10;x++){$(`#grid${x}`).removeClass("bg-white aqua grey").addClass("grey")};
+			for(x=1;x<10;x++){
+				var tar=document.getElementById(`grid${x}`).classList;
+				tar.remove("bg-white","aqua","grey");
+				tar.add("grey")
+			};
 			document.querySelector(gridself).classList.add("grey","bg-white");
 			for(var target of document.querySelectorAll(gridPos)){target.classList.remove("grey"),target.classList.add("aqua")}
 			$("body,html").animate({scrollTop:0},0);
-			if(typeof doll.skins!=="undefined"){doll.skins.map(skin=>{for(var target of document.querySelectorAll(".skinntg,#contents>div:nth-child(6)")){target.innerHTML+=`<button type="button" class="btn btn-warning btn-sm">${skin}</button>`}})};
+			if(doll.skins){doll.skins.map(skin=>{for(var target of document.querySelectorAll(".skinntg,#contents>div:nth-child(6)")){target.innerHTML+=`<button type="button" class="btn btn-warning btn-sm">${skin}</button>`}})};
 			document.querySelector("#contents>div:nth-child(6)>button").classList.add("btn-block");
 			if(!doll.voice)doll.voice="";
 			var stat={".blockquote>p":doll.krName,"#CV":doll.voice,"#illust":doll.illust,"#GN":doll.name,"#Time":time};
 			for(var key in stat)document.querySelector(key).innerHTML=stat[key];
 			utteranc(doll.id);
-			if(typeof doll.respec!=="undefined"){
+			if(doll.respec){
 				for(var line of doll.respec){
 					for(name in line){name=name};
 					document.getElementById("doll").innerHTML+=`<div id="${name}" class="row no-gutters border-bottom"><div class="head col-4 my-auto">${name}</div><div class="tail col-8 border-left"></div></div>`;
-					if(Array.isArray(line[name])){for(var val of line[name]){if(line[name].indexOf(val)==0){document.getElementById(name).querySelector(".tail").innerHTML=`${val}`}else{document.getElementById(name).querySelector(".tail").innerHTML+=`<br>${val}`}}}else{document.getElementById(name).querySelector(".tail").innerHTML+=`${line[name]}`}
+					if(Array.isArray(line[name])){
+						for(var val of line[name]){
+							if(line[name].indexOf(val)==0){document.getElementById(name).querySelector(".tail").innerHTML=val}
+							else{document.getElementById(name).querySelector(".tail").innerHTML+=`<br>${val}`}
+						}
+					}else{document.getElementById(name).querySelector(".tail").innerHTML+=`${line[name]}`}
 				}
 			};
-			imgtag.attr("src",cimg);
-			$("#Drop").attr("data-content",doll.drop);
+			imgtag.setAttribute("src",cimg);
+			document.getElementById("Drop").setAttribute("data-content",doll.drop);
 			preview.ready(doll.name,doll.name);
 			options={
 				chart:{height:365,type:'line',stacked:false},
@@ -152,8 +190,8 @@ function utteranc(index){
 	discussion.appendChild(script);
 };
 function chrtset(x,y){
-	var tableA=document.getElementById("table"),tableB=document.getElementById("graph");
-	var ty=x.type,D="5링크시 <br>탄약 C,식량 M 소모",spd,crit;
+	var tableA=document.getElementById("table"),tableB=document.getElementById("graph"),modchk=x.id+2E4,
+		ty=x.type,D="5링크시 <br>탄약 C,식량 M 소모",spd,crit;
 	"hg"==ty?(Set2("HG",[71,31,79,58,55],30,30),spd=15,crit=20):
 	"smg"==ty?(Set2("SMG",[183,28,70,86,13],85,60),spd=12,crit=5):
 	"ar"==ty?(Set2("AR",[115,51,43,72,47],60,60),spd=10,crit=20):
@@ -162,14 +200,15 @@ function chrtset(x,y){
 	"sg"==ty&&(Set2("SG",[261,32,11,28,11],90,140),spd=6,crit=40);
 	"true"==x.mod?(Set1(2),table(2)):(Set1(1),table(1));
 	function table(k){
-		var a,n,mod,wiki=x.wiki,Fname=x.Fname,Country=x.Country,Manuf=x.Manuf,faction=x.faction,Potential=x.Potential,hp=x.hp,dmg=x.dmg,ammo=x.ammo,armor=x.armor,dodge=x.dodge,hit=x.hit,FR=x.FR,time=x.time,MS=x.MS,OC=x.OC,Teuqip=x.Teuqip;
-		var modchk=x.id+20000;
-		if(!armor){armor=["",""]};
-		if(wiki){Fname=`<a href="https://en.wikipedia.org/wiki/${wiki}" style="color:aquamarine">${Fname}</a>`};
-		if(!OC){OC=["",""]};
-		if(!wiki){wiki=""};
 		if(x.id==20056){crit=30};
-		dollData.map(doll=>{if(doll.id==modchk){mod=doll.name}});
+		var a,n,mod,wiki=x.wiki,Fname=x.Fname,Country=x.Country,Manuf=x.Manuf,faction=x.faction,Potential=x.Potential,hp=x.hp,dmg=x.dmg,ammo=x.ammo,armor=x.armor,dodge=x.dodge,hit=x.hit,FR=x.FR,time=x.time,MS=x.MS,OC=x.OC,Teuqip=x.Teuqip,
+			errchk=[ammo,wiki,Country,Manuf,Teuqip,Potential];
+		dollData.map(doll=>{if(doll.id==modchk){mod=`<a href="#">${doll.name}</a>`}});
+		if(!mod)mod="";
+		for(a in errchk)errchk[a]="undefined"==typeof errchk[a]?"":`<a href="#">${errchk[a]}</a>`;OC||(OC=["",""]);armor||(armor=["",""]);
+		if(!faction)faction=`Griffin & Kryuger`;
+		if(wiki){Fname=`<a href="https://en.wikipedia.org/wiki/${wiki}" style="color:aquamarine">${Fname}</a>`};
+		20056==x.id&&(crit=30);
 		for(n=1;n<21;n++){
 			a=
 			n==1?`체력`:
@@ -191,7 +230,7 @@ function chrtset(x,y){
 			n==17?`방어력 관통`:
 			n==18?`10`:
 			n==19?`탄창 크기`:
-			n==20&&(`${ammo}`);
+			n==20&&(`${errchk[0]}`);
 			tableA.querySelector(`div:nth-child(${n})`).innerHTML=a;
 		};
 		for(n=1;n<21;n++){
@@ -203,38 +242,42 @@ function chrtset(x,y){
 			n==5?`풀네임`:
 			n==6?`${Fname}`:
 			n==7?`설계 국가`:
-			n==8?`<a href="#">${Country}</a>`:
+			n==8?`${errchk[2]}`:
 			n==9?`제조사`:
-			n==10?`<a href="#">${Manuf}</a>`:
+			n==10?`${errchk[3]}`:
 			n==11?`소속`:
 			n==12?`<a href="#">${faction}</a>`:
 			n==13?`전용장비`:
-			n==14?`${Teuqip}`:
+			n==14?`${errchk[4]}`:
 			n==15?`개조유무`:
 			n==16?`${mod}`:
 			n==17?`성장등급`:
-			n==18?`${Potential}`:
+			n==18?`${errchk[5]}`:
 			n==19?`작전능력`:
 			n==20&&(`${OC[0]} ~ ${OC[1]}`);
 			tableB.querySelector(`div:nth-child(${n})`).innerHTML=a;
-		};
-		for(n=1;n<21;n++){
-			if(tableA.querySelector(`div:nth-child(${n})`).textContent=="undefined"){tableA.querySelector(`div:nth-child(${n})`).textContent=``};
-			if(tableB.querySelector(`div:nth-child(${n})`).textContent=="undefined"){tableB.querySelector(`div:nth-child(${n})`).textContent=``};
-		};
+		}
 	};
-	if(Array.isArray(x.drop)){
+	if(x.drop){
 		tableA.querySelector("div:nth-child(4)>.btn-group>button:nth-child(3)").removeAttribute("disabled");
 		tableA.querySelector("div:nth-child(4)>.btn-group>button:nth-child(3)").classList.add("text-white");
 	};
 	function Set1(z){y.series[0].data=[x.hp[z],x.dmg[z],x.dodge[z],x.FR[z],x.hit[z]]};
 	function Set2(a,b,c,d){y.series[1].name=a+" 평균";y.series[1].data=b;D=D.replace("C",c).replace("M",d)};
 	document.querySelector("#sec-fir>div:nth-child(2)>div:nth-child(2)").innerHTML=D;
+	if(!x.Mod)document.querySelector("#graph>div:nth-child(16)>a").addEventListener("click",()=>dollload(modchk));
 	var text,graph=document.querySelector("#graph");
 	for(var i=0;i<6;i+=2){
 		var target=graph.querySelector(`div:nth-child(${i+8})>a`);
 		if(!target){return};
-		target.addEventListener("click",function(){text=this.innerHTML.replace("&amp;","&").replace("G&K - ",""),search(text)})
+		target.addEventListener("click",function(){
+			text=this.innerHTML.replace("&amp;","&");
+			var HeadText=this.parentNode.previousSibling.innerHTML,src;
+			if(HeadText=="설계 국가"){src="From:"}
+			else if(HeadText=="제조사"){src="Manufacturer:"}
+			else{src="Faction:"};
+			search(src+text)}
+		)
 	}
 };
 function fxts(x){
@@ -264,12 +307,12 @@ function SKB2(){
 		loader.classList.add("is-active");
 		let _thisimg=$(this).index(),No=$(".blockquote-footer>cite:nth-child(1)").text(),Isrc=idir+No+".png";
 		if(0===_thisimg){
-			var imgsrc=imgtag.attr("src").split(idir)[1].split(".png")[0],imgM=imgsrc.indexOf("_d"),imgT=imgsrc.slice(0,-2),src;
+			var imgsrc=imgtag.getAttribute("src").split(idir)[1].split(".png")[0],imgM=imgsrc.indexOf("_d"),imgT=imgsrc.slice(0,-2),src;
 			if(-1!=imgM){
 				src=idir+imgT+".png";
 				fetch(src).then(function(res){
 					if(res.ok){
-						imgtag.attr("src",src);
+						imgtag.setAttribute("src",src);
 						loader.classList.remove("is-active")
 					}
 				});
@@ -277,7 +320,7 @@ function SKB2(){
 				src=idir+imgsrc+"_d.png";
 				fetch(src).then(function(res){
 					if(res.ok){
-						imgtag.attr("src",src);
+						imgtag.setAttribute("src",src);
 						loader.classList.remove("is-active")
 					}
 				});
@@ -286,7 +329,7 @@ function SKB2(){
 			if(1===_thisimg){
 				fetch(Isrc).then(function(res){
 					if(res.ok){
-						imgtag.attr("src",Isrc);
+						imgtag.setAttribute("src",Isrc);
 						loader.classList.remove("is-active")
 					}
 				});
@@ -294,7 +337,7 @@ function SKB2(){
 				--_thisimg,Isrc=idir+No+"_"+_thisimg+".png";
 				fetch(Isrc).then(function(res){
 					if(res.ok){
-						imgtag.attr("src",Isrc);
+						imgtag.setAttribute("src",Isrc);
 						loader.classList.remove("is-active")
 					}
 				})
@@ -367,7 +410,7 @@ function Skill(y,x){
 	src==45?Sdesc=`적군 전체 명중을 ${hit[1]}% 감소시킨다`:
 	src==47?Sdesc=
 		y==156||y==157?`자신의 회피를 ${dodge[1]}%,장갑을 ${armor[1]}% 상승시킨다`:
-		`어떠한 공격이라도 회피 할 수 있다.`:
+		`자신의 피해를 막는 왜곡방벽을 9999점 생성한다.`:
 	src==51?Sdesc=`한 줄기의 번개를 불러내 반경 1.5 범위 내의 적들에게 치명피해를 입히고 ${time[1]}초동안 마비(이동/공격 불가)와 쇄약(피해량 증가 ${dmg[1]}%) 상태로 만든다(보스 무효)`:
 	src==57?Sdesc=`소이탄을 투척하여 반경 1.5범위 내의 적들에게 공격력의 ${dmg1[1]/10}배의 폭발 대미지와 함께 ${time[1]}초 동안 0.33초당 공격력의 ${dmg2[1]/10}배의 화상 도트 대미지를 지속적으로 입힌다.`:
 	src==60?Sdesc=`야간작전에서 자신의 화력을 ${x.FxNight.dmg[1]}%(주간 보정치 없음) 명중을 ${hit[1]}%(주간 보정치 :${hit[1]}%) 상승시키며 지속시간 동안 모든 공격이 치명타로 적용된다.`:
@@ -431,16 +474,12 @@ function Skill(y,x){
 	document.getElementById("Sdesc").innerHTML=Sdesc;
 };
 function togglecon(){
-	for(var i of document.querySelectorAll("#grid,#search,#func,#filter")){i.classList.toggle("d-none")};
-	document.getElementById("filter").classList.toggle("d-flex");
-	$("button.btn-warning").remove();
-	for(var i of document.querySelectorAll(".img-fluid,#drop")){i.removeAttribute("src","data-content")};
+	var i;
+	for(i of document.querySelectorAll("#grid,#toolbar,#func")){i.classList.toggle("d-none")};
+	for(i of document.querySelectorAll(".img-fluid,#drop")){i.removeAttribute("src","data-content")};
 	$("[data-toggle='popover']").popover("hide");
-	document.getElementById("doll").innerHTML="";
-	document.getElementById("dolldiscussion").innerHTML="";
 	preview.stage.off("pointerdown");
 	SimpleBar.removeObserver();
-	rCh.clearDomElements();
 };
 $(".filter,.dropdown-menu>a").click(function(){
 	var filtr=$(this).text(),t0=$("[data-time='0']");
@@ -488,7 +527,7 @@ $(".tileFilter").on("hide.bs.popover",()=>{
 );
 VoActor.forEach(fltr.VA),$(".VA").click(function(){Sval(VA[VoActor.indexOf($(this).find("span:nth-child(1)").text())])});
 Illustrator.forEach(fltr.Art),$(".Illustrator").click(function(){Sval(Illustrator[Illustrator.indexOf($(this).find("span:nth-child(1)").text())])});
-$("#CV,#illust").click(function(){search(this.innerHTML)});
+for(var i of document.querySelectorAll("#CV,#illust")){i.addEventListener("click",function(){search(this.innerHTML)})};
 function search(query){togglecon(),Sval(query)};
 function cho_hangul(str){
 	var cho=["ㄱ","ㄲ","ㄴ","ㄷ","ㄸ","ㄹ","ㅁ","ㅂ","ㅃ","ㅅ","ㅆ","ㅇ","ㅈ","ㅉ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ"],

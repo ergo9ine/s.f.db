@@ -37,48 +37,50 @@ svg>text{fill:#fff}
 #graph>div>a{color:aquamarine}
 #GN,#Time{fill:#000}
 @media all and (min-width:201px){
-	#grid {
+	#grid{
+		margin-top:93px;
 		max-width:200px;
 	}
 	#chartcon{margin:1rem 0!important}
 }
 @media all and (min-width:401px){
-	#grid {
+	#grid{
 		max-width:400px;
 	}
 }
 @media all and (min-width:601px){
-	#grid {
+	#grid{
+		margin-top:62px;
 		max-width:600px;
 	}
 }
 @media all and (min-width:801px){
-	#grid {
+	#grid{
 		max-width:800px;
 	}
 }
 @media all and (min-width:1001px){
-	#grid {
+	#grid{
 		max-width:1000px;
 	}
 }
 @media all and (min-width:1201px){
-	#grid {
+	#grid{
 		max-width:1200px;
 	}
 }
 @media all and (min-width:1401px){
-	#grid {
+	#grid{
 		max-width:1400px;
 	}
 }
 @media all and (min-width:1601px){
-	#grid {
+	#grid{
 		max-width:1600px;
 	}
 }
 @media all and (min-width:1801px){
-	#grid {
+	#grid{
 		max-width:1800px;
 	}
 }}
