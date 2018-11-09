@@ -25,12 +25,14 @@ for(i of doc.querySelectorAll(".tab")){
 for(i of doc.querySelectorAll("#Sidebar>button,#lm>button:not(#lc)")){
 	i.addEventListener("click",function(){
 		var text=this.innerHTML;
-		for(i of [this.parentNode.children].filter((child)=>child!==this)[0]){i.classList.remove("bg-danger")};
+		for(var j of [this.parentNode.children].filter((child)=>child!==this)[0]){j.classList.remove("bg-danger")};
 		this.classList.add("bg-danger");
 		if(text=="Database"){TopMToggle(".sm",".db")}
 		else if(text=="Simulator"){TopMToggle(".db",".sm")}
-		else if(text=="Information"){for(i of doc.querySelectorAll("#contents>div")){i.classList.add("d-none")};doc.getElementById("index").classList.remove("d-none");
-		for(i of doc.querySelectorAll(".tab")){i.classList.remove("bg-danger")};doc.getElementById("result").innerHTML=''}
+		else if(text=="Information"){
+			for(i of doc.querySelectorAll("#contents>div")){i.classList.add("d-none")};doc.getElementById("index").classList.remove("d-none");
+			for(i of doc.querySelectorAll(".tab")){i.classList.remove("bg-danger")};doc.getElementById("result").innerHTML=''
+		}
 	});
 }
 });
@@ -93,11 +95,14 @@ document.getElementById("clickme").addEventListener("click",()=>{
 });
 // battery by kosehy
 var arrCom="1com 2com 3com 4com 5com 6com 7com 8com 9com 10com".split(" "),arrSet="1set 2set 3set 4set 5set 6set 7set 8set 9set 10set".split(" "),arrPet="1pet 2pet 3pet 4pet 5pet 6pet 7pet 8pet 9pet 10pet".split(" "),arrTcom="1tcom 2tcom 3tcom 4tcom 5tcom 6tcom 7tcom 8tcom 9tcom 10tcom".split(" "),arrTnr=[0,50,85,95,99,101,102,102,102.5,103,103.5],i;
+function setAttributes(el,attrs){for(i in attrs){el.setAttribute(i,attrs[i])}};
+for(i of document.querySelectorAll("table th>input")){setAttributes(i,{class:"form-control",style:"width:100%",required:"",min:"0",placeholder:"0"})};
 for(i in arrCom){
-doc.getElementById(arrCom[i]).addEventListener("keyup",sumComfort);
-doc.getElementById(arrSet[i]).addEventListener("keyup",sumComfort);
-doc.getElementById(arrPet[i]).addEventListener("keyup",sumComfort);
-doc.getElementById(arrTcom[i]).addEventListener("keyup",sumComfort)
+	var AC=doc.getElementById(arrCom[i]),AS=doc.getElementById(arrSet[i]),AP=doc.getElementById(arrPet[i]),AT=doc.getElementById(arrTcom[i]);
+	AC.addEventListener("keyup",sumComfort);
+	AS.addEventListener("keyup",sumComfort);
+	AP.addEventListener("keyup",sumComfort);
+	AT.addEventListener("keyup",sumComfort)
 }
 var totalCom=0,totalTcom=0,numOfroom=0,totalBr=0,averageTbr=0;
 function sumComfort(){

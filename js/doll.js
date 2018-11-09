@@ -11,10 +11,11 @@ $(document).ready(()=>{
 });
 function dominit(){
 	var i;
-	for(i of document.querySelectorAll("#table,#graph")){for(let n=0;n<20;n++){i.appendChild(document.createElement("div"))}};
 	for(i of document.querySelectorAll("#table,#graph")){
-		for(let v=0;v<20;v+=2){i.children[v].classList.add("col-4","bg-dark")};
-		for(let v=1;v<20;v+=2){i.children[v].classList.add("col-8","bg-secondary")}
+		for(let v=0;v<20;v++){
+			i.appendChild(document.createElement("div"))
+			v%2==0?i.children[v].classList.add("col-4","bg-dark"):i.children[v].classList.add("col-8","bg-secondary","text-truncate")
+		}
 	};
 	for(i of document.querySelectorAll(".text-white svg")){i.classList.add("col-6","svg","mx-auto")};
 	for(i of document.querySelectorAll(".d-flex>svg:nth-child(1)>polygon")){i.setAttribute("points","0,0 0,35 0,36 100,36 125,0")};
@@ -47,7 +48,6 @@ function contentsload(){
 };
 function setAttributes(el,attrs){for(var key in attrs){el.setAttribute(key,attrs[key])}};
 function loadComplete(){
-	var Show=[],Hide=[];
 	grid=new Muuri("#grid",{
 		showDuration:null,hideDuration:null,layoutDuration:null,showEasing:null,hideEasing:null,layoutEasing:null,
 		visibleStyles:{},hiddenStyles:{},
@@ -57,17 +57,14 @@ function loadComplete(){
 			rarity:(item,element)=>element.getAttribute("data-rarity")
 		}
 	});
-	$("#search").quicksearch(".item",{
-		noResults:"#noResultMessage",
-		"bind":"click input",
-		"hide":function(){Hide.push(this)},
-		"show":function(){Show.push(this)},
-		"onAfter":()=>{
-			grid.hide(Hide,{instant:true});
-			grid.show(Show,{instant:true});
-			Hide=[],Show=[];
-		}
-	});
+	document.getElementById("search").addEventListener("click",(e)=>{dollSearch(e.target.value)});
+	document.getElementById("search").addEventListener("input",(e)=>{dollSearch(e.target.value)});
+	function dollSearch(value){
+		grid.filter((item)=>{return item.getElement().querySelector(".tag").innerHTML.includes(value)||item.getElement().querySelector(".name").innerHTML.includes(value)})
+		if(document.getElementById("grid").querySelector("[class*=muuri-item-shown]")==null){
+			document.getElementById("noResultMessage").style.display="block"
+		}else{document.getElementById("noResultMessage").style.display="none"}
+	};
 	$(".VAinput").quicksearch(".VA",{
 		"bind":"input",
 		"hide":function(){this.classList.add("d-none")},
@@ -105,80 +102,76 @@ var fltr={
 	}
 };
 function dollload(num){
-	var options,i;
+	loader.classList.add("is-active");
+	var options,i,x=10,doll=dollData.find(doll=>doll.id===num),
+		simg=idir+doll.id,cimg=simg+".png",timehour=(doll.buildTime/3600|0),timemin=doll.buildTime%3600/60,time=`${timehour}시간${timemin}분`,gridself=`#grid${doll.Fx.self}`,gridPos=[],skins=[],i=0,x,name;
 	document.getElementById("doll").innerHTML="";
 	document.getElementById("dolldiscussion").innerHTML="";
 	for(i of document.querySelectorAll(".btn-warning")){i.parentNode.removeChild(i)};
 	rCh?rCh.clearDomElements():rCh=``;
-	loader.classList.add("is-active");
-	dollData.map(doll=>{
-		if(doll.id===num){
-			var simg=idir+doll.id,cimg=simg+".png",timehour=(doll.buildTime/3600|0),timemin=doll.buildTime%3600/60,time=`${timehour}시간${timemin}분`,gridself=`#grid${doll.Fx.self}`,gridPos=[],skins=[],i=0,x,name;
-			doll.Fx.tile.map(tile=>gridPos.push(`#grid${tile}`));
-			for(x=1;x<10;x++){
-				var tar=document.getElementById(`grid${x}`).classList;
-				tar.remove("bg-white","aqua","grey");
-				tar.add("grey")
-			};
-			document.querySelector(gridself).classList.add("grey","bg-white");
-			for(var target of document.querySelectorAll(gridPos)){target.classList.remove("grey"),target.classList.add("aqua")}
-			$("body,html").animate({scrollTop:0},0);
-			if(doll.skins){doll.skins.map(skin=>{for(var target of document.querySelectorAll(".skinntg,#contents>div:nth-child(6)")){target.innerHTML+=`<button type="button" class="btn btn-warning btn-sm">${skin}</button>`}})};
-			document.querySelector("#contents>div:nth-child(6)>button").classList.add("btn-block");
-			if(!doll.voice)doll.voice="";
-			var stat={".blockquote>p":doll.krName,"#CV":doll.voice,"#illust":doll.illust,"#GN":doll.name,"#Time":time};
-			for(var key in stat)document.querySelector(key).innerHTML=stat[key];
-			utteranc(doll.id);
-			if(doll.respec){
-				for(var line of doll.respec){
-					for(name in line){name=name};
-					document.getElementById("doll").innerHTML+=`<div id="${name}" class="row no-gutters border-bottom"><div class="head col-4 my-auto">${name}</div><div class="tail col-8 border-left"></div></div>`;
-					if(Array.isArray(line[name])){
-						for(var val of line[name]){
-							if(line[name].indexOf(val)==0){document.getElementById(name).querySelector(".tail").innerHTML=val}
-							else{document.getElementById(name).querySelector(".tail").innerHTML+=`<br>${val}`}
-						}
-					}else{document.getElementById(name).querySelector(".tail").innerHTML+=`${line[name]}`}
+	doll.Fx.tile.map(tile=>gridPos.push(`#grid${tile}`));
+	while(x--){
+		if(x===0){break}
+		var tar=document.getElementById(`grid${x}`).classList;
+		tar.remove("bg-white","aqua","grey");
+		tar.add("grey")
+	};
+	document.querySelector(gridself).classList.add("grey","bg-white");
+	for(i of document.querySelectorAll(gridPos))i.classList.remove("grey"),i.classList.add("aqua");
+	$("body,html").animate({scrollTop:0},0);
+	if(doll.skins){doll.skins.map(skin=>{for(var target of document.querySelectorAll(".skinntg,#contents>div:nth-child(6)")){target.innerHTML+=`<button type="button" class="btn btn-warning btn-sm">${skin}</button>`}})};
+	document.querySelector("#contents>div:nth-child(6)>button").classList.add("btn-block");
+	if(!doll.voice)doll.voice="";
+	var stat={".blockquote>p":doll.krName,"#CV":doll.voice,"#illust":doll.illust,"#GN":doll.name,"#Time":time};
+	for(i in stat)document.querySelector(i).innerHTML=stat[i];
+	utteranc(doll.id);
+	if(doll.respec){
+		for(var i of doll.respec){
+			for(name in i){name=name};
+			document.getElementById("doll").innerHTML+=`<div id="${name}" class="row no-gutters border-bottom"><div class="head col-4 my-auto">${name}</div><div class="tail col-8 border-left"></div></div>`;
+			if(Array.isArray(i[name])){
+				for(var val of i[name]){
+					if(i[name].indexOf(val)==0){document.getElementById(name).querySelector(".tail").innerHTML=val}
+					else{document.getElementById(name).querySelector(".tail").innerHTML+=`<br>${val}`}
 				}
-			};
-			imgtag.setAttribute("src",cimg);
-			document.getElementById("Drop").setAttribute("data-content",doll.drop);
-			preview.ready(doll.name,doll.name);
-			options={
-				chart:{height:365,type:'line',stacked:false},
-				dataLabels:{enabled:false},
-				series:[
-					{name:doll.krName,type:'column',data:[]},
-					{type:'column',data:[]},
-					{name:'비교대상',type:'line',data:[]}
-				],
-				stroke:{width:[1,1,4]},
-				xaxis:{categories:["체력","화력","회피","사속","명중"]},
-				tooltip:{
-					fixed:{
-						enabled:true,
-						position:'topLeft',// topRight,topLeft,bottomRight,bottomLeft
-						offsetY:30,offsetX:60
-					}
-				},
-				legend:{horizontalAlign:'left',offsetX:40}
-			};
-			chrtset(doll,options);
-			fxts(doll.Fx);
-			SKB2();
-			Skill(doll.id,doll.skill);
-			rCh=new ApexCharts(document.getElementById("chart"),options);
-			rCh.render();
+			}else{document.getElementById(name).querySelector(".tail").innerHTML+=`${i[name]}`}
 		}
-	})
-	$("#Tdesc,#Sdesc,#doll").each(el=>{new SimpleBar($("#Tdesc,#Sdesc,#doll")[el])})
+	};
+	imgtag.setAttribute("src",cimg);
+	document.getElementById("Drop").setAttribute("data-content",doll.drop);
+	preview.ready(doll.name,doll.name);
+	options={
+		chart:{height:365,type:'line',stacked:false},
+		dataLabels:{enabled:false},
+		series:[
+			{name:doll.krName,type:'column',data:[]},
+			{type:'column',data:[]},
+			{name:'비교대상',type:'line',data:[]}
+		],
+		stroke:{width:[1,1,4]},
+		xaxis:{categories:["체력","화력","회피","사속","명중"]},
+		tooltip:{
+			fixed:{
+				enabled:true,
+				position:'topLeft',// topRight,topLeft,bottomRight,bottomLeft
+				offsetY:30,offsetX:60
+			}
+		},
+		legend:{horizontalAlign:'left',offsetX:40}
+	};
+	chrtset(doll,options);
+	fxts(doll.Fx);
+	Skill(doll.id,doll.skill);
+	rCh=new ApexCharts(document.getElementById("chart"),options);
+	rCh.render();
+	$("#Tdesc,#Sdesc,#doll").each(el=>{new SimpleBar($("#Tdesc,#Sdesc,#doll")[el])});
 	loader.classList.remove("is-active")
 };
 function sort(a){grid.sort(a)};
 function filter(a){grid.filter(`${a}`)};
 function Sval(a){document.getElementById("search").value=a;document.getElementById("search").click()};
 function utteranc(index){
-	document.querySelector(".blockquote-footer>cite:nth-child(1)").innerHTML=index;
+	document.querySelector(".blockquote-footer>cite").innerHTML=index;
 	var discussion=document.getElementById('dolldiscussion');
 	if(!discussion)return;
 	var script=document.createElement('script');
@@ -187,7 +180,7 @@ function utteranc(index){
 	script.setAttribute('issue-term',index);
 	script.setAttribute('theme','github-dark');
 	script.setAttribute('crossorigin','anonymous');
-	discussion.appendChild(script);
+	discussion.appendChild(script)
 };
 function chrtset(x,y){
 	var tableA=document.getElementById("table"),tableB=document.getElementById("graph"),modchk=x.id+2E4,
@@ -202,12 +195,13 @@ function chrtset(x,y){
 	function table(k){
 		if(x.id==20056){crit=30};
 		var a,n,mod,wiki=x.wiki,Fname=x.Fname,Country=x.Country,Manuf=x.Manuf,faction=x.faction,Potential=x.Potential,hp=x.hp,dmg=x.dmg,ammo=x.ammo,armor=x.armor,dodge=x.dodge,hit=x.hit,FR=x.FR,time=x.time,MS=x.MS,OC=x.OC,Teuqip=x.Teuqip,
-			errchk=[ammo,wiki,Country,Manuf,Teuqip,Potential];
+			errchk=[ammo,wiki,Country,Manuf,Teuqip];
 		dollData.map(doll=>{if(doll.id==modchk){mod=`<a href="#">${doll.name}</a>`}});
+		if(!Potential)Potential="";
 		if(!mod)mod="";
 		for(a in errchk)errchk[a]="undefined"==typeof errchk[a]?"":`<a href="#">${errchk[a]}</a>`;OC||(OC=["",""]);armor||(armor=["",""]);
 		if(!faction)faction=`Griffin & Kryuger`;
-		if(wiki){Fname=`<a href="https://en.wikipedia.org/wiki/${wiki}" style="color:aquamarine">${Fname}</a>`};
+		if(wiki){Fname=`<a href="https://en.wikipedia.org/wiki/${wiki}">${Fname}</a>`};
 		20056==x.id&&(crit=30);
 		for(n=1;n<21;n++){
 			a=
@@ -252,33 +246,76 @@ function chrtset(x,y){
 			n==15?`개조유무`:
 			n==16?`${mod}`:
 			n==17?`성장등급`:
-			n==18?`${errchk[5]}`:
+			n==18?`${Potential}`:
 			n==19?`작전능력`:
 			n==20&&(`${OC[0]} ~ ${OC[1]}`);
 			tableB.querySelector(`div:nth-child(${n})`).innerHTML=a;
 		}
 	};
+	function skin(e){
+		loader.classList.add("is-active");
+		let _thisimg=Array.prototype.indexOf.call(e.target.parentNode.childNodes,e.target),No=document.querySelector(".blockquote-footer>cite").innerHTML,Isrc=idir+No+".png";
+		if(0===_thisimg){
+			var imgsrc=imgtag.getAttribute("src").split(idir)[1].split(".png")[0],imgM=imgsrc.indexOf("_d"),imgT=imgsrc.slice(0,-2),src;
+			if(-1!=imgM){
+				src=idir+imgT+".png";
+				fetch(src).then((res)=>{
+					if(res.ok){
+						imgtag.setAttribute("src",src);
+						loader.classList.remove("is-active")
+					}
+				});
+			}else{
+				src=idir+imgsrc+"_d.png";
+				fetch(src).then((res)=>{
+					if(res.ok){
+						imgtag.setAttribute("src",src);
+						loader.classList.remove("is-active")
+					}
+				})
+			}
+		}else{
+			if(1===_thisimg){
+				fetch(Isrc).then((res)=>{
+					if(res.ok){
+						imgtag.setAttribute("src",Isrc);
+						loader.classList.remove("is-active")
+					}
+				});
+			}else{
+				--_thisimg,Isrc=idir+No+"_"+_thisimg+".png";
+				fetch(Isrc).then((res)=>{
+					if(res.ok){
+						imgtag.setAttribute("src",Isrc);
+						loader.classList.remove("is-active")
+					}
+				})
+			}
+		}
+	};
 	if(x.drop){
-		tableA.querySelector("div:nth-child(4)>.btn-group>button:nth-child(3)").removeAttribute("disabled");
-		tableA.querySelector("div:nth-child(4)>.btn-group>button:nth-child(3)").classList.add("text-white");
+		let drop=tableA.querySelector("div:nth-child(4)>.btn-group>button:nth-child(3)");
+		drop.removeAttribute("disabled");
+		drop.classList.add("text-white")
 	};
 	function Set1(z){y.series[0].data=[x.hp[z],x.dmg[z],x.dodge[z],x.FR[z],x.hit[z]]};
 	function Set2(a,b,c,d){y.series[1].name=a+" 평균";y.series[1].data=b;D=D.replace("C",c).replace("M",d)};
 	document.querySelector("#sec-fir>div:nth-child(2)>div:nth-child(2)").innerHTML=D;
-	if(!x.Mod)document.querySelector("#graph>div:nth-child(16)>a").addEventListener("click",()=>dollload(modchk));
-	var text,graph=document.querySelector("#graph");
+	var modlamp=document.querySelector("#graph>div:nth-child(16)>a");
+	if(!x.Mod&&modlamp)modlamp.addEventListener("click",()=>dollload(modchk));
+	var graph=document.querySelector("#graph");
 	for(var i=0;i<6;i+=2){
 		var target=graph.querySelector(`div:nth-child(${i+8})>a`);
-		if(!target){return};
-		target.addEventListener("click",function(){
-			text=this.innerHTML.replace("&amp;","&");
-			var HeadText=this.parentNode.previousSibling.innerHTML,src;
+		if(!target)return;
+		target.addEventListener("click",(e)=>{
+			var HeadText=e.target.parentNode.previousSibling.innerHTML,src;
 			if(HeadText=="설계 국가"){src="From:"}
 			else if(HeadText=="제조사"){src="Manufacturer:"}
 			else{src="Faction:"};
-			search(src+text)}
+			search(src+e.target.innerHTML)}
 		)
-	}
+	};
+	for(var i of document.querySelectorAll(".skinntg>button,#contents>div:nth-child(6)>button")){i.addEventListener("click",(e)=>skin(e))};
 };
 function fxts(x){
 	var TS="타일 위 타겟에게";
@@ -301,49 +338,6 @@ function fxts(x){
 	});
 	function Set(x){TS=TS.replace("타겟",x)};
 	document.querySelector("#sec-fir>div:nth-child(1)>div:nth-child(2)>div:nth-child(2)").innerHTML=TS;
-};
-function SKB2(){
-	$(".skinntg>button,#contents>div:nth-child(6)>button").click(function skin(){
-		loader.classList.add("is-active");
-		let _thisimg=$(this).index(),No=$(".blockquote-footer>cite:nth-child(1)").text(),Isrc=idir+No+".png";
-		if(0===_thisimg){
-			var imgsrc=imgtag.getAttribute("src").split(idir)[1].split(".png")[0],imgM=imgsrc.indexOf("_d"),imgT=imgsrc.slice(0,-2),src;
-			if(-1!=imgM){
-				src=idir+imgT+".png";
-				fetch(src).then(function(res){
-					if(res.ok){
-						imgtag.setAttribute("src",src);
-						loader.classList.remove("is-active")
-					}
-				});
-			}else{
-				src=idir+imgsrc+"_d.png";
-				fetch(src).then(function(res){
-					if(res.ok){
-						imgtag.setAttribute("src",src);
-						loader.classList.remove("is-active")
-					}
-				});
-			}
-		}else{
-			if(1===_thisimg){
-				fetch(Isrc).then(function(res){
-					if(res.ok){
-						imgtag.setAttribute("src",Isrc);
-						loader.classList.remove("is-active")
-					}
-				});
-			}else{
-				--_thisimg,Isrc=idir+No+"_"+_thisimg+".png";
-				fetch(Isrc).then(function(res){
-					if(res.ok){
-						imgtag.setAttribute("src",Isrc);
-						loader.classList.remove("is-active")
-					}
-				})
-			}
-		}
-	})
 };
 function Skill(y,x){
 	var skillimg=$("#sec-fir>div:nth-child(3)>div:nth-child(2)>img"),FCD=x.FCD,CD=x.CD,src=x.src,dmg=x.Fx.dmg,dmg1=x.Fx.dmg1,dmg2=x.Fx.dmg2,dmg3=x.Fx.dmg3,ammo=x.Fx.ammo,armor=x.Fx.armor,dodge=x.Fx.dodge,hit=x.Fx.hit,FR=x.Fx.FR,cri=x.Fx.cri,time=x.Fx.time,MS=x.Fx.MS,Sdesc="";
@@ -470,7 +464,7 @@ function Skill(y,x){
 	src=="temp"||src==94||y==77||y==85||y==109||y==173?Sdesc+``:
 	src==0||src==1||src==13||src==22||src==37||src==39||src==39||src==41||src==57||src==91||src==94||src==96||y==79||y==102||y==185||y==198||y==213||y==1004||y==1005||y==1006||y==1009||y==1010?Sdesc+`<br>선쿨${FCD}초/쿨타임${CD[1]}초`:
 	Sdesc+`<br>지속시간${time[1]}초/선쿨${FCD}초/쿨타임${CD[1]}초`;
-	y==148||y==183&&(Sdesc=Sdesc.replace(`<br>`,`<br>지속시간${time[1]}초.`));
+	y==148||y==183&&(Sdesc=Sdesc.replace(`<br>`,`<br>지속시간${time[1]}초`));
 	document.getElementById("Sdesc").innerHTML=Sdesc;
 };
 function togglecon(){
