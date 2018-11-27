@@ -9,11 +9,11 @@ for(i of doc.querySelectorAll("#lo,#lc")){toggleV(i,"lm")};
 for(i of doc.querySelectorAll("#ro,#rc")){toggleV(i,"rm")};
 for(i of doc.querySelectorAll("#lm>button:nth-child(2),#lm>button:nth-child(3)")){i.addEventListener("click",()=>doc.querySelector("#rm").classList.remove(TogV))};
 for(i of doc.querySelectorAll(".tab")){
-	i.addEventListener("click",(e)=>{
+	i.addEventListener("click",e=>{
 		var Classes=(e.target.getAttribute("class")).split(" "),T="tab1 tab2 tab3 tab4 tab5 tab6 tab7 tab8 tab9 tab10".split(" "),Tab="#Sidebar>button:nth-child(5),#lm>button:nth-child(4)".split(",");
 		doc.getElementById("result").innerHTML="";
-		for(i of doc.querySelectorAll(Tab)){i.classList.remove("bg-danger")};
-		for(i of doc.querySelectorAll(".tab")){i.classList.remove("bg-danger")};
+		for(i of doc.querySelectorAll(Tab))i.classList.remove("bg-danger");
+		for(i of doc.querySelectorAll(".tab"))i.classList.remove("bg-danger");
 		e.target.classList.add("bg-danger");
 		doc.getElementById("tab".concat(Classes[0].slice(1))).classList.remove("d-none");
 		for(i of doc.querySelectorAll(".content")){

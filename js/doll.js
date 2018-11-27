@@ -29,11 +29,11 @@ function dominit(){
 	$(".tileFilter").popover({html:true,content:function(){return $("#tileFilter").html()}})
 }
 function contentsload(){
-	fetch("../json/doll.json").then(response=>response.json().then(function(tdoll){
+	fetch("../json/doll.json").then(response=>response.json().then(tdoll=>{
 		dollData=tdoll;
 		var allCharacters=dollData.map(doll=>{
-			if(!doll.buildTime){doll.buildTime=0};
-			if(!doll.faction){doll.faction="Griffin & Kryuger"}
+			if(!doll.buildTime)doll.buildTime=0;
+			if(!doll.faction)doll.faction="Griffin & Kryuger";
 			var temp=document.createDocumentFragment(),timehour=(doll.buildTime/3600|0),timemin=doll.buildTime%3600/60,noval=doll.id,dollT=[0,0,0,0,0,0,0,0,0],cho=cho_hangul(`${doll.krName}`);
 			noval>2E4?noval="M"+(noval-2E4):noval>1E3&&(noval="X"+(noval-1E3));
 			doll.Fx.tile.map(tile=>dollT[tile-1]=1,dollT[doll.Fx.self-1]=2);
@@ -57,11 +57,12 @@ function loadComplete(){
 			rarity:(item,element)=>element.getAttribute("data-rarity")
 		}
 	});
-	document.getElementById("search").addEventListener("click",(e)=>{dollSearch(e.target.value)});
-	document.getElementById("search").addEventListener("input",(e)=>{dollSearch(e.target.value)});
+	imgtag.addEventListener("load",()=>loader.classList.remove("is-active"));
+	document.getElementById("search").addEventListener("click",e=>dollSearch(e.target.value));
+	document.getElementById("search").addEventListener("input",e=>dollSearch(e.target.value));
 	function dollSearch(value){
-		grid.filter((item)=>{return item.getElement().querySelector(".tag").innerHTML.includes(value)||item.getElement().querySelector(".name").innerHTML.includes(value)})
-		if(document.getElementById("grid").querySelector("[class*=muuri-item-shown]")==null){
+		grid.filter(item=>{return item.getElement().querySelector(".tag").innerHTML.includes(value)||item.getElement().querySelector(".name").innerHTML.includes(value)})
+		if(!document.getElementById("grid").querySelector("[class*=muuri-item-shown]")){
 			document.getElementById("noResultMessage").style.display="block"
 		}else{document.getElementById("noResultMessage").style.display="none"}
 	};
@@ -76,16 +77,16 @@ function loadComplete(){
 		"show":function(){this.classList.remove("d-none")}
 	});
 	loader.classList.remove("is-active");
-	for(var i of document.querySelectorAll(".item-content")){
-		i.addEventListener("click",(e)=>{
-			for(i of document.querySelectorAll("#grid,#toolbar,#func")){i.classList.toggle("d-none")};
+	for(i of document.querySelectorAll(".item-content")){
+		i.addEventListener("click",e=>{
+			for(var k of document.querySelectorAll("#grid,#toolbar,#func"))k.classList.toggle("d-none");
 			document.getElementById("noResultMessage").style.display="none";
 			document.getElementById("search").value="";
 			$(".tileFilter").popover("hide");
 			dollload(Number(e.target.parentNode.querySelector(".no").getAttribute("data-no")))
 		})
 	};
-	document.querySelector(".btn-dark:nth-child(5)").addEventListener("click",(e)=>e.target.nextElementSibling.classList.toggle("d-block"));
+	document.querySelector(".btn-dark:nth-child(5)").addEventListener("click",e=>e.target.nextElementSibling.classList.toggle("d-block"));
 	$("#dormi,#battlei").click(function(){
 		var on=$(this).attr("id"),dorm=$("#dorm>rect"),battle=$("#battle>rect"),dollname=$("#GN").text();
 		on==="dormi"?(battle.css("fill","grey"),dorm.css("fill","#ffc107"),preview.ready(dollname,"R"+dollname)):(battle.css("fill","#ffc107"),dorm.css("fill","grey"),preview.ready(dollname,dollname));
@@ -97,9 +98,7 @@ var fltr={
 		var b=cho_hangul(a);
 		document.querySelector(".VoC").innerHTML+=`<a class="dropdown-item VA" href="#"><span>${a}</span><span class="d-none">${b}/</span></a>`;
 	},
-	Art:(a)=>{
-		document.querySelector(".IoC").innerHTML+=`<a class="dropdown-item Illustrator" href="#"><span>${a}</span></a>`;
-	}
+	Art:(a)=>{document.querySelector(".IoC").innerHTML+=`<a class="dropdown-item Illustrator" href="#"><span>${a}</span></a>`}
 };
 function dollload(num){
 	loader.classList.add("is-active");
@@ -165,10 +164,9 @@ function dollload(num){
 	rCh=new ApexCharts(document.getElementById("chart"),options);
 	rCh.render();
 	$("#Tdesc,#Sdesc,#doll").each(el=>{new SimpleBar($("#Tdesc,#Sdesc,#doll")[el])});
-	loader.classList.remove("is-active")
 };
 function sort(a){grid.sort(a)};
-function filter(a){grid.filter(`${a}`)};
+function filter(a){grid.filter(a)};
 function Sval(a){document.getElementById("search").value=a;document.getElementById("search").click()};
 function utteranc(index){
 	document.querySelector(".blockquote-footer>cite").innerHTML=index;
@@ -259,37 +257,17 @@ function chrtset(x,y){
 			var imgsrc=imgtag.getAttribute("src").split(idir)[1].split(".png")[0],imgM=imgsrc.indexOf("_d"),imgT=imgsrc.slice(0,-2),src;
 			if(-1!=imgM){
 				src=idir+imgT+".png";
-				fetch(src).then((res)=>{
-					if(res.ok){
-						imgtag.setAttribute("src",src);
-						loader.classList.remove("is-active")
-					}
-				});
+				fetch(src).then(res=>{if(res.ok)imgtag.setAttribute("src",src)})
 			}else{
 				src=idir+imgsrc+"_d.png";
-				fetch(src).then((res)=>{
-					if(res.ok){
-						imgtag.setAttribute("src",src);
-						loader.classList.remove("is-active")
-					}
-				})
+				fetch(src).then(res=>{if(res.ok)imgtag.setAttribute("src",src)})
 			}
 		}else{
 			if(1===_thisimg){
-				fetch(Isrc).then((res)=>{
-					if(res.ok){
-						imgtag.setAttribute("src",Isrc);
-						loader.classList.remove("is-active")
-					}
-				});
+				fetch(Isrc).then(res=>{if(res.ok)imgtag.setAttribute("src",Isrc)})
 			}else{
 				--_thisimg,Isrc=idir+No+"_"+_thisimg+".png";
-				fetch(Isrc).then((res)=>{
-					if(res.ok){
-						imgtag.setAttribute("src",Isrc);
-						loader.classList.remove("is-active")
-					}
-				})
+				fetch(Isrc).then(res=>{if(res.ok)imgtag.setAttribute("src",Isrc)})
 			}
 		}
 	};
@@ -307,7 +285,7 @@ function chrtset(x,y){
 	for(var i=0;i<6;i+=2){
 		var target=graph.querySelector(`div:nth-child(${i+8})>a`);
 		if(!target)return;
-		target.addEventListener("click",(e)=>{
+		target.addEventListener("click",e=>{
 			var HeadText=e.target.parentNode.previousSibling.innerHTML,src;
 			if(HeadText=="설계 국가"){src="From:"}
 			else if(HeadText=="제조사"){src="Manufacturer:"}
@@ -315,7 +293,7 @@ function chrtset(x,y){
 			search(src+e.target.innerHTML)}
 		)
 	};
-	for(var i of document.querySelectorAll(".skinntg>button,#contents>div:nth-child(6)>button")){i.addEventListener("click",(e)=>skin(e))};
+	for(var i of document.querySelectorAll(".skinntg>button,#contents>div:nth-child(6)>button")){i.addEventListener("click",e=>skin(e))};
 };
 function fxts(x){
 	var TS="타일 위 타겟에게";
@@ -326,26 +304,27 @@ function fxts(x){
 	"rf"==x.target?Set("RF"):
 	"mg"==x.target?Set("MG"):
 	"sg"==x.target&&Set("SG");
-	$.each(x.TileFx,(index,value)=>{
-		TS+=
-		"dmg"==index?`<br>화력 ${value}%증가`:
-		"dodge"==index?`<br>회피 ${value}%증가`:
-		"hit"==index?`<br>명중 ${value}%증가`:
-		"FR"==index?`<br>사속 ${value}%증가`:
-		"cri"==index?`<br>치명타율 ${value}%증가`:
-		"time"==index?`<br>쿨타임 ${value}%감소`:
-		"armor"==index&&(`<br>장갑 ${value}%증가`)
-	});
+	for(var i in x.TileFx){
+		let y=x.TileFx[i];
+		"dmg"==i?Set2("화력",y,"증가"):
+		"dodge"==i?Set2("회피",y,"증가"):
+		"hit"==i?Set2("명중",y,"증가"):
+		"FR"==i?Set2("사속",y,"증가"):
+		"cri"==i?Set2("치명타율",y,"증가"):
+		"time"==i?Set2("쿨타임",y,"증가"):
+		"armor"==i&&Set2("장갑",y,"증가");
+	};
 	function Set(x){TS=TS.replace("타겟",x)};
-	document.querySelector("#sec-fir>div:nth-child(1)>div:nth-child(2)>div:nth-child(2)").innerHTML=TS;
+	function Set2(x,y,z){TS+=`<br>${x} ${y}% ${z}`}
+	document.getElementById("Tdesc").innerHTML=TS;
 };
 function Skill(y,x){
-	var skillimg=$("#sec-fir>div:nth-child(3)>div:nth-child(2)>img"),FCD=x.FCD,CD=x.CD,src=x.src,dmg=x.Fx.dmg,dmg1=x.Fx.dmg1,dmg2=x.Fx.dmg2,dmg3=x.Fx.dmg3,ammo=x.Fx.ammo,armor=x.Fx.armor,dodge=x.Fx.dodge,hit=x.Fx.hit,FR=x.Fx.FR,cri=x.Fx.cri,time=x.Fx.time,MS=x.Fx.MS,Sdesc="";
+	var skillimg=document.querySelector("#sec-fir>div:nth-child(3)>div:nth-child(2)>img"),FCD=x.FCD,CD=x.CD,src=x.src,dmg=x.Fx.dmg,dmg1=x.Fx.dmg1,dmg2=x.Fx.dmg2,dmg3=x.Fx.dmg3,ammo=x.Fx.ammo,armor=x.Fx.armor,dodge=x.Fx.dodge,hit=x.Fx.hit,FR=x.Fx.FR,cri=x.Fx.cri,time=x.Fx.time,MS=x.Fx.MS,Sdesc="";
 	function sniper(time,target){Sdesc=`${time}초간 조준 후,${target}에게 공격력의 ${dmg[1]/10}배의 피해를 입힌다.`};
 	function c81(a){Sdesc=`${a} 화력을 ${dmg[1]}% 상승시킨다.`};
 	function rep(a,b){Sdesc=Sdesc.replace(a,b)};
 	function pt(a){Sdesc=Sdesc.replace("1.5",a)};
-	skillimg.attr("src",`../img/etc/skill/${dollSkill[src]}.png`);
+	skillimg.setAttribute("src",`../img/etc/skill/${dollSkill[src]}.png`);
 	//console.log(src)
 	src=="temp"?Sdesc=`수정중`:
 	src==0||src==1?
@@ -502,25 +481,26 @@ $(".filter,.dropdown-menu>a").click(function(){
 	filtr=="Index No"?(t0.addClass("muuri-item-shown"),filter(".muuri-item-shown"),new Muuri("#grid",{sordData:null})):
 	filtr=="Rarity"?(t0.addClass("muuri-item-shown"),filter(".muuri-item-shown"),sort("rarity")):
 	filtr=="Build Time"?(t0.removeClass("muuri-item-shown"),filter(".muuri-item-shown"),sort("time")):
-	filtr=="Type"&&(t0.addClass("muuri-item-shown"),filter(".muuri-item-shown"),sort("type"));
+	filtr=="Type"&&(t0.addClass("muuri-item-shown"),filter(".muuri-item-shown"),sort("type"))
 });
 $(".tileFilter").on("shown.bs.popover",()=>{
-	$("#tileFilter").remove();
-	$(".Target>div>div>div,.Self>div>div>div").click(function(){
-		this.classList.toggle("CC");
+	$(".Target>div,.Self>div").click(function(){
+		var C="CC";
+		this.classList.toggle(C);
 		for(let n=1;n<10;n++){
-			if($(`#gridT${n}`).hasClass("CC")){dollT[n-1]=1}else(dollT[n-1]=0);
-			if($(`#gridS${n}`).hasClass("CC")){dollT[n-1]=2}
+			if(document.getElementById(`gridT${n}`).classList.contains(C)){dollT[n-1]=1}else(dollT[n-1]=0);
+			if(document.getElementById(`gridT${n}`).classList.contains(C)){dollT[n-1]=2}
 		};
 		Sval(dollT.toString())
 	})
+}).on("hide.bs.popover",()=>{
+	$(".Target>div,.Self>div").off("click");
+	for(var i of document.querySelectorAll(".Target>div,.Self>div"))i.classList.remove("CC")
 });
-$(".tileFilter").on("hide.bs.popover",()=>{
-	$(".Target>div>div>div,.Self>div>div>div").off("click");
-	for(let n=1;n<10;n++){$(`#gridT${n},#gridS${n}`).removeClass("CC")}}
-);
-VoActor.forEach(fltr.VA),$(".VA").click(function(){Sval(VA[VoActor.indexOf($(this).find("span:nth-child(1)").text())])});
-Illustrator.forEach(fltr.Art),$(".Illustrator").click(function(){Sval(Illustrator[Illustrator.indexOf($(this).find("span:nth-child(1)").text())])});
+VoActor.forEach(fltr.VA);
+for(var i of document.getElementsByClassName("VA")){i.addEventListener("click",e=>Sval(VA[VoActor.indexOf(e.target.TextContent)]))};
+Illustrator.forEach(fltr.Art);
+for(var i of document.getElementsByClassName("Illustrator")){i.addEventListener("click",e=>Sval(Illustrator[Illustrator.indexOf(e.target.TextContent)]))};
 for(var i of document.querySelectorAll("#CV,#illust")){i.addEventListener("click",function(){search(this.innerHTML)})};
 function search(query){togglecon(),Sval(query)};
 function cho_hangul(str){

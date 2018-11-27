@@ -7,3 +7,6 @@
 [submodule "gf-tdoll-generator"]
 	path = gf-tdoll-generator
 	url = https://github.com/SFDB-Team/gf-tdoll-generator
+[submodule "gf-story-timeline"]
+	path = gf-story-timeline
+	url = https://github.com/SFDB-Team/gf-story-timeline

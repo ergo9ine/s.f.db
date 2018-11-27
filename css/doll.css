@@ -15,6 +15,8 @@
 .ntg{margin-left:-1px;width:200px;height:35px}
 .ntg>svg>polygon{fill:gray}
 .ntg>svg>text{font-size:1.5em}
+#Tile,.Target,.Self{min-width:75px;max-width:75px;width:75px;height:75px;flex-wrap:wrap;}
+#Tile>div,.Target>div,.Self>div{width:25px;height:25px}
 .row1>div,.row2>div,.row3>div{width:25px;height:25px}
 .bg-warning~div>.w-100{overflow:auto;vertical-align:middle;display:flex;flex-direction:column}
 #battle,#battlei,#dorm,#dormi{display:flex;justify-content:center;flex-direction:column;margin:auto;position:absolute;top:22px;left:calc(50% - 28px)}
