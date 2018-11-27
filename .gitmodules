@@ -4,3 +4,6 @@
 [submodule "gf-bingo-calculator"]
 	path = gf-bingo-calculator
 	url = https://github.com/SFDB-Team/gf-bingo-calculator
+[submodule "gf-tdoll-generator"]
+	path = gf-tdoll-generator
+	url = https://github.com/SFDB-Team/gf-tdoll-generator
