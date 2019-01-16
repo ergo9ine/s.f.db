@@ -7,7 +7,7 @@ const main=document.getElementById("grid"),loader=document.getElementById("loade
 $(document).ready(()=>{
 	dominit();
 	contentsload();
-	game.init()
+	game.init();
 });
 function dominit(){
 	var i;
@@ -26,14 +26,13 @@ function dominit(){
 		setAttributes(i.querySelector("text"),{"x":"40%","y":"50%"})
 	};
 	$("[data-toggle='popover']").popover();
-	$(".tileFilter").popover({html:true,content:function(){return $("#tileFilter").html()}})
+	$(".tileFilter").popover({html:true,content:()=>$("#tileFilter").html()})
 }
 function contentsload(){
 	fetch("../json/doll.json").then(response=>response.json().then(tdoll=>{
 		dollData=tdoll;
 		var allCharacters=dollData.map(doll=>{
-			if(!doll.buildTime)doll.buildTime=0;
-			if(!doll.faction)doll.faction="Griffin & Kryuger";
+			doll.buildTime||(doll.buildTime = 0),doll.faction||(doll.faction = "Griffin & Kryuger");
 			var temp=document.createDocumentFragment(),timehour=(doll.buildTime/3600|0),timemin=doll.buildTime%3600/60,noval=doll.id,dollT=[0,0,0,0,0,0,0,0,0],cho=cho_hangul(`${doll.krName}`);
 			noval>2E4?noval="M"+(noval-2E4):noval>1E3&&(noval="X"+(noval-1E3));
 			doll.Fx.tile.map(tile=>dollT[tile-1]=1,dollT[doll.Fx.self-1]=2);
@@ -59,12 +58,10 @@ function loadComplete(){
 	});
 	imgtag.addEventListener("load",()=>loader.classList.remove("is-active"));
 	document.getElementById("search").addEventListener("click",e=>dollSearch(e.target.value));
-	document.getElementById("search").addEventListener("input",e=>dollSearch(e.target.value));
-	function dollSearch(value){
-		grid.filter(item=>{return item.getElement().querySelector(".tag").innerHTML.includes(value)||item.getElement().querySelector(".name").innerHTML.includes(value)})
-		if(!document.getElementById("grid").querySelector("[class*=muuri-item-shown]")){
-			document.getElementById("noResultMessage").style.display="block"
-		}else{document.getElementById("noResultMessage").style.display="none"}
+	document.getElementById("search").addEventListener("input",e=>dollSearch(e.target.value))
+	function dollSearch(e){
+		grid.filter(t=>t.getElement().querySelector(".tag").innerHTML.includes(e)||t.getElement().querySelector(".name").innerHTML.includes(e)),
+		document.getElementById("grid").querySelector("[class*=muuri-item-shown]")?document.getElementById("noResultMessage").style.display="none":document.getElementById("noResultMessage").style.display="block"
 	};
 	$(".VAinput").quicksearch(".VA",{
 		"bind":"input",
@@ -77,7 +74,7 @@ function loadComplete(){
 		"show":function(){this.classList.remove("d-none")}
 	});
 	loader.classList.remove("is-active");
-	for(i of document.querySelectorAll(".item-content")){
+	for(var i of document.querySelectorAll(".item-content")){
 		i.addEventListener("click",e=>{
 			for(var k of document.querySelectorAll("#grid,#toolbar,#func"))k.classList.toggle("d-none");
 			document.getElementById("noResultMessage").style.display="none";
@@ -104,23 +101,20 @@ function dollload(num){
 	loader.classList.add("is-active");
 	var options,i,x=10,doll=dollData.find(doll=>doll.id===num),
 		simg=idir+doll.id,cimg=simg+".png",timehour=(doll.buildTime/3600|0),timemin=doll.buildTime%3600/60,time=`${timehour}시간${timemin}분`,gridself=`#grid${doll.Fx.self}`,gridPos=[],skins=[],i=0,x,name;
-	document.getElementById("doll").innerHTML="";
-	document.getElementById("dolldiscussion").innerHTML="";
-	for(i of document.querySelectorAll(".btn-warning")){i.parentNode.removeChild(i)};
+	for(i of(document.getElementById("doll").innerHTML="",document.getElementById("dolldiscussion").innerHTML="",document.querySelectorAll(".btn-warning")))i.parentNode.removeChild(i);
 	rCh?rCh.destroy():rCh=``;
 	doll.Fx.tile.map(tile=>gridPos[tile]=`#grid${tile}`);
-	while(x--){
-		if(x===0){break}
+	for(;x--&&0!==x;){
 		var tar=document.getElementById(`grid${x}`).classList;
-		tar.remove("bg-white","aqua","grey");
+		tar.remove("bg-white","aqua","grey"),
 		tar.add("grey")
 	};
 	document.querySelector(gridself).classList.add("grey","bg-white");
 	for(i of document.querySelectorAll(gridPos.filter(echk=>echk!="")))i.classList.remove("grey"),i.classList.add("aqua");
 	$("body,html").animate({scrollTop:0},0);
-	if(doll.skins){doll.skins.map(skin=>{for(var target of document.querySelectorAll(".skinntg,#contents>div:nth-child(6)")){target.innerHTML+=`<button type="button" class="btn btn-warning btn-sm">${skin}</button>`}})};
+	doll.skins&&doll.skins.map(t=>{for(var n of document.querySelectorAll(".skinntg,#contents>div:nth-child(6)"))n.innerHTML+=`<button type="button" class="btn btn-warning btn-sm">${t}</button>`}),
 	document.querySelector("#contents>div:nth-child(6)>button").classList.add("btn-block");
-	if(!doll.voice)doll.voice="";
+	doll.voice||(doll.voice="");
 	var stat={".blockquote>p":doll.krName,"#CV":doll.voice,"#illust":doll.illust,"#GN":doll.name,"#Time":time};
 	for(i in stat)document.querySelector(i).innerHTML=stat[i];
 	utteranc(doll.id);
@@ -130,11 +124,7 @@ function dollload(num){
 			for(name in i){name=name};
 			document.getElementById("doll").innerHTML+=`<div id="${name}" class="row no-gutters border-bottom"><div class="head col-4 my-auto">${name}</div><div class="tail col-8 border-left"></div></div>`;
 			if(Array.isArray(i[name])){
-				for(var val of i[name]){
-					if(i[name].indexOf(val)==0){b=val}
-					else{b+=`<br>${val}`}
-					document.getElementById(name).querySelector(".tail").innerHTML=b;
-				}
+				for(var val of i[name])0==i[name].indexOf(val)?b=val:b+=`<br>${val}`,document.getElementById(name).querySelector(".tail").innerHTML=b;
 			}else{document.getElementById(name).querySelector(".tail").innerHTML+=`${i[name]}`}
 		}
 	};
@@ -183,8 +173,7 @@ function utteranc(index){
 	discussion.appendChild(script)
 };
 function chrtset(x,y){
-	var tableA=document.getElementById("table"),tableB=document.getElementById("graph"),modchk=x.id+2E4,
-		ty=x.type,D="5링크시 <br>탄약 C,식량 M 소모",spd,crit;
+	var tableA=document.getElementById("table"),tableB=document.getElementById("graph"),modchk=x.id+2E4,ty=x.type,D="5링크시 <br>탄약 C,식량 M 소모",spd,crit;
 	"hg"==ty?(Set2("HG",[71,31,79,58,55],30,30),spd=15,crit=20):
 	"smg"==ty?(Set2("SMG",[183,28,70,86,13],85,60),spd=12,crit=5):
 	"ar"==ty?(Set2("AR",[115,51,43,72,47],60,60),spd=10,crit=20):
@@ -193,16 +182,14 @@ function chrtset(x,y){
 	"sg"==ty&&(Set2("SG",[261,32,11,28,11],90,140),spd=6,crit=40);
 	"true"==x.mod?(Set1(2),table(2)):(Set1(1),table(1));
 	function table(k){
-		if(x.id==20056){crit=30};
+		20056==x.id&&(crit=30);
 		var a,n,mod,wiki=x.wiki,Fname=x.Fname,Country=x.Country,Manuf=x.Manuf,faction=x.faction,Potential=x.Potential,hp=x.hp,dmg=x.dmg,ammo=x.ammo,armor=x.armor,dodge=x.dodge,hit=x.hit,FR=x.FR,time=x.time,MS=x.MS,OC=x.OC,Teuqip=x.Teuqip,
 			errchk=[ammo,wiki,Country,Manuf,Teuqip];
-		dollData.map(doll=>{if(doll.id==modchk){mod=`<a href="#">${doll.name}</a>`}});
-		if(!Potential)Potential="";
-		if(!mod)mod="";
+		dollData.map(doll=>{doll.id==modchk&&(mod=`<a href="#">${doll.name}</a>`)});
+		Potential||(Potential=""),mod||(mod="");
 		for(a in errchk)errchk[a]="undefined"==typeof errchk[a]?"":`<a href="#">${errchk[a]}</a>`;OC||(OC=["",""]);armor||(armor=["",""]);
-		if(!faction)faction=`Griffin & Kryuger`;
-		if(wiki){Fname=`<a href="https://en.wikipedia.org/wiki/${wiki}">${Fname}</a>`};
-		20056==x.id&&(crit=30);
+		faction||(faction="Griffin & Kryuger");
+		wiki&&(Fname=`<a href="https://en.wikipedia.org/wiki/${wiki}">${Fname}</a>`);
 		for(n=1;n<21;n++){
 			a=
 			n==1?`체력`:
@@ -256,22 +243,12 @@ function chrtset(x,y){
 		loader.classList.add("is-active");
 		let _thisimg=Array.prototype.indexOf.call(e.target.parentNode.childNodes,e.target),No=document.querySelector(".blockquote-footer>cite").innerHTML,Isrc=idir+No+".png";
 		if(0===_thisimg){
-			var imgsrc=imgtag.getAttribute("src").split(idir)[1].split(".png")[0],imgM=imgsrc.indexOf("_d"),imgT=imgsrc.slice(0,-2),src;
-			if(-1!=imgM){
-				src=idir+imgT+".png";
-				fetch(src).then(res=>{if(res.ok)imgtag.setAttribute("src",src)})
-			}else{
-				src=idir+imgsrc+"_d.png";
-				fetch(src).then(res=>{if(res.ok)imgtag.setAttribute("src",src)})
-			}
-		}else{
-			if(1===_thisimg){
-				fetch(Isrc).then(res=>{if(res.ok)imgtag.setAttribute("src",Isrc)})
-			}else{
-				--_thisimg,Isrc=idir+No+"_"+_thisimg+".png";
-				fetch(Isrc).then(res=>{if(res.ok)imgtag.setAttribute("src",Isrc)})
-			}
-		}
+			var src,imgsrc=imgtag.getAttribute("src").split(idir)[1].split(".png")[0],
+			imgM=imgsrc.indexOf("_d"),imgT=imgsrc.slice(0,-2);
+			-1!=imgM?(src=idir+imgT+".png",fetch(src).then(i=>{i.ok&&imgtag.setAttribute("src",src)})):
+			(src=idir+imgsrc+"_d.png",fetch(src).then(i=>{i.ok&&imgtag.setAttribute("src",src)}))}
+		else 1===_thisimg?fetch(Isrc).then(i=>{i.ok&&imgtag.setAttribute("src",Isrc)}):
+		(--_thisimg,Isrc=idir+No+"_"+_thisimg+".png",fetch(Isrc).then(i=>{i.ok&&imgtag.setAttribute("src",Isrc)}));
 	};
 	if(x.drop){
 		let drop=tableA.querySelector("div:nth-child(4)>.btn-group>button:nth-child(3)");
@@ -282,20 +259,14 @@ function chrtset(x,y){
 	function Set2(a,b,c,d){y.series[1].name=a+" 평균";y.series[1].data=b;D=D.replace("C",c).replace("M",d)};
 	document.querySelector("#sec-fir>div:nth-child(2)>div:nth-child(2)").innerHTML=D;
 	var modlamp=document.querySelector("#graph>div:nth-child(16)>a");
-	if(!x.Mod&&modlamp)modlamp.addEventListener("click",()=>dollload(modchk));
+	!x.Mod&&modlamp&&modlamp.addEventListener("click",()=>dollload(modchk));
 	var graph=document.querySelector("#graph");
 	for(var i=0;i<6;i+=2){
 		var target=graph.querySelector(`div:nth-child(${i+8})>a`);
-		if(!target)return;
-		target.addEventListener("click",e=>{
-			var HeadText=e.target.parentNode.previousSibling.innerHTML,src;
-			if(HeadText=="설계 국가"){src="From:"}
-			else if(HeadText=="제조사"){src="Manufacturer:"}
-			else{src="Faction:"};
-			search(src+e.target.innerHTML)}
-		)
+		target&&target.addEventListener("click",r=>{var e,t=r.target.parentNode.previousSibling.innerHTML;
+		e="설계 국가"==t?"From:":"제조사"==t?"Manufacturer:":"Faction:",search(e+r.target.innerHTML)})
 	};
-	for(var i of document.querySelectorAll(".skinntg>button,#contents>div:nth-child(6)>button")){i.addEventListener("click",e=>skin(e))};
+	for(var i of document.querySelectorAll(".skinntg>button,#contents>div:nth-child(6)>button"))i.addEventListener("click",e=>skin(e));
 };
 function fxts(x){
 	var TS="타일 위 타겟에게";
@@ -450,8 +421,8 @@ function Skill(y,x){
 };
 function togglecon(){
 	var i;
-	for(i of document.querySelectorAll("#grid,#toolbar,#func")){i.classList.toggle("d-none")};
-	for(i of document.querySelectorAll(".img-fluid,#drop")){i.removeAttribute("src","data-content")};
+	for(i of document.querySelectorAll("#grid,#toolbar,#func"))i.classList.toggle("d-none");
+	for(i of document.querySelectorAll(".img-fluid,#drop"))i.removeAttribute("src","data-content");
 	$("[data-toggle='popover']").popover("hide");
 	preview.stage.off("pointerdown");
 	SimpleBar.removeObserver();
@@ -486,12 +457,14 @@ $(".filter,.dropdown-menu>a").click(function(){
 	filtr=="Type"&&(t0.addClass("muuri-item-shown"),filter(".muuri-item-shown"),sort("type"))
 });
 $(".tileFilter").on("shown.bs.popover",()=>{
+	document.getElementById("tileFilter").innerHTML="";
 	$(".Target>div,.Self>div").click(function(){
 		var C="CC";
 		this.classList.toggle(C);
 		for(let n=1;n<10;n++){
-			if(document.getElementById(`gridT${n}`).classList.contains(C)){dollT[n-1]=1}else(dollT[n-1]=0);
-			if(document.getElementById(`gridT${n}`).classList.contains(C)){dollT[n-1]=2}
+			var T=`#gridT${n}`,S=`#gridS${n}`;
+			if(document.querySelector(T).classList.contains(C)){dollT[n-1]=1}else(dollT[n-1]=0);
+			if(document.querySelector(S).classList.contains(C)){dollT[n-1]=2}
 		};
 		Sval(dollT.toString())
 	})
@@ -499,22 +472,11 @@ $(".tileFilter").on("shown.bs.popover",()=>{
 	$(".Target>div,.Self>div").off("click");
 	for(var i of document.querySelectorAll(".Target>div,.Self>div"))i.classList.remove("CC")
 });
-VoActor.forEach(fltr.VA);
-for(var i of document.getElementsByClassName("VA")){i.addEventListener("click",e=>Sval(VA[VoActor.indexOf(e.target.TextContent)]))};
-Illustrator.forEach(fltr.Art);
-for(var i of document.getElementsByClassName("Illustrator")){i.addEventListener("click",e=>Sval(Illustrator[Illustrator.indexOf(e.target.TextContent)]))};
-for(var i of document.querySelectorAll("#CV,#illust")){i.addEventListener("click",function(){search(this.innerHTML)})};
+VoActor.forEach(fltr.VA),$(".VA").click(function(){Sval(VA[VoActor.indexOf($(this).find("span:nth-child(1)").text())])});
+Illustrator.forEach(fltr.Art),$(".Illustrator").click(function(){Sval(Illustrator[Illustrator.indexOf($(this).find("span:nth-child(1)").text())])});
 function search(query){togglecon(),Sval(query)};
-function cho_hangul(str){
-	var cho=["ㄱ","ㄲ","ㄴ","ㄷ","ㄸ","ㄹ","ㅁ","ㅂ","ㅃ","ㅅ","ㅆ","ㅇ","ㅈ","ㅉ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ"],
-			result="",code,strleng=str.length;
-	for(let i=0;i<strleng;i++){
-		code=str.charCodeAt(i)-44032;
-		if(code>-1&&code<11172)result+=cho[Math.floor(code/588)]
-	}
-	return result
-}
-if(typeof resPasePath==="undefined"){var resPasePath=""};
+function cho_hangul(o){var r,t=["ㄱ","ㄲ","ㄴ","ㄷ","ㄸ","ㄹ","ㅁ","ㅂ","ㅃ","ㅅ","ㅆ","ㅇ","ㅈ","ㅉ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ"],h="",n=o.length;for(let a=0;a<n;a++)(r=o.charCodeAt(a)-44032)>-1&&r<11172&&(h+=t[Math.floor(r/588)]);return h}
+if(void 0===resPasePath)var resPasePath="";
 var game={
 	init:function(chr){
 		game.girls=new Girls(resPasePath+"../gf-spine-simulator/character/");
