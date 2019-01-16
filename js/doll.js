@@ -107,8 +107,8 @@ function dollload(num){
 	document.getElementById("doll").innerHTML="";
 	document.getElementById("dolldiscussion").innerHTML="";
 	for(i of document.querySelectorAll(".btn-warning")){i.parentNode.removeChild(i)};
-	rCh?rCh.clearDomElements():rCh=``;
-	doll.Fx.tile.map(tile=>gridPos.push(`#grid${tile}`));
+	rCh?rCh.destroy():rCh=``;
+	doll.Fx.tile.map(tile=>gridPos[tile]=`#grid${tile}`);
 	while(x--){
 		if(x===0){break}
 		var tar=document.getElementById(`grid${x}`).classList;
@@ -116,7 +116,7 @@ function dollload(num){
 		tar.add("grey")
 	};
 	document.querySelector(gridself).classList.add("grey","bg-white");
-	for(i of document.querySelectorAll(gridPos))i.classList.remove("grey"),i.classList.add("aqua");
+	for(i of document.querySelectorAll(gridPos.filter(echk=>echk!="")))i.classList.remove("grey"),i.classList.add("aqua");
 	$("body,html").animate({scrollTop:0},0);
 	if(doll.skins){doll.skins.map(skin=>{for(var target of document.querySelectorAll(".skinntg,#contents>div:nth-child(6)")){target.innerHTML+=`<button type="button" class="btn btn-warning btn-sm">${skin}</button>`}})};
 	document.querySelector("#contents>div:nth-child(6)>button").classList.add("btn-block");
@@ -125,13 +125,15 @@ function dollload(num){
 	for(i in stat)document.querySelector(i).innerHTML=stat[i];
 	utteranc(doll.id);
 	if(doll.respec){
+		var a="",b="";
 		for(var i of doll.respec){
 			for(name in i){name=name};
 			document.getElementById("doll").innerHTML+=`<div id="${name}" class="row no-gutters border-bottom"><div class="head col-4 my-auto">${name}</div><div class="tail col-8 border-left"></div></div>`;
 			if(Array.isArray(i[name])){
 				for(var val of i[name]){
-					if(i[name].indexOf(val)==0){document.getElementById(name).querySelector(".tail").innerHTML=val}
-					else{document.getElementById(name).querySelector(".tail").innerHTML+=`<br>${val}`}
+					if(i[name].indexOf(val)==0){b=val}
+					else{b+=`<br>${val}`}
+					document.getElementById(name).querySelector(".tail").innerHTML=b;
 				}
 			}else{document.getElementById(name).querySelector(".tail").innerHTML+=`${i[name]}`}
 		}
