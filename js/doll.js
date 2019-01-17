@@ -26,7 +26,7 @@ function dominit(){
 		setAttributes(i.querySelector("text"),{"x":"40%","y":"50%"})
 	};
 	$("[data-toggle='popover']").popover();
-	$(".tileFilter").popover({html:true,content:()=>$("#tileFilter").html()})
+	$(".tileFilter").popover({html:true,content:()=>document.getElementById("tileFilter").innerHTML})
 }
 function contentsload(){
 	fetch("../json/doll.json").then(response=>response.json().then(tdoll=>{
@@ -91,11 +91,11 @@ function loadComplete(){
 	document.querySelector(".xfunc").addEventListener("click",togglecon);
 };
 var fltr={
-	VA:(a)=>{
+	VA:a=>{
 		var b=cho_hangul(a);
 		document.querySelector(".VoC").innerHTML+=`<a class="dropdown-item VA" href="#"><span>${a}</span><span class="d-none">${b}/</span></a>`;
 	},
-	Art:(a)=>{document.querySelector(".IoC").innerHTML+=`<a class="dropdown-item Illustrator" href="#"><span>${a}</span></a>`}
+	Art:a=>{document.querySelector(".IoC").innerHTML+=`<a class="dropdown-item Illustrator" href="#"><span>${a}</span></a>`}
 };
 function dollload(num){
 	loader.classList.add("is-active");
@@ -121,7 +121,7 @@ function dollload(num){
 	if(doll.respec){
 		var a="",b="";
 		for(var i of doll.respec){
-			for(name in i){name=name};
+			for(name in i)name=name;
 			document.getElementById("doll").innerHTML+=`<div id="${name}" class="row no-gutters border-bottom"><div class="head col-4 my-auto">${name}</div><div class="tail col-8 border-left"></div></div>`;
 			if(Array.isArray(i[name])){
 				for(var val of i[name])0==i[name].indexOf(val)?b=val:b+=`<br>${val}`,document.getElementById(name).querySelector(".tail").innerHTML=b;
@@ -185,11 +185,12 @@ function chrtset(x,y){
 		20056==x.id&&(crit=30);
 		var a,n,mod,wiki=x.wiki,Fname=x.Fname,Country=x.Country,Manuf=x.Manuf,faction=x.faction,Potential=x.Potential,hp=x.hp,dmg=x.dmg,ammo=x.ammo,armor=x.armor,dodge=x.dodge,hit=x.hit,FR=x.FR,time=x.time,MS=x.MS,OC=x.OC,Teuqip=x.Teuqip,
 			errchk=[ammo,wiki,Country,Manuf,Teuqip];
-		dollData.map(doll=>{doll.id==modchk&&(mod=`<a href="#">${doll.name}</a>`)});
+		/*dollData.map(doll=>{doll.id==modchk&&(mod=`<a href="#">${doll.name}</a>`)});
 		Potential||(Potential=""),mod||(mod="");
 		for(a in errchk)errchk[a]="undefined"==typeof errchk[a]?"":`<a href="#">${errchk[a]}</a>`;OC||(OC=["",""]);armor||(armor=["",""]);
 		faction||(faction="Griffin & Kryuger");
-		wiki&&(Fname=`<a href="https://en.wikipedia.org/wiki/${wiki}">${Fname}</a>`);
+		wiki&&(Fname=`<a href="https://en.wikipedia.org/wiki/${wiki}">${Fname}</a>`);*/
+		for(a in dollData.map(a=>{a.id==modchk&&(mod=`<a href="#">${a.name}</a>`)}),Potential||(Potential=""),mod||(mod=""),errchk)errchk[a]=void 0===errchk[a]?"":`<a href="#">${errchk[a]}</a>`;OC||(OC=["",""]),armor||(armor=["",""]),faction||(faction="Griffin & Kryuger"),wiki&&(Fname=`<a href="https://en.wikipedia.org/wiki/${wiki}">${Fname}</a>`);
 		for(n=1;n<21;n++){
 			a=
 			n==1?`체력`:
@@ -441,14 +442,6 @@ $(".filter,.dropdown-menu>a").click(function(){
 	filtr=="MG"?filter("[data-type='mg']"):
 	filtr=="SG"?filter("[data-type='sg']"):
 	filtr=="제조불가"?filter("[data-time='0']"):
-	/*
-	case "타일효과":
-		grid.filter("[data-time='00']')
-	break;
-	case "일러스트레이터":
-		grid.filter("[data-time='00']")
-	break;
-	*/
 	filtr=="All"&&filter("[data-type]");
 	//정렬
 	filtr=="Index No"?(t0.addClass("muuri-item-shown"),filter(".muuri-item-shown"),new Muuri("#grid",{sordData:null})):
@@ -457,17 +450,18 @@ $(".filter,.dropdown-menu>a").click(function(){
 	filtr=="Type"&&(t0.addClass("muuri-item-shown"),filter(".muuri-item-shown"),sort("type"))
 });
 $(".tileFilter").on("shown.bs.popover",()=>{
-	document.getElementById("tileFilter").innerHTML="";
-	$(".Target>div,.Self>div").click(function(){
-		var C="CC";
-		this.classList.toggle(C);
-		for(let n=1;n<10;n++){
-			var T=`#gridT${n}`,S=`#gridS${n}`;
-			if(document.querySelector(T).classList.contains(C)){dollT[n-1]=1}else(dollT[n-1]=0);
-			if(document.querySelector(S).classList.contains(C)){dollT[n-1]=2}
-		};
-		Sval(dollT.toString())
-	})
+	for(var i of document.querySelectorAll(".Target>div,.Self>div")){
+		i.addEventListener("click",function(){
+			var C="CC";
+			this.classList.toggle(C);
+			for(let n=1;n<10;n++){
+				var T=`#gridT${n}`,S=`#gridS${n}`;
+				if(document.querySelectorAll(T)[1].classList.contains(C)){dollT[n-1]=1}else(dollT[n-1]=0);
+				if(document.querySelectorAll(S)[1].classList.contains(C)){dollT[n-1]=2}
+			};
+			Sval(dollT.toString())
+		})
+	}
 }).on("hide.bs.popover",()=>{
 	$(".Target>div,.Self>div").off("click");
 	for(var i of document.querySelectorAll(".Target>div,.Self>div"))i.classList.remove("CC")
