@@ -10,7 +10,7 @@ $(document).ready(()=>{
 	game.init();
 });
 function dominit(){
-	var i;
+	var i,tile=document.getElementById("Tile"),Target=document.querySelector(".Target"),Self=document.querySelector(".Self");
 	for(i of document.querySelectorAll("#table,#graph")){
 		for(let v=0;v<20;v++){
 			i.appendChild(document.createElement("div"))
@@ -25,6 +25,13 @@ function dominit(){
 		setAttributes(i.querySelector("polygon"),{"fill":"grey","points":"0,0 0,35 0,35 200,35 150,0"});
 		setAttributes(i.querySelector("text"),{"x":"40%","y":"50%"})
 	};
+	for(i=1;i<10;i++){
+		var k=document.createElement("div"),t=document.createElement("div"),s=document.createElement("div");
+		setAttributes(k,{"class":"border border-dark","id":`grid${i}`});
+		setAttributes(t,{"class":"border border-dark grey","id":`gridT${i}`});
+		setAttributes(s,{"class":"border border-dark grey","id":`gridS${i}`});
+		tile.appendChild(k),Target.appendChild(t),Self.appendChild(s)
+	}
 	$("[data-toggle='popover']").popover();
 	$(".tileFilter").popover({html:true,content:()=>document.getElementById("tileFilter").innerHTML})
 }
@@ -60,6 +67,7 @@ function loadComplete(){
 	document.getElementById("search").addEventListener("click",e=>dollSearch(e.target.value));
 	document.getElementById("search").addEventListener("input",e=>dollSearch(e.target.value))
 	function dollSearch(e){
+		e=="0,0,0,0,0,0,0,0,0"&&(document.getElementById("search").value="");
 		grid.filter(t=>t.getElement().querySelector(".tag").innerHTML.includes(e)||t.getElement().querySelector(".name").innerHTML.includes(e)),
 		document.getElementById("grid").querySelector("[class*=muuri-item-shown]")?document.getElementById("noResultMessage").style.display="none":document.getElementById("noResultMessage").style.display="block"
 	};
@@ -91,11 +99,11 @@ function loadComplete(){
 	document.querySelector(".xfunc").addEventListener("click",togglecon);
 };
 var fltr={
-	VA:a=>{
-		var b=cho_hangul(a);
-		document.querySelector(".VoC").innerHTML+=`<a class="dropdown-item VA" href="#"><span>${a}</span><span class="d-none">${b}/</span></a>`;
+	VA(a){
+		var n=cho_hangul(a);
+		document.querySelector(".VoC").innerHTML+=`<a class="dropdown-item VA" href="#"><span>${a}</span><span class="d-none">${n}/</span></a>`
 	},
-	Art:a=>{document.querySelector(".IoC").innerHTML+=`<a class="dropdown-item Illustrator" href="#"><span>${a}</span></a>`}
+	Art(a){document.querySelector(".IoC").innerHTML+=`<a class="dropdown-item Illustrator" href="#"><span>${a}</span></a>`}
 };
 function dollload(num){
 	loader.classList.add("is-active");
@@ -185,11 +193,6 @@ function chrtset(x,y){
 		20056==x.id&&(crit=30);
 		var a,n,mod,wiki=x.wiki,Fname=x.Fname,Country=x.Country,Manuf=x.Manuf,faction=x.faction,Potential=x.Potential,hp=x.hp,dmg=x.dmg,ammo=x.ammo,armor=x.armor,dodge=x.dodge,hit=x.hit,FR=x.FR,time=x.time,MS=x.MS,OC=x.OC,Teuqip=x.Teuqip,
 			errchk=[ammo,wiki,Country,Manuf,Teuqip];
-		/*dollData.map(doll=>{doll.id==modchk&&(mod=`<a href="#">${doll.name}</a>`)});
-		Potential||(Potential=""),mod||(mod="");
-		for(a in errchk)errchk[a]="undefined"==typeof errchk[a]?"":`<a href="#">${errchk[a]}</a>`;OC||(OC=["",""]);armor||(armor=["",""]);
-		faction||(faction="Griffin & Kryuger");
-		wiki&&(Fname=`<a href="https://en.wikipedia.org/wiki/${wiki}">${Fname}</a>`);*/
 		for(a in dollData.map(a=>{a.id==modchk&&(mod=`<a href="#">${a.name}</a>`)}),Potential||(Potential=""),mod||(mod=""),errchk)errchk[a]=void 0===errchk[a]?"":`<a href="#">${errchk[a]}</a>`;OC||(OC=["",""]),armor||(armor=["",""]),faction||(faction="Griffin & Kryuger"),wiki&&(Fname=`<a href="https://en.wikipedia.org/wiki/${wiki}">${Fname}</a>`);
 		for(n=1;n<21;n++){
 			a=
