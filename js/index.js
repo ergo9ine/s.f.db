@@ -5,38 +5,38 @@ const TogV="invisible",doc=document;
 var a,b,c,i;
 $(document).ready(()=>{
 toggleV(doc.querySelector("#open"),"Sidebar")
-for(i of doc.querySelectorAll("#lo,#lc")){toggleV(i,"lm")};
-for(i of doc.querySelectorAll("#ro,#rc")){toggleV(i,"rm")};
-for(i of doc.querySelectorAll("#lm>button:nth-child(2),#lm>button:nth-child(3)")){i.addEventListener("click",()=>doc.querySelector("#rm").classList.remove(TogV))};
+for(i of doc.querySelectorAll("#lo,#lc")) toggleV(i,"lm");
+for(i of doc.querySelectorAll("#ro,#rc")) toggleV(i,"rm");
+for(i of doc.querySelectorAll("#lm>button:nth-child(2),#lm>button:nth-child(3)")) i.addEventListener("click",()=>doc.querySelector("#rm").classList.remove(TogV));
 for(i of doc.querySelectorAll(".tab")){
 	i.addEventListener("click",e=>{
 		var Classes=(e.target.getAttribute("class")).split(" "),T="tab1 tab2 tab3 tab4 tab5 tab6 tab7 tab8 tab9 tab10".split(" "),Tab="#Sidebar>button:nth-child(5),#lm>button:nth-child(4)".split(",");
 		doc.getElementById("result").innerHTML="";
-		for(i of doc.querySelectorAll(Tab))i.classList.remove("bg-danger");
-		for(i of doc.querySelectorAll(".tab"))i.classList.remove("bg-danger");
+		for(i of doc.querySelectorAll(Tab)) i.classList.remove("bg-danger");
+		for(i of doc.querySelectorAll(".tab")) i.classList.remove("bg-danger");
 		e.target.classList.add("bg-danger");
 		doc.getElementById("tab".concat(Classes[0].slice(1))).classList.remove("d-none");
-	for(i of doc.querySelectorAll(".content"))i.getAttribute("id")!="tab".concat(Classes[0].slice(1))&&i.classList.add("d-none");
+		for(i of doc.querySelectorAll(".content")) i.getAttribute("id")!="tab".concat(Classes[0].slice(1))&&i.classList.add("d-none");
 	})
 };
 for(i of doc.querySelectorAll("#Sidebar>button,#lm>button:not(#lc)")){
 	i.addEventListener("click",function(){
 		var text=this.innerHTML;
-		for(var j of [this.parentNode.children].filter(child=>child!==this)[0])j.classList.remove("bg-danger");
-		if((this.classList.add("bg-danger"),"Database"==text))TopMToggle(".sm",".db");
-		else if("Simulator"==text)TopMToggle(".db",".sm");
+		for(var j of [this.parentNode.children].filter(child=>child!==this)[0]) j.classList.remove("bg-danger");
+		if(this.classList.add("bg-danger"),"Database"==text) TopMToggle(".sm",".db");
+		else if("Simulator"==text) TopMToggle(".db",".sm");
 		else if("Information"==text){
-			for(i of doc.querySelectorAll("#contents>div"))i.classList.add("d-none");
+			for(i of doc.querySelectorAll("#contents>div")) i.classList.add("d-none");
 			doc.getElementById("index").classList.remove("d-none");
-			for(i of doc.querySelectorAll(".tab"))i.classList.remove("bg-danger");
+			for(i of doc.querySelectorAll(".tab")) i.classList.remove("bg-danger");
 			doc.getElementById("result").innerHTML="";
-	}
+		}
 	})
 }
 });
 function TopMToggle(fir,sec){
-	for(i of doc.querySelectorAll(fir)){i.classList.add("d-none")};
-	for(i of doc.querySelectorAll(sec)){i.classList.remove("d-none")}
+	for(i of doc.querySelectorAll(fir)) i.classList.add("d-none");
+	for(i of doc.querySelectorAll(sec)) i.classList.remove("d-none")
 };
 function toggleV(item,TargetId){item.addEventListener("click",()=>doc.getElementById(TargetId).classList.toggle(TogV))};
 // disc
@@ -67,15 +67,15 @@ var stats="#atk,#dod,#hit,#spd".split(","),HG={avg:[.21,.25,.35,.24],M1911:[.2,.
 	AR={avg:[.32,.21,.2,.27],G3:[.3781,.2323,.2,.2576],L85A1:[.3304,.2,.2,.2674],"갈릴":[.3176,.2,.2,.3089],"SIG-510":[.3781,.2,.2,.2476],F2000:[.3176,.2323,.2323,.3304],"63식":[.3667,.2,.2,.3]},
 	MG={avg:[.48,.15,.17,.41],LWMMG:[.5258,.1655,.1655,.3628],DP28:[.4593,.1655,.1655,.4035],MG34:[.4683,.1286,.1655,.4275],FG42:[.4683,.1655,.2,.4275],"AAT-52":[.4857,.1655,.1655,.4405]},
 	dir="img/etc/";
-for(i of stats){doc.querySelector(i).classList.add("my-2","rounded-0","form-control","text-center","mx-auto")};
+for(i of stats) doc.querySelector(i).classList.add("my-2","rounded-0","form-control","text-center","mx-auto");
 function getOneTypeCount(c){
 	var b=[0,0,0,0],dom=["atk","hit","dod","spd"],a;
-	for(a=0;4>a;a++)b[a]=Math.ceil(doc.getElementById(dom[a]).value/c[a]);
+	for(a=0;4>a;a++) b[a]=Math.ceil(doc.getElementById(dom[a]).value/c[a]);
 	return max=Math.max.apply(Math,b)
 };
 function getFinalValue(b,c){
 	var final=[0,0,0,0];
-	for(var a=0;4>a;a++)final[a]=Math.floor(b*c[a]);
+	for(var a=0;4>a;a++) final[a]=Math.floor(b*c[a]);
 	return final
 };
 function resulttable(type,TI,i){
@@ -84,22 +84,22 @@ function resulttable(type,TI,i){
 };
 document.getElementById("clickme").addEventListener("click",()=>{
 	doc.getElementById("result").innerHTML="<thead><tr><th>명칭</th><th>소모량</th><th>상승예측량</th></tr></thead><tbody></tbody>";
-	for(i in HG){resulttable(HG,"hg",i)}
-	for(i in SMG){resulttable(SMG,"smg",i)}
-	for(i in RF){resulttable(RF,"rf",i)}
-	for(i in AR){resulttable(AR,"ar",i)}
-	for(i in MG){resulttable(MG,"mg",i)}
+	for(i in HG) resulttable(HG,"hg",i);
+	for(i in SMG) resulttable(SMG,"smg",i);
+	for(i in RF) resulttable(RF,"rf",i);
+	for(i in AR) resulttable(AR,"ar",i);
+	for(i in MG) resulttable(MG,"mg",i);
 	$("#tab6").css("height",($("#tab6").children()[2].clientHeight*1.4|1)+"px");
 });
 // battery by kosehy
 var arrCom="1com 2com 3com 4com 5com 6com 7com 8com 9com 10com".split(" "),arrSet="1set 2set 3set 4set 5set 6set 7set 8set 9set 10set".split(" "),arrPet="1pet 2pet 3pet 4pet 5pet 6pet 7pet 8pet 9pet 10pet".split(" "),arrTcom="1tcom 2tcom 3tcom 4tcom 5tcom 6tcom 7tcom 8tcom 9tcom 10tcom".split(" "),arrTnr=[0,50,85,95,99,101,102,102,102.5,103,103.5],i;
 function setAttributes(el,attrs){for(i in attrs){el.setAttribute(i,attrs[i])}};
-for(i of document.querySelectorAll("table th>input")){setAttributes(i,{class:"form-control",style:"width:100%",required:"",min:"0",placeholder:"0"})};
+for(i of document.querySelectorAll("table th>input")) setAttributes(i,{class:"form-control",style:"width:100%",required:"",min:"0",placeholder:"0"});
 for(i in arrCom){
 	var AC=doc.getElementById(arrCom[i]),AS=doc.getElementById(arrSet[i]),AP=doc.getElementById(arrPet[i]),AT=doc.getElementById(arrTcom[i]);
-	AC.addEventListener("keyup",sumComfort);
-	AS.addEventListener("keyup",sumComfort);
-	AP.addEventListener("keyup",sumComfort);
+	AC.addEventListener("keyup",sumComfort),
+	AS.addEventListener("keyup",sumComfort),
+	AP.addEventListener("keyup",sumComfort),
 	AT.addEventListener("keyup",sumComfort)
 }
 var totalCom=0,totalTcom=0,numOfroom=0,totalBr=0,averageTbr=0;
